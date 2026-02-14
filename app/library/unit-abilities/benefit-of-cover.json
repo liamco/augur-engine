@@ -1,0 +1,14 @@
+{
+    "entity": "thisUnit",
+    "effect": "rollBonus",
+    "attribute": "save",
+    "value": 1,
+    "conditions": [
+        {
+            "entity": "thisUnit",
+            "attribute": "save",
+            "operator": "lessThanOrEqualTo",
+            "value": 4
+        }
+    ]
+}

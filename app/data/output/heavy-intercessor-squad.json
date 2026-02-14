@@ -1,0 +1,377 @@
+{
+    "id": "000001177",
+    "name": "Heavy Intercessor Squad",
+    "factionId": "SM",
+    "sourceId": "000000139",
+    "legend": "Clad in thick Gravis armour, Heavy Intercessors secure ground and are immovable in the defence. Always ready for any sign of enemy counter-attack, they stand firm, laying down volleys of heavy fire that keep all but the most determined or foolhardy enemies at bay.",
+    "role": "Battleline",
+    "transport": "",
+    "virtual": false,
+    "leaderHead": "",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/space-marines/Heavy-Intercessor-Squad",
+    "slug": "heavy-intercessor-squad",
+    "factionSlug": "space-marines",
+    "roleLabel": "Battleline",
+    "sourceName": "Faction Pack: Space Marines",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "damaged": null,
+    "wargear": {
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolt rifle; close combat weapon.",
+            "parsed": [
+                "000001177:bolt-pistol",
+                "000001177:heavy-bolt-rifle",
+                "000001177:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001177:bolt-pistol",
+                    "000001177:heavy-bolt-rifle",
+                    "000001177:close-combat-weapon"
+                ]
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001177:bolt-pistol",
+                "datasheetId": "000001177",
+                "line": 1,
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001177",
+                        "line": 1,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": ["PISTOL"],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001177:heavy-bolt-rifle",
+                "datasheetId": "000001177",
+                "line": 2,
+                "name": "Heavy bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001177",
+                        "line": 2,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Heavy bolt rifle",
+                        "attributes": ["ASSAULT", "HEAVY"],
+                        "range": 30,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001177:heavy-bolter",
+                "datasheetId": "000001177",
+                "line": 3,
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001177",
+                        "line": 3,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": ["ASSAULT", "HEAVY", "SUSTAINED HITS 1"],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": ["Heavy Intercessor"]
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001177:close-combat-weapon",
+                "datasheetId": "000001177",
+                "line": 4,
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001177",
+                        "line": 4,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001177",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Heavy Intercessor's heavy bolt rifle can be replaced with 1 heavy bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001177:bolt-pistol",
+                        "000001177:heavy-bolt-rifle",
+                        "000001177:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Heavy Intercessor",
+                "items": [
+                    [
+                        "000001177:bolt-pistol",
+                        "000001177:close-combat-weapon",
+                        "000001177:heavy-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "id": "",
+            "name": "Fury of the First",
+            "legend": "",
+            "factionId": "",
+            "description": "Each time a model in this unit makes an attack that targets your Oath of Moment target, add 1 to the Hit roll.",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "name": "furyOfTheFirst",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "targetUnit",
+                            "state": "oathOfMomentTarget",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
+        },
+        {
+            "id": "",
+            "name": "Unyielding in the Face of the Foe",
+            "legend": "",
+            "factionId": "",
+            "description": "While this unit is within range of an objective marker you control, each time an attack with a Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour saving throw made against that attack.",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "s",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "inRangeOfFriendlyObjective",
+                            "operator": "equals",
+                            "value": true
+                        },
+                        {
+                            "entity": "targetModel",
+                            "attribute": "d",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "openai"
+        }
+    ],
+    "keywords": [
+        {
+            "datasheetId": "000001177",
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": "true"
+        },
+        {
+            "datasheetId": "000001177",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000001177",
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000001177",
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000001177",
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000001177",
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000001177",
+            "keyword": "Heavy Intercessor Squad",
+            "model": "",
+            "isFactionKeyword": "false"
+        }
+    ],
+    "models": [
+        {
+            "datasheetId": "000001177",
+            "line": 1,
+            "name": "Heavy Intercessor Squad",
+            "m": 5,
+            "t": 6,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "40mm",
+            "baseSizeDescr": ""
+        }
+    ],
+    "unitComposition": [
+        {
+            "datasheetId": "000001177",
+            "line": 1,
+            "description": "1 Heavy Intercessor Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "datasheetId": "000001177",
+            "line": 2,
+            "description": "4-9 Heavy Intercessors",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "modelCosts": [
+        {
+            "datasheetId": "000001177",
+            "line": 1,
+            "description": "5 models",
+            "cost": 100,
+            "count": 5
+        },
+        {
+            "datasheetId": "000001177",
+            "line": 2,
+            "description": "10 models",
+            "cost": 200,
+            "count": 10
+        }
+    ],
+    "leadsUnits": [],
+    "combatState": {
+        "modelCount": 5,
+        "unitStrength": "full",
+        "deadModelIds": [],
+        "currentWounds": 15,
+        "isDamaged": false,
+        "isDestroyed": false,
+        "isBattleShocked": false,
+        "movementBehaviour": "hold",
+        "hasShot": false,
+        "hasCharged": false,
+        "hasFought": false,
+        "isInObjectiveRange": "friendly",
+        "isInEngagementRange": false,
+        "isInCover": false
+    }
+}

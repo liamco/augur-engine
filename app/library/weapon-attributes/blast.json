@@ -1,0 +1,14 @@
+{
+    "entity": "thisModel",
+    "effect": "rollBonus",
+    "attribute": "attacks",
+    "value": 1,
+    "conditions": [
+        {
+            "entity": "targetUnit",
+            "state": "activeModels",
+            "operator": "ratioOf",
+            "value": 5
+        }
+    ]
+}

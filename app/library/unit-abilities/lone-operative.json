@@ -1,0 +1,14 @@
+{
+    "entity": "opposingUnit",
+    "effect": "rollBlock",
+    "attribute": "hit",
+    "value": 1,
+    "conditions": [
+        {
+            "entity": "thisModel",
+            "attribute": "range",
+            "operator": "lessThanOrEqualTo",
+            "value": 12
+        }
+    ]
+}
