@@ -31,9 +31,13 @@ export type Entity =
     | "thisArmy"
     | "thisUnit"
     | "thisModel"
-    | "opponentArmy"
+    | "opposingArmy"
     | "opposingUnit"
     | "opposingModel"
+    | "ownArmy"
+    | "ownUnit"
+    | "ownModel"
+    | "targetArmy"
     | "targetUnit"
     | "targetModel";
 

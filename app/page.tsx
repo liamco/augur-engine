@@ -1,12 +1,15 @@
-import Octagon from "./ui/modules/engagements/Octagon";
+"use client";
 
-export default function Home() {
+import { BrowserRouter } from "react-router-dom";
+import App from "./ui/App";
+// import { ListManagerProvider } from "./ui/modules/Lists/ListManagerContext";
+
+export default function Page() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center bg-gray-950 text-white">
-            <h1 className="text-4xl font-bold tracking-tight">
-                Strategos Logis Augur Engine
-            </h1>
-            <Octagon />
-        </main>
+        <BrowserRouter>
+            {/*<ListManagerProvider>*/}
+            <App />
+            {/*</ListManagerProvider>*/}
+        </BrowserRouter>
     );
 }

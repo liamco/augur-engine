@@ -6,7 +6,7 @@ export interface CombatState {
     isDamaged: boolean;
     isDestroyed: boolean;
     isBattleShocked: boolean;
-    movementBehaviour: "hold" | "move" | "advance" | "fallBack";
+    movementBehaviour: "hold" | "move" | "advance" | "fallBack" | null;
     hasShot: boolean;
     hasCharged: boolean;
     hasFought: boolean;

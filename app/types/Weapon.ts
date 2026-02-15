@@ -14,6 +14,7 @@ export interface WeaponProfile {
     line: number;
     lineInWargear?: number;
     name: string;
+    type?: "Ranged" | "Melee";
     attributes: string[];
     a: string | number;
     ap: number;

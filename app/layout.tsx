@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./ui/styles/index.css";
 
 export const metadata: Metadata = {
-  title: "Strategos Logis Augur Engine",
-  description: "Warhammer 40K strategy and simulation engine",
+    title: "Warhammer 40000 Game Assistant",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>{children}</body>
+        </html>
+    );
 }
