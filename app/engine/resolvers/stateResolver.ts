@@ -1,0 +1,33 @@
+import { CombatState } from "@/app/types/State";
+
+export const resolveState = (
+    stateKey: string,
+    combatState: CombatState,
+): boolean | number | string | undefined => {
+    const stateMap: Record<string, boolean | number | string> = {
+        activeModels: combatState.modelCount - combatState.deadModelIds.length,
+        battleShock: combatState.isBattleShocked,
+        damaged: combatState.isDamaged,
+        benefitOfCover: combatState.isInCover,
+        unitStrength: combatState.unitStrength,
+        movementBehaviour: combatState.movementBehaviour,
+        isInEngagementRange: combatState.isInEngagementRange,
+        isInObjectiveRange: combatState.isInObjectiveRange,
+        hasShot: combatState.hasShot,
+        hasCharged: combatState.hasCharged,
+        hasFought: combatState.hasFought,
+        isDestroyed: combatState.isDestroyed,
+        modelCount: combatState.modelCount,
+        currentWounds: combatState.currentWounds,
+    };
+
+    if (stateKey in stateMap) {
+        return stateMap[stateKey];
+    }
+
+    if (combatState.customState && stateKey in combatState.customState) {
+        return combatState.customState[stateKey];
+    }
+
+    return undefined;
+};

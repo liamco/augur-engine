@@ -1,0 +1,15 @@
+{
+    "name": "deadly-demise",
+    "entity": "opposingUnit",
+    "effect": "mortalWounds",
+    "attribute": "wound",
+    "value": "$param",
+    "conditions": [
+        {
+            "entity": "thisUnit",
+            "state": "isDestroyed",
+            "operator": "equals",
+            "value": true
+        }
+    ]
+}

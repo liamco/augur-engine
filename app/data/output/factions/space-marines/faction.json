@@ -1,0 +1,56 @@
+{
+    "id": "SM",
+    "slug": "space-marines",
+    "name": "Space Marines",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/space-marines",
+    "datasheets": [],
+    "detachments": [],
+    "abilities": [
+        {
+            "id": "000008350",
+            "name": "Oath of Moment",
+            "legend": "In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shifting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe’s forces are laid waste with horrifying speed, until the Emperor’s Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied.",
+            "factionId": "WE",
+            "description": "If your Army Faction is <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span>, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:<br><ul><li>You can re-roll the Hit roll.</li><li>If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Black Templars, Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.</li></ul>",
+            "type": "Faction",
+            "mechanics": [
+                {
+                    "name": "Oath of Moment - Hit reroll",
+                    "entity": "thisArmy",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "conditions": [
+                        {
+                            "entity": "opposingUnit",
+                            "attribute": "oathOfMomentTarget",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "name": "Oath of Moment - Wound bonus",
+                    "entity": "thisArmy",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisArmy",
+                            "keywords": [
+                                "BLOOD ANGELS",
+                                "DARK ANGELS",
+                                "BLACK TEMPLARS",
+                                "DEATHWATCH",
+                                "SPACE WOLVES"
+                            ],
+                            "value": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "dataVersion": "2026-01-14 00:30:31",
+    "datasheetCount": 298,
+    "detachmentCount": 40
+}

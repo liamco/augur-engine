@@ -1,0 +1,39 @@
+import { CombatContext } from "@/app/types/CombatContext";
+import { CombatResult } from "@/app/types/CombatResult";
+import { collectAllMechanics } from "../collectors/collectAllMechanics";
+import { filterByConditions } from "../resolvers/conditionResolver";
+import { resolveEffects } from "../resolvers/effectResolver";
+import { resolveAttackCount } from "../combat-phases/resolveAttackCount";
+import { resolveHitRoll } from "../combat-phases/resolveHitRoll";
+import { resolveWoundRoll } from "../combat-phases/resolveWoundRoll";
+import { resolveSaveRoll } from "../combat-phases/resolveSaveRoll";
+import { resolveDamage } from "../combat-phases/resolveDamage";
+import { resolveFeelNoPain } from "../combat-phases/resolveFeelNoPain";
+
+export const runCombat = (context: CombatContext): CombatResult => {
+    // Stage 1: Collect all mechanics from every hierarchy layer
+    const allMechanics = collectAllMechanics(context);
+
+    // Stage 2: Evaluate conditions — filter to only active mechanics
+    const activeMechanics = filterByConditions(allMechanics, context);
+
+    // Stage 3: Resolve effects — group by attribute, apply precedence
+    const resolved = resolveEffects(activeMechanics);
+
+    // Stage 4: Execute combat phases sequentially
+    const attackCount = resolveAttackCount(context, resolved);
+    const hitPhase = resolveHitRoll(context, resolved);
+    const woundPhase = resolveWoundRoll(context, resolved);
+    const savePhase = resolveSaveRoll(context, resolved);
+    const damagePhase = resolveDamage(context, resolved);
+    const feelNoPain = resolveFeelNoPain(context, resolved);
+
+    return {
+        attackCount,
+        hitPhase,
+        woundPhase,
+        savePhase,
+        damagePhase,
+        feelNoPain,
+    };
+};

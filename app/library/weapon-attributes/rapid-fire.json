@@ -1,0 +1,15 @@
+{
+    "name": "rapid-fire",
+    "entity": "thisModel",
+    "effect": "rollBonus",
+    "attribute": "attacks",
+    "value": "$param",
+    "conditions": [
+        {
+            "entity": "targetUnit",
+            "attribute": "range",
+            "operator": "lessThanOrEqualTo",
+            "value": "$halfRange"
+        }
+    ]
+}

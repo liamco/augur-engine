@@ -1,0 +1,15 @@
+{
+    "name": "anti",
+    "entity": "thisModel",
+    "effect": "autoSuccess",
+    "attribute": "wound",
+    "value": "$param",
+    "conditions": [
+        {
+            "entity": "targetUnit",
+            "keywords": ["$keyword"],
+            "operator": "includes",
+            "value": "$keyword"
+        }
+    ]
+}
