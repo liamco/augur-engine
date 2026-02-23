@@ -3,8 +3,8 @@ import { CombatState } from "@/app/types/State";
 export const resolveState = (
     stateKey: string,
     combatState: CombatState,
-): boolean | number | string | undefined => {
-    const stateMap: Record<string, boolean | number | string> = {
+): boolean | number | string | null => {
+    const stateMap: Record<string, boolean | number | string | null> = {
         activeModels: combatState.modelCount - combatState.deadModelIds.length,
         battleShock: combatState.isBattleShocked,
         damaged: combatState.isDamaged,
@@ -13,9 +13,7 @@ export const resolveState = (
         movementBehaviour: combatState.movementBehaviour,
         isInEngagementRange: combatState.isInEngagementRange,
         isInObjectiveRange: combatState.isInObjectiveRange,
-        hasShot: combatState.hasShot,
-        hasCharged: combatState.hasCharged,
-        hasFought: combatState.hasFought,
+        chargeBehaviour: combatState.chargeBehaviour,
         isDestroyed: combatState.isDestroyed,
         modelCount: combatState.modelCount,
         currentWounds: combatState.currentWounds,
@@ -29,5 +27,5 @@ export const resolveState = (
         return combatState.customState[stateKey];
     }
 
-    return undefined;
+    return null;
 };
