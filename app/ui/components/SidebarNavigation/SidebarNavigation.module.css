@@ -1,0 +1,31 @@
+@reference "tailwindcss";
+
+.SidebarNavigation {
+    position: absolute;
+    @apply flex flex-col justify-between items-center h-full pl-6 py-6;
+}
+
+.SidebarNavigationLinks {
+    @apply flex flex-row top-6 -rotate-180 translate-x-[-2px];
+    position: relative;
+    writing-mode: vertical-lr;
+}
+
+.SidebarNavigationItem {
+    @apply relative inline-block py-2 px-4 rounded-tr rounded-br;
+}
+
+.SidebarNavigationItemActive {
+    box-shadow: var(--shadow-glow-green);
+    background-color: var(--color-skarsnikGreen);
+    color: var(--color-mournfangBrown);
+}
+
+.SidebarNavigationVersion {
+    @apply flex gap-2 -rotate-180 items-center translate-x-[-2px];
+    writing-mode: vertical-lr;
+
+    svg {
+        @apply -rotate-180;
+    }
+}

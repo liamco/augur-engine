@@ -13,7 +13,7 @@
             "factionId": "WE",
             "description": "If your Army Faction is <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span>, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:<br><ul><li>You can re-roll the Hit roll.</li><li>If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Black Templars, Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.</li></ul>",
             "type": "Faction",
-            "phase": ["command"],
+            "activationPhase": ["command"],
             "interface": {
                 "type": "singleSelect",
                 "value": "oathOfMomentTarget",

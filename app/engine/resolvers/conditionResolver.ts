@@ -1,9 +1,18 @@
 import { Condition } from "@/app/types/Mechanic";
+import { EngagementPhase } from "@/app/types/Engagement";
 import { CombatContext } from "@/app/types/CombatContext";
 import { TaggedMechanic } from "../collectors/collectAllMechanics";
 import { resolveEntity, EntityData } from "./entityResolver";
 import { evaluateOperator } from "./operatorEvaluator";
 import { resolveState } from "./stateResolver";
+
+export const filterByPhase = (
+    mechanics: TaggedMechanic[],
+    phase: EngagementPhase,
+): TaggedMechanic[] =>
+    mechanics.filter(
+        (tm) => !tm.mechanic.phase || tm.mechanic.phase.includes(phase),
+    );
 
 export const filterByConditions = (
     mechanics: TaggedMechanic[],

@@ -1,3 +1,5 @@
+import { EngagementPhase } from "./Engagement";
+
 /**
  * Core mechanic types for the Combat Engine
  * Mirrors the schema defined in scripts/openai-extractors/mechanic-schema.js
@@ -7,6 +9,7 @@ export interface Mechanic {
     entity: Entity;
     effect: Effect;
     attribute?: Attribute;
+    phase?: EngagementPhase[];
     abilities?: string[];
     keywords?: string[];
     state?: string[];

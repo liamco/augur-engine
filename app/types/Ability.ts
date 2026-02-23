@@ -10,7 +10,7 @@ export interface Ability {
     factionId?: string;
     description?: string;
     parameter?: string;
-    phase?: EngagementPhase;
+    activationPhase?: EngagementPhase[];
     interface?: [];
     mechanics?: Mechanic[];
     sourceUnitName?: string;
