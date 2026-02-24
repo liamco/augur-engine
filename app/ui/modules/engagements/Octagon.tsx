@@ -7,7 +7,10 @@ import { ResolvedModifiers } from "#types/ResolvedModifiers";
 import { Attribute } from "#types/Mechanic";
 import { WeaponProfile } from "#types/Weapon";
 import { CombatState } from "#types/State";
+import { EngagementPhase } from "#types/Engagement";
 import { unitManifest } from "./unitManifest";
+
+const COMBAT_PHASES: EngagementPhase[] = ["shooting", "fight"];
 
 const Octagon = () => {
     const [attackerIndex, setAttackerIndex] = useState<number | null>(null);
@@ -20,6 +23,7 @@ const Octagon = () => {
     const [defenderState, setDefenderState] = useState<CombatState | null>(
         null,
     );
+    const [phase, setPhase] = useState<EngagementPhase>("shooting");
 
     const attackerBase =
         attackerIndex !== null ? unitManifest[attackerIndex].data : null;
@@ -35,7 +39,9 @@ const Octagon = () => {
             ? { ...defenderBase, combatState: defenderState }
             : defenderBase;
 
-    const weapons = attacker?.wargear.weapons ?? [];
+    const allWeapons = attacker?.wargear.weapons ?? [];
+    const weaponTypeFilter = phase === "fight" ? "Melee" : "Ranged";
+    const weapons = allWeapons.filter((w) => w.type === weaponTypeFilter);
     const selectedWeapon = weapons[weaponIndex] ?? null;
     const profiles = selectedWeapon?.profiles ?? [];
     const selectedProfile = profiles[profileIndex] ?? null;
@@ -53,10 +59,11 @@ const Octagon = () => {
             attacker,
             defender,
             weaponProfile: profile,
+            engagementPhase: phase,
         });
 
         return runCombat(context);
-    }, [attacker, defender, selectedProfile, selectedWeapon]);
+    }, [attacker, defender, selectedProfile, selectedWeapon, phase]);
 
     const handleAttackerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const val = e.target.value;
@@ -88,174 +95,199 @@ const Octagon = () => {
     };
 
     return (
-        <div className="w-full grid grid-cols-3 gap-6 overflow-auto FullScreenHeight">
-            {/* Header */}
+        <div className="space-y-6 overflow-auto FullScreenHeight">
             <h1 className="text-blockcaps-l text-center col-span-3">
                 Test Lab
             </h1>
-
-            <aside className="flex flex-col gap-6">
-                <SelectGroup
-                    label="Attacker"
-                    value={attackerIndex}
-                    onChange={handleAttackerChange}
-                >
-                    {unitManifest.map((entry, i) => (
-                        <option key={i} value={i}>
-                            {entry.label}
-                        </option>
-                    ))}
-                </SelectGroup>
-                {attackerState && (
-                    <CombatStatePanel
-                        label="Attacker State"
-                        state={attackerState}
-                        onChange={setAttackerState}
-                    />
-                )}
-                {attacker && (
-                    <div className="grid grid-cols-2 gap-4">
-                        <SelectGroup
-                            label="Weapon"
-                            value={weaponIndex}
-                            onChange={handleWeaponChange}
-                            placeholder={false}
-                        >
-                            {weapons.map((w, i) => (
-                                <option key={i} value={i}>
-                                    {w.name} ({w.type})
-                                </option>
-                            ))}
-                        </SelectGroup>
-                        {profiles.length > 1 && (
+            {/* Phase selector */}
+            <div className="col-span-3 flex justify-center gap-4">
+                {COMBAT_PHASES.map((p) => (
+                    <label
+                        key={p}
+                        className={`flex items-center gap-1.5 cursor-pointer text-blockcaps-xs ${phase === p ? "text-skarsnikGreen" : "text-skarsnikGreen/40"}`}
+                    >
+                        <input
+                            type="radio"
+                            name="engagementPhase"
+                            value={p}
+                            checked={phase === p}
+                            onChange={() => {
+                                setPhase(p);
+                                setWeaponIndex(0);
+                                setProfileIndex(0);
+                            }}
+                            className="accent-skarsnikGreen"
+                        />
+                        {p}
+                    </label>
+                ))}
+            </div>
+            <div className="w-full grid grid-cols-3 gap-6">
+                <aside className="flex flex-col gap-6">
+                    <SelectGroup
+                        label="Attacker"
+                        value={attackerIndex}
+                        onChange={handleAttackerChange}
+                    >
+                        {unitManifest.map((entry, i) => (
+                            <option key={i} value={i}>
+                                {entry.label}
+                            </option>
+                        ))}
+                    </SelectGroup>
+                    {attackerState && (
+                        <CombatStatePanel
+                            label="Attacker State"
+                            state={attackerState}
+                            onChange={setAttackerState}
+                        />
+                    )}
+                    {attacker && (
+                        <div className="grid grid-cols-2 gap-4">
                             <SelectGroup
-                                label="Profile"
-                                value={profileIndex}
-                                onChange={handleProfileChange}
+                                label="Weapon"
+                                value={weaponIndex}
+                                onChange={handleWeaponChange}
                                 placeholder={false}
                             >
-                                {profiles.map((p, i) => (
+                                {weapons.map((w, i) => (
                                     <option key={i} value={i}>
-                                        {p.name}
+                                        {w.name}
                                     </option>
                                 ))}
                             </SelectGroup>
-                        )}
-                    </div>
-                )}
-
-                {/* Weapon stat line */}
-                {selectedProfile && (
-                    <div className="border border-deathWorldForest p-3">
-                        <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-2">
-                            Weapon Profile
+                            {profiles.length > 1 && (
+                                <SelectGroup
+                                    label="Profile"
+                                    value={profileIndex}
+                                    onChange={handleProfileChange}
+                                    placeholder={false}
+                                >
+                                    {profiles.map((p, i) => (
+                                        <option key={i} value={i}>
+                                            {p.name}
+                                        </option>
+                                    ))}
+                                </SelectGroup>
+                            )}
                         </div>
-                        <div className="grid grid-cols-6 gap-2 text-center text-blockcaps-xs">
-                            <StatCell label="A" value={selectedProfile.a} />
-                            <StatCell
-                                label="BS/WS"
-                                value={`${selectedProfile.bsWs}+`}
+                    )}
+
+                    {/* Weapon stat line */}
+                    {selectedProfile && (
+                        <div className="border border-deathWorldForest p-3">
+                            <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-2">
+                                Weapon Profile
+                            </div>
+                            <div className="grid grid-cols-6 gap-2 text-center text-blockcaps-xs">
+                                <StatCell label="A" value={selectedProfile.a} />
+                                <StatCell
+                                    label="BS/WS"
+                                    value={`${selectedProfile.bsWs}+`}
+                                />
+                                <StatCell label="S" value={selectedProfile.s} />
+                                <StatCell
+                                    label="AP"
+                                    value={selectedProfile.ap}
+                                />
+                                <StatCell label="D" value={selectedProfile.d} />
+                                <StatCell
+                                    label="Range"
+                                    value={
+                                        selectedProfile.range === "Melee"
+                                            ? "Melee"
+                                            : `${selectedProfile.range}"`
+                                    }
+                                />
+                            </div>
+                            {selectedProfile.attributes.length > 0 && (
+                                <div className="mt-2 text-blockcaps-xs text-skarsnikGreen/60">
+                                    [{selectedProfile.attributes.join(", ")}]
+                                </div>
+                            )}
+                        </div>
+                    )}
+                </aside>
+
+                {result ? (
+                    <div className="flex flex-col gap-6 border border-deathWorldForest">
+                        <div className="text-blockcaps-s p-3 border-b border-deathWorldForest bg-deathWorldForest/20">
+                            Results
+                        </div>
+                        <div className="divide-y divide-deathWorldForest/50">
+                            <PhaseRow
+                                label="Attacks"
+                                phase={result.attackCount}
+                                attributes={["attacks"]}
                             />
-                            <StatCell label="S" value={selectedProfile.s} />
-                            <StatCell label="AP" value={selectedProfile.ap} />
-                            <StatCell label="D" value={selectedProfile.d} />
-                            <StatCell
-                                label="Range"
-                                value={
-                                    selectedProfile.range === "Melee"
-                                        ? "Melee"
-                                        : `${selectedProfile.range}"`
+                            <PhaseRow
+                                label="To Hit"
+                                phase={result.hitPhase}
+                                showTarget
+                                attributes={["hit"]}
+                            />
+                            <PhaseRow
+                                label="To Wound"
+                                phase={result.woundPhase}
+                                showTarget
+                                attributes={["wound", "strength", "toughness"]}
+                            />
+                            <PhaseRow
+                                label="To Save"
+                                phase={result.savePhase}
+                                showTarget
+                                attributes={[
+                                    "save",
+                                    "armourPenetration",
+                                    "invulnSave",
+                                ]}
+                                note={
+                                    selectedProfile
+                                        ? selectedProfile.ap !== 0 ? `AP ${selectedProfile.ap}` : undefined
+                                        : undefined
                                 }
                             />
-                        </div>
-                        {selectedProfile.attributes.length > 0 && (
-                            <div className="mt-2 text-blockcaps-xs text-skarsnikGreen/60">
-                                [{selectedProfile.attributes.join(", ")}]
-                            </div>
-                        )}
-                    </div>
-                )}
-            </aside>
-
-            {result ? (
-                <div className="flex flex-col gap-6 border border-deathWorldForest">
-                    <div className="text-blockcaps-s p-3 border-b border-deathWorldForest bg-deathWorldForest/20">
-                        Results
-                    </div>
-                    <div className="divide-y divide-deathWorldForest/50">
-                        <PhaseRow
-                            label="Attacks"
-                            phase={result.attackCount}
-                            attributes={["attacks"]}
-                        />
-                        <PhaseRow
-                            label="To Hit"
-                            phase={result.hitPhase}
-                            showTarget
-                            attributes={["hit"]}
-                        />
-                        <PhaseRow
-                            label="To Wound"
-                            phase={result.woundPhase}
-                            showTarget
-                            attributes={["wound", "strength", "toughness"]}
-                        />
-                        <PhaseRow
-                            label="To Save"
-                            phase={result.savePhase}
-                            showTarget
-                            attributes={[
-                                "save",
-                                "armourPenetration",
-                                "invulnSave",
-                            ]}
-                            note={
-                                selectedProfile
-                                    ? `AP ${selectedProfile.ap}`
-                                    : undefined
-                            }
-                        />
-                        <DamageRow label="Damage" damage={result.damagePhase} />
-                        {result.feelNoPain ? (
-                            <PhaseRow
-                                label="Feel No Pain"
-                                phase={result.feelNoPain}
-                                showTarget
-                                attributes={["feelNoPain"]}
+                            <DamageRow
+                                label="Damage"
+                                damage={result.damagePhase}
                             />
-                        ) : (
-                            <ResultRow label="Feel No Pain" value="--" />
-                        )}
+                            {result.feelNoPain ? (
+                                <PhaseRow
+                                    label="Feel No Pain"
+                                    phase={result.feelNoPain}
+                                    showTarget
+                                    attributes={["feelNoPain"]}
+                                />
+                            ) : (
+                                <ResultRow label="Feel No Pain" value="--" />
+                            )}
+                        </div>
                     </div>
-                </div>
-            ) : (
-                <main>Awaiting selections</main>
-            )}
-
-            <aside className="flex flex-col gap-6">
-                <SelectGroup
-                    label="Defender"
-                    value={defenderIndex}
-                    onChange={handleDefenderChange}
-                >
-                    {unitManifest.map((entry, i) => (
-                        <option key={i} value={i}>
-                            {entry.label}
-                        </option>
-                    ))}
-                </SelectGroup>
-                {defenderState && (
-                    <CombatStatePanel
-                        label="Defender State"
-                        state={defenderState}
-                        onChange={setDefenderState}
-                    />
+                ) : (
+                    <main>Awaiting selections</main>
                 )}
-            </aside>
 
-            {/* Weapon selectors */}
-
-            {/* Results */}
+                <aside className="flex flex-col gap-6">
+                    <SelectGroup
+                        label="Defender"
+                        value={defenderIndex}
+                        onChange={handleDefenderChange}
+                    >
+                        {unitManifest.map((entry, i) => (
+                            <option key={i} value={i}>
+                                {entry.label}
+                            </option>
+                        ))}
+                    </SelectGroup>
+                    {defenderState && (
+                        <CombatStatePanel
+                            label="Defender State"
+                            state={defenderState}
+                            onChange={setDefenderState}
+                        />
+                    )}
+                </aside>
+            </div>
         </div>
     );
 };

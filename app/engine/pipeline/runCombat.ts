@@ -15,7 +15,8 @@ export const runCombat = (context: CombatContext): CombatResult => {
     const allMechanics = collectAllMechanics(context);
 
     // Stage 1.5: Filter by engagement phase
-    const currentPhase = context.weaponProfile.type === "Ranged" ? "shooting" : "fight";
+    const currentPhase = context.engagementPhase
+        ?? (context.weaponProfile.type === "Ranged" ? "shooting" : "fight");
     const phaseMechanics = filterByPhase(allMechanics, currentPhase);
 
     // Stage 2: Evaluate conditions — filter to only active mechanics

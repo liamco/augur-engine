@@ -1,3 +1,4 @@
+import { EngagementPhase } from "./Engagement";
 import { Mechanic } from "./Mechanic";
 import { TestUnit } from "./Test";
 import { WeaponProfile } from "./Weapon";
@@ -17,4 +18,5 @@ export interface CombatContext {
     defenderDetachmentMechanics: Mechanic[];
     attackerArmyMechanics: Mechanic[];
     defenderArmyMechanics: Mechanic[];
+    engagementPhase?: EngagementPhase;
 }
