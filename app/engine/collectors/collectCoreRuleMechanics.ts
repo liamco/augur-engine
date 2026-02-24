@@ -10,10 +10,7 @@ export const collectCoreRuleMechanics = (
 
     if (context.defender.combatState.isInCover) {
         results.push({
-            mechanic: {
-                ...(benefitOfCover as unknown as Mechanic),
-                name: "Benefit of Cover",
-            },
+            mechanic: benefitOfCover as unknown as Mechanic,
             layer: "unitAbility",
             perspective: "defender",
         });
