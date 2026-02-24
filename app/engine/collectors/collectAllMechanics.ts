@@ -10,6 +10,7 @@ import { collectDamagedMechanics } from "./collectDamagedMechanics";
 import { collectStratagemMechanics } from "./collectStratagemMechanics";
 import { collectDetachmentMechanics } from "./collectDetachmentMechanics";
 import { collectArmyMechanics } from "./collectArmyMechanics";
+import { collectCoreRuleMechanics } from "./collectCoreRuleMechanics";
 
 export interface TaggedMechanic {
     mechanic: Mechanic;
@@ -21,6 +22,7 @@ export const collectAllMechanics = (
     context: CombatContext,
 ): TaggedMechanic[] => {
     return [
+        ...collectCoreRuleMechanics(context),
         ...collectWeaponMechanics(context),
         ...collectUnitMechanics(context),
         ...collectLeaderMechanics(context),
