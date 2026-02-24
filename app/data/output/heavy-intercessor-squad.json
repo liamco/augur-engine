@@ -241,20 +241,21 @@
             "parameter": "",
             "mechanics": [
                 {
+                    "name": "Unyielding...",
                     "entity": "thisUnit",
                     "effect": "rollBonus",
-                    "attribute": "s",
+                    "attribute": "save",
                     "value": 1,
                     "conditions": [
                         {
                             "entity": "thisUnit",
-                            "state": "inRangeOfFriendlyObjective",
+                            "state": "isInObjectiveRange",
                             "operator": "equals",
-                            "value": true
+                            "value": "friendly"
                         },
                         {
-                            "entity": "targetModel",
-                            "attribute": "d",
+                            "entity": "opposingUnit",
+                            "attribute": "damage",
                             "operator": "equals",
                             "value": 1
                         }

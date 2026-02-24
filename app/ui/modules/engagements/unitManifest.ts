@@ -1,5 +1,6 @@
 import heavyIntercessors from "#data/output/heavy-intercessor-squad.json";
 import wingedTyranidPrime from "#data/output/winged-tyranid-prime.json";
+import termagants from "#data/output/termagants.json";
 import { TestUnit } from "#types/Test";
 
 export interface UnitManifestEntry {
@@ -8,6 +9,13 @@ export interface UnitManifestEntry {
 }
 
 export const unitManifest: UnitManifestEntry[] = [
-    { label: "Heavy Intercessor Squad", data: heavyIntercessors as unknown as TestUnit },
-    { label: "Winged Tyranid Prime", data: wingedTyranidPrime as unknown as TestUnit },
+    {
+        label: "Heavy Intercessor Squad",
+        data: heavyIntercessors as unknown as TestUnit,
+    },
+    {
+        label: "Winged Tyranid Prime",
+        data: wingedTyranidPrime as unknown as TestUnit,
+    },
+    { label: "Termagants", data: termagants as unknown as TestUnit },
 ];

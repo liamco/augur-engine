@@ -96,32 +96,34 @@ const Octagon = () => {
 
     return (
         <div className="space-y-6 overflow-auto FullScreenHeight">
-            <h1 className="text-blockcaps-l text-center col-span-3">
-                Test Lab
-            </h1>
-            {/* Phase selector */}
-            <div className="col-span-3 flex justify-center gap-4">
-                {COMBAT_PHASES.map((p) => (
-                    <label
-                        key={p}
-                        className={`flex items-center gap-1.5 cursor-pointer text-blockcaps-xs ${phase === p ? "text-skarsnikGreen" : "text-skarsnikGreen/40"}`}
-                    >
-                        <input
-                            type="radio"
-                            name="engagementPhase"
-                            value={p}
-                            checked={phase === p}
-                            onChange={() => {
-                                setPhase(p);
-                                setWeaponIndex(0);
-                                setProfileIndex(0);
-                            }}
-                            className="accent-skarsnikGreen"
-                        />
-                        {p}
-                    </label>
-                ))}
-            </div>
+            <header className="flex justify-between items-center">
+                <h1 className="text-blockcaps-l text-center col-span-3">
+                    Test Lab
+                </h1>
+                {/* Phase selector */}
+                <div className="col-span-3 flex justify-center gap-4">
+                    {COMBAT_PHASES.map((p) => (
+                        <label
+                            key={p}
+                            className={`flex items-center gap-1.5 cursor-pointer text-blockcaps-xs ${phase === p ? "text-skarsnikGreen" : "text-skarsnikGreen/40"}`}
+                        >
+                            <input
+                                type="radio"
+                                name="engagementPhase"
+                                value={p}
+                                checked={phase === p}
+                                onChange={() => {
+                                    setPhase(p);
+                                    setWeaponIndex(0);
+                                    setProfileIndex(0);
+                                }}
+                                className="accent-skarsnikGreen"
+                            />
+                            {p}
+                        </label>
+                    ))}
+                </div>
+            </header>
             <div className="w-full grid grid-cols-3 gap-6">
                 <aside className="flex flex-col gap-6">
                     <SelectGroup
@@ -135,13 +137,6 @@ const Octagon = () => {
                             </option>
                         ))}
                     </SelectGroup>
-                    {attackerState && (
-                        <CombatStatePanel
-                            label="Attacker State"
-                            state={attackerState}
-                            onChange={setAttackerState}
-                        />
-                    )}
                     {attacker && (
                         <div className="grid grid-cols-2 gap-4">
                             <SelectGroup
@@ -207,6 +202,14 @@ const Octagon = () => {
                             )}
                         </div>
                     )}
+
+                    {attackerState && (
+                        <CombatStatePanel
+                            label="Attacker State"
+                            state={attackerState}
+                            onChange={setAttackerState}
+                        />
+                    )}
                 </aside>
 
                 {result ? (
@@ -243,7 +246,9 @@ const Octagon = () => {
                                 ]}
                                 note={
                                     selectedProfile
-                                        ? selectedProfile.ap !== 0 ? `AP ${selectedProfile.ap}` : undefined
+                                        ? selectedProfile.ap !== 0
+                                            ? `AP ${selectedProfile.ap}`
+                                            : undefined
                                         : undefined
                                 }
                             />
@@ -264,7 +269,9 @@ const Octagon = () => {
                         </div>
                     </div>
                 ) : (
-                    <main>Awaiting selections</main>
+                    <main className="flex items-center justify-center">
+                        Awaiting selections
+                    </main>
                 )}
 
                 <aside className="flex flex-col gap-6">
@@ -279,6 +286,44 @@ const Octagon = () => {
                             </option>
                         ))}
                     </SelectGroup>
+                    {defender && (
+                        <div className="border border-deathWorldForest p-3">
+                            <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-2">
+                                Model Stats
+                            </div>
+                            {defender.models.map((model, i) => (
+                                <div key={i} className={i > 0 ? "mt-3" : ""}>
+                                    {defender.models.length > 1 && (
+                                        <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-1">
+                                            {model.name}
+                                        </div>
+                                    )}
+                                    <div className="grid grid-cols-6 gap-2 text-center text-blockcaps-xs">
+                                        <StatCell
+                                            label="M"
+                                            value={`${model.m}"`}
+                                        />
+                                        <StatCell label="T" value={model.t} />
+                                        <StatCell
+                                            label="SV"
+                                            value={`${model.sv}+`}
+                                        />
+                                        <StatCell label="W" value={model.w} />
+                                        <StatCell
+                                            label="LD"
+                                            value={`${model.ld}+`}
+                                        />
+                                        <StatCell label="OC" value={model.oc} />
+                                    </div>
+                                    {model.invSv !== null && (
+                                        <div className="mt-1 text-blockcaps-xs text-skarsnikGreen/60">
+                                            Invuln: {model.invSv}+
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    )}
                     {defenderState && (
                         <CombatStatePanel
                             label="Defender State"

@@ -1,0 +1,451 @@
+{
+    "id": "000000468",
+    "name": "Termagants",
+    "factionId": "TYR",
+    "sourceId": "000000020",
+    "legend": "Scuttling predators that attack in huge swarms, Termagants were originally spawned to roam the tight arterial passages of hive ships and hunt intruders. They harry their prey with a hail of firepower, seeking always to outflank and envelop their victims as they erode their numbers.",
+    "role": "Battleline",
+    "transport": "",
+    "virtual": false,
+    "leaderHead": "",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids/Termagants",
+    "slug": "termagants",
+    "factionSlug": "tyranids",
+    "roleLabel": "Battleline",
+    "sourceName": "Faction Pack: Tyranids",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "damaged": null,
+    "wargear": {
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> fleshborer; chitinous claws and teeth.",
+            "parsed": [
+                "000000468:fleshborer",
+                "000000468:chitinous-claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000468:fleshborer",
+                    "000000468:chitinous-claws-and-teeth"
+                ]
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000468:fleshborer",
+                "datasheetId": "000000468",
+                "line": 1,
+                "name": "Fleshborer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 1,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Fleshborer",
+                        "attributes": ["ASSAULT"],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000468:shardlauncher",
+                "datasheetId": "000000468",
+                "line": 2,
+                "name": "Shardlauncher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 2,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Shardlauncher",
+                        "attributes": ["BLAST", "HEAVY"],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 1
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000468:spike-rifle",
+                "datasheetId": "000000468",
+                "line": 3,
+                "name": "Spike rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 3,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Spike rifle",
+                        "attributes": ["HEAVY"],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 1
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000468:strangleweb",
+                "datasheetId": "000000468",
+                "line": 4,
+                "name": "Strangleweb",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 4,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Strangleweb",
+                        "attributes": [
+                            "ASSAULT",
+                            "DEVASTATING WOUNDS",
+                            "TORRENT"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": "N/A",
+                        "s": 2,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 1
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000468:termagant-devourer",
+                "datasheetId": "000000468",
+                "line": 5,
+                "name": "Termagant devourer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 5,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Termagant devourer",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000468:termagant-spinefists",
+                "datasheetId": "000000468",
+                "line": 6,
+                "name": "Termagant spinefists",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 6,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Termagant spinefists",
+                        "attributes": ["ASSAULT", "PISTOL", "TWIN-LINKED"],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000468:chitinous-claws-and-teeth",
+                "datasheetId": "000000468",
+                "line": 7,
+                "name": "Chitinous claws and teeth",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000468",
+                        "line": 7,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Chitinous claws and teeth",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000468",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their fleshborer replaced with 1 Termagant devourer."
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 2,
+                    "button": "•",
+                    "description": "All models in this unit can each have their fleshborer replaced with 1 Termagant spinefists."
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, 1 model's ranged weapon can be replaced with 1 shardlauncher"
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, 1 model's ranged weapon can be replaced with 1 spike rifle."
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 5,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, 1 model's ranged weapon can be replaced with 1 strangleweb"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000468:fleshborer",
+                        "000000468:chitinous-claws-and-teeth"
+                    ],
+                    [
+                        "000000468:chitinous-claws-and-teeth",
+                        "000000468:termagant-spinefists"
+                    ],
+                    [
+                        "000000468:chitinous-claws-and-teeth",
+                        "000000468:termagant-devourer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true,
+        "unitWideOptions": [
+            "000000468:fleshborer",
+            "000000468:termagant-devourer",
+            "000000468:termagant-spinefists"
+        ]
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "abilities": [
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "id": "",
+            "name": "Skulking Horrors",
+            "legend": "",
+            "factionId": "",
+            "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\".",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "m",
+                    "value": "D6",
+                    "conditions": [
+                        {
+                            "entity": "opposingUnit",
+                            "state": "inEngagementRange",
+                            "operator": "notEquals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "openai"
+        }
+    ],
+    "keywords": [
+        {
+            "datasheetId": "000000468",
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": "true"
+        },
+        {
+            "datasheetId": "000000468",
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000000468",
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000000468",
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000000468",
+            "keyword": "Termagants",
+            "model": "",
+            "isFactionKeyword": "false"
+        },
+        {
+            "datasheetId": "000000468",
+            "keyword": "Endless Multitude",
+            "model": "",
+            "isFactionKeyword": "false"
+        }
+    ],
+    "models": [
+        {
+            "datasheetId": "000000468",
+            "line": 1,
+            "name": "Termagants",
+            "m": 6,
+            "t": 3,
+            "sv": 5,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 8,
+            "oc": 2,
+            "baseSize": "28.5mm",
+            "baseSizeDescr": ""
+        }
+    ],
+    "unitComposition": [
+        {
+            "datasheetId": "000000468",
+            "line": 1,
+            "description": "10-20 Termagants",
+            "min": 10,
+            "max": 20
+        }
+    ],
+    "modelCosts": [
+        {
+            "datasheetId": "000000468",
+            "line": 1,
+            "description": "10 models",
+            "cost": 60,
+            "count": 10
+        },
+        {
+            "datasheetId": "000000468",
+            "line": 2,
+            "description": "20 models",
+            "cost": 120,
+            "count": 20
+        }
+    ],
+    "leadsUnits": [],
+    "combatState": {
+        "modelCount": 10,
+        "unitStrength": "atStartingStrength",
+        "deadModelIds": [],
+        "currentWounds": 1,
+        "isDamaged": false,
+        "isDestroyed": false,
+        "isBattleShocked": false,
+        "movementBehaviour": "advance",
+        "chargeBehaviour": "hold",
+        "isInObjectiveRange": "none",
+        "isInEngagementRange": false,
+        "isInCover": true
+    }
+}
