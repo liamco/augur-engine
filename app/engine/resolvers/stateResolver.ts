@@ -10,6 +10,8 @@ export const resolveState = (
         damaged: combatState.isDamaged,
         benefitOfCover: combatState.isInCover,
         unitStrength: combatState.unitStrength,
+        isBelowStartingStrength: combatState.unitStrength !== "full",
+        isBelowHalfStrength: combatState.unitStrength === "belowHalf",
         movementBehaviour: combatState.movementBehaviour,
         isInEngagementRange: combatState.isInEngagementRange,
         isInObjectiveRange: combatState.isInObjectiveRange,

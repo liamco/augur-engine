@@ -1,0 +1,268 @@
+{
+    "id": "000002689",
+    "name": "Psychophage",
+    "slug": "psychophage",
+    "legend": "These monsters stampede into battle with frightening speed. They devour any prey organism in their paths, but especially favour those victims with psychic abilities. How they metabolise such esoteric powers is unclear, but doing so allows them to project surges of psychocorrosive ash that deflagrate their victims' minds and souls.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "damaged": null,
+    "transport": "",
+    "wargear": {
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> psychoclastic torrent; talons and betentacled maw.",
+            "parsed": [
+                "000002689:psychoclastic-torrent",
+                "000002689:talons-and-betentacled-maw"
+            ],
+            "byModelType": {
+                "Psychophage": [
+                    "000002689:psychoclastic-torrent",
+                    "000002689:talons-and-betentacled-maw"
+                ]
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002689:psychoclastic-torrent",
+                "datasheetId": "000002689",
+                "line": 1,
+                "name": "Psychoclastic torrent",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002689",
+                        "line": 1,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Psychoclastic torrent",
+                        "attributes": ["IGNORES COVER", "TORRENT"],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": "N/A",
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002689:talons-and-betentacled-maw",
+                "datasheetId": "000002689",
+                "line": 2,
+                "name": "Talons and betentacled maw",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002689",
+                        "line": 2,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Talons and betentacled maw",
+                        "attributes": ["ANTI-PSYKER 4+", "DEVASTATING WOUNDS"],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": true
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core",
+            "parameter": 1
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core",
+            "parameter": 5
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "id": "",
+            "name": "Bio-stimulus",
+            "legend": "",
+            "factionId": "",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly <span class=\"kwb\">TYRANIDS</span> unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "ap",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "opposingUnit",
+                            "operator": "equals",
+                            "value": "selected enemy unit hit by one or more of those attacks"
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "openai"
+        },
+        {
+            "id": "",
+            "name": "Feeding Frenzy",
+            "legend": "",
+            "factionId": "",
+            "description": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "name": "Feeding frenzy",
+                    "entity": "thisModel",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": ["fight"],
+                    "conditions": [
+                        {
+                            "entity": "targetUnit",
+                            "state": "isBelowStartingStrength",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "name": "Feeding frenzy",
+                    "entity": "thisModel",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": ["fight"],
+                    "conditions": [
+                        {
+                            "entity": "targetUnit",
+                            "state": "isBelowHalfStrength",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "openai"
+        }
+    ],
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Harvester",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psychophage",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "models": [
+        {
+            "datasheetId": "000002689",
+            "line": 1,
+            "name": "Psychophage",
+            "m": 12,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 8,
+            "oc": 3,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 110,
+            "count": 1
+        }
+    ],
+    "combatState": {
+        "modelCount": 1,
+        "unitStrength": "full",
+        "deadModelIds": [],
+        "currentWounds": 10,
+        "isDamaged": false,
+        "isDestroyed": false,
+        "isBattleShocked": false,
+        "movementBehaviour": "move",
+        "chargeBehaviour": "hold",
+        "isInObjectiveRange": "none",
+        "isInEngagementRange": false,
+        "isInCover": false
+    }
+}

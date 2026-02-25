@@ -1,0 +1,345 @@
+{
+    "id": "000000079",
+    "name": "Librarian In Terminator Armour",
+    "slug": "librarian-in-terminator-armour",
+    "legend": "The powers of a Chapter's Librarians lend a lethal psychic edge to its elite infantry spearheads. Whether it be gruelling boarding actions, ferocious urban combat or on the front line against overwhelming enemy numbers, Librarians in Terminator armour blast at the foe with their powerful psychic energies.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "damaged": null,
+    "transport": "",
+    "wargear": {
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Smite; force weapon.",
+            "parsed": ["000000079:smite", "000000079:force-weapon"],
+            "byModelType": {
+                "Librarian in Terminator Armour": [
+                    "000000079:smite",
+                    "000000079:force-weapon"
+                ]
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000079:combi-weapon",
+                "datasheetId": "000000079",
+                "line": 1,
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 1,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:smite",
+                "datasheetId": "000000079",
+                "line": 2,
+                "name": "Smite",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 2,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Smite - witchfire",
+                        "attributes": ["PSYCHIC"],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": "D3"
+                    },
+                    {
+                        "datasheetId": "000000079",
+                        "line": 3,
+                        "lineInWargear": 2,
+                        "dice": "",
+                        "name": "Smite - focused witchfire",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "HAZARDOUS",
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:storm-bolter",
+                "datasheetId": "000000079",
+                "line": 4,
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 4,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": ["RAPID FIRE 2"],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:force-weapon",
+                "datasheetId": "000000079",
+                "line": 5,
+                "name": "Force weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 5,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Force weapon",
+                        "attributes": ["PSYCHIC"],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000079",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "validLoadouts": [],
+        "loadoutsParsed": true
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "id": "",
+            "name": "Psychic Hood",
+            "legend": "",
+            "factionId": "",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "entity": "thisModel",
+                    "effect": "addsAbility",
+                    "abilities": ["FEEL NO PAIN"],
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisModel",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
+        },
+        {
+            "id": "",
+            "name": "Veil of Time (Psychic)",
+            "legend": "",
+            "factionId": "",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": "",
+            "mechanics": [
+                {
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": ["SUSTAINED HITS"],
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisModel",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "openai"
+        }
+    ],
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Librarian",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "models": [
+        {
+            "datasheetId": "000002689",
+            "line": 1,
+            "name": "Psychophage",
+            "m": 12,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 8,
+            "oc": 3,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 110,
+            "count": 1
+        }
+    ],
+    "combatState": {
+        "modelCount": 1,
+        "unitStrength": "full",
+        "deadModelIds": [],
+        "currentWounds": 10,
+        "isDamaged": false,
+        "isDestroyed": false,
+        "isBattleShocked": false,
+        "movementBehaviour": "move",
+        "chargeBehaviour": "hold",
+        "isInObjectiveRange": "none",
+        "isInEngagementRange": false,
+        "isInCover": false
+    }
+}

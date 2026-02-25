@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import { buildCombatContext } from "@/app/engine/pipeline/buildCombatContext";
 import { runCombat } from "@/app/engine/pipeline/runCombat";
@@ -298,11 +298,12 @@ const Octagon = () => {
                         </div>
                     )}
 
-                    {attackerState && (
+                    {attackerState && attackerBase && (
                         <CombatStatePanel
                             label="Attacker State"
                             state={attackerState}
                             onChange={setAttackerState}
+                            unit={attackerBase}
                         />
                     )}
                 </aside>
@@ -429,11 +430,12 @@ const Octagon = () => {
                             ))}
                         </div>
                     )}
-                    {defenderState && (
+                    {defenderState && defenderBase && (
                         <CombatStatePanel
                             label="Defender State"
                             state={defenderState}
                             onChange={setDefenderState}
+                            unit={defenderBase}
                         />
                     )}
                 </aside>
@@ -666,10 +668,12 @@ function CombatStatePanel({
     label,
     state,
     onChange,
+    unit,
 }: {
     label: string;
     state: CombatState;
     onChange: (next: CombatState) => void;
+    unit: TestUnit;
 }) {
     const update = <K extends keyof CombatState>(
         key: K,
@@ -678,29 +682,92 @@ function CombatStatePanel({
         onChange({ ...state, [key]: value });
     };
 
+    const maxModels = Math.max(...unit.models.map((m) => m.composition.max));
+    const woundsPerModel = unit.models[0].w;
+    const isSingleModelMultiWound = maxModels === 1 && woundsPerModel > 1;
+
+    const [startingModels, setStartingModels] = useState(state.modelCount);
+    const [startingWounds, setStartingWounds] = useState(state.currentWounds);
+
+    useEffect(() => {
+        setStartingModels(state.modelCount);
+        setStartingWounds(state.currentWounds);
+    }, [unit.id]);
+
+    const starting = isSingleModelMultiWound ? startingWounds : startingModels;
+    const current = isSingleModelMultiWound
+        ? state.currentWounds
+        : state.modelCount;
+
+    const derivedStrength: CombatState["unitStrength"] =
+        current >= starting
+            ? "full"
+            : current < starting / 2
+              ? "belowHalf"
+              : "belowStarting";
+
+    const derivedDamaged =
+        unit.damaged !== null
+            ? state.currentWounds <= unit.damaged.threshold
+            : false;
+
+    useEffect(() => {
+        const updates: Partial<CombatState> = {};
+        if (state.unitStrength !== derivedStrength) {
+            updates.unitStrength = derivedStrength;
+        }
+        if (unit.damaged && state.isDamaged !== derivedDamaged) {
+            updates.isDamaged = derivedDamaged;
+        }
+        if (Object.keys(updates).length > 0) {
+            onChange({ ...state, ...updates });
+        }
+    }, [derivedStrength, derivedDamaged]);
+
     return (
         <div className="border border-deathWorldForest/50 p-3">
             <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-2">
                 {label}
             </div>
             <div className="flex flex-col gap-1.5 text-blockcaps-xs">
-                <StateNumberRow
-                    label="Models"
-                    value={state.modelCount}
-                    onChange={(v) => update("modelCount", v)}
-                />
-                <StateNumberRow
-                    label="Wounds"
-                    value={state.currentWounds}
-                    onChange={(v) => update("currentWounds", v)}
-                />
-                <StateSelectRow
+                {isSingleModelMultiWound ? (
+                    <>
+                        <StateNumberRow
+                            label="Starting Wounds"
+                            value={startingWounds}
+                            min={0}
+                            max={woundsPerModel}
+                            onChange={setStartingWounds}
+                        />
+                        <StateNumberRow
+                            label="Current Wounds"
+                            value={state.currentWounds}
+                            min={0}
+                            max={woundsPerModel}
+                            onChange={(v) => update("currentWounds", v)}
+                        />
+                    </>
+                ) : (
+                    <>
+                        <StateNumberRow
+                            label="Starting Models"
+                            value={startingModels}
+                            min={0}
+                            max={maxModels}
+                            onChange={setStartingModels}
+                        />
+                        <StateNumberRow
+                            label="Current Models"
+                            value={state.modelCount}
+                            min={0}
+                            max={maxModels}
+                            onChange={(v) => update("modelCount", v)}
+                        />
+                    </>
+                )}
+                <StateReadOnlyRow
                     label="Strength"
-                    value={state.unitStrength}
-                    options={["full", "belowStarting", "belowHalf"]}
-                    onChange={(v) =>
-                        update("unitStrength", v as CombatState["unitStrength"])
-                    }
+                    value={derivedStrength}
                 />
                 <StateSelectRow
                     label="Movement"
@@ -749,11 +816,12 @@ function CombatStatePanel({
                     value={state.isInCover}
                     onChange={(v) => update("isInCover", v)}
                 />
-                <StateBoolRow
-                    label="Damaged"
-                    value={state.isDamaged}
-                    onChange={(v) => update("isDamaged", v)}
-                />
+                {unit.damaged !== null && (
+                    <StateReadOnlyRow
+                        label="Damaged"
+                        value={derivedDamaged ? "Yes" : "No"}
+                    />
+                )}
                 <StateBoolRow
                     label="Battle Shocked"
                     value={state.isBattleShocked}
@@ -821,14 +889,35 @@ function StateSelectRow({
     );
 }
 
+function StateReadOnlyRow({
+    label,
+    value,
+}: {
+    label: string;
+    value: string;
+}) {
+    return (
+        <div className={stateRowCls}>
+            <span className={stateLabelCls}>{label}</span>
+            <span className="text-skarsnikGreen/60 px-1.5 py-0.5">
+                {value}
+            </span>
+        </div>
+    );
+}
+
 function StateNumberRow({
     label,
     value,
     onChange,
+    min,
+    max,
 }: {
     label: string;
     value: number;
     onChange: (v: number) => void;
+    min?: number;
+    max?: number;
 }) {
     return (
         <div className={stateRowCls}>
@@ -836,8 +925,14 @@ function StateNumberRow({
             <input
                 type="number"
                 value={value}
-                min={0}
-                onChange={(e) => onChange(Number(e.target.value) || 0)}
+                min={min}
+                max={max}
+                onChange={(e) => {
+                    let v = Number(e.target.value) || 0;
+                    if (min !== undefined && v < min) v = min;
+                    if (max !== undefined && v > max) v = max;
+                    onChange(v);
+                }}
                 className={stateInputCls}
             />
         </div>
