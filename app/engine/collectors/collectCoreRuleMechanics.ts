@@ -13,6 +13,7 @@ export const collectCoreRuleMechanics = (
             mechanic: benefitOfCover as unknown as Mechanic,
             layer: "unitAbility",
             perspective: "defender",
+            stateSource: "benefitOfCover",
         });
     }
 

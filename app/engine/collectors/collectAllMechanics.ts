@@ -16,6 +16,7 @@ export interface TaggedMechanic {
     mechanic: Mechanic;
     layer: MechanicLayer;
     perspective: "attacker" | "defender";
+    stateSource?: string;
 }
 
 export const collectAllMechanics = (

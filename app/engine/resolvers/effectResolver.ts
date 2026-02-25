@@ -9,6 +9,7 @@ import { TaggedMechanic } from "../collectors/collectAllMechanics";
 
 export const resolveEffects = (
     mechanics: TaggedMechanic[],
+    overrideSources?: Map<Attribute, TaggedMechanic[]>,
 ): ResolvedModifiers => {
     const modifiers: ResolvedModifiers = new Map();
     const byAttribute = groupByAttribute(mechanics);
@@ -16,6 +17,15 @@ export const resolveEffects = (
     for (const [attribute, attributeMechanics] of byAttribute.entries()) {
         const effectSet = resolveEffectSet(attributeMechanics);
         modifiers.set(attribute, effectSet);
+    }
+
+    if (overrideSources) {
+        for (const [attribute, overrides] of overrideSources.entries()) {
+            if (!modifiers.has(attribute)) {
+                modifiers.set(attribute, { sources: [] });
+            }
+            addSources(modifiers.get(attribute)!.sources, overrides);
+        }
     }
 
     return modifiers;

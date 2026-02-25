@@ -4,6 +4,7 @@ import { collectAllMechanics } from "../collectors/collectAllMechanics";
 import { expandAbilityMechanics } from "../collectors/expandAbilityMechanics";
 import { expandWeaponAttributeMechanics } from "../collectors/expandWeaponAttributeMechanics";
 import { filterByConditions, filterByPhase } from "../resolvers/conditionResolver";
+import { resolveIgnoreStates } from "../resolvers/ignoreStateResolver";
 import { resolveEffects } from "../resolvers/effectResolver";
 import { resolveAttackCount } from "../combat-phases/resolveAttackCount";
 import { resolveHitRoll } from "../combat-phases/resolveHitRoll";
@@ -30,8 +31,12 @@ export const runCombat = (context: CombatContext): CombatResult => {
     // Stage 2: Evaluate conditions — filter to only active mechanics
     const activeMechanics = filterByConditions(phaseMechanics, context);
 
+    // Stage 2.5: Resolve ignoreState — remove state-sourced mechanics that are overridden
+    const { mechanics: statefulMechanics, overrideSources } =
+        resolveIgnoreStates(activeMechanics);
+
     // Stage 3: Resolve effects — group by attribute, apply precedence
-    const resolved = resolveEffects(activeMechanics);
+    const resolved = resolveEffects(statefulMechanics, overrideSources);
 
     // Stage 4: Execute combat phases sequentially
     const attackCount = resolveAttackCount(context, resolved);

@@ -525,6 +525,7 @@ function formatSourceTag(src: MechanicSource): string {
         case "autoSuccess":
         case "ignoreBehaviour":
         case "ignoreModifier":
+        case "ignoreState":
         case "halveDamage":
         case "rollBlock":
         default:
