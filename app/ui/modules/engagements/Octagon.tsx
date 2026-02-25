@@ -3,14 +3,21 @@ import React, { useMemo, useState } from "react";
 import { buildCombatContext } from "@/app/engine/pipeline/buildCombatContext";
 import { runCombat } from "@/app/engine/pipeline/runCombat";
 import { CombatResult, PhaseResult, DamageResult } from "#types/CombatResult";
-import { ResolvedModifiers } from "#types/ResolvedModifiers";
+import { ResolvedModifiers, MechanicSource } from "#types/ResolvedModifiers";
 import { Attribute } from "#types/Mechanic";
 import { WeaponProfile } from "#types/Weapon";
 import { CombatState } from "#types/State";
 import { EngagementPhase } from "#types/Engagement";
+import { TestUnit } from "#types/Test";
 import { unitManifest } from "./unitManifest";
 
 const COMBAT_PHASES: EngagementPhase[] = ["shooting", "fight"];
+
+const CRIT_KEYWORDS: { pattern: string; row: "hit" | "wound" }[] = [
+    { pattern: "SUSTAINED HITS", row: "hit" },
+    { pattern: "LETHAL HITS", row: "hit" },
+    { pattern: "DEVASTATING WOUNDS", row: "wound" },
+];
 
 const Octagon = () => {
     const [attackerIndex, setAttackerIndex] = useState<number | null>(null);
@@ -23,6 +30,12 @@ const Octagon = () => {
     const [defenderState, setDefenderState] = useState<CombatState | null>(
         null,
     );
+    const [attackerLeaderIndex, setAttackerLeaderIndex] = useState<
+        number | null
+    >(null);
+    const [defenderLeaderIndex, setDefenderLeaderIndex] = useState<
+        number | null
+    >(null);
     const [phase, setPhase] = useState<EngagementPhase>("shooting");
 
     const attackerBase =
@@ -30,14 +43,54 @@ const Octagon = () => {
     const defenderBase =
         defenderIndex !== null ? unitManifest[defenderIndex].data : null;
 
-    const attacker =
+    const attackerLeaderOptions = useMemo(() => {
+        if (!attackerBase) return [];
+        return unitManifest
+            .map((entry, index) => ({ entry, index }))
+            .filter(({ entry }) =>
+                entry.data.leader?.canLead.some(
+                    (ref) => ref.id === attackerBase.id,
+                ),
+            );
+    }, [attackerBase]);
+
+    const defenderLeaderOptions = useMemo(() => {
+        if (!defenderBase) return [];
+        return unitManifest
+            .map((entry, index) => ({ entry, index }))
+            .filter(({ entry }) =>
+                entry.data.leader?.canLead.some(
+                    (ref) => ref.id === defenderBase.id,
+                ),
+            );
+    }, [defenderBase]);
+
+    const attackerWithState =
         attackerBase && attackerState
             ? { ...attackerBase, combatState: attackerState }
             : attackerBase;
-    const defender =
+    const defenderWithState =
         defenderBase && defenderState
             ? { ...defenderBase, combatState: defenderState }
             : defenderBase;
+
+    const selectedAttackerLeader =
+        attackerLeaderIndex !== null
+            ? unitManifest[attackerLeaderIndex].data
+            : null;
+    const selectedDefenderLeader =
+        defenderLeaderIndex !== null
+            ? unitManifest[defenderLeaderIndex].data
+            : null;
+
+    const attacker =
+        attackerWithState && selectedAttackerLeader
+            ? attachLeader(attackerWithState, selectedAttackerLeader)
+            : attackerWithState;
+    const defender =
+        defenderWithState && selectedDefenderLeader
+            ? attachLeader(defenderWithState, selectedDefenderLeader)
+            : defenderWithState;
 
     const allWeapons = attacker?.wargear.weapons ?? [];
     const weaponTypeFilter = phase === "fight" ? "Melee" : "Ranged";
@@ -45,6 +98,21 @@ const Octagon = () => {
     const selectedWeapon = weapons[weaponIndex] ?? null;
     const profiles = selectedWeapon?.profiles ?? [];
     const selectedProfile = profiles[profileIndex] ?? null;
+
+    const critKeywordTags = useMemo(() => {
+        const hit: string[] = [];
+        const wound: string[] = [];
+        if (!selectedProfile) return { hit, wound };
+        for (const attr of selectedProfile.attributes) {
+            for (const kw of CRIT_KEYWORDS) {
+                if (attr.toUpperCase().startsWith(kw.pattern)) {
+                    const target = kw.row === "hit" ? hit : wound;
+                    target.push(attr);
+                }
+            }
+        }
+        return { hit, wound };
+    }, [selectedProfile]);
 
     const result = useMemo<CombatResult | null>(() => {
         if (!attacker || !defender || !selectedProfile || !selectedWeapon)
@@ -69,6 +137,7 @@ const Octagon = () => {
         const val = e.target.value;
         const idx = val === "" ? null : Number(val);
         setAttackerIndex(idx);
+        setAttackerLeaderIndex(null);
         setAttackerState(
             idx !== null ? { ...unitManifest[idx].data.combatState } : null,
         );
@@ -80,8 +149,24 @@ const Octagon = () => {
         const val = e.target.value;
         const idx = val === "" ? null : Number(val);
         setDefenderIndex(idx);
+        setDefenderLeaderIndex(null);
         setDefenderState(
             idx !== null ? { ...unitManifest[idx].data.combatState } : null,
+        );
+    };
+
+    const handleAttackerLeaderChange = (
+        e: React.ChangeEvent<HTMLSelectElement>,
+    ) => {
+        setAttackerLeaderIndex(
+            e.target.value === "" ? null : Number(e.target.value),
+        );
+    };
+    const handleDefenderLeaderChange = (
+        e: React.ChangeEvent<HTMLSelectElement>,
+    ) => {
+        setDefenderLeaderIndex(
+            e.target.value === "" ? null : Number(e.target.value),
         );
     };
 
@@ -124,8 +209,8 @@ const Octagon = () => {
                     ))}
                 </div>
             </header>
-            <div className="w-full grid grid-cols-3 gap-6">
-                <aside className="flex flex-col gap-6">
+            <div className="w-full grid grid-cols-10 gap-6">
+                <aside className="col-span-3 flex flex-col gap-6">
                     <SelectGroup
                         label="Attacker"
                         value={attackerIndex}
@@ -137,6 +222,19 @@ const Octagon = () => {
                             </option>
                         ))}
                     </SelectGroup>
+                    {attackerBase && attackerLeaderOptions.length > 0 && (
+                        <SelectGroup
+                            label="Attached Leader"
+                            value={attackerLeaderIndex}
+                            onChange={handleAttackerLeaderChange}
+                        >
+                            {attackerLeaderOptions.map(({ entry, index }) => (
+                                <option key={index} value={index}>
+                                    {entry.label}
+                                </option>
+                            ))}
+                        </SelectGroup>
+                    )}
                     {attacker && (
                         <div className="grid grid-cols-2 gap-4">
                             <SelectGroup
@@ -171,9 +269,6 @@ const Octagon = () => {
                     {/* Weapon stat line */}
                     {selectedProfile && (
                         <div className="border border-deathWorldForest p-3">
-                            <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-2">
-                                Weapon Profile
-                            </div>
                             <div className="grid grid-cols-6 gap-2 text-center text-blockcaps-xs">
                                 <StatCell label="A" value={selectedProfile.a} />
                                 <StatCell
@@ -213,7 +308,7 @@ const Octagon = () => {
                 </aside>
 
                 {result ? (
-                    <div className="flex flex-col gap-6 border border-deathWorldForest">
+                    <div className="col-span-4 flex flex-col gap-6 border border-deathWorldForest">
                         <div className="text-blockcaps-s p-3 border-b border-deathWorldForest bg-deathWorldForest/20">
                             Results
                         </div>
@@ -228,12 +323,14 @@ const Octagon = () => {
                                 phase={result.hitPhase}
                                 showTarget
                                 attributes={["hit"]}
+                                keywords={critKeywordTags.hit}
                             />
                             <PhaseRow
                                 label="To Wound"
                                 phase={result.woundPhase}
                                 showTarget
                                 attributes={["wound", "strength", "toughness"]}
+                                keywords={critKeywordTags.wound}
                             />
                             <PhaseRow
                                 label="To Save"
@@ -244,11 +341,9 @@ const Octagon = () => {
                                     "armourPenetration",
                                     "invulnSave",
                                 ]}
-                                note={
-                                    selectedProfile
-                                        ? selectedProfile.ap !== 0
-                                            ? `AP ${selectedProfile.ap}`
-                                            : undefined
+                                extraTags={
+                                    selectedProfile && selectedProfile.ap !== 0
+                                        ? [`AP ${selectedProfile.ap}`]
                                         : undefined
                                 }
                             />
@@ -269,12 +364,12 @@ const Octagon = () => {
                         </div>
                     </div>
                 ) : (
-                    <main className="flex items-center justify-center">
+                    <main className="col-span-4 flex items-center justify-center">
                         Awaiting selections
                     </main>
                 )}
 
-                <aside className="flex flex-col gap-6">
+                <aside className="col-span-3 flex flex-col gap-6">
                     <SelectGroup
                         label="Defender"
                         value={defenderIndex}
@@ -286,11 +381,21 @@ const Octagon = () => {
                             </option>
                         ))}
                     </SelectGroup>
+                    {defenderBase && defenderLeaderOptions.length > 0 && (
+                        <SelectGroup
+                            label="Attached Leader"
+                            value={defenderLeaderIndex}
+                            onChange={handleDefenderLeaderChange}
+                        >
+                            {defenderLeaderOptions.map(({ entry, index }) => (
+                                <option key={index} value={index}>
+                                    {entry.label}
+                                </option>
+                            ))}
+                        </SelectGroup>
+                    )}
                     {defender && (
                         <div className="border border-deathWorldForest p-3">
-                            <div className="text-blockcaps-xs text-skarsnikGreen/60 mb-2">
-                                Model Stats
-                            </div>
                             {defender.models.map((model, i) => (
                                 <div key={i} className={i > 0 ? "mt-3" : ""}>
                                     {defender.models.length > 1 && (
@@ -386,54 +491,74 @@ function ResultRow({
     value: React.ReactNode;
 }) {
     return (
-        <div className="grid grid-cols-[140px_1fr] items-center px-3 py-2">
+        <div className="grid grid-cols-[100px_40px_1fr_auto] items-center gap-2 px-3 py-2">
             <span className="text-blockcaps-xs text-skarsnikGreen/60">
                 {label}
             </span>
-            <span className="text-blockcaps-xs">{value}</span>
+            <span />
+            <span />
+            <span className="text-blockcaps-s text-skarsnikGreen/60 text-center">
+                {value}
+            </span>
         </div>
     );
+}
+
+function formatSourceTag(src: MechanicSource): string {
+    const name = src.mechanicName ?? src.effect;
+    const val = src.originalValue;
+    switch (src.effect) {
+        case "rollBonus":
+            return `${name} +${val}`;
+        case "rollPenalty":
+            return `${name} -${val}`;
+        case "reroll":
+            return `${name} reroll ${val}`;
+        case "staticNumber":
+            return `${name} +${val}`;
+        case "setsFnp":
+            return `${name} ${val}+`;
+        case "minDamage":
+            return `${name} min ${val}`;
+        case "mortalWounds":
+            return name;
+        case "autoSuccess":
+        case "ignoreBehaviour":
+        case "ignoreModifier":
+        case "halveDamage":
+        case "rollBlock":
+        default:
+            return name;
+    }
 }
 
 function summariseModifiers(
     modifiers: ResolvedModifiers,
     attributes: Attribute[],
+    extraTags?: string[],
 ): string[] {
     const tags: string[] = [];
     for (const attr of attributes) {
         const effectSet = modifiers.get(attr);
         if (!effectSet) continue;
         for (const src of effectSet.sources) {
-            if (src.mechanicName) {
-                tags.push(src.mechanicName);
-            }
+            tags.push(formatSourceTag(src));
         }
-        if (effectSet.rollBonus) tags.push(`+${effectSet.rollBonus} bonus`);
-        if (effectSet.rollPenalty)
-            tags.push(`-${effectSet.rollPenalty} penalty`);
-        if (effectSet.reroll) tags.push(`reroll ${effectSet.reroll.scope}`);
-        if (effectSet.autoSuccess) tags.push("auto-success");
-        if (effectSet.ignoreModifier) tags.push("ignore modifier");
-        if (effectSet.halveDamage) tags.push("halve damage");
-        if (effectSet.minDamage !== undefined)
-            tags.push(`min damage ${effectSet.minDamage}`);
-        if (effectSet.mortalWounds)
-            tags.push(`mortal wounds ${effectSet.mortalWounds.count}`);
-        if (effectSet.setsFnp !== undefined)
-            tags.push(`FNP ${effectSet.setsFnp}+`);
-        if (effectSet.rollBlock) tags.push("roll blocked");
     }
+    if (extraTags) tags.push(...extraTags);
     return [...new Set(tags)];
 }
 
 function ModifierTags({
     modifiers,
     attributes,
+    extraTags,
 }: {
     modifiers: ResolvedModifiers;
     attributes: Attribute[];
+    extraTags?: string[];
 }) {
-    const tags = summariseModifiers(modifiers, attributes);
+    const tags = summariseModifiers(modifiers, attributes, extraTags);
     if (tags.length === 0) return null;
     return (
         <span className="flex flex-wrap gap-1 mt-1">
@@ -454,66 +579,85 @@ function PhaseRow({
     phase,
     showTarget,
     attributes,
-    note,
+    extraTags,
+    keywords,
 }: {
     label: string;
     phase: PhaseResult;
     showTarget?: boolean;
     attributes: Attribute[];
-    note?: string;
+    extraTags?: string[];
+    keywords?: string[];
 }) {
-    const parts: string[] = [];
-    if (showTarget && phase.targetRoll !== undefined) {
-        parts.push(`${phase.targetRoll}+`);
-    }
-    if (phase.baseValue !== phase.modifiedValue) {
-        parts.push(
-            `base: ${phase.baseValue}, modified: ${phase.modifiedValue}`,
-        );
-    } else {
-        parts.push(`${phase.modifiedValue}`);
-    }
-    if (note) {
-        parts.push(note);
-    }
+    const isAutoSuccess = attributes.some(
+        (attr) => phase.modifiers.get(attr)?.autoSuccess,
+    );
+    const baseDisplay = isAutoSuccess
+        ? "Auto"
+        : phase.baseDisplay
+          ?? (showTarget ? `${phase.baseValue}+` : `${phase.baseValue}`);
+    const finalDisplay = isAutoSuccess
+        ? "Auto"
+        : phase.modifiedDisplay
+          ?? (showTarget ? `${phase.modifiedValue}+` : `${phase.modifiedValue}`);
+
     return (
-        <ResultRow
-            label={label}
-            value={
-                <>
-                    {parts.join(" · ")}
-                    <ModifierTags
-                        modifiers={phase.modifiers}
-                        attributes={attributes}
-                    />
-                </>
-            }
-        />
+        <div className="grid grid-cols-[100px_40px_1fr_auto] items-center gap-2 px-3 py-2">
+            <span className="text-blockcaps-xs text-skarsnikGreen/60">
+                {label}
+            </span>
+            <span className="text-blockcaps-s text-skarsnikGreen/60 text-center">
+                {baseDisplay}
+            </span>
+            <span className="flex flex-col gap-1">
+                <ModifierTags
+                    modifiers={phase.modifiers}
+                    attributes={attributes}
+                    extraTags={extraTags}
+                />
+                {keywords && keywords.length > 0 && (
+                    <span className="flex flex-wrap gap-1">
+                        {keywords.map((kw, i) => (
+                            <span
+                                key={i}
+                                className="text-[0.6rem] uppercase tracking-widest px-1.5 py-0.5 border border-dashed border-skarsnikGreen/30 text-skarsnikGreen/40"
+                            >
+                                {kw} (on crit 6)
+                            </span>
+                        ))}
+                    </span>
+                )}
+            </span>
+            <span
+                className={`text-blockcaps-s text-center ${phase.baseValue !== phase.modifiedValue ? "text-skarsnikGreen" : "text-skarsnikGreen/60"}`}
+            >
+                {finalDisplay}
+            </span>
+        </div>
     );
 }
 
 function DamageRow({ label, damage }: { label: string; damage: DamageResult }) {
-    const parts: string[] = [];
-    if (damage.baseDamage !== damage.resolvedDamage) {
-        parts.push(
-            `base: ${damage.baseDamage}, resolved: ${damage.resolvedDamage}`,
-        );
-    } else {
-        parts.push(`${damage.resolvedDamage}`);
-    }
     return (
-        <ResultRow
-            label={label}
-            value={
-                <>
-                    {parts.join(" · ")}
-                    <ModifierTags
-                        modifiers={damage.modifiers}
-                        attributes={["damage"]}
-                    />
-                </>
-            }
-        />
+        <div className="grid grid-cols-[100px_40px_1fr_auto] items-center gap-2 px-3 py-2">
+            <span className="text-blockcaps-xs text-skarsnikGreen/60">
+                {label}
+            </span>
+            <span className="text-blockcaps-s text-skarsnikGreen/60 text-center">
+                {damage.baseDamage}
+            </span>
+            <span className="flex flex-col gap-1">
+                <ModifierTags
+                    modifiers={damage.modifiers}
+                    attributes={["damage"]}
+                />
+            </span>
+            <span
+                className={`text-blockcaps-s text-center ${damage.baseDamage !== damage.resolvedDamage ? "text-skarsnikGreen" : "text-skarsnikGreen/60"}`}
+            >
+                {damage.resolvedDamage}
+            </span>
+        </div>
     );
 }
 
@@ -697,6 +841,30 @@ function StateNumberRow({
             />
         </div>
     );
+}
+
+/* ── Helpers ──────────────────────────────────────────────────────── */
+
+function attachLeader(unit: TestUnit, leader: TestUnit): TestUnit {
+    const leaderAbilities = leader.abilities
+        .filter((a) => a.mechanics && a.mechanics.length > 0)
+        .map((a) => ({
+            ...a,
+            isFromLeader: true as const,
+            sourceUnitName: leader.name,
+        }));
+
+    return {
+        ...unit,
+        abilities: [...unit.abilities, ...leaderAbilities],
+        combatState: {
+            ...unit.combatState,
+            customState: {
+                ...unit.combatState.customState,
+                isLeadingUnit: true,
+            },
+        },
+    };
 }
 
 export default Octagon;

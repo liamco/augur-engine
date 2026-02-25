@@ -1,7 +1,15 @@
 {
     "name": "sustained-hits",
     "entity": "thisModel",
-    "effect": "rollBonus",
+    "effect": "extraSuccess",
     "attribute": "hit",
-    "value": "$param"
+    "value": "$param",
+    "conditions": [
+        {
+            "entity": "diceRoll",
+            "attribute": "hit",
+            "operator": "greaterThanOrEqualTo",
+            "value": "$critical"
+        }
+    ]
 }

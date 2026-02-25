@@ -85,6 +85,11 @@ const resolveEffectSet = (mechanics: TaggedMechanic[]): ResolvedEffectSet => {
         addSources(sources, mws);
     }
 
+    if (byEffect.has("ignoreBehaviour")) {
+        effectSet.ignoreBehaviour = true;
+        addSources(sources, byEffect.get("ignoreBehaviour")!);
+    }
+
     if (byEffect.has("ignoreModifier")) {
         effectSet.ignoreModifier = true;
         addSources(sources, byEffect.get("ignoreModifier")!);

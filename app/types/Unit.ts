@@ -9,25 +9,22 @@ import { Enhancement } from "./Enhancement";
 export type Unit = {
     id: string;
     name: string;
-    factionId: string;
     slug: string;
-    factionSlug: string;
+    faction: {
+        id: string;
+        slug: string;
+    };
+    source: {
+        id: string;
+        name: string;
+    };
     role: string;
-    roleLabel: string;
     legend?: string;
     transport?: string;
     abilities?: Ability[];
     factionAbilityIds?: string[];
     keywords?: any[];
     models?: ModelDatasheet[];
-    unitComposition?: any[];
-    modelCosts?: {
-        datasheetId: string;
-        line: number;
-        description: string;
-        cost: number;
-        count: number;
-    }[];
     isForgeWorld?: boolean;
     isLegends?: boolean;
     modelInstances?: ModelInstance[];
@@ -36,12 +33,11 @@ export type Unit = {
     enhancement?: Enhancement;
     supplement?: SupplementData;
     damaged?: DamagedProfile | null;
-    leader?: LeaderData | null;
+    leader?: {
+        canLead: { id: string; slug: string }[];
+        leaderNotes: string;
+    } | null;
     wargear: Weapon[];
-    leadsUnits?: {
-        id: string;
-        slug: string;
-    }[];
 
     [key: string]: any;
 };

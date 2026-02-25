@@ -5,6 +5,8 @@ export interface PhaseResult {
     modifiedValue: number;
     modifiers: ResolvedModifiers;
     targetRoll?: number;
+    baseDisplay?: string;
+    modifiedDisplay?: string;
 }
 
 export interface DamageResult {

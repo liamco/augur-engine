@@ -2,6 +2,7 @@ import { CombatContext } from "@/app/types/CombatContext";
 import { CombatResult } from "@/app/types/CombatResult";
 import { collectAllMechanics } from "../collectors/collectAllMechanics";
 import { expandAbilityMechanics } from "../collectors/expandAbilityMechanics";
+import { expandWeaponAttributeMechanics } from "../collectors/expandWeaponAttributeMechanics";
 import { filterByConditions, filterByPhase } from "../resolvers/conditionResolver";
 import { resolveEffects } from "../resolvers/effectResolver";
 import { resolveAttackCount } from "../combat-phases/resolveAttackCount";
@@ -16,7 +17,10 @@ export const runCombat = (context: CombatContext): CombatResult => {
     const allMechanics = collectAllMechanics(context);
 
     // Stage 1.5: Expand addsAbility mechanics into their library definitions
-    const expandedMechanics = expandAbilityMechanics(allMechanics, context);
+    const abilityExpanded = expandAbilityMechanics(allMechanics, context);
+
+    // Stage 1.5: Expand addsWeaponAttribute mechanics into their library definitions
+    const expandedMechanics = expandWeaponAttributeMechanics(abilityExpanded, context);
 
     // Stage 1.5: Filter by engagement phase
     const currentPhase = context.engagementPhase

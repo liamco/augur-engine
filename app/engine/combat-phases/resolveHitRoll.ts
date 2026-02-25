@@ -10,7 +10,7 @@ export const resolveHitRoll = (
     const baseSkill = Number(context.weaponProfile.bsWs);
     const hitMods = modifiers.get("hit");
 
-    if (hitMods?.autoSuccess) {
+    if (hitMods?.ignoreBehaviour || hitMods?.autoSuccess) {
         return {
             baseValue: baseSkill,
             modifiedValue: 0,

@@ -1,5 +1,5 @@
 {
-    "name": "Benefit of Cover",
+    "name": "In cover",
     "entity": "thisUnit",
     "effect": "rollBonus",
     "attribute": "save",
@@ -9,7 +9,7 @@
         {
             "entity": "thisUnit",
             "attribute": "save",
-            "operator": "lessThanOrEqualTo",
+            "operator": "greaterThanOrEqualTo",
             "value": 4
         }
     ]

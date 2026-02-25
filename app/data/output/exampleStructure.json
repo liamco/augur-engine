@@ -3,23 +3,238 @@
     "name": "Winged Tyranid Prime",
     "slug": "winged-tyranid-prime-2",
     "legend": "Tyranid Primes adapted for flight possess all the physical and synaptic might of an alpha war-beast, while also boasting the frightening speed and manoeuvrability imparted by huge leathery wings. Swooping down into the midst of the foe, they rend and tear until nought remains but corpses and fleeing prey.",
-    "role": {
-        "name": "Chracters",
-        "label": "Characters"
-    },
     "faction": {
         "id": "TYR",
         "slug": "tyranids"
     },
-    "isForgeWorld": false,
-    "isLegends": false,
-    "virtual": false,
     "source": {
         "id": "000000020",
         "name": "Faction Pack: Tyranids"
     },
-    "transport": "",
-    "leaderHead": "",
-    "leader": null,
-    "damaged": null
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000002692",
+                "slug": "tyranid-warriors-with-ranged-bio-weapons"
+            },
+            {
+                "id": "000002691",
+                "slug": "tyranid-warriors-with-melee-bio-weapons"
+            },
+            {
+                "id": "000000484",
+                "slug": "gargoyles-2"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vanguard invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 20 Tyranids Infantry models, or 1 Tyranids Monster model with a Wounds characteristic of 12 or less. Each <span class=\"kwb\">INFANTRY</span> model with a Wounds characteristic of more than 1 takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": [
+            {
+                "entity": "thisModel",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
+    },
+    "wargear": {
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Prime talons.",
+            "parsed": ["000002694:prime-talons"],
+            "byModelType": {
+                "Winged Tyranid Prime": ["000002694:prime-talons"]
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002694:prime-talons",
+                "datasheetId": "000002694",
+                "line": 1,
+                "name": "Prime talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002694",
+                        "line": 1,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Prime talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ]
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000460",
+            "line": 1,
+            "name": "Hive Tyrant",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 7,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 195,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Shadow in the Warp",
+            "type": "Faction"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core",
+            "parameter": 5
+        },
+        {
+            "name": "Foul Spores (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">TYRANIDS</span> unit is within 6\" of this unit, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack. In addition, while a friendly <span class=\"kwb\">TYRANIDS</span> unit (excluding Monsters) is within 6\" of this unit, models in that unit have the Stealth ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": [
+                {
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": ["STEALTH"],
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "Alpha Warrior",
+            "legend": "",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": [
+                {
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": ["SUSTAINED HITS"],
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisModel",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Death Blow",
+            "legend": "",
+            "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": [
+                {
+                    "entity": "thisModel",
+                    "effect": "rollBonus",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "opposingModel",
+                            "state": "isDestroyed",
+                            "operator": "equals",
+                            "value": true
+                        },
+                        {
+                            "entity": "thisModel",
+                            "state": "hasFoughtThisPhase",
+                            "operator": "equals",
+                            "value": false
+                        }
+                    ]
+                },
+                {
+                    "entity": "thisModel",
+                    "effect": "addsAbility",
+                    "abilities": ["FIGHT AFTER BEING DESTROYED"],
+                    "value": true
+                }
+            ]
+        }
+    ]
 }

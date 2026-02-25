@@ -33,6 +33,7 @@ export interface ResolvedEffectSet {
     autoSuccess?: boolean;
     reroll?: RerollRule;
     mortalWounds?: MortalWoundRule;
+    ignoreBehaviour?: boolean;
     ignoreModifier?: boolean;
     halveDamage?: boolean;
     minDamage?: number;

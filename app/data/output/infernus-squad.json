@@ -1,8 +1,8 @@
 {
-    "id": "000001177",
-    "name": "Heavy Intercessor Squad",
-    "slug": "heavy-intercessor-squad",
-    "legend": "Clad in thick Gravis armour, Heavy Intercessors secure ground and are immovable in the defence. Always ready for any sign of enemy counter-attack, they stand firm, laying down volleys of heavy fire that keep all but the most determined or foolhardy enemies at bay.",
+    "id": "000000126",
+    "name": "Infernus Squad",
+    "slug": "infernus-squad",
+    "legend": "Infernus Squads purge swathes of the enemy ranks with the incandescent firestorms they unleash from their pyreblasters. They are close assault specialists, sending jets of burning promethium into enemy trench lines and bunkers and through dense ruins and concealing vegetation, ensuring no foe escapes their fiery wrath.",
     "faction": {
         "id": "SM",
         "slug": "space-marines"
@@ -11,7 +11,7 @@
         "id": "000000139",
         "name": "Faction Pack: Space Marines"
     },
-    "role": "Battleline",
+    "role": "Other",
     "isForgeWorld": false,
     "isLegends": false,
     "leader": null,
@@ -34,79 +34,97 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Battleline",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Gravis",
+            "keyword": "Infernus Squad",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Heavy Intercessor Squad",
+            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         }
     ],
     "models": [
         {
-            "datasheetId": "000001177",
+            "datasheetId": "000000126",
             "line": 1,
-            "name": "Heavy Intercessor Squad",
-            "m": 5,
-            "t": 6,
+            "name": "Infernus Sergeant",
+            "m": 6,
+            "t": 4,
             "sv": 3,
             "invSv": null,
             "invSvDescr": "",
-            "w": 3,
+            "w": 2,
             "ld": 6,
-            "oc": 2,
-            "baseSize": "40mm",
+            "oc": 1,
+            "baseSize": "32mm",
             "baseSizeDescr": "",
             "composition": {
-                "min": 5,
-                "max": 10
+                "min": 1,
+                "max": 1
+            }
+        },
+        {
+            "datasheetId": "000000126",
+            "line": 1,
+            "name": "Infernus Squad",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 4,
+                "max": 9
             }
         }
     ],
     "pointsCosts": [
         {
-            "cost": 100,
+            "cost": 90,
             "count": 5
+        },
+        {
+            "cost": 180,
+            "count": 10
         }
     ],
     "wargear": {
         "defaultLoadout": {
-            "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolt rifle; close combat weapon.",
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; pyreblaster; close combat weapon.",
             "parsed": [
-                "000001177:bolt-pistol",
-                "000001177:heavy-bolt-rifle",
-                "000001177:close-combat-weapon"
+                "000000126:bolt-pistol",
+                "000000126:pyreblaster",
+                "000000126:close-combat-weapon"
             ],
             "byModelType": {
                 "*all*": [
-                    "000001177:bolt-pistol",
-                    "000001177:heavy-bolt-rifle",
-                    "000001177:close-combat-weapon"
+                    "000000126:bolt-pistol",
+                    "000000126:pyreblaster",
+                    "000000126:close-combat-weapon"
                 ]
             }
         },
         "weapons": [
             {
-                "id": "000001177:bolt-pistol",
-                "datasheetId": "000001177",
+                "id": "000000126:bolt-pistol",
+                "datasheetId": "000000126",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
-                        "datasheetId": "000001177",
+                        "datasheetId": "000000126",
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
@@ -129,26 +147,26 @@
                 "count": 1
             },
             {
-                "id": "000001177:heavy-bolt-rifle",
-                "datasheetId": "000001177",
+                "id": "000000126:pyreblaster",
+                "datasheetId": "000000126",
                 "line": 2,
-                "name": "Heavy bolt rifle",
+                "name": "Pyreblaster",
                 "type": "Ranged",
                 "profiles": [
                     {
-                        "datasheetId": "000001177",
+                        "datasheetId": "000000126",
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Heavy bolt rifle",
-                        "attributes": ["ASSAULT", "HEAVY"],
-                        "range": 30,
+                        "name": "Pyreblaster",
+                        "attributes": ["IGNORES COVER", "TORRENT"],
+                        "range": 12,
                         "type": "Ranged",
-                        "a": 2,
-                        "bsWs": 3,
+                        "a": "D6",
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
-                        "d": 2
+                        "d": 1
                     }
                 ],
                 "eligibility": [
@@ -159,48 +177,15 @@
                 "count": 1
             },
             {
-                "id": "000001177:heavy-bolter",
-                "datasheetId": "000001177",
+                "id": "000000126:close-combat-weapon",
+                "datasheetId": "000000126",
                 "line": 3,
-                "name": "Heavy bolter",
-                "type": "Ranged",
-                "profiles": [
-                    {
-                        "datasheetId": "000001177",
-                        "line": 3,
-                        "lineInWargear": 1,
-                        "dice": "",
-                        "name": "Heavy bolter",
-                        "attributes": ["ASSAULT", "HEAVY", "SUSTAINED HITS 1"],
-                        "range": 36,
-                        "type": "Ranged",
-                        "a": 3,
-                        "bsWs": 3,
-                        "s": 5,
-                        "ap": -1,
-                        "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "ratio",
-                        "ratio": 5,
-                        "count": 1,
-                        "modelType": ["Heavy Intercessor"]
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001177:close-combat-weapon",
-                "datasheetId": "000001177",
-                "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
-                        "datasheetId": "000001177",
-                        "line": 4,
+                        "datasheetId": "000000126",
+                        "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
@@ -270,56 +255,17 @@
             "type": "Faction"
         },
         {
-            "name": "Fury of the First",
+            "name": "Incendiary Terror",
             "legend": "",
-            "description": "Each time a model in this unit makes an attack that targets your Oath of Moment target, add 1 to the Hit roll.",
+            "description": "In your Shooting phase, after this unit has shot, you can select one enemy <span class=\"kwb\">INFANTRY</span> unit hit by one or more of those attacks made with a pyreblaster. That enemy unit must take a Battle-shock test, subtracting 1 from that test.",
             "type": "Datasheet",
             "parameter": "",
             "mechanics": [
                 {
-                    "name": "furyOfTheFirst",
-                    "entity": "thisUnit",
-                    "effect": "rollBonus",
-                    "attribute": "hit",
-                    "value": 1,
-                    "conditions": [
-                        {
-                            "entity": "targetUnit",
-                            "state": "oathOfMomentTarget",
-                            "operator": "equals",
-                            "value": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Unyielding in the Face of the Foe",
-            "legend": "",
-            "description": "While this unit is within range of an objective marker you control, each time an attack with a Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour saving throw made against that attack.",
-            "type": "Datasheet",
-            "parameter": "",
-            "mechanics": [
-                {
-                    "name": "Unyielding...",
-                    "entity": "thisUnit",
-                    "effect": "rollBonus",
-                    "attribute": "save",
-                    "value": 1,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "isInObjectiveRange",
-                            "operator": "equals",
-                            "value": "friendly"
-                        },
-                        {
-                            "entity": "opposingUnit",
-                            "attribute": "damage",
-                            "operator": "equals",
-                            "value": 1
-                        }
-                    ]
+                    "entity": "targetUnit",
+                    "effect": "forceRoll",
+                    "behaviours": ["battleShock"],
+                    "parameter": -1
                 }
             ]
         }

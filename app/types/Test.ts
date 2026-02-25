@@ -157,6 +157,7 @@ interface TestModel {
     oc: number;
     baseSize: string;
     baseSizeDescr: string;
+    composition: TestModelComposition;
 }
 
 // =============================================================================
@@ -164,32 +165,21 @@ interface TestModel {
 // =============================================================================
 
 interface TestKeyword {
-    datasheetId: string;
     keyword: string;
     model: string;
-    isFactionKeyword: string; // "true" or "false" as string in parsed data
+    isFactionKeyword: boolean;
 }
 
 // =============================================================================
-// Unit Composition Type
+// Model Composition & Cost Types
 // =============================================================================
 
-interface TestUnitComposition {
-    datasheetId: string;
-    line: number;
-    description: string;
+interface TestModelComposition {
     min: number;
     max: number;
 }
 
-// =============================================================================
-// Model Cost Type
-// =============================================================================
-
-interface TestModelCost {
-    datasheetId: string;
-    line: number;
-    description: string;
+interface TestModelCosts {
     cost: number;
     count: number;
 }
@@ -379,42 +369,59 @@ interface TestDatasheetReference {
 // TestUnit - The consolidated parsed datasheet type
 // =============================================================================
 
+// =============================================================================
+// Faction & Source Types
+// =============================================================================
+
+interface TestFaction {
+    id: string;
+    slug: string;
+}
+
+interface TestSource {
+    id: string;
+    name: string;
+}
+
+// =============================================================================
+// Leader Types (new structure)
+// =============================================================================
+
+interface TestLeaderInfo {
+    canLead: TestDatasheetReference[];
+    leaderNotes: string;
+}
+
+// =============================================================================
+// TestUnit - The consolidated parsed datasheet type
+// =============================================================================
+
 export interface TestUnit {
     // Identity
     id: string;
     name: string;
-    factionId: string;
-    sourceId: string;
     slug: string;
-    factionSlug: string;
+    legend: string;
+    faction: TestFaction;
+    source: TestSource;
 
     // Display / metadata
-    legend: string;
     role: string;
-    roleLabel: string;
     transport: string;
-    virtual: boolean;
-    link: string;
-    sourceName: string;
     isForgeWorld: boolean;
     isLegends: boolean;
 
-    // Leader info (raw HTML from source, kept alongside parsed leader object)
-    leaderHead: string;
-
     // Core unit data
     models: TestModel[];
+    pointsCosts: TestModelCosts[];
     keywords: TestKeyword[];
-    unitComposition: TestUnitComposition[];
-    modelCosts: TestModelCost[];
     abilities: Ability[];
 
     // Consolidated parsed structures
     supplement: TestSupplementData;
     damaged: TestDamagedProfile | null;
-    leader: TestLeaderData | null;
+    leader: TestLeaderInfo | null;
     wargear: TestWargearData;
-    leadsUnits: TestDatasheetReference[];
 
     combatState: CombatState;
 }

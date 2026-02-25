@@ -36,7 +36,7 @@ const evaluateCondition = (
     perspective: "attacker" | "defender",
 ): boolean => {
     const entityData = resolveEntity(condition.entity, context, perspective);
-    const actualValue = extractConditionValue(condition, entityData, context);
+    const actualValue = extractConditionValue(condition, entityData, context) ?? undefined;
     return evaluateOperator(condition.operator, actualValue, condition.value);
 };
 
@@ -80,7 +80,7 @@ const extractConditionValue = (
     condition: Condition,
     entityData: EntityData,
     context: CombatContext,
-): boolean | number | string | string[] | undefined => {
+): boolean | number | string | string[] | null | undefined => {
     if (condition.state) {
         return resolveState(condition.state, entityData.combatState);
     }

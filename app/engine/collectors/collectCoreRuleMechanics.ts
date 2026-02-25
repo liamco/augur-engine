@@ -1,7 +1,7 @@
 import { Mechanic } from "@/app/types/Mechanic";
 import { CombatContext } from "@/app/types/CombatContext";
 import { TaggedMechanic } from "./collectAllMechanics";
-import benefitOfCover from "@/app/library/unit-abilities/benefit-of-cover.json";
+import benefitOfCover from "@/app/library/unit-states/benefit-of-cover.json";
 
 export const collectCoreRuleMechanics = (
     context: CombatContext,

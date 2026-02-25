@@ -3,5 +3,13 @@
     "entity": "thisModel",
     "effect": "mortalWounds",
     "attribute": "wound",
-    "value": true
+    "value": true,
+    "conditions": [
+        {
+            "entity": "diceRoll",
+            "attribute": "wound",
+            "operator": "greaterThanOrEqualTo",
+            "value": "$critical"
+        }
+    ]
 }

@@ -60,7 +60,7 @@ export const resolveEntity = (
                       combatState: context.defender.combatState,
                   };
 
-        case "opponentArmy":
+        case "opposingArmy":
             return perspective === "attacker"
                 ? {
                       unit: context.defender,
@@ -70,5 +70,11 @@ export const resolveEntity = (
                       unit: context.attacker,
                       combatState: context.attacker.combatState,
                   };
+
+        default:
+            return {
+                unit: context.attacker,
+                combatState: context.attacker.combatState,
+            };
     }
 };

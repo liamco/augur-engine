@@ -1,22 +1,22 @@
 {
     "id": "000000468",
     "name": "Termagants",
-    "factionId": "TYR",
-    "sourceId": "000000020",
-    "legend": "Scuttling predators that attack in huge swarms, Termagants were originally spawned to roam the tight arterial passages of hive ships and hunt intruders. They harry their prey with a hail of firepower, seeking always to outflank and envelop their victims as they erode their numbers.",
-    "role": "Battleline",
-    "transport": "",
-    "virtual": false,
-    "leaderHead": "",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids/Termagants",
     "slug": "termagants",
-    "factionSlug": "tyranids",
-    "roleLabel": "Battleline",
-    "sourceName": "Faction Pack: Tyranids",
+    "legend": "Scuttling predators that attack in huge swarms, Termagants were originally spawned to roam the tight arterial passages of hive ships and hunt intruders. They harry their prey with a hail of firepower, seeking always to outflank and envelop their victims as they erode their numbers.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Battleline",
     "isForgeWorld": false,
     "isLegends": false,
     "leader": null,
     "damaged": null,
+    "transport": "",
     "wargear": {
         "defaultLoadout": {
             "raw": "<b>Every model is equipped with:</b> fleshborer; chitinous claws and teeth.",
@@ -327,10 +327,8 @@
             "type": "Faction"
         },
         {
-            "id": "",
             "name": "Skulking Horrors",
             "legend": "",
-            "factionId": "",
             "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\".",
             "type": "Datasheet",
             "parameter": "",
@@ -338,7 +336,7 @@
                 {
                     "entity": "thisUnit",
                     "effect": "staticNumber",
-                    "attribute": "m",
+                    "attribute": "movement",
                     "value": "D6",
                     "conditions": [
                         {
@@ -355,40 +353,34 @@
     ],
     "keywords": [
         {
-            "datasheetId": "000000468",
             "keyword": "Tyranids",
             "model": "",
-            "isFactionKeyword": "true"
+            "isFactionKeyword": true
         },
         {
-            "datasheetId": "000000468",
             "keyword": "Great Devourer",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000000468",
             "keyword": "Battleline",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000000468",
             "keyword": "Infantry",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000000468",
             "keyword": "Termagants",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000000468",
             "keyword": "Endless Multitude",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         }
     ],
     "models": [
@@ -405,38 +397,22 @@
             "ld": 8,
             "oc": 2,
             "baseSize": "28.5mm",
-            "baseSizeDescr": ""
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 10,
+                "max": 20
+            }
         }
     ],
-    "unitComposition": [
+    "pointsCosts": [
         {
-            "datasheetId": "000000468",
-            "line": 1,
-            "description": "10-20 Termagants",
-            "min": 10,
-            "max": 20
-        }
-    ],
-    "modelCosts": [
-        {
-            "datasheetId": "000000468",
-            "line": 1,
-            "description": "10 models",
             "cost": 60,
             "count": 10
-        },
-        {
-            "datasheetId": "000000468",
-            "line": 2,
-            "description": "20 models",
-            "cost": 120,
-            "count": 20
         }
     ],
-    "leadsUnits": [],
     "combatState": {
         "modelCount": 10,
-        "unitStrength": "atStartingStrength",
+        "unitStrength": "full",
         "deadModelIds": [],
         "currentWounds": 1,
         "isDamaged": false,

@@ -11,6 +11,8 @@ export interface Mechanic {
     attribute?: Attribute;
     phase?: EngagementPhase[];
     abilities?: string[];
+    behaviours?: string[];
+    weaponAttributes?: string[];
     keywords?: string[];
     state?: string[];
     value: boolean | number | string;
@@ -31,6 +33,7 @@ export interface Condition {
  * Entity that a mechanic targets or references
  */
 export type Entity =
+    | "diceRoll"
     | "thisArmy"
     | "thisUnit"
     | "thisModel"
@@ -48,19 +51,25 @@ export type Entity =
  * Type of effect the mechanic applies
  */
 export type Effect =
+    | "addsAbility"
+    | "addsBehaviour"
+    | "addsKeyword"
+    | "addsWeaponAttribute"
+    | "autoSuccess"
+    | "extraSuccess"
+    | "forceRoll"
+    | "halveDamage"
+    | "ignoreBehaviour"
+    | "ignoreModifier"
+    | "ignoreState"
+    | "minDamage"
+    | "mortalWounds"
     | "rollBonus"
     | "rollPenalty"
-    | "rollBlock"
-    | "staticNumber"
-    | "addsKeyword"
-    | "addsAbility"
     | "reroll"
-    | "autoSuccess"
-    | "mortalWounds"
-    | "ignoreModifier"
-    | "halveDamage"
-    | "minDamage"
-    | "setsFnp";
+    | "rollBlock"
+    | "setsFnp"
+    | "staticNumber";
 
 /**
  * Roll-related attributes

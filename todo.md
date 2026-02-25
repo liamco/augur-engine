@@ -1,0 +1,2 @@
+- Add read-only combat state for starting wounds/models.
+- Make strength and damaged options read-only, but based on the values of wounds/models

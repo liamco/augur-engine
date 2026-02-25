@@ -3,5 +3,13 @@
     "entity": "thisModel",
     "effect": "autoSuccess",
     "attribute": "wound",
-    "value": true
+    "value": true,
+    "conditions": [
+        {
+            "entity": "diceRoll",
+            "attribute": "hit",
+            "operator": "greaterThanOrEqualTo",
+            "value": "$critical"
+        }
+    ]
 }

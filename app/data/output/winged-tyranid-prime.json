@@ -1,22 +1,38 @@
 {
     "id": "000002694",
     "name": "Winged Tyranid Prime",
-    "factionId": "TYR",
-    "sourceId": "000000020",
-    "legend": "Tyranid Primes adapted for flight possess all the physical and synaptic might of an alpha war-beast, while also boasting the frightening speed and manoeuvrability imparted by huge leathery wings. Swooping down into the midst of the foe, they rend and tear until nought remains but corpses and fleeing prey.",
-    "role": "Characters",
-    "transport": "",
-    "virtual": false,
-    "leaderHead": "",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids/Winged-Tyranid-Prime",
     "slug": "winged-tyranid-prime-2",
-    "factionSlug": "tyranids",
-    "roleLabel": "Characters",
-    "sourceName": "Faction Pack: Tyranids",
+    "legend": "Tyranid Primes adapted for flight possess all the physical and synaptic might of an alpha war-beast, while also boasting the frightening speed and manoeuvrability imparted by huge leathery wings. Swooping down into the midst of the foe, they rend and tear until nought remains but corpses and fleeing prey.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Characters",
     "isForgeWorld": false,
     "isLegends": false,
-    "leader": null,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000002692",
+                "slug": "tyranid-warriors-with-ranged-bio-weapons"
+            },
+            {
+                "id": "000002691",
+                "slug": "tyranid-warriors-with-melee-bio-weapons"
+            },
+            {
+                "id": "000000484",
+                "slug": "gargoyles-2"
+            }
+        ],
+        "leaderNotes": ""
+    },
     "damaged": null,
+    "transport": "",
     "wargear": {
         "defaultLoadout": {
             "raw": "<b>This model is equipped with:</b> Prime talons.",
@@ -101,10 +117,8 @@
             "parameter": 5
         },
         {
-            "id": "",
             "name": "Foul Spores (Aura)",
             "legend": "",
-            "factionId": "",
             "description": "While a friendly <span class=\"kwb\">TYRANIDS</span> unit is within 6\" of this unit, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack. In addition, while a friendly <span class=\"kwb\">TYRANIDS</span> unit (excluding Monsters) is within 6\" of this unit, models in that unit have the Stealth ability.",
             "type": "Datasheet",
             "parameter": "",
@@ -119,18 +133,16 @@
             "mechanicsSource": "regex"
         },
         {
-            "id": "",
             "name": "Alpha Warrior",
             "legend": "",
-            "factionId": "",
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": "",
             "mechanics": [
                 {
                     "entity": "thisUnit",
-                    "effect": "addsAbility",
-                    "abilities": ["SUSTAINED HITS"],
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": ["SUSTAINED HITS"],
                     "value": 1,
                     "conditions": [
                         {
@@ -145,10 +157,8 @@
             "mechanicsSource": "openai"
         },
         {
-            "id": "",
             "name": "Death Blow",
             "legend": "",
-            "factionId": "",
             "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
             "type": "Datasheet",
             "parameter": "",
@@ -175,7 +185,8 @@
                 {
                     "entity": "thisModel",
                     "effect": "addsAbility",
-                    "abilities": ["FIGHT AFTER BEING DESTROYED"]
+                    "abilities": ["FIGHT AFTER BEING DESTROYED"],
+                    "value": true
                 }
             ],
             "mechanicsSource": "openai"
@@ -183,52 +194,44 @@
     ],
     "keywords": [
         {
-            "datasheetId": "000002694",
             "keyword": "Tyranids",
             "model": "",
-            "isFactionKeyword": "true"
+            "isFactionKeyword": true
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Vanguard Invader",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Character",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Winged Tyranid Prime",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Great Devourer",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Infantry",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Synapse",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         },
         {
-            "datasheetId": "000002694",
             "keyword": "Fly",
             "model": "",
-            "isFactionKeyword": "false"
+            "isFactionKeyword": false
         }
     ],
     "models": [
@@ -245,39 +248,17 @@
             "ld": 7,
             "oc": 1,
             "baseSize": "50mm",
-            "baseSizeDescr": ""
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
         }
     ],
-    "unitComposition": [
+    "pointsCosts": [
         {
-            "datasheetId": "000002694",
-            "line": 1,
-            "description": "1 Winged Tyranid Prime",
-            "min": 1,
-            "max": 1
-        }
-    ],
-    "modelCosts": [
-        {
-            "datasheetId": "000002694",
-            "line": 1,
-            "description": "1 model",
             "cost": 65,
             "count": 1
-        }
-    ],
-    "leadsUnits": [
-        {
-            "id": "000002692",
-            "slug": "tyranid-warriors-with-ranged-bio-weapons"
-        },
-        {
-            "id": "000002691",
-            "slug": "tyranid-warriors-with-melee-bio-weapons"
-        },
-        {
-            "id": "000000484",
-            "slug": "gargoyles-2"
         }
     ],
     "combatState": {
