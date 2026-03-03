@@ -6,7 +6,9 @@
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "test": "vitest run",
+        "test:watch": "vitest"
     },
     "keywords": [],
     "author": "",
@@ -47,5 +49,8 @@
         "#utils/*": "./app/ui/utils/*",
         "#game-engine": "./app/engine/bridge/index.ts",
         "#game-engine/*": "./app/engine/bridge/*"
+    },
+    "devDependencies": {
+        "vitest": "^4.0.18"
     }
 }

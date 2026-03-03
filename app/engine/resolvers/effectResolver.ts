@@ -41,6 +41,15 @@ const resolveEffectSet = (mechanics: TaggedMechanic[]): ResolvedEffectSet => {
         addSources(sources, byEffect.get("autoSuccess")!);
     }
 
+    if (byEffect.has("criticalWound")) {
+        const crits = byEffect.get("criticalWound")!;
+        effectSet.criticalWound = crits.reduce(
+            (best, m) => Math.min(best, Number(m.mechanic.value)),
+            7,
+        );
+        addSources(sources, crits);
+    }
+
     if (byEffect.has("rollBlock")) {
         effectSet.rollBlock = true;
         addSources(sources, byEffect.get("rollBlock")!);

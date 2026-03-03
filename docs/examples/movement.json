@@ -1,0 +1,31 @@
+// movement behaviour definitions
+{
+    "movementBehaviour": [
+        {
+            "name":"hold",
+            ...
+        },
+        {
+            "name":"move",
+            ...
+        },
+        {
+            "name":"advance",
+            "restricts":["shoot","charge"]
+        },
+        {
+            "name":"fallBack",
+            "restricts":["shoot","charge"]
+        }
+    ]
+}
+
+// example abilities
+{
+    "name":"advance-and-shoot",
+    "allows":["advance","shoot"]
+},
+{
+    "name":"advance-and-charge",
+    "allows":["advance","charge"]
+}

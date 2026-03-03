@@ -4,11 +4,13 @@ import { buildCombatContext } from "@/app/engine/pipeline/buildCombatContext";
 import { runCombat } from "@/app/engine/pipeline/runCombat";
 import { CombatResult, PhaseResult, DamageResult } from "#types/CombatResult";
 import { ResolvedModifiers, MechanicSource } from "#types/ResolvedModifiers";
-import { Attribute } from "#types/Mechanic";
+import { Attribute, Mechanic } from "#types/Mechanic";
 import { WeaponProfile } from "#types/Weapon";
 import { CombatState } from "#types/State";
 import { EngagementPhase } from "#types/Engagement";
 import { TestUnit } from "#types/Test";
+import { resolveRestrictions } from "@/app/engine/resolvers/restrictionResolver";
+import { collectWeaponBehaviours } from "@/app/engine/utils/collectWeaponBehaviours";
 import { unitManifest } from "./unitManifest";
 
 const COMBAT_PHASES: EngagementPhase[] = ["shooting", "fight"];
@@ -92,9 +94,36 @@ const Octagon = () => {
             ? attachLeader(defenderWithState, selectedDefenderLeader)
             : defenderWithState;
 
+    const attackerBehaviourMechanics = useMemo(() => {
+        if (!attacker) return [];
+        return attacker.abilities
+            .flatMap((a) => a.mechanics ?? [])
+            .filter((m) => m.effect === "addsBehaviour");
+    }, [attacker]);
+
     const allWeapons = attacker?.wargear.weapons ?? [];
     const weaponTypeFilter = phase === "fight" ? "Melee" : "Ranged";
-    const weapons = allWeapons.filter((w) => w.type === weaponTypeFilter);
+    const movementBehaviour = attacker?.combatState.movementBehaviour ?? null;
+
+    const { weapons, weaponRestrictions } = useMemo(() => {
+        const typed = allWeapons.filter((w) => w.type === weaponTypeFilter);
+        const restrictions = new Map<number, boolean>();
+
+        for (let i = 0; i < typed.length; i++) {
+            const weapon = typed[i];
+            const attrs = weapon.profiles[0]?.attributes ?? [];
+            const behaviours = collectWeaponBehaviours(
+                attrs,
+                attackerBehaviourMechanics,
+            );
+            const result = resolveRestrictions(movementBehaviour, behaviours);
+            const canUse =
+                phase === "fight" ? result.charge : result.shoot;
+            restrictions.set(i, canUse);
+        }
+
+        return { weapons: typed, weaponRestrictions: restrictions };
+    }, [allWeapons, weaponTypeFilter, movementBehaviour, attackerBehaviourMechanics, phase]);
     const selectedWeapon = weapons[weaponIndex] ?? null;
     const profiles = selectedWeapon?.profiles ?? [];
     const selectedProfile = profiles[profileIndex] ?? null;
@@ -118,6 +147,9 @@ const Octagon = () => {
         if (!attacker || !defender || !selectedProfile || !selectedWeapon)
             return null;
 
+        const isRestricted = weaponRestrictions.get(weaponIndex) === false;
+        if (isRestricted) return null;
+
         const profile: WeaponProfile = {
             ...selectedProfile,
             type: selectedProfile.type ?? selectedWeapon.type,
@@ -131,7 +163,7 @@ const Octagon = () => {
         });
 
         return runCombat(context);
-    }, [attacker, defender, selectedProfile, selectedWeapon, phase]);
+    }, [attacker, defender, selectedProfile, selectedWeapon, phase, weaponRestrictions, weaponIndex]);
 
     const handleAttackerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const val = e.target.value;
@@ -244,8 +276,13 @@ const Octagon = () => {
                                 placeholder={false}
                             >
                                 {weapons.map((w, i) => (
-                                    <option key={i} value={i}>
+                                    <option
+                                        key={i}
+                                        value={i}
+                                        disabled={!weaponRestrictions.get(i)}
+                                    >
                                         {w.name}
+                                        {!weaponRestrictions.get(i) ? " (restricted)" : ""}
                                     </option>
                                 ))}
                             </SelectGroup>
@@ -524,6 +561,8 @@ function formatSourceTag(src: MechanicSource): string {
             return `${name} min ${val}`;
         case "mortalWounds":
             return name;
+        case "criticalWound":
+            return `${name} ${val}+`;
         case "autoSuccess":
         case "ignoreBehaviour":
         case "ignoreModifier":
@@ -595,6 +634,10 @@ function PhaseRow({
     const isAutoSuccess = attributes.some(
         (attr) => phase.modifiers.get(attr)?.autoSuccess,
     );
+    const critThreshold = attributes.reduce((threshold, attr) => {
+        const crit = phase.modifiers.get(attr)?.criticalWound;
+        return crit !== undefined ? Math.min(threshold, crit) : threshold;
+    }, 6);
     const baseDisplay = isAutoSuccess
         ? "Auto"
         : phase.baseDisplay
@@ -625,7 +668,7 @@ function PhaseRow({
                                 key={i}
                                 className="text-[0.6rem] uppercase tracking-widest px-1.5 py-0.5 border border-dashed border-skarsnikGreen/30 text-skarsnikGreen/40"
                             >
-                                {kw} (on crit 6)
+                                {kw} (on crit {critThreshold}+)
                             </span>
                         ))}
                     </span>

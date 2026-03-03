@@ -31,18 +31,42 @@ export const evaluateOperator = (
         case "includes":
             if (Array.isArray(actual)) {
                 if (Array.isArray(expected)) {
-                    return expected.every((v) => actual.includes(v));
+                    return expected.every((v) =>
+                        actual.some((a) =>
+                            typeof a === "string" && typeof v === "string"
+                                ? a.toUpperCase() === v.toUpperCase()
+                                : a === v,
+                        ),
+                    );
                 }
-                return actual.includes(expected as string);
+                return typeof expected === "string"
+                    ? actual.some(
+                          (a) =>
+                              typeof a === "string" &&
+                              a.toUpperCase() === expected.toUpperCase(),
+                      )
+                    : actual.includes(expected as string);
             }
             return false;
 
         case "notIncludes":
             if (Array.isArray(actual)) {
                 if (Array.isArray(expected)) {
-                    return !expected.some((v) => actual.includes(v));
+                    return !expected.some((v) =>
+                        actual.some((a) =>
+                            typeof a === "string" && typeof v === "string"
+                                ? a.toUpperCase() === v.toUpperCase()
+                                : a === v,
+                        ),
+                    );
                 }
-                return !actual.includes(expected as string);
+                return typeof expected === "string"
+                    ? !actual.some(
+                          (a) =>
+                              typeof a === "string" &&
+                              a.toUpperCase() === expected.toUpperCase(),
+                      )
+                    : !actual.includes(expected as string);
             }
             return true;
 

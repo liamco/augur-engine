@@ -31,6 +31,7 @@ export interface ResolvedEffectSet {
     rollBonus?: number;
     rollPenalty?: number;
     autoSuccess?: boolean;
+    criticalWound?: number;
     reroll?: RerollRule;
     mortalWounds?: MortalWoundRule;
     ignoreBehaviour?: boolean;

@@ -56,6 +56,7 @@ export type Effect =
     | "addsKeyword"
     | "addsWeaponAttribute"
     | "autoSuccess"
+    | "criticalWound"
     | "extraSuccess"
     | "forceRoll"
     | "halveDamage"

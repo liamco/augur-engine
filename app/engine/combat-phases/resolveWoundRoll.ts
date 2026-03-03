@@ -34,6 +34,10 @@ export const resolveWoundRoll = (
 
     modifiedWound = clampRoll(modifiedWound);
 
+    if (woundMods?.criticalWound) {
+        modifiedWound = Math.min(modifiedWound, woundMods.criticalWound);
+    }
+
     return {
         baseValue: baseWound,
         modifiedValue: modifiedWound,
