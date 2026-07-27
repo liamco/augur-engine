@@ -1,0 +1,101 @@
+{
+    "name": "Synaptic Nexus",
+    "ability": {
+        "id": "000008420",
+        "name": "Synaptic Imperatives",
+        "description": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a <span class=\"kwb\">TYRANIDS</span> unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.<br><ul><li><b>Synaptic Augmentation:</b> While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.</li><li><b>Surging Vitality:</b> While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.</li><li><b>Goaded to Slaughter:</b> While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.</li></ul>",
+        "legend": "The leader-beasts of these swarms act as conduits to the will of the Hive Mind. Irresistible imperatives lash out from them like whips that drive lesser bioforms to hurl themselves at the prey, to fight on through fatal wounds or to attack with redoubled savagery."
+    },
+    "stratagems": [
+        {
+            "id": "000008556003",
+            "name": "SYNAPTIC CHANNELLING",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Tyranids are one with the Hive Mind; individuality is a disadvantage that they surpass.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One Synapse unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, while a friendly <span class=\"kwb\">TYRANIDS</span> unit is within 9\" of the selected unit, that unit is within Synapse Range of your army."
+        },
+        {
+            "id": "000008556004",
+            "name": "IRRESISTIBLE WILL",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Whether paralysing its prey or forcing them to stumble out of cover with its force of will, or else puppeteering nearby warrior organisms, the leader-beast ensures the prey targets are struck down.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One Synapse unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24\" of and visible to the <span class=\"kwb\">SYNAPSE</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, each time a friendly <span class=\"kwb\">TYRANIDS</span> model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your <span class=\"kwb\">SYNAPSE</span> unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+        },
+        {
+            "id": "000008556005",
+            "name": "REINFORCED HIVE NODE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Psionic shielding crackles around these leader-beasts, helping to ensure their survival.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Synapse unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000008556002",
+            "name": "THE SMOTHERING SHADOW",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "In the heart of the swarms, the Shadow in the Warp can literally kill with its smothering power.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, just after an enemy unit fails a Battle-shock test.<br><br><b>TARGET:</b> One Synapse unit from your army within 12\" of that enemy unit.<br><br><b>EFFECT:</b> Roll six D6: for each 3+, that enemy unit suffers 1 mortal wound."
+        },
+        {
+            "id": "000008556006",
+            "name": "IMPERATIVE DOMINANCE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "At need, the focused will of the Tyranid leader-beasts can goad warrior organisms to exhibit strategically beneficial behaviours at the instant they are needed most.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is within Synapse Range of your army.<br><br><b>EFFECT:</b> Select one Synaptic Imperative, even if you have already selected that imperative this battle. Until the start of your next Command phase, that Synaptic Imperative is active for your unit instead of any other Synaptic Imperative that is active for your army."
+        },
+        {
+            "id": "000008556007",
+            "name": "OVERRIDE INSTINCTS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The seemingly omniscient Hive Mind processes the sensory input of its swarms at an impossible rate, and compels its broods to react accordingly.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is within Synapse Range of your army and made a Fall Back move this phase.<br><br><b>EFFECT:</b> Your unit is eligible to shoot and declare a charge this turn."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000008421002",
+            "name": "Power of the Hive Mind",
+            "cost": 10,
+            "legend": "The Hive Mind channels lethal energy through its synaptic bioforms.",
+            "description": "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1."
+        },
+        {
+            "id": "000008421003",
+            "name": "Psychostatic Disruption",
+            "cost": 30,
+            "legend": "A maelstrom of psychostatic disruption boils about this bioform. It degrades artificial and biological cognition alike, causing teleport signals to fluctuate, geopositioning cogitators to spew contradictory data, and onrushing enemy warriors to reel in confusion.",
+            "description": "Tyranids Synapse model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this Enhancement. If it does, roll one D6: on a 4+, that enemy unit cannot arrive on the battlefield this turn."
+        },
+        {
+            "id": "000008421004",
+            "name": "Synaptic Control",
+            "cost": 20,
+            "legend": "The Hive Mind’s synaptic network is so strong that even the mangled remains of mortally wounded beasts can be compelled to fight on.",
+            "description": "Tyranids Synapse model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+            "id": "000008421005",
+            "name": "The Dirgeheart of Kharis (Aura)",
+            "cost": 15,
+            "legend": "This grotesque biomorphic symbiote buries itself in its hosts thorax and emits a droning psychic note. The longer prey are exposed to the sound, the worse their atavistic terror response becomes...",
+            "description": "Tyranids Synapse model only. While an enemy unit is within 9\" of the bearer, worsen that units Leadership characteristic by 1."
+        }
+    ]
+}

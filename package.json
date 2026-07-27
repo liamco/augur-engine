@@ -8,7 +8,8 @@
         "start": "next start",
         "lint": "next lint",
         "test": "vitest run",
-        "test:watch": "vitest"
+        "test:watch": "vitest",
+        "parse": "tsx app/data/pipeline/index.ts"
     },
     "keywords": [],
     "author": "",
@@ -51,6 +52,7 @@
         "#game-engine/*": "./app/engine/bridge/*"
     },
     "devDependencies": {
+        "tsx": "^4.21.0",
         "vitest": "^4.0.18"
     }
 }

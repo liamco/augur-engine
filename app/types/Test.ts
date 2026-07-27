@@ -115,7 +115,6 @@ type TestEligibilityRule =
 interface TestWeaponProfile {
     datasheetId: string;
     line: number;
-    lineInWargear?: number;
     dice: string;
     name: string;
     type: "Ranged" | "Melee";
@@ -130,8 +129,6 @@ interface TestWeaponProfile {
 
 interface TestWeapon {
     id: string; // Format: "{datasheetId}:{weapon-slug}"
-    datasheetId: string;
-    line: number;
     name: string;
     type: "Ranged" | "Melee";
     profiles: TestWeaponProfile[];
@@ -334,14 +331,21 @@ interface TestWargearAbility {
     eligibility?: TestEligibilityRule[];
 }
 
+interface TestLoadoutsOptions {
+    raw: TestRawWargearOption[];
+    parsed: string[];
+    byModelType: Record<string, string[]>;
+}
+
+interface TestLoadouts {
+    default: TestDefaultLoadout;
+    options: TestLoadoutsOptions;
+}
+
 interface TestWargearData {
-    defaultLoadout: TestDefaultLoadout;
+    loadouts: TestLoadouts;
     weapons: TestWeapon[];
     abilities: TestWargearAbility[];
-    options: TestWargearOptionsContainer;
-    validLoadouts: TestValidLoadoutGroup[];
-    loadoutsParsed: boolean;
-    unitWideOptions?: string[]; // Weapon/ability IDs for unit-wide toggle options
 }
 
 // =============================================================================

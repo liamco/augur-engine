@@ -1,6 +1,5 @@
 export interface Weapon {
     name: string;
-    datasheetId: string;
     id: string;
     type: "Ranged" | "Melee";
     profiles: WeaponProfile[];
@@ -12,7 +11,6 @@ export interface Weapon {
 export interface WeaponProfile {
     datasheetId: string;
     line: number;
-    lineInWargear?: number;
     name: string;
     type?: "Ranged" | "Melee";
     attributes: string[];

@@ -1,0 +1,101 @@
+{
+    "name": "Subterranean Assault",
+    "ability": {
+        "id": "000010146",
+        "name": "Surprise Assault",
+        "description": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1.<br><br>Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units.<br><br>In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units.<br><br>If an enemy model (excluding <span class=\"kwb\">AIRCRAFT</span>) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>Mawloc and Trygon units from your army have the <span class=\"kwb\">BURROWER</span> keyword.<br><br>In the Muster Armies step, you can select up to 2 <span class=\"kwb\">TRYGON</span> models from your army. The selected units gain the <span class=\"kwb\">CHARACTER</span> keyword.<br><br><b>Designer’s Note:</b> This means that the selected models can be given Enhancements and one of them can be selected as your <span class=\"kwb\">WARLORD</span>.",
+        "legend": "Burrowing Tyranid bioforms burst from the ground in all their horror."
+    },
+    "stratagems": [
+        {
+            "id": "000010148007",
+            "name": "RETREAT BELOW",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The network of tunnels beneath the battlefield enables Tyranid organisms to retreat from the foe and prepare further ambushes.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One Tyranids unit or up to two Burrower units from your army that are not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+            "id": "000010148006",
+            "name": "SWARMING ASSAULT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "A hive fleet’s vanguard organisms favour mobility and aggression, keeping the foe on the back foot with repeated coordinated assaults.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that was set up as Reinforcements this turn.<br><br><b>EFFECT:</b> Until the end of the phase, friendly Tyranids units within 6\" of your unit can re-roll Charge rolls."
+        },
+        {
+            "id": "000010148005",
+            "name": "TUNNEL NETWORK",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Taking advantage of freshly burrowed tunnels, Tyranid bioforms move swiftly across the landscape, emerging in unexpected locations.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> End of your Movement phase.<br><br><b>TARGET:</b> One Tyranids unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units."
+        },
+        {
+            "id": "000010148004",
+            "name": "ENFILADING EMERGENCE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Emerging from the depths, Tyranid bioforms level their weapon morphs and spit hissing volleys of living ammunition into the exposed backs of outflanked prey.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> End of your Movement phase.<br><br><b>TARGET:</b> One Tyranids unit from your army that was set up as Reinforcements this turn.<br><br><b>EFFECT:</b> Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities."
+        },
+        {
+            "id": "000010148003",
+            "name": "REPLENISHING SWARMS",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "Scrambling through the tunnels come endless multitudes of warrior-beasts and harvester bioforms, spilling out of the depths to reinforce the teeming masses.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Tyranids unit from your army, wholly within 9\" of one or more Tunnel Markers you placed.<br><br><b>EFFECT:</b> One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead."
+        },
+        {
+            "id": "000010148002",
+            "name": "ADAPTIVE OPTIMISATION",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "On occasions where subterranean assaults are deemed tactically useful, the hive mind may spontaneously alter its burrowing organisms, enabling them to act as beacons for its will.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One Mawloc or Trygon unit from your army.<br><br><b>EFFECT:</b> Until the start of your next Command phase, your unit has the Synapse keyword."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010147002",
+            "name": "Synaptic Strategy",
+            "cost": 15,
+            "legend": "Possessing an exceptionally acute connection to the hive mind, this creature benefits from a constant influx of sensory data, enabling it to traverse the battlefield and emerge at the place and time of maximum impact.",
+            "description": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        },
+        {
+            "id": "000010147003",
+            "name": "Tremor Senses",
+            "cost": 20,
+            "legend": "From its concealed position beneath the battlefield, this bioform picks up on subtle traces of movement from the enemy force, impelling its fellow organisms to reposition themselves in preparation for a coordinated assault.",
+            "description": "Tyranids model only. After both players have deployed their armies, select up to three friendly <span class=\"kwb\">TYRANIDS</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+            "id": "000010147004",
+            "name": "Vanguard Intellect",
+            "cost": 15,
+            "legend": "This bioform uses its own keen senses and predatory intellect to burrow into position and strike before the enemy can react.",
+            "description": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+        },
+        {
+            "id": "000010147005",
+            "name": "Trygon Prime",
+            "cost": 20,
+            "legend": "Only rarely manifested by the hive fleets, the Trygon Prime possesses a greatly enhanced synaptic network within its neural cortex, enabling it to more precisely coordinate the assaults of burrowing Tyranid creatures.",
+            "description": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
+        }
+    ]
+}

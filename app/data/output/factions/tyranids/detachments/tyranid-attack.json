@@ -1,0 +1,67 @@
+{
+    "name": "Tyranid Attack",
+    "ability": {
+        "id": "000009680",
+        "name": "Xeno-Terror",
+        "description": "When you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result. For each enemy unit that fails one of those tests, that enemy unit cannot Fire Overwatch this turn.",
+        "legend": "To be trapped within the hull of a voidship with swarming Tyranids, subjected to the focused horror of the Shadow in the Warp that wreathes them, is more than some can stand."
+    },
+    "stratagems": [
+        {
+            "id": "000009682002",
+            "name": "BIO-ACID SURGE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Triggered by synaptic imperative, these warrior organisms'weapon limbs secrete dripping gouts of virulent bio-acid.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is within Synapse Range of your army and has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+            "id": "000009682005",
+            "name": "HIVE SIGHT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "It is whispered amongst the fearful prey species that if one Tyranid can see you, they all can...",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One TYRANIDS SYNAPSE unit from your army and one friendly <span class=\"kwb\">TYRANIDS</span> unit that has not declared a charge this phase.<br><br><b>EFFECT:</b> Select one enemy unit that is visible to your SYNAPSE unit. Until the end of the phase, each time your other unit declares a charge, it can include that enemy unit as a target of that charge, even if it is not visible to it, and when doing so, add 1 to the Charge roll."
+        },
+        {
+            "id": "000009682004",
+            "name": "EXPENDABLE BIOMASS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The Tyranids will expend the lives of their lesser organisms in droves provided it results in their prey’s defeat.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "WHEN: Your Shooting phase.<br><br>TARGET: One TYRANID WARRIORS wITH RANGED BIO-wEAPONS unit from your army that has not been selected to shoot this phase.<br><br>EFFECT: Select one enemy unit that is visible to your unit and within Engagement Range of one or more friendly ENDLESS MULTITUDE or RIPPER SwARMS units. Until the end of the phase, your unit is eligible to make ranged attacks against that enemy unit as if it was not within Engagement Range of those friendly units. When doing so, each time a model in your unit makes a ranged attack, subtract 1 from the Hit roll and, after your unit has finished making its attacks, each of those friendly units that started the phase within Engagement Range of that enemy unit suffers D3 mortal wounds."
+        },
+        {
+            "id": "000009682003",
+            "name": "PHAGIC SPORES",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "In death, these warrior organisms release billowing clouds of hideously corrosive spores that reduce nearby prey to bubbling organic slicks.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One TYRANID WARRIORS wITH MELEE BIO-wEAPONS or TYRANID WARRIORS wITH RANGED BIO-wEAPONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed as a result of an attack, do not remove it from play; after the attacking unit has finished making its attacks, roll one D6: on a 3-5, the closest enemy unit within 3\" of and visible to your unit suffers 1 mortal wound; on a 6, the closest enemy unit within 3\" of and visible to your unit suffers 2 mortal wounds. The destroyed model is then removed from play."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009681002",
+            "name": "Synaptic Goad",
+            "cost": 0,
+            "legend": "This gestalt colony of ganglean parasites amplifies the Hive Mind’s localised control over its leading warrior organisms, driving them on to greater speed and aggression.",
+            "description": "In your Command phase, select one friendly TYRANiD WARRiORS wiTH MELEE BiO-wEAPONS or TYRANiD WARRiORS wiTH RANGED BiO-wEAPONS unit within 6\" of the bearer. Until the end of the turn, add 2\" to the Move characteristic of models in that unit."
+        },
+        {
+            "id": "000009681003",
+            "name": "Reinforced Carapace",
+            "cost": 0,
+            "legend": "Threaded with molecular veins of absorbed alloys and minerals, this bioforms chitinous carapace has a dull glint that hints at its formidable resilience.",
+            "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack (note that if given to a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">PRIME</span> model, this only affects that model and not other models in its unit)."
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "name": "Infestation Swarm",
+    "ability": {
+        "id": "000009723",
+        "name": "Half-Glimpsed Shadows",
+        "description": "Each time a ranged attack targets a GREAT DEvOURER unit from your army, if the attacking model is not within 6\" of that unit, subtract 1 from the Hit roll.",
+        "legend": "Possessed of alien cunning and unnatural stealth, Genestealers are able to fade back into the shadows or crawl across ceilings or under deck-plates, the better to evade notice by their prey."
+    },
+    "stratagems": [
+        {
+            "id": "000009725002",
+            "name": "HYPERADRENAL REFLEXES",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Goaded by the biostimulants surging through their bodies, these warrior organisms evade their enemies'attacks with unbelievable swiftness.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One GREAT DEVOURER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have a 4+ invulnerable save."
+        },
+        {
+            "id": "000009725004",
+            "name": "HUNTING GROUNDS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Genestealers on the hunt are relentless, squirming through hatches before they have even half opened.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after a GREAT DEVOURER unit from your army opens a Hatchway.<br><br><b>TARGET:</b> That <span class=\"kwb\">GREAT</span> <span class=\"kwb\">DEVOURER</span> unit.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to 3\", provided at least one of its models ends that move on the opposite side of that Hatchway from when your unit opened it."
+        },
+        {
+            "id": "000009725003",
+            "name": "PERVASIVE DREAD",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "With the death of their leader, the surviving prey feel an ominous sense of doom press down upon them, heightened by subtle psionic assault.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after the enemy <span class=\"kwb\">WARLORD</span> is destroyed (and is not returned to the battlefield) by a GREAT DEVOURER unit from your army.<br><br><b>TARGET:</b> That <span class=\"kwb\">GREAT</span> <span class=\"kwb\">DEVOURER</span> unit.<br><br><b>EFFECT:</b> In your opponent’s next Command phase, each enemy unit on the battlefield must take a Battle-shock test, subtracting 1 from the result. This Stratagem cannot cause a unit to take two Battle-shock tests in the same phase."
+        },
+        {
+            "id": "000009725005",
+            "name": "OUTFLANK",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Swarms of Genestealers crawl through vents and ducts as they seek to outflank their prey.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One GENESTEALERs or PURESTRAIN GENESTEALERS unit from your army that is wholly within an Entry Zone.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase. When doing so, if it was within one of your Entry Zones when it was removed, it must be set up wholly within another one of your Entry Zones. If it was within one of your opponent’s Entry Zones when it was removed, it must be set up wholly within another one of your opponent’s Entry Zones instead. If this is not possible, your unit is destroyed."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009724002",
+            "name": "Stalking Menace",
+            "cost": 0,
+            "legend": "Soon after this nightmarish predator vanishes from sight, its victims feel the hot reek of its breath upon the napes of their necks in the instant before it strikes.",
+            "description": "Once per battle, at the end of your opponent’s Fight phase, if the bearer is not within Engagement Range of one or more enemy units, it can use this Enhancement. If it does, remove the bearer from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase as if it had the Deep Strike ability. If this is not possible, the bearer is destroyed. When the bearer is set back up on the battlefield, until the end of the turn, it cannot declare a charge."
+        },
+        {
+            "id": "000009724003",
+            "name": "Psi-spoor Sensitivity",
+            "cost": 0,
+            "legend": "Able to taste its prey’s terrified mental signatures like pheromones, there is nowhere to hide from this beast.",
+            "description": "Each time the bearer declares a charge, it can target enemy units that are not visible to it."
+        }
+    ]
+}

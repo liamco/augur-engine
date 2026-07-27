@@ -1,0 +1,101 @@
+{
+    "name": "Unending Swarm",
+    "ability": {
+        "id": "000008407",
+        "name": "Insurmountable Odds",
+        "description": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if one or more models from one or more Endless Multitude units from your army were destroyed as a result of those attacks, each such unit can make a Surge move. To do so, roll one D6: that unit can be moved a distance in inches up to the result, but that unit must end that move as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>). When doing so, those models can be moved within Engagement Range of enemy units. A unit cannot make a Surge move while it is Battle-shocked.",
+        "legend": "When Hormagaunts, Termagants and other such expendable warrior organisms attack en masse they make up for their comparative fragility with sheer numbers. Coupled with the speed and ferocity of their onslaught - which only seems to increase as the prey try to gun the creatures down or drive them back - the gathered broods soon overrun even the most determined defenders."
+    },
+    "stratagems": [
+        {
+            "id": "000008409004",
+            "name": "TEEMING MASSES",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Skittering, darting and pouring over one another, the Tyranids make for hard and confusing targets.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Endless Multitude unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
+        },
+        {
+            "id": "000008409005",
+            "name": "SWARMING MASSES",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The sheer weight of Tyranid numbers begins to tell as they bury their victims in lashing, biting horror.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability, and If your unit contains 15 or more models, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+        },
+        {
+            "id": "000008409006",
+            "name": "BOUNDING ADVANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Synaptic impulses from the Hive Mind urge greater speed from the swarm’s warrior organisms.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit."
+        },
+        {
+            "id": "000008409007",
+            "name": "PRESERVATION IMPERATIVE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Triggered by incoming projectile fire, a synaptic pulse spurs the danger-senses of lesser warrior organisms and causes them to scatter like a shoal evading predators. Only once the explosions have stopped and the dust cleared do the bioforms bunch up once again.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Endless Multitude unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit is treated as containing fewer than five models for the purpose of the [BLAST] ability."
+        },
+        {
+            "id": "000008409002",
+            "name": "SYNAPTIC GOADING",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "For a moment, a minuscule sliver of the Hive Mind’s ineffable will is focussed through these warrior organisms, driving them to pounce upon either valuable prey or else some vital strategic target.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, just before an Endless Multitude unit from your army that is within Synapse Range of your army makes a Surge move.<br><br><b>TARGET:</b> That <span class=\"kwb\">ENDLESS</span> <span class=\"kwb\">MULTITUDE</span> unit.<br><br><b>EFFECT:</b> When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit]. All other rules for making Surge moves still apply."
+        },
+        {
+            "id": "000008409003",
+            "name": "UNENDING WAVES",
+            "type": "Strategic Ploy",
+            "cpCost": 2,
+            "legend": "No matter how many warrior organisms are slain, more are already surging forward over their corpses.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.<br><br><b>RESTRICTIONS:</b> Any destroyed Character units that were attached to your unit are not returned. You can only use this Stratagem once per battle."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000008408002",
+            "name": "Relentless Hunger",
+            "cost": 20,
+            "legend": "An overriding need to sink their fangs into the flesh of their prey drives these creatures toward the foe.",
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. Add 2\" to the Move characteristic of models in the bearer’s unit."
+        },
+        {
+            "id": "000008408003",
+            "name": "Naturalised Camouflage",
+            "cost": 30,
+            "legend": "These warrior organisms possess limited chameleonic properties that conceal their advance. The benefits of such deceptions decrease as they approach their prey, but can be enough to bring them safely into range to strike.",
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. At the start of the first battle round, select up to three friendly Endless Multitude units within 9\" of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against that attack."
+        },
+        {
+            "id": "000008408004",
+            "name": "Piercing Talons",
+            "cost": 25,
+            "legend": "A simple but potent biomorphic enhancement of these warrior organisms sees some amongst their number boast diamond-sharp talon tips. Lashing suddenly from amidst the mass of thrashing weapon limbs these plunge through armour to pierce organs and rupture delicate systems.",
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000008408005",
+            "name": "Adrenalised Onslaught",
+            "cost": 15,
+            "legend": "Biostimulants course through the bodies of these warrior organisms, combining with goading synaptic impulses to lend them an unholy turn of speed.",
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. Each time the bearer’s unit Piles In or Consolidates, models in this unit can move an additional 3\"."
+        }
+    ]
+}

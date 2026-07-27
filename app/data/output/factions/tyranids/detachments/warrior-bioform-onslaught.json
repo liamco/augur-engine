@@ -1,0 +1,101 @@
+{
+    "name": "Warrior Bioform Onslaught",
+    "ability": {
+        "id": "000009736",
+        "name": "Leader-beasts",
+        "description": "Tyranid Warriors (see below) and Winged Tyranid Prime units from your army have a 5+ invulnerable save.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>Tyranid Warriors with Ranged Bio-weapons and Tyranid Warriors with Melee Bio-weapons units from your army gain the <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> and <span class=\"kwb\">BATTLELINE</span> keywords, and while such a unit is not Battle-shocked, <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> models in that unit have an Objective Control characteristic of 3.",
+        "legend": "Tyranid Warriors are adapted to shepherd the hive fleet’s teeming swarms to war. Benefiting from heightened senses, hardened forms and great strength, they serve as ferocious beacons for and enforcers of the Hive Mind’s indomitable will."
+    },
+    "stratagems": [
+        {
+            "id": "000009738002",
+            "name": "SYNAPTIC AMPLIFICATION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Tyranid Warriors focus and amplify the urgency of the Hive Mind’s impulse to nearby broods, lending them increased coordination.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> If that unit is a Tyranid Warriors unit, select up to one Endless Multitude unit from your army, that is not Battle-shocked, within 6\" of it. Until the end of the phase, each time a model in those units makes an attack, re-roll a Wound roll of 1, and, if it is a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> unit, re-roll a Hit roll of 1 as well."
+        },
+        {
+            "id": "000009738007",
+            "name": "SYNAPTIC SHIELD",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "By focusing the psionic energies of the Hive Mind, these leader‑beasts shield the teeming bioforms under their command.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Tyranid Warriors unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> If that unit is a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> unit, select up to one Endless Multitude unit from your army, that is not Battle-shocked, within 6\" of it. Until the end of the phase, each time a ranged attack targets one of those units, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+        },
+        {
+            "id": "000009738006",
+            "name": "PARASITIC PAYLOAD",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The projectiles fired by this weapon are infected with parasites that burrow into the central nervous systems of their targets, causing them to wail and scream in pain and giving away their position to the oncoming swarms.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Tyranid Warriors with Ranged Bio-weapons unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. After your unit has resolved its shooting attacks this phase, select one enemy unit hit by one or more of those attacks. Until the end of the turn, models in that unit cannot have the Benefit of Cover."
+        },
+        {
+            "id": "000009738005",
+            "name": "SYNAPTIC MICRONODES",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Impulses from the Hive Mind compel its most adaptable bioforms to shed microbial micronodes that burrow into the soil, knitting together to form a short-term synaptic relay that persists only as long as the brief-burning lifespans of its composite creatures.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Tyranid Warriors unit from your army.<br><br><b>EFFECT:</b> Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+        },
+        {
+            "id": "000009738004",
+            "name": "RESTORATIVE IMPULSE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Responding to impulses from the Hive Mind, dormant nanoviral organisms awaken within the corpse of a fallen Tyranid Warrior, knitting together ruptured organs and restoring its broken form to life.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Tyranid Warriors unit from your army that is below its Starting Strength.<br><br><b>EFFECT:</b> Return 1 destroyed model (excluding <span class=\"kwb\">CHARACTER</span> models) to your unit."
+        },
+        {
+            "id": "000009738003",
+            "name": "SPONTANEOUS HYPERCORROSION",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "Biomorphic symbiotes growing beneath the chitinous plates of some Tyranids can be activated by synaptic impulse, acidifying their bio‑weapons at a moment’s notice.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, add 2 to the Strength characteristic of ranged weapons equipped by models in your unit and add 1 to the Strength characteristic of melee weapons equipped by Tyranid Warriors and Winged Tyranid Prime models in your unit."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009737002",
+            "name": "Synaptic Tyrant",
+            "cost": 10,
+            "legend": "This Neurotyrant has been integrated into the synaptic web, maximising its control over the lesser bioforms and providing an additional layer of protection.",
+            "description": "Neurotyrant model only. During the Declare Battle Formations step, the bearer can be attached to a Tyranid Warriors unit."
+        },
+        {
+            "id": "000009737003",
+            "name": "Ocular Adaptation",
+            "cost": 20,
+            "legend": "This node-beast’s bio-adaptations allow it to perceive the minutest electrical impulse or heat signature. Few prey organisms escape its clutches.",
+            "description": "Winged Tyranid Prime model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+            "id": "000009737004",
+            "name": "Sensory Assimilation",
+            "cost": 20,
+            "legend": "The Hive Mind feeds accumulated sensory data to this leader‑beast, providing it with forewarning of incoming attacks long before the foe can land a blow.",
+            "description": "Winged Tyranid Prime model only. Each time an attack targets the bearer’s unit, subtract 1 from the Hit roll."
+        },
+        {
+            "id": "000009737005",
+            "name": "Elevated Might",
+            "cost": 30,
+            "legend": "This bioform and its accompanying organisms possess muscular adaptations that give them incredible speed and endurance.",
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced."
+        }
+    ]
+}
