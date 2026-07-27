@@ -1,8 +1,9 @@
 *** Prep for 11th
-- Benefit of cover is now a -1 penalty to attacking BS AKA -1 to hit
+- ~Benefit of cover is now a -1 penalty to attacking BS AKA -1 to hit~
 - Battle shock now triggers at half strength as well as below half strength
 - Battle shock doesn't auto pass on next command phase anymore
 - Stealth now just gives benefit of cover
+- Psychic attacks cannot be debuffed? TBC
 - Whole new hidden mechanic based on range to target
 - New system for leader attachment; LEADER and SUPPORT.
 - New detachment system which needs points (DPX).
@@ -14,7 +15,3 @@
 
 *** New features
 - Better combat resolver view
-
-*** OLD
-- Add read-only combat state for starting wounds/models.
-- Make strength and damaged options read-only, but based on the values of wounds/models

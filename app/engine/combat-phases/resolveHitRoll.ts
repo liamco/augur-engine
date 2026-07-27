@@ -30,6 +30,20 @@ export const resolveHitRoll = (
 
     let modifiedSkill = baseSkill;
 
+    // Characteristic modifiers to Ballistic Skill (shooting) or Weapon Skill
+    // (melee) — e.g. Benefit of Cover's -1 BS penalty — adjust the skill stat
+    // itself, before any hit-roll modifiers. Only one applies in a given phase
+    // (mechanics are already phase-filtered), but both buckets are read.
+    for (const attr of ["ballisticSkill", "weaponSkill"] as const) {
+        const skillMods = modifiers.get(attr);
+        if (skillMods?.rollBonus) {
+            modifiedSkill -= skillMods.rollBonus;
+        }
+        if (skillMods?.rollPenalty) {
+            modifiedSkill += skillMods.rollPenalty;
+        }
+    }
+
     if (hitMods?.rollBonus) {
         modifiedSkill -= hitMods.rollBonus;
     }

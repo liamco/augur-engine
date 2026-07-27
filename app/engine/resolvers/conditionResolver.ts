@@ -108,7 +108,8 @@ const resolveAttribute = (
     const weaponMap: Record<string, string> = {
         range: "range",
         attacks: "a",
-        skill: "bsWs",
+        ballisticSkill: "bsWs",
+        weaponSkill: "bsWs",
         strength: "s",
         armourPenetration: "ap",
         damage: "d",

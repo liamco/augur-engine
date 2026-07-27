@@ -360,7 +360,7 @@ const Octagon = () => {
                                 label="To Hit"
                                 phase={result.hitPhase}
                                 showTarget
-                                attributes={["hit"]}
+                                attributes={["hit", "ballisticSkill", "weaponSkill"]}
                                 keywords={critKeywordTags.hit}
                             />
                             <PhaseRow

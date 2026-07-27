@@ -22,7 +22,9 @@ type Entity =
     | "opposingUnit"
     | "opposingModel"
     | "targetUnit"
-    | "targetModel";
+    | "targetModel"
+    | "attackingUnit"
+    | "attackingModel";
 
 type Effect =
     | "rollBonus"

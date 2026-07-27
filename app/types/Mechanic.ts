@@ -45,7 +45,9 @@ export type Entity =
     | "ownModel"
     | "targetArmy"
     | "targetUnit"
-    | "targetModel";
+    | "targetModel"
+    | "attackingUnit"
+    | "attackingModel";
 
 /**
  * Type of effect the mechanic applies
@@ -96,7 +98,8 @@ export type UnitAttribute =
 export type WeaponAttribute =
     | "range"
     | "attacks"
-    | "skill"
+    | "ballisticSkill"
+    | "weaponSkill"
     | "strength"
     | "armourPenetration"
     | "damage";
