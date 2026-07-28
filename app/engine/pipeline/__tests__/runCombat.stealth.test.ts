@@ -125,7 +125,7 @@ describe("runCombat — Stealth (alias of Benefit of Cover)", () => {
         const bsSources =
             both.hitPhase.modifiers.get("ballisticSkill")?.sources ?? [];
         const names = bsSources.map((s) => s.mechanicName);
-        expect(names).toContain("STEALTH");
+        expect(names).toContain("Stealth");
         expect(names).toContain("In cover");
     });
 

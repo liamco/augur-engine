@@ -2,11 +2,11 @@ import { Mechanic } from "@/app/types/Mechanic";
 import { CombatContext } from "@/app/types/CombatContext";
 import { TaggedMechanic } from "./collectAllMechanics";
 import { filterByConditions } from "../resolvers/conditionResolver";
-import stealth from "@/app/library/unit-abilities/stealth.json";
+import { unitAbilityRegistry } from "@/app/library/unit-abilities";
 import benefitOfCover from "@/app/library/combat-states/benefit-of-cover.json";
 
 const abilityRegistry: Record<string, Mechanic> = {
-    stealth: stealth as unknown as Mechanic,
+    ...unitAbilityRegistry,
     benefitofcover: benefitOfCover as unknown as Mechanic,
 };
 
