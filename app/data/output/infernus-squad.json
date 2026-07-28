@@ -268,6 +268,21 @@
                     "parameter": -1
                 }
             ]
+        },
+        {
+            "name": "STEALTH",
+            "type": "Datasheet",
+            "mechanics": [
+                {
+                    "name": "STEALTH",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "ballisticSkill",
+                    "value": 1,
+                    "phase": ["shooting"],
+                    "stateSource": "benefitOfCover"
+                }
+            ]
         }
     ],
     "combatState": {

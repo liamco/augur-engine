@@ -1,8 +1,9 @@
 {
-    "name": "STEALTH",
+    "name": "Stealth",
     "entity": "opposingUnit",
     "effect": "rollPenalty",
-    "attribute": "hit",
+    "attribute": "ballisticSkill",
     "value": 1,
-    "phase": ["shooting"]
+    "phase": ["shooting"],
+    "stateSource": "benefitOfCover"
 }

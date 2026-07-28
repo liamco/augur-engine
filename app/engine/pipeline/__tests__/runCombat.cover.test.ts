@@ -25,11 +25,21 @@ const heavyBoltRifle: WeaponProfile = {
 
 const attacker = heavyIntercessors as unknown as TestUnit;
 
+// Strip any innate STEALTH from the fixture so this test measures cover in
+// isolation (the manifest Infernus carries STEALTH for the lab demo, which
+// would otherwise apply its own -1 BS).
+const plainInfernus = {
+    ...(infernusSquad as unknown as TestUnit),
+    abilities: ((infernusSquad as unknown as TestUnit).abilities ?? []).filter(
+        (a) => a.name !== "STEALTH",
+    ),
+} as unknown as TestUnit;
+
 const infernusWithCover = (isInCover: boolean): TestUnit =>
     ({
-        ...(infernusSquad as unknown as TestUnit),
+        ...plainInfernus,
         combatState: {
-            ...(infernusSquad as unknown as TestUnit).combatState,
+            ...plainInfernus.combatState,
             isInCover,
         },
     }) as TestUnit;

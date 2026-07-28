@@ -17,6 +17,13 @@ export interface Mechanic {
     state?: string[];
     value: boolean | number | string;
     conditions?: Condition[];
+    /**
+     * Optional state identity (e.g. "benefitOfCover"). When set, collectors
+     * propagate it to the TaggedMechanic so an `ignoreState` effect can strip
+     * this mechanic — lets an ability (e.g. Stealth) declare that it grants a
+     * strippable state.
+     */
+    stateSource?: string;
 }
 
 export interface Condition {
@@ -45,9 +52,7 @@ export type Entity =
     | "ownModel"
     | "targetArmy"
     | "targetUnit"
-    | "targetModel"
-    | "attackingUnit"
-    | "attackingModel";
+    | "targetModel";
 
 /**
  * Type of effect the mechanic applies

@@ -49,14 +49,6 @@ export const resolveEntity = (
                 combatState: context.defender.combatState,
             };
 
-        case "attackingUnit":
-        case "attackingModel":
-            return {
-                unit: context.attacker,
-                combatState: context.attacker.combatState,
-                weaponProfile: context.weaponProfile,
-            };
-
         case "thisArmy":
             return perspective === "attacker"
                 ? {

@@ -35,6 +35,9 @@ export const expandAbilityMechanics = (
                     mechanic,
                     layer: "unitAbility",
                     perspective: tagged.perspective,
+                    ...(mechanic.stateSource
+                        ? { stateSource: mechanic.stateSource }
+                        : {}),
                 });
             }
         }

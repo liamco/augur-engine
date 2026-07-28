@@ -19,6 +19,9 @@ const collectFromUnit = (
                 mechanic,
                 layer: "unitAbility",
                 perspective,
+                ...(mechanic.stateSource
+                    ? { stateSource: mechanic.stateSource }
+                    : {}),
             });
         }
     }
