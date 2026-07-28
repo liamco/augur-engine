@@ -1,0 +1,16 @@
+{
+    "name": "smoke",
+    "entity": "opposingUnit",
+    "effect": "rollPenalty",
+    "attribute": "hit",
+    "value": 1,
+    "phase": ["shooting"],
+    "conditions": [
+        {
+            "entity": "thisUnit",
+            "keywords": ["SMOKE"],
+            "operator": "includes",
+            "value": "SMOKE"
+        }
+    ]
+}

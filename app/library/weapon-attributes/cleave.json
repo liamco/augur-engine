@@ -1,0 +1,16 @@
+{
+    "name": "cleave",
+    "entity": "thisModel",
+    "effect": "staticNumber",
+    "attribute": "attacks",
+    "value": 1,
+    "phase": ["fight"],
+    "conditions": [
+        {
+            "entity": "targetUnit",
+            "state": "activeModels",
+            "operator": "ratioOf",
+            "value": 5
+        }
+    ]
+}

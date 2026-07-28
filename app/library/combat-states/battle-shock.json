@@ -1,0 +1,15 @@
+{
+    "name": "Battle-shock",
+    "entity": "thisUnit",
+    "effect": "staticNumber",
+    "attribute": "objectiveControl",
+    "value": 0,
+    "conditions": [
+        {
+            "entity": "thisUnit",
+            "state": "isBattleShocked",
+            "operator": "equals",
+            "value": true
+        }
+    ]
+}
