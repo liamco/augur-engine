@@ -11,5 +11,6 @@ export interface CombatState {
     isInEngagementRange: boolean;
     isInObjectiveRange: "none" | "friendly" | "enemy" | "contested";
     isInCover: boolean;
+    hasShot?: boolean; // has shot this/last turn; blocks the Hidden state. Absent = not tracked (treated as not-shot-gated)
     customState?: Record<string, boolean | number | string>;
 }

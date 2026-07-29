@@ -39,6 +39,9 @@ const Octagon = () => {
         number | null
     >(null);
     const [phase, setPhase] = useState<EngagementPhase>("shooting");
+    const [rangeToTarget, setRangeToTarget] = useState<number | undefined>(
+        undefined,
+    );
 
     const attackerBase =
         attackerIndex !== null ? unitManifest[attackerIndex].data : null;
@@ -160,10 +163,11 @@ const Octagon = () => {
             defender,
             weaponProfile: profile,
             engagementPhase: phase,
+            rangeToTarget,
         });
 
         return runCombat(context);
-    }, [attacker, defender, selectedProfile, selectedWeapon, phase, weaponRestrictions, weaponIndex]);
+    }, [attacker, defender, selectedProfile, selectedWeapon, phase, weaponRestrictions, weaponIndex, rangeToTarget]);
 
     const handleAttackerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const val = e.target.value;
@@ -350,6 +354,29 @@ const Octagon = () => {
                         <div className="text-blockcaps-s p-3 border-b border-deathWorldForest bg-deathWorldForest/20">
                             Results
                         </div>
+                        <div className="flex items-center gap-2 px-3 py-2 border-b border-deathWorldForest/50 text-blockcaps-xs">
+                            <label className="text-skarsnikGreen/60">
+                                Range to target (in)
+                            </label>
+                            <input
+                                type="number"
+                                className={stateInputCls}
+                                value={rangeToTarget ?? ""}
+                                onChange={(e) =>
+                                    setRangeToTarget(
+                                        e.target.value === ""
+                                            ? undefined
+                                            : Number(e.target.value),
+                                    )
+                                }
+                            />
+                        </div>
+                        {result.eligibility && !result.eligibility.eligible && (
+                            <div className="mx-3 mt-3 p-2 border border-red-500/60 text-red-400 text-blockcaps-xs">
+                                ✕ Not a valid target — {result.eligibility.reason}{" "}
+                                beyond detection range
+                            </div>
+                        )}
                         <div className="divide-y divide-deathWorldForest/50">
                             <PhaseRow
                                 label="Attacks"
@@ -858,6 +885,13 @@ function CombatStatePanel({
                     label="Cover"
                     value={state.isInCover}
                     onChange={(v) => update("isInCover", v)}
+                />
+                <StateBoolRow
+                    label="Hidden"
+                    // "Hidden" is the player-facing state; internally it maps to
+                    // hasShot (a unit can only be Hidden if it has NOT shot).
+                    value={state.hasShot === false}
+                    onChange={(v) => update("hasShot", !v)}
                 />
                 {unit.damaged !== null && (
                     <StateReadOnlyRow

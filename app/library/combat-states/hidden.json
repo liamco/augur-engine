@@ -1,8 +1,26 @@
 {
     "name": "Hidden",
-    "entity": "opposingUnit",
-    "effect": "rollPenalty",
-    "attribute": "ballisticSkill",
-    "value": 1,
-    "phase": ["shooting"]
+    "entity": "thisUnit",
+    "effect": "blocksTargeting",
+    "value": true,
+    "phase": ["shooting"],
+    "conditions": [
+        {
+            "entity": "thisUnit",
+            "state": "hasShot",
+            "operator": "equals",
+            "value": false
+        },
+        {
+            "entity": "thisUnit",
+            "state": "benefitOfCover",
+            "operator": "equals",
+            "value": true
+        },
+        {
+            "entity": "thisUnit",
+            "keywords": ["INFANTRY", "SWARM", "BEAST"],
+            "operator": "includesAny"
+        }
+    ]
 }

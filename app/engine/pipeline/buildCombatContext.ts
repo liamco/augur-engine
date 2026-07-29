@@ -14,6 +14,7 @@ interface BuildCombatContextParams {
     attackerArmyMechanics?: Mechanic[];
     defenderArmyMechanics?: Mechanic[];
     engagementPhase?: EngagementPhase;
+    rangeToTarget?: number;
 }
 
 export const buildCombatContext = (
@@ -29,5 +30,6 @@ export const buildCombatContext = (
         attackerArmyMechanics: params.attackerArmyMechanics ?? [],
         defenderArmyMechanics: params.defenderArmyMechanics ?? [],
         engagementPhase: params.engagementPhase,
+        rangeToTarget: params.rangeToTarget,
     };
 };

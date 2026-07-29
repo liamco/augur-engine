@@ -152,6 +152,7 @@ interface TestModel {
     w: number;
     ld: number;
     oc: number;
+    detectionRange?: number; // detection range in inches; defaults to 15 when absent
     baseSize: string;
     baseSizeDescr: string;
     composition: TestModelComposition;

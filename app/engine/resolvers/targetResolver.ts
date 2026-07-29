@@ -24,6 +24,7 @@ const ATTRIBUTE_SIDE: Partial<Record<Attribute, Side>> = {
     toughness: "defender",
     invulnSave: "defender",
     feelNoPain: "defender",
+    detectionRange: "defender",
 };
 
 export const filterByTarget = (

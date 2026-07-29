@@ -37,7 +37,10 @@ const evaluateCondition = (
 ): boolean => {
     const entityData = resolveEntity(condition.entity, context, perspective);
     const actualValue = extractConditionValue(condition, entityData, context) ?? undefined;
-    return evaluateOperator(condition.operator, actualValue, condition.value);
+    // For keyword/ability conditions the match list lives in the selector field
+    // itself (keywords/abilities); everything else compares against `value`.
+    const expected = condition.keywords ?? condition.abilities ?? condition.value;
+    return evaluateOperator(condition.operator, actualValue, expected);
 };
 
 const applyRatioMultiplier = (
@@ -129,6 +132,7 @@ const resolveAttribute = (
         wounds: "w",
         leadership: "ld",
         objectiveControl: "oc",
+        detectionRange: "detectionRange",
     };
 
     if (attr in unitMap && entityData.unit.models.length > 0) {

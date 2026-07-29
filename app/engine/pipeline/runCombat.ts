@@ -7,6 +7,7 @@ import { filterByConditions, filterByPhase } from "../resolvers/conditionResolve
 import { resolveIgnoreStates } from "../resolvers/ignoreStateResolver";
 import { filterByTarget } from "../resolvers/targetResolver";
 import { resolveEffects } from "../resolvers/effectResolver";
+import { resolveTargetEligibility } from "../resolvers/eligibilityResolver";
 import { resolveAttackCount } from "../combat-phases/resolveAttackCount";
 import { resolveHitRoll } from "../combat-phases/resolveHitRoll";
 import { resolveWoundRoll } from "../combat-phases/resolveWoundRoll";
@@ -42,6 +43,14 @@ export const runCombat = (context: CombatContext): CombatResult => {
     // Stage 3: Resolve effects — group by attribute, apply precedence
     const resolved = resolveEffects(targetedMechanics, overrideSources);
 
+    // Stage 3.5: Targeting eligibility (e.g. Hidden) — after effects so any
+    // detectionRange modifiers are available.
+    const eligibility = resolveTargetEligibility(
+        targetedMechanics,
+        context,
+        resolved,
+    );
+
     // Stage 4: Execute combat phases sequentially
     const attackCount = resolveAttackCount(context, resolved);
     const hitPhase = resolveHitRoll(context, resolved);
@@ -57,5 +66,6 @@ export const runCombat = (context: CombatContext): CombatResult => {
         savePhase,
         damagePhase,
         feelNoPain,
+        eligibility,
     };
 };

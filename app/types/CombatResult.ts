@@ -15,6 +15,11 @@ export interface DamageResult {
     modifiers: ResolvedModifiers;
 }
 
+export interface TargetEligibility {
+    eligible: boolean;
+    reason: string | null;
+}
+
 export interface CombatResult {
     attackCount: PhaseResult;
     hitPhase: PhaseResult;
@@ -22,4 +27,5 @@ export interface CombatResult {
     savePhase: PhaseResult;
     damagePhase: DamageResult;
     feelNoPain: PhaseResult | null;
+    eligibility: TargetEligibility;
 }

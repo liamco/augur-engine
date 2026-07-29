@@ -32,7 +32,8 @@ describe("collectWeaponMechanics", () => {
         expect(m.effect).toBe("criticalWound");
         expect(m.attribute).toBe("wound");
         expect(m.value).toBe(4);
-        expect(m.conditions![0].value).toBe("INFANTRY");
+        // The match list lives in `keywords` (hydrated from $keyword); the
+        // redundant condition-level `value` was removed.
         expect(m.conditions![0].keywords).toEqual(["INFANTRY"]);
     });
 

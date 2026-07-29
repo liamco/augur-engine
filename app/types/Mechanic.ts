@@ -63,6 +63,7 @@ export type Effect =
     | "addsKeyword"
     | "addsWeaponAttribute"
     | "autoSuccess"
+    | "blocksTargeting"
     | "criticalWound"
     | "extraSuccess"
     | "forceRoll"
@@ -95,7 +96,8 @@ export type UnitAttribute =
     | "wounds"
     | "leadership"
     | "objectiveControl"
-    | "feelNoPain";
+    | "feelNoPain"
+    | "detectionRange";
 
 /**
  * Weapon characteristics
@@ -130,6 +132,7 @@ export type Operator =
     | "lessThanOrEqualTo"
     | "includes"
     | "notIncludes"
+    | "includesAny"
     | "ratioOf";
 
 /**

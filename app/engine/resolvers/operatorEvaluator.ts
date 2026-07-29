@@ -70,6 +70,21 @@ export const evaluateOperator = (
             }
             return true;
 
+        case "includesAny":
+            if (Array.isArray(actual)) {
+                const expectedArr = Array.isArray(expected)
+                    ? expected
+                    : [expected];
+                return expectedArr.some((v) =>
+                    actual.some((a) =>
+                        typeof a === "string" && typeof v === "string"
+                            ? a.toUpperCase() === v.toUpperCase()
+                            : a === v,
+                    ),
+                );
+            }
+            return false;
+
         case "ratioOf":
             return (
                 typeof actual === "number" &&

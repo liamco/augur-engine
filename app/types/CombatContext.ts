@@ -19,4 +19,5 @@ export interface CombatContext {
     attackerArmyMechanics: Mechanic[];
     defenderArmyMechanics: Mechanic[];
     engagementPhase?: EngagementPhase;
+    rangeToTarget?: number;
 }

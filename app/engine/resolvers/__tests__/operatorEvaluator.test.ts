@@ -92,4 +92,32 @@ describe("evaluateOperator", () => {
             ).toBe(true);
         });
     });
+
+    describe("includesAny", () => {
+        it("is true when arrays intersect (case-insensitive)", () => {
+            expect(
+                evaluateOperator(
+                    "includesAny",
+                    ["INFANTRY", "VEHICLE"],
+                    ["swarm", "infantry"],
+                ),
+            ).toBe(true);
+        });
+
+        it("is false when arrays are disjoint", () => {
+            expect(
+                evaluateOperator(
+                    "includesAny",
+                    ["VEHICLE"],
+                    ["INFANTRY", "SWARM", "BEAST"],
+                ),
+            ).toBe(false);
+        });
+
+        it("is false when actual is not an array", () => {
+            expect(
+                evaluateOperator("includesAny", undefined, ["INFANTRY"]),
+            ).toBe(false);
+        });
+    });
 });

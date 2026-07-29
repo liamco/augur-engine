@@ -9,6 +9,7 @@ export const resolveState = (
         battleShock: combatState.isBattleShocked,
         damaged: combatState.isDamaged,
         benefitOfCover: combatState.isInCover,
+        hasShot: combatState.hasShot ?? null,
         unitStrength: combatState.unitStrength,
         isBelowStartingStrength: combatState.unitStrength !== "full",
         isBelowHalfStrength: combatState.unitStrength === "belowHalf",
