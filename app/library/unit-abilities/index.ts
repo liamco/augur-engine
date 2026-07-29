@@ -1,5 +1,6 @@
 import { Mechanic } from "@/app/types/Mechanic";
 import stealth from "./stealth.json";
+import feelNoPain from "./feel-no-pain.json";
 
 /**
  * Active unit-ability allowlist (keyed by sanitised ability name). To activate
@@ -9,4 +10,6 @@ import stealth from "./stealth.json";
  */
 export const unitAbilityRegistry: Record<string, Mechanic> = {
     stealth: stealth as unknown as Mechanic,
+    // keyed by sanitised ability name — sanitize("FEEL NO PAIN") === "feelnopain"
+    feelnopain: feelNoPain as unknown as Mechanic,
 };

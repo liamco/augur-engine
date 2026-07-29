@@ -111,7 +111,17 @@ export type WeaponAttribute =
     | "armourPenetration"
     | "damage";
 
-export type Attribute = RollAttribute | UnitAttribute | WeaponAttribute;
+/**
+ * Context-level attributes — not a stat of a unit or weapon, but a property of
+ * the engagement. `distanceToTarget` resolves to `context.rangeToTarget`.
+ */
+export type ContextAttribute = "distanceToTarget";
+
+export type Attribute =
+    | RollAttribute
+    | UnitAttribute
+    | WeaponAttribute
+    | ContextAttribute;
 
 export type CombatState =
     | "activeModels"

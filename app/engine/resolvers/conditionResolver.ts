@@ -106,8 +106,14 @@ const extractConditionValue = (
 const resolveAttribute = (
     attr: string,
     entityData: EntityData,
-    _context: CombatContext,
+    context: CombatContext,
 ): number | string | undefined => {
+    // Context-level attribute: the attacker→target distance (from the UI /
+    // engagement), independent of any entity. Used by half-range rules.
+    if (attr === "distanceToTarget") {
+        return context.rangeToTarget;
+    }
+
     const weaponMap: Record<string, string> = {
         range: "range",
         attacks: "a",

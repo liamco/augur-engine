@@ -6,8 +6,8 @@
     "value": "$param",
     "conditions": [
         {
-            "entity": "targetUnit",
-            "attribute": "range",
+            "entity": "thisModel",
+            "attribute": "distanceToTarget",
             "operator": "lessThanOrEqualTo",
             "value": "$halfRange"
         }

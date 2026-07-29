@@ -104,6 +104,17 @@ const Octagon = () => {
             .filter((m) => m.effect === "addsBehaviour");
     }, [attacker]);
 
+    // Weapon attributes conferred onto the attacker via abilities (e.g. a
+    // leader's addsWeaponAttribute) — these aren't on the weapon profile, so
+    // they'd otherwise be missing from the crit-keyword display.
+    const conferredWeaponAttributes = useMemo(() => {
+        if (!attacker) return [] as string[];
+        return attacker.abilities
+            .flatMap((a) => a.mechanics ?? [])
+            .filter((m) => m.effect === "addsWeaponAttribute")
+            .flatMap((m) => m.weaponAttributes ?? []);
+    }, [attacker]);
+
     const allWeapons = attacker?.wargear.weapons ?? [];
     const weaponTypeFilter = phase === "fight" ? "Melee" : "Ranged";
     const movementBehaviour = attacker?.combatState.movementBehaviour ?? null;
@@ -135,7 +146,11 @@ const Octagon = () => {
         const hit: string[] = [];
         const wound: string[] = [];
         if (!selectedProfile) return { hit, wound };
-        for (const attr of selectedProfile.attributes) {
+        const effectiveAttributes = [
+            ...selectedProfile.attributes,
+            ...conferredWeaponAttributes,
+        ];
+        for (const attr of effectiveAttributes) {
             for (const kw of CRIT_KEYWORDS) {
                 if (attr.toUpperCase().startsWith(kw.pattern)) {
                     const target = kw.row === "hit" ? hit : wound;
@@ -144,7 +159,7 @@ const Octagon = () => {
             }
         }
         return { hit, wound };
-    }, [selectedProfile]);
+    }, [selectedProfile, conferredWeaponAttributes]);
 
     const result = useMemo<CombatResult | null>(() => {
         if (!attacker || !defender || !selectedProfile || !selectedWeapon)
