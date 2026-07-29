@@ -10,6 +10,7 @@ import lance from "./lance.json";
 import lethalHits from "./lethal-hits.json";
 import melta from "./melta.json";
 import pistol from "./pistol.json";
+import psychic from "./psychic.json";
 import rapidFire from "./rapid-fire.json";
 import sustainedHits from "./sustained-hits.json";
 import torrent from "./torrent.json";
@@ -31,6 +32,7 @@ export const weaponAttributeRegistry: Record<string, Mechanic> = {
     "lethal-hits": lethalHits as unknown as Mechanic,
     melta: melta as unknown as Mechanic,
     pistol: pistol as unknown as Mechanic,
+    psychic: psychic as unknown as Mechanic,
     "rapid-fire": rapidFire as unknown as Mechanic,
     "sustained-hits": sustainedHits as unknown as Mechanic,
     torrent: torrent as unknown as Mechanic,

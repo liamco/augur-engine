@@ -48,4 +48,21 @@ describe("resolveHitRoll", () => {
         const result = resolveHitRoll(makeContext(3), modifiers);
         expect(result.targetRoll).toBe(5);
     });
+
+    it("ignores skill (BS/WS) modifiers when hit.ignoreModifier is set (Psychic)", () => {
+        // BS 3+, a -1 BS penalty (e.g. cover) is ignored → still 3+
+        const modifiers: ResolvedModifiers = new Map();
+        modifiers.set("hit", { ignoreModifier: true, sources: [] });
+        modifiers.set("ballisticSkill", { rollPenalty: 1, sources: [] });
+        const result = resolveHitRoll(makeContext(3), modifiers);
+        expect(result.targetRoll).toBe(3);
+    });
+
+    it("ignores hit-roll modifiers too when ignoreModifier is set (bonuses included)", () => {
+        // BS 3+, a +1 to-hit bonus is also ignored → still 3+
+        const modifiers: ResolvedModifiers = new Map();
+        modifiers.set("hit", { ignoreModifier: true, rollBonus: 1, sources: [] });
+        const result = resolveHitRoll(makeContext(3), modifiers);
+        expect(result.targetRoll).toBe(3);
+    });
 });
