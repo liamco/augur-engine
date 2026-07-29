@@ -1,0 +1,262 @@
+{
+    "id": "000000540",
+    "name": "Triarch Stalker",
+    "slug": "triarch-stalker",
+    "legend": "Triarch Stalkers are agile combat walkers whose heavy firepower makes them excellent tank-hunters and anti-infantry assault units both. As though their focused blasts of energy and flame were not enough, they can also augment the targeting of nearby Necron forces to further punish the foe.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Stalker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Triarch",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> heat ray; Stalker’s forelimbs.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000540",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s heat ray can be replaced with one of the following:<ul><li>1 particle shredder</li><li>1 heavy gauss cannon array</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000540:heat-ray-dispersed",
+                "name": "Heat ray – dispersed",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000540",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heat ray – dispersed",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000540:heat-ray-focused",
+                "name": "Heat ray – focused",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000540",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heat ray – focused",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000540:particle-shredder",
+                "name": "Particle shredder",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000540",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Particle shredder",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6+6",
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000540:heavy-gauss-cannon-array",
+                "name": "Heavy gauss cannon array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000540",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy gauss cannon array",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000540:stalker-s-forelimbs",
+                "name": "Stalker’s forelimbs",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000540",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Stalker’s forelimbs",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000540",
+            "line": 1,
+            "name": "Triarch Stalker",
+            "m": 8,
+            "t": 8,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 7,
+            "oc": 4,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 110,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Targeting Relay",
+            "legend": "",
+            "description": "In your Shooting phase, each time this model is selected to shoot, after resolving its attacks, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

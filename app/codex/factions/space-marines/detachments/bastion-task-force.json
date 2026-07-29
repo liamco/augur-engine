@@ -1,0 +1,91 @@
+{
+    "name": "Bastion Task Force",
+    "ability": {
+        "id": "000010675",
+        "name": "Interlocking Tactics",
+        "description": "Adeptus Astartes Battleline units from your army:<br><ul><li>Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back.</li><li>Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back.</li></ul><br>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">BATTLELINE</span> unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack that targets an auspex scanned unit, re-roll a Hit roll of 1.",
+        "legend": "Employing the full breadth of combined arms tactics taught by the Codex Astartes, mainstay squads hit and fade, blunting enemy attacks while acquiring auspex data to guide the targeting of their more heavily armed comrades."
+    },
+    "stratagems": [
+        {
+            "id": "000010677002",
+            "name": "CODEX DISCIPLINE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Holding to the teachings of the Codex Astartes, these warriors unleash disciplined volleys of firepower.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit, re-roll a Hit roll of 1. If that target is auspex scanned, re-roll a Wound roll of 1 as well."
+        },
+        {
+            "id": "000010677004",
+            "name": "LIGHT OF VENGEANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "With their frailties exposed by the harsh glare of auspex analysis, the foe are easy prey for the Space Marine’s vengeful onslaught.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Select the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have that ability while targeting an auspex scanned unit or if the bearer has the Battleline keyword."
+        },
+        {
+            "id": "000010677003",
+            "name": "GUIDED DISRUPTION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Employing auspex data to reveal weak points in the foe’s formation, the Space Marines exploit these to sow confusion and suppress their targets.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after an Adeptus Astartes Battleline unit from your army has finished making its attacks.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">BATTLELINE</span> unit.<br><br><b>EFFECT:</b> When an enemy unit is auspex scanned as a result of those attacks this turn, if that enemy unit does not have the <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> keywords, until the start of your next turn, it is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for that unit."
+        },
+        {
+            "id": "000010677007",
+            "name": "HERESY UNDONE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Tactical scans and cogitator analysis have revealed the enemy’s debase schemes, rendering their movements easier to anticipate and counter.",
+            "turn": "Your turn",
+            "phase": "Shooting or Charge phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or your Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit (excluding Battleline units) from your army.<br><br><b>EFFECT:</b> Until the end of the phase, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If it does, every target of that charge and every target of those attacks must be an auspex scanned unit."
+        },
+        {
+            "id": "000010677005",
+            "name": "SHOCK BOMBARDMENT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "An auspex-guided hail of shock charges blinds the foe’s targeting systems and skews their aim.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after an Adeptus Astartes Battleline unit from your army finished making its attacks.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">BATTLELINE</span> unit.<br><br><b>EFFECT:</b> When an enemy unit is auspex scanned as a result of those attacks this turn, until the start of your next turn, it is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010676002",
+            "name": "Eye of the Primarch",
+            "cost": 10,
+            "legend": "This master crafted microauspex integrates with the bearer’s auto-senses and feeds superior targeting data to them and their squad.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Ranged weapons equipped by the bearer and Battleline models in the bearer’s unit have the [PRECISION] ability."
+        },
+        {
+            "id": "000010676003",
+            "name": "Hero of the Chapter",
+            "cost": 20,
+            "legend": "A storied and inspirational exemplar of their Chapter’s virtues, this war leader is an inspirational presence amongst the ranks of their battle-brothers.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, the bearer has the Battleline keyword."
+        },
+        {
+            "id": "000010676004",
+            "name": "Blades of Valour",
+            "cost": 15,
+            "legend": "This officer and their honour guard of dedicated battle-brothers have been presented with masterwork combat blades in recognition of the selfless battle they are about to fight.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1."
+        },
+        {
+            "id": "000010676005",
+            "name": "Bombast Omnivox",
+            "cost": 15,
+            "legend": "This remarkable technological relic is mounted within the bearer’s armour gorget and facilitates code-hardened, rapid-exchange intelligence dissemination while in battle.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP."
+        }
+    ]
+}

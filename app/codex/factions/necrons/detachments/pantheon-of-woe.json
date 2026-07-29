@@ -1,0 +1,101 @@
+{
+    "name": "Pantheon of Woe",
+    "ability": {
+        "id": "000010671",
+        "name": "Cosmic Distortion",
+        "description": "Necrons Monster units from your army have the following ability:<br><br><b>Distortion Fields (Aura):</b> While an enemy unit is within 6\" of this unit, it is unravelling. While an enemy unit is unravelling, each time an attack targets that unit, improve the Armour Penetration characteristic of that attack by 1.<br><br>At the start of each phase, for each <span class=\"kwb\">NECRONS</span> <span class=\"kwb\">MONSTER</span> unit from your army, that unit can suffer 3 mortal wounds. If it does, until the end of the phase, the range of that unit’s Distortion Fields Aura ability is increased to 9\".<br><br><b>Designer’s Note:</b> If your army contains more than one Transcendent C’tan unit, each of those units must take the Reletavistic Tether ability.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>When mustering your army, each <span class=\"kwb\">NECRONS</span> <span class=\"kwb\">MONSTER</span> unit from your army has the relevant Necrodermal Binding ability shown below, and you must increase the points cost of each of those units by the amount shown in the Munitorum Field Manual. If this causes your army to exceed the points limit for the battle you are playing, you cannot include that unit in your army.",
+        "legend": "The quantum dissonance and molecular erosion caused by multiple C’tan shards in close proximity is enough to fray the very physical being of the foe at an atomic level."
+    },
+    "stratagems": [
+        {
+            "id": "000010673005",
+            "name": "ENTROPHASIC AURA TARGETING",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Necrons’ android senses can target the foe by reading the exotic radiation signatures wreathed about them by the C’tan shards onslaught.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit (excluding Monsters) from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit, re-roll a Hit roll of 1. If the target of that attack is unravelling, re-roll a Wound roll of 1 as well."
+        },
+        {
+            "id": "000010673006",
+            "name": "CHRONODISTORTION",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "With the battlefield shuddering in and out of sync with time and space, slain Necrons still strike at their enemies through cracks in temporal causality",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 if the attacking unit is unravelling: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+            "id": "000010673004",
+            "name": "MASS TRANSMOGRIFICATION",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "The power of the C’tan rips the foe’s greatest assets apart and forcibly reknits nearby Necron soldiery using the stolen corporeal matter.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after a Necrons Monster unit from your army destroys an enemy unit.<br><br><b>TARGET:</b> One friendly <span class=\"kwb\">NECRONS</span> unit (excluding Monsters) within 6\" of that <span class=\"kwb\">MONSTER</span> unit.<br><br><b>EFFECT:</b> If that enemy unit was unravelling at the start of the phase, your friendly unit’s Reanimation Protocols activate.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once per turn."
+        },
+        {
+            "id": "000010673002",
+            "name": "DISHARMONISATION CASCADE",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "Tear one shard suddenly from the complex web of atomic resonances and its severing triggers a violent energistic dissonance blast.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, just after a Necrons Monster model from your army is destroyed, before making its Deadly Demise roll.<br><br><b>TARGET:</b> That <span class=\"kwb\">NECRONS</span> <span class=\"kwb\">MONSTER</span> model. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> Until the end of the phase, your model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 3+ instead of on a 6."
+        },
+        {
+            "id": "000010673007",
+            "name": "PHASE MELDING",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The very stuff of reality flows together at an atomic level, and the foe find to their horror that they are literally – and gruesomely – rooted to the spot.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, when an unravelling enemy unit is selected to Fall Back.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that is within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> When that enemy unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
+        },
+        {
+            "id": "000010673003",
+            "name": "MOLECULAR EROSION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Those without the will to hold themselves together start to physically tatter apart in a molecular haze in the presence of so many god shards.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One Necrons Monster unit from your army.<br><br><b>EFFECT:</b> Select one unravelling enemy unit visible to your unit. That enemy unit must take a Battle-shock test. When doing so, subtract 1 from the result. If that test is failed, that enemy unit suffers D3+1 mortal wounds.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once per battle round."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010672002",
+            "name": "Singularity Matrix",
+            "cost": 40,
+            "legend": "This eldritch device fetters and directs the Deceiver’s powers within a vortex that devours lesser wits entirely.",
+            "description": "C’tan Shard of the Deceiver model only. This model has the following ability:<br><br><b>Lord of Deceit (Aura):</b> Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP."
+        },
+        {
+            "id": "000010672003",
+            "name": "Quantum Goad",
+            "cost": 30,
+            "legend": "The energies of this binding latch onto enemy targets and shunt the shard into alignment with them.",
+            "description": "C’tan Shard of the Nightbringer model only. This model is eligible to declare a charge in a turn in which it Advanced."
+        },
+        {
+            "id": "000010672004",
+            "name": "Animus Damper",
+            "cost": 20,
+            "legend": "This device bleeds off the Void Dragon shard’s energies and earths them violently through nearby machines.",
+            "description": "C’tan Shard of the Void Dragon model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy <span class=\"kwb\">VEHICLE</span> unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well."
+        },
+        {
+            "id": "000010672005",
+            "name": "Reletavistic Tether",
+            "cost": 25,
+            "legend": "This binding uses atomic resonance magnetism to compel the shard into the midst of the foe.",
+            "description": "Transcendent C’tan model only. In your turn, each time this model is set up on the battlefield using the Deep Strike or Transdimensional Displacement abilities, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. When doing so, if this model is set up within 9\" of one or more enemy units, until the end of the turn, it is not eligible to declare a charge."
+        }
+    ]
+}

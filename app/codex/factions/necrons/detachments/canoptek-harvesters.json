@@ -1,0 +1,67 @@
+{
+    "name": "Canoptek Harvesters",
+    "ability": {
+        "id": "000009603",
+        "name": "Retribution Protocols",
+        "description": "Each time an enemy unit destroys a CRYPTEK model from your army, until the end of the battle, each time a <span class=\"kwb\">NECRONS</span> model from your army makes an attack that targets that enemy unit, you can re-roll the Hit roll.",
+        "legend": "Those Canoptek constructs and Necron Warriors that serve the Crypteks are inloaded with instructions to defend their master. Should a Crypteks physical form be destroyed, a vengeful wrath will awaken within their followers."
+    },
+    "stratagems": [
+        {
+            "id": "000009605002",
+            "name": "TARGETING ALGORITHMS",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "A Cryptek's enhanced oculars possess exceptional visual acuity. Even in pitch-dark corridors, there can be no hiding from a Cryptek's wrath.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One CRYPTEK model from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time your model makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        },
+        {
+            "id": "000009605004",
+            "name": "PHASE-SHIFT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "A Canoptek Wraith's dimensional destabilisation matrix allows it to phase through solid matter to breach sealed hatches and even solid walls.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One CANOPTEK WRAITHS unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> The next time your unit is selected to move this phase, models in that unit can move through Walls and closed Hatchways as if they were not there, but when doing so, no model can move more than 6\".<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once."
+        },
+        {
+            "id": "000009605005",
+            "name": "NANOSCARAB VIRUS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The Necrons possess swarms of minute nanoscarabs that burrow into power networks and wrest control of cogitator systems.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> End of your Movement phase.<br><br><b>TARGET:</b> One CRYPTEK unit from your army.<br><br><b>EFFECT:</b> For each open Hatchway within 3\" of your unit, you can close that Hatchway.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once."
+        },
+        {
+            "id": "000009605003",
+            "name": "QUANTUM FLARE-SHIELD",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "Crypteks enhance their living metal forms with all manner of reactive defences, including single-use quantum shields that flare into life to deflect incoming fire.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One CRYPTEK model from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your model has a 4+ invulnerable save."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009604002",
+            "name": "Nanoscarab Reconstitution",
+            "cost": 0,
+            "legend": "This Crypteks living metal form crawls with nanoscarabs, further enhancing its regenerative properties.",
+            "description": "In each player’s Command phase, the bearer regains 1 lost wound."
+        },
+        {
+            "id": "000009604003",
+            "name": "Impromptu Translocation",
+            "cost": 0,
+            "legend": "Many Necrons make use of dimensional translocation technology to traverse the battlefield. This miniaturised translocator allows a Cryptek to make a single dimensional leap, taking them out of harm’s way.",
+            "description": "Once per battle, after the bearer has shot, it can make a Normal move of up to 6\"."
+        }
+    ]
+}

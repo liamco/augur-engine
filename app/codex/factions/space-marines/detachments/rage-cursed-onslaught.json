@@ -1,0 +1,101 @@
+{
+    "name": "Rage-cursed Onslaught",
+    "ability": {
+        "id": "000010644",
+        "name": "Maddened Ferocity",
+        "description": "Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes a melee attack, re-roll a Wound roll of 1.<br><br>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle-shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead.<br><br><span class=\"hi_custom\">Restrictions</span><br>Your army can include Blood Angels units, but it cannot include <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near-animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene-son of Sanguinius."
+    },
+    "stratagems": [
+        {
+            "id": "000010646002",
+            "name": "A GRIM WARNING",
+            "type": "",
+            "cpCost": 1,
+            "legend": "So savagely butchered are the corpses left strewn by the Blood Angels that the mere sight of them gives the enemy pause.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Blood Angels unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+        },
+        {
+            "id": "000010646004",
+            "name": "INSENSATE RAMPAGE",
+            "type": "",
+            "cpCost": 1,
+            "legend": "The agony of even the most catastrophic wounds means nothing to the warriors of the Death Company, pain finding no purchase on their maddened minds.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
+        },
+        {
+            "id": "000010646005",
+            "name": "LIMB FROM LIMB",
+            "type": "",
+            "cpCost": 1,
+            "legend": "While the Blood Angels display skill and discipline at close quarters, it is tinged with a blood-drenched brutality that only increases with their building rage.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that made a Charge move this turn.<br><br><b>EFFECT:</b> Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit."
+        },
+        {
+            "id": "000010646003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes, combined with their transhuman physiology, makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010646006",
+            "name": "DEATHLESS DUTY",
+            "type": "",
+            "cpCost": 2,
+            "legend": "Even as death at last smothers the inferno of fury consuming the minds of these lost brethren, they keep killing, until not even the faintest spark remains.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+            "id": "000010646007",
+            "name": "RED WRATH",
+            "type": "",
+            "cpCost": 1,
+            "legend": "Already swift and aggressive even by Space Marine standards, the Blood Angels can enhance their might yet further by surrendering temporarily to the Red Thirst, albeit at the cost of higher strategic thought.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Advances.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010645002",
+            "name": "Carmine Reliquary",
+            "cost": 30,
+            "legend": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression.",
+            "description": "Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle-shock test for an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit within 6\" of the bearer, you can re-roll the result."
+        },
+        {
+            "id": "000010645003",
+            "name": "Master of the Red Thirst",
+            "cost": 25,
+            "legend": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
+        },
+        {
+            "id": "000010645004",
+            "name": "Sanguinary Tear (Aura)",
+            "cost": 35,
+            "legend": "Legend has it that the blood-red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit."
+        },
+        {
+            "id": "000010645005",
+            "name": "Angel’s Fang",
+            "cost": 25,
+            "legend": "This artificer-crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine-spirit’s desire to drink the blood of the mightiest foes.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer makes a melee attack that targets a <span class=\"kwb\">CHARACTER</span>, <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, that attack has the [SUSTAINED HITS 2] ability."
+        }
+    ]
+}

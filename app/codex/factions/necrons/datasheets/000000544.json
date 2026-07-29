@@ -1,0 +1,192 @@
+{
+    "id": "000000544",
+    "name": "Night Scythe",
+    "slug": "night-scythe",
+    "legend": "Many Necron invasions begin with Night Scythes flitting through a world’s void defences. Potent aerial fighters in their own right, Night Scythes also employ invasion beams to generate captive wormholes through which invading infantry can march direct from distant Necron tomb worlds to begin their conquests anew.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Night Scythe",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 1 Necrons Infantry unit.",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> twin tesla destructor; armoured bulk.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000544:twin-tesla-destructor",
+                "name": "Twin tesla destructor",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000544",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Twin tesla destructor",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000544:armoured-bulk",
+                "name": "Armoured bulk",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000544",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Armoured bulk",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000544",
+            "line": 1,
+            "name": "Night Scythe",
+            "m": 20,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 7,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 145,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Translocation Beams",
+            "legend": "",
+            "description": "At the end of the Fight phase, if there are no models currently embarked within this <span class=\"kwb\">TRANSPORT</span>, you can select one friendly Necrons Infantry unit wholly within 6\" of this <span class=\"kwb\">TRANSPORT</span>. Unless that unit is within Engagement Range of one or more enemy units, it can embark within this <span class=\"kwb\">TRANSPORT</span>.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Quantum Invader",
+            "legend": "",
+            "description": "This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

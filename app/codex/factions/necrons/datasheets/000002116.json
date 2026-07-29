@@ -1,0 +1,208 @@
+{
+    "id": "000002116",
+    "name": "Lokhust Heavy Destroyers",
+    "slug": "lokhust-heavy-destroyers",
+    "legend": "The Destroyer Cults think nothing of sacrificing their physical forms to optimise themselves for slaughter. Lokhust Heavy Destroyers skim to battle upon repulsor-sled bodies, their upper limbs bound into gauss destructors or enmitic exterminators with which they decimate their foes with devastating blasts from afar.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Lokhust Heavy Destroyers",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Destroyer Cult",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> gauss destructor; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002116",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their gauss destructor replaced with 1 enmitic exterminator."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002116:enmitic-exterminator",
+                "name": "Enmitic exterminator",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002116",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Enmitic exterminator",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002116:gauss-destructor",
+                "name": "Gauss destructor",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002116",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Gauss destructor",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -4,
+                        "d": 6
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002116:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002116",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002116",
+            "line": 1,
+            "name": "Lokhust Heavy Destroyers",
+            "m": 8,
+            "t": 6,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 7,
+            "oc": 2,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 3
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 55,
+            "count": 1
+        },
+        {
+            "cost": 110,
+            "count": 2
+        },
+        {
+            "cost": 165,
+            "count": 3
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Optimised for Slaughter",
+            "legend": "",
+            "description": "Each time a model in this unit makes an attack with an enmitic exterminator that targets a unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>), re-roll a Wound roll of 1. Each time a model in this unit makes an attack with a gauss destructor that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span>, re-roll a Wound roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

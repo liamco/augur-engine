@@ -1,0 +1,101 @@
+{
+    "name": "Companions of Vehemence",
+    "ability": {
+        "id": "000010391",
+        "name": "Righteous Fervour",
+        "description": "You can re-roll Advance and Charge rolls made for <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Black Templars units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "With their zealous hatred stoked red-hot by furious sermons and inflammatory prayers, Companions of Vehemence are filled with a wrathful vigour. Only the deaths of the God-Emperor’s enemies can assuage their fury, and they will let nothing delay them from unleashing it."
+    },
+    "stratagems": [
+        {
+            "id": "000010393005",
+            "name": "PIOUS ENMITY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The warrior priests of a crusade drive Sigismund's heirs into the heart of battle, daring the greatest abominations to face their spiritual strength.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Chaplain or Judiciar unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a melee attack that targets an enemy unit, re-roll a Hit roll of 1. If that target is a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, re-roll a Wound roll of 1 as well."
+        },
+        {
+            "id": "000010393004",
+            "name": "FOR THE EMPEROR'S HONOUR!",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Filled with the spirit of Sigismund, his heirs seek out the foe's dark and unclean champions so that they may be crushed in the sight oftheirthralls.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
+        },
+        {
+            "id": "000010393002",
+            "name": "DEVOUT PUSH",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "With a zealous cry, the Black Templars press forward, using their ceramite-armoured bulk to smash into the foe and overwhelm the enemy's lines.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".<br><br><b>RESTRICTIONS:</b> A unit cannot be targeted with this and the Hearts Hardened to Duty Stratagem in the same phase unless it has the Chaplain or Judiciar keywords."
+        },
+        {
+            "id": "000010393003",
+            "name": "HEARTS HARDENED TO DUTY",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "To suffer not blind aggression is to evade the snares of foul deceit and honourably reject self-aggrandisement.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just before an Adeptus Astartes Infantry unit from your army Consolidates.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">INFANTRY</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Consolidation move, it does not need to end that move closer to the closest enemy model (or the closest enemy unit if the Suffer Not the Unclean to Live Vow is active for it)."
+        },
+        {
+            "id": "000010393006",
+            "name": "HERESY BEGETS RETRIBUTION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Where enemies dare threaten the warriors of the God-Emperor or seek to escape their deserved death, there must be swift retribution.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One Chaplain or Judiciar unit from your army that is within 9\" of that enemy unit and is not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can make a Retribution move. To do so, roll one D6: models in your unit move a number of inches up to the result, but your unit must end that move as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>). When doing so, those models can be moved within Engagement Range of that enemy unit."
+        },
+        {
+            "id": "000010393007",
+            "name": "DREAD CRUSADERS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "To face the Emperor's transhuman crusaders as they chant their litanies of detestation can chill the soul.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit declares a charge.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that was selected as one of the targets of that charge.<br><br><b>EFFECT:</b> That enemy unit must take a Battle-shock test, subtracting 1 from the result."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010392002",
+            "name": "Incendiary Animus",
+            "cost": 25,
+            "legend": "This inspirational warrior exudes fierce contempt and loathing for the Emperor’s foes, inciting such apoplectic revulsion in their battle-brothers as to drive their blows with vicious strength.",
+            "description": "Chaplain or Judiciar model only. Improve the Armour Penetration characteristic of melee weapons equipped by models in the bearer’s unit by 1."
+        },
+        {
+            "id": "000010392003",
+            "name": "Oathbound Exemplar",
+            "cost": 15,
+            "legend": "With a ceaseless and booming oratory, this commander exhorts his warriors in their duty to the Emperor. Honour, he declaims, must be pursued relentlessly.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">INFANTRY</span> model only. Add 1 to Advance rolls made for the bearer’s unit. If the mission pack you are playing features Actions, the bearer’s unit is eligible to start to perform an Action in a turn in which it Advanced."
+        },
+        {
+            "id": "000010392004",
+            "name": "Merciless Denunciation",
+            "cost": 25,
+            "legend": "Through roared words or ruthless deeds, may the blasphemous be denounced and the worthy driven into a furious rage of sanctified slaughter.",
+            "description": "Chaplain or Judiciar model only. Each time a model in the bearer’s unit makes a melee attack, you can re-roll the Hit roll."
+        },
+        {
+            "id": "000010392005",
+            "name": "Zealous Vanguard",
+            "cost": 20,
+            "legend": "This warrior is an unstoppable crusader whose hearts burn like twin pyres of eager zeal. Ever at the forefront of combat, he leads his warriors as the tip of the crusades blade.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have the Scouts 6\" ability."
+        }
+    ]
+}

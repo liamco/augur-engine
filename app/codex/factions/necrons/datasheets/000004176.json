@@ -1,0 +1,259 @@
+{
+    "id": "000004176",
+    "name": "Canoptek Macrocytes",
+    "slug": "canoptek-macrocytes",
+    "legend": "Swarms of Canoptek Macrocytes descend on those foolish enough to disturb Necron tombs or interfere with their Cryptek masters. Able to both augment the systems of fellow Canoptek constructs while also harassing and mauling enemy forces, these swift-skimming insectile horrors are far more dangerous than they seem at first glance.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Macrocytes",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Beasts",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> gauss scalpel; claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000004176",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All models in this unit can each have their gauss scalpel replaced with 1 tesla caster."
+                    },
+                    {
+                        "datasheetId": "000004176",
+                        "line": 2,
+                        "button": "•",
+                        "description": "1 model’s gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector."
+                    },
+                    {
+                        "datasheetId": "000004176",
+                        "line": 3,
+                        "button": "•",
+                        "description": "1 model’s gauss scalpel or tesla caster can be replaced with 1 accelerator mandible."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004176:atomiser-beam",
+                "name": "Atomiser beam",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004176",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Atomiser beam",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004176:gauss-scalpel",
+                "name": "Gauss scalpel",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004176",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Gauss scalpel",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004176:tesla-caster",
+                "name": "Tesla caster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004176",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Tesla caster",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004176:claws",
+                "name": "Claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004176",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000004176",
+            "line": 1,
+            "name": "Canoptek Macrocytes",
+            "m": 8,
+            "t": 3,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "28.5mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 5
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 5
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Harassment Swarm (Aura)",
+            "legend": "",
+            "description": "While an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) is within 3\" of this unit, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Accelerator Mandible",
+            "legend": "",
+            "description": "At the start of the Fight phase, select one friendly Canoptek unit within 3\" of the bearer’s unit. Until the end of the phase, improve the Weapon Skill characteristic of weapons equipped by models in that unit by 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Nanoscarab Projector",
+            "legend": "",
+            "description": "Once per battle round, when a friendly <span class=\"kwb\">NECRONS</span> unit within 3\" of the bearer activates its Reanimation Protocols, the bearer can use this ability. If it does, that unit reanimates 1 additional wound.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

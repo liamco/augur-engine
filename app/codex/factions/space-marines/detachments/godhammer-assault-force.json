@@ -1,0 +1,101 @@
+{
+    "name": "Godhammer Assault Force",
+    "ability": {
+        "id": "000010399",
+        "name": "Shock and Awe",
+        "description": "<ul><li>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army declares a charge, if it disembarked from a Transport this turn, after selecting the targets of that charge, select one of those targets; that enemy unit must take a Battle-shock test.</li><li>Each time a model in an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army makes a melee attack, if it disembarked from a <span class=\"kwb\">TRANSPORT</span> this turn, add 1 to the Hit roll.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Black Templars units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "An armoured assault by the crusaders of the Emperor is terrifying to behold. The doomed enemy are pummelled by heavy weapons fire and deafened by the roar of engine spirits in the moments before the strike falls, their comrades crushed by heavy treads. When the assault ramps slam down and the Black Templars storm forth, what little cohesion their foes retain melts away before the crusaders’ holy wrath."
+    },
+    "stratagems": [
+        {
+            "id": "000010401007",
+            "name": "BLESSED HULL",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "Their hulls blessed by the chants of Techmarines and their prayer-servitors, a crusade’s war engines can be entreated to withstand the most malign attacks.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Adeptus Astartes Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+            "id": "000010401006",
+            "name": "CONDEMNATORY INFO-SCREED",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Prepared within their troop compartment by a broadcast litany of their foe's ungodly sins, the crusaders emerge with their hearts full of hatred.",
+            "turn": "Your turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Your Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, if it disembarked from a Transport this turn, re-roll a Wound roll of 1. If that <span class=\"kwb\">TRANSPORT</span> has the Land Raider keyword, you can re-roll the Wound roll instead."
+        },
+        {
+            "id": "000010401005",
+            "name": "FOCUSED HATRED",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Surging from assault ramps, the Black Templars let none bar them from the most unholy threats, using their armoured might to bludgeon a path into battle.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase, just after you make a Charge roll for an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that disembarked from a Transport this turn.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit makes a Charge move, models in your unit can move through models (when doing so, its models can move within Engagement Range of enemy models, but they can only end that move within Engagement Range of enemy models if those enemy models belong to a unit that your unit declared a charge against this turn)."
+        },
+        {
+            "id": "000010401004",
+            "name": "GAUNTLET OF THE GOD-EMPEROR",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Like the mailed fist of the Master of Mankind, the crusade's armoured battle tanks, transports and combat walkers smash their way through choked war zones to reach those deserving execution.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Adeptus Astartes Vehicle model from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time your model makes a Normal or Advance move, it can move horizontally through terrain features."
+        },
+        {
+            "id": "000010401003",
+            "name": "UNCOMPROMISING EGRESS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Little can threaten to overwhelm the venerable Land Raider. Its multiple, hydraulically augmented assault ramps slam into closing aggressors, enabling its deadly cargo to deploy quickly.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Land Raider model from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit embarked within your <span class=\"kwb\">LAND</span> <span class=\"kwb\">RAIDER</span> can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of your <span class=\"kwb\">LAND</span> <span class=\"kwb\">RAIDER</span> and can be set up within Engagement Range of one or more enemy units."
+        },
+        {
+            "id": "000010401002",
+            "name": "A CEASELESS CAUSE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "There is no room for hesitation or exultation for the Black Templars. With one knot of blasphemy expunged, the crusaders surge in search of the next.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of the Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that was eligible to fight this phase.<br><br><b>EFFECT:</b> If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". It cannot embark within a Transport at the end of this move if it disembarked from a <span class=\"kwb\">TRANSPORT</span> this turn."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010400002",
+            "name": "Paragon of Fury",
+            "cost": 25,
+            "legend": "This crusaders hatred for the heretic and the unbeliever burns with the fury of a newborn star.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 2 to the Strength characteristic of melee weapons equipped by the bearer. Each time a melee attack made by the bearer is allocated to an enemy model, if the bearer disembarked from a Transport this turn, add 1 to the Damage characteristic of that attack."
+        },
+        {
+            "id": "000010400003",
+            "name": "Battle-psalm Precentor",
+            "cost": 10,
+            "legend": "The chanted oratory of this commander rises in volume and stentorian vehemence as he leads his brothers into the charge until he seems like a wrathful war deity closing with his ungodly prey.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer’s unit declares a charge, if an enemy unit takes a Battle-shock test as a result of the Shock and Awe Detachment rule, subtract 1 from that Battle-shock test."
+        },
+        {
+            "id": "000010400004",
+            "name": "Augury Servo-host",
+            "cost": 15,
+            "legend": "This warrior's auto-senses are linked to a circling host of servo-skulls crafted from the remains of favoured serfs and failed neophytes. Fitted with ocular probes and sensor vanes, they provide the Black Templar with advanced targeting information to pick out the unbelievers who cower in concealment.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. Until the end of the phase, models in that unit cannot have the Benefit of Cover."
+        },
+        {
+            "id": "000010400005",
+            "name": "Herald of Sacred Slaughter",
+            "cost": 15,
+            "legend": "A pious harbinger of the crusade’s destructive potential, this warrior pushes forward at the first opportunity, eager to bring the Emperor’s judgement to the foe.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a Dedicated Transport, that <span class=\"kwb\">DEDICATED</span> <span class=\"kwb\">TRANSPORT</span> has the Scouts 9\" ability."
+        }
+    ]
+}

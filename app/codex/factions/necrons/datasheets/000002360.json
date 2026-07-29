@@ -1,0 +1,328 @@
+{
+    "id": "000002360",
+    "name": "The Silent King",
+    "slug": "the-silent-king",
+    "legend": "The Silent King rides to war aboard his dais of dominion, flanked by the phaerons of his Triarch and orbited by crackling noctilith menhirs. He unleashes god-like powers of annihilation upon his dismayed foes, even as his absolute authority radiates out to empower the Necron legions and drive them to inevitable victory.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "The Silent King",
+            "model": "SZAREKH MODEL",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "SZAREKH MODEL",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Triarch",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-6",
+        "threshold": 6,
+        "description": "While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Szarekh is equipped with:</b> Sceptre of Eternal Glory; Staff of Stars; Weapons of the Final Triarch.<br><br><b>Every Triarchal Menhir is equipped with:</b> annihilator beam; armoured bulk.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002360:annihilator-beam",
+                "name": "Annihilator beam",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002360",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Annihilator beam",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 14,
+                        "ap": -4,
+                        "d": 6
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002360:sceptre-of-eternal-glory",
+                "name": "Sceptre of Eternal Glory",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002360",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Sceptre of Eternal Glory",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002360:staff-of-stars",
+                "name": "Staff of Stars",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002360",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Staff of Stars",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 12,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002360:armoured-bulk",
+                "name": "Armoured bulk",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002360",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Armoured bulk",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002360:weapons-of-the-final-triarch",
+                "name": "Weapons of the Final Triarch",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002360",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Weapons of the Final Triarch",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 12,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002360",
+            "line": 1,
+            "name": "SZAREKH",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 16,
+            "ld": 6,
+            "oc": 6,
+            "baseSize": "100mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        {
+            "datasheetId": "000002360",
+            "line": 2,
+            "name": "TRIARCHAL MENHIR",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 2,
+                "max": 2
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 400,
+            "count": 3
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Voice of the Triarch",
+            "legend": "",
+            "description": "At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "The Silent King",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "SUPREME COMMANDER",
+            "legend": "",
+            "description": "If this unit is in your army, it must be your Warlord.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "TRIARCHAL MENHIRS",
+            "legend": "",
+            "description": "If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Phaeron of the Stars (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Phaeron of the Blades (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Relentless March (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

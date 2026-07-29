@@ -1,6 +1,6 @@
 /**
  * TestUnit - A consolidated type that matches the actual parsed structure
- * of a datasheet JSON file as it exists in src/app/data/output/factions/{slug}/datasheets/{id}.json
+ * of a datasheet JSON file as it exists in app/codex/factions/{slug}/datasheets/{id}.json
  *
  * This differs from the Datasheet interface in src/app/types/Units.tsx in that it
  * reflects the real shape of the parsed JSON data, including fields that exist in the

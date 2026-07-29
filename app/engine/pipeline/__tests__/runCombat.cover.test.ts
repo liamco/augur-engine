@@ -3,8 +3,8 @@ import { buildCombatContext } from "../buildCombatContext";
 import { runCombat } from "../runCombat";
 import { TestUnit } from "@/app/types/Test";
 import { WeaponProfile } from "@/app/types/Weapon";
-import heavyIntercessors from "@/app/data/output/heavy-intercessor-squad.json";
-import infernusSquad from "@/app/data/output/infernus-squad.json";
+import heavyIntercessors from "@/app/codex/heavy-intercessor-squad.json";
+import infernusSquad from "@/app/codex/infernus-squad.json";
 
 // The exact test-lab scenario: Heavy Intercessors (heavy bolt rifle, BS 3+, AP -1)
 // shooting an Infernus Squad (Sv 3+). New-edition cover applies a -1 BS penalty to

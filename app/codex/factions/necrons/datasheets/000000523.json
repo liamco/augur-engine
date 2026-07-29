@@ -1,0 +1,304 @@
+{
+    "id": "000000523",
+    "name": "Overlord",
+    "slug": "overlord",
+    "legend": "Overlords lead the Necron dynasties in battle. Their android minds are tremendously swift, their bodies implacably resilient and their weapons eldritch, ancient and lethal. Yet it is the Overlords’ indomitable wills that are perhaps their most fearsome assets, for with these they drive entire armies to war.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000534",
+                "slug": "necron-warriors"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
+            },
+            {
+                "id": "000000536",
+                "slug": "lychguard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Overlord",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Noble",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> tachyon arrow; Overlord’s blade.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000523",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s tachyon arrow and Overlord’s blade can be replaced with one of the following:<ul><li>1 staff of light</li><li>1 voidscythe</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000523",
+                        "line": 2,
+                        "button": "•",
+                        "description": "If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000523:staff-of-light",
+                "name": "Staff of light",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000523",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Staff of light",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000523:tachyon-arrow",
+                "name": "Tachyon arrow",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000523",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Tachyon arrow",
+                        "attributes": [],
+                        "range": 72,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 16,
+                        "ap": -5,
+                        "d": "D6+2"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000523:overlord-s-blade",
+                "name": "Overlord’s blade",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000523",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Overlord’s blade",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000523:staff-of-light-2",
+                "name": "Staff of light",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000523",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Staff of light",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000523:voidscythe",
+                "name": "Voidscythe",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000523",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Voidscythe",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000523",
+            "line": 1,
+            "name": "Overlord",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Resurrection Orb",
+            "legend": "",
+            "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "My Will Be Done",
+            "legend": "",
+            "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Implacable Resilience",
+            "legend": "",
+            "description": "Each time an attack is allocated to this model, subtract 1 from that attack’s Damage characteristic.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "One Shot",
+            "legend": "",
+            "description": "The bearer can only shoot with this weapon once per battle.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

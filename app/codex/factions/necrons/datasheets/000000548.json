@@ -1,0 +1,266 @@
+{
+    "id": "000000548",
+    "name": "Tomb Blades",
+    "slug": "tomb-blades",
+    "legend": "Tomb Blades are fast assault skimmers whose spiralling attack patterns are based on fractal hyperlogic. They are well armed, often afforded extra protection by the addition of darkness-generating shadowlooms or armoured shieldvanes. Others employ nebuloscopes to target the foe through even solid fortifications.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tomb Blades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> twin gauss blaster; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000548",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their twin gauss blaster replaced with one of the following:<ul><li>1 particle beamer</li><li>1 twin tesla carbine</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000548",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 1 shieldvanes."
+                    },
+                    {
+                        "datasheetId": "000000548",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with one of the following:<ul><li>1 nebuloscope</li><li>1 shadowloom</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000548:particle-beamer",
+                "name": "Particle beamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000548",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Particle beamer",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000548:twin-gauss-blaster",
+                "name": "Twin gauss blaster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000548",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin gauss blaster",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000548:twin-tesla-carbine",
+                "name": "Twin tesla carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000548",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Twin tesla carbine",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000548:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000548",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000548",
+            "line": 1,
+            "name": "Tomb Blades",
+            "m": 12,
+            "t": 5,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 7,
+            "oc": 2,
+            "baseSize": "32mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 3
+        },
+        {
+            "cost": 150,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Nebuloscope",
+            "legend": "",
+            "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Shadowloom",
+            "legend": "",
+            "description": "The bearer has the Stealth ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Shieldvanes",
+            "legend": "",
+            "description": "The bearer has a 3+ Save characteristic and a Move characteristic of 8\".",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Evasion Engrams",
+            "legend": "",
+            "description": "In your Shooting phase, after this unit has shot, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

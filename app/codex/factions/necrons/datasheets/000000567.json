@@ -1,0 +1,196 @@
+{
+    "id": "000000567",
+    "name": "Gauss Pylon",
+    "slug": "gauss-pylon",
+    "legend": "",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000358",
+        "name": "Faction Pack: Necrons (Warhammer Legends)"
+    },
+    "role": "Fortifications",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fortification",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Towering",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Gauss Pylon",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-7",
+        "threshold": 7,
+        "description": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> gauss annihilator; tesla arc.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000567:gauss-annihilator",
+                "name": "Gauss annihilator",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000567",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Gauss annihilator",
+                        "attributes": [],
+                        "range": 120,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 16,
+                        "ap": -4,
+                        "d": "D6+6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000567:tesla-arc",
+                "name": "Tesla arc",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000567",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Tesla arc",
+                        "attributes": [],
+                        "range": 6,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000567",
+            "line": 1,
+            "name": "Gauss Pylon",
+            "m": 0,
+            "t": 12,
+            "sv": 3,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 22,
+            "ld": 7,
+            "oc": 0,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 210,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Phase Shift Generator (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 3\" of this Fortification, models in that unit have a 5+ invulnerable save against ranged attacks.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Phase-shifted Cover",
+            "legend": "",
+            "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this <span class=\"kwb\">FORTIFICATION</span>, that model has the Benefit of Cover against that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "FORTIFICATION",
+            "legend": "",
+            "description": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army<br><ul><li>That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. </li><li>Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.</li></ul>",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

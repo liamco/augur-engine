@@ -1,0 +1,101 @@
+{
+    "name": "Spearpoint Task Force",
+    "ability": {
+        "id": "000010626",
+        "name": "Storm-swift Onslaught",
+        "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+        "legend": "The White Scars are masters of high-speed tactics and hit-and-run warfare. They do battle on the move and from the saddle, outwitting their enemies with breakneck manoeuvres and melting away one moment only to crash home with bone-crushing force the next."
+    },
+    "stratagems": [
+        {
+            "id": "000010630004",
+            "name": "MOBILE LETHALITY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The White Scars fight their wars at a furious tempo, and their warriors are adept at fire-and-manoeuvre strategies.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced or Fell Back."
+        },
+        {
+            "id": "000010630002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010630003",
+            "name": "SPEAR THRUST AND SABRE SWING",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Some foes can be ended with a single charge. Others require sustained savagery to fell. The White Scars are adept at both methods of fighting.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Select either the [LANCE] or [LETHAL HITS] ability. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability. If it is a <span class=\"kwb\">MOUNTED</span> unit, until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] and [LETHAL HITS] abilities instead."
+        },
+        {
+            "id": "000010630006",
+            "name": "EVASIVE MANOEUVRES",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Battle-brothers of the White Scars Chapter are born and raised in the saddle. Expert pilots and riders all, they weave through incoming fire with instinctive skill.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll."
+        },
+        {
+            "id": "000010630005",
+            "name": "HUNTER’S INSTINCTS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The White Scars read the ebb and flow of battle with the hungry cunning of raptorial predators, reacting to the enemy’s movements with exceptional rapidity.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit or Adeptus Astartes Mounted unit from your army that is within 9\" of that enemy unit. You cannot target a unit that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to 6\"."
+        },
+        {
+            "id": "000010630007",
+            "name": "WITHDRAW AND REGROUP",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The riders and pilots sweep away as swiftly as they arrive, regrouping in preparation for their next assault.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that is not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010629002",
+            "name": "Spearpoint Paragon",
+            "cost": 25,
+            "legend": "Decades of service within the White Scars First Company have helped this superlative warrior master the violent arts of high-speed combat.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
+        },
+        {
+            "id": "000010629003",
+            "name": "Stormseers’ Wisdom",
+            "cost": 15,
+            "legend": "The Chapter’s Librarians have made this champion privy to omens of great threats in future wars. Armed with this knowledge, they lead their warriors to war with a boldness that some mistake for recklessness.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit."
+        },
+        {
+            "id": "000010629004",
+            "name": "Hunter’s Eye",
+            "cost": 20,
+            "legend": "This augmetic eye enhances the user’s visual spectrum, enabling them to pinpoint heat signatures and cogitate appropriate firing solutions.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities."
+        },
+        {
+            "id": "000010629005",
+            "name": "Chogorian Huntmaster",
+            "cost": 25,
+            "legend": "This mounted huntsman knows well the importance of manoeuvre, outflanking the enemy and ambushing unsuspecting foes from the flanks and rear, the better to land the killing blow.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">MOUNTED</span> model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+        }
+    ]
+}

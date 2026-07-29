@@ -1,0 +1,101 @@
+{
+    "name": "Gladius Task Force",
+    "ability": {
+        "id": "000008355",
+        "name": "Combat Doctrines",
+        "description": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Combat Doctrine once per battle.<div></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Devastator Doctrine</p><p class=\"ShowFluff legend2\">The Codex Astartes details the strategic value of overwhelming firepower applied to key targets while advancing into position to eliminate threats.</p><p>This unit is eligible to shoot in a turn in which it <span class=\"tooltip00082\" data-tooltip-content=\"#tooltip_content00082\"><span class=\"tt kwbu\">Advanced</span></span>.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Tactical Doctrine</p><p class=\"ShowFluff legend2\">As the warring armies close upon one another and vicious fire-fights erupt, the Codex lays out strategies for swiftly seizing the initiative and combining versatility with firepower.</p><p>This unit is eligible to shoot and declare a charge in a turn in which it <span class=\"tooltip00038\" data-tooltip-content=\"#tooltip_content00038\"><span class=\"tt kwbu\">Fell</span> <span class=\"tt kwbu\">Back</span></span>.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Assault Doctrine</p><p class=\"ShowFluff legend2\">The Codex Astartes leaves no doubt that the killing blow in most engagements must be delivered with a decisive close-quarters strike. It presents plentiful tactical means to achieve this end.</p><p>This unit is eligible to declare a charge in a turn in which it <span class=\"tooltip00082\" data-tooltip-content=\"#tooltip_content00082\"><span class=\"tt kwbu\">Advanced</span></span>.</p></td></tr></tbody></tbody></table></div>",
+        "legend": "The Codex Astartes has proven its worth as a superb treatise on warfare over countless battlefields, and has remained so even after ten thousand years. Many Space Marines hold its wisdom in awe, and exemplify its teachings, employing a flexible set of combat doctrines to eliminate their enemy. Few opponents can withstand the fury of such an onslaught."
+    },
+    "stratagems": [
+        {
+            "id": "000008352002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000008352004",
+            "name": "HONOUR THE CHAPTER",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Every Chapter has forged its own tales of heroism, and none of its battle-brothers would see that noble record besmirched.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability. If your unit is under the effects of the Assault Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well."
+        },
+        {
+            "id": "000008352006",
+            "name": "STORM OF FIRE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "There is no escaping the wrath of the Space Marines, and they use their weapons to bring swift death to their foes wherever they may hide.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. If your unit is under the effects of the Devastator Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well."
+        },
+        {
+            "id": "000008352003",
+            "name": "ONLY IN DEATH DOES DUTY END",
+            "type": "Epic Deed",
+            "cpCost": 2,
+            "legend": "Imminent death does not prevent a Space Marine from enacting his final justice upon the enemies of the Imperium.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        },
+        {
+            "id": "000008352005",
+            "name": "ADAPTIVE STRATEGY",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The tenets of the Codex Astartes allow for unorthodox use of combat tactics and the employment of divergent strategic doctrines if doing so will lead to victory.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select the Devastator Doctrine, Tactical Doctrine or Assault Doctrine. Until the start of your next Command phase, that Combat Doctrine is active for that unit instead of any other Combat Doctrine that is active for your army, even if you have already selected that doctrine this battle."
+        },
+        {
+            "id": "000008352007",
+            "name": "SQUAD TACTICS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Space Marines know precisely when to give ground in order to leave their enemies floundering, before surging back into the fight and driving them from the field in disarray.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army that is within 9\" of the enemy unit that just ended that move.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\", or a Normal move of up to 6\" instead if it is under the effects of the Tactical Doctrine.<br><br><b>RESTRICTIONS:</b> You cannot select a unit that is within Engagement Range of one or more enemy units."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000008353002",
+            "name": "Artificer Armour",
+            "cost": 10,
+            "legend": "Crafted by the Chapter’s finest artificers, this suit of armour provides superior protection.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
+        },
+        {
+            "id": "000008353003",
+            "name": "The Honour Vehement",
+            "cost": 15,
+            "legend": "This stanza is inscribed on thrice-blessed parchment and affixed to its bearers’ wargear with a purity seal, there to inspire them to heroic acts of martial prowess.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead."
+        },
+        {
+            "id": "000008353004",
+            "name": "Adept of the Codex",
+            "cost": 20,
+            "legend": "An ardent student of the Codex Astartes, this commander epitomises its tactical genius, and the wisdom gleaned from its teachings guides their measured strategic responses amidst the fiercest battle.",
+            "description": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle."
+        },
+        {
+            "id": "000008353005",
+            "name": "Fire Discipline",
+            "cost": 25,
+            "legend": "This commander drills his warriors relentlessly; combined with the Adeptus Astartes’ incredible reflexes, they produce a devastating rate of fire.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit."
+        }
+    ]
+}

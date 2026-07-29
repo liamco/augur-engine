@@ -1,0 +1,181 @@
+{
+    "id": "000000559",
+    "name": "Canoptek Acanthrites",
+    "slug": "canoptek-acanthrites",
+    "legend": "Canoptek Acanthrites are created for a single purpose: the destruction of those who have dared to claim the ancient empire of the Necrontyr. Acanthrites’ articulated bodies are armed with hyper-phased voidblades and high-powered thermal cutting beams, enabling them to carve through and dissemble solid matter as though it were not there.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000358",
+        "name": "Faction Pack: Necrons (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Beasts",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Acanthrites",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> cutting beam; voidblade.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000559",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000559:cutting-beam",
+                "name": "Cutting beam",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000559",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Cutting beam",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000559:voidblade",
+                "name": "Voidblade",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000559",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Voidblade",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000559",
+            "line": 1,
+            "name": "Canoptek Acanthrites",
+            "m": 12,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 8,
+            "oc": 2,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 3
+        },
+        {
+            "cost": 170,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Damaged Armour",
+            "legend": "",
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly <span class=\"kwb\">NECRONS</span> model makes an attack that targets that unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -9,7 +9,7 @@
         "lint": "next lint",
         "test": "vitest run",
         "test:watch": "vitest",
-        "parse": "tsx app/data/pipeline/index.ts"
+        "parse": "tsx data/pipeline/index.ts"
     },
     "keywords": [],
     "author": "",
@@ -41,7 +41,7 @@
         "typescript": "^5.9.3"
     },
     "imports": {
-        "#data/*": "./app/data/*",
+        "#codex/*": "./app/codex/*",
         "#assets/*": "./app/ui/assets/*",
         "#components/*": "./app/ui/components/*",
         "#modules/*": "./app/ui/modules/*",

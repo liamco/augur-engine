@@ -1,0 +1,202 @@
+{
+    "id": "000000555",
+    "name": "Transcendent C’tan",
+    "slug": "transcendent-c-tan",
+    "legend": "Shards of the C’tan serve the Necrons as enslaved living weapons. Greatest amongst them are the Transcendent C’tan, whose fury and power are so terrifying that they must be trammelled using the full might of Necron technology. When their cosmic powers are unleashed, reality itself is torn asunder.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Transcendent C’tan",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> seismic assault; crackling tendrils.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000555:seismic-assault",
+                "name": "Seismic assault",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000555",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Seismic assault",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000555:crackling-tendrils",
+                "name": "Crackling tendrils",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000555",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Crackling tendrils",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 8,
+                        "bsWs": 2,
+                        "s": 10,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000555",
+            "line": 1,
+            "name": "Transcendent C’tan",
+            "m": 8,
+            "t": 11,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 16,
+            "ld": 6,
+            "oc": 4,
+            "baseSize": "60mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 305,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Transdimensional Displacement",
+            "legend": "",
+            "description": "Each time this model is selected to Advance, you can remove it from the battlefield and set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy units.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Necrodermis",
+            "legend": "",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ENSLAVED STAR GOD",
+            "legend": "",
+            "description": "This model cannot be your <span class=\"kwb\">WARLORD</span>.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "C’TAN SHARD",
+            "legend": "",
+            "description": "This model cannot be given Enhancements.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

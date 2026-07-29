@@ -1,0 +1,67 @@
+{
+    "name": "Boarding Strike",
+    "ability": {
+        "id": "000009242",
+        "name": "Drive Home the Blade",
+        "description": "Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is selected to shoot, if one or more models from that unit are within 1\" of an open Hatchway and every model in that unit is on the same side of that Hatchway, select one enemy unit on the opposite side of that Hatchway from your unit. Until the end of the phase, ranged weapons equipped by models in your unit have the [sustained hits 1] ability while targeting that enemy unit.",
+        "legend": "The Adeptus Astartes launch their shipboard strikes with precision and lethal momentum, sweeping aside each new obstruct ion to their progress and pressing ever forward."
+    },
+    "stratagems": [
+        {
+            "id": "000009241002",
+            "name": "IN THE EMPEROR’S NAME",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Space Marines will suffer any hardship and endure the savagery of the most monstrous foes to see their duty done.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Adeptus Astartes Battleline unit from your army that is within range of an objective marker and was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
+        },
+        {
+            "id": "000009241003",
+            "name": "CERAMITE BULWARK",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The Space Marines present a wall of ceramite and plasteel shoulder guards to the breach as they force passage through.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Battleline unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Select any number of models in your unit. Until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by the selected models and each time you select targets for attacks made by those models, they must target an enemy unit that is wholly on the opposite side of a Hatchway from them."
+        },
+        {
+            "id": "000009241004",
+            "name": "DUTY AND DEFIANCE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Even when wounded unto death, still the Adeptus Astartes fight on in hopes their final efforts will spell the difference between defeat and victory.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit has the Battleline keyword: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+            "id": "000009241005",
+            "name": "VOX-AMPLIFIED ROAR",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "In the echoing confines of a voidship, the deafening battle cries of the Space Marines evoke terror in the foe.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army declares a charge.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Each target of that charge must take a Battle-shock test."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009240002",
+            "name": "Adamantine Mantle",
+            "cost": 0,
+            "legend": "Bestowed as a mark of honour, this venerated relic lends an extra layer of armour protection that proves especially useful amidst vicious void war.",
+            "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+            "id": "000009240003",
+            "name": "Clavitine Reliquary",
+            "cost": 0,
+            "legend": "A timeless and unique example of Chapter artifice, this device rapidly synchronises with the data spirits of locking devices and renders them quiescent.",
+            "description": "In your Movement phase, each time the bearer is selected to make a Normal or Advance move, if it is within 1\" of a Hatchway, it can attempt to operate that Hatchway. If it does, it cannot attempt to operate a Hatchway again this turn."
+        }
+    ]
+}

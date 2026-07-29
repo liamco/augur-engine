@@ -1,0 +1,101 @@
+{
+    "name": "Ironstorm Spearhead",
+    "ability": {
+        "id": "000008477",
+        "name": "Armoured Wrath",
+        "description": "Once per phase for each <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+        "legend": "An Ironstorm Spearhead’s commanders guide their assault with pre-cogitated fire solutions, cycling data-gheist inloads and whispered binharic auguries. These ensure their warriors, and the belligerent machine spirits inhabiting their war engines, deliver their fire with inescapable accuracy."
+    },
+    "stratagems": [
+        {
+            "id": "000008479004",
+            "name": "MERCY IS WEAKNESS",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "Once a foe is marked for destruction, the Angels of Death must not relent until the target is annihilated.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, that attack has the [SUSTAINED HITS 1] ability, and when making such an attack, if the attacking model is a <span class=\"kwb\">VEHICLE</span>, a successful unmodified Hit roll of 5+ scores a Critical Hit."
+        },
+        {
+            "id": "000008479003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000008479002",
+            "name": "UNBOWED CONVICTION",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Space Marines exemplify obdurate tenacity. Even injured, they will never abandon their oaths.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is below its Starting Strength.<br><br><b>EFFECT:</b> Until the end of the turn, your unit can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+        },
+        {
+            "id": "000008479007",
+            "name": "POWER OF THE MACHINE SPIRIT",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "There are many tales of machine spirits wreaking havoc on the foe, even after the crew of their vehicle are slain and critical systems are failing.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES VEHICLE unit from your army that was reduced to Below Half-strength as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+        },
+        {
+            "id": "000008479006",
+            "name": "ANCIENT FURY",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "The heroes entombed within Dreadnoughts have fought across countless war zones throughout their extended existences, perfecting their martial prowess beyond mortal limits.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES WALKER model from your army.<br><br><b>EFFECT:</b> Until the start of your next Command phase, improve your model’s Move, Toughness, Leadership and Objective Control characteristics by 1 and each time your model makes an attack, add 1 to the Hit roll."
+        },
+        {
+            "id": "000008479005",
+            "name": "VENGEFUL ANIMUS",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "Carefully cogitated binharic prayers can focus a machine spirit’s ire into near-obsessive hatred of its slayers, ensuring that vengeance is meted out even in death.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, just after an ADEPTUS ASTARTES VEHICLE model from your army with the Deadly Demise ability is destroyed.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">VEHICLE</span> model. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000008478002",
+            "name": "Target Augury Web",
+            "cost": 30,
+            "legend": "This spearhead commander uses advanced augmetics to distribute targeting data. With these, they direct the fire of their war engine crews and rouse their machine spirits to operative superiority.",
+            "description": "Techmarine model only. In your Command phase, select one Adeptus Astartes Vehicle model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that <span class=\"kwb\">VEHICLE</span> model have the [LETHAL HITS] ability."
+        },
+        {
+            "id": "000008478003",
+            "name": "The Flesh is Weak",
+            "cost": 10,
+            "legend": "The injuries of past battles have seen this warrior heavily rebuilt with ultra-durable cybernetic limbs and organs that render them extremely difficult to kill.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has the Feel No Pain 4+ ability."
+        },
+        {
+            "id": "000008478004",
+            "name": "Adept of the Omnissiah",
+            "cost": 35,
+            "legend": "This battle-brother is steeped in hidden technological rites. Should their armoured charges be threatened, a burst of arcane binharic screed can rouse their machine spirits to vigilance.",
+            "description": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0."
+        },
+        {
+            "id": "000008478005",
+            "name": "Master of Machine War",
+            "cost": 20,
+            "legend": "This commander is supremely gifted in the strategies of armoured warfare, understanding the capabilities of every war engine in the Chapters arsenal. Delivering precision orders, they ensure the vehicles under their command inflict the most punishing damage to the enemy even amidst complex manoeuvres.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In your Command phase, select one Adeptus Astartes Vehicle model within 6\" of the bearer. Until the start of your next Command phase, that <span class=\"kwb\">VEHICLE</span> is eligible to shoot even if it Fell Back or Advanced this turn."
+        }
+    ]
+}

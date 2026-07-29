@@ -1,0 +1,101 @@
+{
+    "name": "Forgefather’s Seekers",
+    "ability": {
+        "id": "000010367",
+        "name": "Vulkan’s Quest",
+        "description": "Ranged weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.<br><br><span class=\"h_custom\">SEEKER’S COMPANIONS</span><br>If your army includes Vulkan He’stan, during your turn, each Infernus Squad unit from your army is eligible to do one of the following:<br><ul><li>Start to perform an Action in a turn in which it Advanced.</li><li>Shoot in a turn in which it started to perform an Action.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Salamanders units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "Tireless in his pursuit of the Primarch’s legacy, Forgefather Vulkan He’stan annihilates any who impede his quest. Favouring swift, aggressive assaults, he and his warriors close rapidly with the enemy, destroying them at close range with ruthless efficiency"
+    },
+    "stratagems": [
+        {
+            "id": "000010369003",
+            "name": "CRUCIBLE OF BATTLE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Only where the enemy can be faced eye to eye can a Space Marine be truly tested.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target within 6\", add 1 to the Wound roll."
+        },
+        {
+            "id": "000010369006",
+            "name": "BURNING VENGEANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "To open fire on warriors of the Salamanders is merely to invite one’s own swift destruction.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One Adeptus Astartes Transport unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> One unit embarked within that <span class=\"kwb\">TRANSPORT</span> can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+        },
+        {
+            "id": "000010369005",
+            "name": "IMMOLATION PROTOCOLS",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "Salvo after salvo of burning promethium unleashed in synchronised waves will leave almost any foe as smouldering ash.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, Torrent weapons equipped by models in your unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+            "id": "000010369002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010369007",
+            "name": "BLAZING EARTH",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "When faced with an onrushing horde, the Forgefather’s warriors set fire to the earth beneath their feet, impeding their advance and throwing them into confusion.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Start of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army equipped with one or more Torrent weapons.<br><br><b>EFFECT:</b> Select one enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span> and units with the <span class=\"kwb\">FLY</span> keyword) within 12\" of and visible to your unit. Until the end of the phase, each time that enemy unit declares a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)."
+        },
+        {
+            "id": "000010369004",
+            "name": "WRATHFUL INFERNO",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The enemy has closed with your warriors. Now you have them precisely where you want them. Unleash upon them the fires of damnation.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an Adeptus Astartes Infantry unit from your army Falls Back.<br><br><b>TARGET:</b> That unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010368002",
+            "name": "Immolator",
+            "cost": 10,
+            "legend": "Steeped in the Promethean Cult, this battle-brother wields the flamer with unparalleled mastery, turning the battlefield into a burning pyre for the corpses of his foes.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks characteristics of Torrent weapons equipped by models in the bearer’s unit."
+        },
+        {
+            "id": "000010368003",
+            "name": "War-tempered Artifice",
+            "cost": 25,
+            "legend": "Having laboured long in the Chapter’s forges, this warrior smith has crafted his personal armaments. Each weapon is a masterwork tool of death-dealing, wrought with care and strength, and embellished with the icons of their maker’s brotherhood.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">INFANTRY</span> model only. Add 3 to the Strength characteristic of the bearer’s melee weapons."
+        },
+        {
+            "id": "000010368004",
+            "name": "Forged in Battle",
+            "cost": 15,
+            "legend": "To this Angel of Death, war is the anvil upon which their strength is wrought. Every battle is seen as a test in which they and their battle-brothers can prove themselves, and the superior craftsmanship of their weapons and armour.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6."
+        },
+        {
+            "id": "000010368005",
+            "name": "Adamantine Mantle",
+            "cost": 20,
+            "legend": "This flowing cloak or finely wrought tabard is laced through with threads of braided adamantine. When combined with armour and energy fields, it has been shown time and again that these symbols of office are proof against even the very strongest attacks.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead."
+        }
+    ]
+}

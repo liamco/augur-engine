@@ -1,0 +1,202 @@
+{
+    "id": "000002115",
+    "name": "Canoptek Doomstalker",
+    "slug": "canoptek-doomstalker",
+    "legend": "Canoptek Doomstalkers stride with eerie grace. Whether prowling their masters’ armouries as tireless sentinels or providing mobile fire support to the Necron legions, the Doomstalkers annihilate all those who dare stand against them with searing salvoes from their doomsday blasters.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Doomstalker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> doomsday blaster; twin gauss flayer; Doomstalker limbs.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002115:doomsday-blaster",
+                "name": "Doomsday blaster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002115",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Doomsday blaster",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 4,
+                        "s": 14,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002115:twin-gauss-flayer",
+                "name": "Twin gauss flayer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002115",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin gauss flayer",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002115:doomstalker-limbs",
+                "name": "Doomstalker limbs",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002115",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Doomstalker limbs",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002115",
+            "line": 1,
+            "name": "Canoptek Doomstalker",
+            "m": 8,
+            "t": 8,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 8,
+            "oc": 4,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 140,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Sentinel Construct",
+            "legend": "",
+            "description": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

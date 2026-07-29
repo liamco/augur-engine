@@ -1,0 +1,276 @@
+{
+    "id": "000001577",
+    "name": "Seraptek Heavy Construct",
+    "slug": "seraptek-heavy-construct",
+    "legend": "The Seraptek Heavy Construct wields energies that can disintegrate organic and mechanical matter. Despite its bulk, the Seraptek is an agile machine, exerting dominance over nearby Canoptek-class constructs. What purpose this colossus was originally intended for is unknown, but as a weapon of war it is truly devastating.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000359",
+        "name": "Faction Pack: Necrons (Forge World)"
+    },
+    "role": "Other",
+    "isForgeWorld": true,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Towering",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Seraptek Heavy Construct",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-9",
+        "threshold": 9,
+        "description": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 singularity generators; titanic forelimbs.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001577",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001577:singularity-generator",
+                "name": "Singularity generator",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001577",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Singularity generator",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 4
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001577:synaptic-obliterator",
+                "name": "Synaptic obliterator",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001577",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Synaptic obliterator",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001577:transdimensional-projector",
+                "name": "Transdimensional projector",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001577",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Transdimensional projector",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 24,
+                        "ap": -4,
+                        "d": "D6+4"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001577:titanic-forelimbs-strike",
+                "name": "Titanic forelimbs – strike",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001577",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Titanic forelimbs – strike",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -3,
+                        "d": 5
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001577:titanic-forelimbs-sweep",
+                "name": "Titanic forelimbs – sweep",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001577",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Titanic forelimbs – sweep",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001577",
+            "line": 1,
+            "name": "Seraptek Heavy Construct",
+            "m": 10,
+            "t": 12,
+            "sv": 3,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 24,
+            "ld": 7,
+            "oc": 10,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 540,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Terrifying Monstrosity",
+            "legend": "",
+            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Titanic Walker",
+            "legend": "",
+            "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding <span class=\"kwb\">TITANIC</span> models) and terrain features that are 4\" or less in height as if they were not there.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

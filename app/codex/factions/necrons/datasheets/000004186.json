@@ -1,0 +1,230 @@
+{
+    "id": "000004186",
+    "name": "Nekrosor Ammentar",
+    "slug": "nekrosor-ammentar",
+    "legend": "Death made manifest, Nekrosor Ammentar is a figure of horror even to other Necrons. Destroyer madness radiates from the Nekrosor like religious fervour, driving its legions to murderous ferocity. Yet none kill with the sheer relentless fury of the Nekrosor, whose Unmaker Gauntlet and enmitic disintegrators leave ruin in the monster’s wake.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Destroyer Cult",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Nekrosor Ammentar",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> enmitic disintegrators; Unmaker Gauntlet; blade tail and whip coils; nullstone field generator.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004186:enmitic-disintegrators",
+                "name": "Enmitic disintegrators",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004186",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Enmitic disintegrators",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004186:blade-tail-and-whip-coils",
+                "name": "Blade tail and whip coils",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004186",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Blade tail and whip coils",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004186:unmaker-gauntlet",
+                "name": "Unmaker Gauntlet",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004186",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Unmaker Gauntlet",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000004186",
+            "line": 1,
+            "name": "Nekrosor Ammentar",
+            "m": 10,
+            "t": 8,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 9,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "80mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 165,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Fights First",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Protective Disciples",
+            "legend": "",
+            "description": "While this model is within 3\" of one or more other friendly Destroyer Cult units, this model has the Lone Operative ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Infectious Murder-madness (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding Titanic units) is within 6\" of this model, each time a model in that unit makes an attack, if that model has the Destroyer Cult keyword or that enemy unit is the closest eligible target, that attack has the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Prophet of Destruction",
+            "legend": "",
+            "description": "Each time this model destroys an enemy unit, select one other friendly Destroyer Cult unit within 9\" of it. Until the end of the phase, each time a model in that unit makes an attack, re-roll a Wound roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Nullstone Field Generator (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

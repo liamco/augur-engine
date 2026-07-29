@@ -1,0 +1,175 @@
+{
+    "id": "000000543",
+    "name": "Ghost Ark",
+    "slug": "ghost-ark",
+    "legend": "Ghost Arks are repair barges that glide amidst the ranks of the Necron legions, gathering up and repairing those androids too wrecked to reconstruct themselves and keep fighting. These vehicles are often pressed into service as armoured transports, advancing to disgorge fresh waves of fully repaired Necrons directly into the fight.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Dedicated Transports",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dedicated Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ghost Ark",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 10 Necron Warrior models and 1 Necrons Infantry Character model.",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 gauss flayer arrays; armoured bulk.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000543:gauss-flayer-array",
+                "name": "Gauss flayer array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000543",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Gauss flayer array",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000543:armoured-bulk",
+                "name": "Armoured bulk",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000543",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Armoured bulk",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000543",
+            "line": 1,
+            "name": "Ghost Ark",
+            "m": 10,
+            "t": 9,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 7,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 115,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Repair Barge",
+            "legend": "",
+            "description": "Once per turn, just after an enemy unit finishes making its attacks, if one or more friendly NECRON WARRIORS units within 3\" of this model lost one or more wounds as a result of those attacks, this model can use this ability. If it does, select one of those <span class=\"kwb\">NECRON</span> <span class=\"kwb\">WARRIORS</span> units; that unit’s Reanimation Protocols activate. The same <span class=\"kwb\">NECRON</span> <span class=\"kwb\">WARRIORS</span> unit cannot be selected for this ability more than once per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

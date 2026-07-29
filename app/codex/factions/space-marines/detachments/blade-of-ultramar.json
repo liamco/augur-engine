@@ -1,0 +1,101 @@
+{
+    "name": "Blade of Ultramar",
+    "ability": {
+        "id": "000010632",
+        "name": "Mastered Doctrines",
+        "description": "At the start of up to three of your Command phases, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You cannot select a Combat Doctrine you have already selected this battle, unless a friendly Marneus Calgar model is on the battlefield.<br><br><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Devastator Doctrine</p><p class=\"ShowFluff legend2\">The Codex Astartes details the strategic value of overwhelming firepower.</p><p>This unit is eligible to shoot in a turn in which it <span class=\"tooltip00082\" data-tooltip-content=\"#tooltip_content00082\"><span class=\"tt kwbu\">Advanced</span></span>.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Tactical Doctrine</p><p class=\"ShowFluff legend2\">The Codex lays out strategies for seizing the initiative.</p><p>This unit is eligible to shoot and declare a charge in a turn in which it <span class=\"tooltip00038\" data-tooltip-content=\"#tooltip_content00038\"><span class=\"tt kwbu\">Fell</span> <span class=\"tt kwbu\">Back</span></span>.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Assault Doctrine</p><p class=\"ShowFluff legend2\">The Codex Astartes leaves no doubt that the killing blow must be delivered with a decisive close-quarters strike.</p><p>This unit is eligible to declare a charge in a turn in which it <span class=\"tooltip00082\" data-tooltip-content=\"#tooltip_content00082\"><span class=\"tt kwbu\">Advanced</span></span>.</p></td></tr></tbody></tbody></table></div><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Ultramarines units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "Marneus Calgar deploys the complete and nuanced wisdom of the Codex Astartes as easily and instinctively as drawing breath."
+    },
+    "stratagems": [
+        {
+            "id": "000010634002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010634004",
+            "name": "COURAGE AND HONOUR!",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Roaring their famed battle cry, the Ultramarines hurl themselves into the fight, striving all the harder to prevail beneath the unwavering eye of their Chapter Master.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability. If your unit is under the effects of the Assault Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well."
+        },
+        {
+            "id": "000010634006",
+            "name": "EXEMPLARY VIGILANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Long have the Ultramarines guarded both Ultramar and the wider Imperium. No foe can hide from their vengeful gaze or evade the reach of their wrath.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. If your unit is under the effects of the Devastator Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well."
+        },
+        {
+            "id": "000010634003",
+            "name": "TACTICAL FORESIGHT",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "With the enemy’s countermeasures and responses predicted and allowed for in advance, the Ultramarines can weather their most ferocious attacks.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+        },
+        {
+            "id": "000010634005",
+            "name": "ULTRAMARIAN ADAPTIVITY",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "No Chapter’s warriors know better the breadth – theoretical and practical – of the Codex Astartes’ teachings, and how these can and should be adapted to ensure victory.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select the Devastator Doctrine, Tactical Doctrine or Assault Doctrine. Until the start of your next Command phase, that Combat Doctrine is active for your unit instead of any other Combat Doctrine that is active for your army, even if you have already selected that Combat Doctrine this battle."
+        },
+        {
+            "id": "000010634007",
+            "name": "PRACTICAL TACTICS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "After rapidly making a theoretical assessment of the foes’ probable next moves, the Ultramarines apply practical repositioning to counter them.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army that is not within Engagement Range of one or more enemy units and is within 9\" of the enemy unit that just ended that move.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\", or a Normal move of up to 6\" instead if it is under the effects of the Tactical Doctrine."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010633002",
+            "name": "Armour of Antoninus",
+            "cost": 10,
+            "legend": "Originally worn by a storied Captain of the Ultramarines’ First Company, this artificer armour is bestowed by the Chapter Master himself upon a worthy wearer.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
+        },
+        {
+            "id": "000010633003",
+            "name": "Oath of Macragge",
+            "cost": 15,
+            "legend": "Amongst the most solemn and binding oaths an Ultramarine can swear, it is a rare honour to enter battle with these words affixed to their armour.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+        },
+        {
+            "id": "000010633004",
+            "name": "Student of the Codex",
+            "cost": 20,
+            "legend": "This prodigal officer has focused upon one aspect of the Codex Astartes and means to master its every aspect before moving on to the next.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. At the start of your Command phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, until the start of your next Command phase, the Tactical Doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army)."
+        },
+        {
+            "id": "000010633005",
+            "name": "Veteran of Behemoth",
+            "cost": 25,
+            "legend": "Having battled the Tyranid swarms since their first galactic invasion, this veteran officer knows well the benefit of efficient and overwhelming firepower.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re-roll Advance rolls made for that unit."
+        }
+    ]
+}

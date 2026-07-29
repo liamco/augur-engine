@@ -3,8 +3,8 @@ import { buildCombatContext } from "../buildCombatContext";
 import { runCombat } from "../runCombat";
 import { TestUnit } from "@/app/types/Test";
 import { WeaponProfile } from "@/app/types/Weapon";
-import heavyIntercessors from "@/app/data/output/heavy-intercessor-squad.json";
-import infernusSquad from "@/app/data/output/infernus-squad.json";
+import heavyIntercessors from "@/app/codex/heavy-intercessor-squad.json";
+import infernusSquad from "@/app/codex/infernus-squad.json";
 import stealthAbility from "@/app/library/unit-abilities/stealth.json";
 
 // New-edition Stealth aliases Benefit of Cover: a -1 Ballistic Skill penalty to

@@ -1,0 +1,101 @@
+{
+    "name": "Vindication Task Force",
+    "ability": {
+        "id": "000010395",
+        "name": "Purge and Sanctify",
+        "description": "<ul><li>Each time an attack targets an Ancient unit from your army, if that unit is within range of one or more objective markers and the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.</li><li>Each time a Crusader Squad unit from your army makes a Righteous Zeal move, that unit can end that move as close as possible to the closest objective marker instead of as close as possible to the closest enemy unit.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Black Templars units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "As the battle-brothers of a Vindication Task Force purge the Emperor’s domain in fire and blood, they see their holy quest as recovering Humanity’s rightful dominion. They scour the stain of the unclean, topple false idols, breach strongholds of unholy faith and plant the crusade’s standards in their place, branding such sites with the sacred icons of their brotherhood."
+    },
+    "stratagems": [
+        {
+            "id": "000010397004",
+            "name": "SPOOR OF THE UNHOLY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Perhaps guided by visions from the Emperor, Black Templars can pick out heresy wherever it lurks.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability and each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll."
+        },
+        {
+            "id": "000010397003",
+            "name": "LITANIES OF PURGATION",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Where the Emperor's domain is imperilled by the unholy, the Black Templars vow to cleanse it.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, if that model’s unit is within range of one or more objective markers or the target unit is within range of one or more objective markers, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010397002",
+            "name": "REFUSAL TO YIELD",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "Where honour is upheld, the Emperor's divinity may manifest to grant his pious warrior new strength.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, just after an Ancient model from your army is destroyed.<br><br><b>TARGET:</b> That <span class=\"kwb\">ANCIENT</span> model. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> At the end of the phase, set your model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wounds remaining.<br><br><b>RESTRICTIONS:</b> You cannot target the same model with this Stratagem more than once per battle."
+        },
+        {
+            "id": "000010397007",
+            "name": "PERFERVID INTERVENTION",
+            "type": "Strategic Ploy",
+            "cpCost": 2,
+            "legend": "When the Emperor blesses his crusaders with the opportunity to seize the initiative, none refuse.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within 6\" of one or more enemy units and would be eligible to declare a charge against one or more of those enemy units if it were your Charge phase.<br><br><b>EFFECT:</b> Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge.<br><br><b>RESTRICTIONS:</b> Note that even if this charge is successful, your unit does not receive any Charge bonus this turn."
+        },
+        {
+            "id": "000010397006",
+            "name": "RECITATION OF THE REVERED",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The Ancient leads a deafening recital of his banner's honours, the projected chant's zeal shaking the foe.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Ancient unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
+        },
+        {
+            "id": "000010397005",
+            "name": "RECLAIM OUR HONOUR!",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The sacred standards of a crusade embody its warriors' honour, and no one would see them lost.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit destroys an Ancient model from your army that has not been targeted with the Refusal to Yield Stratagem this phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army visible to that enemy unit.<br><br><b>EFFECT:</b> Until the end of the battle, each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack that targets that enemy unit, add 1 to the Hit roll.<br><br><b>RESTRICTIONS:</b> You cannot target that <span class=\"kwb\">ANCIENT</span> model with the Refusal to Yield Stratagem this phase."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010396002",
+            "name": "Imperialis of the Eternal Crusade",
+            "cost": 15,
+            "legend": "This gleaming finial is said to have once topped Terra’s holiest spire and been gifted by the third Ecclesiarch to the High Marshal. It radiates an imperious superiority, buffeting impure minds with bellicose neural suppression until those who mean the bearer ill are left staggering.",
+            "description": "Ancient model only. Each time an enemy unit selects the bearer’s unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any olher negative modifiers to that Charge roll)."
+        },
+        {
+            "id": "000010396003",
+            "name": "Consecrating Aura",
+            "cost": 25,
+            "legend": "The piety and honour of this warrior can be felt wherever he fights. His presence rouses the ardent souls of the Black Templars, warding Sigismund’s heirs from the blasphemy of the unbeliever.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have a 5+ invulnerable save."
+        },
+        {
+            "id": "000010396004",
+            "name": "Orb of the Emperor’s Aegis",
+            "cost": 10,
+            "legend": "What Dark Age technology may lie inside this icon-wreathed sphere pales compared to its true power: that of the Emperor’s blessing. When activated, the orb briefly emits a glowing nimbus of protective energy so powerful that it can hold back the corruptive fury of the naked Warp. Thus shielded, Black Templars may use their fleet’s teleportarium shrines even without the awesome protection of Terminator armour.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have the Deep Strike ability."
+        },
+        {
+            "id": "000010396005",
+            "name": "Warden of Honour",
+            "cost": 20,
+            "legend": "This lauded guardian is trusted with the stewardship of the crusade’s most precious standards. His unyielding presence and preservation of his charge amidst fire and heresy inspire his brothers to acts of extreme heroism.",
+            "description": "Crusade Ancient model only. While the bearer is leading a unit, each time you roll one D6 for the bearer’s Vengeful Exhortation ability, add 1 to the result."
+        }
+    ]
+}

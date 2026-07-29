@@ -1,0 +1,261 @@
+{
+    "id": "000000556",
+    "name": "Tesseract Vault",
+    "slug": "tesseract-vault",
+    "legend": "These super-heavy war engines channel the furious might of imprisoned Transcendent C’tan Shards, unleashing one unnatural phenomenon after another upon the foe. Yet should they ever be destroyed and the C’tan inside freed, the god-shard’s wrath will be great indeed, and all should fear its rampage.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Towering",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tesseract Vault",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-8",
+        "threshold": 8,
+        "description": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 4 tesla spheres; armoured bulk.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000556:tesla-spheres",
+                "name": "Tesla spheres",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000556",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Tesla spheres",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000556:antimatter-meteor",
+                "name": "Antimatter Meteor",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000556",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Antimatter Meteor",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6+3",
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000556:cosmic-fire",
+                "name": "Cosmic Fire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000556",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Cosmic Fire",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "3D6",
+                        "bsWs": null,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000556:time-s-arrow",
+                "name": "Time’s Arrow",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000556",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Time’s Arrow",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 3,
+                        "ap": -2,
+                        "d": 6
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000556:armoured-bulk",
+                "name": "Armoured bulk",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000556",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Armoured bulk",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000556",
+            "line": 1,
+            "name": "Tesseract Vault",
+            "m": 8,
+            "t": 12,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 24,
+            "ld": 7,
+            "oc": 8,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 425,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Powers of the C’tan",
+            "legend": "",
+            "description": "In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

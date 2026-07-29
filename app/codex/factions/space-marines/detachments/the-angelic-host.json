@@ -1,0 +1,101 @@
+{
+    "name": "The Angelic Host",
+    "ability": {
+        "id": "000009189",
+        "name": "Upon Wings of Fire",
+        "description": "At the end of your opponent s turn, you can select a number of Adeptus Astartes Jump Pack units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:<br><div class=\"BreakInsideAvoid\"><table bordercolor=\"#888\"><tbody><tr><td><table class=\" customTable tablefont\" bordercolor=\"#888\"><tbody><tr><td><b>BATTLE SIZE</b></td><td>UNITS</td></tr><tr><td><b>Incursion</b></td><td>Up to 1 units </td></tr><tr><td><b>Strike Force</b></td><td>Up to 2 units </td></tr><tr><td><b>Onslaught</b></td><td>Up to 3 units </td></tr></tbody></table></td></tr></tbody></table></div><br>Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves. In the Reinforcements step of your next Movement phase, set each of those units up using their Deep Strike ability.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">BLOOD</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "The Blood Angels soar high above the battlefield before plummeting to strike their foes with bone-shattering force. They are true masters of the war-torn skies."
+    },
+    "stratagems": [
+        {
+            "id": "000009191003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their enhanced physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000009191004",
+            "name": "ANGEL’S SACRIFICE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The Blood Angels would gladly put themselves in harm's way to protect others, just as Sanguinius sacrificed his own life.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Start of the Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Jump Pack unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, each time an enemy model within Engagement Range of your unit selects its targets, it must select your unit as the target of all of its attacks."
+        },
+        {
+            "id": "000009191005",
+            "name": "MARTIAL EXEMPLARS",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The Blood Angels are mighty warriors indeed, and wield their gilded and shimmering blades with consummate skill.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Jump Pack unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] and [PRECISION] abilities."
+        },
+        {
+            "id": "000009191002",
+            "name": "UNBRIDLED ARDOUR",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "The Sanguinary Guard exemplify the noble heritage of Sanguinius, leaping to avenge their battle-brothers without hesitation.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> Until the end of the battle, each time a friendly Sanguinary Guard unit makes an attack that targets the enemy unit that just destroyed your unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        },
+        {
+            "id": "000009191006",
+            "name": "DESCENT OF ANGELS",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "The Blood Angels are masters of aerial assault, leaping from airborne transports with jump packs roaring to plunge into the heat of battle.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Adeptus Astartes Jump Pack unit from your army that is arriving using the Deep Strike ability this phase.<br><br><b>EFFECT:</b> Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.<br><br><b>RESTRICTIONS:</b> A unit targeted by this Stratagem is not eligible to declare a charge in the same turn."
+        },
+        {
+            "id": "000009191007",
+            "name": "DEATH FROM THE SKIES",
+            "type": "Epic Deed",
+            "cpCost": 1,
+            "legend": "The roar of the Blood Angels jump packs is as a funeral dirge to their foes.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an Adeptus Astartes Jump Pack unit from your army Advances or Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">JUMP</span> <span class=\"kwb\">PACK</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009190002",
+            "name": "Artisan of War",
+            "cost": 20,
+            "legend": "This warrior is a true artist both on and off the battlefield. His talents are reflected in the exquisite workmanship of his wargear, for he insists upon personally crafting his weapons of war.",
+            "description": "Adeptus Astartes Jump Pack model only. Improve the Armour Penetration characteristic of the bearers weapons by 1, and the bearer has a Save characteristic of 2+."
+        },
+        {
+            "id": "000009190003",
+            "name": "Visage of Death",
+            "cost": 15,
+            "legend": "This exquisitely crafted death mask is a thing of dark beauty to the Blood Angels, and a sign of impending doom to their enemies. A neural amplifier embedded within the expressionless face of this macabre item serves to magnify the aura of fear it projects.",
+            "description": "Adeptus Astartes Jump Pack model only. In the Battle-shock step of your opponents Command phase, each enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+            "id": "000009190004",
+            "name": "Archangel’s Shard",
+            "cost": 15,
+            "legend": "When Sanguinius battled Horus, his magnificent blade was tragically shattered against the Warmasters profane battle plate. The shards were gathered up and new swords forged to incorporate them, each one gifted to a different successor Chapter.",
+            "description": "Adeptus Astartes Jump Pack model only. The bearer’s melee weapons have the [Anti-Chaos 5+] and [Lance] abilities."
+        },
+        {
+            "id": "000009190005",
+            "name": "Gleaming Pinions",
+            "cost": 25,
+            "legend": "The elaborately crafted ailerons of this jump pack allow the wearer to manoeuvre, twist and bank at incredible speeds.",
+            "description": "Adeptus Astartes Jump Pack model only. Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer, if this bearer’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+        }
+    ]
+}

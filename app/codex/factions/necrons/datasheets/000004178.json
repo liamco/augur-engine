@@ -1,0 +1,229 @@
+{
+    "id": "000004178",
+    "name": "Geomancer",
+    "slug": "geomancer",
+    "legend": "When Necron Crypteks turn their studies toward geomancy, they become masters of the battlefield. With their tremorglaives, they agitate their enemies’ molecules with explosive results. At the same time, their more esoteric arcana allow them to render the landscape temporarily insubstantial or dominate energistic leylines with summoned obelisk nodes.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004176",
+                "slug": "canoptek-macrocytes"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
+            },
+            {
+                "id": "000000534",
+                "slug": "necron-warriors"
+            }
+        ],
+        "leaderNotes": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+    },
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Geomancer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Cryptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> tremorglaive.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004178:tremorglaive-reverberating-beam",
+                "name": "Tremorglaive – reverberating beam",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004178",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Tremorglaive – reverberating beam",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004178:tremorglaive-shock-wave-pulse",
+                "name": "Tremorglaive – shock wave pulse",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004178",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Tremorglaive – shock wave pulse",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6+2",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004178:tremorglaive",
+                "name": "Tremorglaive",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004178",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Tremorglaive",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000004178",
+            "line": 1,
+            "name": "Geomancer",
+            "m": 8,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Tectonic Reverberations",
+            "legend": "",
+            "description": "In your Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the start of your next Movement phase that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for it.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Obelisk Node Control",
+            "legend": "",
+            "description": "While this model is within range of an objective marker you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "VANGUARD PROTOCOLS",
+            "legend": "",
+            "description": "If this model is attached to a Canoptek Macrocytes unit during the Declare Battle Formations step, this model has the Scouts 8\" ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

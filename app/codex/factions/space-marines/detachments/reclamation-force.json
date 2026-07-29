@@ -1,0 +1,101 @@
+{
+    "name": "Reclamation Force",
+    "ability": {
+        "id": "000010683",
+        "name": "Oath of Reclamation",
+        "description": "<ul><li>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.</li><li>Each time an attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Ultramarines units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+        "legend": "The driving principle behind all that these battle-brothers do is the honouring of their oaths to drive back the darkness and reconquer the Five Hundred Worlds, one battlefield at a time."
+    },
+    "stratagems": [
+        {
+            "id": "000010685003",
+            "name": "FURIOUS DEDICATION",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Cold fury of purpose drives the charge of the Space Marines, their absolute dedication to their cause lending them ferocious speed and strength.",
+            "turn": "Either player’s turn",
+            "phase": "Charge or Fight phase",
+            "description": "<b>WHEN:</b> Your Charge phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not declared a charge or been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the turn, add 2 to Charge rolls made for your unit and add 1 to the Attacks characteristic of melee weapons equipped by models in your unit.<br><br><b>RESTRICTIONS:</b> You cannot use this Stratagem more than once per turn."
+        },
+        {
+            "id": "000010685004",
+            "name": "FIGHT TO THE END",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Those who have sworn an oath to see Ultramar reclaimed will not yield a single yard of its territories once they have seized and secured them.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+            "id": "000010685007",
+            "name": "MARCHING EVER ON",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The road to the complete rebuilding of the Five Hundred Worlds will be a long and gruelling one, and those who fight their way along it cannot pause in their advance for even a moment.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit Falls Back.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was within Engagement Range of that enemy unit at the start of the phase.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\"+1."
+        },
+        {
+            "id": "000010685002",
+            "name": "CRUSADING CONQUERORS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The sheer will of these battle-brothers to reclaim the sacred Five Hundred Worlds is overwhelming.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> End of the Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the start of the next Command phase, add 1 to the Objective Control characteristic of models in your unit."
+        },
+        {
+            "id": "000010685005",
+            "name": "SCIONS OF GUILLIMAN",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The gene-sons of Roboute Guilliman are masters of his tenets, regardless of which Chapter they hail from.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army ends a Fall Back move.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+        },
+        {
+            "id": "000010685006",
+            "name": "ULTRAMARIAN DESTINY",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "All those Space Marines fighting to defend or to expand the Ultramarines stellar realm trust that their conquest – though it must be hard fought for – is nothing short of ordained by the Primarch’s will.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010684002",
+            "name": "Seals of Reconquest",
+            "cost": 20,
+            "legend": "These precious seals are manufactured on Konor, and contain micro shield generators that – while swift to exhaust their charge – help to safeguard battle-brothers while they fulfil their oaths of duty.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have a 5+ invulnerable save."
+        },
+        {
+            "id": "000010684003",
+            "name": "Avenging Avatar (Aura)",
+            "cost": 10,
+            "legend": "Eyes alight with determination and vengeful fury, this champion of the Chapter seems almost to cast the dread shadow of the Primarch himself across his quailing foes.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle-shock test."
+        },
+        {
+            "id": "000010684004",
+            "name": "Scroll of Proclamation",
+            "cost": 15,
+            "legend": "Finely scribed on vellum and tightly bound in an armoured scroll case, the words of Roboute Guilliman’s Consilias Imperitus Ultimar prove a constant source of inspiration that drive this warrior ever onward.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer’s unit declares a charge, if one or more targets of that charge are within range of an objective marker, you can re-roll the Charge roll."
+        },
+        {
+            "id": "000010684005",
+            "name": "Liberatum",
+            "cost": 25,
+            "legend": "Forged on Macragge by the finest artisans, this weapon’s machine spirit is said to burn with a desire to see the Five Hundred Worlds ripped from the grasp of heretics and despots.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        }
+    ]
+}

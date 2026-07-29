@@ -1,0 +1,132 @@
+[
+    {
+        "id": "000008335008",
+        "name": "RAPID INGRESS",
+        "type": "Strategic Ploy",
+        "cpCost": 1,
+        "legend": "Be it cunning strategy, potent technology or supernatural ritual, there are many means by which a commander may hasten their warriors’ onset.",
+        "turn": "Opponent’s turn",
+        "phase": "Movement phase",
+        "description": "<b>WHEN:</b> End of your opponent’s Movement phase.<br><br><b>TARGET:</b> One unit from your army that is in Reserves.<br><br><b>EFFECT:</b> Your unit can arrive on the battlefield as if it were the Reinforcements step of your Movement phase, and if every model in that unit has the Deep Strike ability, you can set that unit up as described in the Deep Strike ability (even though it is not your Movement phase).<br><br><b>RESTRICTIONS:</b> You cannot use this Stratagem to enable a unit to arrive on the battlefield during a battle round it would not normally be able to do so in."
+    },
+    {
+        "id": "000008335010",
+        "name": "GO TO GROUND",
+        "type": "Battle Tactic",
+        "cpCost": 1,
+        "legend": "Seeking salvation from incoming fire, warriors hurl themselves into whatever cover they can find.",
+        "turn": "Opponent’s turn",
+        "phase": "Shooting phase",
+        "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">INFANTRY</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, all models in your unit have a 6+ invulnerable save and have the Benefit of Cover."
+    },
+    {
+        "id": "000009218004",
+        "name": "COUNTER-OFFENSIVE",
+        "type": "Strategic Ploy",
+        "cpCost": 2,
+        "legend": "In close-quarters combat, the slightest hesitation can leave an opening for a swift foe to exploit.",
+        "turn": "Either player’s turn",
+        "phase": "Fight phase",
+        "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has fought.<br><br><b>TARGET:</b> One unit from your army that is within Engagement Range of one or more enemy units and that has not already been selected to fight this phase.<br><br><b>EFFECT:</b> Your unit fights next."
+    },
+    {
+        "id": "000009218006",
+        "name": "EXPLOSIVE CLEARANCE",
+        "type": "Battle Tactic",
+        "cpCost": 1,
+        "legend": "A well-placed explosive munition in confined shipboard spaces can cause bloody carnage.",
+        "turn": "Your turn",
+        "phase": "Shooting phase",
+        "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Select one model in your unit that is equipped with a weapon with the [BLAST] ability. Until the end of the phase, when determining how many models are in the target unit for the purpose of that ability, include models that are not visible to the attacking model. In addition, attacks made with that weapon can be allocated to models that are not visible to the attacking model."
+    },
+    {
+        "id": "000008335003",
+        "name": "COUNTER-OFFENSIVE",
+        "type": "Strategic Ploy",
+        "cpCost": 2,
+        "legend": "In close-quarters combat, the slightest hesitation can leave an opening for a swift foe to exploit.",
+        "turn": "Either player’s turn",
+        "phase": "Fight phase",
+        "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has fought.<br><br><b>TARGET:</b> One unit from your army that is within Engagement Range of one or more enemy units and that has not already been selected to fight this phase.<br><br><b>EFFECT:</b> Your unit fights next."
+    },
+    {
+        "id": "000008335009",
+        "name": "FIRE OVERWATCH",
+        "type": "Strategic Ploy",
+        "cpCost": 1,
+        "legend": "A hail of wildfire can drive back advancing foes.",
+        "turn": "Opponent’s turn",
+        "phase": "Movement or Charge phase",
+        "description": "<b>WHEN:</b> Your opponent’s Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance or Fall Back move, or declares a charge.<br><br><b>TARGET:</b> One unit from your army that is within 24\" of that enemy unit and that would be eligible to shoot if it were your Shooting phase.<br><br><b>EFFECT:</b> If that enemy unit is visible to your unit, your unit can shoot that enemy unit as if it were your Shooting phase.<br><br><b>RESTRICTIONS:</b> You cannot target a <span class=\"kwb\">TITANIC</span> unit with this Stratagem. Until the end of the phase, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. You can only use this Stratagem once per turn."
+    },
+    {
+        "id": "000008335005",
+        "name": "INSANE BRAVERY",
+        "type": "Epic Deed",
+        "cpCost": 1,
+        "legend": "Indifferent to their own survival, these warriors hold their ground against seemingly impossible odds.",
+        "turn": "Your turn",
+        "phase": "Command phase",
+        "description": "<b>WHEN:</b> Battle-shock step of your Command phase, just before you take a Battle-shock test for a unit from your army.<br><br><b>TARGET:</b> That unit from your army.<br><br><b>EFFECT:</b> Your unit automatically passes that Battle-shock test.<br><br><b>RESTRICTIONS:</b> You cannot use this Stratagem more than once per battle."
+    },
+    {
+        "id": "000009218005",
+        "name": "INSANE BRAVERY",
+        "type": "Epic Deed",
+        "cpCost": 1,
+        "legend": "Indifferent to their own survival, these warriors hold their ground against seemingly impossible odds.",
+        "turn": "Your turn",
+        "phase": "Command phase",
+        "description": "<b>WHEN:</b> Battle-shock step of your Command phase, just after you have failed a Battle-shock test taken for a unit from your army.<br><br><b>TARGET:</b> The unit from your army that Battle-shock test was just taken for (even though your Battle-shocked units cannot normally be affected by your Stratagems).<br><br><b>EFFECT:</b> Your unit is treated as having passed that test instead, and is not Battle-shocked as a result."
+    },
+    {
+        "id": "000009218003",
+        "name": "BATTLEFIELD COMMAND",
+        "type": "Strategic Ploy",
+        "cpCost": 1,
+        "legend": "The commander's authoritative tone cuts through the din of battle, guiding the actions of nearby troops.",
+        "turn": "Either player’s turn",
+        "phase": "Any phase",
+        "description": "<b>WHEN:</b> Start or end of any phase.<br><br><b>TARGET:</b> One Leader unit from your army and one friendly Bodyguard unit within 6\" of it that it could normally be attached to.<br><br><b>EFFECT:</b> Select one of your Leader unit’s Leader abilities. Until the start of your next Command phase, that Bodyguard unit is treated as being led by that Leader unit for the purposes of that Leader ability.<br><br><b>RESTRICTIONS:</b> Once you target a unit with this Stratagem, that unit cannot be targeted with it again until your next Command phase."
+    },
+    {
+        "id": "000008335012",
+        "name": "HEROIC INTERVENTION",
+        "type": "Strategic Ploy",
+        "cpCost": 1,
+        "legend": "Voices raised in furious war cries, your warriors surge forth to meet the enemy’s onslaught head-on.",
+        "turn": "Opponent’s turn",
+        "phase": "Charge phase",
+        "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One unit from your army that is within 6\" of that enemy unit and would be eligible to declare a charge against that enemy unit if it were your Charge phase.<br><br><b>EFFECT:</b> Your unit now declares a charge that targets only that enemy unit, and you resolve that charge as if it were your Charge phase.<br><br><b>RESTRICTIONS:</b> You can only select a <span class=\"kwb\">VEHICLE</span> unit from your army if it is a <span class=\"kwb\">WALKER</span>. Note that even if this charge is successful, your unit does not receive any Charge bonus this turn."
+    },
+    {
+        "id": "000008335002",
+        "name": "COMMAND RE-ROLL",
+        "type": "Battle Tactic",
+        "cpCost": 1,
+        "legend": "A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory.",
+        "turn": "Either player’s turn",
+        "phase": "Any phase",
+        "description": "<b>WHEN:</b> Any phase, just after you make an Advance roll, a Charge roll, a Desperate Escape test or a Hazardous test for a unit from your army, or a Hit roll, a Wound roll, a Damage roll or a saving throw for a model in that unit, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple rolls or saving throws at once.<br><br><b>TARGET:</b> That unit or model from your army.<br><br><b>EFFECT:</b> You re-roll that roll, test or saving throw. If you are using fast dice rolling, select one of those rolls or saving throws to re-roll."
+    },
+    {
+        "id": "000009218002",
+        "name": "COMMAND RE-ROLL",
+        "type": "Epic Deed",
+        "cpCost": 1,
+        "legend": "A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory.",
+        "turn": "Either player’s turn",
+        "phase": "Any phase",
+        "description": "<b>WHEN:</b> Any phase, just after you have made a Hit roll, a Wound roll, a Damage roll, a saving throw, an Advance roll, a Charge roll, a Desperate Escape test, a Hazardous test, or just after you have rolled the dice to determine the number of attacks made with a weapon, for an attack, model or unit from your army.<br><br><b>TARGET:</b> That unit or model from your army.<br><br><b>EFFECT:</b> You re-roll that roll, test or saving throw."
+    },
+    {
+        "id": "000008335004",
+        "name": "EPIC CHALLENGE",
+        "type": "Epic Deed",
+        "cpCost": 1,
+        "legend": "The legends of the 41st Millennium are replete with deadly duels between mighty champions.",
+        "turn": "Either player’s turn",
+        "phase": "Fight phase",
+        "description": "<b>WHEN:</b> Fight phase, when a <span class=\"kwb\">CHARACTER</span> unit from your army that is within Engagement Range of one or more Attached units is selected to fight.<br><br><b>TARGET:</b> One <span class=\"kwb\">CHARACTER</span> model in your unit.<br><br><b>EFFECT:</b> Until the end of the phase, all melee attacks made by that model have the [PRECISION] ability."
+    }
+]

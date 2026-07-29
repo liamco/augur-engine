@@ -1,10 +1,10 @@
-import heavyIntercessors from "#data/output/heavy-intercessor-squad.json";
-import infernusSquad from "#data/output/infernus-squad.json";
-import librarianInTerminatorArmour from "#data/output/librarian-in-terminator-armour.json";
-import wingedTyranidPrime from "#data/output/winged-tyranid-prime.json";
-import termagants from "#data/output/termagants.json";
-import gargoyles from "#data/output/gargoyles.json";
-import psychophage from "#data/output/psychophage.json";
+import heavyIntercessors from "#codex/heavy-intercessor-squad.json";
+import infernusSquad from "#codex/infernus-squad.json";
+import librarianInTerminatorArmour from "#codex/librarian-in-terminator-armour.json";
+import wingedTyranidPrime from "#codex/winged-tyranid-prime.json";
+import termagants from "#codex/termagants.json";
+import gargoyles from "#codex/gargoyles.json";
+import psychophage from "#codex/psychophage.json";
 import { TestUnit } from "#types/Test";
 
 export interface UnitManifestEntry {

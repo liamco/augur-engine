@@ -1,0 +1,101 @@
+{
+    "name": "Wrath of the Rock",
+    "ability": {
+        "id": "000010154",
+        "name": "Dutiful Tenacity",
+        "description": "Each time an attack targets an Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+        "legend": "Even amongst the Adeptus Astartes, the battle-brothers of the Dark Angels are renowned for their tenacity and resilience on the battlefield. When ordered to war, they are utterly relentless in pursuing their objectives, wading into fields of withering fire and shrugging off blows that would slay mortal warriors outright."
+    },
+    "stratagems": [
+        {
+            "id": "000010161005",
+            "name": "TACTICAL MASTERY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "When the constituent elements of the Dark Angels fight as one, the enemy is often overwhelmed and torn apart by the fluidity of the Chapter’s rapid advances, tactical withdrawals and unexpected counteroffensives.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced. If your unit has the Ravenwing keyword, it is also eligible to shoot and declare a charge in a turn in which it Fell Back."
+        },
+        {
+            "id": "000010161004",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their transhuman physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010161002",
+            "name": "INESCAPABLE JUSTICE",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "The Dark Angels pursue their enemies relentlessly, eliminating one with ruthless precision before turning to the next.",
+            "turn": "Either player’s turn",
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, just after your Oath of Moment target is destroyed.<br><br><b>TARGET:</b> One Adeptus Astartes Character unit that is on the battlefield.<br><br><b>EFFECT:</b> Select one enemy unit within 12\" and visible to your unit. That enemy unit becomes your Oath of Moment target until the start of your next Command phase."
+        },
+        {
+            "id": "000010161003",
+            "name": "LION’S WILL",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Unflinching in their loyalty to Chapter and Primarch, Dark Angels battle-brothers seize and hold their objectives with unrelenting determination and zealous fury.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. In addition, until the end of the turn, if your unit does not have the Deathwing, Ravenwing or Vehicle keyword, each time a model in your unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+            "id": "000010161007",
+            "name": "LEONINE AGGRESSION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The Dark Angels are always aggressive in their waging of war, seizing any opportunity to pounce upon and annihilate their prey.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army within 3\" of one or more enemy units, or one Deathwing unit from your army within 6\" of one or more enemy units.<br><br><b>EFFECT:</b> Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge.<br><br><b>RESTRICTIONS:</b> Note that even if this charge is successful, your unit does not receive any Charge bonus this turn."
+        },
+        {
+            "id": "000010161006",
+            "name": "RELICS OF THE DARK AGE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Amongst the many secrets hoarded by the Dark Angels are those technological in nature. The armouries of the Rock contain potent weapons unseen in the armouries of other Chapters.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, add 2 to the Strength characteristic of ranged weapons equipped by models in your unit."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010155002",
+            "name": "Tempered in Battle (Aura)",
+            "cost": 10,
+            "legend": "A veteran of the Inner Circle, this warrior inspires those around them to hold the line amidst the heat and chaos of battle.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit."
+        },
+        {
+            "id": "000010155003",
+            "name": "Ancient Weapons",
+            "cost": 25,
+            "legend": "The vaults of the Dark Angels contain many relics from Humanity’s distant past. This soldier has been granted the honour of bearing such a weapon to battle.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1."
+        },
+        {
+            "id": "000010155004",
+            "name": "Deathwing Assault",
+            "cost": 15,
+            "legend": "A veteran inductee of the Inner Circle, this champion has served amongst the Deathwing for centuries and become an unmatched master of teleportarium insertions.",
+            "description": "Deathwing model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+        },
+        {
+            "id": "000010155005",
+            "name": "Lord of the Ravenwing",
+            "cost": 10,
+            "legend": "This commander has mastered the art of cavalry combat, instinctively noticing the opportune position to strike and navigating the chaos of battle with preternatural precision.",
+            "description": "Ravenwing model only. You can re-roll Advance and Charge rolls made for the bearer’s unit."
+        }
+    ]
+}

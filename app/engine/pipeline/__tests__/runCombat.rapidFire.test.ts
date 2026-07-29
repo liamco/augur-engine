@@ -3,8 +3,8 @@ import { buildCombatContext } from "../buildCombatContext";
 import { runCombat } from "../runCombat";
 import { TestUnit } from "@/app/types/Test";
 import { WeaponProfile } from "@/app/types/Weapon";
-import heavyIntercessors from "@/app/data/output/heavy-intercessor-squad.json";
-import infernusSquad from "@/app/data/output/infernus-squad.json";
+import heavyIntercessors from "@/app/codex/heavy-intercessor-squad.json";
+import infernusSquad from "@/app/codex/infernus-squad.json";
 
 // A Rapid Fire 1 weapon, range 24 → half range 12.
 const rapidFireGun: WeaponProfile = {

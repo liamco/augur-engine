@@ -1,0 +1,180 @@
+{
+    "id": "000000558",
+    "name": "Canoptek Tomb Stalker",
+    "slug": "canoptek-tomb-stalker",
+    "legend": "Armed with gauss weaponry and rows of razor-sharp legs, Tomb Stalkers are unliving machines built to protect the sepulchres of Necron lords. Its arcane senses can detect life through hundreds of metres of solid rock, and once its prey has been detected, it closes in for the kill, using a form of phase field to part matter like water.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000358",
+        "name": "Faction Pack: Necrons (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tomb Stalker",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> gauss slicers; Tomb Stalker claws; gloom prism.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000558",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000558:gauss-slicers",
+                "name": "Gauss slicers",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000558",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Gauss slicers",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000558:tomb-stalker-claws",
+                "name": "Tomb Stalker claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000558",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Tomb Stalker claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000558",
+            "line": 1,
+            "name": "Canoptek Tomb Stalker",
+            "m": 10,
+            "t": 9,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 9,
+            "ld": 8,
+            "oc": 3,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 130,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Gloom Prism (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Snaking Ambush",
+            "legend": "",
+            "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

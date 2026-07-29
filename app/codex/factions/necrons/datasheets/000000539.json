@@ -1,0 +1,235 @@
+{
+    "id": "000000539",
+    "name": "Triarch Praetorians",
+    "slug": "triarch-praetorians",
+    "legend": "Triarch Praetorians fight tirelessly to uphold the ancient dynastic codes of their race. Whether blasting the foe with antimatter particles, impaling them on their flickering voidblades or immolating them with their rods of covenant, the Praetorians’ gravity displacement packs and combat prowess make them truly deadly.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Triarch",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Praetorians",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> rod of covenant.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000539",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All models in this unit can each have their rod of covenant replaced with 1 particle caster and 1 voidblade."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000539:particle-caster",
+                "name": "Particle caster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000539",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Particle caster",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000539:rod-of-covenant",
+                "name": "Rod of covenant",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000539",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Rod of covenant",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000539:rod-of-covenant-2",
+                "name": "Rod of covenant",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000539",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Rod of covenant",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000539:voidblade",
+                "name": "Voidblade",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000539",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Voidblade",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000539",
+            "line": 1,
+            "name": "Triarch Praetorians",
+            "m": 10,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 10
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 5
+        },
+        {
+            "cost": 180,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Relentless Combatants",
+            "legend": "",
+            "description": "You can re-roll Charge rolls made for this unit, and this unit is eligible to declare a charge in a turn in which it Fell Back.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

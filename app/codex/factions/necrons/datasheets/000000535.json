@@ -1,0 +1,199 @@
+{
+    "id": "000000535",
+    "name": "Immortals",
+    "slug": "immortals",
+    "legend": "Once the shook troops of the Necrontyr, Immortals still provide their masters with a powerful core of skilled soldiery millennia later. More advanced than Necron Warriors, they can employ a number of strategies even without command, and their firepower makes them deadly in close or midrange engagements.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Battleline",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Immortals",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> gauss blaster; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000535",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All models in this unit can each have their gauss blaster replaced with 1 tesla carbine."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000535:gauss-blaster",
+                "name": "Gauss blaster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000535",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Gauss blaster",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000535:tesla-carbine",
+                "name": "Tesla carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000535",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Tesla carbine",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000535:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000535",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000535",
+            "line": 1,
+            "name": "Immortals",
+            "m": 5,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 7,
+            "oc": 2,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 10
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 5
+        },
+        {
+            "cost": 150,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Implacable Eradication",
+            "legend": "",
+            "description": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

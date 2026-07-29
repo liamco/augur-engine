@@ -1,0 +1,245 @@
+{
+    "id": "000000552",
+    "name": "Monolith",
+    "slug": "monolith",
+    "legend": "A Monolith is capable of skimming across the battlefield, or even descending from space. It can slaughter foes with its array of potent weapons, heal damage with the living metal of its hull and even teleport Necron reinforcements into battle through its shimmering eternity gate.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monolith",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Towering",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-7",
+        "threshold": 7,
+        "description": "While this model has 1-7 wounds remaining, subtract 4 from its Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 4 gauss flux arcs; particle whip; portal of exile.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000552",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 4 gauss flux arcs can be replaced with 4 death rays."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000552:death-ray",
+                "name": "Death ray",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000552",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Death ray",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -4,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000552:gauss-flux-arc",
+                "name": "Gauss flux arc",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000552",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Gauss flux arc",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000552:particle-whip",
+                "name": "Particle whip",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000552",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Particle whip",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "3D6",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000552:portal-of-exile",
+                "name": "Portal of exile",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000552",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Portal of exile",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000552",
+            "line": 1,
+            "name": "Monolith",
+            "m": 8,
+            "t": 13,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 22,
+            "ld": 7,
+            "oc": 8,
+            "baseSize": "160mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 400,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Eternity Gate",
+            "legend": "",
+            "description": "In the Reinforcements step of your Movement phase, you can select one Necrons Infantry unit from your army that is either in Reserves or on the battlefield (if you select the latter, remove that unit from the battlefield and place it into Reserves). That unit is then set up anywhere on the battlefield that is wholly within 6\" of this model and not within Engagement Range of any enemy models. That unit cannot declare a charge this turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

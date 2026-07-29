@@ -1,0 +1,170 @@
+{
+    "id": "000002112",
+    "name": "Canoptek Reanimator",
+    "slug": "canoptek-reanimator",
+    "legend": "Canoptek Reanimators prowl the Necron lines, shooting out ethereal beams swarming with nanoscarabs. Necrons touched by these eerie lights stagger to their feet, resurrected, repaired and ready to fight again. Foes are less fortunate, wailing in agony as their atoms are torn apart and recombined in a hideous, gory fashion.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Reanimator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 atomiser beams; Reanimator’s claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002112:atomiser-beam",
+                "name": "Atomiser beam",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002112",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Atomiser beam",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002112:reanimator-s-claws",
+                "name": "Reanimator’s claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002112",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Reanimator’s claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002112",
+            "line": 1,
+            "name": "Canoptek Reanimator",
+            "m": 8,
+            "t": 6,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 7,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Nanoscarab Reanimation Beam (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 3\" of this model, each time that unit’s Reanimation Protocols activate, that unit reanimates an additional D3 wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

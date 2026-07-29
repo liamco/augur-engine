@@ -1,0 +1,199 @@
+{
+    "id": "000000534",
+    "name": "Necron Warriors",
+    "slug": "necron-warriors",
+    "legend": "Necron Warriors attack in rank upon shambling rank. Individually little more than mindless automata, they are relentless and deadly when commanded en masse. The Warriors’ metallic bodies can self-repair from even the most hideous damage, while their unceasing volleys of fire butcher the foe with mechanical efficiency.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Battleline",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Necron Warriors",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> gauss flayer; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000534",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their gauss flayer replaced with 1 gauss reaper."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000534:gauss-flayer",
+                "name": "Gauss flayer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000534",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Gauss flayer",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000534:gauss-reaper",
+                "name": "Gauss reaper",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000534",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Gauss reaper",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000534:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000534",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000534",
+            "line": 1,
+            "name": "Necron Warriors",
+            "m": 5,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 7,
+            "oc": 2,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 10,
+                "max": 20
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 10
+        },
+        {
+            "cost": 200,
+            "count": 20
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Their Number is Legion",
+            "legend": "",
+            "description": "Each time this unit’s Reanimation Protocols activate, you can re-roll the dice to see how many wounds are reanimated.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

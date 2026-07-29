@@ -1,0 +1,197 @@
+{
+    "id": "000000554",
+    "name": "Doomsday Ark",
+    "slug": "doomsday-ark",
+    "legend": "The Doomsday Ark is a direct-fire plasma artillery piece so powerful that it can threaten even the super-heavy war engines of the lesser races. This vehicle is solely dedicated to overwhelming long-ranged firepower, even diverting energy from its motive functions in order to unleash absolute obliteration upon the foe.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Doomsday Ark",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> doomsday cannon; 2 gauss flayer arrays; armoured bulk.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000554:doomsday-cannon",
+                "name": "Doomsday cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000554",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Doomsday cannon",
+                        "attributes": [],
+                        "range": 72,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 3,
+                        "s": 18,
+                        "ap": -4,
+                        "d": 4
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000554:gauss-flayer-array",
+                "name": "Gauss flayer array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000554",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Gauss flayer array",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000554:armoured-bulk",
+                "name": "Armoured bulk",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000554",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Armoured bulk",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000554",
+            "line": 1,
+            "name": "Doomsday Ark",
+            "m": 10,
+            "t": 9,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 7,
+            "oc": 5,
+            "baseSize": "60mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 200,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Overwhelming Obliteration",
+            "legend": "",
+            "description": "In your Movement phase, if this model Remains Stationary, until the end of the turn, its doomsday cannon has the [DEVASTATING WOUNDS] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

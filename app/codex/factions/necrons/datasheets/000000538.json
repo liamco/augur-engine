@@ -1,0 +1,141 @@
+{
+    "id": "000000538",
+    "name": "Flayed Ones",
+    "slug": "flayed-ones",
+    "legend": "Flayed Ones keen shrill hunting cries as they fall upon the foe, talons flashing. Infected with the gruesome flayer virus, the Flayed Ones attempt to gorge themselves upon the flesh and blood of their butchered foes, gore drizzling through their mechanical forms as they seek to slake a thirst they can never quench.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Flayed Ones",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> flayer claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000538:flayer-claws",
+                "name": "Flayer claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000538",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Flayer claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000538",
+            "line": 1,
+            "name": "Flayed Ones",
+            "m": 5,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "28.5mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 10
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 60,
+            "count": 5
+        },
+        {
+            "cost": 120,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Flesh Hunger",
+            "legend": "",
+            "description": "Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful Hit roll scores a Critical Hit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

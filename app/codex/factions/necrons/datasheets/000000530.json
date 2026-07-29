@@ -1,0 +1,173 @@
+{
+    "id": "000000530",
+    "name": "Orikan The Diviner",
+    "slug": "orikan-the-diviner",
+    "legend": "Orikan is a master astromancer, using his knowledge of astral conjunctions to predict the tides of battle and empower himself with cosmic energies. He supplements these skills with chronomantic abilities that allow him to see events before they happen and know just where to aim his blows.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000534",
+                "slug": "necron-warriors"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
+            }
+        ],
+        "leaderNotes": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+    },
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Orikan the Diviner",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chronomancer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Cryptek",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Staff of Tomorrow.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000530:staff-of-tomorrow",
+                "name": "Staff of Tomorrow",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000530",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Staff of Tomorrow",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -3,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000530",
+            "line": 1,
+            "name": "Orikan The Diviner",
+            "m": 5,
+            "t": 4,
+            "sv": 4,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Master Chronomancer",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "The Stars Are Right",
+            "legend": "",
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, triple the Attacks and Strength characteristics of this model’s Staff of Tomorrow and every successful Wound roll made for this model’s attacks scores a Critical Wound.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

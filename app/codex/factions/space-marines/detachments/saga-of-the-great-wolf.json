@@ -1,0 +1,101 @@
+{
+    "name": "Saga of the Great Wolf",
+    "ability": {
+        "id": "000010657",
+        "name": "Master of Wolves",
+        "description": "At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Hunting Pack once per battle.<br><ul><li><b>Encircling Jaws:</b> This unit can re-roll Advance rolls and Charge rolls.</li><li><b>Hunter’s Eye:</b> Each time a model in this unit makes a ranged attack, add 1 to the Hit roll.</li><li><b>Ferocious Strike:</b> Each time this unit is selected to fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.</li></ul>",
+        "legend": "With Logan Grimnar commanding them, the hunting packs of the Space Wolves fight at peak efficiency."
+    },
+    "stratagems": [
+        {
+            "id": "000010661006",
+            "name": "EYE OF THE PACK",
+            "type": "",
+            "cpCost": 1,
+            "legend": "Once one Fenrisian warrior has perceived some slight weakness in the defences of their foes, they all strike at it like encircling predators dragging down prey.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can add 1 to the Wound roll."
+        },
+        {
+            "id": "000010661004",
+            "name": "FENRISIAN FEROCITY",
+            "type": "",
+            "cpCost": 1,
+            "legend": "Even the most challenging terrain or formidable fortifications cannot stop the Great Wolf’s chief hunters once they are in motion.",
+            "turn": "Your turn",
+            "phase": "Movement or Charge phase",
+            "description": "<b>WHEN:</b> Your Movement phase or your Charge phase.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Walker unit from your army that has not been selected to move or charge this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models (excluding <span class=\"kwb\">TITANIC</span> models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end a Normal, Advance or Fall Back move within Engagement Range of them."
+        },
+        {
+            "id": "000010661007",
+            "name": "BATTLE INSTINCTS",
+            "type": "",
+            "cpCost": 1,
+            "legend": "These champions of Fenris respond to enemy fire with instinctive swiftness, rarely giving their foes a second chance to shoot at them.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One Space Wolves unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\"."
+        },
+        {
+            "id": "000010661005",
+            "name": "UNRELENTING HUNTERS",
+            "type": "",
+            "cpCost": 1,
+            "legend": "Knowing their part in the grand plan and determined to execute it with the magnificence of true champions, these warriors fight with a fluid and inescapable ferocity.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a Space Wolves unit, until the end of the turn, it is eligible to declare a charge in a turn in which it Advanced or Fell Back."
+        },
+        {
+            "id": "000010661002",
+            "name": "THE FOE FORESEEN",
+            "type": "",
+            "cpCost": 1,
+            "legend": "With his great strategic wisdom, Grimnar predicted the peril these warriors would encounter and warned them to be ready for it.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010661003",
+            "name": "GRIMNAR’S COMMAND",
+            "type": "",
+            "cpCost": 1,
+            "legend": "Pivotal as they are to the Great Wolf’s plans, this pack have their own orders to fulfil in this moment that come directly from Grimnar himself.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hunting Pack from the Master of Wolves Detachment rule. Until the start of your next Command phase, that Hunting Pack is active for your unit instead of any other Hunting Pack that is active, even if you have already selected that Hunting Pack this battle."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010660002",
+            "name": "Grimnar’s Mark",
+            "cost": 20,
+            "legend": "This moonsilver wolf-talisman is bestowed by the Great Wolf himself before battle, a mark of favour that fills the bearer with an eagerness to slay the foe.",
+            "description": "Adeptus Astartes Terminator Captain model only. Once per battle round, from the second battle round onwards, you can target the bearer’s unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.<br><br>In the Declare Battle Formations step, the bearer can be attached to a Wolf Guard Terminators unit."
+        },
+        {
+            "id": "000010660003",
+            "name": "Howlmaw",
+            "cost": 15,
+            "legend": "An ancient hunting horn with a built-in vox amplification unit, this relic’s stirring howl can be heard even through the wild clangour of battle.",
+            "description": "Wolf priest model only. At the start of the Fight phase, you can select one enemy unit within 6\" of the bearer. That unit must take a Battle-shock, subtracting 1 from the result."
+        },
+        {
+            "id": "000010660004",
+            "name": "Chariots of the Storm",
+            "cost": 25,
+            "legend": "This dedicated flight of gunships attends the Great Wolf and his packs, and can be called in to rapidly reposition his forces in the moments before battle is joined.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. After both players have deployed their armies, select up to three <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+            "id": "000010660005",
+            "name": "Skjald’s Foretelling",
+            "cost": 25,
+            "legend": "Great deeds have been prophesied for this champion, such that those who fight alongside him do so all the harder as they play out the self-fulfilling prophecy.",
+            "description": "Wolf Guard Battle Leader model only. While the bearer is leading a unit, weapons equipped by models in that unit have the [LANCE] ability."
+        }
+    ]
+}

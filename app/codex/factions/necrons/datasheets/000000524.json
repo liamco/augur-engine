@@ -1,0 +1,242 @@
+{
+    "id": "000000524",
+    "name": "Lord",
+    "slug": "lord",
+    "legend": "The Royal Courts of Necron dynasties include many lesser lords amongst their number, while fringeworld forces may be led by such beings. They are possessed of formidable cunning and martial strength, and the resurrection orbs they carry to war can overcharge the self-repair systems of nearby Necrons.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000358",
+        "name": "Faction Pack: Necrons (Warhammer Legends)"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000534",
+                "slug": "necron-warriors"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
+            },
+            {
+                "id": "000000536",
+                "slug": "lychguard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Noble",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Lord",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> staff of light.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000524",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s staff of light can be replaced with 1 Lord’s blade."
+                    },
+                    {
+                        "datasheetId": "000000524",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 resurrection orb."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000524:staff-of-light",
+                "name": "Staff of light",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000524",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Staff of light",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000524:staff-of-light-2",
+                "name": "Staff of light",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000524",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Staff of light",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000524:lord-s-blade",
+                "name": "Lord’s blade",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000524",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Lord’s blade",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000524",
+            "line": 1,
+            "name": "Lord",
+            "m": 5,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 65,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Resurrection Orb",
+            "legend": "",
+            "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Relentless March",
+            "legend": "",
+            "description": "While this model is leading a unit, add 1\" to the Move characteristic of models in that unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "The Lord’s Will",
+            "legend": "",
+            "description": "While this model is leading a unit, you can target that unit with Stratagems even when it is Battle-shocked.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

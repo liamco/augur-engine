@@ -1,0 +1,101 @@
+{
+    "name": "Vanguard Spearhead",
+    "ability": {
+        "id": "000008489",
+        "name": "Shadow Masters",
+        "description": "Each time a ranged attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
+        "legend": "The warriors of a Vanguard Spearhead slip through the shadows, half-seen spectres barely visible to the foe. Enemies blaze away into the gloom with increasing panic, their shots flying wide as covert specialists encircle their victims and prepare to level the killing blow."
+    },
+    "stratagems": [
+        {
+            "id": "000008491004",
+            "name": "SURGICAL STRIKES",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "Every tyrant must fear the assassin's blade, and the vanguard spring ambushes with precision coordination.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
+        },
+        {
+            "id": "000008491003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000008491005",
+            "name": "STRIKE FROM THE SHADOWS",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "To evade one’s enemies and sow confusion can be a deadly weapon in itself.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit that is more than 12\" away, improve the Ballistic Skill and Armour Penetration characteristics of that attack by 1. If one or more enemy models are destroyed as a result of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test."
+        },
+        {
+            "id": "000008491007",
+            "name": "GUERRILLA TACTICS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "At the opportune moment, Space Marine infiltration units slip away from battle, only to relocate ready to strike the foe again.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> Up to two PHOBOS and/or SCOUT SQUAD units from your army, or one other ADEPTUS ASTARTES INFANTRY unit from your army.<br><br><b>EFFECT:</b> Remove those units from the battlefield and place them into Strategic Reserves.<br><br><b>RESTRICTIONS:</b> Each unit selected for this Stratagem must be more than 3\" away from all enemy models."
+        },
+        {
+            "id": "000008491006",
+            "name": "CALCULATED FEINT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "A feigned retreat can be used to overextend eager foes or draw them into deadly arcs of fire.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit declares a charge.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as a target of that charge.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a PHOBOS or ScouT SQUAD unit.<br><br><b>RESTRICTIONS:</b> You cannot select a unit that is within Engagement Range of one or more enemy units."
+        },
+        {
+            "id": "000008491002",
+            "name": "A DEADLY PRIZE",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "Warriors of a Vanguard Spearhead will rig critical objectives with explosives to deny them to the enemy.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Start of the Command phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army within range of an objective marker you control.<br><br><b>EFFECT:</b> That objective marker is said to be Sabotaged, and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. While an objective marker is Sabotaged and under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000008490002",
+            "name": "The Blade Driven Deep",
+            "cost": 25,
+            "legend": "This battlefield stalker slips through enemy territory like a spectre, leading their warriors in daring behind-enemy-lines operations.",
+            "description": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability."
+        },
+        {
+            "id": "000008490003",
+            "name": "Ghostweave Cloak",
+            "cost": 15,
+            "legend": "Hand-stitched by blinded servitors and anointed with distilled blood, this cloak contains strands of mnemothread. It throws up a field of techno-spiritual dissonance that veils its wearer from sight and sensors, allowing them to slip across the battlefield like a wraith.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has the Stealth and Lone Operative abilities."
+        },
+        {
+            "id": "000008490004",
+            "name": "Execute and Redeploy",
+            "cost": 20,
+            "legend": "The battle-brothers under this warrior’s command seize every opportunity to strike while the initiative is theirs, harrying the foe with gunfire before returning to the shadows.",
+            "description": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase."
+        },
+        {
+            "id": "000008490005",
+            "name": "Shadow War Veteran",
+            "cost": 30,
+            "legend": "By the time the enemy believes battle has begun, their rear lines have already been attacked at this warriors command - their supply lines cut and their communications in disarray - choking them off from vital battlefield support.",
+            "description": "PHOBOS model only. Gain following ability:<br><b>Lord of Deceit (Aura):</b> Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP."
+        }
+    ]
+}

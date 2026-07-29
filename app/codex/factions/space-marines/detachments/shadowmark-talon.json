@@ -1,0 +1,101 @@
+{
+    "name": "Shadowmark Talon",
+    "ability": {
+        "id": "000010463",
+        "name": "Masters of Shadow",
+        "description": "Each time a ranged attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
+        "legend": "The Raven Guard are renowned for their uncanny ability to move unseen, cloaking themselves in darkness as they close in upon their prey."
+    },
+    "stratagems": [
+        {
+            "id": "000010467003",
+            "name": "LAY LOW THE TYRANTS",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "In a storm of blade thrusts and bludgeoning strikes, enemy champions and commanders are laid low, leaving their troops in leaderless disarray.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
+        },
+        {
+            "id": "000010467005",
+            "name": "STUNNING FUSILLADE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "From darkness and obscuring cover, Raven Guard battle-brothers open fire as one, striking their unaware targets with precision fire.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit that is more than 12\" away, improve the Ballistic Skill and Armour Penetration characteristics of that attack by 1. If one or more enemy models are destroyed as a result of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test."
+        },
+        {
+            "id": "000010467006",
+            "name": "RAPTORIAL VIGILANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The Raven Guard are swift to exploit the movements of their foes, whether to pursue their prey and complete the kill or to make use of an opportunity to fade oncemore from sight.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army that is within 9\" of the enemy unit that just ended that move. You cannot target a unit that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a Phobos or Scout Squad unit."
+        },
+        {
+            "id": "000010467002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000010467007",
+            "name": "INTO DARKNESS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "At the opportune moment, Raven Guard infiltration units slip away from battle, only to relocate ready to strike the foe again.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> Up to two Phobos and/or Scout Squad units from your army, or one other Adeptus Astartes Infantry unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove those units from the battlefield and place them into Strategic Reserves."
+        },
+        {
+            "id": "000010467004",
+            "name": "FEINT AND THRUST",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Retreating from the fight, these warriors lure their enemies on before swiftly turning the tables and hurling themselves into their now overextended foe.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back. If it is a Phobos or Scout Squad unit, it is also eligible to shoot and declare a charge in a turn in which it Advanced."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000010466002",
+            "name": "Blackwing Shroud",
+            "cost": 25,
+            "legend": "This mechanical device contains miniaturised refraction fields and electromagnetic interference projectors that distort sensory apparatus, enabling the bearer and their unit to evade detection and infiltrate key positions.",
+            "description": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability."
+        },
+        {
+            "id": "000010466003",
+            "name": "Coronal Susurrant",
+            "cost": 30,
+            "legend": "This wreath of circuitry from the Dark Age of Technology forces a whispering white noise into enemy minds and broadcasts.",
+            "description": "Phobos model only. The bearer has the following ability:<br><br><b>Lord of Deceit (Aura):</b> Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP."
+        },
+        {
+            "id": "000010466004",
+            "name": "Umbral Raptor",
+            "cost": 15,
+            "legend": "This warrior is a solitary predator whose footsteps are all but silent and whose form is one with the shadows.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has the Stealth and Lone Operative abilities."
+        },
+        {
+            "id": "000010466005",
+            "name": "Hunter’s Instincts",
+            "cost": 25,
+            "legend": "Those who master the Path of Ambush guide their forces to launch surprise assaults on the enemy with the precise timing of true hunters.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+        }
+    ]
+}

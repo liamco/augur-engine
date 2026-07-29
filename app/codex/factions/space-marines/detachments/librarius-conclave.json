@@ -1,0 +1,101 @@
+{
+    "name": "Librarius Conclave",
+    "ability": {
+        "id": "000009784",
+        "name": "Psychic Disciplines",
+        "description": "At the start of the battle round, select one of the following Psychic Disciplines. Until the end of the battle round, that Psychic Discipline is active and its effects apply to all Adeptus Astartes Psyker units from your army.<br><br><span class=\"h_custom\">Biomancy Discipline</span><br>Add 2\" to the Move characteristic of models in this unit.<br><br><span class=\"h_custom\">Divination Discipline</span><br>Each time a model in this unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.<br><br><span class=\"h_custom\">Pyromancy Discipline</span><br>Each time a ranged attack made by a model in this unit targets an enemy unit within 12\", improve the Armour Penetration characteristic of that attack by 1.<br><br><span class=\"h_custom\">Telekinesis Discipline</span><br>Each time a ranged attack targets this unit, subtract 1 from the Strength characteristic of that attack.<br><br><span class=\"h_custom\">Telepathy Discipline</span><br>Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Weapon Skill or Ballistic Skill characteristics and/or any or all modifiers to the Hit roll.",
+        "legend": "Librarians spend their lives mastering psychic disciplines, learning how to manipulate the energies of the Immaterium to confound their foes and embolden their battle-brothers."
+    },
+    "stratagems": [
+        {
+            "id": "000009791003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000009791004",
+            "name": "FIERY SHIELD",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "As the enemy closes in for the kill, the psyker manifests his psychic will in a raging inferno that obscures imperilled allies and threatens to immolate any who come close enough to land a blow upon them.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army that is within 18\" of one or more friendly Adeptus Astartes Psyker models, and that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll, and if the Pyromancy Discipline is active for your army, weapons that target your unit have the [HAZARDOUS] ability."
+        },
+        {
+            "id": "000009791005",
+            "name": "IRON ARM",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "This Librarian lends skull-shattering weight and impact to melee strikes by transmuting flesh into unyielding metal.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry unit from your army that is within 18\" of one or more Adeptus Astartes Psyker models from your army and has not been selected to Fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit, or add 2 if the Biomancy Discipline is active for your army."
+        },
+        {
+            "id": "000009791006",
+            "name": "ASSAIL",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Using nothing but the power of his mind, a Librarian can rip rubble, boulders and other debris from the surrounding terrain and hurl them at the foe.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Adeptus Astartes Psyker unit from your army that is eligible to shoot.<br><br><b>EFFECT:</b> Select one enemy unit within 18\" of and visible to one or more <span class=\"kwb\">PSYKER</span> models in your unit (excluding units with the Lone Operative ability), and roll six D6, adding 1 to each result if the Telekinesis Discipline is active for your army: for each 4+, that enemy unit suffers 1 mortal wound."
+        },
+        {
+            "id": "000009791007",
+            "name": "PRESCIENT PRECISION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Sharing some of his prescience with his battle-brothers, a Librarian can guide their fire.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Adeptus Astartes Psyker unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, that attack has the [LETHAL HITS] ability, and the [IGNORES COVER] ability as well if the Divination Discipline is active for your army."
+        },
+        {
+            "id": "000009791002",
+            "name": "SENSORY ASSAULT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Paranoia, confusion and panic are heightened to a debilitating degree as the Librarian alters his foes’ perceptions.",
+            "turn": "Either player’s turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One Adeptus Astartes Psyker unit from your army.<br><br><b>EFFECT:</b> Select one enemy unit that is within 18\" of and visible to one <span class=\"kwb\">PSYKER</span> model in your unit. Until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for it. In addition, if the Telepathy Discipline is active for your army, that enemy unit must take a Battle-shock test, subtracting 1 from the result."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009785002",
+            "name": "Prescience",
+            "cost": 25,
+            "legend": "Those who specialise in prognostication may foresee the flow of battle and position their allies accordingly.",
+            "description": "Adeptus Astartes Psyker model only (excluding Terminator models). Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer’s unit, the bearer’s unit can make a Normal move of up to D6\", or up to 6\" instead if the Divination Discipline is active for your army."
+        },
+        {
+            "id": "000009785003",
+            "name": "Celerity",
+            "cost": 30,
+            "legend": "The powers of the Immaterium flow through the psyker, heightening his speed and that of his battle-brothers.",
+            "description": "Adeptus Astartes Psyker model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced, and if the Biomancy Discipline is active for your army, it is eligible to declare a charge in a turn in which it Fell Back."
+        },
+        {
+            "id": "000009785004",
+            "name": "Obfuscation",
+            "cost": 20,
+            "legend": "By manipulating the minds of the foe, practitioners of telepathy may obfuscate their presence.",
+            "description": "Adeptus Astartes Psyker model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit, and if the Telepathy Discipline is active for your army, the bearer’s unit cannot be targeted by ranged attacks unless the attacking model is within 18\"."
+        },
+        {
+            "id": "000009785005",
+            "name": "Fusillade",
+            "cost": 35,
+            "legend": "The Librarian wreathes the ammunition of his allies in armour-eroding halos of azure fire.",
+            "description": "Adeptus Astartes Psyker model only. Ranged weapons equipped by models in the bearer’s unit have the [ANTI-MONSTER 5+] and [ANTI-VEHICLE 5+] abilities, and:<br><ul><li>The [SUSTAINED HITS 1] ability if the Pyromancy Discipline is active for your army.</li><li>Add 6\" to the Range characteristic of those weapons if the Telekinesis Discipline is active for your army.</li></ul>"
+        }
+    ]
+}

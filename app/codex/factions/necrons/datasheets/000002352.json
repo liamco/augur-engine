@@ -1,0 +1,199 @@
+{
+    "id": "000002352",
+    "name": "Technomancer",
+    "slug": "technomancer",
+    "legend": "Technomancers possess the power to augment and swiftly repair Necron units in the field. Some Technomancers use Canoptek cloaks to flit swiftly to wherever they are needed most, while others employ the nanoscarab beams of their Canoptek control nodes to augment from afar.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000534",
+                "slug": "necron-warriors"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
+            },
+            {
+                "id": "000000546",
+                "slug": "canoptek-wraiths"
+            }
+        ],
+        "leaderNotes": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+    },
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Cryptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Technomancer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> staff of light; Canoptek cloak.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002352:staff-of-light",
+                "name": "Staff of light",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002352",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Staff of light",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002352:staff-of-light-2",
+                "name": "Staff of light",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002352",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Staff of light",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002352",
+            "line": 1,
+            "name": "Technomancer",
+            "m": 10,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Rites of Reanimation",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Technomancer",
+            "legend": "",
+            "description": "At the end of your Movement phase, you can select one friendly <span class=\"kwb\">NECRONS</span> model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

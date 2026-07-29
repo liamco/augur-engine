@@ -1,0 +1,151 @@
+{
+    "id": "000002114",
+    "name": "Canoptek Scarab Swarms",
+    "slug": "canoptek-scarab-swarms",
+    "legend": "Canoptek Scarabs attack in skimming swarms. They descend upon the enemy with high-pitched chitters before breaking down infantry and tanks alike into raw energy with their feeder mandibles. Often attacking as the first wave of a Necron assault, these mechanical insectoids spread fear and destruction.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Swarm",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Scarab Swarms",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> feeder mandibles.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002114:feeder-mandibles",
+                "name": "Feeder mandibles",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002114",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Feeder mandibles",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 5,
+                        "s": 2,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002114",
+            "line": 1,
+            "name": "Canoptek Scarab Swarms",
+            "m": 10,
+            "t": 2,
+            "sv": 6,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 40,
+            "count": 3
+        },
+        {
+            "cost": 80,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Self-destruction",
+            "legend": "",
+            "description": "At the start of the Fight phase, if this unit is within Engagement Range of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a <span class=\"kwb\">VEHICLE</span>. On a 2-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Chittering swarm",
+            "legend": "",
+            "description": "While an enemy unit is within Engagement Range of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6\" of one or more friendly CRYPTEK models, the Objective Control characteristic of models in this unit is 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

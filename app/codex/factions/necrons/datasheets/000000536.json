@@ -1,0 +1,175 @@
+{
+    "id": "000000536",
+    "name": "Lychguard",
+    "slug": "lychguard",
+    "legend": "Incapable of disloyalty and clad in forms as resilient and resplendent as their masters’, Lychguard are the ultimate protectors. Whether reaping the foe with warscythes or advancing with dispersion shields locked and hyperphase swords thrumming, at close quarters these bodyguards are nigh on unstoppable.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Lychguard",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> warscythe.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000536",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All models in this unit can each have their warscythe replaced with 1 hyperphase sword and 1 dispersion shield."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000536:hyperphase-sword",
+                "name": "Hyperphase sword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000536",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hyperphase sword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000536:warscythe",
+                "name": "Warscythe",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000536",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Warscythe",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000536",
+            "line": 1,
+            "name": "Lychguard",
+            "m": 5,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 10
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 5
+        },
+        {
+            "cost": 170,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Dispersion Shield",
+            "legend": "",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Guardian Protocols",
+            "legend": "",
+            "description": "While a Noble model is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

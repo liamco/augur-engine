@@ -1,0 +1,203 @@
+{
+    "id": "000000542",
+    "name": "C’tan Shard of the Deceiver",
+    "slug": "c-tan-shard-of-the-deceiver",
+    "legend": "Mephet’ran the Deceiver was ever the most duplicitous of his monstrous brood. Even shattered and bound within a restraining necrodermis, each Shard of the Deceiver still radiates a potent blend of deadly truths and bewildering lies against which the fallible senses of mortal beings possess no defence.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "C’tan Shard of the Deceiver",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> cosmic insanity; golden fists.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000542:cosmic-insanity",
+                "name": "Cosmic insanity",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000542",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Cosmic insanity",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000542:golden-fists",
+                "name": "Golden fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000542",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Golden fists",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 8,
+                        "bsWs": 2,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000542",
+            "line": 1,
+            "name": "C’tan Shard of the Deceiver",
+            "m": 8,
+            "t": 11,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 16,
+            "ld": 6,
+            "oc": 4,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 285,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Grand Illusion",
+            "legend": "",
+            "description": "If your army includes this model, after both players have deployed their armies, select up to three <span class=\"kwb\">NECRONS</span> units from your army and redeploy them. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Necrodermis",
+            "legend": "",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ENSLAVED STAR GOD",
+            "legend": "",
+            "description": "This model cannot be your <span class=\"kwb\">WARLORD</span>.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

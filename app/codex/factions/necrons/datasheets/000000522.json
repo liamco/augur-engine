@@ -1,0 +1,226 @@
+{
+    "id": "000000522",
+    "name": "Imotekh The Stormlord",
+    "slug": "imotekh-the-stormlord",
+    "legend": "Imotekh is a sublimely skilled strategist, wielding his armies with hyperlogical skill and unleashing deadly strategic ploys. In battle he incinerates enemies with his Gauntlet of Fire, blasts them with pan-dimensional energies from his Staff of the Destroyer or humbles them in punishing one-on-one duels.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000534",
+                "slug": "necron-warriors"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
+            },
+            {
+                "id": "000000536",
+                "slug": "lychguard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imotekh the Stormlord",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Noble",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Gauntlet of Fire; Staff of the Destroyer.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000522:gauntlet-of-fire",
+                "name": "Gauntlet of Fire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000522",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Gauntlet of Fire",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000522:staff-of-the-destroyer",
+                "name": "Staff of the Destroyer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000522",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Staff of the Destroyer",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000522:staff-of-the-destroyer-2",
+                "name": "Staff of the Destroyer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000522",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Staff of the Destroyer",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000522",
+            "line": 1,
+            "name": "Imotekh The Stormlord",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 100,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Grand Strategist",
+            "legend": "",
+            "description": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Lord of the Storm",
+            "legend": "",
+            "description": "Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12\" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

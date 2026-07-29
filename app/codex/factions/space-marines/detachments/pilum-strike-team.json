@@ -1,0 +1,67 @@
+{
+    "name": "Pilum Strike Team",
+    "ability": {
+        "id": "000009247",
+        "name": "Relentless Salvoes",
+        "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are eligible to shoot in a turn in which they Advanced or Fell Back.",
+        "legend": "These vanguard specialists stay on the move, laying down hails of fire to harass and disrupt their foes even as they hit-and-fade through chambers and corridors."
+    },
+    "stratagems": [
+        {
+            "id": "000009249005",
+            "name": "MASTER MARKSMEN",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Every shot these warriors fire is placed for maximum impact and swift, decisive kills.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+            "id": "000009249002",
+            "name": "KNIFE WORK",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "These warriors strike at their enemies'weak spots, aiming to silence the foe without raising the alarm.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, improve the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit by 1."
+        },
+        {
+            "id": "000009249003",
+            "name": "ENHANCED EFFICIENCY",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Moving with alacrity, clearing each new space with exceptional speed and skill, the warriors of the strike team advance on their main objective.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit is selected to make a Normal or Advance move, it can attempt to operate one Hatchway it is within 1” of either at the start or end of that move. If it does, it cannot attempt to operate a Hatchway again this turn."
+        },
+        {
+            "id": "000009249004",
+            "name": "FIGHTING RETREAT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "These warriors employ cover fire and frag charges to batter the foe as they fall back to new positions.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is selected to Fall Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Select one enemy unit within Engagement Range of your unit and roll one D6: on a 2-4, that enemy unit suffers 1 mortal wound; on a 5+, that enemy unit suffers 2 mortal wounds."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000009248002",
+            "name": "Omni-Structural Auspex",
+            "cost": 0,
+            "legend": "A rare device with a potent and knowledgeable machine spirit, this implement analyses the integrity of foes’ armour and isolates weaknesses to exploit.",
+            "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model (excluding Character models) makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000009248003",
+            "name": "Void Warrior",
+            "cost": 0,
+            "legend": "Having mastered the arts of shipboard warfare over many battles, this warrior moves swiftly through them and strikes with unerring skill.",
+            "description": "You can re-roll Advance and Charge rolls made for the bearer. In addition, the bearer is eligible to declare a charge in a turn in which it Advanced."
+        }
+    ]
+}

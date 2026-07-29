@@ -1,0 +1,209 @@
+{
+    "id": "000000551",
+    "name": "Canoptek Spyders",
+    "slug": "canoptek-spyders",
+    "legend": "Canoptek Spyders are formidable control-and-repair constructs, augmented with battlefield support systems. Whether blasting enemies with particle beamers, warding off empyric energies with gloom prisms or fabricating and unleashing fresh waves of Canoptek Scarabs, they are a force to be reckoned with.",
+    "faction": {
+        "id": "NEC",
+        "slug": "necrons"
+    },
+    "source": {
+        "id": "000000029",
+        "name": "Faction Pack: Necrons"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Necrons",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Canoptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Spyders",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> automaton claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000551",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 2 particle beamers."
+                    },
+                    {
+                        "datasheetId": "000000551",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 1 fabricator claw array."
+                    },
+                    {
+                        "datasheetId": "000000551",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 1 gloom prism."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000551:particle-beamer",
+                "name": "Particle beamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000551",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Particle beamer",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000551:automaton-claws",
+                "name": "Automaton claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000551",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Automaton claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000551",
+            "line": 1,
+            "name": "Canoptek Spyders",
+            "m": 5,
+            "t": 7,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 8,
+            "oc": 2,
+            "baseSize": "60mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 2
+            }
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 1
+        },
+        {
+            "cost": 150,
+            "count": 2
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Reanimation Protocols",
+            "type": "Faction"
+        },
+        {
+            "name": "Fabricator Claw Array (Aura)",
+            "legend": "",
+            "description": "While a friendly Necrons Vehicle unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Gloom Prism (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Canoptek Swarm",
+            "legend": "",
+            "description": "In your Command phase, select one friendly Canoptek Scarab Swarm unit within 6\" of this unit. One destroyed model is returned to that <span class=\"kwb\">CANOPTEK</span> <span class=\"kwb\">SCARAB</span> <span class=\"kwb\">SWARM</span> unit for each <span class=\"kwb\">SPYDER</span> model in this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

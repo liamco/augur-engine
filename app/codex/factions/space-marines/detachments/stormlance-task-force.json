@@ -1,0 +1,101 @@
+{
+    "name": "Stormlance Task Force",
+    "ability": {
+        "id": "000008485",
+        "name": "Lightning Assault",
+        "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+        "legend": "The warriors of a Stormlance Task Force employ high-speed tactics and hit-and-run warfare. They do battle on the move, wrong-footing their enemies with breakneck manoeuvres and melting away one moment only to crash home like a thunderbolt the next."
+    },
+    "stratagems": [
+        {
+            "id": "000008487003",
+            "name": "BLITZING FUSILLADE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Warriors of Stormlance Task Forces can suddenly pour heavy and accurate fire into the enemy even as they race to finish off any survivors.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] ability. If such a weapon already has this ability, until the end of the phase, that weapon has the [SUSTAINED HITS 1] ability as well."
+        },
+        {
+            "id": "000008487005",
+            "name": "SHOCK ASSAULT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The Adeptus Astartes are elite troops who strike with all the speed and fury of a searing thunderbolt.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES MOUNTED unit from your army that has not declared a charge this phase.<br><br><b>EFFECT:</b> Until the end of the turn, you can re-roll Charge rolls made for your unit and melee weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+            "id": "000008487006",
+            "name": "RIDE HARD, RIDE FAST",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Like zephyrs dancing across wide horizons, Space Marine riders and pilots can weave lithely around incoming fire with incredible skill.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES FLY VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll."
+        },
+        {
+            "id": "000008487002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+            "id": "000008487007",
+            "name": "WIND-SWIFT EVASION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Space Marines are loathe to be brought into combat on any others’ terms, especially the warriors of Stormlance Task Forces, whose battlefield tactics revolve around speed and precise, ferocious assaults.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army that is within 9\" of that enemy unit.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to 6\".<br><br><b>RESTRICTIONS:</b> You cannot select a unit that is within Engagement Range of one or more enemy units."
+        },
+        {
+            "id": "000008487004",
+            "name": "FULL THROTTLE",
+            "type": "Wargear",
+            "cpCost": 2,
+            "legend": "On the eve of riding down the most elusive prey, the task force's expert Techmarines will entreat the engine spirits o f their vehicles, honing the iron steeds' performance to elicit even more speed from them.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES VEHICLE unit (excluding WALKERS) from your army.<br><br><b>EFFECT:</b> Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is <span class=\"kwb\">MOUNTED</span>."
+        }
+    ],
+    "enhancements": [
+        {
+            "id": "000008486002",
+            "name": "Fury of the Storm",
+            "cost": 25,
+            "legend": "This aggressive warrior channels their eagerness to kill into each and every strike. They hit the enemy’s lines with all the ferocity of a raging tempest.",
+            "description": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead."
+        },
+        {
+            "id": "000008486003",
+            "name": "Portents of Wisdom",
+            "cost": 15,
+            "legend": "This warrior has been made privy to omens of great threats in the wars to come. Armed with this knowledge, they and their battle-brothers enter battle with a boldness that some mistake for recklessness.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit."
+        },
+        {
+            "id": "000008486004",
+            "name": "Feinting Withdrawal",
+            "cost": 10,
+            "legend": "This living legend of the Chapter is known for their calm in the heat of battle. Ever-observant of the ebbs and flows of the engagement, they can withdraw their warriors from the fray in good order, ready to hammer home a torrent of fire.",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back."
+        },
+        {
+            "id": "000008486005",
+            "name": "Hunter’s Instincts",
+            "cost": 25,
+            "legend": "This mounted huntsman espouses the value of circling the enemy and striking suddenly from an unexpected quarter upon their speeding steed, the better to land the killing blow.",
+            "description": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+        }
+    ]
+}
