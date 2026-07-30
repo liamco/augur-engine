@@ -1,7 +1,7 @@
 # Audit: source → codex property parity
 
 **Date:** 2026-07-30
-**Status:** Reference. Four findings fixed; the rest are outstanding and unactioned.
+**Status:** Reference. Five findings fixed; one retracted as wrong (see Adjacent #1). The rest are outstanding and unactioned.
 **Scope:** What `data/pipeline` drops, empties or mangles when converting `data/src/factions/**` into `app/codex/factions/**`.
 
 ## Method
@@ -20,30 +20,13 @@ Related: [2026-07-30-datasheet-pipeline-basics-design.md](2026-07-30-datasheet-p
 | **Every** weapon attribute lost — 0 of 2207 profiles had any | `parseWeaponAttributes.ts` parses the real comma-separated prose format; 1578 profiles now carry 2370 attributes, of which 2101 instances resolve to a mechanic in `weaponAttributeRegistry` |
 | `supplement.slug` / `supplement.name` hardcoded to `""` | Read from `raw.supplementSlug`/`raw.supplementName` (added to `RawDatasheet` as optional). All 296 datasheets that have them now match source; the 121 that omit them still default to `""` |
 | Detachments kept only `abilities[0]` — 4 of 64 lost 8 abilities between them | Output shape changed from `ability` to `abilities[]` (`ParsedDetachment`); codex total went 64 → 72. Also guards the latent crash on a zero-ability detachment (confirmed: threw `TypeError` reading `.id`) |
-
----
-
-## Outstanding — silently wrong or empty
-
-These are the dangerous ones: the key exists in the output, so the data looks present.
-
-### 1. `core-stratagems.json` is incomplete *and* duplicated
-
-The source holds **11** distinct `Core`-typed stratagems. The file holds 12 records / 9 unique names, of which only **7** are actually Core. Three independent bugs:
-
-- **Incomplete.** `index.ts:100-102` captures core stratagems "from first datasheet only" rather than unioning across datasheets. Whichever datasheet is processed first doesn't list all 11, so **GRENADE, TANK SHOCK, SMOKESCREEN and GO TO GROUND are absent from the codex entirely.**
-- **Duplicated.** `extractCoreStratagems` filters on empty `factionId` *and* empty `detachmentId`, but *Boarding Actions* stratagems also have both empty. COMMAND RE-ROLL, INSANE BRAVERY and COUNTER-OFFENSIVE exist as both a Core and a Boarding Actions record, so each appears twice.
-- **Wrong entries.** By the same filter, two names that are *only* Boarding Actions and never Core leak in: **BATTLEFIELD COMMAND** (`'Boarding Actions – Strategic Ploy Stratagem'`) and **EXPLOSIVE CLEARANCE** (`'Boarding Actions – Battle Tactic Stratagem'`).
-
-The only discriminator for all three is the `type` prefix (`'Core – …'` vs `'Boarding Actions – …'`), which `parseStratagemType` (`transformDetachments.ts:14-19`) strips before anything can branch on it — so the fix is to filter on the raw prefix *before* normalising, and union across datasheets rather than trusting the first.
-
-**When fixing, note:** `transformDetachments.test.ts:87` currently asserts that a *Boarding Actions* stratagem **is** extracted as core. That test encodes this bug as expected behaviour and must change alongside the implementation — a failure there is the fix working, not a regression.
+| `core-stratagems.json` incomplete, duplicated, non-deterministic | `extractCoreStratagems` now filters on the raw `type` prefix `"Core"`; `index.ts` accumulates across the whole run into a Map keyed by id and writes once from `main()`, sorted by id. Now 11 entries / 11 unique names, matching the source's Core set exactly (0 missing, 0 extra). Writing is skipped on a `--faction`/`--datasheet` run, which previously truncated the file |
 
 ---
 
 ## Outstanding — dropped relational data
 
-### 2. Per-datasheet `stratagems`, `enhancements`, `detachmentAbilities`
+### 1. Per-datasheet `stratagems`, `enhancements`, `detachmentAbilities`
 
 Dropped from datasheet output entirely. **Not** redundant duplication, which is the easy assumption:
 
@@ -81,7 +64,7 @@ Intentionally binned: `link`, `virtual`, and `roleLabel` (verified byte-identica
 
 Surfaced by the same audit; recorded here so they aren't rediscovered.
 
-1. **Duplicate datasheet id `000002694`.** Present in both `data/src/factions/tyranids/` and `tyranids_old/`. The pipeline walks both, so 418 source files produce 417 outputs and one silently overwrites the other depending on walk order. Flagged in the basics plan (Task 3 Step 1), not actioned.
+1. ~~**Duplicate datasheet id `000002694`.**~~ **Retracted — this was wrong.** `index.ts:15` declares `IGNORE_FACTIONS = new Set(["tyranids_old"])` and the faction walk filters on it, so `tyranids_old/` is never processed. It holds exactly one datasheet, which is the whole of the 418-source → 417-output gap. Handled by design; nothing to fix.
 2. **`models[].composition` is still the unsound line-join.** `unitComposition` line numbers and `models` line numbers are independent ordinals, not a shared key — 77 of 418 datasheets have more composition lines than statlines. Kill Team Cassius assigns Chaplain Cassius's count to the Kill Team Veteran statline; Crusader Squad gives `NEOPHYTES` the Sword Brother's count of 1 and drops the real `4-8 Neophytes` line. Left in place because the lab currently reads it. Consumers should prefer `unitComposition`.
 3. **Attributes with no library rule** — 269 instances / 11 distinct emit correctly but resolve to no mechanic: HAZARDOUS (110), PRECISION (51, a deliberately unregistered stub), ONE SHOT (38), EXTRA ATTACKS (33), INDIRECT FIRE (16), C'TAN POWER (3), CONVERSION (3), HARPOONED (1). Need library JSON files.
 4. **Dice-valued attribute parameters don't resolve.** `parseParameterisedName` only matches `\d+`, so `SUSTAINED HITS D3` yields key `sustained-hits-d3` instead of `sustained-hits` + param `D3`. Affects 14 instances (10 `SUSTAINED HITS D3`, 3 `RAPID FIRE D3`, 1 `RAPID FIRE D6`). Blocked on how a dice-valued `$param` flows through a mechanic whose `value` is typed as a number — see ROADMAP item 2.

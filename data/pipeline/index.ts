@@ -27,6 +27,14 @@ const { values } = parseArgs({
 const dryRun = values["dry-run"] ?? false;
 const validateOnly = values.validate ?? false;
 
+/**
+ * Core stratagems are duplicated onto every datasheet in the source, so they are
+ * accumulated across the whole run (deduped by id) and written once from main().
+ * Writing per faction would leave whichever faction happened to be processed
+ * last as the file's contents.
+ */
+const coreStratagemsById = new Map<string, ParsedStratagem>();
+
 function writeJson(path: string, data: unknown) {
     if (dryRun) {
         console.log(`\n--- ${path} ---`);
@@ -83,8 +91,6 @@ function processFaction(factionSlug: string) {
     }
 
     const datasheetFiles = readdirSync(datasheetsDir).filter((f) => f.endsWith(".json"));
-    let allCoreStratagems: ParsedStratagem[] = [];
-    let coreStratagemsCaptured = false;
 
     for (const file of datasheetFiles) {
         if (values.datasheet && !file.startsWith(values.datasheet as string)) continue;
@@ -96,10 +102,8 @@ function processFaction(factionSlug: string) {
 
         const { datasheet, coreStratagems } = transformDatasheet(rawDatasheet);
 
-        // Capture core stratagems from first datasheet only
-        if (!coreStratagemsCaptured && coreStratagems.length > 0) {
-            allCoreStratagems = coreStratagems;
-            coreStratagemsCaptured = true;
+        for (const stratagem of coreStratagems) {
+            coreStratagemsById.set(stratagem.id, stratagem);
         }
 
         if (validateOnly) {
@@ -119,10 +123,25 @@ function processFaction(factionSlug: string) {
         );
     }
 
-    // Write core stratagems
-    if (allCoreStratagems.length > 0) {
-        writeJson(join(OUTPUT_DIR, "core-stratagems.json"), allCoreStratagems);
+}
+
+/**
+ * Write the accumulated core stratagems. Skipped on a filtered run, where only a
+ * subset of datasheets was read and writing would truncate the file.
+ */
+function writeCoreStratagems() {
+    if (values.faction || values.datasheet) {
+        console.log(
+            "\nSkipping core-stratagems.json (filtered run — would be incomplete).",
+        );
+        return;
     }
+    if (coreStratagemsById.size === 0) return;
+
+    const sorted = [...coreStratagemsById.values()].sort((a, b) =>
+        a.id.localeCompare(b.id),
+    );
+    writeJson(join(OUTPUT_DIR, "core-stratagems.json"), sorted);
 }
 
 // Main
@@ -156,6 +175,8 @@ function main() {
             processFaction(faction);
         }
     }
+
+    if (!validateOnly) writeCoreStratagems();
 
     console.log("\nDone.");
 }

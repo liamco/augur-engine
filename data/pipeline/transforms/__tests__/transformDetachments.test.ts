@@ -115,41 +115,58 @@ describe("transformDetachments", () => {
 });
 
 describe("extractCoreStratagems", () => {
-    it("extracts stratagems with empty factionId and detachmentId", () => {
-        const stratagems: RawStratagem[] = [
-            {
-                factionId: "",
-                name: "COMMAND RE-ROLL",
-                id: "000009218002",
-                type: "Boarding Actions – Epic Deed Stratagem",
-                cpCost: "1",
-                legend: "A great commander...",
-                turn: "Either player's turn",
-                phase: "Any phase",
-                detachment: "",
-                detachmentId: "",
-                description: "<b>WHEN:</b> Any phase...",
-            },
-            {
-                factionId: "TYR",
-                name: "INVISIBLE HUNTER",
-                id: "000008418007",
-                type: "Vanguard Onslaught – Strategic Ploy Stratagem",
-                cpCost: "1",
-                legend: "...",
-                turn: "Opponent's turn",
-                phase: "Fight phase",
-                detachment: "Vanguard Onslaught",
-                detachmentId: "000000772",
-                description: "...",
-            },
-        ];
+    const boardingActions: RawStratagem = {
+        factionId: "",
+        name: "COMMAND RE-ROLL",
+        id: "000009218002",
+        type: "Boarding Actions – Epic Deed Stratagem",
+        cpCost: "1",
+        legend: "A great commander...",
+        turn: "Either player's turn",
+        phase: "Any phase",
+        detachment: "",
+        detachmentId: "",
+        description: "<b>WHEN:</b> Any phase...",
+    };
 
-        const result = extractCoreStratagems(stratagems);
+    const core: RawStratagem = {
+        ...boardingActions,
+        id: "000008335002",
+        type: "Core – Battle Tactic Stratagem",
+    };
+
+    const detachmentStratagem: RawStratagem = {
+        factionId: "TYR",
+        name: "INVISIBLE HUNTER",
+        id: "000008418007",
+        type: "Vanguard Onslaught – Strategic Ploy Stratagem",
+        cpCost: "1",
+        legend: "...",
+        turn: "Opponent's turn",
+        phase: "Fight phase",
+        detachment: "Vanguard Onslaught",
+        detachmentId: "000000772",
+        description: "...",
+    };
+
+    it("extracts stratagems whose type is Core", () => {
+        const result = extractCoreStratagems([core, detachmentStratagem]);
+
         expect(result).toHaveLength(1);
         expect(result[0].name).toBe("COMMAND RE-ROLL");
         expect(result[0].cpCost).toBe(1);
-        expect(result[0].type).toBe("Epic Deed");
+        expect(result[0].type).toBe("Battle Tactic");
+    });
+
+    it("excludes Boarding Actions stratagems, which also have no faction or detachment", () => {
+        expect(extractCoreStratagems([boardingActions])).toEqual([]);
+    });
+
+    it("keeps the Core rule when a Boarding Actions rule shares its name", () => {
+        const result = extractCoreStratagems([boardingActions, core]);
+
+        expect(result).toHaveLength(1);
+        expect(result[0].id).toBe("000008335002");
     });
 
     it("returns empty array when no core stratagems exist", () => {

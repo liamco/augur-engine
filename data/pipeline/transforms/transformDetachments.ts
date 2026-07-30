@@ -78,15 +78,19 @@ export function transformDetachments(
 
 /**
  * Extract core stratagems from a raw datasheet's stratagems array.
- * Core stratagems have empty factionId and detachmentId.
+ *
+ * Selection is by the raw type prefix ("Core – Battle Tactic Stratagem"), which
+ * must be read before parseStratagemType strips it. An empty
+ * factionId/detachmentId is NOT sufficient: Boarding Actions stratagems have
+ * both empty too, and several share a name with a Core stratagem while carrying
+ * a materially different rule (e.g. INSANE BRAVERY).
  */
 export function extractCoreStratagems(
     rawStratagems: RawStratagem[],
 ): ParsedStratagem[] {
     return rawStratagems
         .filter(
-            (s): s is RawStratagem =>
-                s != null && !s.factionId && !s.detachmentId,
+            (s): s is RawStratagem => s != null && !!s.type?.startsWith("Core"),
         )
         .map(transformStratagem);
 }
