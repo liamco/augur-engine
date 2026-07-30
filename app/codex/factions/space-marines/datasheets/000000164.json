@@ -17,39 +17,29 @@
     "leader": {
         "canLead": [
             {
-                "id": "000003837",
-                "slug": "death-company-marines-with-boltguns-and-jump-packs"
-            },
-            {
                 "id": "000002737",
                 "slug": "death-company-marines-with-jump-packs"
+            },
+            {
+                "id": "000003837",
+                "slug": "death-company-marines-with-boltguns-and-jump-packs"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
+            "keyword": "Lemartes",
             "model": "",
             "isFactionKeyword": false
         },
@@ -59,17 +49,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Lemartes",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
+            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -85,6 +75,16 @@
         },
         {
             "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -239,7 +239,8 @@
             "description": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Fury Unbound",
@@ -247,7 +248,26 @@
             "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Fury Unbound",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

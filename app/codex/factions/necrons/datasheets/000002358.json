@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Destroyer Cult",
+            "keyword": "Ophydian Destroyers",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,7 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ophydian Destroyers",
+            "keyword": "Destroyer Cult",
             "model": "",
             "isFactionKeyword": false
         }
@@ -155,7 +155,18 @@
             "description": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.<br><br><b>Designer’s Note:</b> Place the relevant number of Plasmacyte tokens next to the unit, removing one each time this unit uses this ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Plasmacyte",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Tunnelling Horrors",
@@ -163,7 +174,8 @@
             "description": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove this unit from the battlefield. In the Reinforcements step of your next Movement phase, set it up anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

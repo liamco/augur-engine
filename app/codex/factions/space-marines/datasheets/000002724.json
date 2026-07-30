@@ -67,7 +67,15 @@
         "range": "1-10",
         "threshold": 10,
         "description": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -249,7 +257,8 @@
             "description": "If this model starts the game in Hover mode and in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

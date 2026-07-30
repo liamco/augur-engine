@@ -22,12 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Cerberus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Smoke",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Cerberus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -47,7 +47,15 @@
         "range": "1-6",
         "threshold": 6,
         "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -352,7 +360,18 @@
             "description": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Atomantic Arc-reactor",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

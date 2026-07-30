@@ -35,17 +35,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Iron Priest",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         },
@@ -55,7 +55,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Mounted",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -359,7 +359,18 @@
             "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, this model has the Lone Operative ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Iron Priest",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "LONE OPERATIVE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Blessing of the Omnissiah",
@@ -367,7 +378,16 @@
             "description": "In your Command phase, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, each time that <span class=\"kwb\">VEHICLE</span> model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Blessing of the Omnissiah",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Vengeance of the Omnissiah",
@@ -375,7 +395,8 @@
             "description": "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Iron Priest hammer has an Attacks characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

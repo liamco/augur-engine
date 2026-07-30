@@ -17,6 +17,21 @@
     ],
     "stratagems": [
         {
+            "id": "000008475005",
+            "name": "NO THREAT TOO GREAT",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "To combat an entrenched force of Space Marines, foes resort to armoured vehicles or packs of murderous monstrosities. Even the greatest of behemoths has a chink in its armour and the Adeptus Astartes are well versed in exploiting such weaknesses.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a ranged attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, you can re-roll the Wound roll.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000008475002",
             "name": "ARMOUR OF CONTEMPT",
             "type": "Battle Tactic",
@@ -40,36 +55,6 @@
             "turn": "Your turn",
             "phase": "Shooting phase",
             "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. If your unit Remained Stationary this turn, then until the end of the phase, each time a model in your unit makes a ranged attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000008475005",
-            "name": "NO THREAT TOO GREAT",
-            "type": "Battle Tactic",
-            "cpCost": 2,
-            "legend": "To combat an entrenched force of Space Marines, foes resort to armoured vehicles or packs of murderous monstrosities. Even the greatest of behemoths has a chink in its armour and the Adeptus Astartes are well versed in exploiting such weaknesses.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a ranged attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, you can re-roll the Wound roll.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000008475003",
-            "name": "RIGID DISCIPLINE",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Cleaving to duty, the Adeptus Astartes refuse to be drawn out of position. Instead they secure ground to establish new fire lines to the enemy.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can immediately make a Fall Back move of up to 6\".<br><br><b>RESTRICTIONS:</b> When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -239,6 +224,21 @@
                     "000004133",
                     "000004139",
                     "000004167"
+                ]
+            }
+        },
+        {
+            "id": "000008475003",
+            "name": "RIGID DISCIPLINE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Cleaving to duty, the Adeptus Astartes refuse to be drawn out of position. Instead they secure ground to establish new fire lines to the enemy.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can immediately make a Fall Back move of up to 6\".<br><br><b>RESTRICTIONS:</b> When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
                 ]
             }
         }
@@ -423,5 +423,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "take-and-hold"
 }

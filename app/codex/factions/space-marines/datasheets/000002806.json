@@ -17,22 +17,17 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Space Wolves",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Phobos",
+            "keyword": "Space Wolves",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Hounds of Morkai",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,17 +37,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Hounds of Morkai",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
+            "keyword": "Phobos",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -219,7 +219,8 @@
             "description": "In your Shooting phase, you can select one enemy unit within 12\" of this unit (if a Lieutenant in Reiver Armour is leading this unit, you can select one enemy unit within 18\" instead). That unit must take a Battle-shock test, subtracting 1 from the result if it is a <span class=\"kwb\">PSYKER</span> unit. If that test is failed, in addition to being Battle-shocked, that unit is Stunned until the start of your next Shooting phase. While a unit is Stunned, each time a model in that unit makes a Psychic Attack, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -227,7 +228,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to a Reiver Squad, it can instead be attached to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

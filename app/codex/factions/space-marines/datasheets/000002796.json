@@ -17,6 +17,26 @@
     "leader": {
         "canLead": [
             {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
                 "id": "000002780",
                 "slug": "fortis-kill-team-2"
             },
@@ -25,48 +45,28 @@
                 "slug": "crusader-squad-legendary"
             },
             {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
                 "id": "000001606",
                 "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
             },
             {
                 "id": "000002783",
                 "slug": "deathwatch-veterans"
             },
             {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
                 "id": "000001154",
                 "slug": "vanguard-veteran-squad"
             },
             {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
                 "id": "000002799",
                 "slug": "crusader-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
             },
             {
                 "id": "000004175",
@@ -91,6 +91,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
@@ -106,11 +111,6 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
@@ -121,7 +121,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -338,7 +338,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Pious Fervour",
@@ -346,7 +347,8 @@
             "description": "Each time this model’s unit is selected to fight, until the end of the phase, add 1 to the Attacks characteristic of this model’s master-crafted power weapon for each enemy unit within 6\" of this model (to a maximum of +3).",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -21,32 +21,32 @@
                 "slug": "terminator-squad-2"
             },
             {
-                "id": "000000231",
-                "slug": "deathwing-knights"
-            },
-            {
-                "id": "000001183",
-                "slug": "terminator-squad"
-            },
-            {
-                "id": "000000104",
-                "slug": "relic-terminator-squad"
-            },
-            {
-                "id": "000003873",
-                "slug": "deathwatch-terminator-squad-2"
-            },
-            {
-                "id": "000000118",
-                "slug": "terminator-assault-squad"
-            },
-            {
                 "id": "000000230",
                 "slug": "deathwing-terminator-squad"
             },
             {
                 "id": "000002302",
                 "slug": "deathwing-command-squad"
+            },
+            {
+                "id": "000000231",
+                "slug": "deathwing-knights"
+            },
+            {
+                "id": "000000104",
+                "slug": "relic-terminator-squad"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
             }
         ],
         "leaderNotes": ""
@@ -56,6 +56,26 @@
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Terminator",
@@ -69,26 +89,6 @@
         },
         {
             "keyword": "Deathwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Psyker",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -342,7 +342,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Psychic Hood",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Veil of Time (Psychic)",
@@ -350,7 +367,26 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Veil of Time (Psychic)",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

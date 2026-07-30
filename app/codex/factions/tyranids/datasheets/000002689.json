@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Monster",
+            "keyword": "Psychophage",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,17 +32,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Harvester",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Psychophage",
+            "keyword": "Harvester",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
             "model": "",
             "isFactionKeyword": false
         }
@@ -194,7 +194,8 @@
             "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly <span class=\"kwb\">TYRANIDS</span> unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Feeding Frenzy",
@@ -202,7 +203,45 @@
             "description": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Feeding Frenzy",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ],
+                    "conditions": [
+                        {
+                            "entity": "targetUnit",
+                            "state": "isBelowStartingStrength",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "name": "Feeding Frenzy",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ],
+                    "conditions": [
+                        {
+                            "entity": "targetUnit",
+                            "state": "isBelowHalfStrength",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "skill"
         }
     ]
 }

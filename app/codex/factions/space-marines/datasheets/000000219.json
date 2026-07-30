@@ -25,45 +25,45 @@
                 "slug": "terminator-assault-squad"
             },
             {
-                "id": "000003873",
-                "slug": "deathwatch-terminator-squad-2"
-            },
-            {
                 "id": "000000104",
                 "slug": "relic-terminator-squad"
             },
             {
-                "id": "000004138",
-                "slug": "terminator-squad-2"
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
             },
             {
                 "id": "000002302",
                 "slug": "deathwing-command-squad"
             },
             {
-                "id": "000000230",
-                "slug": "deathwing-terminator-squad"
+                "id": "000004138",
+                "slug": "terminator-squad-2"
             },
             {
                 "id": "000001183",
                 "slug": "terminator-squad"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Dark Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Deathwing",
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Terminator",
             "model": "",
             "isFactionKeyword": false
         },
@@ -73,17 +73,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
+            "keyword": "Captain",
             "model": "",
             "isFactionKeyword": false
         },
@@ -93,12 +83,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Captain",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Terminator",
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         }
@@ -249,7 +249,26 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, if a Critical Hit is scored, that attack has the [PRECISION] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Grand Master of the Deathwing",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "PRECISION"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Strikes of Retribution",
@@ -257,7 +276,8 @@
             "description": "Each time a melee attack is allocated to this model, after the attacking model’s unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

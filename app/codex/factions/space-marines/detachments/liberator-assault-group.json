@@ -17,21 +17,6 @@
     ],
     "stratagems": [
         {
-            "id": "000008375003",
-            "name": "ARMOUR OF CONTEMPT",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
             "id": "000008375004",
             "name": "SAVAGE ECHOES",
             "type": "Battle Tactic",
@@ -62,14 +47,14 @@
             }
         },
         {
-            "id": "000008375007",
-            "name": "RELENTLESS ASSAULT",
-            "type": "Strategic Ploy",
+            "id": "000008375003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "When Blood Angels execute a tactical withdrawal it is but a prelude to a renewed assault.",
-            "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back.",
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -85,6 +70,21 @@
             "turn": "Either player’s turn",
             "phase": "Any phase",
             "description": "<b>WHEN:</b> Any phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army has a mortal wound allocated to it.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000008375007",
+            "name": "RELENTLESS ASSAULT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "When Blood Angels execute a tactical withdrawal it is but a prelude to a renewed assault.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -389,5 +389,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "blood-angels",
+    "detachmentPoints": 3,
+    "disposition": "take-and-hold"
 }

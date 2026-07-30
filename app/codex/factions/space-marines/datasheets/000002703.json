@@ -27,12 +27,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -266,7 +266,18 @@
             "description": "Melee weapons equipped by models in this unit have the [SUSTAINED HITS 2] ability when targeting <span class=\"kwb\">MONSTER</span>, <span class=\"kwb\">VEHICLE</span> or <span class=\"kwb\">FORTIFICATION</span> units.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Annihilator Protocols",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 2
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Centurion Assault Launcher",
@@ -274,7 +285,18 @@
             "description": "The bearer has the Grenades keyword.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Centurion Assault Launcher",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "GRENADES"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

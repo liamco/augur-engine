@@ -1,4 +1,25 @@
+import type { Mechanic } from "@/app/types/Mechanic";
 import type { RawAbility } from "../types";
+import { extractAbilityMechanics } from "./abilityMechanics";
+
+/**
+ * How an ability's `mechanics` was produced.
+ *
+ * The parse only ever emits "regex" or "unparsed". The remaining values are
+ * written into the codex afterwards by the parse-ability-mechanics skill (step 4
+ * of fetch -> parse -> regex -> skill), which edits the datasheet files in place.
+ *
+ * NOTE: re-running `npm run parse` resets every ability to regex/unparsed and
+ * discards step 4's work. That is the accepted cost of keeping the codex the
+ * single artefact, with no hand-authored side files to drift out of sync. The
+ * parse prints how many abilities remain unparsed so the pending step is visible.
+ */
+export type MechanicsSource =
+    | "regex"
+    | "unparsed"
+    | "skill"
+    | "outOfScope"
+    | "needsSchema";
 
 export interface ParsedAbilityCore {
     // Shared definition id — one per rule across every datasheet that has it
@@ -17,10 +38,51 @@ export interface ParsedAbilityDatasheet {
     description: string;
     type: "Datasheet";
     parameter: string | null;
-    mechanics: never[];
+    mechanics: Mechanic[];
+    /**
+     * How `mechanics` was produced. "regex" means the extractor matched a
+     * high-reliability pattern; "unparsed" means it declined and the rules text
+     * has not been converted. Gives the follow-up skill a durable work queue and
+     * lets consumers tell machine-derived from hand-verified.
+     */
+    mechanicsSource: MechanicsSource;
 }
 
 export type ParsedAbility = ParsedAbilityCore | ParsedAbilityDatasheet;
+
+/**
+ * Extraction counts for one datasheet's abilities, for the parse's coverage
+ * report. Silent partial extraction is the failure mode to avoid: without this,
+ * a pattern regressing to zero matches would look identical to a corpus that
+ * simply has nothing to match.
+ */
+export function summariseAbilityMechanics(raw: RawAbility[]): {
+    parsed: number;
+    unparsed: number;
+    perPattern: Record<string, number>;
+} {
+    let parsed = 0;
+    let unparsed = 0;
+    const perPattern: Record<string, number> = {};
+
+    for (const ability of raw) {
+        if (ability?.type !== "Datasheet") continue;
+        const { mechanics, matchedPatterns } = extractAbilityMechanics(
+            ability.name,
+            ability.description,
+        );
+        if (mechanics.length > 0) {
+            parsed++;
+            for (const pattern of matchedPatterns) {
+                perPattern[pattern] = (perPattern[pattern] ?? 0) + 1;
+            }
+        } else {
+            unparsed++;
+        }
+    }
+
+    return { parsed, unparsed, perPattern };
+}
 
 /**
  * A Faction ability's rules text, stored on the owning faction.json rather than
@@ -85,14 +147,24 @@ export function transformAbilities(raw: RawAbility[]): ParsedAbility[] {
             return result;
         }
 
-        // Datasheet ability
+        // Datasheet ability — bespoke rules text, so derive mechanics from it.
+        // Step 3 of the pipeline; step 4 (the skill) fills the remainder by
+        // editing the emitted codex files directly.
+        const { mechanics } = extractAbilityMechanics(
+            ability.name,
+            ability.description,
+        );
+
         return {
             name: ability.name,
             legend: ability.legend ?? "",
             description: ability.description,
             type: "Datasheet" as const,
             parameter: ability.parameter === "" ? null : (ability.parameter ?? null),
-            mechanics: [],
+            mechanics,
+            mechanicsSource: (mechanics.length > 0
+                ? "regex"
+                : "unparsed") as MechanicsSource,
         };
     });
 }

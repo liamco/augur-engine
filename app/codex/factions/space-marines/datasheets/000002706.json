@@ -32,11 +32,6 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Dreadnought",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
@@ -53,6 +48,11 @@
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
             "model": "",
             "isFactionKeyword": false
         }
@@ -418,7 +418,18 @@
             "description": "The bearer has the <span class=\"kwb\">GRENADES</span> keyword.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Ironclad Assault Launchers",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "GRENADES"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Siege-breaker Protocols",
@@ -426,7 +437,29 @@
             "description": "Each time this model makes a melee attack that targets a <span class=\"kwb\">VEHICLE</span> or <span class=\"kwb\">FORTIFICATION</span> unit, add 1 to the Hit roll and add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Siege-breaker Protocols",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                },
+                {
+                    "name": "Siege-breaker Protocols",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "One Shot",
@@ -434,7 +467,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -17,6 +17,14 @@
     "leader": {
         "canLead": [
             {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
             },
@@ -25,76 +33,68 @@
                 "slug": "assault-intercessor-squad"
             },
             {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
+                "id": "000000315",
+                "slug": "wolf-guard"
             },
             {
                 "id": "000002798",
                 "slug": "sword-brethren-squad"
             },
             {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
                 "id": "000002783",
                 "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000002202",
-                "slug": "devastator-squad"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
             },
             {
                 "id": "000000126",
                 "slug": "infernus-squad"
             },
             {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002202",
+                "slug": "devastator-squad"
+            },
+            {
                 "id": "000000061",
                 "slug": "assault-squad"
             },
             {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000000326",
-                "slug": "long-fangs"
-            },
-            {
-                "id": "000002098",
-                "slug": "hellblaster-squad"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             },
             {
                 "id": "000002270",
                 "slug": "desolation-squad"
             },
             {
+                "id": "000000326",
+                "slug": "long-fangs"
+            },
+            {
                 "id": "000002780",
                 "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
@@ -111,7 +111,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -121,17 +121,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Ancient",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -342,7 +342,16 @@
             "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Unbreakable Duty",
@@ -350,7 +359,16 @@
             "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Unbreakable Duty",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

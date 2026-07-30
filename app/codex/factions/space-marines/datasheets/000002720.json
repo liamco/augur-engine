@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Dedicated Transport",
+            "keyword": "Relic Razorback",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,22 +32,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Relic Razorback",
+            "keyword": "Dedicated Transport",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -366,7 +366,8 @@
             "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this <span class=\"kwb\">TRANSPORT</span> this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "One Shot",
@@ -374,7 +375,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

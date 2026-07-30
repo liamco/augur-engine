@@ -25,27 +25,22 @@
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Lukas the Trickster",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
@@ -55,12 +50,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         }
@@ -242,7 +242,16 @@
             "description": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Pelt of the Doppegangrel",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Last Laugh",
@@ -250,7 +259,8 @@
             "description": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, roll one D6: on a 4+, the attacking unit suffers D6 mortal wounds and is Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "MASTER OF MISCHIEF",
@@ -258,7 +268,8 @@
             "description": "This model cannot be your Warlord.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

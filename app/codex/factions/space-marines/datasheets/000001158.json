@@ -22,11 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
@@ -38,6 +33,11 @@
         },
         {
             "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -280,7 +280,8 @@
             "description": "Once per turn, in your opponent’s Shooting phase, when another friendly ADEPTUS ASTARTES MOUNTED unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

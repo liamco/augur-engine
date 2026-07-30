@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Dedicated Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Terrax-pattern Termite",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Dedicated Transport",
             "model": "",
             "isFactionKeyword": false
         },
@@ -52,7 +52,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -299,7 +307,8 @@
             "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

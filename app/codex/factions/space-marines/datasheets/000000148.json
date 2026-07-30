@@ -21,24 +21,16 @@
                 "slug": "tactical-squad"
             },
             {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             },
             {
                 "id": "000000147",
                 "slug": "vanguard-veteran-squad-with-jump-packs"
             },
             {
-                "id": "000000326",
-                "slug": "long-fangs"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
+                "id": "000000061",
+                "slug": "assault-squad"
             },
             {
                 "id": "000002202",
@@ -49,8 +41,16 @@
                 "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000000326",
+                "slug": "long-fangs"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units even if one <span class=\"kwb\">CHARACTER</span> model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the <span class=\"kwb\">LEADER</span> units attached to it become separate units, with their original Starting Strengths."
@@ -62,22 +62,22 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -267,7 +267,26 @@
             "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Swift Assault",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "ASSAULT"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Unbreakable Duty",
@@ -275,7 +294,16 @@
             "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Unbreakable Duty",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

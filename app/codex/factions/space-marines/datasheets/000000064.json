@@ -22,12 +22,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Jump Pack",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,17 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Jump Pack",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Assault Squad with Jump Packs",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -697,7 +697,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Hammer of Wrath",
@@ -705,7 +714,8 @@
             "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNITS",
@@ -713,7 +723,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can also be attached to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

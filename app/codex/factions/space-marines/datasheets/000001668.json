@@ -22,12 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Eliminator Squad",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Eliminator Squad",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -303,7 +303,8 @@
             "description": "In your Shooting phase, after this unit has shot, if it contains an Eliminator Sergeant equipped with an instigator bolt carbine, this unit can make a Normal move. If it does so, until the end of the turn, this unit is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Mark the Target",
@@ -311,7 +312,18 @@
             "description": "Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Mark the Target",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -27,17 +27,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Astraeus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Titanic",
             "model": "",
             "isFactionKeyword": false
         }
@@ -47,7 +47,22 @@
         "range": "1-8",
         "threshold": 8,
         "description": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            },
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "objectiveControl",
+                "value": 4
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -422,7 +437,19 @@
             "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Suppression Fire",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

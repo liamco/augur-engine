@@ -17,6 +17,21 @@
     ],
     "stratagems": [
         {
+            "id": "000009836003",
+            "name": "FOCUSED FURY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Keeping the beast within under tight control, the Blood Angels nonetheless tap into that inner rage and shackle it to their precisely aimed blows.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000009836002",
             "name": "ARMOUR OF CONTEMPT",
             "type": "Battle Tactic",
@@ -47,7 +62,6 @@
                     "000000073",
                     "000000076",
                     "000000079",
-                    "000000081",
                     "000000083",
                     "000000094",
                     "000000096",
@@ -108,7 +122,6 @@
                     "000001611",
                     "000002100",
                     "000002105",
-                    "000002199",
                     "000002234",
                     "000002266",
                     "000002291",
@@ -155,22 +168,8 @@
                     "000004180",
                     "000004183",
                     "000004184",
-                    "000004187"
-                ]
-            }
-        },
-        {
-            "id": "000009836003",
-            "name": "FOCUSED FURY",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "Keeping the beast within under tight control, the Blood Angels nonetheless tap into that inner rage and shackle it to their precisely aimed blows.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
+                    "000004187",
+                    "000004204"
                 ]
             }
         },
@@ -645,5 +644,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "blood-angels",
+    "detachmentPoints": 3,
+    "disposition": "priority-assets"
 }

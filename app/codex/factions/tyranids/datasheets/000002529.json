@@ -22,7 +22,22 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,22 +52,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vanguard Invader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Great Devourer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Synapse",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -206,7 +206,8 @@
             "description": "Each time an <span class=\"kwb\">INFANTRY</span> model is destroyed by an attack made with this model’s barbed ovipositor, after this model has finished making its attacks, you can add one new Ripper Swarms unit to your army consisting of D3 models and set it up within 3\" of this model. If you do, that <span class=\"kwb\">RIPPER</span> <span class=\"kwb\">SWARMS</span> unit can be set up within Engagement Range of the destroyed model’s unit (but not within Engagement Range of any other enemy units).",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "It Itches!",
@@ -214,7 +215,8 @@
             "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. That enemy unit must take a Battle-shock test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

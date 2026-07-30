@@ -22,22 +22,22 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vanguard Invader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Great Devourer",
+            "keyword": "Vanguard Invader",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Genestealers",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         }
@@ -153,7 +153,23 @@
             "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll of 1 as well.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Vanguard Predator",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1
+                },
+                {
+                    "name": "Vanguard Predator",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

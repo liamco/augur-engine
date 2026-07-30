@@ -1,7 +1,7 @@
 {
     "id": "000004182",
     "name": "Wolf Scouts",
-    "slug": "wolf-scouts-2",
+    "slug": "wolf-scouts",
     "legend": "Wolf Scouts are tasked with operating ahead of the main Space Wolves assault force, infiltrating enemy positions and seizing or sabotaging key locations. More than capable of operating alone for extended periods of time, they use guile and savagery to distract and harrass the foe.",
     "faction": {
         "id": "SM",
@@ -27,21 +27,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Smoke",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
@@ -53,6 +38,21 @@
         },
         {
             "keyword": "Wolf Scouts",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -562,7 +562,16 @@
             "description": "Each time a model in this unit makes an attack that targets an enemy unit, if there are no other units from your opponent’s army within 6\" of that target, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Deadly Stalkers",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Hunting Hounds",
@@ -570,7 +579,8 @@
             "description": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models), if this unit is not Battle-shocked, Hunting Wolves models in this unit have an Objective Control characteristic of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Haywire Mine",
@@ -578,7 +588,8 @@
             "description": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a <span class=\"kwb\">VEHICLE</span> unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

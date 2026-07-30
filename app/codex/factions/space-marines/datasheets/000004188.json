@@ -27,6 +27,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Wardens of Ultramar",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "ALL MODELS",
             "isFactionKeyword": false
@@ -48,11 +53,6 @@
         },
         {
             "keyword": "Tacticus",
-            "model": "ALL MODELS",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Wardens of Ultramar",
             "model": "ALL MODELS",
             "isFactionKeyword": false
         },
@@ -412,7 +412,7 @@
     ],
     "pointsCosts": [
         {
-            "cost": 90,
+            "cost": 105,
             "count": 6
         }
     ],
@@ -428,7 +428,23 @@
             "description": "While this unit contains Ancient Gadriel, add 1 to the Objective Control characteristic of models in this unit. While this unit contains Ancient Gadriel and Captain Titus, improve the Leadership characteristic of models in this unit by 1 as well.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Second Company Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                },
+                {
+                    "name": "Second Company Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "leadership",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Strategium Command",
@@ -436,7 +452,8 @@
             "description": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Refractor Field",
@@ -444,7 +461,16 @@
             "description": "The bearer has a 5+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Refractor Field",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Storm Shield",
@@ -452,7 +478,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "HEROES OF ULTRAMAR",
@@ -460,7 +495,8 @@
             "description": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly.<br><br><ul><li>Assault intercessor Squad, Bladeguard Veteran Squad, Intercessor Squad, Sternguard Veteran Squad</li></ul><br>This unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

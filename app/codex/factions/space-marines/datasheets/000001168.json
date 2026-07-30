@@ -22,17 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -257,7 +257,16 @@
             "description": "Each time this model makes an attack that targets an enemy unit, if there are no other units from your opponent’s army within 6\" of that target, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Isolate and Destroy",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

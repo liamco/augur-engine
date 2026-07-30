@@ -34,17 +34,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Cryptek",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Cryptek",
             "model": "",
             "isFactionKeyword": false
         },
@@ -192,7 +192,16 @@
             "description": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Timesplinter Mantle",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Chronometron",
@@ -200,7 +209,8 @@
             "description": "In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of any enemy units, that unit can make a Normal move of up to 5\" as if it were your Movement phase. If it does, until the end of the turn, that unit is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

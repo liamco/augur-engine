@@ -37,6 +37,72 @@
     ],
     "stratagems": [
         {
+            "id": "000010630006",
+            "name": "EVASIVE MANOEUVRES",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Battle-brothers of the White Scars Chapter are born and raised in the saddle. Expert pilots and riders all, they weave through incoming fire with instinctive skill.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000063",
+                    "000000072",
+                    "000000084",
+                    "000000094",
+                    "000000107",
+                    "000000113",
+                    "000000114",
+                    "000000116",
+                    "000000124",
+                    "000000132",
+                    "000000137",
+                    "000000139",
+                    "000000159",
+                    "000000238",
+                    "000000239",
+                    "000000240",
+                    "000000241",
+                    "000000242",
+                    "000000283",
+                    "000000284",
+                    "000000287",
+                    "000000288",
+                    "000000301",
+                    "000000308",
+                    "000000321",
+                    "000000322",
+                    "000000325",
+                    "000000358",
+                    "000001158",
+                    "000001166",
+                    "000001167",
+                    "000001168",
+                    "000001169",
+                    "000001179",
+                    "000001182",
+                    "000001190",
+                    "000001191",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000001609",
+                    "000001610",
+                    "000002076",
+                    "000002102",
+                    "000002291",
+                    "000002702",
+                    "000002711",
+                    "000002712",
+                    "000002724",
+                    "000002729",
+                    "000002748",
+                    "000004167"
+                ]
+            }
+        },
+        {
             "id": "000010630004",
             "name": "MOBILE LETHALITY",
             "type": "Battle Tactic",
@@ -45,21 +111,6 @@
             "turn": "Your turn",
             "phase": "Movement phase",
             "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced or Fell Back.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010630002",
-            "name": "ARMOUR OF CONTEMPT",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -82,14 +133,29 @@
             }
         },
         {
-            "id": "000010630006",
-            "name": "EVASIVE MANOEUVRES",
+            "id": "000010630002",
+            "name": "ARMOUR OF CONTEMPT",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Battle-brothers of the White Scars Chapter are born and raised in the saddle. Expert pilots and riders all, they weave through incoming fire with instinctive skill.",
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000010630007",
+            "name": "WITHDRAW AND REGROUP",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The riders and pilots sweep away as swiftly as they arrive, regrouping in preparation for their next assault.",
             "turn": "Opponent’s turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll.",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that is not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves.",
             "eligibleDatasheets": {
                 "include": [
                     "000000063",
@@ -270,72 +336,6 @@
                     "000003875",
                     "000004133",
                     "000004139"
-                ]
-            }
-        },
-        {
-            "id": "000010630007",
-            "name": "WITHDRAW AND REGROUP",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "The riders and pilots sweep away as swiftly as they arrive, regrouping in preparation for their next assault.",
-            "turn": "Opponent’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that is not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000063",
-                    "000000072",
-                    "000000084",
-                    "000000094",
-                    "000000107",
-                    "000000113",
-                    "000000114",
-                    "000000116",
-                    "000000124",
-                    "000000132",
-                    "000000137",
-                    "000000139",
-                    "000000159",
-                    "000000238",
-                    "000000239",
-                    "000000240",
-                    "000000241",
-                    "000000242",
-                    "000000283",
-                    "000000284",
-                    "000000287",
-                    "000000288",
-                    "000000301",
-                    "000000308",
-                    "000000321",
-                    "000000322",
-                    "000000325",
-                    "000000358",
-                    "000001158",
-                    "000001166",
-                    "000001167",
-                    "000001168",
-                    "000001169",
-                    "000001179",
-                    "000001182",
-                    "000001190",
-                    "000001191",
-                    "000001348",
-                    "000001423",
-                    "000001527",
-                    "000001609",
-                    "000001610",
-                    "000002076",
-                    "000002102",
-                    "000002291",
-                    "000002702",
-                    "000002711",
-                    "000002712",
-                    "000002724",
-                    "000002729",
-                    "000002748",
-                    "000004167"
                 ]
             }
         }
@@ -576,5 +576,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "disruption"
 }

@@ -22,12 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
+            "keyword": "Lokhust Destroyers",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Lokhust Destroyers",
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         }
@@ -187,7 +187,19 @@
             "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible enemy unit, re-roll a Hit roll of 1. If the target of that attack is within range of an objective marker your opponent controls, you can re-roll the Hit roll instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Hard-wired for Destruction",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

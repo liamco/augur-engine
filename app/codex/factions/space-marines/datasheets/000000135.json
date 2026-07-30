@@ -21,32 +21,32 @@
                 "slug": "terminator-squad-2"
             },
             {
-                "id": "000000230",
-                "slug": "deathwing-terminator-squad"
-            },
-            {
                 "id": "000000104",
                 "slug": "relic-terminator-squad"
-            },
-            {
-                "id": "000001183",
-                "slug": "terminator-squad"
-            },
-            {
-                "id": "000003873",
-                "slug": "deathwatch-terminator-squad-2"
-            },
-            {
-                "id": "000000118",
-                "slug": "terminator-assault-squad"
             },
             {
                 "id": "000000231",
                 "slug": "deathwing-knights"
             },
             {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
                 "id": "000002302",
                 "slug": "deathwing-command-squad"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
             }
         ],
         "leaderNotes": ""
@@ -58,7 +58,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         },
@@ -73,17 +83,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Terminator",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Deathwing",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -306,7 +306,8 @@
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "The Imperium’s Sword",
@@ -314,7 +315,8 @@
             "description": "You can re-roll Charge rolls made for this model’s unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

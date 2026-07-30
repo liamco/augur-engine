@@ -1,44 +1,68 @@
 {
-    "id": "000000081",
-    "name": "Captain Sicarius",
-    "slug": "captain-sicarius",
-    "legend": "Sicarius is a swordsman without equal, whipping his Tempest Blade through the air in a shimmering blur of thrusts and parries. He is also the undisputed master of the lightning assault, capable of appraising the most complex tactical situation with little more than a glance and deploying his warriors with absolute confidence.",
+    "id": "000004204",
+    "name": "Ferren Areios",
+    "slug": "ferren-areios",
+    "legend": "Ferren Areios is a formidable battle leader who earned the trust and respect of his Primarch in the bloody fighting of the Indomitus Crusade. Now elevated to the rank of Captain of the 6th Company, he leads his battle-brothers with courage and honour, wading into the thick of the fight with thunder hammer in hand.",
     "faction": {
         "id": "SM",
         "slug": "space-marines"
     },
     "source": {
-        "id": "000000139",
-        "name": "Faction Pack: Space Marines"
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
     },
     "role": "Characters",
     "isForgeWorld": false,
-    "isLegends": false,
+    "isLegends": true,
     "leader": {
         "canLead": [
             {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
+                "id": "000000315",
+                "slug": "wolf-guard"
             },
             {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
+                "id": "000002098",
+                "slug": "hellblaster-squad"
             },
             {
-                "id": "000002772",
-                "slug": "company-heroes"
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
             },
             {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
             },
             {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
                 "id": "000001154",
                 "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
             },
             {
                 "id": "000004154",
@@ -49,65 +73,49 @@
                 "slug": "victrix-honour-guard"
             },
             {
-                "id": "000000070",
-                "slug": "tactical-squad"
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
             },
             {
                 "id": "000000061",
                 "slug": "assault-squad"
             },
             {
-                "id": "000000315",
-                "slug": "wolf-guard"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
             },
             {
                 "id": "000004137",
                 "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Ultramarines",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
+            "keyword": "Ferren Areios",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Sicarius",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -117,7 +125,27 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -127,7 +155,7 @@
     "wargear": {
         "loadouts": {
             "default": {
-                "raw": "<b>This model is equipped with:</b> artisan plasma pistol; Talassarian Tempest Blade.",
+                "raw": "<b>This model is equipped with:</b> heavy bolt pistol; relic thunder hammer.",
                 "parsed": [],
                 "byModelType": {}
             },
@@ -139,27 +167,27 @@
         },
         "weapons": [
             {
-                "id": "000000081:artisan-plasma-pistol",
+                "id": "000004204:heavy-bolt-pistol",
                 "line": 1,
-                "name": "Artisan plasma pistol",
+                "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
-                        "datasheetId": "000000081",
+                        "datasheetId": "000004204",
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Artisan plasma pistol",
+                        "name": "Heavy bolt pistol",
                         "attributes": [
                             "PISTOL"
                         ],
-                        "range": 12,
+                        "range": 18,
                         "type": "Ranged",
                         "a": 1,
                         "bsWs": 2,
-                        "s": 8,
-                        "ap": -3,
-                        "d": 2
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
                     }
                 ],
                 "eligibility": [
@@ -170,27 +198,27 @@
                 "count": 1
             },
             {
-                "id": "000000081:talassarian-tempest-blade",
+                "id": "000004204:relic-thunder-hammer",
                 "line": 2,
-                "name": "Talassarian Tempest Blade",
+                "name": "Relic thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
-                        "datasheetId": "000000081",
+                        "datasheetId": "000004204",
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Talassarian Tempest Blade",
+                        "name": "Relic thunder hammer",
                         "attributes": [
-                            "LETHAL HITS"
+                            "DEVASTATING WOUNDS"
                         ],
                         "range": "Melee",
                         "type": "Melee",
-                        "a": 6,
+                        "a": 5,
                         "bsWs": 2,
-                        "s": 5,
+                        "s": 8,
                         "ap": -2,
-                        "d": 2
+                        "d": 3
                     }
                 ],
                 "eligibility": [
@@ -206,15 +234,15 @@
     "supplement": {
         "key": "codex",
         "slug": "codex",
-        "name": "Codex",
+        "name": "Codex (Legends)",
         "label": "None",
         "isSupplement": false
     },
     "models": [
         {
-            "datasheetId": "000000081",
+            "datasheetId": "000004204",
             "line": 1,
-            "name": "Captain Sicarius",
+            "name": "Ferren Areios",
             "m": 6,
             "t": 4,
             "sv": 2,
@@ -223,7 +251,7 @@
             "w": 5,
             "ld": 6,
             "oc": 1,
-            "baseSize": "32mm",
+            "baseSize": "40mm",
             "baseSizeDescr": "",
             "composition": {
                 "min": 1,
@@ -234,14 +262,14 @@
     "unitComposition": [
         {
             "line": 1,
-            "description": "1 Captain Sicarius – EPIC HERO",
+            "description": "1 Ferren Areios – EPIC HERO",
             "min": 1,
             "max": 1
         }
     ],
     "pointsCosts": [
         {
-            "cost": 85,
+            "cost": 80,
             "count": 1
         }
     ],
@@ -257,20 +285,22 @@
             "type": "Faction"
         },
         {
-            "name": "Lead From the Front",
+            "name": "Master of Rites",
             "legend": "",
-            "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+            "description": "In your Command phase, select one of the following to apply to this model’s unit until the end of the turn:<br><ul><li>This model’s unit is eligible to shoot in a turn in which it Advanced.</li><li>This model’s unit is eligible to declare a charge in a turn in it which it Advanced.</li><li>This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
-            "name": "Lightning Assault",
+            "name": "Unrelenting and Uncompromising",
             "legend": "",
-            "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
+            "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or all modifiers to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

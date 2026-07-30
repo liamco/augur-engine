@@ -27,17 +27,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Haruspex",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Harvester",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         }
@@ -47,7 +47,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -216,7 +224,8 @@
             "description": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -22,12 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Dreadnought",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,12 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Deathwing",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -52,7 +42,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Leviathan Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         }
@@ -62,7 +62,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -468,7 +476,8 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "One Shot",
@@ -476,7 +485,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

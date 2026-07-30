@@ -42,12 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fly",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         }
@@ -228,7 +228,18 @@
             "description": "While a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit is within 6\" of this model, models in that unit have the Stealth ability and each time a ranged attack targets that unit, that unit has the Benefit of Cover against that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Icon of Old Caliban (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "STEALTH"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

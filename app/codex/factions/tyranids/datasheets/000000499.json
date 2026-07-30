@@ -30,12 +30,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
+            "keyword": "Malanthrope",
             "model": "",
             "isFactionKeyword": false
         },
@@ -45,17 +40,22 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Malanthrope",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Synapse",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -184,7 +184,8 @@
             "description": "While this model is leading a unit, the range of that unit’s Foul Spores Aura ability is increased to 9\".",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Prey Adaptation",
@@ -192,7 +193,8 @@
             "description": "Each time this model's unit is selected to fight, select one of the following abilities to apply to all melee weapons equipped by models in that unit until the end of the phase:<br><ul><li>[SUSTAINED HITS 1] </li><li>[LANCE] </li><li>[LETHAL HITS]</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

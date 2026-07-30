@@ -22,12 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Dreadnought",
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,17 +42,12 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Deathwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
         }
@@ -452,7 +452,8 @@
             "description": "Once per battle, at the start of any phase, you can select one friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

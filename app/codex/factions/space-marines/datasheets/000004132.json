@@ -17,19 +17,14 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Space Wolves",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Wulfen with Storm Shields",
+            "keyword": "Space Wolves",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Imperium",
@@ -37,12 +32,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Wulfen",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Wulfen",
+            "keyword": "Wulfen with Storm Shields",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -200,7 +200,19 @@
             "description": "In the Fight phase, after this unit has fought, select one enemy <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit hit by one or more of those attacks. Until the end of the next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Hammer Blow",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Death Totem",
@@ -208,7 +220,19 @@
             "description": "Each time the bearer makes a melee attack, re-roll a Hit roll of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Death Totem",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

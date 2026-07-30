@@ -27,7 +27,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +37,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -1100,7 +1100,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Narthecium",
@@ -1108,7 +1117,8 @@
             "description": "While this unit contains an <span class=\"kwb\">APOTHECARY</span>, in your Command phase, you can return 1 destroyed model (excluding <span class=\"kwb\">CHARACTER</span> models) to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Astartes Banner",
@@ -1116,7 +1126,16 @@
             "description": "While this unit contains a Company Ancient, add 1 to the Objective Control characteristic of models in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Honour or Death",
@@ -1124,7 +1143,8 @@
             "description": "While this unit contains a Company Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNITS",
@@ -1132,7 +1152,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to a Company Heroes unit, it can also be attached to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

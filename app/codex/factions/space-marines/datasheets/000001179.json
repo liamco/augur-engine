@@ -27,12 +27,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Sokar-pattern Stormbird",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Titanic",
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
@@ -57,7 +57,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fly",
+            "keyword": "Sokar-pattern Stormbird",
             "model": "",
             "isFactionKeyword": false
         }
@@ -67,7 +67,15 @@
         "range": "1-13",
         "threshold": 13,
         "description": "While this model has 1-13 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -280,7 +288,18 @@
             "description": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Aerial Assault",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "DEEP STRIKE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Deathwing",
+            "keyword": "Terminator",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,12 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Terminator",
+            "keyword": "Relic Terminator Squad",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Relic Terminator Squad",
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         }
@@ -478,7 +478,16 @@
             "description": "Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristic and/or to the Hit roll. In addition, each time a model in this unit makes an attack that targets the enemy unit you selected for the Oath of Moment ability this turn, add 1 to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Fury of the First",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Grenade Harness",
@@ -486,7 +495,18 @@
             "description": "The bearer has the <span class=\"kwb\">GRENADES</span> keyword.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Grenade Harness",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "GRENADES"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ATTACHED UNITS",
@@ -494,7 +514,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can also be attached to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

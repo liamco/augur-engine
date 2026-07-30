@@ -17,21 +17,6 @@
     ],
     "stratagems": [
         {
-            "id": "000008483005",
-            "name": "IMMOLATION PROTOCOLS",
-            "type": "Battle Tactic",
-            "cpCost": 2,
-            "legend": "Salvo after salvo of burning promethium unleashed in synchronised waves will leave almost any foe as smouldering ash.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, Torrent weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
             "id": "000008483006",
             "name": "ONSLAUGHT OF FIRE",
             "type": "Battle Tactic",
@@ -43,55 +28,6 @@
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000008483007",
-            "name": "BURNING VENGEANCE",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "To open fire on warriors of a Firestorm Assault Force is merely to invite one’s own swift destruction.",
-            "turn": "Opponent’s turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TRANSPORT unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> One unit embarked within that <span class=\"kwb\">TRANSPORT</span> can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000065",
-                    "000000066",
-                    "000000067",
-                    "000000072",
-                    "000000085",
-                    "000000087",
-                    "000000113",
-                    "000000122",
-                    "000000129",
-                    "000000132",
-                    "000000139",
-                    "000000321",
-                    "000000325",
-                    "000000358",
-                    "000001179",
-                    "000001184",
-                    "000001189",
-                    "000001191",
-                    "000001347",
-                    "000001607",
-                    "000001608",
-                    "000001991",
-                    "000002173",
-                    "000002252",
-                    "000002568",
-                    "000002710",
-                    "000002720",
-                    "000002721",
-                    "000002722",
-                    "000002723",
-                    "000002724",
-                    "000002786",
-                    "000002790",
-                    "000002791",
-                    "000004139"
                 ]
             }
         },
@@ -243,6 +179,70 @@
                     "000004133",
                     "000004139",
                     "000004167"
+                ]
+            }
+        },
+        {
+            "id": "000008483005",
+            "name": "IMMOLATION PROTOCOLS",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "Salvo after salvo of burning promethium unleashed in synchronised waves will leave almost any foe as smouldering ash.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, Torrent weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000008483007",
+            "name": "BURNING VENGEANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "To open fire on warriors of a Firestorm Assault Force is merely to invite one’s own swift destruction.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TRANSPORT unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> One unit embarked within that <span class=\"kwb\">TRANSPORT</span> can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000065",
+                    "000000066",
+                    "000000067",
+                    "000000072",
+                    "000000085",
+                    "000000087",
+                    "000000113",
+                    "000000122",
+                    "000000129",
+                    "000000132",
+                    "000000139",
+                    "000000321",
+                    "000000325",
+                    "000000358",
+                    "000001179",
+                    "000001184",
+                    "000001189",
+                    "000001191",
+                    "000001347",
+                    "000001607",
+                    "000001608",
+                    "000001991",
+                    "000002173",
+                    "000002252",
+                    "000002568",
+                    "000002710",
+                    "000002720",
+                    "000002721",
+                    "000002722",
+                    "000002723",
+                    "000002724",
+                    "000002786",
+                    "000002790",
+                    "000002791",
+                    "000004139"
                 ]
             }
         },
@@ -610,5 +610,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "purge-the-foe"
 }

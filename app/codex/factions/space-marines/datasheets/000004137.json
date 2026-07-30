@@ -17,12 +17,12 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Black Templars",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Black Templars",
+            "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
@@ -32,12 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Sternguard Veteran Squad",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,7 +47,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Sternguard Veteran Squad",
             "model": "",
             "isFactionKeyword": false
         }
@@ -440,7 +440,16 @@
             "description": "Each time a model in this unit makes an attack that targets the closest eligible target, re-roll a Wound roll of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Virtuous Onslaught",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

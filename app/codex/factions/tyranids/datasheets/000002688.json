@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000471",
-                "slug": "tyrant-guard"
-            },
-            {
                 "id": "000000475",
                 "slug": "zoanthropes"
+            },
+            {
+                "id": "000000471",
+                "slug": "tyrant-guard"
             },
             {
                 "id": "000002687",
@@ -36,16 +36,6 @@
             "keyword": "Tyranids",
             "model": "",
             "isFactionKeyword": true
-        },
-        {
-            "keyword": "Psyker",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Great Devourer",
-            "model": "",
-            "isFactionKeyword": false
         },
         {
             "keyword": "Monster",
@@ -63,12 +53,22 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Neurotyrant",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Synapse",
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
             "model": "",
             "isFactionKeyword": false
         }
@@ -225,7 +225,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll. If the target is Battle-shocked, add 1 to the Wound roll as well.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Psychic Terror (Psychic)",
@@ -233,7 +234,8 @@
             "description": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Neuroloids",
@@ -241,7 +243,8 @@
             "description": "In your Command phase, you can select up to two friendly <span class=\"kwb\">TYRANIDS</span> units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.<br><br><b>Designer’s Note:</b> Place a Neuroloid token next to each selected unit to remind you.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

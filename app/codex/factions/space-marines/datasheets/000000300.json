@@ -17,24 +17,24 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000118",
-                "slug": "terminator-assault-squad"
-            },
-            {
                 "id": "000000104",
                 "slug": "relic-terminator-squad"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
             },
             {
                 "id": "000000318",
                 "slug": "wolf-guard-terminators"
             },
             {
-                "id": "000002302",
-                "slug": "deathwing-command-squad"
-            },
-            {
                 "id": "000001183",
                 "slug": "terminator-squad"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
             },
             {
                 "id": "000004138",
@@ -45,34 +45,29 @@
                 "slug": "deathwatch-terminator-squad-2"
             },
             {
-                "id": "000000230",
-                "slug": "deathwing-terminator-squad"
-            },
-            {
                 "id": "000000231",
                 "slug": "deathwing-knights"
+            },
+            {
+                "id": "000002302",
+                "slug": "deathwing-command-squad"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
     },
     "keywords": [
         {
-            "keyword": "Space Wolves",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Space Wolves",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -82,12 +77,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Terminator",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Terminator",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -438,7 +438,26 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit with have the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Tactical Precision",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Huskarl to the Jarl",
@@ -446,7 +465,16 @@
             "description": "While this model is attached to a unit that contains another Character model, all <span class=\"kwb\">CHARACTER</span> models in that unit have the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Huskarl to the Jarl",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Relic Shield",
@@ -454,7 +482,8 @@
             "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

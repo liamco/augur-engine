@@ -32,12 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Fortification",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fortification",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -47,7 +47,15 @@
         "range": "1-15",
         "threshold": 15,
         "description": "While this model has 1-15 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -195,7 +203,18 @@
             "description": "One friendly Monolith, Obelisk, Tesseract Vault or Sentry Pylon model can start the battle on top of this <span class=\"kwb\">FORTIFICATION</span>’s ziggurat platform. While such a model is on this platform, that model’s ranged weapons have the [HEAVY] ability. Any friendly model can be set up or end any type of move on the ramps or platform sections of this <span class=\"kwb\">FORTIFICATION</span>.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Ziggurat Dock",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "HEAVY"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Phased Cover",
@@ -203,7 +222,8 @@
             "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this <span class=\"kwb\">FORTIFICATION</span>, that model has the Benefit of Cover against that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "FORTIFICATION",
@@ -211,7 +231,8 @@
             "description": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army:<br><ul><li>That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.</li><li>Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

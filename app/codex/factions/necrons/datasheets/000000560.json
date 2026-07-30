@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Tomb Sentinel",
+            "keyword": "Monster",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,7 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Monster",
+            "keyword": "Tomb Sentinel",
             "model": "",
             "isFactionKeyword": false
         }
@@ -182,7 +182,16 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Gloom Prism (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Aggressor Guardian",
@@ -190,7 +199,8 @@
             "description": "Each time an attack targets this model, if this model is within range of an objective marker, worsen the Armour Penetration characteristic of that attack by 1. In addition, each time this model makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

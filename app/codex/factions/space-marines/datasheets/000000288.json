@@ -44,22 +44,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Canis Wolfborn",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Mounted",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Canis Wolfborn",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         }
@@ -242,7 +242,26 @@
             "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Born of Wolves",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Alpha Predator",
@@ -250,7 +269,8 @@
             "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy units suffers D3+3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

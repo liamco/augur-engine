@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Doomstalker",
             "model": "",
             "isFactionKeyword": false
@@ -35,11 +40,6 @@
             "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
         }
     ],
     "transport": "",
@@ -47,7 +47,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -219,7 +227,8 @@
             "description": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

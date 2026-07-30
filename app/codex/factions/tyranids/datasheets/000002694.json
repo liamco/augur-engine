@@ -17,16 +17,16 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002692",
-                "slug": "tyranid-warriors-with-ranged-bio-weapons"
+                "id": "000000484",
+                "slug": "gargoyles-2"
             },
             {
                 "id": "000002691",
                 "slug": "tyranid-warriors-with-melee-bio-weapons"
             },
             {
-                "id": "000000484",
-                "slug": "gargoyles-2"
+                "id": "000002692",
+                "slug": "tyranid-warriors-with-ranged-bio-weapons"
             }
         ],
         "leaderNotes": ""
@@ -38,17 +38,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vanguard Invader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Winged Tyranid Prime",
+            "keyword": "Synapse",
             "model": "",
             "isFactionKeyword": false
         },
@@ -58,17 +48,27 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Synapse",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Winged Tyranid Prime",
             "model": "",
             "isFactionKeyword": false
         }
@@ -197,7 +197,26 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Alpha Warrior",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Death Blow",
@@ -205,7 +224,8 @@
             "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

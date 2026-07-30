@@ -17,42 +17,62 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000305",
-                "slug": "grey-hunters"
-            },
-            {
-                "id": "000000318",
-                "slug": "wolf-guard-terminators"
-            },
-            {
-                "id": "000000303",
-                "slug": "blood-claws"
-            },
-            {
                 "id": "000004130",
                 "slug": "wolf-guard-battle-leader"
+            },
+            {
+                "id": "000000305",
+                "slug": "grey-hunters"
             },
             {
                 "id": "000004131",
                 "slug": "wolf-guard-headtakers"
             },
             {
+                "id": "000000318",
+                "slug": "wolf-guard-terminators"
+            },
+            {
                 "id": "000000315",
                 "slug": "wolf-guard"
+            },
+            {
+                "id": "000000303",
+                "slug": "blood-claws"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Space Wolves",
+            "keyword": "Krom Dragongaze",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Grenades",
@@ -65,27 +85,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Krom Dragongaze",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -237,7 +237,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "The Fierce Eye",
@@ -245,7 +246,8 @@
             "description": "In your Shooting phase, you can select one enemy <span class=\"kwb\">INFANTRY</span> unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

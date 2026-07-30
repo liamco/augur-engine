@@ -32,7 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Kill Team",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,17 +42,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
+            "keyword": "Kill Team",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -818,7 +818,23 @@
             "description": "Each time a model in this unit makes an attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Fortis Doctrines",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                },
+                {
+                    "name": "Fortis Doctrines",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ATTACHED UNIT",
@@ -826,7 +842,8 @@
             "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

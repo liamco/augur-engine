@@ -21,8 +21,8 @@
                 "slug": "terminator-assault-squad"
             },
             {
-                "id": "000000231",
-                "slug": "deathwing-knights"
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
             },
             {
                 "id": "000004138",
@@ -33,20 +33,20 @@
                 "slug": "terminator-squad"
             },
             {
+                "id": "000000231",
+                "slug": "deathwing-knights"
+            },
+            {
                 "id": "000000104",
                 "slug": "relic-terminator-squad"
             },
             {
-                "id": "000000230",
-                "slug": "deathwing-terminator-squad"
+                "id": "000002302",
+                "slug": "deathwing-command-squad"
             },
             {
                 "id": "000003873",
                 "slug": "deathwatch-terminator-squad-2"
-            },
-            {
-                "id": "000002302",
-                "slug": "deathwing-command-squad"
             }
         ],
         "leaderNotes": ""
@@ -63,6 +63,21 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Caanok Var",
             "model": "",
             "isFactionKeyword": false
@@ -73,27 +88,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Terminator",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -275,7 +275,8 @@
             "description": "Each time a model in this model’s unit makes an attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, that attack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Cerebrex Logic Engine",
@@ -283,7 +284,18 @@
             "description": "<ul><li>At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability.</li><li>After both players have deployed their armies, you can select one <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Cerebrex Logic Engine",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -17,20 +17,20 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002781",
-                "slug": "indomitor-kill-team-2"
-            },
-            {
-                "id": "000001177",
-                "slug": "heavy-intercessor-squad"
-            },
-            {
                 "id": "000000103",
                 "slug": "eradicator-squad"
             },
             {
+                "id": "000002781",
+                "slug": "indomitor-kill-team-2"
+            },
+            {
                 "id": "000002099",
                 "slug": "aggressor-squad"
+            },
+            {
+                "id": "000001177",
+                "slug": "heavy-intercessor-squad"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the <span class=\"kwb\">LEADER</span> units attached to it become separate units, with their original Starting Strengths."
@@ -42,12 +42,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Gravis",
+            "keyword": "Apothecary",
             "model": "",
             "isFactionKeyword": false
         },
@@ -57,7 +52,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -67,7 +62,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Apothecary",
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -210,7 +210,26 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Surgical Precision",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Vivispectrum",
@@ -218,7 +237,8 @@
             "description": "If this model’s unit destroys an enemy unit as the result of a melee attack, until the end of the battle, this model has an Objective Control characteristic of 9.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

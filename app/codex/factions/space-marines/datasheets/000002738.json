@@ -17,42 +17,52 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000003874",
-                "slug": "talonstrike-kill-team"
+                "id": "000000147",
+                "slug": "vanguard-veteran-squad-with-jump-packs"
             },
             {
                 "id": "000000324",
                 "slug": "skyclaws"
             },
             {
+                "id": "000000064",
+                "slug": "assault-squad-with-jump-packs"
+            },
+            {
                 "id": "000002776",
                 "slug": "assault-intercessors-with-jump-packs"
             },
             {
-                "id": "000000147",
-                "slug": "vanguard-veteran-squad-with-jump-packs"
+                "id": "000003874",
+                "slug": "talonstrike-kill-team"
             },
             {
-                "id": "000000064",
-                "slug": "assault-squad-with-jump-packs"
+                "id": "000000315",
+                "slug": "wolf-guard"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
     },
     "keywords": [
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Sanguinary Priest",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
@@ -76,16 +86,6 @@
         },
         {
             "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Jump Pack",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Sanguinary Priest",
             "model": "",
             "isFactionKeyword": false
         }
@@ -240,7 +240,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Sanguinary Priest",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Blood Chalice",
@@ -248,7 +265,8 @@
             "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

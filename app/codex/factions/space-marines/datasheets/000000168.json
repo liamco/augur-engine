@@ -27,12 +27,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Baal Predator",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +42,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Baal Predator",
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -52,7 +52,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -377,7 +385,8 @@
             "description": "You can re-roll Advance rolls made for this model.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "One Shot",
@@ -385,7 +394,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

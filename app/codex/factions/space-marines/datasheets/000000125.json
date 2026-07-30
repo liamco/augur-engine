@@ -22,16 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
@@ -47,7 +37,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -277,7 +277,8 @@
             "description": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can perform a meteoric descent. If it does, this unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -22,17 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Titanic",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fellblade",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fellblade",
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
             "model": "",
             "isFactionKeyword": false
         }
@@ -52,7 +52,22 @@
         "range": "1-8",
         "threshold": 8,
         "description": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            },
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "objectiveControl",
+                "value": 4
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -67,19 +82,25 @@
                         "datasheetId": "000002704",
                         "line": 1,
                         "button": "•",
-                        "description": "This model’s 2 quad lascannons can be replaced with 2 laser destroyers."
+                        "description": "This model’s 2 quad lascannons can be replaced with one of the following:<ul><li> 2 laser destroyers</li><li>2 quad heavy bolters</li></ul>"
                     },
                     {
                         "datasheetId": "000002704",
                         "line": 2,
                         "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer"
+                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer."
                     },
                     {
                         "datasheetId": "000002704",
                         "line": 3,
                         "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                        "description": "This model can be equipped with 1 havoc launcher."
+                    },
+                    {
+                        "datasheetId": "000002704",
+                        "line": 4,
+                        "button": "•",
+                        "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
                     }
                 ],
                 "parsed": [],
@@ -88,14 +109,47 @@
         },
         "weapons": [
             {
-                "id": "000002704:demolisher-cannon",
+                "id": "000002704:combi-weapon",
                 "line": 1,
-                "name": "Demolisher cannon",
+                "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 1,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:demolisher-cannon",
+                "line": 2,
+                "name": "Demolisher cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Demolisher cannon",
@@ -120,13 +174,13 @@
             },
             {
                 "id": "000002704:fellblade-accelerator-cannon-ap-shells",
-                "line": 2,
+                "line": 3,
                 "name": "Fellblade accelerator cannon – AP shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 2,
+                        "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Fellblade accelerator cannon – AP shells",
@@ -149,13 +203,13 @@
             },
             {
                 "id": "000002704:fellblade-accelerator-cannon-he-shells",
-                "line": 3,
+                "line": 4,
                 "name": "Fellblade accelerator cannon – HE shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 3,
+                        "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
                         "name": "Fellblade accelerator cannon – HE shells",
@@ -179,14 +233,45 @@
                 "count": 1
             },
             {
+                "id": "000002704:havoc-launcher",
+                "line": 5,
+                "name": "Havoc launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 5,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Havoc launcher",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
                 "id": "000002704:heavy-bolter",
-                "line": 4,
+                "line": 6,
                 "name": "Heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 4,
+                        "line": 6,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolter",
@@ -211,13 +296,13 @@
             },
             {
                 "id": "000002704:heavy-flamer",
-                "line": 5,
+                "line": 7,
                 "name": "Heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 5,
+                        "line": 7,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy flamer",
@@ -243,13 +328,13 @@
             },
             {
                 "id": "000002704:laser-destroyer",
-                "line": 6,
+                "line": 8,
                 "name": "Laser destroyer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 6,
+                        "line": 8,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Laser destroyer",
@@ -274,13 +359,13 @@
             },
             {
                 "id": "000002704:multi-melta",
-                "line": 7,
+                "line": 9,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 7,
+                        "line": 9,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
@@ -304,14 +389,46 @@
                 "count": 1
             },
             {
+                "id": "000002704:quad-heavy-bolter",
+                "line": 10,
+                "name": "Quad heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 10,
+                        "lineInWargear": 1,
+                        "dice": "",
+                        "name": "Quad heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
                 "id": "000002704:quad-lascannon",
-                "line": 8,
+                "line": 11,
                 "name": "Quad lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 8,
+                        "line": 11,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Quad lascannon",
@@ -334,13 +451,13 @@
             },
             {
                 "id": "000002704:storm-bolter",
-                "line": 9,
+                "line": 12,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 9,
+                        "line": 12,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
@@ -365,13 +482,13 @@
             },
             {
                 "id": "000002704:twin-heavy-bolter",
-                "line": 10,
+                "line": 13,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 10,
+                        "line": 13,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
@@ -397,13 +514,13 @@
             },
             {
                 "id": "000002704:twin-heavy-flamer",
-                "line": 11,
+                "line": 14,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 11,
+                        "line": 14,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy flamer",
@@ -430,13 +547,13 @@
             },
             {
                 "id": "000002704:armoured-tracks",
-                "line": 12,
+                "line": 15,
                 "name": "Armoured tracks",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
-                        "line": 12,
+                        "line": 15,
                         "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured tracks",
@@ -519,7 +636,8 @@
             "description": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

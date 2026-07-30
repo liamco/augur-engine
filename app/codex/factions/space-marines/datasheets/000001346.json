@@ -17,84 +17,84 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002772",
-                "slug": "company-heroes"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
-            },
-            {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
                 "id": "000004137",
                 "slug": "sternguard-veteran-squad-2"
             },
             {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000002098",
-                "slug": "hellblaster-squad"
+                "id": "000002772",
+                "slug": "company-heroes"
             },
             {
                 "id": "000002799",
                 "slug": "crusader-squad"
             },
             {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
                 "id": "000004175",
                 "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
             }
         ],
         "leaderNotes": "You can attach this model to a unit it can lead even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
@@ -104,16 +104,6 @@
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
         },
         {
             "keyword": "Lieutenant",
@@ -132,6 +122,16 @@
         },
         {
             "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -512,7 +512,26 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Tactical Precision",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Target Priority",
@@ -520,7 +539,8 @@
             "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Storm Shield",
@@ -528,7 +548,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -17,6 +17,21 @@
     ],
     "stratagems": [
         {
+            "id": "000010646003",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes, combined with their transhuman physiology, makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000010646002",
             "name": "A GRIM WARNING",
             "type": "",
@@ -57,14 +72,14 @@
             }
         },
         {
-            "id": "000010646004",
-            "name": "INSENSATE RAMPAGE",
+            "id": "000010646006",
+            "name": "DEATHLESS DUTY",
             "type": "",
-            "cpCost": 1,
-            "legend": "The agony of even the most catastrophic wounds means nothing to the warriors of the Death Company, pain finding no purchase on their maddened minds.",
+            "cpCost": 2,
+            "legend": "Even as death at last smothers the inferno of fury consuming the minds of these lost brethren, they keep killing, until not even the faintest spark remains.",
             "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
             "eligibleDatasheets": {
                 "include": [
                     "000000166",
@@ -94,43 +109,6 @@
             }
         },
         {
-            "id": "000010646003",
-            "name": "ARMOUR OF CONTEMPT",
-            "type": "",
-            "cpCost": 1,
-            "legend": "The belligerence of the Adeptus Astartes, combined with their transhuman physiology, makes them unyielding foes to face.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010646006",
-            "name": "DEATHLESS DUTY",
-            "type": "",
-            "cpCost": 2,
-            "legend": "Even as death at last smothers the inferno of fury consuming the minds of these lost brethren, they keep killing, until not even the faintest spark remains.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000166",
-                    "000001997",
-                    "000002285",
-                    "000002737",
-                    "000003832",
-                    "000003833",
-                    "000003836",
-                    "000003837"
-                ]
-            }
-        },
-        {
             "id": "000010646007",
             "name": "RED WRATH",
             "type": "",
@@ -142,6 +120,28 @@
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000010646004",
+            "name": "INSENSATE RAMPAGE",
+            "type": "",
+            "cpCost": 1,
+            "legend": "The agony of even the most catastrophic wounds means nothing to the warriors of the Death Company, pain finding no purchase on their maddened minds.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
                 ]
             }
         }
@@ -375,5 +375,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "blood-angels",
+    "detachmentPoints": 3,
+    "disposition": "purge-the-foe"
 }

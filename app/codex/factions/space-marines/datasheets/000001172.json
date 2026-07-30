@@ -17,20 +17,20 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001177",
-                "slug": "heavy-intercessor-squad"
-            },
-            {
-                "id": "000002099",
-                "slug": "aggressor-squad"
-            },
-            {
                 "id": "000002781",
                 "slug": "indomitor-kill-team-2"
             },
             {
+                "id": "000001177",
+                "slug": "heavy-intercessor-squad"
+            },
+            {
                 "id": "000000103",
                 "slug": "eradicator-squad"
+            },
+            {
+                "id": "000002099",
+                "slug": "aggressor-squad"
             }
         ],
         "leaderNotes": ""
@@ -62,12 +62,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Gravis",
+            "keyword": "Captain",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Captain",
+            "keyword": "Gravis",
             "model": "",
             "isFactionKeyword": false
         }
@@ -371,7 +371,8 @@
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Refuse to Yield",
@@ -379,7 +380,8 @@
             "description": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

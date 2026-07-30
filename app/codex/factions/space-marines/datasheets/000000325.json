@@ -17,14 +17,19 @@
     "leader": null,
     "keywords": [
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Fly",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
         },
         {
             "keyword": "Transport",
@@ -32,7 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fly",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Stormfang Gunship",
             "model": "",
             "isFactionKeyword": false
         },
@@ -45,16 +55,6 @@
             "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
-        },
-        {
-            "keyword": "Stormfang Gunship",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
         }
     ],
     "transport": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
@@ -62,7 +62,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -406,7 +414,8 @@
             "description": "In your Shooting phase, after this model has shot, if an enemy <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit was hit by one or more of those attacks made with this model’s helfrost destructor, until the end of your opponent’s next turn, that enemy unit is Frozen. While a unit is Frozen, subtract 2 from that unit’s Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

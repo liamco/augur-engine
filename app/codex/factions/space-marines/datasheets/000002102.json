@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
@@ -38,11 +43,6 @@
         },
         {
             "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         }
@@ -288,7 +288,8 @@
             "description": "In your Shooting phase, each time this model has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to D6\". If it does, until the end of the turn, this model is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

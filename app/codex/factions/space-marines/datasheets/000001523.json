@@ -22,12 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
+            "keyword": "Scout Sniper Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,12 +42,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Scout Sniper Squad",
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -302,7 +302,8 @@
             "description": "This unit can only be selected as the target of a ranged attack if the attacking model is within 12\".",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

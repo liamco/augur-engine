@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Lychguard",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Lychguard",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -176,7 +176,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Dispersion Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Guardian Protocols",
@@ -184,7 +193,16 @@
             "description": "While a Noble model is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Guardian Protocols",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

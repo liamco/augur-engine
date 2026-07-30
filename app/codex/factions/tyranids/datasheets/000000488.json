@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Beast",
             "model": "",
             "isFactionKeyword": false
@@ -33,11 +38,6 @@
         },
         {
             "keyword": "Great Devourer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         }
@@ -153,7 +153,8 @@
             "description": "Enemy units cannot start or end an Advance move within 6\" of this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Floating Death",
@@ -161,7 +162,8 @@
             "description": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

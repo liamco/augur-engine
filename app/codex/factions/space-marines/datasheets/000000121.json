@@ -17,36 +17,36 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
                 "id": "000002103",
                 "slug": "command-squad"
             },
             {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
             },
             {
                 "id": "000000315",
                 "slug": "wolf-guard"
             },
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000000070",
-                "slug": "tactical-squad"
+                "id": "000004185",
+                "slug": "victrix-honour-guard"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
             },
             {
                 "id": "000004137",
@@ -57,57 +57,72 @@
                 "slug": "sternguard-veteran-squad"
             },
             {
-                "id": "000004185",
-                "slug": "victrix-honour-guard"
-            },
-            {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
+                "id": "000000070",
+                "slug": "tactical-squad"
             },
             {
                 "id": "000002780",
                 "slug": "fortis-kill-team-2"
             },
             {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
                 "id": "000001157",
                 "slug": "intercessor-squad"
             },
             {
-                "id": "000002799",
-                "slug": "crusader-squad"
+                "id": "000004175",
+                "slug": "decimus-kill-team"
             },
             {
-                "id": "000002772",
-                "slug": "company-heroes"
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Ultramarines",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Ultramarines",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Uriel Ventris",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -122,22 +137,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Uriel Ventris",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -311,7 +311,8 @@
             "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem).",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Master of the Fleet",
@@ -319,7 +320,8 @@
             "description": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis or Tacticus Adeptus Astartes Infantry unit from your army. That unit gains the Deep Strike ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -22,17 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         }
@@ -680,7 +680,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Vanguard Assault",
@@ -688,7 +697,18 @@
             "description": "Each time this unit ends a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Vanguard Assault",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "COMMAND SQUAD BODYGUARD",
@@ -696,7 +716,8 @@
             "description": "If a Character model from your army with the Leader ability can be attached to a Bike Squad (Outrider Squad), it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

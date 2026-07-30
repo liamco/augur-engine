@@ -17,12 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             },
             {
                 "id": "000002780",
@@ -33,44 +29,16 @@
                 "slug": "inner-circle-companions"
             },
             {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
+                "id": "000000070",
+                "slug": "tactical-squad"
             },
             {
                 "id": "000001154",
                 "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
                 "id": "000004154",
                 "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
             },
             {
                 "id": "000002783",
@@ -83,6 +51,38 @@
             {
                 "id": "000000126",
                 "slug": "infernus-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
             }
         ],
         "leaderNotes": ""
@@ -99,7 +99,32 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
@@ -114,32 +139,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Deathwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Lazarus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -284,7 +284,8 @@
             "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "The Spiritshield Helm",
@@ -292,7 +293,16 @@
             "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "The Spiritshield Helm",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 3
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

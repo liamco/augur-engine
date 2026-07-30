@@ -21,12 +21,12 @@
                 "slug": "necron-warriors"
             },
             {
-                "id": "000000535",
-                "slug": "immortals"
-            },
-            {
                 "id": "000000536",
                 "slug": "lychguard"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
             }
         ],
         "leaderNotes": "This model can be attached to a unit even if Nemesor Zahndrekh has already been attached to it. If it is, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
@@ -38,12 +38,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -53,7 +48,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -168,7 +168,26 @@
             "description": "While this model is leading a unit, models in that unit have the Fights First ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Ghostwalk Mantle",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "FIGHTS FIRST"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "The Vargard’s Duty",
@@ -176,7 +195,16 @@
             "description": "While this model is in the same unit as Nemesor Zahndrekh, Character models in that unit have the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "The Vargard’s Duty",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

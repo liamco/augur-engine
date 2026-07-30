@@ -17,12 +17,12 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Blood Angels",
+            "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
@@ -37,22 +37,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -466,7 +466,8 @@
             "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "An Honourable Death in Combat",
@@ -474,7 +475,8 @@
             "description": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -482,7 +484,8 @@
             "description": "If a Chaplain model from your army with the Leader ability can be attached to an Assault Intercessor Squad unit, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -47,21 +47,6 @@
             }
         },
         {
-            "id": "000010685007",
-            "name": "MARCHING EVER ON",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "The road to the complete rebuilding of the Five Hundred Worlds will be a long and gruelling one, and those who fight their way along it cannot pause in their advance for even a moment.",
-            "turn": "Opponent’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit Falls Back.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was within Engagement Range of that enemy unit at the start of the phase.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\"+1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
             "id": "000010685002",
             "name": "CRUSADING CONQUERORS",
             "type": "Strategic Ploy",
@@ -100,6 +85,21 @@
             "turn": "Your turn",
             "phase": "Movement phase",
             "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000010685007",
+            "name": "MARCHING EVER ON",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The road to the complete rebuilding of the Five Hundred Worlds will be a long and gruelling one, and those who fight their way along it cannot pause in their advance for even a moment.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit Falls Back.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was within Engagement Range of that enemy unit at the start of the phase.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\"+1.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -389,5 +389,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "take-and-hold"
 }

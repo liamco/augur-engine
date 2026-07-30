@@ -25,27 +25,22 @@
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Arjac Rockfist",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Terminator",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
@@ -55,12 +50,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Arjac Rockfist",
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -214,7 +214,8 @@
             "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Champion of the Kingsguard",
@@ -222,7 +223,8 @@
             "description": "Each time this model makes a melee attack that targets a <span class=\"kwb\">CHARACTER</span> unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

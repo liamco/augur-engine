@@ -17,16 +17,16 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000315",
-                "slug": "wolf-guard"
+                "id": "000003874",
+                "slug": "talonstrike-kill-team"
             },
             {
                 "id": "000000324",
                 "slug": "skyclaws"
             },
             {
-                "id": "000000064",
-                "slug": "assault-squad-with-jump-packs"
+                "id": "000002737",
+                "slug": "death-company-marines-with-jump-packs"
             },
             {
                 "id": "000000147",
@@ -37,16 +37,16 @@
                 "slug": "assault-intercessors-with-jump-packs"
             },
             {
-                "id": "000003874",
-                "slug": "talonstrike-kill-team"
-            },
-            {
-                "id": "000002737",
-                "slug": "death-company-marines-with-jump-packs"
-            },
-            {
                 "id": "000003837",
                 "slug": "death-company-marines-with-boltguns-and-jump-packs"
+            },
+            {
+                "id": "000000064",
+                "slug": "assault-squad-with-jump-packs"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
             }
         ],
         "leaderNotes": ""
@@ -58,12 +58,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Fly",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
@@ -73,17 +78,12 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Jump Pack",
             "model": "",
             "isFactionKeyword": false
         }
@@ -520,7 +520,19 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Litany of Hate",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Exhortation of Rage",
@@ -528,7 +540,8 @@
             "description": "Each time this model’s unit is selected to fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

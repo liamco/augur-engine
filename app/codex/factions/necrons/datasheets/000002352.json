@@ -38,7 +38,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Cryptek",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -58,7 +58,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Cryptek",
             "model": "",
             "isFactionKeyword": false
         }
@@ -68,7 +68,7 @@
     "wargear": {
         "loadouts": {
             "default": {
-                "raw": "<b>This model is equipped with:</b> staff of light; Canoptek cloak.",
+                "raw": "<b>This model is equipped with:</b> staff of light.",
                 "parsed": [],
                 "byModelType": {}
             },
@@ -199,7 +199,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Rites of Reanimation",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Technomancer",
@@ -207,7 +224,8 @@
             "description": "At the end of your Movement phase, you can select one friendly <span class=\"kwb\">NECRONS</span> model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

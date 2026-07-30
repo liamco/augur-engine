@@ -22,7 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Ancient",
+            "model": "ANCIENT",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Company Heroes",
             "model": "ALL MODELS",
             "isFactionKeyword": false
         },
@@ -32,22 +37,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Company Heroes",
-            "model": "ALL MODELS",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Ancient",
-            "model": "ANCIENT",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
             "model": "ALL MODELS",
             "isFactionKeyword": false
         },
         {
             "keyword": "Grenades",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "ALL MODELS",
             "isFactionKeyword": false
         }
@@ -321,7 +321,16 @@
             "description": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of models in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Command Squad",
@@ -329,7 +338,16 @@
             "description": "While a CHARACTER model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Command Squad",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "COMPANY HEROES",
@@ -337,7 +355,8 @@
             "description": "You must attach one CAPTAIN or CHAPTER MASTER model to this unit. If this is not possible, this unit does not take part in the battle and counts as having been destroyed.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

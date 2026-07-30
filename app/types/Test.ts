@@ -9,6 +9,7 @@
 
 import { Ability } from "./Ability";
 import { CombatState } from "./State";
+import { Enhancement } from "./Enhancement";
 
 // =============================================================================
 // Mechanic System Types (from src/app/game-engine/types/Mechanic.ts)
@@ -443,6 +444,13 @@ export interface TestUnit {
     damaged: TestDamagedProfile | null;
     leader: TestLeaderInfo | null;
     wargear: TestWargearData;
+
+    /**
+     * The Enhancement given to this unit's CHARACTER model. Not part of the
+     * datasheet — assigned when an army list (or the test lab) picks one from the
+     * chosen detachment, and read by collectEnhancementMechanics.
+     */
+    enhancement?: Enhancement;
 
     combatState: CombatState;
 }

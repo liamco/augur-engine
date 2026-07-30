@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fly",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -308,7 +308,8 @@
             "description": "Each time an enemy unit selects this model as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other reductions to that Charge roll).",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

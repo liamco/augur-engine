@@ -9,9 +9,18 @@ import { WeaponProfile } from "#types/Weapon";
 import { CombatState } from "#types/State";
 import { EngagementPhase } from "#types/Engagement";
 import { TestUnit } from "#types/Test";
+import { Detachment } from "#types/Detachment";
+import { Enhancement } from "#types/Enhancement";
 import { resolveRestrictions } from "@/app/engine/resolvers/restrictionResolver";
 import { collectWeaponBehaviours } from "@/app/engine/utils/collectWeaponBehaviours";
+import { createDefaultCombatState } from "@/app/engine/utils/createDefaultCombatState";
+import { deriveUnitStrength } from "@/app/engine/utils/deriveUnitStrength";
+import { isCharacter } from "@/app/engine/utils/isCharacter";
 import { unitManifest } from "./unitManifest";
+import {
+    detachmentsByFaction,
+    findDetachment,
+} from "./detachmentManifest";
 
 const COMBAT_PHASES: EngagementPhase[] = ["shooting", "fight"];
 
@@ -37,6 +46,18 @@ const Octagon = () => {
     >(null);
     const [defenderLeaderIndex, setDefenderLeaderIndex] = useState<
         number | null
+    >(null);
+    const [attackerDetachmentSlug, setAttackerDetachmentSlug] = useState<
+        string | null
+    >(null);
+    const [defenderDetachmentSlug, setDefenderDetachmentSlug] = useState<
+        string | null
+    >(null);
+    const [attackerEnhancementId, setAttackerEnhancementId] = useState<
+        string | null
+    >(null);
+    const [defenderEnhancementId, setDefenderEnhancementId] = useState<
+        string | null
     >(null);
     const [phase, setPhase] = useState<EngagementPhase>("shooting");
     const [rangeToTarget, setRangeToTarget] = useState<number | undefined>(
@@ -88,14 +109,47 @@ const Octagon = () => {
             ? unitManifest[defenderLeaderIndex].data
             : null;
 
-    const attacker =
+    const attackerDetachment = findDetachment(attackerDetachmentSlug);
+    const defenderDetachment = findDetachment(defenderDetachmentSlug);
+
+    // An Enhancement is given to a CHARACTER model. In the lab that model is
+    // either the selected unit itself or the leader attached to it, so a
+    // bodyguard unit becomes eligible the moment a character joins it.
+    const attackerTakesEnhancement =
+        (!!attackerBase && isCharacter(attackerBase)) ||
+        (!!selectedAttackerLeader && isCharacter(selectedAttackerLeader));
+    const defenderTakesEnhancement =
+        (!!defenderBase && isCharacter(defenderBase)) ||
+        (!!selectedDefenderLeader && isCharacter(selectedDefenderLeader));
+
+    const attackerEnhancement = attackerTakesEnhancement
+        ? (attackerDetachment?.enhancements.find(
+              (e) => e.id === attackerEnhancementId,
+          ) ?? null)
+        : null;
+    const defenderEnhancement = defenderTakesEnhancement
+        ? (defenderDetachment?.enhancements.find(
+              (e) => e.id === defenderEnhancementId,
+          ) ?? null)
+        : null;
+
+    const attackerLed =
         attackerWithState && selectedAttackerLeader
             ? attachLeader(attackerWithState, selectedAttackerLeader)
             : attackerWithState;
-    const defender =
+    const defenderLed =
         defenderWithState && selectedDefenderLeader
             ? attachLeader(defenderWithState, selectedDefenderLeader)
             : defenderWithState;
+
+    const attacker =
+        attackerLed && attackerEnhancement
+            ? { ...attackerLed, enhancement: attackerEnhancement }
+            : attackerLed;
+    const defender =
+        defenderLed && defenderEnhancement
+            ? { ...defenderLed, enhancement: defenderEnhancement }
+            : defenderLed;
 
     const attackerBehaviourMechanics = useMemo(() => {
         if (!attacker) return [];
@@ -179,18 +233,28 @@ const Octagon = () => {
             weaponProfile: profile,
             engagementPhase: phase,
             rangeToTarget,
+            // Detachment rules are a mechanic layer of their own. None of the 77
+            // detachment abilities carry mechanics yet — they are step 3/4 work —
+            // so today these resolve to empty arrays.
+            attackerDetachmentMechanics: detachmentMechanics(attackerDetachment),
+            defenderDetachmentMechanics: detachmentMechanics(defenderDetachment),
         });
 
         return runCombat(context);
-    }, [attacker, defender, selectedProfile, selectedWeapon, phase, weaponRestrictions, weaponIndex, rangeToTarget]);
+    }, [attacker, defender, selectedProfile, selectedWeapon, phase, weaponRestrictions, weaponIndex, rangeToTarget, attackerDetachment, defenderDetachment]);
 
     const handleAttackerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const val = e.target.value;
         const idx = val === "" ? null : Number(val);
         setAttackerIndex(idx);
         setAttackerLeaderIndex(null);
+        // The new unit may not be a character, or may not be eligible for the
+        // enhancement that was chosen for the old one.
+        setAttackerEnhancementId(null);
         setAttackerState(
-            idx !== null ? { ...unitManifest[idx].data.combatState } : null,
+            idx !== null
+                ? createDefaultCombatState(unitManifest[idx].data)
+                : null,
         );
         setWeaponIndex(0);
         setProfileIndex(0);
@@ -201,8 +265,11 @@ const Octagon = () => {
         const idx = val === "" ? null : Number(val);
         setDefenderIndex(idx);
         setDefenderLeaderIndex(null);
+        setDefenderEnhancementId(null);
         setDefenderState(
-            idx !== null ? { ...unitManifest[idx].data.combatState } : null,
+            idx !== null
+                ? createDefaultCombatState(unitManifest[idx].data)
+                : null,
         );
     };
 
@@ -212,6 +279,9 @@ const Octagon = () => {
         setAttackerLeaderIndex(
             e.target.value === "" ? null : Number(e.target.value),
         );
+        // Detaching the leader can remove the only character in the unit, which
+        // would leave a stale enhancement selected on a unit that cannot take one.
+        setAttackerEnhancementId(null);
     };
     const handleDefenderLeaderChange = (
         e: React.ChangeEvent<HTMLSelectElement>,
@@ -219,6 +289,21 @@ const Octagon = () => {
         setDefenderLeaderIndex(
             e.target.value === "" ? null : Number(e.target.value),
         );
+        setDefenderEnhancementId(null);
+    };
+
+    const handleAttackerDetachmentChange = (
+        e: React.ChangeEvent<HTMLSelectElement>,
+    ) => {
+        setAttackerDetachmentSlug(e.target.value === "" ? null : e.target.value);
+        // Enhancements belong to a detachment, so the old id means nothing here.
+        setAttackerEnhancementId(null);
+    };
+    const handleDefenderDetachmentChange = (
+        e: React.ChangeEvent<HTMLSelectElement>,
+    ) => {
+        setDefenderDetachmentSlug(e.target.value === "" ? null : e.target.value);
+        setDefenderEnhancementId(null);
     };
 
     const handleWeaponChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -260,8 +345,21 @@ const Octagon = () => {
                     ))}
                 </div>
             </header>
-            <div className="w-full grid grid-cols-10 gap-6">
+            <div className="w-full grid grid-cols-9 gap-6">
                 <aside className="col-span-3 flex flex-col gap-6">
+                    <ArmyFields
+                        detachmentSlug={attackerDetachmentSlug}
+                        onDetachmentChange={handleAttackerDetachmentChange}
+                        detachment={attackerDetachment}
+                        enhancementId={attackerEnhancementId}
+                        onEnhancementChange={(e) =>
+                            setAttackerEnhancementId(
+                                e.target.value === "" ? null : e.target.value,
+                            )
+                        }
+                        selectedEnhancement={attackerEnhancement}
+                        showEnhancement={attackerTakesEnhancement}
+                    />
                     <SelectGroup
                         label="Attacker"
                         value={attackerIndex}
@@ -365,7 +463,7 @@ const Octagon = () => {
                 </aside>
 
                 {result ? (
-                    <div className="col-span-4 flex flex-col gap-6 border border-deathWorldForest">
+                    <div className="col-span-3 flex flex-col gap-6 border border-deathWorldForest">
                         <div className="text-blockcaps-s p-3 border-b border-deathWorldForest bg-deathWorldForest/20">
                             Results
                         </div>
@@ -444,12 +542,25 @@ const Octagon = () => {
                         </div>
                     </div>
                 ) : (
-                    <main className="col-span-4 flex items-center justify-center">
+                    <main className="col-span-3 flex items-center justify-center">
                         Awaiting selections
                     </main>
                 )}
 
                 <aside className="col-span-3 flex flex-col gap-6">
+                    <ArmyFields
+                        detachmentSlug={defenderDetachmentSlug}
+                        onDetachmentChange={handleDefenderDetachmentChange}
+                        detachment={defenderDetachment}
+                        enhancementId={defenderEnhancementId}
+                        onEnhancementChange={(e) =>
+                            setDefenderEnhancementId(
+                                e.target.value === "" ? null : e.target.value,
+                            )
+                        }
+                        selectedEnhancement={defenderEnhancement}
+                        showEnhancement={defenderTakesEnhancement}
+                    />
                     <SelectGroup
                         label="Defender"
                         value={defenderIndex}
@@ -523,7 +634,85 @@ const Octagon = () => {
     );
 };
 
+/* ── Helpers ──────────────────────────────────────────────────────── */
+
+/** Every mechanic a detachment's rules contribute, flattened for the context. */
+function detachmentMechanics(detachment: Detachment | null): Mechanic[] {
+    return detachment?.abilities.flatMap((a) => a.mechanics ?? []) ?? [];
+}
+
 /* ── Subcomponents ────────────────────────────────────────────────── */
+
+/**
+ * The army-level fields at the top of a combatant column: which detachment the
+ * unit is fielded in, and which of that detachment's Enhancements it carries.
+ *
+ * The enhancement field is hidden unless the unit can actually take one — an
+ * Enhancement goes on a CHARACTER model — so an empty select never appears for
+ * a rank-and-file unit.
+ */
+function ArmyFields({
+    detachmentSlug,
+    onDetachmentChange,
+    detachment,
+    enhancementId,
+    onEnhancementChange,
+    selectedEnhancement,
+    showEnhancement,
+}: {
+    detachmentSlug: string | null;
+    onDetachmentChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+    detachment: Detachment | null;
+    enhancementId: string | null;
+    onEnhancementChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+    selectedEnhancement: Enhancement | null;
+    showEnhancement: boolean;
+}) {
+    const enhancements = detachment?.enhancements ?? [];
+
+    return (
+        <>
+            <SelectGroup
+                label="Detachment"
+                value={detachmentSlug}
+                onChange={onDetachmentChange}
+            >
+                {detachmentsByFaction.map((group) => (
+                    <optgroup key={group.slug} label={group.name}>
+                        {group.detachments.map((det) => (
+                            <option key={det.slug} value={det.slug}>
+                                {det.name}
+                            </option>
+                        ))}
+                    </optgroup>
+                ))}
+            </SelectGroup>
+            {showEnhancement && enhancements.length > 0 && (
+                <div className="flex flex-col gap-1">
+                    <SelectGroup
+                        label="Enhancement"
+                        value={enhancementId}
+                        onChange={onEnhancementChange}
+                    >
+                        {enhancements.map((enhancement) => (
+                            <option key={enhancement.id} value={enhancement.id}>
+                                {enhancement.name}
+                                {enhancement.cost !== undefined
+                                    ? ` (${enhancement.cost} pts)`
+                                    : ""}
+                            </option>
+                        ))}
+                    </SelectGroup>
+                    {selectedEnhancement?.description && (
+                        <p className="text-blockcaps-xs text-skarsnikGreen/50 leading-snug">
+                            {selectedEnhancement.description}
+                        </p>
+                    )}
+                </div>
+            )}
+        </>
+    );
+}
 
 function SelectGroup({
     label,
@@ -533,7 +722,9 @@ function SelectGroup({
     children,
 }: {
     label: string;
-    value: number | null;
+    // Unit/weapon fields select by manifest index; detachments and enhancements
+    // select by slug and id, which are stable across data refreshes.
+    value: string | number | null;
     onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
     placeholder?: boolean;
     children: React.ReactNode;
@@ -572,13 +763,13 @@ function ResultRow({
     value: React.ReactNode;
 }) {
     return (
-        <div className="grid grid-cols-[100px_40px_1fr_auto] items-center gap-2 px-3 py-2">
-            <span className="text-blockcaps-xs text-skarsnikGreen/60">
+        <div className="grid grid-cols-[120px_40px_1fr_auto] items-center gap-2 px-3 py-2">
+            <span className="text-blockcaps-m text-skarsnikGreen/60">
                 {label}
             </span>
             <span />
             <span />
-            <span className="text-blockcaps-s text-skarsnikGreen/60 text-center">
+            <span className="text-blockcaps-m text-skarsnikGreen/60 text-center">
                 {value}
             </span>
         </div>
@@ -680,6 +871,9 @@ function PhaseRow({
         const crit = phase.modifiers.get(attr)?.criticalWound;
         return crit !== undefined ? Math.min(threshold, crit) : threshold;
     }, 6);
+    // A target worse than 6+ is unreachable on a D6 — a save stripped away by
+    // AP, or a blocked hit roll. Show "-" rather than an impossible "7+".
+    const isUnmakeable = showTarget && phase.modifiedValue > 6;
     const baseDisplay = isAutoSuccess
         ? "Auto"
         : phase.baseDisplay
@@ -687,14 +881,18 @@ function PhaseRow({
     const finalDisplay = isAutoSuccess
         ? "Auto"
         : phase.modifiedDisplay
-          ?? (showTarget ? `${phase.modifiedValue}+` : `${phase.modifiedValue}`);
+          ?? (isUnmakeable
+              ? "-"
+              : showTarget
+                ? `${phase.modifiedValue}+`
+                : `${phase.modifiedValue}`);
 
     return (
-        <div className="grid grid-cols-[100px_40px_1fr_auto] items-center gap-2 px-3 py-2">
-            <span className="text-blockcaps-xs text-skarsnikGreen/60">
+        <div className="grid grid-cols-[120px_60px_1fr_auto] items-center gap-2 px-3 py-2">
+            <span className="text-blockcaps-m text-skarsnikGreen/60">
                 {label}
             </span>
-            <span className="text-blockcaps-s text-skarsnikGreen/60 text-center">
+            <span className="text-blockcaps-m text-skarsnikGreen/60 text-center">
                 {baseDisplay}
             </span>
             <span className="flex flex-col gap-1">
@@ -708,7 +906,7 @@ function PhaseRow({
                         {keywords.map((kw, i) => (
                             <span
                                 key={i}
-                                className="text-[0.6rem] uppercase tracking-widest px-1.5 py-0.5 border border-dashed border-skarsnikGreen/30 text-skarsnikGreen/40"
+                                className="text-[0.7rem] uppercase tracking-widest px-1.5 py-0.5 border border-dashed border-skarsnikGreen/30 text-skarsnikGreen/40"
                             >
                                 {kw} (on crit {critThreshold}+)
                             </span>
@@ -717,7 +915,7 @@ function PhaseRow({
                 )}
             </span>
             <span
-                className={`text-blockcaps-s text-center ${phase.baseValue !== phase.modifiedValue ? "text-skarsnikGreen" : "text-skarsnikGreen/60"}`}
+                className={`text-blockcaps-m text-center ${phase.baseValue !== phase.modifiedValue ? "text-skarsnikGreen" : "text-skarsnikGreen/60"}`}
             >
                 {finalDisplay}
             </span>
@@ -727,11 +925,11 @@ function PhaseRow({
 
 function DamageRow({ label, damage }: { label: string; damage: DamageResult }) {
     return (
-        <div className="grid grid-cols-[100px_40px_1fr_auto] items-center gap-2 px-3 py-2">
-            <span className="text-blockcaps-xs text-skarsnikGreen/60">
+        <div className="grid grid-cols-[120px_40px_1fr_auto] items-center gap-2 px-3 py-2">
+            <span className="text-blockcaps-m text-skarsnikGreen/60">
                 {label}
             </span>
-            <span className="text-blockcaps-s text-skarsnikGreen/60 text-center">
+            <span className="text-blockcaps-m text-skarsnikGreen/60 text-center">
                 {damage.baseDamage}
             </span>
             <span className="flex flex-col gap-1">
@@ -741,7 +939,7 @@ function DamageRow({ label, damage }: { label: string; damage: DamageResult }) {
                 />
             </span>
             <span
-                className={`text-blockcaps-s text-center ${damage.baseDamage !== damage.resolvedDamage ? "text-skarsnikGreen" : "text-skarsnikGreen/60"}`}
+                className={`text-blockcaps-m text-center ${damage.baseDamage !== damage.resolvedDamage ? "text-skarsnikGreen" : "text-skarsnikGreen/60"}`}
             >
                 {damage.resolvedDamage}
             </span>
@@ -767,29 +965,26 @@ function CombatStatePanel({
         onChange({ ...state, [key]: value });
     };
 
-    const maxModels = Math.max(...unit.models.map((m) => m.composition.max));
+    // From unitComposition, summed across its lines. models[].composition is
+    // built by an unsound index-join and reports max 1 for a 5-10 model squad,
+    // which sent every Space Marine squad down the single-model branch below.
+    const maxModels = unit.unitComposition.reduce(
+        (total, line) => total + line.max,
+        0,
+    );
     const woundsPerModel = unit.models[0].w;
     const isSingleModelMultiWound = maxModels === 1 && woundsPerModel > 1;
 
-    const [startingModels, setStartingModels] = useState(state.modelCount);
-    const [startingWounds, setStartingWounds] = useState(state.currentWounds);
-
-    useEffect(() => {
-        setStartingModels(state.modelCount);
-        setStartingWounds(state.currentWounds);
-    }, [unit.id]);
-
-    const starting = isSingleModelMultiWound ? startingWounds : startingModels;
+    // Starting values live on the combat state rather than in local React state,
+    // so the engine can derive unit strength from the same numbers the panel shows.
+    const starting = isSingleModelMultiWound
+        ? woundsPerModel
+        : state.startingModelCount;
     const current = isSingleModelMultiWound
         ? state.currentWounds
         : state.modelCount;
 
-    const derivedStrength: CombatState["unitStrength"] =
-        current >= starting
-            ? "full"
-            : current < starting / 2
-              ? "belowHalf"
-              : "belowStarting";
+    const derivedStrength = deriveUnitStrength({ current, starting });
 
     const derivedDamaged =
         unit.damaged !== null
@@ -816,31 +1011,38 @@ function CombatStatePanel({
             </div>
             <div className="flex flex-col gap-1.5 text-blockcaps-xs">
                 {isSingleModelMultiWound ? (
-                    <>
-                        <StateNumberRow
-                            label="Starting Wounds"
-                            value={startingWounds}
-                            min={0}
-                            max={woundsPerModel}
-                            onChange={setStartingWounds}
-                        />
-                        <StateNumberRow
-                            label="Current Wounds"
-                            value={state.currentWounds}
-                            min={0}
-                            max={woundsPerModel}
-                            onChange={(v) => update("currentWounds", v)}
-                        />
-                    </>
+                    <div className="flex flex-row gap-1">
+                        <div className="grow">
+                            <StateNumberRow
+                                label="Starting Wounds"
+                                value={woundsPerModel}
+                                min={0}
+                                max={woundsPerModel}
+                                readOnly
+                            />
+                        </div>
+                        <div className="grow">
+                            <StateNumberRow
+                                label="Current Wounds"
+                                value={state.currentWounds}
+                                min={0}
+                                max={woundsPerModel}
+                                onChange={(v) => update("currentWounds", v)}
+                            />
+                        </div>
+                    </div>
                 ) : (
-                    <>
+                <div className="flex flex-row gap-1">
+                    <div className="grow">
                         <StateNumberRow
                             label="Starting Models"
-                            value={startingModels}
+                            value={state.startingModelCount}
                             min={0}
                             max={maxModels}
-                            onChange={setStartingModels}
-                        />
+                            onChange={(v) => update("startingModelCount", v)}
+                                />
+                            </div>
+                    <div className="grow">
                         <StateNumberRow
                             label="Current Models"
                             value={state.modelCount}
@@ -848,7 +1050,8 @@ function CombatStatePanel({
                             max={maxModels}
                             onChange={(v) => update("modelCount", v)}
                         />
-                    </>
+                            </div>
+                </div>
                 )}
                 <StateReadOnlyRow
                     label="Strength"
@@ -1004,12 +1207,14 @@ function StateNumberRow({
     onChange,
     min,
     max,
+    readOnly,
 }: {
     label: string;
     value: number;
-    onChange: (v: number) => void;
+    onChange?: (v: number) => void;
     min?: number;
     max?: number;
+    readOnly?: boolean;
 }) {
     return (
         <div className={stateRowCls}>
@@ -1019,7 +1224,9 @@ function StateNumberRow({
                 value={value}
                 min={min}
                 max={max}
+                readOnly={readOnly}
                 onChange={(e) => {
+                    if (readOnly || !onChange) return;
                     let v = Number(e.target.value) || 0;
                     if (min !== undefined && v < min) v = min;
                     if (max !== undefined && v > max) v = max;

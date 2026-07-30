@@ -22,21 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Jump Pack",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
@@ -47,12 +32,27 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
+            "keyword": "Suppressor Squad",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Suppressor Squad",
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -232,7 +232,19 @@
             "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks made with an accelerator autocannon. Until the start of your next turn, while this unit is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Suppression Fire",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -27,12 +27,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Deathwing",
+            "keyword": "Deathwing Command Squad",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,7 +47,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Deathwing Command Squad",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -588,7 +588,8 @@
             "description": "The bearer has a Wounds characteristic of 4.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Narthecium",
@@ -596,7 +597,8 @@
             "description": "While this unit contains an Apothecary, in your Command phase, you can return 1 destroyed model (excluding Character models) to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Astartes Banner",
@@ -604,7 +606,16 @@
             "description": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of its models.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Honour or Death",
@@ -612,7 +623,8 @@
             "description": "While this unit contains a Company Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -620,7 +632,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

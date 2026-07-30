@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Doomsday Ark",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -42,7 +42,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -213,7 +221,18 @@
             "description": "In your Movement phase, if this model Remains Stationary, until the end of the turn, its doomsday cannon has the [DEVASTATING WOUNDS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Overwhelming Obliteration",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

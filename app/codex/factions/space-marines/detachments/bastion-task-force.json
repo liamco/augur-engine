@@ -80,6 +80,30 @@
             }
         },
         {
+            "id": "000010677005",
+            "name": "SHOCK BOMBARDMENT",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "An auspex-guided hail of shock charges blinds the foe’s targeting systems and skews their aim.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after an Adeptus Astartes Battleline unit from your army finished making its attacks.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">BATTLELINE</span> unit.<br><br><b>EFFECT:</b> When an enemy unit is auspex scanned as a result of those attacks this turn, until the start of your next turn, it is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000070",
+                    "000000303",
+                    "000000305",
+                    "000001157",
+                    "000001177",
+                    "000001606",
+                    "000002783",
+                    "000002799",
+                    "000004154",
+                    "000004175"
+                ]
+            }
+        },
+        {
             "id": "000010677007",
             "name": "HERESY UNDONE",
             "type": "Strategic Ploy",
@@ -99,30 +123,6 @@
                     "000002783",
                     "000002799",
                     "000003875",
-                    "000004154",
-                    "000004175"
-                ]
-            }
-        },
-        {
-            "id": "000010677005",
-            "name": "SHOCK BOMBARDMENT",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "An auspex-guided hail of shock charges blinds the foe’s targeting systems and skews their aim.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after an Adeptus Astartes Battleline unit from your army finished making its attacks.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">BATTLELINE</span> unit.<br><br><b>EFFECT:</b> When an enemy unit is auspex scanned as a result of those attacks this turn, until the start of your next turn, it is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000070",
-                    "000000303",
-                    "000000305",
-                    "000001157",
-                    "000001177",
-                    "000001606",
-                    "000002783",
-                    "000002799",
                     "000004154",
                     "000004175"
                 ]
@@ -411,5 +411,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "take-and-hold"
 }

@@ -17,19 +17,14 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Black Templars",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Black Templars",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Smoke",
@@ -37,12 +32,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Gladiator Reaper",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -52,7 +52,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -328,7 +336,18 @@
             "description": "This model’s twin heavy onslaught gatling cannon has the [SUSTAINED HITS 2] ability while targeting <span class=\"kwb\">INFANTRY</span> units.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Reaping Tally",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 2
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

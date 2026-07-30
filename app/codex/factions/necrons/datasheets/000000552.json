@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Monolith",
             "model": "",
             "isFactionKeyword": false
@@ -32,17 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Titanic",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         }
@@ -52,7 +52,22 @@
         "range": "1-7",
         "threshold": 7,
         "description": "While this model has 1-7 wounds remaining, subtract 4 from its Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            },
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "objectiveControl",
+                "value": 4
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -266,7 +281,8 @@
             "description": "In the Reinforcements step of your Movement phase, you can select one Necrons Infantry unit from your army that is either in Reserves or on the battlefield (if you select the latter, remove that unit from the battlefield and place it into Reserves). That unit is then set up anywhere on the battlefield that is wholly within 6\" of this model and not within Engagement Range of any enemy models. That unit cannot declare a charge this turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

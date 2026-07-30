@@ -17,16 +17,16 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000303",
-                "slug": "blood-claws"
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
             },
             {
                 "id": "000000305",
                 "slug": "grey-hunters"
             },
             {
-                "id": "000004131",
-                "slug": "wolf-guard-headtakers"
+                "id": "000000303",
+                "slug": "blood-claws"
             }
         ],
         "leaderNotes": ""
@@ -43,22 +43,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Wolf Guard",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Battle Leader",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Wolf Guard",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -68,7 +63,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         }
@@ -347,7 +347,33 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability and, each time a model in that unit makes an attack that targets an enemy unit within 6\", re-roll a Hit roll of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Tempered Ferocity",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "name": "Tempered Ferocity",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Heroic Last Stand",
@@ -355,7 +381,8 @@
             "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Storm Shield",
@@ -363,7 +390,8 @@
             "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

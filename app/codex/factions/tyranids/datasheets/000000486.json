@@ -22,21 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vanguard Invader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Hive Crone",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Monster",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
@@ -47,7 +32,22 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hive Crone",
             "model": "",
             "isFactionKeyword": false
         }
@@ -57,7 +57,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -293,7 +301,28 @@
             "description": "Each time this model makes a ranged attack that targets a unit that can <span class=\"kwb\">FLY</span>, add 1 to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Airborne Predator",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "FLY"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Airborne Predator",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

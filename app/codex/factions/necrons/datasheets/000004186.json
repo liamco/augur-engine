@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Nekrosor Ammentar",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
@@ -38,11 +43,6 @@
         },
         {
             "keyword": "Destroyer Cult",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Nekrosor Ammentar",
             "model": "",
             "isFactionKeyword": false
         }
@@ -197,7 +197,7 @@
     ],
     "pointsCosts": [
         {
-            "cost": 165,
+            "cost": 185,
             "count": 1
         }
     ],
@@ -223,15 +223,37 @@
             "description": "While this model is within 3\" of one or more other friendly Destroyer Cult units, this model has the Lone Operative ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Protective Disciples",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "LONE OPERATIVE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Infectious Murder-madness (Aura)",
             "legend": "",
-            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding Titanic units) is within 6\" of this model, each time a model in that unit makes an attack, if that model has the Destroyer Cult keyword or that enemy unit is the closest eligible target, that attack has the [SUSTAINED HITS 1] ability.",
+            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding Monster and Titanic units) is within 6\" of this model, each time a model in that unit makes an attack, if that model has the Destroyer Cult keyword or that enemy unit is the closest eligible target, that attack has the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Infectious Murder-madness (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Prophet of Destruction",
@@ -239,7 +261,16 @@
             "description": "Each time this model destroys an enemy unit, select one other friendly Destroyer Cult unit within 9\" of it. Until the end of the phase, each time a model in that unit makes an attack, re-roll a Wound roll of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Prophet of Destruction",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Nullstone Field Generator (Aura)",
@@ -247,7 +278,16 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Nullstone Field Generator (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

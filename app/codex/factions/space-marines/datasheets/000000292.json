@@ -17,28 +17,28 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004131",
-                "slug": "wolf-guard-headtakers"
+                "id": "000000303",
+                "slug": "blood-claws"
             },
             {
                 "id": "000000305",
                 "slug": "grey-hunters"
             },
             {
-                "id": "000000303",
-                "slug": "blood-claws"
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Space Wolves",
+            "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
@@ -58,12 +58,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Psyker",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Njal Stormcaller",
             "model": "",
             "isFactionKeyword": false
         },
@@ -73,7 +68,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Njal Stormcaller",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
             "model": "",
             "isFactionKeyword": false
         }
@@ -284,7 +284,26 @@
             "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and each time that unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Wind Walker (Psychic)",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "ASSAULT"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Tempest’s Wrath (Psychic)",
@@ -292,7 +311,8 @@
             "description": "In your Shooting phase, after this model’s unit has shot, select one enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) hit by one or more of those attacks made with this model’s Living Lightning weapon. Until the start of your next turn, that enemy unit is stormwracked. While a unit is stormwracked, subtract 6\" from the Range characteristic of ranged weapons equipped by models in that unit (to a minimum of 12\").",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

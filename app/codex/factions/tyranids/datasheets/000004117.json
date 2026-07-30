@@ -30,27 +30,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
-            "model": "RAVENER PRIME",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Synapse",
             "model": "RAVENER PRIME",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
-            "model": "ALL MODELS",
+            "keyword": "Character",
+            "model": "RAVENER PRIME",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Great Devourer",
-            "model": "ALL MODELS",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vanguard Invader",
+            "keyword": "Hyperadapted Raveners",
             "model": "ALL MODELS",
             "isFactionKeyword": false
         },
@@ -60,7 +50,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Hyperadapted Raveners",
+            "keyword": "Vanguard Invader",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "ALL MODELS",
             "isFactionKeyword": false
         }
@@ -277,7 +277,18 @@
             "description": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Alpha Invader",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Hypersensory Array",
@@ -285,7 +296,8 @@
             "description": "Once per battle round, you can target this unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

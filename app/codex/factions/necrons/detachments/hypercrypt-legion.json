@@ -69,48 +69,6 @@
             }
         },
         {
-            "id": "000008555006",
-            "name": "DIMENSIONAL CORRIDOR",
-            "type": "Strategic Ploy",
-            "cpCost": 2,
-            "legend": "As the tomb's warriors pass through a dimensional displacement corridor, the passage’s surface is lit with data-glyphs providing hyperlogical tactical information. When they step from an eternity gate, they are already prepared for the hunt.",
-            "turn": "Your turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that was set up on the battlefield this turn using the Eternity Gate ability of a MONOLITH model that started the turn on the battlefield.<br><br><b>EFFECT:</b> Your unit is eligible to charge this phase.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000522",
-                    "000000523",
-                    "000000524",
-                    "000000527",
-                    "000000528",
-                    "000000530",
-                    "000000531",
-                    "000000532",
-                    "000000534",
-                    "000000535",
-                    "000000536",
-                    "000000537",
-                    "000000538",
-                    "000000539",
-                    "000002092",
-                    "000002108",
-                    "000002109",
-                    "000002110",
-                    "000002111",
-                    "000002350",
-                    "000002352",
-                    "000002353",
-                    "000002354",
-                    "000002355",
-                    "000002358",
-                    "000003693",
-                    "000004178",
-                    "000004186"
-                ]
-            }
-        },
-        {
             "id": "000008555002",
             "name": "HYPERPHASIC RECALL",
             "type": "Strategic Ploy",
@@ -154,22 +112,44 @@
             }
         },
         {
-            "id": "000008555007",
-            "name": "ENTROPIC DAMPING",
-            "type": "Wargear",
-            "cpCost": 1,
-            "legend": "Towering war engines rise from an erupting tomb in its defence, directing entropic energies to weaken and fracture the enemies' own weapons and turning them into dangerous tools only the desperate would use.",
-            "turn": "Opponent’s turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One TITANIC model from your army that was selected as the target of one or more of the attacking unit’s attacks and is within 18\" of the attacking unit.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by models in the attacking unit have the [HAZARDOUS] ability.",
+            "id": "000008555006",
+            "name": "DIMENSIONAL CORRIDOR",
+            "type": "Strategic Ploy",
+            "cpCost": 2,
+            "legend": "As the tomb's warriors pass through a dimensional displacement corridor, the passage’s surface is lit with data-glyphs providing hyperlogical tactical information. When they step from an eternity gate, they are already prepared for the hunt.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that was set up on the battlefield this turn using the Eternity Gate ability of a MONOLITH model that started the turn on the battlefield.<br><br><b>EFFECT:</b> Your unit is eligible to charge this phase.",
             "eligibleDatasheets": {
                 "include": [
-                    "000000552",
-                    "000000556",
-                    "000000557",
-                    "000000567",
-                    "000001577",
-                    "000002362"
+                    "000000522",
+                    "000000523",
+                    "000000524",
+                    "000000527",
+                    "000000528",
+                    "000000530",
+                    "000000531",
+                    "000000532",
+                    "000000534",
+                    "000000535",
+                    "000000536",
+                    "000000537",
+                    "000000538",
+                    "000000539",
+                    "000002092",
+                    "000002108",
+                    "000002109",
+                    "000002110",
+                    "000002111",
+                    "000002350",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000002358",
+                    "000003693",
+                    "000004178",
+                    "000004186"
                 ]
             }
         },
@@ -204,6 +184,26 @@
                     "000002115",
                     "000002360",
                     "000002361",
+                    "000002362"
+                ]
+            }
+        },
+        {
+            "id": "000008555007",
+            "name": "ENTROPIC DAMPING",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "Towering war engines rise from an erupting tomb in its defence, directing entropic energies to weaken and fracture the enemies' own weapons and turning them into dangerous tools only the desperate would use.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One TITANIC model from your army that was selected as the target of one or more of the attacking unit’s attacks and is within 18\" of the attacking unit.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by models in the attacking unit have the [HAZARDOUS] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000552",
+                    "000000556",
+                    "000000557",
+                    "000000567",
+                    "000001577",
                     "000002362"
                 ]
             }
@@ -307,5 +307,8 @@
             }
         }
     ],
-    "eligibleDatasheets": "all"
+    "eligibleDatasheets": "all",
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "reconnaissance"
 }

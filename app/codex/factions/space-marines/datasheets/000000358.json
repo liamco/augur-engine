@@ -17,14 +17,19 @@
     "leader": null,
     "keywords": [
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Deathwatch",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Fly",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
@@ -32,17 +37,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Aircraft",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
+            "keyword": "Transport",
             "model": "",
             "isFactionKeyword": false
         },
@@ -52,7 +47,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Transport",
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -62,7 +62,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -364,7 +372,8 @@
             "description": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Auspex Array",
@@ -372,7 +381,27 @@
             "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Auspex Array",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Auspex Array",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Infernum Halo-launcher",
@@ -380,7 +409,18 @@
             "description": "The bearer has the <span class=\"kwb\">SMOKE</span> keyword.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Infernum Halo-launcher",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "SMOKE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

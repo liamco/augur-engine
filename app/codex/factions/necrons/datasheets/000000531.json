@@ -30,12 +30,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Noble",
+            "keyword": "Anrakyr the Traveller",
             "model": "",
             "isFactionKeyword": false
         },
@@ -50,7 +45,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Anrakyr the Traveller",
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Noble",
             "model": "",
             "isFactionKeyword": false
         }
@@ -202,7 +202,16 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Lord of the Pyrrhian Eternals",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Mind in the Machine",
@@ -210,7 +219,19 @@
             "description": "At the start of your opponent’s Shooting phase, select one enemy <span class=\"kwb\">VEHICLE</span> unit within 12\" of and visible to this model. That unit must take a Leadership test. If that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Mind in the Machine",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "One Shot",
@@ -218,7 +239,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

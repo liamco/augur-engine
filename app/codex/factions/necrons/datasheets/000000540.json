@@ -22,7 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Stalker",
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,12 +37,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Walker",
+            "keyword": "Stalker",
             "model": "",
             "isFactionKeyword": false
         }
@@ -287,7 +287,8 @@
             "description": "In your Shooting phase, each time this model is selected to shoot, after resolving its attacks, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

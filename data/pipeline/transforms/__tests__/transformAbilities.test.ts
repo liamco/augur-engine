@@ -5,6 +5,65 @@ import {
 } from "../transformAbilities";
 import type { RawAbility } from "../../types";
 
+describe("transformAbilities — extracted mechanics", () => {
+    const datasheetAbility = (description: string) =>
+        transformAbilities([
+            {
+                id: "",
+                factionId: "",
+                name: "Strafing Run",
+                legend: "",
+                description,
+                type: "Datasheet",
+                parameter: "",
+            },
+        ] as never)[0] as unknown as Record<string, unknown>;
+
+    it("populates mechanics from a parseable description", () => {
+        const ability = datasheetAbility(
+            "Each time this model makes a ranged attack that targets a unit that cannot Fly, add 1 to the Hit roll.",
+        );
+
+        expect(ability.mechanics).toEqual([
+            {
+                name: "Strafing Run",
+                entity: "thisUnit",
+                effect: "rollBonus",
+                attribute: "hit",
+                value: 1,
+                phase: ["shooting"],
+            },
+        ]);
+        expect(ability.mechanicsSource).toBe("regex");
+    });
+
+    it("leaves mechanics empty and marks it unparsed when nothing matches", () => {
+        const ability = datasheetAbility(
+            "At the start of the first battle round, select one objective marker on the battlefield.",
+        );
+
+        expect(ability.mechanics).toEqual([]);
+        expect(ability.mechanicsSource).toBe("unparsed");
+    });
+
+    it("does not add mechanics to Core or Faction shells", () => {
+        const shell = transformAbilities([
+            {
+                id: "000008343",
+                factionId: "",
+                name: "Deep Strike",
+                legend: "",
+                description: "<p>units have the Deep Strike ability</p>",
+                type: "Core",
+                parameter: "",
+            },
+        ] as never)[0] as unknown as Record<string, unknown>;
+
+        expect(shell).not.toHaveProperty("mechanics");
+        expect(shell).not.toHaveProperty("mechanicsSource");
+    });
+});
+
 describe("extractFactionAbilities", () => {
     const oath = {
         id: "000008350",
@@ -173,7 +232,9 @@ describe("transformAbilities", () => {
             description: "While this model is leading a unit...",
             type: "Datasheet",
             parameter: null,
+            // Truncated fixture description grants nothing, so nothing extracts.
             mechanics: [],
+            mechanicsSource: "unparsed",
         });
     });
 

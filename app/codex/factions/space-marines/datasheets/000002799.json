@@ -17,27 +17,17 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Black Templars",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Tacticus",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Crusader Squad",
+            "keyword": "Battleline",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,7 +37,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Battleline",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Crusader Squad",
             "model": "",
             "isFactionKeyword": false
         },
@@ -484,7 +484,7 @@
             "count": 1
         },
         {
-            "cost": 310,
+            "cost": 300,
             "count": 1
         }
     ],
@@ -500,7 +500,8 @@
             "description": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models in this unit were destroyed as a result of those attacks, this unit can make a Righteous Zeal move. To do so, roll one D6 and add 2 to the result: models in this unit move a number of inches up to this result, but this unit must end that move as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Righteous Zeal move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Righteous Zeal move per phase.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -508,7 +509,8 @@
             "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

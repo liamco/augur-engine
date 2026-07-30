@@ -1,8 +1,11 @@
+import type { Mechanic } from "@/app/types/Mechanic";
+import { extractDamagedMechanics } from "./abilityMechanics/damagedProfile";
+
 export interface ParsedDamagedProfile {
     range: string;
     threshold: number;
     description: string;
-    mechanics: never[];
+    mechanics: Mechanic[];
 }
 
 function stripHtml(html: string): string {
@@ -39,6 +42,6 @@ export function transformDamaged(
         range,
         threshold,
         description: stripHtml(damagedDescription),
-        mechanics: [],
+        mechanics: extractDamagedMechanics(damagedDescription) ?? [],
     };
 }

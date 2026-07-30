@@ -17,6 +17,50 @@
     "leader": {
         "canLead": [
             {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
                 "id": "000000070",
                 "slug": "tactical-squad"
             },
@@ -25,64 +69,20 @@
                 "slug": "fortis-kill-team-2"
             },
             {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
+                "id": "000000126",
+                "slug": "infernus-squad"
             },
             {
                 "id": "000002255",
                 "slug": "sternguard-veteran-squad"
             },
             {
-                "id": "000000126",
-                "slug": "infernus-squad"
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             },
             {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
             }
         ],
         "leaderNotes": ""
@@ -94,17 +94,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Judiciar",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -114,7 +104,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Judiciar",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -260,7 +260,26 @@
             "description": "While this model is leading a unit, that unit has the Fights First ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Tempormortis",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "FIGHTS FIRST"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Silent Fury",
@@ -268,7 +287,8 @@
             "description": "Each time this model destroys an enemy <span class=\"kwb\">CHARACTER</span> model, until the end of the battle, add 1 to the Attacks characteristic of its executioner relic blade.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

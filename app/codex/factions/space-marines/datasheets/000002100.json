@@ -17,84 +17,84 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004185",
-                "slug": "victrix-honour-guard"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000002772",
-                "slug": "company-heroes"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
+                "id": "000004175",
+                "slug": "decimus-kill-team"
             },
             {
                 "id": "000001154",
                 "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000004185",
+                "slug": "victrix-honour-guard"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
             },
             {
                 "id": "000001606",
                 "slug": "assault-intercessor-squad"
             },
             {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
             }
         ],
         "leaderNotes": ""
@@ -111,7 +111,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -131,17 +141,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Adrax Agatone",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -286,7 +286,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Lord of the Pyroclasts",
@@ -294,7 +295,8 @@
             "description": "While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

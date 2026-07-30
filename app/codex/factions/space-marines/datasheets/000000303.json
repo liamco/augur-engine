@@ -27,17 +27,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Blood Claws",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,12 +37,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Blood Claws",
             "model": "",
             "isFactionKeyword": false
         }
@@ -305,7 +305,8 @@
             "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

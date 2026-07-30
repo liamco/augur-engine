@@ -42,22 +42,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Psyker",
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
@@ -67,12 +62,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Librarian",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -507,7 +507,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Psychic Hood",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Mental Fortress (Psychic)",
@@ -515,7 +532,16 @@
             "description": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Mental Fortress (Psychic)",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

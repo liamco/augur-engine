@@ -17,24 +17,14 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Sanguinary Guard",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Imperium",
@@ -42,12 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Jump Pack",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -57,7 +42,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Sanguinary Guard",
             "model": "",
             "isFactionKeyword": false
         }
@@ -286,7 +286,19 @@
             "description": "Each time a melee attack targets this unit, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Angelic Visage",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Heirs of Azkaellon",
@@ -294,7 +306,19 @@
             "description": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Heirs of Azkaellon",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Sanguinary Banner",
@@ -302,7 +326,16 @@
             "description": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Sanguinary Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ATTACHED UNIT",
@@ -310,7 +343,8 @@
             "description": "If a Captain model from your army with the Leader ability can be attached to an Assault Intercessors with Jump Packs unit, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -27,7 +27,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Walker",
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,22 +52,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Bjorn the Fell-handed",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Bjorn the Fell-handed",
             "model": "",
             "isFactionKeyword": false
         }
@@ -342,7 +342,16 @@
             "description": "Each time an attack targets this model, if the Strength characteristic of that attack is greater than this model’s Toughness characteristic, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Legendary Tenacity",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Ancient Tactician",
@@ -350,7 +359,8 @@
             "description": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

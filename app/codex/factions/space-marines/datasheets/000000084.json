@@ -22,26 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Smoke",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Aircraft",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
@@ -52,7 +32,27 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         }
@@ -392,7 +392,28 @@
             "description": "Each time this model makes a ranged attack that targets a unit that can Fly, add 1 to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Interceptor",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "FLY"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Interceptor",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

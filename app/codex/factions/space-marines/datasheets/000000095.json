@@ -17,22 +17,17 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Ultramarines",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Honour Guard",
+            "keyword": "Ultramarines",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Honour Guard",
             "model": "",
             "isFactionKeyword": false
         },
@@ -43,6 +38,11 @@
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -228,7 +228,16 @@
             "description": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Honour Guard",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Astartes Banner",
@@ -236,7 +245,16 @@
             "description": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of models in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Honour or Death",
@@ -244,7 +262,8 @@
             "description": "While this unit contains a <span class=\"kwb\">CHAPTER</span> <span class=\"kwb\">CHAMPION</span>, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "HONOUR GUARD OF MACRAGGE",
@@ -252,7 +271,8 @@
             "description": "Marneus Calgar can be attached to this unit. If a Captain model from your army with the <span class=\"kwb\">LEADER</span> ability can be attached to a Command Squad, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Fortification",
+            "keyword": "Convergence of Dominion",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,7 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Convergence of Dominion",
+            "keyword": "Fortification",
             "model": "",
             "isFactionKeyword": false
         }
@@ -147,7 +147,16 @@
             "description": "While a friendly Necrons Infantry unit is within 6\" of this Fortification, models in that unit have Feel No Pain 6+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Reanimation Nodes (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Ancient Cover",
@@ -155,7 +164,8 @@
             "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this <span class=\"kwb\">FORTIFICATION</span>, that model has the Benefit of Cover against that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Fortification",
@@ -163,7 +173,8 @@
             "description": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army: <br><ul><li>That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. </li><li>Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "DEPLOYMENT",
@@ -171,7 +182,8 @@
             "description": "When this unit is first set up on the battlefield, its models do not have to be set up in Unit Coherency. Instead, each model must be set up wholly within 12\" of one other model from its unit. From that point on, each model in this unit is treated as a separate unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

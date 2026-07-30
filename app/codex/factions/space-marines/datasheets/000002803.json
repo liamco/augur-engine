@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000303",
-                "slug": "blood-claws"
-            },
-            {
                 "id": "000000305",
                 "slug": "grey-hunters"
+            },
+            {
+                "id": "000000303",
+                "slug": "blood-claws"
             },
             {
                 "id": "000000326",
@@ -33,14 +33,24 @@
     },
     "keywords": [
         {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Space Wolves",
+            "keyword": "Character",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard Pack Leader in Terminator Armour",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Pack Leader",
@@ -53,27 +63,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Wolf Guard Pack Leader in Terminator Armour",
             "model": "",
             "isFactionKeyword": false
         }
@@ -524,7 +524,8 @@
             "description": "The bearer has a Wounds characteristic of 4.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Inspiring Leader",
@@ -532,7 +533,8 @@
             "description": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Pack Leader",
@@ -540,7 +542,8 @@
             "description": "This model cannot be your Warlord and cannot be given Enhancements.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

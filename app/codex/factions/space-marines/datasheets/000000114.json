@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Storm Speeder Hammerstrike",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +42,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Storm Speeder Hammerstrike",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -248,7 +248,8 @@
             "description": "Each time this model has shot, select one enemy unit that was hit by one or more attacks made by this model this phase. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

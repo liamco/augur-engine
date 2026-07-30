@@ -17,16 +17,16 @@
     "leader": {
         "canLead": [
             {
+                "id": "000000116",
+                "slug": "bike-squad"
+            },
+            {
                 "id": "000002712",
                 "slug": "outrider-squad"
             },
             {
                 "id": "000000241",
                 "slug": "ravenwing-black-knights"
-            },
-            {
-                "id": "000000116",
-                "slug": "bike-squad"
             },
             {
                 "id": "000001166",
@@ -47,18 +47,8 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Ravenwing",
-            "model": "ALL MODELS",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "ALL MODELS",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "ALL MODELS",
+            "keyword": "Character",
+            "model": "RAVENWING CHAMPION",
             "isFactionKeyword": false
         },
         {
@@ -72,8 +62,18 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
-            "model": "RAVENWING CHAMPION",
+            "keyword": "Ravenwing",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "ALL MODELS",
             "isFactionKeyword": false
         }
     ],
@@ -388,7 +388,8 @@
             "description": "While this unit contains a Ravenwing Apothecary, in your Command phase, you can return 1 destroyed model (excluding Character and Invader ATV models) to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Astartes Banner",
@@ -396,7 +397,16 @@
             "description": "While this unit contains an Ravenwing Ancient, add 1 to the Objective Control characteristic of models in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Honour or Death",
@@ -404,7 +414,8 @@
             "description": "While this unit contains a Ravenwing Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

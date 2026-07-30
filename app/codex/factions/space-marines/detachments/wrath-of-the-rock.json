@@ -128,21 +128,6 @@
     ],
     "stratagems": [
         {
-            "id": "000010161005",
-            "name": "TACTICAL MASTERY",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "When the constituent elements of the Dark Angels fight as one, the enemy is often overwhelmed and torn apart by the fluidity of the Chapter’s rapid advances, tactical withdrawals and unexpected counteroffensives.",
-            "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced. If your unit has the Ravenwing keyword, it is also eligible to shoot and declare a charge in a turn in which it Fell Back.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
             "id": "000010161004",
             "name": "ARMOUR OF CONTEMPT",
             "type": "Battle Tactic",
@@ -173,7 +158,6 @@
                     "000000073",
                     "000000076",
                     "000000079",
-                    "000000081",
                     "000000083",
                     "000000094",
                     "000000096",
@@ -234,7 +218,6 @@
                     "000001611",
                     "000002100",
                     "000002105",
-                    "000002199",
                     "000002234",
                     "000002266",
                     "000002291",
@@ -281,7 +264,23 @@
                     "000004180",
                     "000004183",
                     "000004184",
-                    "000004187"
+                    "000004187",
+                    "000004204"
+                ]
+            }
+        },
+        {
+            "id": "000010161005",
+            "name": "TACTICAL MASTERY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "When the constituent elements of the Dark Angels fight as one, the enemy is often overwhelmed and torn apart by the fluidity of the Chapter’s rapid advances, tactical withdrawals and unexpected counteroffensives.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced. If your unit has the Ravenwing keyword, it is also eligible to shoot and declare a charge in a turn in which it Fell Back.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
                 ]
             }
         },
@@ -294,21 +293,6 @@
             "turn": "Either player’s turn",
             "phase": "Command phase",
             "description": "<b>WHEN:</b> Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. In addition, until the end of the turn, if your unit does not have the Deathwing, Ravenwing or Vehicle keyword, each time a model in your unit makes an attack, add 1 to the Hit roll.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010161007",
-            "name": "LEONINE AGGRESSION",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "The Dark Angels are always aggressive in their waging of war, seizing any opportunity to pounce upon and annihilate their prey.",
-            "turn": "Opponent’s turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> End of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army within 3\" of one or more enemy units, or one Deathwing unit from your army within 6\" of one or more enemy units.<br><br><b>EFFECT:</b> Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge.<br><br><b>RESTRICTIONS:</b> Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -438,6 +422,21 @@
                     "000003875",
                     "000004133",
                     "000004139"
+                ]
+            }
+        },
+        {
+            "id": "000010161007",
+            "name": "LEONINE AGGRESSION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The Dark Angels are always aggressive in their waging of war, seizing any opportunity to pounce upon and annihilate their prey.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army within 3\" of one or more enemy units, or one Deathwing unit from your army within 6\" of one or more enemy units.<br><br><b>EFFECT:</b> Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge.<br><br><b>RESTRICTIONS:</b> Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
                 ]
             }
         }
@@ -623,5 +622,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "dark-angels",
+    "detachmentPoints": 3,
+    "disposition": "priority-assets"
 }

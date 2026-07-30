@@ -1,5 +1,10 @@
 export interface CombatState {
     modelCount: number;
+    /**
+     * Models the unit began the battle with, so unit strength can be derived
+     * without the caller remembering it separately. Seeded from unitComposition.
+     */
+    startingModelCount: number;
     unitStrength: "full" | "belowStarting" | "belowHalf";
     deadModelIds: string[];
     currentWounds: number;

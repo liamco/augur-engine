@@ -22,7 +22,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Heavy Intercessor Squad",
             "model": "",
             "isFactionKeyword": false
         },
@@ -38,16 +48,6 @@
         },
         {
             "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Gravis",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Heavy Intercessor Squad",
             "model": "",
             "isFactionKeyword": false
         }
@@ -267,7 +267,8 @@
             "description": "While this unit is within range of an objective marker you control, each time an attack with a Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour saving throw made against that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

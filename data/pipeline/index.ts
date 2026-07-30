@@ -10,6 +10,14 @@ import {
     createEligibilityIndex,
     recordDatasheetEligibility,
 } from "./transforms/eligibility";
+import {
+    applyDetachmentConfig,
+    loadDetachmentConfig,
+} from "./transforms/detachmentConfig";
+import {
+    buildDetachmentIndex,
+    type DetachmentIndexInput,
+} from "./transforms/detachmentIndex";
 import type { RawDatasheet, RawFaction, ParsedStratagem } from "./types";
 import type { ParsedFactionAbility } from "./transforms/transformAbilities";
 
@@ -40,6 +48,19 @@ const validateOnly = values.validate ?? false;
  * last as the file's contents.
  */
 const coreStratagemsById = new Map<string, ParsedStratagem>();
+
+/**
+ * Accumulated per faction and written once from main(), for the same reason as
+ * core stratagems: the index spans every faction, so writing it per faction
+ * would leave only the last one in the file.
+ */
+const detachmentIndexInputs: DetachmentIndexInput[] = [];
+
+/**
+ * Ability-mechanics extraction totals across the whole run. Reported at the end
+ * so a pattern silently regressing to zero matches is visible.
+ */
+const mechanicsTotals = { parsed: 0, unparsed: 0, perPattern: {} as Record<string, number> };
 
 function writeJson(path: string, data: unknown) {
     if (dryRun) {
@@ -99,7 +120,7 @@ function processFaction(factionSlug: string) {
 
         console.log(`  Processing datasheet: ${rawDatasheet.name} (${rawDatasheet.id})`);
 
-        const { datasheet, coreStratagems, factionAbilities } =
+        const { datasheet, coreStratagems, factionAbilities, mechanicsStats } =
             transformDatasheet(rawDatasheet);
 
         for (const stratagem of coreStratagems) {
@@ -108,6 +129,13 @@ function processFaction(factionSlug: string) {
 
         for (const ability of factionAbilities) {
             factionAbilitiesById.set(ability.id, ability);
+        }
+
+        mechanicsTotals.parsed += mechanicsStats.parsed;
+        mechanicsTotals.unparsed += mechanicsStats.unparsed;
+        for (const [pattern, count] of Object.entries(mechanicsStats.perPattern)) {
+            mechanicsTotals.perPattern[pattern] =
+                (mechanicsTotals.perPattern[pattern] ?? 0) + count;
         }
 
         recordDatasheetEligibility(eligibility, rawDatasheet);
@@ -148,10 +176,66 @@ function processFaction(factionSlug: string) {
         datasheets: datasheetIndex,
     });
 
-    for (const det of applyEligibility(detachments, eligibility)) {
-        writeJson(
-            join(OUTPUT_DIR, "factions", factionSlug, "detachments", `${det.slug}.json`),
-            det,
+    const factionOutDir = join(OUTPUT_DIR, "factions", factionSlug);
+    const {
+        detachments: configuredDetachments,
+        unconfigured,
+        unmatchedConfig,
+    } = applyDetachmentConfig(
+        applyEligibility(detachments, eligibility),
+        loadDetachmentConfig(factionOutDir),
+    );
+
+    if (unconfigured.length > 0) {
+        console.log(
+            `  ${unconfigured.length} detachment(s) have no config entry (no supplement/points/disposition): ${unconfigured.join(", ")}`,
+        );
+    }
+    if (unmatchedConfig.length > 0) {
+        console.log(
+            `  ${unmatchedConfig.length} config entry/entries have no detachment yet: ${unmatchedConfig.join(", ")}`,
+        );
+    }
+
+    for (const det of configuredDetachments) {
+        writeJson(join(factionOutDir, "detachments", `${det.slug}.json`), det);
+    }
+
+    detachmentIndexInputs.push({
+        faction: {
+            id: faction.id,
+            slug: faction.slug,
+            name: faction.name,
+        },
+        detachments: configuredDetachments,
+    });
+}
+
+/** Report ability-mechanics extraction coverage for the run. */
+function reportMechanicsCoverage() {
+    const { parsed, unparsed, perPattern } = mechanicsTotals;
+    const total = parsed + unparsed;
+    if (total === 0) return;
+
+    const pct = Math.round((100 * parsed) / total);
+    console.log(
+        `\nAbility mechanics: ${parsed}/${total} Datasheet abilities parsed (${pct}%), ${unparsed} unparsed`,
+    );
+    for (const [pattern, count] of Object.entries(perPattern).sort(
+        (a, b) => b[1] - a[1],
+    )) {
+        console.log(`  ${pattern}: ${count}`);
+    }
+
+    if (unparsed > 0) {
+        // This parse has just reset every ability to regex/unparsed, discarding
+        // any work step 4 had written into the codex. Say so plainly: the
+        // sequencing requirement is otherwise invisible until the engine
+        // silently loses rules.
+        console.log(
+            `\n  STEP 4 PENDING — ${unparsed} abilities have no mechanics.\n` +
+                `  This parse reset any previously skill-authored mechanics in the codex.\n` +
+                `  Run the parse-ability-mechanics skill, then npm run validate-mechanics.`,
         );
     }
 }
@@ -173,6 +257,28 @@ function writeCoreStratagems() {
         a.id.localeCompare(b.id),
     );
     writeJson(join(OUTPUT_DIR, "core-stratagems.json"), sorted);
+}
+
+/**
+ * Write the cross-faction detachment index. Skipped on a filtered run for the
+ * same reason as core stratagems: only some factions were read, so the file
+ * would silently lose the rest.
+ */
+function writeDetachmentIndex() {
+    if (values.faction || values.datasheet) {
+        console.log(
+            "Skipping detachment-index.json (filtered run — would be incomplete).",
+        );
+        return;
+    }
+    if (detachmentIndexInputs.length === 0) return;
+
+    const index = buildDetachmentIndex(detachmentIndexInputs);
+    writeJson(join(OUTPUT_DIR, "detachment-index.json"), index);
+    console.log(
+        `\nDetachment index: ${index.length} detachments, ` +
+            `${index.reduce((n, d) => n + d.enhancements.length, 0)} enhancements`,
+    );
 }
 
 // Main
@@ -207,7 +313,12 @@ function main() {
         }
     }
 
-    if (!validateOnly) writeCoreStratagems();
+    reportMechanicsCoverage();
+
+    if (!validateOnly) {
+        writeCoreStratagems();
+        writeDetachmentIndex();
+    }
 
     console.log("\nDone.");
 }

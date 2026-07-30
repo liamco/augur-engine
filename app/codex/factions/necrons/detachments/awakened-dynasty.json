@@ -33,17 +33,6 @@
     ],
     "stratagems": [
         {
-            "id": "000008371006",
-            "name": "PROTOCOL OF THE CONQUERING TYRANT",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "The legions employ the strategies of their masters in perfect synchronicity, laying down hails of mechanically coordinated fire.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets a unit within half range, re-roll a Hit roll of 1. If a NECRONS CHARACTER is leading your unit, until the end of the phase, you can re-roll the Hit roll for that attack instead.",
-            "eligibleDatasheets": "all"
-        },
-        {
             "id": "000008371004",
             "name": "PROTOCOL OF THE HUNGRY VOID",
             "type": "Battle Tactic",
@@ -52,6 +41,17 @@
             "turn": "Either player’s turn",
             "phase": "Fight phase",
             "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit. In addition, If a Necrons Character is leading your unit, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1. (this is not cumulative with any other modifiers that improve Armour Penetration].",
+            "eligibleDatasheets": "all"
+        },
+        {
+            "id": "000008371006",
+            "name": "PROTOCOL OF THE CONQUERING TYRANT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The legions employ the strategies of their masters in perfect synchronicity, laying down hails of mechanically coordinated fire.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets a unit within half range, re-roll a Hit roll of 1. If a NECRONS CHARACTER is leading your unit, until the end of the phase, you can re-roll the Hit roll for that attack instead.",
             "eligibleDatasheets": "all"
         },
         {
@@ -84,6 +84,58 @@
                     "000003693",
                     "000004178",
                     "000004186"
+                ]
+            }
+        },
+        {
+            "id": "000008371003",
+            "name": "PROTOCOL OF THE UNDYING LEGIONS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Nanoscarabs are released in boiling black clouds that whirl about the legions and effect rapid repairs",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit activates its Reanimation Protocols and reanimates D3 wounds (or D3+1 wounds if a NECRONS CHARACTER is leading your unit].",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000534",
+                    "000000535",
+                    "000000536",
+                    "000000537",
+                    "000000538",
+                    "000000539",
+                    "000000546",
+                    "000000548",
+                    "000000551",
+                    "000000559",
+                    "000002110",
+                    "000002111",
+                    "000002114",
+                    "000002116",
+                    "000002358",
+                    "000002359",
+                    "000002360",
+                    "000002361",
+                    "000004176",
+                    "000004177"
+                ]
+            }
+        },
+        {
+            "id": "000008371005",
+            "name": "PROTOCOL OF THE SUDDEN STORM",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Arcing energies leap from one Necron to the next, lending them unnatural speed and surety",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, ranged weapons equipped by models in your unit have the [ASSAULT] ability. In addition, if a Necrons Character is leading your unit, until the end of the phase, you can re-roll Advance rolls made for your unit.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000562",
+                    "000000567",
+                    "000002361",
+                    "000002362"
                 ]
             }
         },
@@ -124,58 +176,6 @@
                     "000003693",
                     "000004178",
                     "000004186"
-                ]
-            }
-        },
-        {
-            "id": "000008371005",
-            "name": "PROTOCOL OF THE SUDDEN STORM",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Arcing energies leap from one Necron to the next, lending them unnatural speed and surety",
-            "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, ranged weapons equipped by models in your unit have the [ASSAULT] ability. In addition, if a Necrons Character is leading your unit, until the end of the phase, you can re-roll Advance rolls made for your unit.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000000562",
-                    "000000567",
-                    "000002361",
-                    "000002362"
-                ]
-            }
-        },
-        {
-            "id": "000008371003",
-            "name": "PROTOCOL OF THE UNDYING LEGIONS",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Nanoscarabs are released in boiling black clouds that whirl about the legions and effect rapid repairs",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit activates its Reanimation Protocols and reanimates D3 wounds (or D3+1 wounds if a NECRONS CHARACTER is leading your unit].",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000534",
-                    "000000535",
-                    "000000536",
-                    "000000537",
-                    "000000538",
-                    "000000539",
-                    "000000546",
-                    "000000548",
-                    "000000551",
-                    "000000559",
-                    "000002110",
-                    "000002111",
-                    "000002114",
-                    "000002116",
-                    "000002358",
-                    "000002359",
-                    "000002360",
-                    "000002361",
-                    "000004176",
-                    "000004177"
                 ]
             }
         }
@@ -278,5 +278,8 @@
             }
         }
     ],
-    "eligibleDatasheets": "all"
+    "eligibleDatasheets": "all",
+    "supplement": "codex",
+    "detachmentPoints": 3,
+    "disposition": "take-and-hold"
 }

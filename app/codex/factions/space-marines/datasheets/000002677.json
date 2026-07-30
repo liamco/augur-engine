@@ -17,12 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000104",
-                "slug": "relic-terminator-squad"
-            },
-            {
-                "id": "000000118",
-                "slug": "terminator-assault-squad"
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
             },
             {
                 "id": "000000231",
@@ -33,12 +29,12 @@
                 "slug": "deathwing-terminator-squad"
             },
             {
-                "id": "000003873",
-                "slug": "deathwatch-terminator-squad-2"
-            },
-            {
                 "id": "000002302",
                 "slug": "deathwing-command-squad"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
             },
             {
                 "id": "000001183",
@@ -47,6 +43,10 @@
             {
                 "id": "000004138",
                 "slug": "terminator-squad-2"
+            },
+            {
+                "id": "000000104",
+                "slug": "relic-terminator-squad"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the <span class=\"kwb\">LEADER</span> units attached to it become separate units, with their original Starting Strengths."
@@ -58,7 +58,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -68,22 +68,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ancient",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Deathwing",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ancient",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         }
@@ -395,7 +395,16 @@
             "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Keep the Banner High",
@@ -403,7 +412,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Terminator Storm Shield",
@@ -411,7 +421,8 @@
             "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -8,15 +8,24 @@ import { transformWargear } from "./transforms/transformWargear";
 import {
     transformAbilities,
     extractFactionAbilities,
+    summariseAbilityMechanics,
     type ParsedFactionAbility,
 } from "./transforms/transformAbilities";
 import { transformDamaged } from "./transforms/transformDamaged";
 import { extractCoreStratagems } from "./transforms/transformDetachments";
 
+export interface AbilityMechanicsStats {
+    parsed: number;
+    unparsed: number;
+    /** Pattern name -> number of abilities it contributed to. */
+    perPattern: Record<string, number>;
+}
+
 export interface TransformDatasheetResult {
     datasheet: Record<string, unknown>;
     coreStratagems: ParsedStratagem[];
     factionAbilities: ParsedFactionAbility[];
+    mechanicsStats: AbilityMechanicsStats;
 }
 
 export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult {
@@ -46,6 +55,7 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
     // rules stay hand-authored in app/library.
     const abilities = transformAbilities(raw.abilities);
     const factionAbilities = extractFactionAbilities(raw.abilities);
+    const mechanicsStats = summariseAbilityMechanics(raw.abilities);
 
     // 7. Transform damaged profile
     const damaged = transformDamaged(raw.damagedW, raw.damagedDescription);
@@ -76,5 +86,5 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
         abilities,
     };
 
-    return { datasheet, coreStratagems, factionAbilities };
+    return { datasheet, coreStratagems, factionAbilities, mechanicsStats };
 }

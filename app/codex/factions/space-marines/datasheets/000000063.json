@@ -17,8 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001166",
-                "slug": "company-veterans-on-bikes"
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
             },
             {
                 "id": "000002712",
@@ -29,8 +29,8 @@
                 "slug": "bike-squad"
             },
             {
-                "id": "000000241",
-                "slug": "ravenwing-black-knights"
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
             }
         ],
         "leaderNotes": ""
@@ -42,22 +42,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Apothecary",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Mounted",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -67,7 +52,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Apothecary",
             "model": "",
             "isFactionKeyword": false
         }
@@ -248,7 +248,8 @@
             "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding Character models) to that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Gene-seed Recovery",
@@ -256,7 +257,8 @@
             "description": "When this model’s Bodyguard unit is destroyed, roll one D6: on a 2+, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

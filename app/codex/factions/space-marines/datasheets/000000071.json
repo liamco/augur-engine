@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
@@ -37,17 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -297,7 +297,19 @@
             "description": "At the start of the Fight phase, you can select one of the following abilities to apply to models in this unit until the end of the phase: <br><ul><li><b>Swords of the Chapter:</b> Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1. </li><li><b>Shields of the Chapter:</b> Each time an invulnerable saving throw is made for a model in this unit, re-roll a saving throw of 1.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Bladeguard",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

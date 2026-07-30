@@ -27,7 +27,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Walker",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Librarian Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,17 +52,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Librarian Dreadnought",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Dreadnought",
+            "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
         },
@@ -367,7 +367,16 @@
             "description": "While a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit is within 6\" of this model, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Shield of Sanguinius (Aura, Psychic)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Wings of Sanguinius (Psychic)",
@@ -375,7 +384,8 @@
             "description": "Once per turn, at the end of your Movement phase, one Psyker from your army with this ability can use it. If it does, roll one D6: on a 1, that <span class=\"kwb\">PSYKER</span> suffers D3 mortal wounds; on a 2+, select one friendly Adeptus Astartes Infantry unit within 12\" of that <span class=\"kwb\">PSYKER</span> and remove the selected unit from the battlefield, then set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

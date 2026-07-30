@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Beasts",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
@@ -33,11 +38,6 @@
         },
         {
             "keyword": "Macrocytes",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Beasts",
             "model": "",
             "isFactionKeyword": false
         }
@@ -260,7 +260,16 @@
             "description": "While an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) is within 3\" of this unit, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Harassment Swarm (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Accelerator Mandible",
@@ -268,7 +277,8 @@
             "description": "At the start of the Fight phase, select one friendly Canoptek unit within 3\" of the bearer’s unit. Until the end of the phase, improve the Weapon Skill characteristic of weapons equipped by models in that unit by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Nanoscarab Projector",
@@ -276,7 +286,8 @@
             "description": "Once per battle round, when a friendly <span class=\"kwb\">NECRONS</span> unit within 3\" of the bearer activates its Reanimation Protocols, the bearer can use this ability. If it does, that unit reanimates 1 additional wound.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

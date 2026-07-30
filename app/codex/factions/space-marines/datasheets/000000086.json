@@ -22,11 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Firestrike Servo-turrets",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
@@ -38,6 +33,11 @@
         },
         {
             "keyword": "Artillery",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Firestrike Servo-turrets",
             "model": "",
             "isFactionKeyword": false
         }
@@ -217,7 +217,8 @@
             "description": "Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

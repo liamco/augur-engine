@@ -17,40 +17,30 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001160",
-                "slug": "scout-squad"
-            },
-            {
                 "id": "000001523",
                 "slug": "scout-sniper-squad"
             },
             {
                 "id": "000000310",
-                "slug": "wolf-scouts"
+                "slug": "wolf-scouts-legendary"
+            },
+            {
+                "id": "000001160",
+                "slug": "scout-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Ultramarines",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Sergeant Telion",
+            "keyword": "Ultramarines",
             "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Epic Hero",
@@ -64,6 +54,16 @@
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Sergeant Telion",
             "model": "",
             "isFactionKeyword": false
         }
@@ -259,7 +259,16 @@
             "description": "While this model is leading a unit, improve the Objective Control characteristic of models in that unit by 1 and each time a model in that unit makes an attack, add 1 to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Voice of Experience",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Guiding Hand",
@@ -267,7 +276,8 @@
             "description": "While this model is leading a unit, each time that unit is selected to shoot or fight, select one of the following abilities to apply to weapons equipped by models in that unit until the end of the phase: <br><ul><li>[LETHAL HITS] </li><li>[PRECISION] </li><li>[SUSTAINED HITS 1]</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

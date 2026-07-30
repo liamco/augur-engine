@@ -40,17 +40,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Cyberwolf",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Cyberwolf",
             "model": "",
             "isFactionKeyword": false
         }
@@ -169,7 +169,23 @@
             "description": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Close In for the Kill",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                },
+                {
+                    "name": "Close In for the Kill",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Alpha Hunter",
@@ -177,7 +193,26 @@
             "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Alpha Hunter",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 6,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "WOLFKIN",
@@ -185,7 +220,8 @@
             "description": "This model cannot be your Warlord and cannot be given Enhancements.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

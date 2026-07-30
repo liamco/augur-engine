@@ -17,30 +17,6 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
-            },
-            {
-                "id": "000002202",
-                "slug": "devastator-squad"
-            },
-            {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
                 "id": "000004154",
                 "slug": "crusader-squad-legendary"
             },
@@ -49,36 +25,16 @@
                 "slug": "sword-brethren-squad"
             },
             {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000002270",
-                "slug": "desolation-squad"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000000326",
-                "slug": "long-fangs"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
             },
             {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
             },
             {
-                "id": "000000070",
-                "slug": "tactical-squad"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             },
             {
                 "id": "000000315",
@@ -91,20 +47,74 @@
             {
                 "id": "000000061",
                 "slug": "assault-squad"
+            },
+            {
+                "id": "000002202",
+                "slug": "devastator-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000000326",
+                "slug": "long-fangs"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002270",
+                "slug": "desolation-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Ultramarines",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Tacticus",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Psyker",
@@ -117,27 +127,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Chief Librarian Tigurius",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chief Librarian Tigurius",
             "model": "",
             "isFactionKeyword": false
         }
@@ -347,7 +347,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Hood of Hellfire",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Master of Prescience (Psychic)",
@@ -355,7 +372,16 @@
             "description": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll. In addition, once per battle round, you can target that unit with one of the following Stratagems for OCP: Counter-offensive; Fire Overwatch; Go to Ground; Heroic Intervention",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Master of Prescience (Psychic)",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

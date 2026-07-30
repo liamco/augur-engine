@@ -17,34 +17,49 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000103",
-                "slug": "eradicator-squad"
-            },
-            {
-                "id": "000002781",
-                "slug": "indomitor-kill-team-2"
-            },
-            {
                 "id": "000002099",
                 "slug": "aggressor-squad"
             },
             {
+                "id": "000000103",
+                "slug": "eradicator-squad"
+            },
+            {
                 "id": "000001177",
                 "slug": "heavy-intercessor-squad"
+            },
+            {
+                "id": "000002781",
+                "slug": "indomitor-kill-team-2"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
+            "keyword": "Imperial Fists",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperial Fists",
+            "keyword": "Captain",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tor Garadon",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
@@ -57,27 +72,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tor Garadon",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Gravis",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -220,7 +220,43 @@
             "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Signum Array",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "name": "Signum Array",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Siege Captain",
@@ -228,7 +264,8 @@
             "description": "Each time this model makes an attack that targets a <span class=\"kwb\">MONSTER</span>, <span class=\"kwb\">VEHICLE</span>, or <span class=\"kwb\">FORTIFICATION</span> unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

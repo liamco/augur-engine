@@ -34,7 +34,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Plasmancer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Cryptek",
             "model": "",
             "isFactionKeyword": false
         },
@@ -44,12 +49,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Plasmancer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Cryptek",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -190,7 +190,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a ranged attack, a successful unmodifed Hit roll of 5+ scores a Critical Hit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Living Lightning",
@@ -198,7 +199,8 @@
             "description": "In your Shooting phase, select one enemy unit within 18\" of and visible to this model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this model) and roll four D6: for each 4+, that enemy unit suffers 1 mortal wound.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

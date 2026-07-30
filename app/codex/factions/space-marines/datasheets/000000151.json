@@ -17,36 +17,36 @@
     "leader": {
         "canLead": [
             {
-                "id": "000003874",
-                "slug": "talonstrike-kill-team"
-            },
-            {
-                "id": "000000147",
-                "slug": "vanguard-veteran-squad-with-jump-packs"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000002776",
-                "slug": "assault-intercessors-with-jump-packs"
+                "id": "000000165",
+                "slug": "sanguinary-guard"
             },
             {
                 "id": "000000064",
                 "slug": "assault-squad-with-jump-packs"
             },
             {
-                "id": "000000165",
-                "slug": "sanguinary-guard"
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000003874",
+                "slug": "talonstrike-kill-team"
+            },
+            {
+                "id": "000002776",
+                "slug": "assault-intercessors-with-jump-packs"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
             },
             {
                 "id": "000000324",
                 "slug": "skyclaws"
+            },
+            {
+                "id": "000000147",
+                "slug": "vanguard-veteran-squad-with-jump-packs"
             }
         ],
         "leaderNotes": ""
@@ -68,12 +68,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
+            "keyword": "Jump Pack",
             "model": "",
             "isFactionKeyword": false
         },
@@ -83,22 +78,22 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Jump Pack",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tacticus",
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Commander Dante",
             "model": "",
             "isFactionKeyword": false
         },
@@ -108,7 +103,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Commander Dante",
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -260,7 +260,16 @@
             "description": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Warden of the Imperium Nihilus",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Death Mask of Sanguinius",
@@ -268,7 +277,8 @@
             "description": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -30,26 +30,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Deathwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Bladeguard Ancient",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Ancient",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
@@ -66,6 +46,26 @@
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Bladeguard Ancient",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ancient",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         }
@@ -208,7 +208,16 @@
             "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Deeds of Heroism",
@@ -216,7 +225,19 @@
             "description": "Once per battle, when this model is selected to fight, it can use this ability. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in this model’s unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Deeds of Heroism",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "attacks",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

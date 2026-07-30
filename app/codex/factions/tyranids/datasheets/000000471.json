@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Tyrant Guard",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -210,7 +210,16 @@
             "description": "While a Character model is leading this unit, that <span class=\"kwb\">CHARACTER</span> has the Feel No Pain 5+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Guardian Organism",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

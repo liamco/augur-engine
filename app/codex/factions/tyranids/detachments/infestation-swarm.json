@@ -50,6 +50,21 @@
             }
         },
         {
+            "id": "000009725005",
+            "name": "OUTFLANK",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Swarms of Genestealers crawl through vents and ducts as they seek to outflank their prey.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One GENESTEALERs or PURESTRAIN GENESTEALERS unit from your army that is wholly within an Entry Zone.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase. When doing so, if it was within one of your Entry Zones when it was removed, it must be set up wholly within another one of your Entry Zones. If it was within one of your opponent’s Entry Zones when it was removed, it must be set up wholly within another one of your opponent’s Entry Zones instead. If this is not possible, your unit is destroyed.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000467"
+                ]
+            }
+        },
+        {
             "id": "000009725003",
             "name": "PERVASIVE DREAD",
             "type": "Strategic Ploy",
@@ -61,21 +76,6 @@
             "eligibleDatasheets": {
                 "include": [
                     "000000463",
-                    "000000467"
-                ]
-            }
-        },
-        {
-            "id": "000009725005",
-            "name": "OUTFLANK",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Swarms of Genestealers crawl through vents and ducts as they seek to outflank their prey.",
-            "turn": "Opponent’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One GENESTEALERs or PURESTRAIN GENESTEALERS unit from your army that is wholly within an Entry Zone.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase. When doing so, if it was within one of your Entry Zones when it was removed, it must be set up wholly within another one of your Entry Zones. If it was within one of your opponent’s Entry Zones when it was removed, it must be set up wholly within another one of your opponent’s Entry Zones instead. If this is not possible, your unit is destroyed.",
-            "eligibleDatasheets": {
-                "include": [
                     "000000467"
                 ]
             }
@@ -112,5 +112,8 @@
             "000000463",
             "000000467"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": null,
+    "disposition": null
 }

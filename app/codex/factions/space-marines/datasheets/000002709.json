@@ -17,99 +17,94 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000004185",
-                "slug": "victrix-honour-guard"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
             },
             {
                 "id": "000001154",
                 "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
-            },
-            {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
                 "id": "000002780",
                 "slug": "fortis-kill-team-2"
             },
             {
-                "id": "000002772",
-                "slug": "company-heroes"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             },
             {
                 "id": "000000315",
                 "slug": "wolf-guard"
             },
             {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000004185",
+                "slug": "victrix-honour-guard"
+            },
+            {
                 "id": "000001606",
                 "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "White Scars",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Tacticus",
@@ -117,12 +112,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Kor’sarro Khan",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -132,12 +122,22 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Kor’sarro Khan",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
             "model": "",
             "isFactionKeyword": false
         }
@@ -283,7 +283,8 @@
             "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Trophy Taker",
@@ -291,7 +292,8 @@
             "description": "Each time this model destroys an enemy <span class=\"kwb\">CHARACTER</span> model, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "INSPIRING COMMANDER",
@@ -299,7 +301,8 @@
             "description": "If you include this model in your army, until the end of the battle, non-<span class=\"kwb\">CHARACTER</span> models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

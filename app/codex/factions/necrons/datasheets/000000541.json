@@ -22,11 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "C’tan Shard of the Nightbringer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Monster",
             "model": "",
             "isFactionKeyword": false
@@ -38,6 +33,11 @@
         },
         {
             "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "C’tan Shard of the Nightbringer",
             "model": "",
             "isFactionKeyword": false
         },
@@ -193,7 +193,7 @@
     ],
     "pointsCosts": [
         {
-            "cost": 315,
+            "cost": 340,
             "count": 1
         }
     ],
@@ -224,7 +224,8 @@
             "description": "At the end of the Fight phase, roll one D6 for each enemy unit within 6\" of this model: on a 4+, that enemy unit suffers D3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Necrodermis",
@@ -232,7 +233,8 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ENSLAVED STAR GOD",
@@ -240,7 +242,8 @@
             "description": "This model cannot be your <span class=\"kwb\">WARLORD</span>.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

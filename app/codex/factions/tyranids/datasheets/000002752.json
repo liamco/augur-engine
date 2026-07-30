@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Harvester",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Synapse",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Norn Assimilator",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Harvester",
+            "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +42,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Great Devourer",
+            "keyword": "Norn Assimilator",
             "model": "",
             "isFactionKeyword": false
         }
@@ -52,7 +52,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -226,7 +234,16 @@
             "description": "At the start of the first battle round, select one of the following:<br><ul><li>Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.</li><li>Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Singular Purpose",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Harpoon Barbs",
@@ -234,7 +251,8 @@
             "description": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Harpooned",
@@ -242,7 +260,8 @@
             "description": "After the bearer has shot with this weapon, select one enemy <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit hit by one or more of those attacks. Until the end of the turn, each time the bearer selects that unit as a target of a charge, add 2 to the Charge roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

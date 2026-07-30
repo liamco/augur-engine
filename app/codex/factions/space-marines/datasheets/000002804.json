@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000303",
-                "slug": "blood-claws"
-            },
-            {
                 "id": "000000305",
                 "slug": "grey-hunters"
+            },
+            {
+                "id": "000000303",
+                "slug": "blood-claws"
             },
             {
                 "id": "000000326",
@@ -43,22 +43,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Pack Leader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Wolf Guard Pack Leader",
             "model": "",
             "isFactionKeyword": false
         },
@@ -69,6 +54,21 @@
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard Pack Leader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Pack Leader",
             "model": "",
             "isFactionKeyword": false
         }
@@ -535,7 +535,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Inspiring Leader",
@@ -543,7 +552,8 @@
             "description": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Pack Leader",
@@ -551,7 +561,8 @@
             "description": "This model cannot be your Warlord and cannot be given Enhancements.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

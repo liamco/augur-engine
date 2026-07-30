@@ -22,11 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
@@ -38,6 +33,11 @@
         },
         {
             "keyword": "Spyders",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -204,7 +204,16 @@
             "description": "While a friendly Necrons Vehicle unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Fabricator Claw Array (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Gloom Prism (Aura)",
@@ -212,7 +221,16 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Gloom Prism (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Canoptek Swarm",
@@ -220,7 +238,8 @@
             "description": "In your Command phase, select one friendly Canoptek Scarab Swarm unit within 6\" of this unit. One destroyed model is returned to that <span class=\"kwb\">CANOPTEK</span> <span class=\"kwb\">SCARAB</span> <span class=\"kwb\">SWARM</span> unit for each <span class=\"kwb\">SPYDER</span> model in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

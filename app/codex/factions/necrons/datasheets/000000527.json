@@ -21,12 +21,12 @@
                 "slug": "necron-warriors"
             },
             {
-                "id": "000000535",
-                "slug": "immortals"
-            },
-            {
                 "id": "000000536",
                 "slug": "lychguard"
+            },
+            {
+                "id": "000000535",
+                "slug": "immortals"
             }
         ],
         "leaderNotes": ""
@@ -43,12 +43,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Noble",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Epic Hero",
+            "keyword": "Noble",
             "model": "",
             "isFactionKeyword": false
         },
@@ -58,7 +58,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         }
@@ -199,7 +199,8 @@
             "description": "While this model is leading a unit, at the start of your Command phase, roll one D6: until the start of your next Command phase, weapons equipped by models in that unit gain the ability below that corresponds with that roll:<br><ul><li>1-2: [SUSTAINED HITS 1] </li><li>3-4: [LETHAL HITS] </li><li>5-6: [DEVASTATING WOUNDS]</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Lord of Deceit (Aura)",
@@ -207,7 +208,8 @@
             "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

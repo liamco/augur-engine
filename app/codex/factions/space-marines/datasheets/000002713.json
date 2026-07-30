@@ -17,12 +17,32 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
             },
             {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
             },
             {
                 "id": "000002255",
@@ -33,65 +53,25 @@
                 "slug": "bladeguard-veteran-squad"
             },
             {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
-            },
-            {
-                "id": "000002772",
-                "slug": "company-heroes"
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Imperial Fists",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
+            "keyword": "Imperial Fists",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Chapter Master",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Pedro Kantor",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -107,6 +87,26 @@
         },
         {
             "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chapter Master",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Pedro Kantor",
             "model": "",
             "isFactionKeyword": false
         }
@@ -255,7 +255,8 @@
             "description": "Once per battle, at the start of either player’s Command phase, this model can use this ability. When it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this model’s unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "To the Last",
@@ -263,7 +264,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "CRIMSON FISTS",
@@ -271,7 +273,8 @@
             "description": "This model is from the Crimson Fists Chapter, a successor of the Imperial Fists. For all rules purposes, it is treated as an Imperial Fists model, but it cannot be included in an army that includes any other Imperial Fists Epic Hero models.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "INSPIRING COMMANDER",
@@ -279,7 +282,8 @@
             "description": "If you include this model in your army, until the end of the battle, non-<span class=\"kwb\">CHARACTER</span> models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

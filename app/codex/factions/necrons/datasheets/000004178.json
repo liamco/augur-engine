@@ -38,12 +38,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Geomancer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Cryptek",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -53,7 +48,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Cryptek",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Geomancer",
             "model": "",
             "isFactionKeyword": false
         }
@@ -228,7 +228,8 @@
             "description": "In your Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the start of your next Movement phase that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for it.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Obelisk Node Control",
@@ -236,7 +237,8 @@
             "description": "While this model is within range of an objective marker you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "VANGUARD PROTOCOLS",
@@ -244,7 +246,18 @@
             "description": "If this model is attached to a Canoptek Macrocytes unit during the Declare Battle Formations step, this model has the Scouts 8\" ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "VANGUARD PROTOCOLS",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 8
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

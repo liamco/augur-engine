@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Mortis Dreadnought",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,7 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Mortis Dreadnought",
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -43,11 +48,6 @@
         },
         {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
         }
@@ -477,7 +477,8 @@
             "description": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

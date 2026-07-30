@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
                 "id": "000002799",
                 "slug": "crusader-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             },
             {
                 "id": "000002798",
@@ -43,6 +43,21 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chaplain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Execrator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
@@ -59,21 +74,6 @@
         },
         {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Chaplain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Execrator",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         }
@@ -294,7 +294,8 @@
             "description": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Condemnatory Annihilation",
@@ -302,7 +303,8 @@
             "description": "Each time this model’s unit has fought, if one or more enemy units were destroyed as a result of those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

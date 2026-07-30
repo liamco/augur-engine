@@ -17,8 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001166",
-                "slug": "company-veterans-on-bikes"
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
             },
             {
                 "id": "000002712",
@@ -29,8 +29,8 @@
                 "slug": "bike-squad"
             },
             {
-                "id": "000000241",
-                "slug": "ravenwing-black-knights"
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
             }
         ],
         "leaderNotes": ""
@@ -47,17 +47,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
@@ -67,7 +57,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -250,7 +250,8 @@
             "description": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and you can target that unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Martial Superiority",
@@ -258,7 +259,8 @@
             "description": "Each time this model makes a melee attack that targets a <span class=\"kwb\">CHARACTER</span> unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -94,14 +94,14 @@
             }
         },
         {
-            "id": "000008405003",
-            "name": "THE SPOOR OF FRAILTY",
+            "id": "000008405006",
+            "name": "BLOOD-FUELLED CRUELTY",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Where one foe falls, logic dictates all others must follow. Where blood is shed, ever must more flow.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model from your unit makes an attack that targets a unit below Starting Strength, add 1 to the Hit roll. If the target is Below Half-strength, add 1 to the Wound roll as well.",
+            "legend": "Whatever strange afflictions eat away at the sanity of Destroyers and Flayed Ones, mercy is not one of them.",
+            "turn": "Opponent’s turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that started the phase within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. Your unit can then make a Normal move, but must end that move as close as possible to that enemy unit.",
             "eligibleDatasheets": {
                 "include": [
                     "000000538",
@@ -117,14 +117,14 @@
             }
         },
         {
-            "id": "000008405006",
-            "name": "BLOOD-FUELLED CRUELTY",
+            "id": "000008405003",
+            "name": "THE SPOOR OF FRAILTY",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Whatever strange afflictions eat away at the sanity of Destroyers and Flayed Ones, mercy is not one of them.",
-            "turn": "Opponent’s turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that started the phase within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. Your unit can then make a Normal move, but must end that move as close as possible to that enemy unit.",
+            "legend": "Where one foe falls, logic dictates all others must follow. Where blood is shed, ever must more flow.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model from your unit makes an attack that targets a unit below Starting Strength, add 1 to the Hit roll. If the target is Below Half-strength, add 1 to the Wound roll as well.",
             "eligibleDatasheets": {
                 "include": [
                     "000000538",
@@ -263,5 +263,8 @@
             "000004178",
             "000004186"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "purge-the-foe"
 }

@@ -27,6 +27,21 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Talonstrike Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
@@ -43,21 +58,6 @@
         },
         {
             "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Kill Team",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Talonstrike Kill Team",
             "model": "",
             "isFactionKeyword": false
         }
@@ -539,7 +539,18 @@
             "description": "Each time this unit is set up on the battlefield, until the end of the turn:<br><ul><li>Improve the Armour Penetration characteristic of weapons equipped by models in this unit by 1.</li><li>Melee weapons equipped by models in this unit have the [LANCE] ability.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Talonstrike Doctrines",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LANCE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ATTACHED UNIT",
@@ -547,7 +558,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to an Assault Intercessors with Jump Packs unit, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

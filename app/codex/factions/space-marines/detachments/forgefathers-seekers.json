@@ -17,6 +17,21 @@
     ],
     "stratagems": [
         {
+            "id": "000010369002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000010369003",
             "name": "CRUCIBLE OF BATTLE",
             "type": "Battle Tactic",
@@ -168,6 +183,21 @@
             }
         },
         {
+            "id": "000010369005",
+            "name": "IMMOLATION PROTOCOLS",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "Salvo after salvo of burning promethium unleashed in synchronised waves will leave almost any foe as smouldering ash.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, Torrent weapons equipped by models in your unit have the [DEVASTATING WOUNDS] ability.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000010369006",
             "name": "BURNING VENGEANCE",
             "type": "Battle Tactic",
@@ -213,51 +243,6 @@
                     "000002790",
                     "000002791",
                     "000004139"
-                ]
-            }
-        },
-        {
-            "id": "000010369005",
-            "name": "IMMOLATION PROTOCOLS",
-            "type": "Battle Tactic",
-            "cpCost": 2,
-            "legend": "Salvo after salvo of burning promethium unleashed in synchronised waves will leave almost any foe as smouldering ash.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, Torrent weapons equipped by models in your unit have the [DEVASTATING WOUNDS] ability.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010369002",
-            "name": "ARMOUR OF CONTEMPT",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010369007",
-            "name": "BLAZING EARTH",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "When faced with an onrushing horde, the Forgefather’s warriors set fire to the earth beneath their feet, impeding their advance and throwing them into confusion.",
-            "turn": "Opponent’s turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Start of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army equipped with one or more Torrent weapons.<br><br><b>EFFECT:</b> Select one enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span> and units with the <span class=\"kwb\">FLY</span> keyword) within 12\" of and visible to your unit. Until the end of the phase, each time that enemy unit declares a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
                 ]
             }
         },
@@ -409,6 +394,21 @@
                     "000004133",
                     "000004139",
                     "000004167"
+                ]
+            }
+        },
+        {
+            "id": "000010369007",
+            "name": "BLAZING EARTH",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "When faced with an onrushing horde, the Forgefather’s warriors set fire to the earth beneath their feet, impeding their advance and throwing them into confusion.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Start of your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army equipped with one or more Torrent weapons.<br><br><b>EFFECT:</b> Select one enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span> and units with the <span class=\"kwb\">FLY</span> keyword) within 12\" of and visible to your unit. Until the end of the phase, each time that enemy unit declares a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
                 ]
             }
         }
@@ -681,5 +681,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "purge-the-foe"
 }

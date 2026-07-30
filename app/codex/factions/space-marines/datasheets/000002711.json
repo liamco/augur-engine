@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Fly",
+            "keyword": "Land Speeder",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,12 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Land Speeder",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -228,7 +228,37 @@
             "description": "At the start of your Shooting phase, select one enemy unit that is visible to this model. Until the end of the phase, each time a friendly Adeptus Astartes model makes an attack with a Blast weapon that targets that enemy unit, add 1 to the Hit roll and that attack has the [IGNORES COVER] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Target Sighted",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Target Sighted",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Target Sighted",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

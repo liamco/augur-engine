@@ -27,6 +27,21 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Death Company Marines with boltguns and Jump Packs",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Death Company",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
@@ -43,21 +58,6 @@
         },
         {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Death Company",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Death Company Marines with boltguns and Jump Packs",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         }
@@ -503,7 +503,8 @@
             "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Berserk Fury",
@@ -511,7 +512,8 @@
             "description": "You can re-roll Charge rolls made for this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "DEATH COMPANY",
@@ -519,7 +521,8 @@
             "description": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs or an Assault Squad with Jump Packs, it can be attached to this unit instead.<br><br>If a Character unit from your army with the Leader ability can be attached to a Death Company Marines with Jump Packs unit, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

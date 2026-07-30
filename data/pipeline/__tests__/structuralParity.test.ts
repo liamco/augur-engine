@@ -43,7 +43,7 @@ describe("pipeline structural parity (WTP, basics)", () => {
         expect(leader.canLead.length).toBeGreaterThan(0);
     });
 
-    it("reduces Core abilities to name+type shells, keeps Datasheet descriptions (no mechanics)", () => {
+    it("reduces Core abilities to name+type shells and derives Datasheet mechanics", () => {
         const abilities = d.abilities as Record<string, unknown>[];
         const core = abilities.find((a) => a.name === "Deep Strike");
         expect(core).toEqual({
@@ -55,7 +55,28 @@ describe("pipeline structural parity (WTP, basics)", () => {
         const ds = abilities.find((a) => a.name === "Alpha Warrior");
         expect(ds?.type).toBe("Datasheet");
         expect(ds?.description).toBeTruthy();
-        expect(ds?.mechanics).toEqual([]); // deferred
+
+        // "While this model is leading a unit, weapons equipped by models in that
+        // unit have the [SUSTAINED HITS 1] ability." — the grant and its leading
+        // condition are both extracted.
+        expect(ds?.mechanicsSource).toBe("regex");
+        expect(ds?.mechanics).toEqual([
+            {
+                name: "Alpha Warrior",
+                entity: "thisUnit",
+                effect: "addsWeaponAttribute",
+                weaponAttributes: ["SUSTAINED HITS"],
+                value: 1,
+                conditions: [
+                    {
+                        entity: "thisUnit",
+                        state: "isLeadingUnit",
+                        operator: "equals",
+                        value: true,
+                    },
+                ],
+            },
+        ]);
     });
 
     it("does not emit combatState (runtime, deferred)", () => {

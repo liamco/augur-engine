@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000064",
-                "slug": "assault-squad-with-jump-packs"
+                "id": "000000315",
+                "slug": "wolf-guard"
             },
             {
-                "id": "000000165",
-                "slug": "sanguinary-guard"
+                "id": "000003874",
+                "slug": "talonstrike-kill-team"
             },
             {
                 "id": "000000147",
@@ -33,16 +33,16 @@
                 "slug": "assault-intercessors-with-jump-packs"
             },
             {
+                "id": "000000165",
+                "slug": "sanguinary-guard"
+            },
+            {
+                "id": "000000064",
+                "slug": "assault-squad-with-jump-packs"
+            },
+            {
                 "id": "000000324",
                 "slug": "skyclaws"
-            },
-            {
-                "id": "000003874",
-                "slug": "talonstrike-kill-team"
-            },
-            {
-                "id": "000000315",
-                "slug": "wolf-guard"
             }
         ],
         "leaderNotes": ""
@@ -54,32 +54,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Jump Pack",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -89,7 +69,27 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
             "model": "",
             "isFactionKeyword": false
         }
@@ -447,7 +447,8 @@
             "description": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee weapons equipped by models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Rites of Battle",
@@ -455,7 +456,8 @@
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Relic Shield",
@@ -463,7 +465,8 @@
             "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

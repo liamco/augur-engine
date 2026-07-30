@@ -30,17 +30,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Great Devourer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Old One Eye",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
@@ -50,7 +50,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Old One Eye",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -196,7 +196,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Unstoppable Monster",
@@ -204,7 +205,8 @@
             "description": "At the start of each player’s Command phase, this model regains up to D3 lost wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

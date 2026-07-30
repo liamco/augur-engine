@@ -22,6 +22,21 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Xiphon Interceptor",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
@@ -35,21 +50,6 @@
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Xiphon Interceptor",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Ravenwing",
-            "model": "",
-            "isFactionKeyword": false
         }
     ],
     "transport": "",
@@ -57,7 +57,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -233,7 +241,28 @@
             "description": "Each time this model makes a ranged attack that targets a unit that can Fly, add 1 to the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Interceptor",
+                    "entity": "thisUnit",
+                    "effect": "addsKeyword",
+                    "keywords": [
+                        "FLY"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Interceptor",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

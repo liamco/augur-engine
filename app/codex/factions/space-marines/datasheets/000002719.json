@@ -22,22 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Deathwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Relic Contemptor Dreadnought",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Dreadnought",
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,7 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
             "model": "",
             "isFactionKeyword": false
         }
@@ -735,7 +735,8 @@
             "description": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Conversion",
@@ -743,7 +744,8 @@
             "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

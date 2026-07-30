@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Great Devourer",
+            "keyword": "Zoanthropes",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,17 +37,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Psyker",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Zoanthropes",
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         }
@@ -233,7 +233,8 @@
             "description": "While an enemy unit is within 6\" of this unit, if this unit contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Warp Field (Aura, Psychic)",
@@ -241,7 +242,16 @@
             "description": "While a friendly Tyranids unit is within 6\" of this unit, models in that unit have a 6+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Warp Field (Aura, Psychic)",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

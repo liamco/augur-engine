@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Vanguard Veteran Squad",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vanguard Veteran Squad",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +37,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -357,7 +357,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Vanguard Assault",
@@ -365,7 +374,18 @@
             "description": "Each time this unit ends a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Vanguard Assault",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ATTACHED UNITS",
@@ -373,7 +393,8 @@
             "description": "If a Character unit from your army with the Leader ability can be attached to an Assault Intercessor Squad, it can also be attached to this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

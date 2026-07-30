@@ -17,12 +17,12 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Blood Angels",
+            "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
@@ -32,12 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Chief Librarian Mephiston",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Epic Hero",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -52,17 +52,17 @@
             "isFactionKeyword": false
         },
         {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Chief Librarian Mephiston",
             "model": "",
             "isFactionKeyword": false
         }
@@ -317,7 +317,8 @@
             "description": "This model is eligible to declare a charge in a turn in which it Advanced.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Transfixing Gaze (Aura, Psychic)",
@@ -325,7 +326,8 @@
             "description": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

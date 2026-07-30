@@ -49,21 +49,6 @@
             }
         },
         {
-            "id": "000009256004",
-            "name": "CARVE A PATH",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Power fists, chainfists, and sheer servo-actuated armoured mass ensure that Terminators’ paths are never barred for long.",
-            "turn": "Your turn",
-            "phase": "Movement or Charge phase",
-            "description": "<b>WHEN:</b> Your Movement phase or your Charge phase.<br><br><b>TARGET:</b> One Terminator Assault Squad unit from your army that has not been selected to move this phase and has not declared a charge this phase.<br><br><b>EFFECT:</b> Until the end of the phase, when making a Normal, Advance or Charge move, your unit can move through a single closed Hatchway as if it was open. When doing so, that Hatchway is opened and cannot be closed for the rest of the battle. This can allow that unit to declare a charge against enemy units that are not visible to it, but to do so those enemy units must be within 1\" of that Hatchway and wholly on the opposite side of it from your unit.<br><br><b>RESTRICTIONS:</b> You cannot use this Stratagem more than once per turn.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000118"
-                ]
-            }
-        },
-        {
             "id": "000009256002",
             "name": "TOWER OF STRENGTH",
             "type": "Strategic Ploy",
@@ -120,6 +105,21 @@
                     "000002803",
                     "000004138",
                     "000004166"
+                ]
+            }
+        },
+        {
+            "id": "000009256004",
+            "name": "CARVE A PATH",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Power fists, chainfists, and sheer servo-actuated armoured mass ensure that Terminators’ paths are never barred for long.",
+            "turn": "Your turn",
+            "phase": "Movement or Charge phase",
+            "description": "<b>WHEN:</b> Your Movement phase or your Charge phase.<br><br><b>TARGET:</b> One Terminator Assault Squad unit from your army that has not been selected to move this phase and has not declared a charge this phase.<br><br><b>EFFECT:</b> Until the end of the phase, when making a Normal, Advance or Charge move, your unit can move through a single closed Hatchway as if it was open. When doing so, that Hatchway is opened and cannot be closed for the rest of the battle. This can allow that unit to declare a charge against enemy units that are not visible to it, but to do so those enemy units must be within 1\" of that Hatchway and wholly on the opposite side of it from your unit.<br><br><b>RESTRICTIONS:</b> You cannot use this Stratagem more than once per turn.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000118"
                 ]
             }
         }
@@ -180,5 +180,8 @@
             "000004138",
             "000004166"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": null,
+    "disposition": null
 }

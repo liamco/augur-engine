@@ -17,22 +17,27 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Wolf Guard Terminators",
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Terminator",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Terminator",
+            "keyword": "Wolf Guard",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard Terminators",
             "model": "",
             "isFactionKeyword": false
         },
@@ -43,11 +48,6 @@
         },
         {
             "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Wolf Guard",
             "model": "",
             "isFactionKeyword": false
         }
@@ -341,7 +341,16 @@
             "description": "Each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Rugged Resilience",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Storm Shield",
@@ -349,7 +358,8 @@
             "description": "The bearer has a Wounds characteristic of 4.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

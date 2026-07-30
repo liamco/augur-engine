@@ -17,8 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000315",
-                "slug": "wolf-guard"
+                "id": "000003874",
+                "slug": "talonstrike-kill-team"
             },
             {
                 "id": "000000147",
@@ -29,8 +29,8 @@
                 "slug": "assault-intercessors-with-jump-packs"
             },
             {
-                "id": "000003874",
-                "slug": "talonstrike-kill-team"
+                "id": "000000315",
+                "slug": "wolf-guard"
             },
             {
                 "id": "000000064",
@@ -55,32 +55,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Kayvaan Shrike",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Chapter Master",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Phobos",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Jump Pack",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -95,7 +75,27 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kayvaan Shrike",
             "model": "",
             "isFactionKeyword": false
         }
@@ -257,7 +257,8 @@
             "description": "While this model is leading a unit, models in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Echo of the Ravenspire",
@@ -265,7 +266,8 @@
             "description": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "INSPIRING COMMANDER",
@@ -273,7 +275,8 @@
             "description": "If you include this model in your army, until the end of the battle, non-<span class=\"kwb\">CHARACTER</span> models in Assault Intercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -17,8 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000241",
-                "slug": "ravenwing-black-knights"
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
             },
             {
                 "id": "000002712",
@@ -29,8 +29,8 @@
                 "slug": "bike-squad"
             },
             {
-                "id": "000001166",
-                "slug": "company-veterans-on-bikes"
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
             }
         ],
         "leaderNotes": ""
@@ -42,22 +42,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Ravenwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -67,7 +57,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         }
@@ -668,7 +668,8 @@
             "description": "The bearer has a Wounds characteristic of 7.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Swift Assault",
@@ -676,7 +677,26 @@
             "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Swift Assault",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "ASSAULT"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Rites of Battle",
@@ -684,7 +704,8 @@
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

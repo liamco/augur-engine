@@ -53,6 +53,42 @@
             }
         },
         {
+            "id": "000009191005",
+            "name": "MARTIAL EXEMPLARS",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "The Blood Angels are mighty warriors indeed, and wield their gilded and shimmering blades with consummate skill.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Jump Pack unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] and [PRECISION] abilities.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000064",
+                    "000000068",
+                    "000000083",
+                    "000000112",
+                    "000000125",
+                    "000000147",
+                    "000000151",
+                    "000000156",
+                    "000000157",
+                    "000000164",
+                    "000000165",
+                    "000000324",
+                    "000001344",
+                    "000002708",
+                    "000002737",
+                    "000002738",
+                    "000002776",
+                    "000002802",
+                    "000003833",
+                    "000003837",
+                    "000003874",
+                    "000004148"
+                ]
+            }
+        },
+        {
             "id": "000009191004",
             "name": "ANGEL’S SACRIFICE",
             "type": "Battle Tactic",
@@ -89,14 +125,14 @@
             }
         },
         {
-            "id": "000009191005",
-            "name": "MARTIAL EXEMPLARS",
-            "type": "Battle Tactic",
+            "id": "000009191007",
+            "name": "DEATH FROM THE SKIES",
+            "type": "Epic Deed",
             "cpCost": 1,
-            "legend": "The Blood Angels are mighty warriors indeed, and wield their gilded and shimmering blades with consummate skill.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Jump Pack unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] and [PRECISION] abilities.",
+            "legend": "The roar of the Blood Angels jump packs is as a funeral dirge to their foes.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an Adeptus Astartes Jump Pack unit from your army Advances or Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">JUMP</span> <span class=\"kwb\">PACK</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
             "eligibleDatasheets": {
                 "include": [
                     "000000064",
@@ -148,42 +184,6 @@
             "turn": "Your turn",
             "phase": "Movement phase",
             "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Adeptus Astartes Jump Pack unit from your army that is arriving using the Deep Strike ability this phase.<br><br><b>EFFECT:</b> Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.<br><br><b>RESTRICTIONS:</b> A unit targeted by this Stratagem is not eligible to declare a charge in the same turn.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000064",
-                    "000000068",
-                    "000000083",
-                    "000000112",
-                    "000000125",
-                    "000000147",
-                    "000000151",
-                    "000000156",
-                    "000000157",
-                    "000000164",
-                    "000000165",
-                    "000000324",
-                    "000001344",
-                    "000002708",
-                    "000002737",
-                    "000002738",
-                    "000002776",
-                    "000002802",
-                    "000003833",
-                    "000003837",
-                    "000003874",
-                    "000004148"
-                ]
-            }
-        },
-        {
-            "id": "000009191007",
-            "name": "DEATH FROM THE SKIES",
-            "type": "Epic Deed",
-            "cpCost": 1,
-            "legend": "The roar of the Blood Angels jump packs is as a funeral dirge to their foes.",
-            "turn": "Your turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your Movement phase, just after an Adeptus Astartes Jump Pack unit from your army Advances or Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">JUMP</span> <span class=\"kwb\">PACK</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
             "eligibleDatasheets": {
                 "include": [
                     "000000064",
@@ -286,5 +286,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "blood-angels",
+    "detachmentPoints": 2,
+    "disposition": "disruption"
 }

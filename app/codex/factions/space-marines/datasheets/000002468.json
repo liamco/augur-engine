@@ -21,10 +21,6 @@
                 "slug": "terminator-assault-squad"
             },
             {
-                "id": "000000231",
-                "slug": "deathwing-knights"
-            },
-            {
                 "id": "000004138",
                 "slug": "terminator-squad-2"
             },
@@ -37,12 +33,16 @@
                 "slug": "deathwing-command-squad"
             },
             {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
                 "id": "000000104",
                 "slug": "relic-terminator-squad"
             },
             {
-                "id": "000001183",
-                "slug": "terminator-squad"
+                "id": "000000231",
+                "slug": "deathwing-knights"
             },
             {
                 "id": "000000230",
@@ -88,12 +88,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -399,7 +399,8 @@
             "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Tactical Precision",
@@ -407,7 +408,26 @@
             "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Tactical Precision",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Vanquish the Foe",
@@ -415,7 +435,23 @@
             "description": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Vanquish the Foe",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                },
+                {
+                    "name": "Vanquish the Foe",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

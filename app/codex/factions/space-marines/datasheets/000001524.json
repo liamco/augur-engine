@@ -32,7 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Sergeant Chronus",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,12 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Sergeant Chronus",
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Epic Hero",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -192,7 +192,8 @@
             "description": "While this model is commanding a <span class=\"kwb\">VEHICLE</span> model (see below): <br><ul><li>Ranged weapons equipped by that <span class=\"kwb\">VEHICLE</span> model have a Ballistic Skill characteristic of 2+. </li><li>Each time that <span class=\"kwb\">VEHICLE</span> model is selected to shoot, you can re-roll one Wound roll when resolving those attacks.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Chronus",
@@ -200,7 +201,18 @@
             "description": "When this model disembarks from a <span class=\"kwb\">VEHICLE</span> model it was commanding, it has the Lone Operative ability until the end of the battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Chronus",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "LONE OPERATIVE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "TANK COMMANDER",
@@ -208,7 +220,8 @@
             "description": "If your army includes one or more of the <span class=\"kwb\">VEHICLE</span> models listed below, Sergeant Chronus must start the battle embarked within one of those models as if it were a Transport. Sergeant Chronus can only disembark from that <span class=\"kwb\">VEHICLE</span> if it is destroyed. While embarked in this way, Sergeant Chronus is said to be commanding that <span class=\"kwb\">VEHICLE</span>. <br><ul><li>Hunter                        </li><li>Predator Annihilator </li><li>Land Raider                   </li><li>Predator Destructor </li><li>Land Raider Crusader          </li><li>Stalker </li><li>Land Raider Redeemer          </li><li>Vindicator </li><li>Whirlwind</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

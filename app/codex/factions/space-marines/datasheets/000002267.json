@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Deathstorm Drop Pod",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathstorm Drop Pod",
             "model": "",
             "isFactionKeyword": false
         }
@@ -189,7 +189,8 @@
             "description": "This model must start the battle in Reserves, but it is not counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

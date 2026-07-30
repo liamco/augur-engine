@@ -17,36 +17,32 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
                 "id": "000001157",
                 "slug": "intercessor-squad"
             },
             {
                 "id": "000004137",
                 "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
             },
             {
                 "id": "000004154",
@@ -57,16 +53,20 @@
                 "slug": "sternguard-veteran-squad"
             },
             {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
             },
             {
                 "id": "000004175",
@@ -91,12 +91,22 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Lieutenant",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Castellan",
             "model": "",
             "isFactionKeyword": false
         },
@@ -111,17 +121,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Castellan",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Lieutenant",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -343,7 +343,19 @@
             "description": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Vehement Aggression",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Prioritised Eradication",
@@ -351,7 +363,8 @@
             "description": "Each time a model in this model’s unit makes a melee attack that destroys one or more enemy units, roll one D6: on a 4+, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

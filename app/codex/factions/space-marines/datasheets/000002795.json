@@ -17,24 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
             },
             {
                 "id": "000000315",
@@ -45,12 +29,32 @@
                 "slug": "sternguard-veteran-squad-2"
             },
             {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
             },
             {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
             },
             {
                 "id": "000002783",
@@ -61,30 +65,31 @@
                 "slug": "assault-intercessor-squad"
             },
             {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
+                "id": "000000061",
+                "slug": "assault-squad"
             },
             {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
+                "id": "000002799",
+                "slug": "crusader-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Black Templars",
+            "keyword": "Emperor’s Champion",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
@@ -93,11 +98,6 @@
         },
         {
             "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -112,7 +112,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Emperor’s Champion",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -292,7 +292,8 @@
             "description": "Once per phase, when an attack is allocated to this model and the saving throw is failed, you can change the Damage characteristic of that attack to 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Sigismund’s Heir",
@@ -300,7 +301,18 @@
             "description": "Each time this model’s unit declares a charge, if one or more targets of that charge have the <span class=\"kwb\">CHARACTER</span> keyword, add 2 to the Charge roll. Once per battle, when this model’s unit is selected to fight, if that unit is within Engagement Range of one or more enemy <span class=\"kwb\">CHARACTER</span> units, this model can use this ability. If it does, until the end of the phase, melee weapons equipped by this model have the [DEVASTATING WOUNDS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Sigismund’s Heir",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "CHOSEN OF THE EMPEROR",
@@ -308,7 +320,8 @@
             "description": "You cannot include more than one <span class=\"kwb\">EMPEROR’S</span> <span class=\"kwb\">CHAMPION</span> model in your army.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

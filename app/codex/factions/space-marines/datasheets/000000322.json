@@ -17,14 +17,19 @@
     "leader": null,
     "keywords": [
         {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Space Wolves",
+            "keyword": "Thunderwolf Cavalry",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
@@ -38,11 +43,6 @@
         },
         {
             "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Thunderwolf Cavalry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -326,7 +326,8 @@
             "description": "Each time a model in this unit makes a melee attack with its Wolf Guard weapon, if it made a Charge move this turn, add 1 to the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Storm Shield",
@@ -334,7 +335,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

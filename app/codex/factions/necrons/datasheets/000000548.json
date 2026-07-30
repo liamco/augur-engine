@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Tomb Blades",
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Mounted",
+            "keyword": "Tomb Blades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -264,7 +264,27 @@
             "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Nebuloscope",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Nebuloscope",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Shadowloom",
@@ -272,7 +292,18 @@
             "description": "The bearer has the Stealth ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Shadowloom",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "STEALTH"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Shieldvanes",
@@ -280,7 +311,8 @@
             "description": "The bearer has a 3+ Save characteristic and a Move characteristic of 8\".",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Evasion Engrams",
@@ -288,7 +320,8 @@
             "description": "In your Shooting phase, after this unit has shot, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

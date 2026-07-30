@@ -17,20 +17,20 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000147",
-                "slug": "vanguard-veteran-squad-with-jump-packs"
-            },
-            {
                 "id": "000000064",
                 "slug": "assault-squad-with-jump-packs"
             },
             {
-                "id": "000000324",
-                "slug": "skyclaws"
+                "id": "000000147",
+                "slug": "vanguard-veteran-squad-with-jump-packs"
             },
             {
                 "id": "000000315",
                 "slug": "wolf-guard"
+            },
+            {
+                "id": "000000324",
+                "slug": "skyclaws"
             }
         ],
         "leaderNotes": ""
@@ -40,6 +40,16 @@
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
+        },
+        {
+            "keyword": "Librarian",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Grenades",
@@ -62,22 +72,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Librarian",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -551,7 +551,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Psychic Hood",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Might of Heroes (Psychic)",
@@ -559,7 +576,8 @@
             "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
                 "id": "000002799",
                 "slug": "crusader-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             },
             {
                 "id": "000002798",
@@ -33,22 +33,22 @@
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Black Templars",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Ancient",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Crusade Ancient",
             "model": "",
             "isFactionKeyword": false
         },
@@ -58,7 +58,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -68,12 +73,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ancient",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Crusade Ancient",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -218,7 +218,8 @@
             "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Martial Honour",
@@ -226,7 +227,8 @@
             "description": "The first time a model in this model’s unit makes a melee attack that destroys one or more enemy units, until the end of the battle, while this model’s unit is not Battle-shocked, add 5 to this model’s Objective Control characteristic.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

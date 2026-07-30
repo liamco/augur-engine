@@ -17,12 +17,12 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
+            "keyword": "Black Templars",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Black Templars",
+            "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
@@ -37,7 +37,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,7 +47,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tacticus",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -419,7 +419,8 @@
             "description": "Each time an enemy unit within Engagement Range of this unit is selected to Fall Back, after it ends that Fall Back move, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -427,7 +428,8 @@
             "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -6,23 +6,12 @@
         {
             "id": "000008356",
             "name": "Hyper-adaptations",
-            "description": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for <span class=\"kwb\">TYRANIDS</span> units from your army until the end of the battle:<br><br><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Swarming Instincts</p><p>Each time a <span class=\"kwb\">TYRANIDS</span> model with this Hyper-adaptation makes an attack that targets an <span class=\"kwb\">INFANTRY</span> or <span class=\"kwb\">SWARM</span> unit, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00016\" data-tooltip-content=\"#tooltip_content00016\"><span class=\"tt kwbu\">[SUSTAINED</span> <span class=\"tt kwbu\">HITS</span> <span class=\"tt kwbu\">1]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Hyper-aggression</p><p>Each time a <span class=\"kwb\">TYRANIDS</span> model with this Hyper-adaptation makes an attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00078\" data-tooltip-content=\"#tooltip_content00078\"><span class=\"tt kwbu\">[LETHAL</span> <span class=\"tt kwbu\">HITS]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Hive Predators</p><p>Each time a <span class=\"kwb\">TYRANIDS</span> model with this Hyper-adaptation makes an attack that targets a <span class=\"kwb\">CHARACTER</span> unit, on a <span class=\"tooltip00006\" data-tooltip-content=\"#tooltip_content00006\"><span class=\"tt kwbu\">Critical</span> <span class=\"tt kwbu\">Hit</span></span>, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00037\" data-tooltip-content=\"#tooltip_content00037\"><span class=\"tt kwbu\">[PRECISION]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div>",
+            "description": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for <span class=\"kwb\">TYRANIDS</span> units from your army until the end of the battle:<br><br><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Swarming Instincts</p><p>Each time a <span class=\"kwb\">TYRANIDS</span> model with this Hyper-adaptation makes an attack that targets an <span class=\"kwb\">INFANTRY</span> or <span class=\"kwb\">SWARM</span> unit, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00032\" data-tooltip-content=\"#tooltip_content00032\"><span class=\"tt kwbu\">[SUSTAINED</span> <span class=\"tt kwbu\">HITS</span> <span class=\"tt kwbu\">1]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Hyper-aggression</p><p>Each time a <span class=\"kwb\">TYRANIDS</span> model with this Hyper-adaptation makes an attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00033\" data-tooltip-content=\"#tooltip_content00033\"><span class=\"tt kwbu\">[LETHAL</span> <span class=\"tt kwbu\">HITS]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Hive Predators</p><p>Each time a <span class=\"kwb\">TYRANIDS</span> model with this Hyper-adaptation makes an attack that targets a <span class=\"kwb\">CHARACTER</span> unit, on a <span class=\"tooltip00023\" data-tooltip-content=\"#tooltip_content00023\"><span class=\"tt kwbu\">Critical</span> <span class=\"tt kwbu\">Hit</span></span>, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00009\" data-tooltip-content=\"#tooltip_content00009\"><span class=\"tt kwbu\">[PRECISION]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div>",
             "legend": "Every warrior organism in the Tyranid race is fashioned by the ineffable alien will of the Hive Mind. Their flesh and chitin is endlessly mutable, honed into whatever form will prove most lethal to the prey.",
             "eligibleDatasheets": "all"
         }
     ],
     "stratagems": [
-        {
-            "id": "000008349003",
-            "name": "ADRENAL SURGE",
-            "type": "Battle Tactic",
-            "cpCost": 2,
-            "legend": "These warrior organisms destroy all as their adrenaline surges.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> Up to two <span class=\"kwb\">TYRANIDS</span> units from your army that are within Synapse Range of your army and are eligible to fight, or one other <span class=\"kwb\">TYRANIDS</span> unit from your army that is eligible to fight.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-            "eligibleDatasheets": "all"
-        },
         {
             "id": "000008349002",
             "name": "RAPID REGENERATION",
@@ -35,14 +24,14 @@
             "eligibleDatasheets": "all"
         },
         {
-            "id": "000008349006",
-            "name": "PREDATORY IMPERATIVE",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Guided by the instincts of leader-beasts, the swarm can be tasked with focusing its hunting instincts.",
-            "turn": "Your turn",
-            "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> Up to two <span class=\"kwb\">TYRANIDS</span> units from your army that are within Synapse Range of your army, or one other <span class=\"kwb\">TYRANIDS</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.<br><br><b>RESTRICTIONS:</b> You cannot select the same Hyper-adaptation you selected at the start of the first battle round.",
+            "id": "000008349003",
+            "name": "ADRENAL SURGE",
+            "type": "Battle Tactic",
+            "cpCost": 2,
+            "legend": "These warrior organisms destroy all as their adrenaline surges.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> Up to two <span class=\"kwb\">TYRANIDS</span> units from your army that are within Synapse Range of your army and are eligible to fight, or one other <span class=\"kwb\">TYRANIDS</span> unit from your army that is eligible to fight.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
             "eligibleDatasheets": "all"
         },
         {
@@ -65,6 +54,17 @@
             "turn": "Either player’s turn",
             "phase": "Fight phase",
             "description": "<b>WHEN:</b> Fight phase, just before a <span class=\"kwb\">TYRANIDS</span> unit from your army Consolidates.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit Consolidates, models in it can move an additional 3\" as long as your unit can end that move within Engagement Range of one or more enemy units. If your unit is within Synapse Range of your army and not within Engagement Range of any enemy units, instead of making that Consolidation move, it can make a Normal move of up to 6\".",
+            "eligibleDatasheets": "all"
+        },
+        {
+            "id": "000008349006",
+            "name": "PREDATORY IMPERATIVE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Guided by the instincts of leader-beasts, the swarm can be tasked with focusing its hunting instincts.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> Up to two <span class=\"kwb\">TYRANIDS</span> units from your army that are within Synapse Range of your army, or one other <span class=\"kwb\">TYRANIDS</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.<br><br><b>RESTRICTIONS:</b> You cannot select the same Hyper-adaptation you selected at the start of the first battle round.",
             "eligibleDatasheets": "all"
         },
         {
@@ -103,7 +103,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -123,7 +124,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -143,7 +145,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -163,10 +166,14 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         }
     ],
-    "eligibleDatasheets": "all"
+    "eligibleDatasheets": "all",
+    "supplement": "codex",
+    "detachmentPoints": 3,
+    "disposition": "take-and-hold"
 }

@@ -22,6 +22,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Kratos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
@@ -35,11 +40,6 @@
             "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
-        },
-        {
-            "keyword": "Kratos",
-            "model": "",
-            "isFactionKeyword": false
         }
     ],
     "transport": "",
@@ -47,7 +47,15 @@
         "range": "1-6",
         "threshold": 6,
         "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -649,7 +657,8 @@
             "description": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "One Shot",
@@ -657,7 +666,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

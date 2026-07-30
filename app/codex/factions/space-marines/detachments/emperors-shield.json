@@ -32,6 +32,42 @@
             }
         },
         {
+            "id": "000010461007",
+            "name": "DROPSHIP EXTRACTION",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Making use of a lull in fighting, Terminator squads pull back from the front line, boarding airborne transports and withdrawing to prepare their next assault.",
+            "turn": "Opponent’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Terminator unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001183",
+                    "000002105",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
+        },
+        {
             "id": "000010461006",
             "name": "DISCIPLINED EXTERMINATION",
             "type": "Battle Tactic",
@@ -40,47 +76,6 @@
             "turn": "Your turn",
             "phase": "Shooting phase",
             "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Adeptus Astartes Terminator, Bladeguard Veteran Squad, Sternguard Veteran Squad or Vanguard Veteran Squad unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability and improve the Armour Penetration characteristic of such weapons by 1.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000071",
-                    "000000079",
-                    "000000104",
-                    "000000115",
-                    "000000118",
-                    "000000135",
-                    "000000147",
-                    "000000219",
-                    "000000230",
-                    "000000231",
-                    "000000282",
-                    "000000300",
-                    "000000317",
-                    "000000318",
-                    "000001154",
-                    "000001183",
-                    "000002105",
-                    "000002255",
-                    "000002302",
-                    "000002468",
-                    "000002677",
-                    "000002803",
-                    "000003873",
-                    "000004137",
-                    "000004138",
-                    "000004166",
-                    "000004183"
-                ]
-            }
-        },
-        {
-            "id": "000010461003",
-            "name": "FURY OF THE FIRST",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "Losses only serve to stoke the fiery wrath of the Imperial Fists and increase their resolve.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Terminator, Bladeguard Veteran Squad, Sternguard Veteran Squad or Vanguard Veteran Squad unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is below its Starting Strength, add 1 to the Wound roll as well.",
             "eligibleDatasheets": {
                 "include": [
                     "000000071",
@@ -155,21 +150,23 @@
             }
         },
         {
-            "id": "000010461007",
-            "name": "DROPSHIP EXTRACTION",
+            "id": "000010461003",
+            "name": "FURY OF THE FIRST",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Making use of a lull in fighting, Terminator squads pull back from the front line, boarding airborne transports and withdrawing to prepare their next assault.",
-            "turn": "Opponent’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Terminator unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves.",
+            "legend": "Losses only serve to stoke the fiery wrath of the Imperial Fists and increase their resolve.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One Adeptus Astartes Terminator, Bladeguard Veteran Squad, Sternguard Veteran Squad or Vanguard Veteran Squad unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is below its Starting Strength, add 1 to the Wound roll as well.",
             "eligibleDatasheets": {
                 "include": [
+                    "000000071",
                     "000000079",
                     "000000104",
                     "000000115",
                     "000000118",
                     "000000135",
+                    "000000147",
                     "000000219",
                     "000000230",
                     "000000231",
@@ -177,13 +174,16 @@
                     "000000300",
                     "000000317",
                     "000000318",
+                    "000001154",
                     "000001183",
                     "000002105",
+                    "000002255",
                     "000002302",
                     "000002468",
                     "000002677",
                     "000002803",
                     "000003873",
+                    "000004137",
                     "000004138",
                     "000004166",
                     "000004183"
@@ -359,5 +359,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "priority-assets"
 }

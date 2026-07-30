@@ -38,17 +38,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
+            "keyword": "Noble",
             "model": "",
             "isFactionKeyword": false
         },
@@ -58,7 +48,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Noble",
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         }
@@ -233,7 +233,8 @@
             "description": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Lord of the Storm",
@@ -241,7 +242,8 @@
             "description": "Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12\" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

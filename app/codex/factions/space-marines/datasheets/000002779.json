@@ -27,17 +27,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Kill Team",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Phobos",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Smoke",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,17 +37,27 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
+            "keyword": "Spectrus Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Phobos",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Spectrus Kill Team",
             "model": "",
             "isFactionKeyword": false
         }
@@ -544,7 +544,8 @@
             "description": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Helix Gauntlet",
@@ -552,7 +553,16 @@
             "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Helix Gauntlet",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Infiltrator Comms Array",
@@ -560,7 +570,8 @@
             "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Instigator Bolt Carbine",
@@ -568,7 +579,8 @@
             "description": "In your Shooting phase, after the bearer’s unit has shot, the bearer’s unit can make a Normal move. If it does, until the end of the turn, the bearer’s unit is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -576,7 +588,8 @@
             "description": "If a Character from your army with the Leader ability can be attached to an Infiltrator Squad, it can be attached to this unit instead.<br><br>If this unit has a Leader unit attached to it during the Declare Battle Formations step, that Leader unit gains the Infiltrators and Scouts 6\" abilities.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

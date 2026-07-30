@@ -21,32 +21,32 @@
                 "slug": "terminator-squad-2"
             },
             {
-                "id": "000000230",
-                "slug": "deathwing-terminator-squad"
-            },
-            {
                 "id": "000000104",
                 "slug": "relic-terminator-squad"
-            },
-            {
-                "id": "000001183",
-                "slug": "terminator-squad"
-            },
-            {
-                "id": "000003873",
-                "slug": "deathwatch-terminator-squad-2"
-            },
-            {
-                "id": "000000118",
-                "slug": "terminator-assault-squad"
             },
             {
                 "id": "000000231",
                 "slug": "deathwing-knights"
             },
             {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
                 "id": "000002302",
                 "slug": "deathwing-command-squad"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
             }
         ],
         "leaderNotes": ""
@@ -58,17 +58,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -84,6 +79,11 @@
         },
         {
             "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -238,7 +238,19 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Litany of Hate",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Recitation of Faith",
@@ -246,7 +258,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Recitation of Faith",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Relic Shield",
@@ -254,7 +283,8 @@
             "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

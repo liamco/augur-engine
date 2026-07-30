@@ -21,21 +21,6 @@
     ],
     "stratagems": [
         {
-            "id": "000009597003",
-            "name": "SHADOW STALKERS",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Flayed Ones stalk the shadowy perimeters of the battlefield, descending upon the unwary to spill blood and harvest trophies from their corpses.",
-            "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase, at the start of the Reinforcements step.<br><br><b>TARGET:</b> One FLAYED ONES unit from your army that is in Reserves.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Deep Strike ability.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000538"
-                ]
-            }
-        },
-        {
             "id": "000009597005",
             "name": "TERRIFYING AMBUSH",
             "type": "Strategic Ploy",
@@ -68,6 +53,21 @@
                     "000002110",
                     "000002355",
                     "000002358"
+                ]
+            }
+        },
+        {
+            "id": "000009597003",
+            "name": "SHADOW STALKERS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Flayed Ones stalk the shadowy perimeters of the battlefield, descending upon the unwary to spill blood and harvest trophies from their corpses.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, at the start of the Reinforcements step.<br><br><b>TARGET:</b> One FLAYED ONES unit from your army that is in Reserves.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Deep Strike ability.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538"
                 ]
             }
         },
@@ -127,5 +127,8 @@
             "000002355",
             "000002358"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": null,
+    "disposition": null
 }

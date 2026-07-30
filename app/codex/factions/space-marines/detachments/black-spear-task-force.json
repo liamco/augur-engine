@@ -6,25 +6,10 @@
         {
             "id": "000008521",
             "name": "Mission Tactics",
-            "description": "At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.<div></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">FUROR TACTICS</p><p class=\"ShowFluff legend2\">When the enemy horde grows close, the Deathwatch will be tasked with the decimation of their core. Aiming not for clinical kills but for maximum destruction over a wide area, they tear the heart from the enemy army.</p><p>While this Mission Tactic is active, weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army have the <span class=\"kwb2 bluefont\"><span class=\"tooltip00016\" data-tooltip-content=\"#tooltip_content00016\"><span class=\"tt kwbu\">[SUSTAINED</span> <span class=\"tt kwbu\">HITS</span> <span class=\"tt kwbu\">1]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">MALLEUS TACTICS</p><p class=\"ShowFluff legend2\">When the giants of war lumber forth, the Deathwatch will adopt Malleus tactics. Even the largest behemoth has a weak point, and the archives of the Deathwatch number them all.</p><p>While this Mission Tactic is active, weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army have the <span class=\"kwb2 bluefont\"><span class=\"tooltip00078\" data-tooltip-content=\"#tooltip_content00078\"><span class=\"tt kwbu\">[LETHAL</span> <span class=\"tt kwbu\">HITS]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">PURGATUS TACTICS</p><p class=\"ShowFluff legend2\">By adopting Purgatus tactics, the Deathwatch focus their deadly ire upon the commanders of the enemy host, assassinating them one after another with pitiless head shots and killing thrusts of the blade.</p><p>While this Mission Tactic is active, each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army makes an attack, if a <span class=\"tooltip00006\" data-tooltip-content=\"#tooltip_content00006\"><span class=\"tt kwbu\">Critical</span> <span class=\"tt kwbu\">Hit</span></span> is scored, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00037\" data-tooltip-content=\"#tooltip_content00037\"><span class=\"tt kwbu\">[PRECISION]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div>",
+            "description": "At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.<div></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">FUROR TACTICS</p><p class=\"ShowFluff legend2\">When the enemy horde grows close, the Deathwatch will be tasked with the decimation of their core. Aiming not for clinical kills but for maximum destruction over a wide area, they tear the heart from the enemy army.</p><p>While this Mission Tactic is active, weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army have the <span class=\"kwb2 bluefont\"><span class=\"tooltip00032\" data-tooltip-content=\"#tooltip_content00032\"><span class=\"tt kwbu\">[SUSTAINED</span> <span class=\"tt kwbu\">HITS</span> <span class=\"tt kwbu\">1]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">MALLEUS TACTICS</p><p class=\"ShowFluff legend2\">When the giants of war lumber forth, the Deathwatch will adopt Malleus tactics. Even the largest behemoth has a weak point, and the archives of the Deathwatch number them all.</p><p>While this Mission Tactic is active, weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army have the <span class=\"kwb2 bluefont\"><span class=\"tooltip00033\" data-tooltip-content=\"#tooltip_content00033\"><span class=\"tt kwbu\">[LETHAL</span> <span class=\"tt kwbu\">HITS]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">PURGATUS TACTICS</p><p class=\"ShowFluff legend2\">By adopting Purgatus tactics, the Deathwatch focus their deadly ire upon the commanders of the enemy host, assassinating them one after another with pitiless head shots and killing thrusts of the blade.</p><p>While this Mission Tactic is active, each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army makes an attack, if a <span class=\"tooltip00023\" data-tooltip-content=\"#tooltip_content00023\"><span class=\"tt kwbu\">Critical</span> <span class=\"tt kwbu\">Hit</span></span> is scored, that attack has the <span class=\"kwb2 bluefont\"><span class=\"tooltip00009\" data-tooltip-content=\"#tooltip_content00009\"><span class=\"tt kwbu\">[PRECISION]</span></span></span> ability.</p></td></tr></tbody></tbody></table></div>",
             "legend": "Thousands of years of collated strategic data and hard-won combat experience have provided the Deathwatch with the ultimate battlefield tactics to combat almost any foe.",
             "eligibleDatasheets": {
-                "exclude": [
-                    "000000061",
-                    "000000064",
-                    "000000070",
-                    "000000104",
-                    "000000118",
-                    "000000132",
-                    "000000137",
-                    "000000310",
-                    "000001160",
-                    "000001183",
-                    "000001523",
-                    "000002076",
-                    "000002202",
-                    "000004138"
-                ]
+                "include": []
             }
         }
     ],
@@ -247,28 +232,6 @@
             }
         },
         {
-            "id": "000008523006",
-            "name": "DRAGONFIRE ROUNDS",
-            "type": "Wargear",
-            "cpCost": 1,
-            "legend": "Dragonfire rounds are designed to explode just before contact, saturating foes in cover with searing gas and flames.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Kill Team unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] and [IGNORES COVER] abilities.<br><br><b>RESTRICTIONS:</b> You cannot select any units that have already been targeted with either the Kraken Rounds or Hellfire Rounds Stratagems this phase.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000002779",
-                    "000002780",
-                    "000002781",
-                    "000002783",
-                    "000003873",
-                    "000003874",
-                    "000003875",
-                    "000004175"
-                ]
-            }
-        },
-        {
             "id": "000008523004",
             "name": "HELLFIRE ROUNDS",
             "type": "Wargear",
@@ -299,6 +262,28 @@
             "turn": "Your turn",
             "phase": "Shooting phase",
             "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Kill Team unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1 and improve the Range characteristic of those weapons by 6\".<br><br><b>RESTRICTIONS:</b> You cannot select any units that have already been targeted with either the Dragonfire Rounds or Hellfire Rounds Stratagems this phase.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002779",
+                    "000002780",
+                    "000002781",
+                    "000002783",
+                    "000003873",
+                    "000003874",
+                    "000003875",
+                    "000004175"
+                ]
+            }
+        },
+        {
+            "id": "000008523006",
+            "name": "DRAGONFIRE ROUNDS",
+            "type": "Wargear",
+            "cpCost": 1,
+            "legend": "Dragonfire rounds are designed to explode just before contact, saturating foes in cover with searing gas and flames.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Kill Team unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] and [IGNORES COVER] abilities.<br><br><b>RESTRICTIONS:</b> You cannot select any units that have already been targeted with either the Kraken Rounds or Hellfire Rounds Stratagems this phase.",
             "eligibleDatasheets": {
                 "include": [
                     "000002779",
@@ -508,5 +493,8 @@
             "000002202",
             "000004138"
         ]
-    }
+    },
+    "supplement": "deathwatch",
+    "detachmentPoints": 3,
+    "disposition": "priority-assets"
 }

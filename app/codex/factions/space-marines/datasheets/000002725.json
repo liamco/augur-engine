@@ -17,17 +17,17 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Ultramarines",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tyrannic War Veterans",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,12 +37,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tyrannic War Veterans",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -227,7 +227,18 @@
             "description": "Weapons equipped by models in this unit are have the [DEVASTATING WOUNDS] ability when targeting <span class=\"kwb\">TYRANIDS</span> units.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Tyrannic War Veterans",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

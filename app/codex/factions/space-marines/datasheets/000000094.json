@@ -17,10 +17,6 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000241",
-                "slug": "ravenwing-black-knights"
-            },
-            {
                 "id": "000000116",
                 "slug": "bike-squad"
             },
@@ -31,6 +27,10 @@
             {
                 "id": "000001166",
                 "slug": "company-veterans-on-bikes"
+            },
+            {
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
             }
         ],
         "leaderNotes": ""
@@ -42,12 +42,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Chaplain",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -57,17 +57,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Mounted",
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chaplain",
             "model": "",
             "isFactionKeyword": false
         }
@@ -241,7 +241,19 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Litany of Hate",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Catechism of Fire",
@@ -249,7 +261,18 @@
             "description": "Each time this model’s unit is selected to shoot, you can select one enemy unit within 12\" of and visible to this model. Until the end of the phase, ranged weapons equipped by models in this model’s unit have the [DEVASTATING WOUNDS] ability when targeting that enemy unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Catechism of Fire",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

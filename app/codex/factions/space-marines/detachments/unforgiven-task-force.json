@@ -17,29 +17,14 @@
     ],
     "stratagems": [
         {
-            "id": "000008389002",
-            "name": "ARMOUR OF CONTEMPT",
+            "id": "000008389007",
+            "name": "UNBREAKABLE LINES",
             "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000008389003",
-            "name": "UNFORGIVEN FURY",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "With focused aggression, the Dark Angels relentlessly punish the foe.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+            "cpCost": 2,
+            "legend": "Countless assaults have faltered against the unbreakable ceramite wall that is the Unforgiven standing their ground.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -62,14 +47,14 @@
             }
         },
         {
-            "id": "000008389007",
-            "name": "UNBREAKABLE LINES",
+            "id": "000008389003",
+            "name": "UNFORGIVEN FURY",
             "type": "Battle Tactic",
-            "cpCost": 2,
-            "legend": "Countless assaults have faltered against the unbreakable ceramite wall that is the Unforgiven standing their ground.",
-            "turn": "Opponent’s turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
+            "cpCost": 1,
+            "legend": "With focused aggression, the Dark Angels relentlessly punish the foe.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -77,14 +62,14 @@
             }
         },
         {
-            "id": "000008389004",
-            "name": "INTRACTABLE",
-            "type": "Strategic Ploy",
+            "id": "000008389002",
+            "name": "ARMOUR OF CONTEMPT",
+            "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Even the Dark Angels must give ground occasionally, y but their stubborn determination ensures they never do so for long, or without a fight.",
-            "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -100,6 +85,21 @@
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
             "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000008389004",
+            "name": "INTRACTABLE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Even the Dark Angels must give ground occasionally, y but their stubborn determination ensures they never do so for long, or without a fight.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -337,5 +337,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "dark-angels",
+    "detachmentPoints": 2,
+    "disposition": "take-and-hold"
 }

@@ -17,8 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000241",
-                "slug": "ravenwing-black-knights"
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
             },
             {
                 "id": "000002712",
@@ -29,8 +29,8 @@
                 "slug": "bike-squad"
             },
             {
-                "id": "000001166",
-                "slug": "company-veterans-on-bikes"
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
             }
         ],
         "leaderNotes": ""
@@ -40,6 +40,21 @@
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Ravenwing",
@@ -53,21 +68,6 @@
         },
         {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -525,7 +525,16 @@
             "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Astartes Banner",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Unbreakable Duty",
@@ -533,7 +542,16 @@
             "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Unbreakable Duty",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

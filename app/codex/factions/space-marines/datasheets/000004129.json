@@ -17,40 +17,30 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000303",
-                "slug": "blood-claws"
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
             },
             {
                 "id": "000000305",
                 "slug": "grey-hunters"
             },
             {
-                "id": "000004131",
-                "slug": "wolf-guard-headtakers"
+                "id": "000000303",
+                "slug": "blood-claws"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Space Wolves",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Tacticus",
+            "keyword": "Space Wolves",
             "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Wolf Priest",
-            "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Infantry",
@@ -64,6 +54,16 @@
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Priest",
             "model": "",
             "isFactionKeyword": false
         }
@@ -206,7 +206,8 @@
             "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding <span class=\"kwb\">CHARACTER</span> models) to that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Litany of Hate",
@@ -214,7 +215,19 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Litany of Hate",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

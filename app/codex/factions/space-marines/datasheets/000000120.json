@@ -22,7 +22,27 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Venerable",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
@@ -33,26 +53,6 @@
         },
         {
             "keyword": "Vehicle",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Dreadnought",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Deathwing",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Venerable",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -613,7 +613,16 @@
             "description": "While a friendly Adeptus Astartes Infantry unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Wisdom of the Ancients (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

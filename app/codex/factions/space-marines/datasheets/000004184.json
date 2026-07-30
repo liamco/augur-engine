@@ -35,6 +35,16 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
@@ -61,16 +71,6 @@
         },
         {
             "keyword": "Sicarius",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         }
@@ -277,7 +277,8 @@
             "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Honour or Death",
@@ -285,15 +286,8 @@
             "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
-        },
-        {
-            "name": "CAPTAIN OF THE HONOUR GUARD",
-            "legend": "",
-            "description": "Your army cannot include more than one Captain Sicarius unit.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

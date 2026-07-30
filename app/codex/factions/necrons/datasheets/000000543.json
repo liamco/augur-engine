@@ -22,12 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Transport",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Dedicated Transport",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -37,7 +32,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Dedicated Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
             "model": "",
             "isFactionKeyword": false
         },
@@ -186,7 +186,8 @@
             "description": "Once per turn, just after an enemy unit finishes making its attacks, if one or more friendly NECRON WARRIORS units within 3\" of this model lost one or more wounds as a result of those attacks, this model can use this ability. If it does, select one of those <span class=\"kwb\">NECRON</span> <span class=\"kwb\">WARRIORS</span> units; that unit’s Reanimation Protocols activate. The same <span class=\"kwb\">NECRON</span> <span class=\"kwb\">WARRIORS</span> unit cannot be selected for this ability more than once per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

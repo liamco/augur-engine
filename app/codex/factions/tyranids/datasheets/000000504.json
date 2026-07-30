@@ -22,6 +22,16 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
@@ -45,16 +55,6 @@
             "keyword": "Harridan",
             "model": "",
             "isFactionKeyword": false
-        },
-        {
-            "keyword": "Titanic",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Monster",
-            "model": "",
-            "isFactionKeyword": false
         }
     ],
     "transport": "This model has a transport capacity of 20 Gargoyles models and 1 Winged Tyranid Prime model.",
@@ -62,7 +62,15 @@
         "range": "1-10",
         "threshold": 10,
         "description": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -212,7 +220,19 @@
             "description": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Frenzied Metabolism",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -27,11 +27,6 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Vanguard Invader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Burrower",
             "model": "",
             "isFactionKeyword": false
@@ -45,6 +40,11 @@
             "keyword": "Monster",
             "model": "",
             "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
         }
     ],
     "transport": "",
@@ -52,7 +52,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -192,7 +200,8 @@
             "description": "Each time this model is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

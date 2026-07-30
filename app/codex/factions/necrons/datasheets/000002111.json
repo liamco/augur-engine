@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Cryptothralls",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Cryptothralls",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -163,7 +163,16 @@
             "description": "While this unit is in the same unit as a Cryptek model, that <span class=\"kwb\">CRYPTEK</span> model has the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Bound Creation",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Systematic Vigour",
@@ -171,7 +180,8 @@
             "description": "Each time a <span class=\"kwb\">CRYPTOTHRALL</span> model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 2+, do not remove it from play.  The destroyed model can fight after the attacking model’s unit has finished making its attacks, and it is then removed from play.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "CRYPTEK RETINUE",
@@ -179,7 +189,8 @@
             "description": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a Cryptek Infantry model (a unit cannot have more than one <span class=\"kwb\">CRYPTOTHRALLS</span> unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

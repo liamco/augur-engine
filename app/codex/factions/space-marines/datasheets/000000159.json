@@ -25,39 +25,34 @@
                 "slug": "bike-squad"
             },
             {
-                "id": "000001166",
-                "slug": "company-veterans-on-bikes"
-            },
-            {
                 "id": "000000241",
                 "slug": "ravenwing-black-knights"
+            },
+            {
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Sanguinary Priest",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -67,7 +62,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Sanguinary Priest",
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
             "model": "",
             "isFactionKeyword": false
         }
@@ -596,7 +596,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Sanguinary Priest",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Blood Chalice",
@@ -604,7 +621,8 @@
             "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

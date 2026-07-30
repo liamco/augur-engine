@@ -17,43 +17,33 @@
     "leader": {
         "canLead": [
             {
-                "id": "000000303",
-                "slug": "blood-claws"
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
             },
             {
                 "id": "000000305",
                 "slug": "grey-hunters"
             },
             {
-                "id": "000004131",
-                "slug": "wolf-guard-headtakers"
+                "id": "000000303",
+                "slug": "blood-claws"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Ulrik the Slayer",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Wolf Priest",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -63,7 +53,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
@@ -73,7 +68,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Wolf Priest",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ulrik the Slayer",
             "model": "",
             "isFactionKeyword": false
         }
@@ -256,7 +256,8 @@
             "description": "At the start of the battle, select one of the following keywords to be this model’s Slayer’s Oath: <span class=\"kwb\">CHARACTER</span>; <span class=\"kwb\">MONSTER</span>; <span class=\"kwb\">VEHICLE</span>. The first time this model’s unit destroys a unit with this model’s Slayer’s Oath keyword, if your Detachment rule has a Saga, until the end of the battle, this model’s unit receives the benefits of that Detachment rule as if that Saga had been completed.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Oathbound",
@@ -264,7 +265,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll. If that attack targets a unit that has this model’s Slayer’s Oath keyword (see above), add 1 to the Wound roll as well.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

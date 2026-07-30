@@ -22,16 +22,6 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Battleline",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
@@ -43,6 +33,16 @@
         },
         {
             "keyword": "Tactical Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
             "model": "",
             "isFactionKeyword": false
         }
@@ -960,7 +960,8 @@
             "description": "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

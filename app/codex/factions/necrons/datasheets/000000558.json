@@ -22,7 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Monster",
+            "keyword": "Tomb Stalker",
             "model": "",
             "isFactionKeyword": false
         },
@@ -32,7 +32,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tomb Stalker",
+            "keyword": "Monster",
             "model": "",
             "isFactionKeyword": false
         }
@@ -184,7 +184,16 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Gloom Prism (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Snaking Ambush",
@@ -192,7 +201,8 @@
             "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

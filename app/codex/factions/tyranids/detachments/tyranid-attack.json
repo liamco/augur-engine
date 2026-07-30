@@ -44,6 +44,22 @@
             }
         },
         {
+            "id": "000009682004",
+            "name": "EXPENDABLE BIOMASS",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "The Tyranids will expend the lives of their lesser organisms in droves provided it results in their prey’s defeat.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "WHEN: Your Shooting phase.<br><br>TARGET: One TYRANID WARRIORS wITH RANGED BIO-wEAPONS unit from your army that has not been selected to shoot this phase.<br><br>EFFECT: Select one enemy unit that is visible to your unit and within Engagement Range of one or more friendly ENDLESS MULTITUDE or RIPPER SwARMS units. Until the end of the phase, your unit is eligible to make ranged attacks against that enemy unit as if it was not within Engagement Range of those friendly units. When doing so, each time a model in your unit makes a ranged attack, subtract 1 from the Hit roll and, after your unit has finished making its attacks, each of those friendly units that started the phase within Engagement Range of that enemy unit suffers D3 mortal wounds.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002691",
+                    "000002692"
+                ]
+            }
+        },
+        {
             "id": "000009682005",
             "name": "HIVE SIGHT",
             "type": "Strategic Ploy",
@@ -57,22 +73,6 @@
                     "000002691",
                     "000002692",
                     "000002694"
-                ]
-            }
-        },
-        {
-            "id": "000009682004",
-            "name": "EXPENDABLE BIOMASS",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "The Tyranids will expend the lives of their lesser organisms in droves provided it results in their prey’s defeat.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "WHEN: Your Shooting phase.<br><br>TARGET: One TYRANID WARRIORS wITH RANGED BIO-wEAPONS unit from your army that has not been selected to shoot this phase.<br><br>EFFECT: Select one enemy unit that is visible to your unit and within Engagement Range of one or more friendly ENDLESS MULTITUDE or RIPPER SwARMS units. Until the end of the phase, your unit is eligible to make ranged attacks against that enemy unit as if it was not within Engagement Range of those friendly units. When doing so, each time a model in your unit makes a ranged attack, subtract 1 from the Hit roll and, after your unit has finished making its attacks, each of those friendly units that started the phase within Engagement Range of that enemy unit suffers D3 mortal wounds.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000002691",
-                    "000002692"
                 ]
             }
         },
@@ -129,5 +129,8 @@
             "000002692",
             "000002694"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": null,
+    "disposition": null
 }

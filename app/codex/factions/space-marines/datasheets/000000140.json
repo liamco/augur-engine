@@ -17,16 +17,8 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000002202",
-                "slug": "devastator-squad"
+                "id": "000000061",
+                "slug": "assault-squad"
             },
             {
                 "id": "000000326",
@@ -37,8 +29,36 @@
                 "slug": "tactical-squad"
             },
             {
-                "id": "000000061",
-                "slug": "assault-squad"
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000002202",
+                "slug": "devastator-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
             },
             {
                 "id": "000001606",
@@ -47,26 +67,6 @@
             {
                 "id": "000002270",
                 "slug": "desolation-squad"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
             }
         ],
         "leaderNotes": ""
@@ -78,12 +78,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Techmarine",
             "model": "",
             "isFactionKeyword": false
         },
@@ -98,12 +103,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Techmarine",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -307,7 +307,18 @@
             "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, this model has the Lone Operative ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Techmarine",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "LONE OPERATIVE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Blessing of the Omnissiah",
@@ -315,7 +326,16 @@
             "description": "In your Command phase, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Blessing of the Omnissiah",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Vengeance of the Omnissiah",
@@ -323,7 +343,8 @@
             "description": "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian power axe has an Attacks characteristic of 7.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

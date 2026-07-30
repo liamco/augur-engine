@@ -17,30 +17,35 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004131",
-                "slug": "wolf-guard-headtakers"
+                "id": "000000303",
+                "slug": "blood-claws"
             },
             {
                 "id": "000000305",
                 "slug": "grey-hunters"
             },
             {
-                "id": "000000303",
-                "slug": "blood-claws"
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Space Wolves",
+            "keyword": "Techmarine",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
@@ -48,12 +53,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Iron Priest",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Techmarine",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -63,7 +63,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Iron Priest",
             "model": "",
             "isFactionKeyword": false
         }
@@ -238,7 +238,18 @@
             "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, this model has the Lone Operative ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Iron Priest",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "LONE OPERATIVE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Gift of the Iron Wolf",
@@ -246,7 +257,18 @@
             "description": "In your Command phase, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, select one ranged weapon equipped by that model to have the [RAPID FIRE 1] ability. Each model can only be selected for this ability or the Blessing of the Omnissiah ability once per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Gift of the Iron Wolf",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "RAPID FIRE"
+                    ],
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Judgement of the Omnissiah",
@@ -254,7 +276,8 @@
             "description": "Each time this model makes an attack that targets an enemy unit within Engagement Range of one or more friendly Adeptus Astartes Vehicle units, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

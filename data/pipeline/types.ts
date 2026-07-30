@@ -257,6 +257,15 @@ export interface ParsedDetachment {
     enhancements: ParsedEnhancement[];
     /** Union of the eligibility of everything the detachment contains. */
     eligibleDatasheets?: DatasheetEligibility;
+    /**
+     * The following three come from the hand-maintained detachment config
+     * (`app/codex/factions/{slug}/plugins.json`) rather than the fetched
+     * data, which carries none of them. Absent on factions with no config file.
+     */
+    supplement?: string;
+    detachmentPoints?: number | null;
+    /** Library disposition slug, e.g. "priority-assets". */
+    disposition?: string | null;
 }
 
 export interface DatasheetRef {

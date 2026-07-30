@@ -22,7 +22,22 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Harpy",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
             "model": "",
             "isFactionKeyword": false
         },
@@ -35,21 +50,6 @@
             "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vanguard Invader",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Harpy",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
         }
     ],
     "transport": "",
@@ -57,7 +57,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -269,7 +277,8 @@
             "description": "Each time this model ends a Normal move, you can select one of the following:<br><ul><li>Select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.</li><li>Add one new Spore Mines unit containing D3 models to your army and set it up anywhere on the battlefield that is wholly within 6\" of this model and more than 9\" horizontally away from all enemy units. You cannot select this option for more than one model per turn.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

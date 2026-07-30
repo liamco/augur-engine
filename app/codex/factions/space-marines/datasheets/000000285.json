@@ -17,12 +17,12 @@
     "leader": {
         "canLead": [
             {
-                "id": "000004131",
-                "slug": "wolf-guard-headtakers"
-            },
-            {
                 "id": "000000303",
                 "slug": "blood-claws"
+            },
+            {
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
             }
         ],
         "leaderNotes": ""
@@ -44,21 +44,6 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
@@ -75,6 +60,21 @@
         },
         {
             "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         }
@@ -219,7 +219,8 @@
             "description": "While this model is leading a Blood Claws unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll. While this model is leading a Wolf Guard Headtakers unit, that unit is eligible to declare a charge in a turn in which it Advanced.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Battle-lust",
@@ -227,7 +228,8 @@
             "description": "Each time this model ends a Charge move, until the end of the turn, add 2 to the Attacks characteristic of this model’s Frostfang weapon.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

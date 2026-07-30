@@ -17,52 +17,36 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
+                "id": "000000126",
+                "slug": "infernus-squad"
             },
             {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
+                "id": "000003698",
+                "slug": "inner-circle-companions"
             },
             {
-                "id": "000002772",
-                "slug": "company-heroes"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
+                "id": "000001157",
+                "slug": "intercessor-squad"
             },
             {
                 "id": "000002103",
                 "slug": "command-squad"
             },
             {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
             },
             {
                 "id": "000002783",
                 "slug": "deathwatch-veterans"
             },
             {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
+                "id": "000000070",
+                "slug": "tactical-squad"
             },
             {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             },
             {
                 "id": "000000315",
@@ -73,24 +57,40 @@
                 "slug": "fortis-kill-team-2"
             },
             {
-                "id": "000001157",
-                "slug": "intercessor-squad"
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
             },
             {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
+                "id": "000004175",
+                "slug": "decimus-kill-team"
             },
             {
                 "id": "000002799",
                 "slug": "crusader-squad"
             },
             {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
                 "id": "000004185",
                 "slug": "victrix-honour-guard"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             }
         ],
         "leaderNotes": ""
@@ -112,17 +112,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Captain",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Imperium",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -132,7 +122,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
             "model": "",
             "isFactionKeyword": false
         }
@@ -378,7 +378,8 @@
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Finest Hour",
@@ -386,7 +387,28 @@
             "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Finest Hour",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Finest Hour",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "attacks",
+                    "value": 3,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

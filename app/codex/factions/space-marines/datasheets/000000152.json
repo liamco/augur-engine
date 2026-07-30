@@ -17,106 +17,121 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
-            },
-            {
-                "id": "000002772",
-                "slug": "company-heroes"
-            },
-            {
-                "id": "000002103",
-                "slug": "command-squad"
-            },
-            {
-                "id": "000000071",
-                "slug": "bladeguard-veteran-squad"
-            },
-            {
-                "id": "000002098",
-                "slug": "hellblaster-squad"
-            },
-            {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000004185",
-                "slug": "victrix-honour-guard"
-            },
-            {
-                "id": "000000147",
-                "slug": "vanguard-veteran-squad-with-jump-packs"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
-            },
-            {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
-            },
-            {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
             },
             {
                 "id": "000000315",
                 "slug": "wolf-guard"
             },
             {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000000147",
+                "slug": "vanguard-veteran-squad-with-jump-packs"
+            },
+            {
+                "id": "000004185",
+                "slug": "victrix-honour-guard"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
                 "id": "000001157",
                 "slug": "intercessor-squad"
             },
             {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
             },
             {
                 "id": "000004175",
                 "slug": "decimus-kill-team"
             },
             {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
+                "id": "000000061",
+                "slug": "assault-squad"
             },
             {
-                "id": "000000126",
-                "slug": "infernus-squad"
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Blood Angels",
+            "keyword": "Epic Hero",
             "model": "",
-            "isFactionKeyword": true
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tycho",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Captain",
@@ -129,27 +144,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tycho",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -332,7 +332,8 @@
             "description": "While this model is leading a unit, each time that unit is selected to shoot, select one of the following abilities to apply to ranged weapons equipped by models in that unit until the end of the phase: <br><ul><li>[ASSAULT] </li><li>[HEAVY] </li><li>[RAPID FIRE 1]</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Embittered",
@@ -340,7 +341,8 @@
             "description": "The first time an attack is allocated to this model, after the attacking unit has finished making its attacks, until the end of the battle, change the Attacks characteristic of this model’s Dead Man’s Hand to 12.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "TYCHO",
@@ -348,7 +350,8 @@
             "description": "Your army cannot contain both <span class=\"kwb\">CAPTAIN</span> <span class=\"kwb\">TYCHO</span> and Tycho the Lost.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -34,6 +34,11 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Destroyer Cult",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Lokhust Lord",
             "model": "",
             "isFactionKeyword": false
@@ -45,11 +50,6 @@
         },
         {
             "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Destroyer Cult",
             "model": "",
             "isFactionKeyword": false
         },
@@ -239,7 +239,16 @@
             "description": "The bearer has the Feel No Pain 5+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Nanoscarab Amulet",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Resurrection Orb",
@@ -247,7 +256,8 @@
             "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Destroyer Cult",
@@ -255,7 +265,8 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a ranged attack, a successful unmodifed Hit roll of 5+ scores a Critical Hit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Driven by Hatred",
@@ -263,7 +274,8 @@
             "description": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, you can re-roll the Hit roll and you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

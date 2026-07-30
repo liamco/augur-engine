@@ -17,84 +17,84 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002202",
-                "slug": "devastator-squad"
-            },
-            {
-                "id": "000001157",
-                "slug": "intercessor-squad"
-            },
-            {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
-            },
-            {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000002270",
-                "slug": "desolation-squad"
-            },
-            {
-                "id": "000000326",
-                "slug": "long-fangs"
-            },
-            {
-                "id": "000002098",
-                "slug": "hellblaster-squad"
-            },
-            {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000002798",
-                "slug": "sword-brethren-squad"
-            },
-            {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
-            },
-            {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             },
             {
                 "id": "000000315",
                 "slug": "wolf-guard"
             },
             {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
             },
             {
                 "id": "000000061",
                 "slug": "assault-squad"
             },
             {
-                "id": "000004154",
-                "slug": "crusader-squad-legendary"
+                "id": "000002098",
+                "slug": "hellblaster-squad"
             },
             {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000000326",
+                "slug": "long-fangs"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002270",
+                "slug": "desolation-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
             },
             {
                 "id": "000003698",
                 "slug": "inner-circle-companions"
             },
             {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000002202",
+                "slug": "devastator-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
             }
         ],
         "leaderNotes": "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
@@ -106,7 +106,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -116,7 +116,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Character",
+            "keyword": "Tacticus",
             "model": "",
             "isFactionKeyword": false
         },
@@ -126,7 +126,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Tacticus",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -305,7 +305,8 @@
             "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding <span class=\"kwb\">CHARACTER</span> models) to that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Gene-seed Recovery",
@@ -313,7 +314,8 @@
             "description": "When this model’s Bodyguard unit is destroyed, roll one D6: on a 2+, you gain 1CP",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

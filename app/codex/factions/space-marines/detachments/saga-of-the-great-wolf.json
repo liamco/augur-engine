@@ -37,6 +37,21 @@
     ],
     "stratagems": [
         {
+            "id": "000010661003",
+            "name": "GRIMNAR’S COMMAND",
+            "type": "",
+            "cpCost": 1,
+            "legend": "Pivotal as they are to the Great Wolf’s plans, this pack have their own orders to fulfil in this moment that come directly from Grimnar himself.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hunting Pack from the Master of Wolves Detachment rule. Until the start of your next Command phase, that Hunting Pack is active for your unit instead of any other Hunting Pack that is active, even if you have already selected that Hunting Pack this battle.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000010661006",
             "name": "EYE OF THE PACK",
             "type": "",
@@ -45,6 +60,76 @@
             "turn": "Your turn",
             "phase": "Shooting phase",
             "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can add 1 to the Wound roll.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
+            "id": "000010661007",
+            "name": "BATTLE INSTINCTS",
+            "type": "",
+            "cpCost": 1,
+            "legend": "These champions of Fenris respond to enemy fire with instinctive swiftness, rarely giving their foes a second chance to shoot at them.",
+            "turn": "Opponent’s turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One Space Wolves unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\".",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000282",
+                    "000000283",
+                    "000000284",
+                    "000000285",
+                    "000000286",
+                    "000000287",
+                    "000000288",
+                    "000000292",
+                    "000000297",
+                    "000000300",
+                    "000000301",
+                    "000000302",
+                    "000000303",
+                    "000000304",
+                    "000000305",
+                    "000000306",
+                    "000000308",
+                    "000000310",
+                    "000000311",
+                    "000000314",
+                    "000000315",
+                    "000000317",
+                    "000000318",
+                    "000000321",
+                    "000000322",
+                    "000000323",
+                    "000000324",
+                    "000000325",
+                    "000000326",
+                    "000002801",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000002806",
+                    "000004129",
+                    "000004130",
+                    "000004131",
+                    "000004132",
+                    "000004133",
+                    "000004182"
+                ]
+            }
+        },
+        {
+            "id": "000010661002",
+            "name": "THE FOE FORESEEN",
+            "type": "",
+            "cpCost": 1,
+            "legend": "With his great strategic wisdom, Grimnar predicted the peril these warriors would encounter and warned them to be ready for it.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -112,61 +197,6 @@
             }
         },
         {
-            "id": "000010661007",
-            "name": "BATTLE INSTINCTS",
-            "type": "",
-            "cpCost": 1,
-            "legend": "These champions of Fenris respond to enemy fire with instinctive swiftness, rarely giving their foes a second chance to shoot at them.",
-            "turn": "Opponent’s turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One Space Wolves unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\".",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000282",
-                    "000000283",
-                    "000000284",
-                    "000000285",
-                    "000000286",
-                    "000000287",
-                    "000000288",
-                    "000000292",
-                    "000000297",
-                    "000000300",
-                    "000000301",
-                    "000000302",
-                    "000000303",
-                    "000000304",
-                    "000000305",
-                    "000000306",
-                    "000000308",
-                    "000000310",
-                    "000000311",
-                    "000000314",
-                    "000000315",
-                    "000000317",
-                    "000000318",
-                    "000000321",
-                    "000000322",
-                    "000000323",
-                    "000000324",
-                    "000000325",
-                    "000000326",
-                    "000002801",
-                    "000002802",
-                    "000002803",
-                    "000002804",
-                    "000002805",
-                    "000002806",
-                    "000004129",
-                    "000004130",
-                    "000004131",
-                    "000004132",
-                    "000004133",
-                    "000004182"
-                ]
-            }
-        },
-        {
             "id": "000010661005",
             "name": "UNRELENTING HUNTERS",
             "type": "",
@@ -175,36 +205,6 @@
             "turn": "Your turn",
             "phase": "Movement phase",
             "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a Space Wolves unit, until the end of the turn, it is eligible to declare a charge in a turn in which it Advanced or Fell Back.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010661002",
-            "name": "THE FOE FORESEEN",
-            "type": "",
-            "cpCost": 1,
-            "legend": "With his great strategic wisdom, Grimnar predicted the peril these warriors would encounter and warned them to be ready for it.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000010661003",
-            "name": "GRIMNAR’S COMMAND",
-            "type": "",
-            "cpCost": 1,
-            "legend": "Pivotal as they are to the Great Wolf’s plans, this pack have their own orders to fulfil in this moment that come directly from Grimnar himself.",
-            "turn": "Your turn",
-            "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hunting Pack from the Master of Wolves Detachment rule. Until the start of your next Command phase, that Hunting Pack is active for your unit instead of any other Hunting Pack that is active, even if you have already selected that Hunting Pack this battle.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -323,5 +323,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "space-wolves",
+    "detachmentPoints": 2,
+    "disposition": "take-and-hold"
 }

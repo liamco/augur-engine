@@ -20,6 +20,24 @@
     ],
     "stratagems": [
         {
+            "id": "000008409006",
+            "name": "BOUNDING ADVANCE",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Synaptic impulses from the Hive Mind urge greater speed from the swarm’s warrior organisms.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000468",
+                    "000000469",
+                    "000000484",
+                    "000002687"
+                ]
+            }
+        },
+        {
             "id": "000008409004",
             "name": "TEEMING MASSES",
             "type": "Battle Tactic",
@@ -56,24 +74,6 @@
             }
         },
         {
-            "id": "000008409006",
-            "name": "BOUNDING ADVANCE",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "Synaptic impulses from the Hive Mind urge greater speed from the swarm’s warrior organisms.",
-            "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000468",
-                    "000000469",
-                    "000000484",
-                    "000002687"
-                ]
-            }
-        },
-        {
             "id": "000008409007",
             "name": "PRESERVATION IMPERATIVE",
             "type": "Strategic Ploy",
@@ -92,14 +92,14 @@
             }
         },
         {
-            "id": "000008409002",
-            "name": "SYNAPTIC GOADING",
+            "id": "000008409003",
+            "name": "UNENDING WAVES",
             "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "For a moment, a minuscule sliver of the Hive Mind’s ineffable will is focussed through these warrior organisms, driving them to pounce upon either valuable prey or else some vital strategic target.",
+            "cpCost": 2,
+            "legend": "No matter how many warrior organisms are slain, more are already surging forward over their corpses.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase, just before an Endless Multitude unit from your army that is within Synapse Range of your army makes a Surge move.<br><br><b>TARGET:</b> That <span class=\"kwb\">ENDLESS</span> <span class=\"kwb\">MULTITUDE</span> unit.<br><br><b>EFFECT:</b> When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit]. All other rules for making Surge moves still apply.",
+            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.<br><br><b>RESTRICTIONS:</b> Any destroyed Character units that were attached to your unit are not returned. You can only use this Stratagem once per battle.",
             "eligibleDatasheets": {
                 "include": [
                     "000000468",
@@ -110,14 +110,14 @@
             }
         },
         {
-            "id": "000008409003",
-            "name": "UNENDING WAVES",
+            "id": "000008409002",
+            "name": "SYNAPTIC GOADING",
             "type": "Strategic Ploy",
-            "cpCost": 2,
-            "legend": "No matter how many warrior organisms are slain, more are already surging forward over their corpses.",
+            "cpCost": 1,
+            "legend": "For a moment, a minuscule sliver of the Hive Mind’s ineffable will is focussed through these warrior organisms, driving them to pounce upon either valuable prey or else some vital strategic target.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Endless Multitude unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.<br><br><b>RESTRICTIONS:</b> Any destroyed Character units that were attached to your unit are not returned. You can only use this Stratagem once per battle.",
+            "description": "<b>WHEN:</b> Any phase, just before an Endless Multitude unit from your army that is within Synapse Range of your army makes a Surge move.<br><br><b>TARGET:</b> That <span class=\"kwb\">ENDLESS</span> <span class=\"kwb\">MULTITUDE</span> unit.<br><br><b>EFFECT:</b> When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit]. All other rules for making Surge moves still apply.",
             "eligibleDatasheets": {
                 "include": [
                     "000000468",
@@ -145,7 +145,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -165,7 +166,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -185,7 +187,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -205,7 +208,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         }
@@ -224,7 +228,11 @@
             "000002687",
             "000002688",
             "000002694",
-            "000004117"
+            "000004117",
+            "000004202"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "take-and-hold"
 }

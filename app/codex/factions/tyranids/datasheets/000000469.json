@@ -22,17 +22,7 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Hormagaunts",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Endless Multitude",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Great Devourer",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,7 +32,17 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Endless Multitude",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hormagaunts",
             "model": "",
             "isFactionKeyword": false
         }
@@ -153,7 +153,8 @@
             "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

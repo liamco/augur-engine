@@ -17,36 +17,44 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002255",
-                "slug": "sternguard-veteran-squad"
-            },
-            {
-                "id": "000002799",
-                "slug": "crusader-squad"
-            },
-            {
-                "id": "000002098",
-                "slug": "hellblaster-squad"
-            },
-            {
-                "id": "000002780",
-                "slug": "fortis-kill-team-2"
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
             },
             {
                 "id": "000000315",
                 "slug": "wolf-guard"
             },
             {
-                "id": "000002783",
-                "slug": "deathwatch-veterans"
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
             },
             {
-                "id": "000001157",
-                "slug": "intercessor-squad"
+                "id": "000000126",
+                "slug": "infernus-squad"
             },
             {
-                "id": "000004137",
-                "slug": "sternguard-veteran-squad-2"
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
             },
             {
                 "id": "000004154",
@@ -57,32 +65,12 @@
                 "slug": "death-company-marines-with-bolt-rifles"
             },
             {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
                 "id": "000001997",
                 "slug": "death-company-marines"
-            },
-            {
-                "id": "000003698",
-                "slug": "inner-circle-companions"
-            },
-            {
-                "id": "000000070",
-                "slug": "tactical-squad"
-            },
-            {
-                "id": "000000126",
-                "slug": "infernus-squad"
-            },
-            {
-                "id": "000001606",
-                "slug": "assault-intercessor-squad"
-            },
-            {
-                "id": "000003836",
-                "slug": "death-company-marines-with-boltguns"
-            },
-            {
-                "id": "000000061",
-                "slug": "assault-squad"
             },
             {
                 "id": "000000071",
@@ -93,12 +81,24 @@
                 "slug": "sword-brethren-squad"
             },
             {
-                "id": "000004175",
-                "slug": "decimus-kill-team"
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
             },
             {
-                "id": "000001154",
-                "slug": "vanguard-veteran-squad"
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000003836",
+                "slug": "death-company-marines-with-boltguns"
             }
         ],
         "leaderNotes": ""
@@ -113,6 +113,11 @@
             "keyword": "Blood Ravens",
             "model": "",
             "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Character",
@@ -146,11 +151,6 @@
         },
         {
             "keyword": "Kastiel",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         }
@@ -298,7 +298,19 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Litany of Hate",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Zealot’s Fervour",
@@ -306,7 +318,8 @@
             "description": "This model’s unit is eligible to charge in a turn in which it Fell Back.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

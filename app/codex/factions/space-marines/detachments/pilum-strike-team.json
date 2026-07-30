@@ -26,30 +26,6 @@
     ],
     "stratagems": [
         {
-            "id": "000009249005",
-            "name": "MASTER MARKSMEN",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "Every shot these warriors fire is placed for maximum impact and swift, decisive kills.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [DEVASTATING WOUNDS] ability.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000076",
-                    "000000119",
-                    "000000128",
-                    "000001159",
-                    "000001345",
-                    "000002530",
-                    "000002701",
-                    "000002708",
-                    "000002718",
-                    "000002806"
-                ]
-            }
-        },
-        {
             "id": "000009249002",
             "name": "KNIFE WORK",
             "type": "Battle Tactic",
@@ -74,14 +50,14 @@
             }
         },
         {
-            "id": "000009249003",
-            "name": "ENHANCED EFFICIENCY",
-            "type": "Strategic Ploy",
+            "id": "000009249005",
+            "name": "MASTER MARKSMEN",
+            "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Moving with alacrity, clearing each new space with exceptional speed and skill, the warriors of the strike team advance on their main objective.",
+            "legend": "Every shot these warriors fire is placed for maximum impact and swift, decisive kills.",
             "turn": "Your turn",
-            "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit is selected to make a Normal or Advance move, it can attempt to operate one Hatchway it is within 1” of either at the start or end of that move. If it does, it cannot attempt to operate a Hatchway again this turn.",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [DEVASTATING WOUNDS] ability.",
             "eligibleDatasheets": {
                 "include": [
                     "000000076",
@@ -106,6 +82,30 @@
             "turn": "Your turn",
             "phase": "Movement phase",
             "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is selected to Fall Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Select one enemy unit within Engagement Range of your unit and roll one D6: on a 2-4, that enemy unit suffers 1 mortal wound; on a 5+, that enemy unit suffers 2 mortal wounds.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000076",
+                    "000000119",
+                    "000000128",
+                    "000001159",
+                    "000001345",
+                    "000002530",
+                    "000002701",
+                    "000002708",
+                    "000002718",
+                    "000002806"
+                ]
+            }
+        },
+        {
+            "id": "000009249003",
+            "name": "ENHANCED EFFICIENCY",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Moving with alacrity, clearing each new space with exceptional speed and skill, the warriors of the strike team advance on their main objective.",
+            "turn": "Your turn",
+            "phase": "Movement phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time your unit is selected to make a Normal or Advance move, it can attempt to operate one Hatchway it is within 1” of either at the start or end of that move. If it does, it cannot attempt to operate a Hatchway again this turn.",
             "eligibleDatasheets": {
                 "include": [
                     "000000076",
@@ -169,5 +169,8 @@
             "000002718",
             "000002806"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": null,
+    "disposition": null
 }

@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Great Devourer",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Tyranid Warriors with Melee Bio-weapons",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
@@ -161,7 +161,19 @@
             "description": "At the start of the Fight phase, select one of the following:<br><ul><li><b>Aggression Imperative:</b> Until the end of the phase, each time a model in this unit makes an attack, re-roll a Hit roll of 1.</li><li><b>Bioregeneration:</b> Until the end of the phase, each time a saving throw is made for a model in this unit, re-roll a saving throw of 1.</li></ul>",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Adaptive Instincts",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

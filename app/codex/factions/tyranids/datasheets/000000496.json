@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Monster",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Tyrannofex",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
             "model": "",
             "isFactionKeyword": false
         }
@@ -42,7 +42,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -280,7 +288,8 @@
             "description": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

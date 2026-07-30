@@ -22,22 +22,22 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Fly",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Catacomb Command Barge",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Catacomb Command Barge",
             "model": "",
             "isFactionKeyword": false
         }
@@ -251,7 +251,7 @@
             "w": 9,
             "ld": 6,
             "oc": 3,
-            "baseSize": "Use model",
+            "baseSize": "60mm flying base",
             "baseSizeDescr": "",
             "composition": {
                 "min": 1,
@@ -290,7 +290,8 @@
             "description": "Once per battle, at the end of any phase, select one friendly NECRONS INFANTRY or NECRONS MOUNTED unit within 6\" of the bearer and resurrect that unit. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Carrier Wave (Aura)",
@@ -298,7 +299,16 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Carrier Wave (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Advanced Quantum Shielding",
@@ -306,7 +316,16 @@
             "description": "Each time an attack targets this model, if the Strength characteristic of that attack is greater than this model’s Toughness characteristic, subtract 1 from the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Advanced Quantum Shielding",
+                    "entity": "opposingUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

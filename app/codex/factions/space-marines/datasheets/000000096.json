@@ -22,12 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Carab Culln the Risen",
+            "keyword": "Deathwing",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Dreadnought",
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Carab Culln the Risen",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,17 +47,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Imperium",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -62,7 +57,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Deathwing",
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
             "model": "",
             "isFactionKeyword": false
         }
@@ -72,7 +72,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -312,7 +320,8 @@
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Death-hold",
@@ -320,7 +329,8 @@
             "description": "When making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "One Shot",
@@ -328,7 +338,8 @@
             "description": "The bearer can only shoot with this weapon once per battle.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

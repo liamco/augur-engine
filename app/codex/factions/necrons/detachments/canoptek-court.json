@@ -106,14 +106,14 @@
             }
         },
         {
-            "id": "000008547007",
-            "name": "SUBOPTIMAL FACADE",
+            "id": "000008547006",
+            "name": "COUNTERTEMPORAL SHIFT",
             "type": "Strategic Ploy",
             "cpCost": 1,
-            "legend": "Canoptek constructs use sophisticated metalogic to craft sinister ambushes. Luring the foe in by appearing at suboptimal operation, a surge of reanimation protocols suddenly swells their numbers.",
+            "legend": "With a twist to the fabric of time, a bubble of another moment enshrouds these constructs. Strange emissions from long-dead elder stars or utter darkness from a nighttime far in the future occludes them from their master’s foes.",
             "turn": "Opponent’s turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit has declared a charge.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as a target of that charge and is wholly within your army’s Power Matrix.<br><br><b>EFFECT:</b> Your unit’s Reanimation Protocols activate.",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
             "eligibleDatasheets": {
                 "include": [
                     "000000546",
@@ -130,14 +130,14 @@
             }
         },
         {
-            "id": "000008547006",
-            "name": "COUNTERTEMPORAL SHIFT",
+            "id": "000008547007",
+            "name": "SUBOPTIMAL FACADE",
             "type": "Strategic Ploy",
             "cpCost": 1,
-            "legend": "With a twist to the fabric of time, a bubble of another moment enshrouds these constructs. Strange emissions from long-dead elder stars or utter darkness from a nighttime far in the future occludes them from their master’s foes.",
+            "legend": "Canoptek constructs use sophisticated metalogic to craft sinister ambushes. Luring the foe in by appearing at suboptimal operation, a surge of reanimation protocols suddenly swells their numbers.",
             "turn": "Opponent’s turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit has declared a charge.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as a target of that charge and is wholly within your army’s Power Matrix.<br><br><b>EFFECT:</b> Your unit’s Reanimation Protocols activate.",
             "eligibleDatasheets": {
                 "include": [
                     "000000546",
@@ -264,5 +264,8 @@
             "000004177",
             "000004178"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 3,
+    "disposition": "take-and-hold"
 }

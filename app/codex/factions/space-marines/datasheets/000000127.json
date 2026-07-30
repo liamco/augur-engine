@@ -17,39 +17,34 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002781",
-                "slug": "indomitor-kill-team-2"
-            },
-            {
-                "id": "000001177",
-                "slug": "heavy-intercessor-squad"
-            },
-            {
                 "id": "000000103",
                 "slug": "eradicator-squad"
             },
             {
+                "id": "000002781",
+                "slug": "indomitor-kill-team-2"
+            },
+            {
                 "id": "000002099",
                 "slug": "aggressor-squad"
+            },
+            {
+                "id": "000001177",
+                "slug": "heavy-intercessor-squad"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Iron Hands",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Character",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
             "keyword": "Iron Father Feirros",
@@ -62,7 +57,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Epic Hero",
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
@@ -72,7 +72,7 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         }
@@ -277,7 +277,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Rites of Tempering",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Iron Father",
@@ -285,7 +302,18 @@
             "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, it has the Lone Operative ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Iron Father",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "LONE OPERATIVE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Master of the Forge",
@@ -293,7 +321,16 @@
             "description": "In your Command phase, select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model. That model regains up to 3 lost wounds and, until the start of your next Command phase, each time that <span class=\"kwb\">VEHICLE</span> model makes an attack, add 1 to the Hit roll. You cannot select a unit for this ability that has already been selected for the Blessing of the Omnissiah ability this phase, and vice versa.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Master of the Forge",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "INSPIRING COMMANDER",
@@ -301,7 +338,8 @@
             "description": "If you include this model in your army, until the end of the battle, non-<span class=\"kwb\">CHARACTER</span> models in Heavy Intercessor Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -17,57 +17,37 @@
     "leader": {
         "canLead": [
             {
-                "id": "000002712",
-                "slug": "outrider-squad"
+                "id": "000000116",
+                "slug": "bike-squad"
             },
             {
-                "id": "000000241",
-                "slug": "ravenwing-black-knights"
+                "id": "000002712",
+                "slug": "outrider-squad"
             },
             {
                 "id": "000001166",
                 "slug": "company-veterans-on-bikes"
             },
             {
-                "id": "000000116",
-                "slug": "bike-squad"
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
             }
         ],
         "leaderNotes": ""
     },
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Dark Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Fly",
+            "keyword": "Adeptus Astartes",
             "model": "",
-            "isFactionKeyword": false
+            "isFactionKeyword": true
         },
         {
-            "keyword": "Epic Hero",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Character",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Mounted",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Grenades",
+            "keyword": "Captain",
             "model": "",
             "isFactionKeyword": false
         },
@@ -77,17 +57,37 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Captain",
+            "keyword": "Epic Hero",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Ravenwing",
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
             "model": "",
             "isFactionKeyword": false
         }
@@ -295,7 +295,8 @@
             "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Cut Off Their Escape",
@@ -303,7 +304,8 @@
             "description": "Each time an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) within Engagement Range of this model’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -1,7 +1,7 @@
 import { CombatContext } from "@/app/types/CombatContext";
 import { PhaseResult } from "@/app/types/CombatResult";
 import { ResolvedModifiers } from "@/app/types/ResolvedModifiers";
-import { clampRoll } from "../utils/clampRoll";
+import { clampSaveRoll } from "../utils/clampRoll";
 
 export const resolveSaveRoll = (
     context: CombatContext,
@@ -23,7 +23,9 @@ export const resolveSaveRoll = (
         modifiedArmourSave += saveMods.rollPenalty;
     }
 
-    modifiedArmourSave = clampRoll(modifiedArmourSave);
+    // Floored at 2+ but deliberately not capped at 6+ — a save can be worsened
+    // out of reach, in which case no save is possible at all.
+    modifiedArmourSave = clampSaveRoll(modifiedArmourSave);
 
     let effectiveSave = modifiedArmourSave;
     if (invulnSave !== null && invulnSave < effectiveSave) {

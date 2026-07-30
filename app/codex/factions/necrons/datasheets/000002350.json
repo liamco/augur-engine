@@ -34,17 +34,17 @@
             "isFactionKeyword": true
         },
         {
+            "keyword": "Royal Warden",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
             "keyword": "Character",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Royal Warden",
             "model": "",
             "isFactionKeyword": false
         }
@@ -188,7 +188,8 @@
             "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Engrammatic Logic",
@@ -196,7 +197,8 @@
             "description": "Once per battle, at the start of any phase, you can select one friendly <span class=\"kwb\">NECRONS</span> unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -32,41 +32,17 @@
             }
         },
         {
-            "id": "000008487005",
-            "name": "SHOCK ASSAULT",
+            "id": "000008487002",
+            "name": "ARMOUR OF CONTEMPT",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "The Adeptus Astartes are elite troops who strike with all the speed and fury of a searing thunderbolt.",
-            "turn": "Your turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES MOUNTED unit from your army that has not declared a charge this phase.<br><br><b>EFFECT:</b> Until the end of the turn, you can re-roll Charge rolls made for your unit and melee weapons equipped by models in that unit have the [LANCE] ability.",
+            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
             "eligibleDatasheets": {
-                "include": [
-                    "000000063",
-                    "000000094",
-                    "000000116",
-                    "000000137",
-                    "000000159",
-                    "000000241",
-                    "000000283",
-                    "000000284",
-                    "000000287",
-                    "000000288",
-                    "000000301",
-                    "000000308",
-                    "000000322",
-                    "000001158",
-                    "000001166",
-                    "000001167",
-                    "000001182",
-                    "000001348",
-                    "000001527",
-                    "000002076",
-                    "000002291",
-                    "000002702",
-                    "000002712",
-                    "000002748",
-                    "000004167"
+                "exclude": [
+                    "000003875"
                 ]
             }
         },
@@ -137,17 +113,41 @@
             }
         },
         {
-            "id": "000008487002",
-            "name": "ARMOUR OF CONTEMPT",
+            "id": "000008487005",
+            "name": "SHOCK ASSAULT",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "legend": "The Adeptus Astartes are elite troops who strike with all the speed and fury of a searing thunderbolt.",
+            "turn": "Your turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your Charge phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES MOUNTED unit from your army that has not declared a charge this phase.<br><br><b>EFFECT:</b> Until the end of the turn, you can re-roll Charge rolls made for your unit and melee weapons equipped by models in that unit have the [LANCE] ability.",
             "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
+                "include": [
+                    "000000063",
+                    "000000094",
+                    "000000116",
+                    "000000137",
+                    "000000159",
+                    "000000241",
+                    "000000283",
+                    "000000284",
+                    "000000287",
+                    "000000288",
+                    "000000301",
+                    "000000308",
+                    "000000322",
+                    "000001158",
+                    "000001166",
+                    "000001167",
+                    "000001182",
+                    "000001348",
+                    "000001527",
+                    "000002076",
+                    "000002291",
+                    "000002702",
+                    "000002712",
+                    "000002748",
+                    "000004167"
                 ]
             }
         },
@@ -593,5 +593,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 3,
+    "disposition": "disruption"
 }

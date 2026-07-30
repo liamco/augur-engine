@@ -22,22 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Infiltrator Squad",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Phobos",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Infiltrator Squad",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Smoke",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
@@ -47,7 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         }
@@ -250,7 +250,8 @@
             "description": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Helix Gauntlet",
@@ -258,7 +259,16 @@
             "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Helix Gauntlet",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Infiltrator Comms Array",
@@ -266,7 +276,8 @@
             "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -17,14 +17,19 @@
     "leader": null,
     "keywords": [
         {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
             "keyword": "Space Wolves",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
+            "keyword": "Tacticus",
+            "model": "WOLF GUARD HEADTAKERS",
+            "isFactionKeyword": false
         },
         {
             "keyword": "Hunting Wolves",
@@ -48,11 +53,6 @@
         },
         {
             "keyword": "Wolf Guard",
-            "model": "WOLF GUARD HEADTAKERS",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Tacticus",
             "model": "WOLF GUARD HEADTAKERS",
             "isFactionKeyword": false
         },
@@ -302,7 +302,8 @@
             "description": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of its <span class=\"kwb\">HEADTAKERS</span> models and one containing all of its <span class=\"kwb\">HUNTING</span> <span class=\"kwb\">WOLVES</span> models, with new Starting Strengths accordingly.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Headhunters",
@@ -310,7 +311,8 @@
             "description": "At the start of the battle, select one unit from your opponent’s army to be this unit’s quarry. Weapons equipped by <span class=\"kwb\">HEADTAKERS</span> models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting its quarry. Each time this unit’s quarry is destroyed, select one new enemy unit to be this unit’s quarry. This ability can be used even if this unit is embarked within a Transport.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Hunting Hounds",
@@ -318,7 +320,8 @@
             "description": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models), if this unit is not Battle-shocked, <span class=\"kwb\">HUNTING</span> <span class=\"kwb\">WOLVES</span> models in it have an Objective Control characteristic of 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Storm Shield",
@@ -326,7 +329,16 @@
             "description": "The bearer has a 4+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Storm Shield",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "invulnSave",
+                    "value": 4
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

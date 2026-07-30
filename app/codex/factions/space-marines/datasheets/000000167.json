@@ -17,22 +17,22 @@
     "leader": null,
     "keywords": [
         {
-            "keyword": "Adeptus Astartes",
-            "model": "",
-            "isFactionKeyword": true
-        },
-        {
             "keyword": "Blood Angels",
             "model": "",
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dreadnought",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Walker",
+            "keyword": "Furioso Dreadnought",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,12 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Dreadnought",
+            "keyword": "Walker",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Furioso Dreadnought",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         }
@@ -372,7 +372,8 @@
             "description": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Magna-grapple",
@@ -380,7 +381,8 @@
             "description": "The bearer loses the <span class=\"kwb\">SMOKE</span> keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

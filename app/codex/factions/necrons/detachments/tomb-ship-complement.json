@@ -38,14 +38,14 @@
     ],
     "stratagems": [
         {
-            "id": "000009589004",
-            "name": "CONCENTRATED ATOMISATION",
+            "id": "000009589002",
+            "name": "DISRUPTION FIELDS",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Concentrated gauss fire is exceptionally difficult to avoid in the tight confines of a voidship.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One NEcRON WARRIORS or IMMORTALS unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.",
+            "legend": "Fitted by ingenious Cryptek engineers, disruption fields lend Necron infantry greater killing power.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.",
             "eligibleDatasheets": {
                 "include": [
                     "000000522",
@@ -110,14 +110,14 @@
             }
         },
         {
-            "id": "000009589002",
-            "name": "DISRUPTION FIELDS",
+            "id": "000009589004",
+            "name": "CONCENTRATED ATOMISATION",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Fitted by ingenious Cryptek engineers, disruption fields lend Necron infantry greater killing power.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.",
+            "legend": "Concentrated gauss fire is exceptionally difficult to avoid in the tight confines of a voidship.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One NEcRON WARRIORS or IMMORTALS unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.",
             "eligibleDatasheets": {
                 "include": [
                     "000000522",
@@ -244,5 +244,8 @@
             "000002358",
             "000003693"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": null,
+    "disposition": null
 }

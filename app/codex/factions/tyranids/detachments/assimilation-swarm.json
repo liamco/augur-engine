@@ -70,15 +70,23 @@
             }
         },
         {
-            "id": "000008413006",
-            "name": "SECURE BIOMASS",
+            "id": "000008413003",
+            "name": "RECLAIM BIOMASS",
             "type": "Strategic Ploy",
             "cpCost": 1,
-            "legend": "When rich sources of biomass are identified the warrior organisms of this swarm will stop at nothing to destroy resistance and claim them.",
+            "legend": "Dead Tyranids are consumed and reconstituted by the swarm just as readily as the lifeless carcasses of their prey.",
             "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Harvester unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.",
-            "eligibleDatasheets": "all"
+            "phase": "Any phase",
+            "description": "<b>WHEN:</b> Any phase, when a <span class=\"kwb\">TYRANIDS</span> unit from your army is destroyed, before the last model in it is removed from play.<br><br><b>TARGET:</b> One Harvester unit from your army that is within 6\" of that destroyed unit.<br><br><b>EFFECT:</b> Regenerate one friendly <span class=\"kwb\">TYRANIDS</span> unit within 6\" of your <span class=\"kwb\">HARVESTER</span> unit (See Feed the Swarm).",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000470",
+                    "000000477",
+                    "000000478",
+                    "000002689",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008413004",
@@ -100,23 +108,15 @@
             }
         },
         {
-            "id": "000008413003",
-            "name": "RECLAIM BIOMASS",
+            "id": "000008413006",
+            "name": "SECURE BIOMASS",
             "type": "Strategic Ploy",
             "cpCost": 1,
-            "legend": "Dead Tyranids are consumed and reconstituted by the swarm just as readily as the lifeless carcasses of their prey.",
+            "legend": "When rich sources of biomass are identified the warrior organisms of this swarm will stop at nothing to destroy resistance and claim them.",
             "turn": "Either player’s turn",
-            "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase, when a <span class=\"kwb\">TYRANIDS</span> unit from your army is destroyed, before the last model in it is removed from play.<br><br><b>TARGET:</b> One Harvester unit from your army that is within 6\" of that destroyed unit.<br><br><b>EFFECT:</b> Regenerate one friendly <span class=\"kwb\">TYRANIDS</span> unit within 6\" of your <span class=\"kwb\">HARVESTER</span> unit (See Feed the Swarm).",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000470",
-                    "000000477",
-                    "000000478",
-                    "000002689",
-                    "000002752"
-                ]
-            }
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Harvester unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.",
+            "eligibleDatasheets": "all"
         }
     ],
     "enhancements": [
@@ -136,7 +136,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -156,7 +157,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -176,7 +178,8 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         },
@@ -196,10 +199,14 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         }
     ],
-    "eligibleDatasheets": "all"
+    "eligibleDatasheets": "all",
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "priority-assets"
 }

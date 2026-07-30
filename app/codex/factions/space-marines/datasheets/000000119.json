@@ -17,28 +17,28 @@
     "leader": {
         "canLead": [
             {
-                "id": "000001159",
-                "slug": "incursor-squad"
-            },
-            {
-                "id": "000000128",
-                "slug": "infiltrator-squad"
-            },
-            {
-                "id": "000002806",
-                "slug": "hounds-of-morkai"
+                "id": "000002718",
+                "slug": "reiver-squad"
             },
             {
                 "id": "000002779",
                 "slug": "spectrus-kill-team-2"
             },
             {
+                "id": "000002806",
+                "slug": "hounds-of-morkai"
+            },
+            {
+                "id": "000000128",
+                "slug": "infiltrator-squad"
+            },
+            {
                 "id": "000001668",
                 "slug": "eliminator-squad"
             },
             {
-                "id": "000002718",
-                "slug": "reiver-squad"
+                "id": "000001159",
+                "slug": "incursor-squad"
             }
         ],
         "leaderNotes": ""
@@ -48,16 +48,6 @@
             "keyword": "Adeptus Astartes",
             "model": "",
             "isFactionKeyword": true
-        },
-        {
-            "keyword": "Phobos",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
-            "keyword": "Librarian",
-            "model": "",
-            "isFactionKeyword": false
         },
         {
             "keyword": "Infantry",
@@ -70,17 +60,27 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Grenades",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Psyker",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Librarian",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Phobos",
             "model": "",
             "isFactionKeyword": false
         }
@@ -294,7 +294,24 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Psychic Hood",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Shrouding (Psychic)",
@@ -302,7 +319,26 @@
             "description": "While this model is leading a unit, models in that unit have the Stealth ability and that unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [
+                {
+                    "name": "Shrouding (Psychic)",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "STEALTH"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "isLeadingUnit",
+                            "operator": "equals",
+                            "value": true
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

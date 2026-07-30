@@ -22,17 +22,17 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Dimachaeron",
-            "model": "",
-            "isFactionKeyword": false
-        },
-        {
             "keyword": "Great Devourer",
             "model": "",
             "isFactionKeyword": false
         },
         {
             "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dimachaeron",
             "model": "",
             "isFactionKeyword": false
         }
@@ -42,7 +42,15 @@
         "range": "1-5",
         "threshold": 5,
         "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -158,7 +166,8 @@
             "description": "Each time this model fights, after it has resolved its attacks, if one or more enemy models (excluding <span class=\"kwb\">VEHICLE</span> models) were destroyed as the result of those attacks, this model regains up to D3 wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

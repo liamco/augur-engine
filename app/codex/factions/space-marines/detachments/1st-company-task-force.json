@@ -17,14 +17,14 @@
     ],
     "stratagems": [
         {
-            "id": "000008495007",
-            "name": "LEGENDARY FORTITUDE",
+            "id": "000008495003",
+            "name": "HEROES OF THE CHAPTER",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "Many are the legendary tales of the 1st Company holding their ground against the odds, weathering assaults that would have swept away lesser warriors.",
-            "turn": "Opponent’s turn",
-            "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+            "legend": "When the fighting is at its fiercest, the veteran warriors of the Chapter truly show their quality.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well.",
             "eligibleDatasheets": {
                 "include": [
                     "000000071",
@@ -58,14 +58,14 @@
             }
         },
         {
-            "id": "000008495003",
-            "name": "HEROES OF THE CHAPTER",
+            "id": "000008495007",
+            "name": "LEGENDARY FORTITUDE",
             "type": "Battle Tactic",
             "cpCost": 1,
-            "legend": "When the fighting is at its fiercest, the veteran warriors of the Chapter truly show their quality.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well.",
+            "legend": "Many are the legendary tales of the 1st Company holding their ground against the odds, weathering assaults that would have swept away lesser warriors.",
+            "turn": "Opponent’s turn",
+            "phase": "Charge phase",
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
             "eligibleDatasheets": {
                 "include": [
                     "000000071",
@@ -114,47 +114,6 @@
             }
         },
         {
-            "id": "000008495005",
-            "name": "DUTY AND HONOUR",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Adeptus Astartes veterans claim critical objectives in daring strikes, annihilating resistance in their Chapter’s name before sweeping onto their next target.",
-            "turn": "Your turn",
-            "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.<br><br><b>EFFECT:</b> That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000000071",
-                    "000000079",
-                    "000000104",
-                    "000000115",
-                    "000000118",
-                    "000000135",
-                    "000000147",
-                    "000000219",
-                    "000000230",
-                    "000000231",
-                    "000000282",
-                    "000000300",
-                    "000000317",
-                    "000000318",
-                    "000001154",
-                    "000001183",
-                    "000002105",
-                    "000002255",
-                    "000002302",
-                    "000002468",
-                    "000002677",
-                    "000002803",
-                    "000003873",
-                    "000004137",
-                    "000004138",
-                    "000004166",
-                    "000004183"
-                ]
-            }
-        },
-        {
             "id": "000008495006",
             "name": "ORBITAL TELEPORTARIUM",
             "type": "Strategic Ploy",
@@ -199,6 +158,47 @@
             "turn": "Your turn",
             "phase": "Fight phase",
             "description": "<b>WHEN:</b> Your Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that made a Charge move this turn and destroyed one or more enemy units this phase.<br><br><b>EFFECT:</b> In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000071",
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000147",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001154",
+                    "000001183",
+                    "000002105",
+                    "000002255",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004137",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
+        },
+        {
+            "id": "000008495005",
+            "name": "DUTY AND HONOUR",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Adeptus Astartes veterans claim critical objectives in daring strikes, annihilating resistance in their Chapter’s name before sweeping onto their next target.",
+            "turn": "Your turn",
+            "phase": "Shooting phase",
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.<br><br><b>EFFECT:</b> That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
             "eligibleDatasheets": {
                 "include": [
                     "000000071",
@@ -412,5 +412,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "codex",
+    "detachmentPoints": 2,
+    "disposition": "priority-assets"
 }

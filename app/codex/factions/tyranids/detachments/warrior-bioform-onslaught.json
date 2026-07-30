@@ -6,29 +6,19 @@
         {
             "id": "000009736",
             "name": "Leader-beasts",
-            "description": "Tyranid Warriors (see below) and Winged Tyranid Prime units from your army have a 5+ invulnerable save.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>Tyranid Warriors with Ranged Bio-weapons and Tyranid Warriors with Melee Bio-weapons units from your army gain the <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> and <span class=\"kwb\">BATTLELINE</span> keywords, and while such a unit is not Battle-shocked, <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> models in that unit have an Objective Control characteristic of 3.",
+            "description": "Tyranid Warriors (see below), Tyranid Prime with Lash Whip and Winged Tyranid Prime units from your army have a 5+ invulnerable save.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>Tyranid Warriors with Ranged Bio-weapons and Tyranid Warriors with Melee Bio-weapons units from your army gain the <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> and <span class=\"kwb\">BATTLELINE</span> keywords, and while such a unit is not Battle-shocked, <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> models in that unit have an Objective Control characteristic of 3.",
             "legend": "Tyranid Warriors are adapted to shepherd the hive fleet’s teeming swarms to war. Benefiting from heightened senses, hardened forms and great strength, they serve as ferocious beacons for and enforcers of the Hive Mind’s indomitable will.",
             "eligibleDatasheets": {
                 "include": [
                     "000002691",
                     "000002692",
-                    "000002694"
+                    "000002694",
+                    "000004202"
                 ]
             }
         }
     ],
     "stratagems": [
-        {
-            "id": "000009738002",
-            "name": "SYNAPTIC AMPLIFICATION",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Tyranid Warriors focus and amplify the urgency of the Hive Mind’s impulse to nearby broods, lending them increased coordination.",
-            "turn": "Either player’s turn",
-            "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> If that unit is a Tyranid Warriors unit, select up to one Endless Multitude unit from your army, that is not Battle-shocked, within 6\" of it. Until the end of the phase, each time a model in those units makes an attack, re-roll a Wound roll of 1, and, if it is a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> unit, re-roll a Hit roll of 1 as well.",
-            "eligibleDatasheets": "all"
-        },
         {
             "id": "000009738007",
             "name": "SYNAPTIC SHIELD",
@@ -61,6 +51,22 @@
             }
         },
         {
+            "id": "000009738004",
+            "name": "RESTORATIVE IMPULSE",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Responding to impulses from the Hive Mind, dormant nanoviral organisms awaken within the corpse of a fallen Tyranid Warrior, knitting together ruptured organs and restoring its broken form to life.",
+            "turn": "Your turn",
+            "phase": "Command phase",
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Tyranid Warriors unit from your army that is below its Starting Strength.<br><br><b>EFFECT:</b> Return 1 destroyed model (excluding <span class=\"kwb\">CHARACTER</span> models) to your unit.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002691",
+                    "000002692"
+                ]
+            }
+        },
+        {
             "id": "000009738005",
             "name": "SYNAPTIC MICRONODES",
             "type": "Strategic Ploy",
@@ -77,20 +83,15 @@
             }
         },
         {
-            "id": "000009738004",
-            "name": "RESTORATIVE IMPULSE",
+            "id": "000009738002",
+            "name": "SYNAPTIC AMPLIFICATION",
             "type": "Strategic Ploy",
             "cpCost": 1,
-            "legend": "Responding to impulses from the Hive Mind, dormant nanoviral organisms awaken within the corpse of a fallen Tyranid Warrior, knitting together ruptured organs and restoring its broken form to life.",
-            "turn": "Your turn",
-            "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Tyranid Warriors unit from your army that is below its Starting Strength.<br><br><b>EFFECT:</b> Return 1 destroyed model (excluding <span class=\"kwb\">CHARACTER</span> models) to your unit.",
-            "eligibleDatasheets": {
-                "include": [
-                    "000002691",
-                    "000002692"
-                ]
-            }
+            "legend": "Tyranid Warriors focus and amplify the urgency of the Hive Mind’s impulse to nearby broods, lending them increased coordination.",
+            "turn": "Either player’s turn",
+            "phase": "Shooting or Fight phase",
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> If that unit is a Tyranid Warriors unit, select up to one Endless Multitude unit from your army, that is not Battle-shocked, within 6\" of it. Until the end of the phase, each time a model in those units makes an attack, re-roll a Wound roll of 1, and, if it is a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> unit, re-roll a Hit roll of 1 as well.",
+            "eligibleDatasheets": "all"
         },
         {
             "id": "000009738003",
@@ -122,10 +123,11 @@
             "name": "Ocular Adaptation",
             "cost": 20,
             "legend": "This node-beast’s bio-adaptations allow it to perceive the minutest electrical impulse or heat signature. Few prey organisms escape its clutches.",
-            "description": "Winged Tyranid Prime model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll.",
+            "description": "Winged Tyranid Prime or Tyranid Prime with Lash Whip model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll.",
             "eligibleDatasheets": {
                 "include": [
-                    "000002694"
+                    "000002694",
+                    "000004202"
                 ]
             }
         },
@@ -134,10 +136,11 @@
             "name": "Sensory Assimilation",
             "cost": 20,
             "legend": "The Hive Mind feeds accumulated sensory data to this leader‑beast, providing it with forewarning of incoming attacks long before the foe can land a blow.",
-            "description": "Winged Tyranid Prime model only. Each time an attack targets the bearer’s unit, subtract 1 from the Hit roll.",
+            "description": "Winged Tyranid Prime or Tyranid Prime with Lash Whip model only. Each time an attack targets the bearer’s unit, subtract 1 from the Hit roll.",
             "eligibleDatasheets": {
                 "include": [
-                    "000002694"
+                    "000002694",
+                    "000004202"
                 ]
             }
         },
@@ -157,10 +160,14 @@
                     "000002529",
                     "000002688",
                     "000002694",
-                    "000004117"
+                    "000004117",
+                    "000004202"
                 ]
             }
         }
     ],
-    "eligibleDatasheets": "all"
+    "eligibleDatasheets": "all",
+    "supplement": "codex",
+    "detachmentPoints": 1,
+    "disposition": "take-and-hold"
 }

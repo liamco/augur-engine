@@ -17,6 +17,21 @@
     ],
     "stratagems": [
         {
+            "id": "000009734004",
+            "name": "STRENGTH IN UNITY",
+            "type": "Battle Tactic",
+            "cpCost": 1,
+            "legend": "Combining their specialised methods of warfare, the Ravenwing and Deathwing confound their enemies with high‑speed manoeuvrability and stalwart fortitude.",
+            "turn": "Either player’s turn",
+            "phase": "Fight phase",
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> If that enemy unit is within Engagement Range of one or more Ravenwing units from your army, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll. If that enemy unit is within Engagement Range of one or more Deathwing units from your army, until the end of the phase, each time a model in that enemy unit makes an attack, if the Strength characteristic of that attack is greater than the Toughness characteristic of the target, subtract 1 from the Wound roll.<br><br><b>RESTRICTIONS:</b> A unit cannot be targeted by this and the Armour of Contempt Stratagem in the same phase.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
+        },
+        {
             "id": "000009734006",
             "name": "ILLUMINATING FIRE",
             "type": "Battle Tactic",
@@ -71,21 +86,6 @@
             }
         },
         {
-            "id": "000009734004",
-            "name": "STRENGTH IN UNITY",
-            "type": "Battle Tactic",
-            "cpCost": 1,
-            "legend": "Combining their specialised methods of warfare, the Ravenwing and Deathwing confound their enemies with high‑speed manoeuvrability and stalwart fortitude.",
-            "turn": "Either player’s turn",
-            "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> If that enemy unit is within Engagement Range of one or more Ravenwing units from your army, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll. If that enemy unit is within Engagement Range of one or more Deathwing units from your army, until the end of the phase, each time a model in that enemy unit makes an attack, if the Strength characteristic of that attack is greater than the Toughness characteristic of the target, subtract 1 from the Wound roll.<br><br><b>RESTRICTIONS:</b> A unit cannot be targeted by this and the Armour of Contempt Stratagem in the same phase.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
             "id": "000009734003",
             "name": "ARMOUR OF CONTEMPT",
             "type": "Battle Tactic",
@@ -94,21 +94,6 @@
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
             "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-            "eligibleDatasheets": {
-                "exclude": [
-                    "000003875"
-                ]
-            }
-        },
-        {
-            "id": "000009734002",
-            "name": "OVERPOWERING EXACTION",
-            "type": "Strategic Ploy",
-            "cpCost": 1,
-            "legend": "Engines roar, and teleportation flares erupt across the battlefield. Such is the din and ferocity of the Dark Angels’ assault that even the most veteran foes are given cause to cower before it.",
-            "turn": "Either player’s turn",
-            "phase": "Command or Fight phase",
-            "description": "<b>WHEN:</b> Command phase or the start of the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one enemy unit within Engagement Range of your unit. That enemy unit must take a Battle-shock test. When doing so, if your unit has the Deathwing or Ravenwing keyword, subtract 1 from the result.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once per battle round.",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -215,6 +200,21 @@
                     "000002748"
                 ]
             }
+        },
+        {
+            "id": "000009734002",
+            "name": "OVERPOWERING EXACTION",
+            "type": "Strategic Ploy",
+            "cpCost": 1,
+            "legend": "Engines roar, and teleportation flares erupt across the battlefield. Such is the din and ferocity of the Dark Angels’ assault that even the most veteran foes are given cause to cower before it.",
+            "turn": "Either player’s turn",
+            "phase": "Command or Fight phase",
+            "description": "<b>WHEN:</b> Command phase or the start of the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one enemy unit within Engagement Range of your unit. That enemy unit must take a Battle-shock test. When doing so, if your unit has the Deathwing or Ravenwing keyword, subtract 1 from the result.<br><br><b>RESTRICTIONS:</b> You can only use this Stratagem once per battle round.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -226,7 +226,6 @@
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
             "eligibleDatasheets": {
                 "exclude": [
-                    "000000081",
                     "000000096",
                     "000000121",
                     "000000127",
@@ -261,7 +260,6 @@
                     "000001611",
                     "000002100",
                     "000002105",
-                    "000002199",
                     "000002291",
                     "000002296",
                     "000002473",
@@ -284,7 +282,8 @@
                     "000004184",
                     "000004185",
                     "000004187",
-                    "000004188"
+                    "000004188",
+                    "000004204"
                 ]
             }
         },
@@ -420,5 +419,8 @@
         "exclude": [
             "000003875"
         ]
-    }
+    },
+    "supplement": "dark-angels",
+    "detachmentPoints": 2,
+    "disposition": "purge-the-foe"
 }

@@ -22,12 +22,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Vehicle",
+            "keyword": "Redemptor Dreadnought",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Redemptor Dreadnought",
+            "keyword": "Vehicle",
             "model": "",
             "isFactionKeyword": false
         },
@@ -57,7 +57,15 @@
         "range": "1-4",
         "threshold": 4,
         "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-        "mechanics": []
+        "mechanics": [
+            {
+                "name": "Damaged",
+                "entity": "thisUnit",
+                "effect": "rollPenalty",
+                "attribute": "hit",
+                "value": 1
+            }
+        ]
     },
     "wargear": {
         "loadouts": {
@@ -420,7 +428,7 @@
     ],
     "pointsCosts": [
         {
-            "cost": 195,
+            "cost": 205,
             "count": 1
         }
     ],
@@ -441,7 +449,8 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

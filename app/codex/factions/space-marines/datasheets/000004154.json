@@ -27,12 +27,12 @@
             "isFactionKeyword": true
         },
         {
-            "keyword": "Grenades",
+            "keyword": "Infantry",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Imperium",
+            "keyword": "Battleline",
             "model": "",
             "isFactionKeyword": false
         },
@@ -42,12 +42,12 @@
             "isFactionKeyword": false
         },
         {
-            "keyword": "Infantry",
+            "keyword": "Imperium",
             "model": "",
             "isFactionKeyword": false
         },
         {
-            "keyword": "Battleline",
+            "keyword": "Grenades",
             "model": "",
             "isFactionKeyword": false
         }
@@ -1169,7 +1169,8 @@
             "description": "You can re-roll Advance and Charge rolls made for this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "ATTACHED UNIT",
@@ -1177,7 +1178,8 @@
             "description": "If a Character from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": []
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }
