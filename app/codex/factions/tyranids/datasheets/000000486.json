@@ -1,0 +1,286 @@
+{
+    "id": "000000486",
+    "name": "Hive Crone",
+    "slug": "hive-crone",
+    "legend": "Hive Crones scour the skies for prey fighter craft. The tentaclids they release pursue enemy aircraft before erupting in bio-electric pulses that banish motive force and send the dark, dead machines tumbling groundward. Then, drool cannons slathering, the Hive Crones dive down to seek fresh, land-based prey.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hive Crone",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> drool cannon; stinger salvoes; tentaclids; scything wings; thorax spur.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000486:drool-cannon",
+                "name": "Drool cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000486",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Drool cannon",
+                        "attributes": [
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": null,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000486:stinger-salvoes",
+                "name": "Stinger salvoes",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000486",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Stinger salvoes",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000486:tentaclids",
+                "name": "Tentaclids",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000486",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Tentaclids",
+                        "attributes": [
+                            "ANTI-VEHICLE 4+",
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000486:scything-wings",
+                "name": "Scything wings",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000486",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Scything wings",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000486:thorax-spur",
+                "name": "Thorax spur",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000486",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Thorax spur",
+                        "attributes": [
+                            "ANTI-FLY 2+",
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000486",
+            "line": 1,
+            "name": "Hive Crone",
+            "m": 20,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Hive Crone",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 200,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Airborne Predator",
+            "legend": "",
+            "description": "Each time this model makes a ranged attack that targets a unit that can <span class=\"kwb\">FLY</span>, add 1 to the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

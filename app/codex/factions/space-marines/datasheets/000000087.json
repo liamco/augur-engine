@@ -1,0 +1,184 @@
+{
+    "id": "000000087",
+    "name": "Drop Pod",
+    "slug": "drop-pod",
+    "legend": "Launched from ships in low orbit, Drop Pods full of Space Marines slam into the battlefield, their hatches blowing open upon the violent impact. Within seconds, the squad bursts out with weapons firing. Such deadly strikes send the foe into disarray as their lines are torn apart in the furious assault.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Dedicated Transports",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dedicated Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Drop Pod",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Centurion, Gravis, Jump Pack, Wulfen or Terminator models.",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000087:wargear-1",
+                "name": "Wargear 1",
+                "type": "",
+                "profiles": [
+                    {
+                        "datasheetId": "000000087",
+                        "line": 1,
+                        "dice": "",
+                        "name": "",
+                        "attributes": [],
+                        "range": null,
+                        "type": "",
+                        "a": 0,
+                        "bsWs": "N/A",
+                        "s": null,
+                        "ap": 0,
+                        "d": 0
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000087",
+            "line": 1,
+            "name": "Drop Pod",
+            "m": 0,
+            "t": 7,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Drop Pod",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Drop Pod Assault",
+            "legend": "",
+            "description": "This model must start the battle in Reserves and can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Combat Disembarkation",
+            "legend": "",
+            "description": "Each time a unit disembarks from this model after it has been set up on the battlefield, that unit is still eligible to declare a charge this turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Deployment Complete",
+            "legend": "",
+            "description": "Once this unit is set up on the battlefield and all units within it have disembarked, until the end of the battle, units cannot embark within this <span class=\"kwb\">TRANSPORT</span>.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Designer’s Note",
+            "legend": "",
+            "description": "The highlighted portions of this model are the only parts that are considered to make up its hull. Models can be set up or end a move on any part of this model that is not highlighted in red. If any models are on non-highlighted sections of this model when it is destroyed, place those models as close to their original position as possible, on the battlefield, after removing this model.<br><br>$000003426",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

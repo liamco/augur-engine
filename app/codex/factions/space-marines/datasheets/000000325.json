@@ -1,0 +1,393 @@
+{
+    "id": "000000325",
+    "name": "Stormfang Gunship",
+    "slug": "stormfang-gunship",
+    "legend": "Dominating the skies like the dread ice wyrms of myth, Stormfang Gunships are heavily armed and armoured vessels, bludgeoning their way through enemy aerial assets. Each is built around a monstrous helfrost destructor that freezes its target; even monstrous flesh is ice-burned, and unyielding tank armour swiftly cracks and shatters.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Stormfang Gunship",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> helfrost destructor; 2 skyhammer missile launchers; twin stormstrike missile launcher; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 skyhammer missile launchers can be replaced with one of the following:<ul><li>2 twin multi-meltas</li><li>2 twin heavy bolters</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000325",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s twin stormstrike missile launcher can be replaced with 1 twin lascannon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000325:helfrost-destructor-dispersed",
+                "name": "Helfrost destructor – dispersed",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Helfrost destructor – dispersed",
+                        "attributes": [
+                            "SUSTAINED HITS D3"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 11,
+                        "ap": -3,
+                        "d": 7
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:helfrost-destructor-focused",
+                "name": "Helfrost destructor – focused",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Helfrost destructor – focused",
+                        "attributes": [
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6+6",
+                        "bsWs": null,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:skyhammer-missile-launcher",
+                "name": "Skyhammer missile launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Skyhammer missile launcher",
+                        "attributes": [
+                            "ANTI-FLY 2+"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:twin-multi-melta",
+                "name": "Twin multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Twin multi-melta",
+                        "attributes": [
+                            "MELTA 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:twin-stormstrike-missile-launcher",
+                "name": "Twin stormstrike missile launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin stormstrike missile launcher",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000325:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000325",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000325",
+            "line": 1,
+            "name": "Stormfang Gunship",
+            "m": 20,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Stormfang Gunship",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 300,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Frozen Prey",
+            "legend": "",
+            "description": "In your Shooting phase, after this model has shot, if an enemy <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit was hit by one or more of those attacks made with this model’s helfrost destructor, until the end of your opponent’s next turn, that enemy unit is Frozen. While a unit is Frozen, subtract 2 from that unit’s Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

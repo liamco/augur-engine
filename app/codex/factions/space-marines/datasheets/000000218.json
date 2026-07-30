@@ -1,0 +1,306 @@
+{
+    "id": "000000218",
+    "name": "Azrael",
+    "slug": "azrael",
+    "legend": "Supreme Grand Master Azrael is a beacon of inspiration to those who follow him, and is paid enormous respect for his ability as a strategist. A masterful commander, he quickly grasps changing battlefield realities and orchestrates his forces to maximum advantage. In the fray, Azrael decapitates foes with every strike of the Sword of Secrets.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000023",
+        "name": "Faction Pack: Dark Angels"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Dark Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chapter Master",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Azrael",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Lion’s Wrath; the Sword of Secrets; the Lion Helm.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000218:lion-s-wrath",
+                "name": "Lion’s Wrath",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000218",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Lion’s Wrath",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000218:the-sword-of-secrets",
+                "name": "The Sword of Secrets",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000218",
+                        "line": 2,
+                        "dice": "",
+                        "name": "The Sword of Secrets",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -4,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "dark-angels",
+        "slug": "dark-angels",
+        "name": "Dark Angels",
+        "label": "Dark Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000218",
+            "line": 1,
+            "name": "Azrael",
+            "m": 6,
+            "t": 4,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Azrael – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 125,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "The Lion Helm",
+            "legend": "",
+            "description": "Models in the bearer’s unit have a 4+ invulnerable save. In addition, once per battle, in any phase, the bearer can summon a Watcher in the Dark. When it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 4+ ability against mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Supreme Grand Master",
+            "legend": "",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Masterful Tactician",
+            "legend": "",
+            "description": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

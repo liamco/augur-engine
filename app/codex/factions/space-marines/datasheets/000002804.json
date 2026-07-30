@@ -1,0 +1,531 @@
+{
+    "id": "000002804",
+    "name": "Wolf Guard Pack Leader",
+    "slug": "wolf-guard-pack-leader",
+    "legend": "Wolf Guard of proven leadership ability and bellicose charisma may be assigned to lead packs of battle-brothers. These warriors’ extensive battlefield wisdom and saga-worthy combat prowess are inspirational to the Space Wolves under their charge, and fighting alongside them is seen as a great honour.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000303",
+                "slug": "blood-claws"
+            },
+            {
+                "id": "000000305",
+                "slug": "grey-hunters"
+            },
+            {
+                "id": "000000326",
+                "slug": "long-fangs"
+            }
+        ],
+        "leaderNotes": "You must attach this model to one of the above units, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed."
+    },
+    "keywords": [
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Pack Leader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard Pack Leader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s bolt pistol and boltgun can be replaced with 1 twin lightning claws."
+                    },
+                    {
+                        "datasheetId": "000002804",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s bolt pistol and boltgun can be replaced with two different weapons from the following list:*<ul><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000002804",
+                        "line": 3,
+                        "button": "*",
+                        "description": "*  This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002804:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:boltgun",
+                "name": "Boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Boltgun",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:thunder-hammer",
+                "name": "Thunder hammer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Thunder hammer",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002804:twin-lightning-claws",
+                "name": "Twin lightning claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002804",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Twin lightning claws",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002804",
+            "line": 1,
+            "name": "Wolf Guard Pack Leader",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Wolf Guard Pack Leader",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 30,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Storm Shield",
+            "legend": "",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Inspiring Leader",
+            "legend": "",
+            "description": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Pack Leader",
+            "legend": "",
+            "description": "This model cannot be your Warlord and cannot be given Enhancements.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

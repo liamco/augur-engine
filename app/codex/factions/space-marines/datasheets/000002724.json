@@ -1,0 +1,246 @@
+{
+    "id": "000002724",
+    "name": "Thunderhawk Transporter",
+    "slug": "thunderhawk-transporter",
+    "legend": "",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Thunderhawk Transporter",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 15 <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">INFANTRY</span> or Adeptus Astartes Mounted models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models. Each Centurion model takes up the space of 3 models. Each <span class=\"kwb\">MOUNTED</span> model takes up the space of 4 models. This model can also transport up to 2 Adeptus Astartes Vehicle models (excluding Aircraft and Titanic models). Models embarked within <span class=\"kwb\">TRANSPORT</span> <span class=\"kwb\">VEHICLES</span> that are themselves being transported by this model do not count towards the transport capacity of this model.",
+    "damaged": {
+        "range": "1-10",
+        "threshold": 10,
+        "description": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> hellstrike missile battery; 4 twin heavy bolters; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002724",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002724:hellstrike-missile-battery",
+                "name": "Hellstrike missile battery",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002724",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hellstrike missile battery",
+                        "attributes": [
+                            "ANTI-FLY 4+"
+                        ],
+                        "range": 72,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002724:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002724",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002724:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002724",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 8,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002724",
+            "line": 1,
+            "name": "Thunderhawk Transporter",
+            "m": 20,
+            "t": 12,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 30,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Thunderhawk Transporter",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 495,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Aerial Deployment",
+            "legend": "",
+            "description": "If this model starts the game in Hover mode and in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

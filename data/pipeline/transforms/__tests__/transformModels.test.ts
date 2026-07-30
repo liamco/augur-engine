@@ -66,4 +66,14 @@ describe("transformModels", () => {
         );
         expect(result[0].invSv).toBe(4);
     });
+
+    it("defaults non-numeric t/w/oc to 0 instead of NaN", () => {
+        const result = transformModels(
+            [{ ...rawModels[0], t: "-", w: "-", oc: "-" }],
+            rawComposition,
+        );
+        expect(result[0].t).toBe(0);
+        expect(result[0].w).toBe(0);
+        expect(result[0].oc).toBe(0);
+    });
 });

@@ -1,0 +1,189 @@
+{
+    "id": "000000483",
+    "name": "Sky-slasher Swarms",
+    "slug": "sky-slasher-swarms",
+    "legend": "",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000379",
+        "name": "Faction Pack: Tyranids (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Sky-slasher Swarms",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Swarm",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> claws and teeth.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000483",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 1 spinemaws."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000483:spinemaws",
+                "name": "Spinemaws",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000483",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Spinemaws",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 6,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 5,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000483:claws-and-teeth",
+                "name": "Claws and teeth",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000483",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Claws and teeth",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 5,
+                        "s": 2,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000483",
+            "line": 1,
+            "name": "Sky-slasher Swarms",
+            "m": 12,
+            "t": 2,
+            "sv": 6,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 3
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3 Sky-slasher Swarms",
+            "min": 3,
+            "max": 3
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 60,
+            "count": 3
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Chitinous Horrors",
+            "legend": "",
+            "description": "While an enemy unit is within Engagement Range of one or more units with this ability, halve the Objective Control characteristic of models in that enemy unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

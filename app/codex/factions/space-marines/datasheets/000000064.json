@@ -109,7 +109,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Bolt pistol",
-                        "attributes": [],
+                        "attributes": [
+                            "PISTOL"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 1,
@@ -136,7 +138,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Flamer",
-                        "attributes": [],
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
@@ -163,7 +168,10 @@
                         "line": 3,
                         "dice": "",
                         "name": "Grav-pistol",
-                        "attributes": [],
+                        "attributes": [
+                            "ANTI-VEHICLE 2+",
+                            "PISTOL"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 1,
@@ -190,7 +198,11 @@
                         "line": 4,
                         "dice": "",
                         "name": "Hand flamer",
-                        "attributes": [],
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
@@ -217,7 +229,10 @@
                         "line": 5,
                         "dice": "",
                         "name": "Inferno pistol",
-                        "attributes": [],
+                        "attributes": [
+                            "MELTA 2",
+                            "PISTOL"
+                        ],
                         "range": 6,
                         "type": "Ranged",
                         "a": 1,
@@ -244,7 +259,9 @@
                         "line": 6,
                         "dice": "",
                         "name": "Meltagun",
-                        "attributes": [],
+                        "attributes": [
+                            "MELTA 2"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 1,
@@ -271,7 +288,9 @@
                         "line": 7,
                         "dice": "",
                         "name": "Plasma gun – standard",
-                        "attributes": [],
+                        "attributes": [
+                            "RAPID FIRE 1"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 1,
@@ -298,7 +317,10 @@
                         "line": 8,
                         "dice": "",
                         "name": "Plasma gun – supercharge",
-                        "attributes": [],
+                        "attributes": [
+                            "HAZARDOUS",
+                            "RAPID FIRE 1"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 1,
@@ -325,7 +347,9 @@
                         "line": 9,
                         "dice": "",
                         "name": "Plasma pistol – standard",
-                        "attributes": [],
+                        "attributes": [
+                            "PISTOL"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 1,
@@ -352,7 +376,10 @@
                         "line": 10,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
-                        "attributes": [],
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 1,
@@ -433,7 +460,9 @@
                         "line": 13,
                         "dice": "",
                         "name": "Eviscerator",
-                        "attributes": [],
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
                         "range": "Melee",
                         "type": "Melee",
                         "a": 3,
@@ -514,7 +543,9 @@
                         "line": 16,
                         "dice": "",
                         "name": "Thunder hammer",
-                        "attributes": [],
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
                         "range": "Melee",
                         "type": "Melee",
                         "a": 3,
@@ -541,7 +572,9 @@
                         "line": 17,
                         "dice": "",
                         "name": "Twin lightning claws",
-                        "attributes": [],
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
                         "range": "Melee",
                         "type": "Melee",
                         "a": 5,
@@ -563,8 +596,8 @@
     },
     "supplement": {
         "key": "codex",
-        "slug": "",
-        "name": "",
+        "slug": "codex",
+        "name": "Codex (Legends)",
         "label": "None",
         "isSupplement": false
     },
@@ -587,6 +620,20 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Assault Sergeant with Jump Pack",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Assault Marines with Jump Packs",
+            "min": 4,
+            "max": 9
         }
     ],
     "pointsCosts": [

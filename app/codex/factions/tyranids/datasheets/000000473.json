@@ -1,0 +1,173 @@
+{
+    "id": "000000473",
+    "name": "Lictor",
+    "slug": "lictor-2",
+    "legend": "Lictors are an adaptation of the Tyranid Warrior bioform specialising in infiltration, scouting and assassination. Hidden by their chameleonic skin, Lictors pick off their prey opportunistically, always looking for a chance to crack open their victims’ skulls and suck out the secrets held within using their feeder tendrils.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Lictor",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Lictor claws and talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000473:lictor-claws-and-talons",
+                "name": "Lictor claws and talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000473",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Lictor claws and talons",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000473",
+            "line": 1,
+            "name": "Lictor",
+            "m": 8,
+            "t": 6,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Lictor",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 60,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Fights First",
+            "type": "Core"
+        },
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Lone Operative",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Feeder Tendrils",
+            "legend": "",
+            "description": "Each time this model destroys an enemy <span class=\"kwb\">CHARACTER</span> model, you gain 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Pheromone Trail",
+            "legend": "",
+            "description": "Once per battle round, you can target one model with this ability with the Rapid Ingress Stratagem for 0CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

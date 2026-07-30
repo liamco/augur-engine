@@ -1,0 +1,212 @@
+{
+    "id": "000002529",
+    "name": "Parasite Of Mortrex",
+    "slug": "parasite-of-mortrex-2",
+    "legend": "Swooping on leathery wings, Parasites of Mortrex use their barbed ovipositors to drive Ripper gestation pods deep into their victims’ bodies, from where the swiftly growing creatures soon eat their way out. Such was the doom of the defenders of Mortrex, the world first cursed by the Parasites’ onslaught.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Parasite of Mortrex",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> barbed ovipositor; clawed limbs.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002529:barbed-ovipositor",
+                "name": "Barbed ovipositor",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002529",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Barbed ovipositor",
+                        "attributes": [
+                            "ANTI-INFANTRY 3+",
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 3,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002529:clawed-limbs",
+                "name": "Clawed limbs",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002529",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Clawed limbs",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002529",
+            "line": 1,
+            "name": "Parasite Of Mortrex",
+            "m": 12,
+            "t": 5,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Parasite of Mortrex",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Lone Operative",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Parasitic Infection",
+            "legend": "",
+            "description": "Each time an <span class=\"kwb\">INFANTRY</span> model is destroyed by an attack made with this model’s barbed ovipositor, after this model has finished making its attacks, you can add one new Ripper Swarms unit to your army consisting of D3 models and set it up within 3\" of this model. If you do, that <span class=\"kwb\">RIPPER</span> <span class=\"kwb\">SWARMS</span> unit can be set up within Engagement Range of the destroyed model’s unit (but not within Engagement Range of any other enemy units).",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "It Itches!",
+            "legend": "",
+            "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. That enemy unit must take a Battle-shock test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

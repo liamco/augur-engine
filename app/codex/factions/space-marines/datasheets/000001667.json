@@ -1,0 +1,286 @@
+{
+    "id": "000001667",
+    "name": "Gladiator Reaper",
+    "slug": "gladiator-reaper",
+    "legend": "When the cannons of the Gladiator Reaper spin to full pitch, the droning makes the teeth of all nearby itch with the intensity of the vibrations. Within seconds, thousands of spent casings pour over the battle tank’s armoured hide as enemies are erased from existence by the storm of fire.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Gladiator Reaper",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 tempest bolters; twin heavy onslaught gatling cannon; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001667",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 ironhail heavy stubber."
+                    },
+                    {
+                        "datasheetId": "000001667",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 Icarus rocket pod."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001667:icarus-rocket-pod",
+                "name": "Icarus rocket pod",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001667",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Icarus rocket pod",
+                        "attributes": [
+                            "ANTI-FLY 2+"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001667:ironhail-heavy-stubber",
+                "name": "Ironhail heavy stubber",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001667",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Ironhail heavy stubber",
+                        "attributes": [
+                            "RAPID FIRE 3"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001667:tempest-bolter",
+                "name": "Tempest bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001667",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Tempest bolter",
+                        "attributes": [
+                            "RAPID FIRE 4"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001667:twin-heavy-onslaught-gatling-cannon",
+                "name": "Twin heavy onslaught gatling cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001667",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin heavy onslaught gatling cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001667:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001667",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001667",
+            "line": 1,
+            "name": "Gladiator Reaper",
+            "m": 10,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "100mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Gladiator Reaper",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 160,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Rotating Death",
+            "legend": "",
+            "description": "This model’s twin heavy onslaught gatling cannon has the [SUSTAINED HITS 2] ability when targeting <span class=\"kwb\">INFANTRY</span> units.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

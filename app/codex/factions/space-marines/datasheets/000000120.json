@@ -1,0 +1,587 @@
+{
+    "id": "000000120",
+    "name": "Venerable Dreadnought (Legendary)",
+    "slug": "venerable-dreadnought-legendary",
+    "legend": "",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Venerable",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> assault cannon; storm bolter; armoured feet; Dreadnought combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin autocannon</li><li>1 twin heavy bolter</li><li>1 twin heavy flamer</li><li>1 twin lascannon</li><li>1 Dreadnought inferno cannon</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000120",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 missile launcher</li><li>1 twin autocannon </li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000120:assault-cannon",
+                "name": "Assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:dreadnought-inferno-cannon",
+                "name": "Dreadnought inferno cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Dreadnought inferno cannon",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": null,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:heavy-plasma-cannon-standard",
+                "name": "Heavy plasma cannon – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy plasma cannon – standard",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:heavy-plasma-cannon-supercharge",
+                "name": "Heavy plasma cannon – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Heavy plasma cannon – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:missile-launcher-frag",
+                "name": "Missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Missile launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:missile-launcher-krak",
+                "name": "Missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Missile launcher – krak",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:twin-autocannon",
+                "name": "Twin autocannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Twin autocannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:twin-heavy-flamer",
+                "name": "Twin heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Twin heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 13,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:armoured-feet",
+                "name": "Armoured feet",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 14,
+                        "dice": "",
+                        "name": "Armoured feet",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000120:dreadnought-combat-weapon",
+                "name": "Dreadnought combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000120",
+                        "line": 15,
+                        "dice": "",
+                        "name": "Dreadnought combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000120",
+            "line": 1,
+            "name": "Venerable Dreadnought",
+            "m": 6,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Venerable Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 165,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Wisdom of the Ancients (Aura)",
+            "legend": "",
+            "description": "While a friendly Adeptus Astartes Infantry unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

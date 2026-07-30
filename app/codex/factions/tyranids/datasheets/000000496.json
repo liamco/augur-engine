@@ -1,0 +1,274 @@
+{
+    "id": "000000496",
+    "name": "Tyrannofex",
+    "slug": "tyrannofex",
+    "legend": "The Tyrannofex is a walking battle tank and heavy weapons platform of huge size and resilience. These warrior organisms are extremely well armoured, more than capable of going toe-to-toe with the heaviest battle tanks of their prey species in a shooting match. Few foes can stand against even one of these beasts.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tyrannofex",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> fleshborer hive; stinger salvoes; powerful limbs.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000496",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s fleshborer hive can be replaced with one of the following:<ul><li>1 acid spray</li><li>1 rupture cannon</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000496:acid-spray",
+                "name": "Acid spray",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000496",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Acid spray",
+                        "attributes": [
+                            "TORRENT"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6+6",
+                        "bsWs": null,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000496:fleshborer-hive",
+                "name": "Fleshborer hive",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000496",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Fleshborer hive",
+                        "attributes": [
+                            "HEAVY",
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 20,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000496:rupture-cannon",
+                "name": "Rupture cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000496",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Rupture cannon",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 18,
+                        "ap": -4,
+                        "d": "D6+6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000496:stinger-salvoes",
+                "name": "Stinger salvoes",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000496",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Stinger salvoes",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000496:powerful-limbs",
+                "name": "Powerful limbs",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000496",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Powerful limbs",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000496",
+            "line": 1,
+            "name": "Tyrannofex",
+            "m": 9,
+            "t": 12,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 16,
+            "ld": 8,
+            "oc": 5,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Tyrannofex",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 200,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Resilient Organism",
+            "legend": "",
+            "description": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

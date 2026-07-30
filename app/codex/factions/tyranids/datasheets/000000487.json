@@ -1,0 +1,163 @@
+{
+    "id": "000000487",
+    "name": "Mucolid Spores",
+    "slug": "mucolid-spores",
+    "legend": "These rudimentary organisms are filled with poisonous gases held under extremely high pressure. Instinct drives them to drift towards prey formations or up into the path of enemy aircraft, before detonating in a nauseating spray of poisonous filth and chitinous shrapnel.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mucolid Spores",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Beast",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> nothing.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000487:wargear-1",
+                "name": "Wargear 1",
+                "type": "",
+                "profiles": [
+                    {
+                        "datasheetId": "000000487",
+                        "line": 1,
+                        "dice": "",
+                        "name": "",
+                        "attributes": [],
+                        "range": null,
+                        "type": "",
+                        "a": 0,
+                        "bsWs": "N/A",
+                        "s": null,
+                        "ap": 0,
+                        "d": 0
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000487",
+            "line": 1,
+            "name": "Mucolid Spores",
+            "m": 4,
+            "t": 4,
+            "sv": 7,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 2
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1-2 Mucolid Spores",
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 30,
+            "count": 1
+        },
+        {
+            "cost": 60,
+            "count": 2
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Bio-minefield",
+            "legend": "",
+            "description": "Enemy units cannot start or end an Advance move within 6\" of this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Floating Death",
+            "legend": "",
+            "description": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D6 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

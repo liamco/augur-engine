@@ -68,7 +68,10 @@
                         "line": 1,
                         "dice": "",
                         "name": "Seismic assault",
-                        "attributes": [],
+                        "attributes": [
+                            "ASSAULT",
+                            "SUSTAINED HITS 1"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 6,
@@ -95,7 +98,9 @@
                         "line": 2,
                         "dice": "",
                         "name": "Crackling tendrils",
-                        "attributes": [],
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
                         "range": "Melee",
                         "type": "Melee",
                         "a": 8,
@@ -141,6 +146,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Transcendent C’tan",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

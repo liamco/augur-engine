@@ -1,0 +1,226 @@
+{
+    "id": "000004136",
+    "name": "Crusade Ancient",
+    "slug": "crusade-ancient",
+    "legend": "Carrying their crusade’s icons and sacred standards, these veteran wardens are honoured warriors of exceptional resolve and determination. They raise high the tapestries depicting the crusade’s victories and the God-Emperor’s glory, exhorting their fellow Black Templars to greater heights of weaponised hate.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000162",
+        "name": "Faction Pack: Black Templars"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            }
+        ],
+        "leaderNotes": "You can attach this model to one of the above units even if one Captain, Chapter Master, Execrator or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ancient",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Crusade Ancient",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted power weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004136:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004136",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004136:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004136",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars",
+        "label": "Black Templars",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000004136",
+            "line": 1,
+            "name": "Crusade Ancient",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Crusade Ancient",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 55,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Vengeful Exhortation",
+            "legend": "",
+            "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Martial Honour",
+            "legend": "",
+            "description": "The first time a model in this model’s unit makes a melee attack that destroys one or more enemy units, until the end of the battle, while this model’s unit is not Battle-shocked, add 5 to this model’s Objective Control characteristic.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

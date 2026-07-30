@@ -1,0 +1,416 @@
+{
+    "id": "000002798",
+    "name": "Sword Brethren Squad",
+    "slug": "sword-brethren-squad",
+    "legend": "Every Sword Brother has earned their place amongst the Marshal’s household through acts of unswerving faith and spectacular violence. On the battlefield, they are reaping whirlwinds, unstoppable, uncompromising, and armed with a lethal assortment of weapons, and they turn upon the enemy in the Emperor’s name.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000162",
+        "name": "Faction Pack: Black Templars"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Sword Brethren Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of Sword Brothers can each have their Astartes chainsword replaced with 1 master-crafted power weapon."
+                    },
+                    {
+                        "datasheetId": "000002798",
+                        "line": 2,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 Sword Brother’s Astartes chainsword can be replaced with 1 thunder hammer."
+                    },
+                    {
+                        "datasheetId": "000002798",
+                        "line": 3,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 Sword Brother’s heavy bolt pistol can be replaced with 1 plasma pistol."
+                    },
+                    {
+                        "datasheetId": "000002798",
+                        "line": 4,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, up to 2 Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol."
+                    },
+                    {
+                        "datasheetId": "000002798",
+                        "line": 5,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 Sword Brother’s heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002798:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:pyre-pistol",
+                "name": "Pyre pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Pyre pistol",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:thunder-hammer",
+                "name": "Thunder hammer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Thunder hammer",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002798:twin-lightning-claws",
+                "name": "Twin lightning claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002798",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Twin lightning claws",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars",
+        "label": "Black Templars",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002798",
+            "line": 1,
+            "name": "Sword Brethren Squad",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 4,
+                "max": 10
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "4-10 Sword Brothers",
+            "min": 4,
+            "max": 10
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 105,
+            "count": 4
+        },
+        {
+            "cost": 130,
+            "count": 5
+        },
+        {
+            "cost": 235,
+            "count": 9
+        },
+        {
+            "cost": 260,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Exploit Their Cowardice",
+            "legend": "",
+            "description": "Each time an enemy unit within Engagement Range of this unit is selected to Fall Back, after it ends that Fall Back move, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

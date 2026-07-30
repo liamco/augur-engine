@@ -177,6 +177,21 @@ interface TestModelComposition {
     max: number;
 }
 
+/**
+ * One line of the datasheet's unit composition ("1 Infernus Sergeant",
+ * "4-9 Infernus Marines"). Composition lines and model statlines are
+ * independent axes — a single statline often covers several composition lines —
+ * so this is the authoritative source for how many models a unit contains.
+ * A line carrying no count (an "OR" separator between alternative
+ * compositions) has min and max of 0.
+ */
+export interface TestUnitComposition {
+    line: number;
+    description: string;
+    min: number;
+    max: number;
+}
+
 interface TestModelCosts {
     cost: number;
     count: number;
@@ -418,6 +433,7 @@ export interface TestUnit {
 
     // Core unit data
     models: TestModel[];
+    unitComposition: TestUnitComposition[];
     pointsCosts: TestModelCosts[];
     keywords: TestKeyword[];
     abilities: Ability[];

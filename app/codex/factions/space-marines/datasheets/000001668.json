@@ -1,0 +1,304 @@
+{
+    "id": "000001668",
+    "name": "Eliminator Squad",
+    "slug": "eliminator-squad",
+    "legend": "Eliminator Squads are peerless assassins, deadly marksmen who haunt the shadows of the battlefield unseen by the enemy. For hours they will lie in wait to take the perfect shot, their sophisticated scopes feeding them essential data to ensure they never fail to make the kill.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Eliminator Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; bolt sniper rifle; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001668",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Eliminator Sergeant’s bolt sniper rifle can be replaced with one of the following:<ul><li>1 instigator bolt carbine</li><li>1 las fusil</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000001668",
+                        "line": 2,
+                        "button": "•",
+                        "description": "All Eliminators in this unit can each have their bolt sniper rifle replaced with 1 las fusil."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001668:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001668",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001668:bolt-sniper-rifle",
+                "name": "Bolt sniper rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001668",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt sniper rifle",
+                        "attributes": [
+                            "HEAVY",
+                            "PRECISION"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001668:instigator-bolt-carbine",
+                "name": "Instigator bolt carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001668",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Instigator bolt carbine",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001668:las-fusil",
+                "name": "Las fusil",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001668",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Las fusil",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001668:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001668",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001668",
+            "line": 1,
+            "name": "Eliminator Squad",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Eliminator Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "2 Eliminators",
+            "min": 2,
+            "max": 2
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 3
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Reposition Under Covering Fire",
+            "legend": "",
+            "description": "In your Shooting phase, after this unit has shot, if it contains an Eliminator Sergeant equipped with an instigator bolt carbine, this unit can make a Normal move. If it does so, until the end of the turn, this unit is not eligible to declare a charge.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Mark the Target",
+            "legend": "",
+            "description": "Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

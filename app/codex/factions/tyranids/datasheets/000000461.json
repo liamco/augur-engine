@@ -1,0 +1,235 @@
+{
+    "id": "000000461",
+    "name": "The Swarmlord",
+    "slug": "the-swarmlord",
+    "legend": "The Swarmlord is the herald of the Hive Mind and may be as old as the Tyranid race itself. Upon death, the beast is always absorbed through the synaptic link and spawned anew. It has presided over the annihilation of countless civilisations, and with every incarnation it only becomes more deadly.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000471",
+                "slug": "tyrant-guard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "The Swarmlord",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hive Tyrant",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Synaptic pulse; bone sabres.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000461:synaptic-pulse",
+                "name": "Synaptic pulse",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000461",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Synaptic pulse",
+                        "attributes": [
+                            "PSYCHIC",
+                            "TORRENT"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6+3",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000461:bone-sabres",
+                "name": "Bone sabres",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000461",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bone sabres",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 8,
+                        "bsWs": 2,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000461",
+            "line": 1,
+            "name": "The Swarmlord",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 7,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Swarmlord – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 220,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Shadow in the Warp",
+            "type": "Faction"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Hive Commander",
+            "legend": "",
+            "description": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Malign Presence (Aura)",
+            "legend": "",
+            "description": "If this model is your <span class=\"kwb\">WARLORD</span>, each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP.<br><br><b>Designer’s Note:</b> This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Domination of the Hive Mind (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">TYRANIDS</span> unit is within 9\" of this model, that unit is within your army’s Synapse Range.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

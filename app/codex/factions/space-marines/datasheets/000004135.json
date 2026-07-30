@@ -1,0 +1,298 @@
+{
+    "id": "000004135",
+    "name": "Execrator",
+    "slug": "execrator",
+    "legend": "Execrators are living exemplars of their battle-brothers’ oaths, ferocious warrior priests who lead the Black Templars in lethal rampages. They teach that waris the most worthy chapel for warriors, every bludgeoning blow of their crozius arcanum punctuated with zealous invective and roared sermons.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000162",
+        "name": "Faction Pack: Black Templars"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chaplain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Execrator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; crozius arcanum.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000004135",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s absolvor bolt pistol can be replaced with 1 pyre pistol."
+                    },
+                    {
+                        "datasheetId": "000004135",
+                        "line": 2,
+                        "button": "•",
+                        "description": "If this model is equipped with an absolvor bolt pistol, it can be equipped with 1 master-crafted power weapon (this model’s absolvor bolt pistol cannot be replaced)."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004135:absolvor-bolt-pistol",
+                "name": "Absolvor bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004135",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Absolvor bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004135:pyre-pistol",
+                "name": "Pyre pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004135",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Pyre pistol",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004135:crozius-arcanum",
+                "name": "Crozius arcanum",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004135",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Crozius arcanum",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004135:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004135",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [
+                            "EXTRA ATTACKS",
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars",
+        "label": "Black Templars",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000004135",
+            "line": 1,
+            "name": "Execrator",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 5,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Execrator",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 60,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Remorseless Persecution",
+            "legend": "",
+            "description": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Condemnatory Annihilation",
+            "legend": "",
+            "description": "Each time this model’s unit has fought, if one or more enemy units were destroyed as a result of those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

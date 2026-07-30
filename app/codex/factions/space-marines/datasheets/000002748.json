@@ -1,0 +1,394 @@
+{
+    "id": "000002748",
+    "name": "Ravenwing Command Squad",
+    "slug": "ravenwing-command-squad",
+    "legend": "Ravenwing Command Squads speed into battle at the very head of the hunt. With their champion ready to duel for the honour of the Company, the Ancient’s banner fluttering in the wind like a knightly pennant, and the Apothecary on hand to heal the most grievous injuries, these formidable warriors aid their comrades in running down even the most dangerous quarry.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000023",
+        "name": "Faction Pack: Dark Angels"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000002712",
+                "slug": "outrider-squad"
+            },
+            {
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
+            },
+            {
+                "id": "000000116",
+                "slug": "bike-squad"
+            },
+            {
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dark Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing Command Squad",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "RAVENWING CHAMPION",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Ravenwing Champion is equipped with:</b> bolt pistol; plasma talon; master-crafted power weapon.<br><br><b>Every other model is equipped with:</b> bolt pistol; plasma talon; Black Knight combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 1,
+                        "button": "•",
+                        "description": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade launcher."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002748:astartes-grenade-launcher-frag",
+                "name": "Astartes grenade launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Astartes grenade launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002748:astartes-grenade-launcher-krak",
+                "name": "Astartes grenade launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Astartes grenade launcher – krak",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002748:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002748:plasma-talon-standard",
+                "name": "Plasma talon – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Plasma talon – standard",
+                        "attributes": [
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002748:plasma-talon-supercharge",
+                "name": "Plasma talon – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma talon – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002748:black-knight-combat-weapon",
+                "name": "Black Knight combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Black Knight combat weapon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002748:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002748",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "dark-angels",
+        "slug": "dark-angels",
+        "name": "Dark Angels",
+        "label": "Dark Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002748",
+            "line": 1,
+            "name": "Ravenwing Command Squad",
+            "m": 12,
+            "t": 5,
+            "sv": 3,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "75 x 42mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Ravenwing Champion",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "1 Ravenwing Apothecary",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 3,
+            "description": "1 Ravenwing Ancient",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 120,
+            "count": 3
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Narthecium",
+            "legend": "",
+            "description": "While this unit contains a Ravenwing Apothecary, in your Command phase, you can return 1 destroyed model (excluding Character and Invader ATV models) to this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Astartes Banner",
+            "legend": "",
+            "description": "While this unit contains an Ravenwing Ancient, add 1 to the Objective Control characteristic of models in this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Honour or Death",
+            "legend": "",
+            "description": "While this unit contains a Ravenwing Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

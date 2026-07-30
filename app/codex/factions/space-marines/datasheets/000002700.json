@@ -1,0 +1,408 @@
+{
+    "id": "000002700",
+    "name": "Astraeus",
+    "slug": "astraeus",
+    "legend": "The Astraeus is a titanic gravitic tank armed with formidable weaponry. The most deadly of these is the twin macro-accelerator cannon, capable of unleashing high-calibre ferro-carbide slugs that can shred tanks, aircraft and ground troops. Meanwhile, its void shields can shrug off even the most concerted enemy retaliations.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000362",
+        "name": "Faction Pack: Space Marines (Forge World)"
+    },
+    "role": "Other",
+    "isForgeWorld": true,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Astraeus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-8",
+        "threshold": 8,
+        "description": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 Astraeus las-rippers; ironhail heavy stubber; storm bolter; twin heavy bolter; twin macro-accelerator cannon; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 Astraeus las-rippers can be replaced with 2 plasma eradicators."
+                    },
+                    {
+                        "datasheetId": "000002700",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s twin heavy bolter can be replaced with 1 twin lascannon."
+                    },
+                    {
+                        "datasheetId": "000002700",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 ironhail heavy stubber."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002700:astraeus-las-ripper",
+                "name": "Astraeus las-ripper",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Astraeus las-ripper",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:ironhail-heavy-stubber",
+                "name": "Ironhail heavy stubber",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Ironhail heavy stubber",
+                        "attributes": [
+                            "RAPID FIRE 3"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:plasma-eradicator-standard",
+                "name": "Plasma eradicator – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Plasma eradicator – standard",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:plasma-eradicator-supercharge",
+                "name": "Plasma eradicator – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Plasma eradicator – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:twin-macro-accelerator-cannon",
+                "name": "Twin macro-accelerator cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Twin macro-accelerator cannon",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 72,
+                        "type": "Ranged",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002700:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002700",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002700",
+            "line": 1,
+            "name": "Astraeus",
+            "m": 10,
+            "t": 12,
+            "sv": 2,
+            "invSv": 5,
+            "invSvDescr": "*This model has a 5+ invulnerable save against ranged attacks.",
+            "w": 24,
+            "ld": 6,
+            "oc": 8,
+            "baseSize": "160mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Astraeus",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 525,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Suppression Fire",
+            "legend": "",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

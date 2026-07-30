@@ -1,0 +1,290 @@
+{
+    "id": "000001169",
+    "name": "Land Speeder Tornado",
+    "slug": "land-speeder-tornado",
+    "legend": "The Land Speeder Tornado is a highly mobile, multi-threat skimmer that can deal far more death and destruction than its relatively small profile suggests. In battle it serves as a mobile firebase, able to bring multiple heavy weapons to bear wherever the need is greatest.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Land Speeder Tornado",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> assault cannon; heavy bolter; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001169",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s heavy bolter can be replaced with 1 multi-melta."
+                    },
+                    {
+                        "datasheetId": "000001169",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s assault cannon can be replaced with 1 heavy flamer."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001169:assault-cannon",
+                "name": "Assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001169",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001169:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001169",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001169:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001169",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001169:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001169",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001169:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001169",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001169",
+            "line": 1,
+            "name": "Land Speeder Tornado",
+            "m": 14,
+            "t": 7,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "60mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Land Speeder Tornado",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 95,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Strafing Enfilade",
+            "legend": "",
+            "description": "Each time this model ends a Normal move, you can select one enemy unit (excluding <span class=\"kwb\">MONSTER</span> and <span class=\"kwb\">VEHICLE</span> units) that it moved over during that move, then roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

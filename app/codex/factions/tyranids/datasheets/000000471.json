@@ -1,0 +1,209 @@
+{
+    "id": "000000471",
+    "name": "Tyrant Guard",
+    "slug": "tyrant-guard",
+    "legend": "Incredibly well armoured and resilient, Tyrant Guard form a mobile bulwark around their assigned synapse organism. So extreme is their bio-adaptation, they do not even possess weak spots such as eyes. Instead, they are guided as extensions of their charge’s synaptic will, acting as living weapons and shields.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tyrant Guard",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> scything talons and rending claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000471",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their scything talons and rending claws replaced with one of the following:<ul><li>1 bone cleaver, lash whip and rending claws</li><li>1 crushing claws and rending claws</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000471:bone-cleaver-lash-whip-and-rending-claws",
+                "name": "Bone cleaver, lash whip and rending claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000471",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bone cleaver, lash whip and rending claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000471:crushing-claws-and-rending-claws",
+                "name": "Crushing claws and rending claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000471",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Crushing claws and rending claws",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000471:scything-talons-and-rending-claws",
+                "name": "Scything talons and rending claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000471",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Scything talons and rending claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000471",
+            "line": 1,
+            "name": "Tyrant Guard",
+            "m": 6,
+            "t": 8,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Tyrant Guard",
+            "min": 3,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 3
+        },
+        {
+            "cost": 160,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Guardian Organism",
+            "legend": "",
+            "description": "While a Character model is leading this unit, that <span class=\"kwb\">CHARACTER</span> has the Feel No Pain 5+ ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

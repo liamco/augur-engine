@@ -1,0 +1,341 @@
+{
+    "id": "000000318",
+    "name": "Wolf Guard Terminators",
+    "slug": "wolf-guard-terminators",
+    "legend": "Wolf Guard bedeck their Terminator armour with totems, trophies and marks of honour gained over their years of battle. They fight at the spearhead of assaults, eagerly seeking glory as enemy fire deflects harmlessly from their relic armour, the earth shaking beneath their heavy tread as they slay with stunning skill.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000036",
+        "name": "Faction Pack: Space Wolves"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Wolf Guard Terminators",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Wolf Guard Terminator Pack Leader is equipped with:</b> storm bolter; master-crafted power weapon.<br><br><b>Every Wolf Guard Terminator is equipped with:</b> storm bolter; master-crafted power weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their storm bolter replaced with 1 storm shield."
+                    },
+                    {
+                        "datasheetId": "000000318",
+                        "line": 2,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 Wolf Guard Terminator can replace its storm bolter and master-crafted power weapon with 1 assault cannon and 1 powerfist."
+                    },
+                    {
+                        "datasheetId": "000000318",
+                        "line": 3,
+                        "button": "•",
+                        "description": "The Wolf Guard Terminator Pack Leader’s storm bolter and master-crafted power weapon can be replaced with 1 of the following:<ul><li>1 relic greataxe</li><li>1 twin lightning claws</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000318:assault-cannon",
+                "name": "Assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000318:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000318:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000318:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000318:relic-greataxe",
+                "name": "Relic greataxe",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Relic greataxe",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000318:twin-lightning-claws",
+                "name": "Twin lightning claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000318",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Twin lightning claws",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves",
+        "label": "Space Wolves",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000318",
+            "line": 1,
+            "name": "Wolf Guard Terminators",
+            "m": 6,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Wolf Guard Terminator Pack Leader",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Wolf Guard Terminators",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 170,
+            "count": 5
+        },
+        {
+            "cost": 340,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Rugged Resilience",
+            "legend": "",
+            "description": "Each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Storm Shield",
+            "legend": "",
+            "description": "The bearer has a Wounds characteristic of 4.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

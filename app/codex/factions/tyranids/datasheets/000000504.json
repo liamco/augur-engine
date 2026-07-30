@@ -1,0 +1,211 @@
+{
+    "id": "000000504",
+    "name": "Harridan",
+    "slug": "harridan",
+    "legend": "Of the winged horrors of the Tyranids, none are as monstrously powerful as the Harridan. Borne on huge membranous wings tipped with bio-cannons, they swoop into enemy lines carving through troops and armour with their scything talons or showering shrieking Gargoyles that had been clinging batlike to the Harridan’s underbelly.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000380",
+        "name": "Faction Pack: Tyranids (Forge World)"
+    },
+    "role": "Other",
+    "isForgeWorld": true,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Harridan",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 20 Gargoyles models and 1 Winged Tyranid Prime model.",
+    "damaged": {
+        "range": "1-10",
+        "threshold": 10,
+        "description": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 dire bio-cannons; gargantuan scything talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000504",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000504:dire-bio-cannon",
+                "name": "Dire bio-cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000504",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Dire bio-cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6+6",
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000504:gargantuan-scything-talons",
+                "name": "Gargantuan scything talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000504",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Gargantuan scything talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000504",
+            "line": 1,
+            "name": "Harridan",
+            "m": 20,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 30,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Harridan",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 610,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Frenzied Metabolism",
+            "legend": "",
+            "description": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,286 @@
+{
+    "id": "000001174",
+    "name": "Chaplain",
+    "slug": "chaplain",
+    "legend": "Cloak billowing in the heat of battle and absolvor pistol flaring, Chaplains stride purposefully into battle, the boom of their oration audible even over the furious din of conflict. Without rest they exhort their brothers to victory, steeling their hearts, minds and souls no matter the savagery of the enemy.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000001997",
+                "slug": "death-company-marines"
+            },
+            {
+                "id": "000003836",
+                "slug": "death-company-marines-with-boltguns"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000002285",
+                "slug": "death-company-marines-with-bolt-rifles"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chaplain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; crozius arcanum.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001174:absolvor-bolt-pistol",
+                "name": "Absolvor bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001174",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Absolvor bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001174:crozius-arcanum",
+                "name": "Crozius arcanum",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001174",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Crozius arcanum",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001174",
+            "line": 1,
+            "name": "Chaplain",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 5,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Chaplain",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 60,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Litany of Hate",
+            "legend": "",
+            "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Spiritual Leader",
+            "legend": "",
+            "description": "Once per battle, at the start of any phase, you can select one friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

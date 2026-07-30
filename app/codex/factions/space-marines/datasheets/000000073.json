@@ -1,0 +1,506 @@
+{
+    "id": "000000073",
+    "name": "Captain",
+    "slug": "captain",
+    "legend": "Leading strikeforces ofSpace Marinesfrom thefront lines, Captains exemplify the strength and skill of the warriors under their command. They are paragons of strategic genius with centuries ofbattlefield experience, and their great deeds are often rewarded with ancient artefacts drawnfrom the Chapter’s vaults.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000004185",
+                "slug": "victrix-honour-guard"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
+            },
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000002098",
+                "slug": "hellblaster-squad"
+            }
+        ],
+        "leaderNotes": "* This model cannot be attached to a BLADEGUARD VETERAN SQUAD unless this model is equipped with a relic shield, and cannot be attached to a HELLBLASTER SQUAD unless this model is equipped with a plasma pistol."
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted bolter; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s bolt pistol, master-crafted bolter and close combat weapon can be replaced with one of the following: <br><ul><li>1 heavy bolt pistol and 1 power fist </li><li>1 heavy bolt pistol and 1 master-crafted power weapon </li><li>1 neo-volkite pistol and 1 power fist </li><li>1 neo-volkite pistol and 1 master-crafted power weapon </li><li>1 plasma pistol and 1 power fist </li><li>1 plasma pistol and 1 master-crafted power weapon </li><li>1 heavy bolt pistol, 1 master-crafted power weapon and 1 relic shield</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000073",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s close combat weapon can be replaced with one of the following: <br><ul><li>1 master-crafted power weapon </li><li>1 power fist</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000073:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:master-crafted-bolter",
+                "name": "Master-crafted bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Master-crafted bolter",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:neo-volkite-pistol",
+                "name": "Neo-volkite pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Neo-volkite pistol",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:plasma-pistol",
+                "name": "Plasma pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Plasma pistol - supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000073:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000073",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000073",
+            "line": 1,
+            "name": "Captain",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Captain",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Relic Shield",
+            "legend": "",
+            "description": "The bearer has a Wounds characteristic of 6.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Rites of Battle",
+            "legend": "",
+            "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Finest Hour",
+            "legend": "",
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

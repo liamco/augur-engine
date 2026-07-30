@@ -1,0 +1,245 @@
+{
+    "id": "000000164",
+    "name": "Lemartes",
+    "slug": "lemartes",
+    "legend": "Lemartes’ life is one of constant battle. A warrior of iron will, somehow he retains lucidity despite having succumbed to the Black Rage. He leads the Blood Angels’ Death Company as Guardian of the Lost, wielding the ancient weapon known as the Blood Crozius. His inspiration has only made the Death Company even more potent.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000021",
+        "name": "Faction Pack: Blood Angels"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000003837",
+                "slug": "death-company-marines-with-boltguns-and-jump-packs"
+            },
+            {
+                "id": "000002737",
+                "slug": "death-company-marines-with-jump-packs"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chaplain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Lemartes",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; the Blood Crozius.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000164:absolvor-bolt-pistol",
+                "name": "Absolvor bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000164",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Absolvor bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000164:the-blood-crozius",
+                "name": "The Blood Crozius",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000164",
+                        "line": 2,
+                        "dice": "",
+                        "name": "The Blood Crozius",
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels",
+        "label": "Blood Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000164",
+            "line": 1,
+            "name": "Lemartes",
+            "m": 12,
+            "t": 4,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 5,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Lemartes – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 100,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Guardian of the Lost",
+            "legend": "",
+            "description": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Fury Unbound",
+            "legend": "",
+            "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

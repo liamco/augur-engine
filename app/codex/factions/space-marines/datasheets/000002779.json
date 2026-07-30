@@ -1,0 +1,556 @@
+{
+    "id": "000002779",
+    "name": "Spectrus Kill Team",
+    "slug": "spectrus-kill-team-2",
+    "legend": "Sinister, silent and all but invisible until they strike, Spectrus Kill Teams are adept in inflicting death from both near and far. Clad in close-fitting Mk X Phobos battle plate, they specialise in battlefield control and enemy destabilisation.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000035",
+        "name": "Faction Pack: Deathwatch"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Deathwatch",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Spectrus Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every Kill Team Infiltrator is equipped with:</b> bolt pistol; Deathwatch marksman bolt carbine; close combat weapon.<br><br><b>Every Kill Team Infiltrator with bolt sniper rifle is equipped with:</b> bolt pistol; bolt sniper rifle; close combat weapon.<br><br><b>Every Kill Team Infiltrator with Deathwatch occulus bolt carbine is equipped with:</b> bolt pistol; Deathwatch occulus bolt carbine; paired combat blades.<br><br><b>Every Kill Team Infiltrator with combat knife is equipped with:</b> special-issue bolt pistol; combat knife.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 1,
+                        "button": "•",
+                        "description": "One model equipped with a Deathwatch marksman bolt carbine can be equipped with one of<br>the following:<ul><li>1 helix gauntlet</li><li>1 Infiltrator comms array</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000002779",
+                        "line": 2,
+                        "button": "•",
+                        "description": "One model can replace its bolt sniper rifle with 1 instigator bolt carbine."
+                    },
+                    {
+                        "datasheetId": "000002779",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of models can each replace their bolt sniper rifle with 1 las fusil."
+                    },
+                    {
+                        "datasheetId": "000002779",
+                        "line": 4,
+                        "button": "•",
+                        "description": "Any number of models can each replace their combat knife with 1 Deathwatch bolt carbine and 1 close combat weapon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002779:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:bolt-sniper-rifle",
+                "name": "Bolt sniper rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt sniper rifle",
+                        "attributes": [
+                            "HEAVY",
+                            "PRECISION"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:deathwatch-bolt-carbine",
+                "name": "Deathwatch bolt carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Deathwatch bolt carbine",
+                        "attributes": [
+                            "LETHAL HITS",
+                            "PRECISION"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:deathwatch-marksman-bolt-carbine",
+                "name": "Deathwatch marksman bolt carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Deathwatch marksman bolt carbine",
+                        "attributes": [
+                            "HEAVY",
+                            "LETHAL HITS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:deathwatch-occulus-bolt-carbine",
+                "name": "Deathwatch occulus bolt carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Deathwatch occulus bolt carbine",
+                        "attributes": [
+                            "ASSAULT",
+                            "IGNORES COVER",
+                            "LETHAL HITS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:instigator-bolt-carbine",
+                "name": "Instigator bolt carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Instigator bolt carbine",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:las-fusil",
+                "name": "Las fusil",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Las fusil",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:special-issue-bolt-pistol",
+                "name": "Special-issue bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Special-issue bolt pistol",
+                        "attributes": [
+                            "PISTOL",
+                            "PRECISION"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:combat-knife",
+                "name": "Combat knife",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Combat knife",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002779:paired-combat-blades",
+                "name": "Paired combat blades",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002779",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Paired combat blades",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "deathwatch",
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "label": "Deathwatch",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002779",
+            "line": 1,
+            "name": "Spectrus Kill Team",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "Kill Team Infiltrators with bolt sniper rifles 40mm",
+            "composition": {
+                "min": 10,
+                "max": 10
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "10 MODELS MAXIMUM",
+            "min": 10,
+            "max": 10
+        },
+        {
+            "line": 2,
+            "description": "3‑10 Kill Team Infiltrators",
+            "min": 3,
+            "max": 10
+        },
+        {
+            "line": 3,
+            "description": "0‑3 Kill Team Infiltrators with bolt sniper rifles",
+            "min": 0,
+            "max": 3
+        },
+        {
+            "line": 4,
+            "description": "0‑4 Kill Team Infiltrators with Deathwatch occulus bolt carbines",
+            "min": 0,
+            "max": 4
+        },
+        {
+            "line": 5,
+            "description": "0‑4 Kill Team Infiltrators with combat knives",
+            "min": 0,
+            "max": 4
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 180,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Mission Tactics",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Spectrus Doctrines",
+            "legend": "",
+            "description": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Helix Gauntlet",
+            "legend": "",
+            "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Infiltrator Comms Array",
+            "legend": "",
+            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Instigator Bolt Carbine",
+            "legend": "",
+            "description": "In your Shooting phase, after the bearer’s unit has shot, the bearer’s unit can make a Normal move. If it does, until the end of the turn, the bearer’s unit is not eligible to declare a charge.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character from your army with the Leader ability can be attached to an Infiltrator Squad, it can be attached to this unit instead.<br><br>If this unit has a Leader unit attached to it during the Declare Battle Formations step, that Leader unit gains the Infiltrators and Scouts 6\" abilities.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

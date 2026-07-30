@@ -1,0 +1,359 @@
+{
+    "id": "000000321",
+    "name": "Stormwolf",
+    "slug": "stormwolf",
+    "legend": "Stormwolves enable the sons of Russ to bring the fight to the enemy wherever they hide. Within their wide hold, packs of warriors are borne with incredible speed into the foe’s midst. As the packs leap out to attack, Stormwolves saturate the area with an array of heavy fire, before rising to hunt for yet more targets.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Stormwolf",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 16 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 skyhammer missile launchers; twin helfrost cannon; twin lascannon; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 skyhammer missile launchers can replaced with one of the following:<ul><li>2 twin heavy bolters</li><li>2 twin multi-meltas</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000321:skyhammer-missile-launcher",
+                "name": "Skyhammer missile launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Skyhammer missile launcher",
+                        "attributes": [
+                            "ANTI-FLY 2+"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000321:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000321:twin-helfrost-cannon-dispersed",
+                "name": "Twin helfrost cannon – dispersed",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Twin helfrost cannon – dispersed",
+                        "attributes": [
+                            "TORRENT",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000321:twin-helfrost-cannon-focused",
+                "name": "Twin helfrost cannon – focused",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin helfrost cannon – focused",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -3,
+                        "d": 5
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000321:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000321:twin-multi-melta",
+                "name": "Twin multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Twin multi-melta",
+                        "attributes": [
+                            "MELTA 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000321:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000321",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000321",
+            "line": 1,
+            "name": "Stormwolf",
+            "m": 20,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Stormwolf",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 250,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Into the Foe",
+            "legend": "",
+            "description": "If a unit disembarks from this Transport before it moves, until the end of the turn, that unit is eligible to charge in a turn in which it Advanced.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

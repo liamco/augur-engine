@@ -1,0 +1,163 @@
+{
+    "id": "000000488",
+    "name": "Spore Mines",
+    "slug": "spore-mines",
+    "legend": "Spore Mines are a form of living bomb, which drift across the battlefield in shoals and detonate when they detect prey organisms nearby. Those caught in the blast are torn apart as surely as if they had caught a brace of live frag grenades. The Hive Mind often uses Spore Mines to deny areas of the battlefield to the prey.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Beast",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Spore Mines",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> nothing.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000488:wargear-1",
+                "name": "Wargear 1",
+                "type": "",
+                "profiles": [
+                    {
+                        "datasheetId": "000000488",
+                        "line": 1,
+                        "dice": "",
+                        "name": "",
+                        "attributes": [],
+                        "range": null,
+                        "type": "",
+                        "a": 0,
+                        "bsWs": "N/A",
+                        "s": null,
+                        "ap": 0,
+                        "d": 0
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000488",
+            "line": 1,
+            "name": "Spore Mines",
+            "m": 4,
+            "t": 1,
+            "sv": 7,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "25mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Spore Mines",
+            "min": 3,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 55,
+            "count": 3
+        },
+        {
+            "cost": 110,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Bio-minefield",
+            "legend": "",
+            "description": "Enemy units cannot start or end an Advance move within 6\" of this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Floating Death",
+            "legend": "",
+            "description": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

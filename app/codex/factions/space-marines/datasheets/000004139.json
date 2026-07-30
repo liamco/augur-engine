@@ -1,0 +1,358 @@
+{
+    "id": "000004139",
+    "name": "Land Raider Crusader",
+    "slug": "land-raider-crusader-3",
+    "legend": "Developed from sacred archeotech and deployed by the Black Templars during the Jerulas Crusade, the Land Raider Crusader is a superlative assault tank. Its bulk can crush enemy defences, and its prodigious firepower cuts their guardians apart. Once it has stormed a position, Black Templars pour from its hatches to slaughter any who remain.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000162",
+        "name": "Faction Pack: Black Templars"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Land Raider Crusader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Land Raider",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 16 Adeptus Astartes Infantry models. Each Jump Pack, Gravis or TERMiNATOR model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 hurricane bolters; twin assault cannon; armoured tracks.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 hunter-killer missile."
+                    },
+                    {
+                        "datasheetId": "000004139",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 multi-melta."
+                    },
+                    {
+                        "datasheetId": "000004139",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 storm bolter."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004139:hunter-killer-missile",
+                "name": "Hunter-killer missile",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hunter-killer missile",
+                        "attributes": [
+                            "ONE SHOT"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 14,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004139:hurricane-bolter",
+                "name": "Hurricane bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hurricane bolter",
+                        "attributes": [
+                            "RAPID FIRE 6",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004139:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004139:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004139:twin-assault-cannon",
+                "name": "Twin assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004139:armoured-tracks",
+                "name": "Armoured tracks",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004139",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Armoured tracks",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars",
+        "label": "Black Templars",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000004139",
+            "line": 1,
+            "name": "Land Raider Crusader",
+            "m": 12,
+            "t": 12,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 16,
+            "ld": 6,
+            "oc": 5,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Land Raider Crusader",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 220,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Assault Ramp",
+            "legend": "",
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Legacy of Jerulas",
+            "legend": "",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly model that disembarked from this <span class=\"kwb\">TRANSPORT</span> this turn makes an attack that targets that enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "One Shot",
+            "legend": "",
+            "description": "The bearer can only shoot with this weapon once per battle.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,523 @@
+{
+    "id": "000000324",
+    "name": "Skyclaws",
+    "slug": "skyclaws",
+    "legend": "Especially headstrong Blood Claws are reassigned to jump pack wearing Skyclaw packs. Rebellious and free-spirited, Skyclaws seize any opportunity to push their luck. They rocket forward fearlessly in great loping bounds, chainswords roaring as they slay, plunging into the enemy’s heart with reckless fury.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Skyclaws",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; Astartes chainsword.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Skyclaw Pack Leader’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000324",
+                        "line": 2,
+                        "button": "•",
+                        "description": "The Skyclaw Pack Leader’s bolt pistol can be replaced with 1 plasma pistol."
+                    },
+                    {
+                        "datasheetId": "000000324",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Up to 2 Skyclaws can each have their bolt pistol and Astartes chainsword replaced with one of the following:<ul><li>1 plasma pistol and 1 Astartes chainsword</li><li>1 flamer and 1 close combat weapon</li><li>1 grav-gun and 1 close combat weapon</li><li>1 meltagun and 1 close combat weapon</li><li>1 plasma gun and 1 close combat weapon</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000324:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:flamer",
+                "name": "Flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:grav-gun",
+                "name": "Grav-gun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Grav-gun",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:meltagun",
+                "name": "Meltagun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Meltagun",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:plasma-gun-standard",
+                "name": "Plasma gun – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Plasma gun – standard",
+                        "attributes": [
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:plasma-gun-supercharge",
+                "name": "Plasma gun – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Plasma gun – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000324:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000324",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000324",
+            "line": 1,
+            "name": "Skyclaws",
+            "m": 12,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Skyclaw Pack Leader",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-14 Skyclaws",
+            "min": 4,
+            "max": 14
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 5
+        },
+        {
+            "cost": 165,
+            "count": 10
+        },
+        {
+            "cost": 240,
+            "count": 15
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Headstrong",
+            "legend": "",
+            "description": "You can re-roll Charge rolls made for this unit. Each time this unit makes a Charge move, until the end of the turn, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character unit from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs or an Assault Squad with Jump Packs, it can instead be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

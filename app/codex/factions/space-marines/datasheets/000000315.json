@@ -1,0 +1,360 @@
+{
+    "id": "000000315",
+    "name": "Wolf Guard",
+    "slug": "wolf-guard",
+    "legend": "Earning their place through exceptional feats of arms, every Wolf Guard is a heroic warrior chosen by their lord. They act as his council and household companions, and when not tearing apart foes at his side, they form bodyguards around other senior warriors or pursue dangerous missions in their own right.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; heirloom weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can have their bolt pistol replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 storm shield</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000315:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000315:boltgun",
+                "name": "Boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Boltgun",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000315:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000315:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000315:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000315:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000315:heirloom-weapon",
+                "name": "Heirloom weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000315",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Heirloom weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000315",
+            "line": 1,
+            "name": "Wolf Guard",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 5,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Wolf Guard Pack Leader",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Wolf Guard",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 5
+        },
+        {
+            "cost": 170,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Chosen Companions",
+            "legend": "",
+            "description": "While a Character model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Storm Shield",
+            "legend": "",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character unit from your army with the Leader ability can be attached to a Sternguard Veteran Squad or Vanguard Veteran Squad, it can instead be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,297 @@
+{
+    "id": "000000239",
+    "name": "Nephilim Jetfighter",
+    "slug": "nephilim-jetfighter",
+    "legend": "Sleek air-to-air interceptors, Nephilim Jetfighters perform lightning-fast manoeuvres in high-speed warfare. These pilots continually push the Techmarines for enhancements and modification to their craft to make them faster and deadlier – the results have proven truly substantial.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000023",
+        "name": "Faction Pack: Dark Angels"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dark Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Nephilim Jetfighter",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-3",
+        "threshold": 3,
+        "description": "While this model has 1-3 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> avenger mega bolter; blacksword missiles; twin heavy bolter; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000239",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s avenger mega bolter can be replaced with 1 Nephilim lascannons."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000239:avenger-mega-bolter",
+                "name": "Avenger mega bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000239",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Avenger mega bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 10,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000239:blacksword-missiles",
+                "name": "Blacksword missiles",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000239",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Blacksword missiles",
+                        "attributes": [
+                            "ANTI-FLY 2+"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000239:nephilim-lascannons",
+                "name": "Nephilim lascannons",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000239",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Nephilim lascannons",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000239:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000239",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000239:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000239",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "dark-angels",
+        "slug": "dark-angels",
+        "name": "Dark Angels",
+        "label": "Dark Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000239",
+            "line": 1,
+            "name": "Nephilim Jetfighter",
+            "m": 20,
+            "t": 8,
+            "sv": 3,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 11,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Nephilim Jetfighter",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 195,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Lightning-fast Manoeuvres",
+            "legend": "",
+            "description": "Each time a ranged attack targets this model, subtract 1 from the Hit roll. If that attack was made by a model that can Fly, subtract 1 from the Wound roll as well.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,227 @@
+{
+    "id": "000002806",
+    "name": "Hounds Of Morkai",
+    "slug": "hounds-of-morkai",
+    "legend": "Daubed beneath their Phobos armour with runes of warding and abjuration, Hounds of Morkai are hunters of psykers. Sniffing them out with psycept detectors, these obsessed warriors emit uniquely pitched howls. Runic circuitry augments their hunting call, disrupting their prey’s powers and sowing fear before the kill.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hounds of Morkai",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Morkai bolt pistol; Morkai combat knife.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002806",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002806:morkai-bolt-pistol",
+                "name": "Morkai bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002806",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Morkai bolt pistol",
+                        "attributes": [
+                            "ANTI-PSYKER 4+",
+                            "DEVASTATING WOUNDS",
+                            "PISTOL",
+                            "PRECISION"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002806:morkai-combat-knife",
+                "name": "Morkai combat knife",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002806",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Morkai combat knife",
+                        "attributes": [
+                            "ANTI-PSYKER 4+",
+                            "DEVASTATING WOUNDS",
+                            "PRECISION"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002806",
+            "line": 1,
+            "name": "Hounds Of Morkai",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": 6,
+            "invSvDescr": "*  This invulnerable save is improved to 4+ against Psychic Attacks.",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Hound of Morkai Pack Leader",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Hound of Morkai",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 5
+        },
+        {
+            "cost": 160,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Morkai’s Howl",
+            "legend": "",
+            "description": "In your Shooting phase, you can select one enemy unit within 12\" of this unit (if a Lieutenant in Reiver Armour is leading this unit, you can select one enemy unit within 18\" instead). That unit must take a Battle-shock test, subtracting 1 from the result if it is a <span class=\"kwb\">PSYKER</span> unit. If that test is failed, in addition to being Battle-shocked, that unit is Stunned until the start of your next Shooting phase. While a unit is Stunned, each time a model in that unit makes a Psychic Attack, subtract 1 from the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character unit from your army with the Leader ability can be attached to a Reiver Squad, it can instead be attached to this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

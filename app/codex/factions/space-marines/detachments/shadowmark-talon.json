@@ -1,11 +1,25 @@
 {
     "name": "Shadowmark Talon",
-    "ability": {
-        "id": "000010463",
-        "name": "Masters of Shadow",
-        "description": "Each time a ranged attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
-        "legend": "The Raven Guard are renowned for their uncanny ability to move unseen, cloaking themselves in darkness as they close in upon their prey."
-    },
+    "abilities": [
+        {
+            "id": "000010463",
+            "name": "Masters of Shadow",
+            "description": "Each time a ranged attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
+            "legend": "The Raven Guard are renowned for their uncanny ability to move unseen, cloaking themselves in darkness as they close in upon their prey."
+        },
+        {
+            "id": "000010464",
+            "name": "Unparalleled Tactician",
+            "description": "Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP.",
+            "legend": "A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle-brothers to pull the enemy out of formation."
+        },
+        {
+            "id": "000010465",
+            "name": "Restrictions",
+            "description": "Your army can include Raven Guard units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+            "legend": "A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle-brothers to pull the enemy out of formation."
+        }
+    ],
     "stratagems": [
         {
             "id": "000010467003",

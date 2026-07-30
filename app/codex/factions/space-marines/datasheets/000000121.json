@@ -1,0 +1,317 @@
+{
+    "id": "000000121",
+    "name": "Uriel Ventris",
+    "slug": "uriel-ventris",
+    "legend": "Skilled warrior and masterful leader, Uriel Ventris is one of the Ultramarines’ most capable commanders – if a maverick one. Having served in the Deathwatch before becoming Captain, he has absorbed the strategies of battle-brothers from a host of other Chapters, giving him a breadth of tactical insight exceeding that of many of his peers.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000071",
+                "slug": "bladeguard-veteran-squad"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000004185",
+                "slug": "victrix-honour-guard"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000002772",
+                "slug": "company-heroes"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Ultramarines",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Uriel Ventris",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bolt pistol; Invictus; Sword of Idaeus.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000121:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000121",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000121:invictus",
+                "name": "Invictus",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000121",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Invictus",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000121:sword-of-idaeus",
+                "name": "Sword of Idaeus",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000121",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Sword of Idaeus",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000121",
+            "line": 1,
+            "name": "Uriel Ventris",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Uriel Ventris – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 95,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Unorthodox Strategist (Aura)",
+            "legend": "",
+            "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem).",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Master of the Fleet",
+            "legend": "",
+            "description": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis or Tacticus Adeptus Astartes Infantry unit from your army. That unit gains the Deep Strike ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

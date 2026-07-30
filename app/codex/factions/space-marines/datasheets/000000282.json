@@ -1,0 +1,284 @@
+{
+    "id": "000000282",
+    "name": "Logan Grimnar",
+    "slug": "logan-grimnar",
+    "legend": "Logan Grimnar – Great Wolf and High King of Fenris – is one of the longest serving Chapter Masters. Waging war against any who threaten the Space Wolves or the Imperium, Grimnar’s charisma and centuries of heroic victories have immortalised him as one of the most lauded warriors in the galaxy.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000036",
+        "name": "Faction Pack: Space Wolves"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000318",
+                "slug": "wolf-guard-terminators"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chapter Master",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Logan Grimnar",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> storm bolter; Axe Morkai; Tyrnak and Fenrir.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000282:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000282",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000282:axe-morkai-strike",
+                "name": "Axe Morkai – strike",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000282",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Axe Morkai – strike",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000282:axe-morkai-sweep",
+                "name": "Axe Morkai – sweep",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000282",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Axe Morkai – sweep",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 10,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000282:tyrnak-and-fenrir",
+                "name": "Tyrnak and Fenrir",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000282",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Tyrnak and Fenrir",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves",
+        "label": "Space Wolves",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000282",
+            "line": 1,
+            "name": "Logan Grimnar",
+            "m": 6,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "80mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Logan Grimnar – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 110,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "High King of Fenris",
+            "legend": "",
+            "description": "Once per battle round, in your Movement phase, you can select one friendly Space Wolves unit that is in Reserves. If you do, until the end of the phase, for the purpose of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Guile of the Wolf (Aura)",
+            "legend": "",
+            "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP (this is not cumulative with any other rules that increase the CP cost of that Stratagem).",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "EMBARKING WITHIN TRANSPORTS",
+            "legend": "",
+            "description": "This model can embark within friendly Adeptus Astartes Transport models that can transport Terminator models. When doing so, it takes up the space of 4 Infantry models.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

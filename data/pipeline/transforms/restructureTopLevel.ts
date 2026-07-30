@@ -29,8 +29,8 @@ export function restructureTopLevel(raw: RawDatasheet): TopLevelFields {
 
     const supplement = {
         key: raw.supplementKey,
-        slug: "",
-        name: "",
+        slug: raw.supplementSlug ?? "",
+        name: raw.supplementName ?? "",
         label: raw.supplementLabel,
         isSupplement: raw.isSupplement,
     };

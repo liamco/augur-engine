@@ -1,0 +1,273 @@
+{
+    "id": "000000148",
+    "name": "Imperial Space Marine",
+    "slug": "imperial-space-marine",
+    "legend": "",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000070",
+                "slug": "tactical-squad"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000000147",
+                "slug": "vanguard-veteran-squad-with-jump-packs"
+            },
+            {
+                "id": "000000326",
+                "slug": "long-fangs"
+            },
+            {
+                "id": "000002103",
+                "slug": "command-squad"
+            },
+            {
+                "id": "000002202",
+                "slug": "devastator-squad"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            }
+        ],
+        "leaderNotes": "You can attach this model to one of the above units even if one <span class=\"kwb\">CHARACTER</span> model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the <span class=\"kwb\">LEADER</span> units attached to it become separate units, with their original Starting Strengths."
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperial Space Marine",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> disintegration combi-gun; disintegration pistol; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000148",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000148:disintegration-combi-gun",
+                "name": "Disintegration combi-gun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000148",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Disintegration combi-gun",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000148:disintegration-pistol",
+                "name": "Disintegration pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000148",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Disintegration pistol",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000148:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000148",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000148",
+            "line": 1,
+            "name": "Imperial Space Marine",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Imperial Space Marine",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 40,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Swift Assault",
+            "legend": "",
+            "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Unbreakable Duty",
+            "legend": "",
+            "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,462 @@
+{
+    "id": "000000117",
+    "name": "Dreadnought",
+    "slug": "dreadnought",
+    "legend": "Dreadnoughts are bipedal combat walkers piloted by centuries-old fallen heroes of the Chapter, kept alive by esoteric technologies in an ancient sarcophagus at the Dreadnought’s heart. Equipped with devastating heavy weapons, they can annihilate the enemy from afar or crush them to paste in brutal melee.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> assault cannon; storm bolter; Dreadnought combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin lascannon</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000117",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s Dreadnought combat weapon and storm bolter can be replaced with one of the following:<ul><li>1 missile launcher and 1 close combat weapon</li><li>1 heavy flamer and 1 Dreadnought combat weapon</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000117:assault-cannon",
+                "name": "Assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:heavy-plasma-cannon-standard",
+                "name": "Heavy plasma cannon – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Heavy plasma cannon – standard",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:heavy-plasma-cannon-supercharge",
+                "name": "Heavy plasma cannon – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy plasma cannon – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:missile-launcher-frag",
+                "name": "Missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Missile launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:missile-launcher-krak",
+                "name": "Missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Missile launcher – krak",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000117:dreadnought-combat-weapon",
+                "name": "Dreadnought combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000117",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Dreadnought combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000117",
+            "line": 1,
+            "name": "Dreadnought",
+            "m": 6,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 135,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Wisdom of the Ancients (Aura)",
+            "legend": "",
+            "description": "While a friendly Adeptus Astartes Infantry unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

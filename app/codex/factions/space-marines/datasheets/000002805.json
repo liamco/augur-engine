@@ -1,0 +1,187 @@
+{
+    "id": "000002805",
+    "name": "Cyberwolf",
+    "slug": "cyberwolf",
+    "legend": "If critically injured, the largest and most ferocious Fenrisian Wolves are rebuilt, mechanically augmented by the Chapter’s Iron Priests. These Cyberwolves may return to their old pack, to lead their kin and hunt with bionically enhanced muscles and steel fangs. Exhibiting such strength, flesh-and-blood wolves instinctively follow them.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000360",
+        "name": "Faction Pack: Space Wolves (Warhammer Legends)"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000323",
+                "slug": "fenrisian-wolves"
+            }
+        ],
+        "leaderNotes": "You must attach this model to the above unit, even if Canis Wolfborn has been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed."
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Beast",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Cyberwolf",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> teeth and claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002805",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002805:teeth-and-claws",
+                "name": "Teeth and claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002805",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Teeth and claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves (Legends)",
+        "label": "Space Wolves (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002805",
+            "line": 1,
+            "name": "Cyberwolf",
+            "m": 10,
+            "t": 4,
+            "sv": 6,
+            "invSv": 6,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 7,
+            "oc": 0,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Cyberwolf",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 20,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Close In for the Kill",
+            "legend": "",
+            "description": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Alpha Hunter",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "WOLFKIN",
+            "legend": "",
+            "description": "This model cannot be your Warlord and cannot be given Enhancements.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

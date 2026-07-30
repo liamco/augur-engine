@@ -1,0 +1,300 @@
+{
+    "id": "000000303",
+    "name": "Blood Claws",
+    "slug": "blood-claws",
+    "legend": "Young and fiery warriors full of belligerent enthusiasm, Blood Claws hunger to prove themselves in savage battle. With relentless exuberance they plunge headlong into the foe, straddling the line between sheer heroism and recklessness. Many great sagas start with the Blood Claws’ glory hunts.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000036",
+        "name": "Faction Pack: Space Wolves"
+    },
+    "role": "Battleline",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Blood Claws",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; Astartes chainsword.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000303",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Blood Claw Pack Leader’s bolt pistol can be replaced with 1 plasma pistol."
+                    },
+                    {
+                        "datasheetId": "000000303",
+                        "line": 2,
+                        "button": "•",
+                        "description": "The Blood Claw Pack Leader’s Astartes chainsword can be replaced with 1 power weapon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000303:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000303",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000303:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000303",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000303:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000303",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000303:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000303",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000303:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000303",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves",
+        "label": "Space Wolves",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000303",
+            "line": 1,
+            "name": "Blood Claws",
+            "m": 7,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Blood Claw Pack Leader",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "9-19 Blood Claws",
+            "min": 9,
+            "max": 19
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 135,
+            "count": 10
+        },
+        {
+            "cost": 285,
+            "count": 20
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Berserk Charge",
+            "legend": "",
+            "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

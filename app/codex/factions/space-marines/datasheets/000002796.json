@@ -1,0 +1,342 @@
+{
+    "id": "000002796",
+    "name": "Marshal",
+    "slug": "marshal",
+    "legend": "Each Black Templars crusade is led by a Marshal. Similar in rank to the Captains of other Chapters, Marshals are fearsome combatants and paragons of strategic acumen. Ensuring a crusade’s purity and success is a sacred duty, and Marshals fight with sanctified relic weapons while acting as beacons of pious fervour for their warriors.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000162",
+        "name": "Faction Pack: Black Templars"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000002780",
+                "slug": "fortis-kill-team-2"
+            },
+            {
+                "id": "000004154",
+                "slug": "crusader-squad-legendary"
+            },
+            {
+                "id": "000000126",
+                "slug": "infernus-squad"
+            },
+            {
+                "id": "000003698",
+                "slug": "inner-circle-companions"
+            },
+            {
+                "id": "000001157",
+                "slug": "intercessor-squad"
+            },
+            {
+                "id": "000001606",
+                "slug": "assault-intercessor-squad"
+            },
+            {
+                "id": "000002798",
+                "slug": "sword-brethren-squad"
+            },
+            {
+                "id": "000002255",
+                "slug": "sternguard-veteran-squad"
+            },
+            {
+                "id": "000004137",
+                "slug": "sternguard-veteran-squad-2"
+            },
+            {
+                "id": "000002783",
+                "slug": "deathwatch-veterans"
+            },
+            {
+                "id": "000000061",
+                "slug": "assault-squad"
+            },
+            {
+                "id": "000001154",
+                "slug": "vanguard-veteran-squad"
+            },
+            {
+                "id": "000002799",
+                "slug": "crusader-squad"
+            },
+            {
+                "id": "000004175",
+                "slug": "decimus-kill-team"
+            },
+            {
+                "id": "000000315",
+                "slug": "wolf-guard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Marshal",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> plasma pistol; master-crafted power weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002796",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s plasma pistol can be replaced with one combi-weapon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002796:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002796",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002796:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002796",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002796:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002796",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002796:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002796",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 7,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars",
+        "label": "Black Templars",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002796",
+            "line": 1,
+            "name": "Marshal",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Marshal",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Inspirational Exemplar",
+            "legend": "",
+            "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Pious Fervour",
+            "legend": "",
+            "description": "Each time this model’s unit is selected to fight, until the end of the phase, add 1 to the Attacks characteristic of this model’s master-crafted power weapon for each enemy unit within 6\" of this model (to a maximum of +3).",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

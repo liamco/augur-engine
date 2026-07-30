@@ -1,0 +1,283 @@
+{
+    "id": "000002076",
+    "name": "Attack Bike Squad",
+    "slug": "attack-bike-squad",
+    "legend": "For those missions where a Space Marine Bike Squad is insufficient, an Attack Bike joins them. Capable of mauling infantry squads or reducing tanks to molten ruin, they render bike formations all the more deadly. So effective are these rapidly moving hunters that many Chapters field them as squads in their own right.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Attack Bike Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolter; twin boltgun; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002076",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their heavy bolter replaced with 1 multi-melta."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002076:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002076",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002076:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002076",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002076:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002076",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002076:twin-boltgun",
+                "name": "Twin boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002076",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin boltgun",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002076:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002076",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002076",
+            "line": 1,
+            "name": "Attack Bike Squad",
+            "m": 12,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 3
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1-3 Attack Bikes",
+            "min": 1,
+            "max": 3
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 55,
+            "count": 1
+        },
+        {
+            "cost": 110,
+            "count": 2
+        },
+        {
+            "cost": 165,
+            "count": 3
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Outrider Escort",
+            "legend": "",
+            "description": "Once per turn, in your opponent’s Shooting phase, when a friendly Adeptus Astartes Mounted unit within 6\" of this unit is selected as the target of an attack, this unit can use this ability. If it does, after that enemy unit has finished making its attacks, this unit can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

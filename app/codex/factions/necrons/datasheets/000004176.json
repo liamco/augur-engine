@@ -114,7 +114,9 @@
                         "line": 2,
                         "dice": "",
                         "name": "Gauss scalpel",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": 1,
@@ -141,7 +143,10 @@
                         "line": 3,
                         "dice": "",
                         "name": "Tesla caster",
-                        "attributes": [],
+                        "attributes": [
+                            "ASSAULT",
+                            "SUSTAINED HITS 1"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": 1,
@@ -214,6 +219,14 @@
                 "min": 5,
                 "max": 5
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "5 Canoptek Macrocytes",
+            "min": 5,
+            "max": 5
         }
     ],
     "pointsCosts": [

@@ -1,0 +1,181 @@
+{
+    "id": "000000495",
+    "name": "Exocrine",
+    "slug": "exocrine",
+    "legend": "Huge, tough and very stupid, the Exocrine’s only task is to carry the dorsal cannon organism on its back into an optimal firing position. Once in place, the bio-plasmic cannon emits a terrible, high-pitched hiss before unleashing a searing blast of bio-plasma capable of reducing tanks and bunkers to glowing craters.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Exocrine",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bio-plasmic cannon; powerful limbs.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000495:bio-plasmic-cannon",
+                "name": "Bio-plasmic cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000495",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bio-plasmic cannon",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6+3",
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000495:powerful-limbs",
+                "name": "Powerful limbs",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000495",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Powerful limbs",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000495",
+            "line": 1,
+            "name": "Exocrine",
+            "m": 8,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 8,
+            "oc": 4,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Exocrine",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 140,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Symbiotic Targeting",
+            "legend": "",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly <span class=\"kwb\">TYRANIDS</span> model makes an attack that targets that unit, re-roll a Hit roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

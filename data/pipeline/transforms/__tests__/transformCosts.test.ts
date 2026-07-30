@@ -36,4 +36,11 @@ describe("transformCosts", () => {
             { cost: 240, count: 6 },
         ]);
     });
+
+    it("defaults a non-numeric cost to 0", () => {
+        const result = transformCosts([
+            { datasheetId: "x", line: "1", description: "1 model", cost: "-" },
+        ]);
+        expect(result[0].cost).toBe(0);
+    });
 });

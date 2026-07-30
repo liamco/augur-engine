@@ -1,0 +1,369 @@
+{
+    "id": "000001172",
+    "name": "Captain In Gravis Armour",
+    "slug": "captain-in-gravis-armour",
+    "legend": "Clad in a suit of indomitable Gravis armour, a Space Marine Captain can fearlessly stride into the very fiercest battlefield firestorms. To don Gravis armour is to demonstrate the greatest determination to crush the enemy, no matter how deeply they are entrenched.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000001177",
+                "slug": "heavy-intercessor-squad"
+            },
+            {
+                "id": "000002099",
+                "slug": "aggressor-squad"
+            },
+            {
+                "id": "000002781",
+                "slug": "indomitor-kill-team-2"
+            },
+            {
+                "id": "000000103",
+                "slug": "eradicator-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> master-crafted heavy bolt rifle; master-crafted power weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s master-crafted heavy bolt rifle and master-crafted power weapon can be replaced with:<ul><li>1 boltstorm gauntlet, 1 power fist and 1 relic chainsword</li><li>1 boltstorm gauntlet, 1 power fist and 1 relic blade</li><li>1 boltstorm gauntlet, 1 power fist and 1 relic fist</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001172:boltstorm-gauntlet",
+                "name": "Boltstorm gauntlet",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Boltstorm gauntlet",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001172:master-crafted-heavy-bolt-rifle",
+                "name": "Master-crafted heavy bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Master-crafted heavy bolt rifle",
+                        "attributes": [
+                            "ASSAULT",
+                            "HEAVY"
+                        ],
+                        "range": 30,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001172:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001172:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001172:relic-blade",
+                "name": "Relic blade",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Relic blade",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001172:relic-chainsword",
+                "name": "Relic chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Relic chainsword",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001172:relic-fist",
+                "name": "Relic fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001172",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Relic fist",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001172",
+            "line": 1,
+            "name": "Captain In Gravis Armour",
+            "m": 5,
+            "t": 6,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Captain in Gravis Armour",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Rites of Battle",
+            "legend": "",
+            "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Refuse to Yield",
+            "legend": "",
+            "description": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

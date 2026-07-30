@@ -1,0 +1,352 @@
+{
+    "id": "000001189",
+    "name": "Mastodon",
+    "slug": "mastodon-3",
+    "legend": "The Mastodon is one of the heaviest assault transports ever fielded by the Space Marines, reserved for use against the most heavily fortified positions. Several times the size of a Land Raider, the Mastodon’s primary role is to deliver armoured warriors directly into the breach created with the siege melta array mounted on the vehicle’s armoured prow.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mastodon",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 45 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models. This model can also transport up to 2 Dreadnought or Helbrute models (these models take up the space of a number of models equal to their Wounds characteristic e.g. A <span class=\"kwb\">DREADNOUGHT</span> with a Wounds characteristic of 8 would take up the space of 8 models).",
+    "damaged": {
+        "range": "1-10",
+        "threshold": 10,
+        "description": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; armoured tracks.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 heavy flamers can be replaced with one of the following<ul><li>2 heavy bolters</li><li>2 lascannons</li><li>2 volkite culverins</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000001189",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s 2 lascannons can be replaced with on of the following:<ul><li>2 heavy bolters</li><li>2 heavy flamers</li><li>2 volkite culverins</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001189:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001189:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001189:lascannon",
+                "name": "Lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Lascannon",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001189:siege-melta-array",
+                "name": "Siege melta array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Siege melta array",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001189:skyreaper-battery",
+                "name": "Skyreaper battery",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Skyreaper battery",
+                        "attributes": [
+                            "ANTI-FLY 4+"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001189:volkite-culverin",
+                "name": "Volkite culverin",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Volkite culverin",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001189:armoured-tracks",
+                "name": "Armoured tracks",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001189",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Armoured tracks",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001189",
+            "line": 1,
+            "name": "Mastodon",
+            "m": 9,
+            "t": 14,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 30,
+            "ld": 6,
+            "oc": 12,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Mastodon",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 540,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Inviolable Transport",
+            "legend": "",
+            "description": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

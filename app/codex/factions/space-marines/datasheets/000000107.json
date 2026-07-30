@@ -1,0 +1,357 @@
+{
+    "id": "000000107",
+    "name": "Javelin Attack Speeder",
+    "slug": "javelin-attack-speeder",
+    "legend": "The Javelin Attack Speeder is a highly durable reconnaissance and strike craft once used widely by the Legiones Astartes, but now almost absent from the war zones of the 41st Millennium. Irreplaceable though they are, Javelins are sometimes entrusted to the very best pilots, who use the vehicles’ extended range to inflict decisive damage behind enemy lines.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Javelin Attack Speeder",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> heavy bolter; Javelin missile launcher; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s javelin missile launcher can be replaced with 2 lascannons"
+                    },
+                    {
+                        "datasheetId": "000000107",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s heavy bolter can be replaced with 1 multi-melta."
+                    },
+                    {
+                        "datasheetId": "000000107",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with up to 2 hunter-killer missiles."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000107:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000107:hunter-killer-missile",
+                "name": "Hunter-killer missile",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hunter-killer missile",
+                        "attributes": [
+                            "ONE SHOT"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 14,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000107:javelin-missile-launcher-frag",
+                "name": "Javelin missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Javelin missile launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "3D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000107:javelin-missile-launcher-krak",
+                "name": "Javelin missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Javelin missile launcher – krak",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000107:lascannon",
+                "name": "Lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Lascannon",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000107:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000107:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000107",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000107",
+            "line": 1,
+            "name": "Javelin Attack Speeder",
+            "m": 14,
+            "t": 8,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 9,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "60mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Javelin Attack Speeder",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 110,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Fire and Redeploy",
+            "legend": "",
+            "description": "In your Shooting phase, each time this model has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to D6\". If it does, until the end of the turn, this model is not eligible to declare a charge.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "One Shot",
+            "legend": "",
+            "description": "The bearer can only shoot with this weapon once per battle.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

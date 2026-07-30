@@ -1,0 +1,216 @@
+{
+    "id": "000000086",
+    "name": "Firestrike Servo-turrets",
+    "slug": "firestrike-servo-turrets",
+    "legend": "Primarily a defensive weapon, the Firestrike Servo-turret lays down withering volleys of fire to secure flanks or the Space Marines’ base of operations. Mounted on gravitic ventral plates, they can hover across the battlefield to ideal firing positions from which to slaughter attacking enemies.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Firestrike Servo-turrets",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Artillery",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> twin Firestrike las-talon; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000086",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their twin Firestrike las-talon replaced with 1 twin Firestrike autocannon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000086:twin-firestrike-autocannon",
+                "name": "Twin Firestrike autocannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000086",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Twin Firestrike autocannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 9,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000086:twin-firestrike-las-talon",
+                "name": "Twin Firestrike las-talon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000086",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin Firestrike las-talon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 10,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000086:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000086",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000086",
+            "line": 1,
+            "name": "Firestrike Servo-turrets",
+            "m": 3,
+            "t": 6,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "80mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 2
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1-2 Firestrike Servo-turrets",
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 1
+        },
+        {
+            "cost": 150,
+            "count": 2
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Sentinel Protocols",
+            "legend": "",
+            "description": "Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

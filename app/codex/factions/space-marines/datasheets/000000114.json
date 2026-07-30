@@ -1,0 +1,243 @@
+{
+    "id": "000000114",
+    "name": "Storm Speeder Hammerstrike",
+    "slug": "storm-speeder-hammerstrike",
+    "legend": "The Hammerstrike excels at rooting out enemies from trench and bunker networks. Sweeping low over the battlefield, it employs searing melta blasts and volleys of rockets to crack the foe’s defence lines wide open.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Storm Speeder Hammerstrike",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Hammerstrike missile launcher; 2 krakstorm grenade launchers; melta destroyer; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000114:hammerstrike-missile-launcher",
+                "name": "Hammerstrike missile launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000114",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hammerstrike missile launcher",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000114:krakstorm-grenade-launcher",
+                "name": "Krakstorm grenade launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000114",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Krakstorm grenade launcher",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000114:melta-destroyer",
+                "name": "Melta destroyer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000114",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Melta destroyer",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000114:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000114",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000114",
+            "line": 1,
+            "name": "Storm Speeder Hammerstrike",
+            "m": 14,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 11,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Storm Speeder Hammerstrike",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 125,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Hammerstrike",
+            "legend": "",
+            "description": "Each time this model has shot, select one enemy unit that was hit by one or more attacks made by this model this phase. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -4,6 +4,7 @@ import {
     parseRange,
     parseWeaponSkill,
 } from "../utils/parseStats";
+import { parseWeaponAttributes } from "../utils/parseWeaponAttributes";
 
 export interface ParsedWeaponProfile {
     datasheetId: string;
@@ -53,13 +54,6 @@ export interface ParsedRawOption {
     description: string;
 }
 
-function parseDescription(desc: string): string[] {
-    if (!desc) return [];
-    // Extract weapon attributes from description like [SUSTAINED HITS 1], [ASSAULT], etc.
-    const matches = desc.match(/\[([^\]]+)\]/g);
-    return matches ? matches.map((m) => m.slice(1, -1)) : [];
-}
-
 export function transformWargear(
     rawWeapons: RawWeapon[],
     loadoutHtml: string,
@@ -74,7 +68,7 @@ export function transformWargear(
             line: parseInt(profile.line, 10),
             dice: profile.dice,
             name: profile.name,
-            attributes: parseDescription(profile.description),
+            attributes: parseWeaponAttributes(profile.description),
             range: parseRange(profile.range) ?? "Melee",
             type: profile.type as "Ranged" | "Melee",
             a: parseDamageOrAttacks(profile.a) ?? 0,

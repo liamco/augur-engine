@@ -1,0 +1,332 @@
+{
+    "id": "000000110",
+    "name": "Rapier Carrier",
+    "slug": "rapier-carrier-3",
+    "legend": "The Rapier Armoured Carrier is a bulky, tracked device that traces its origin to the dawn of Mankind’s stellar empire. Compatible with various heavy weapons, the Rapier is most commonly fitted with a powerful quad lascannon known as a laser destroyer, making it a compact but potent anti-armour asset.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Rapier Carrier",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Artillery",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> boltgun; quad heavy bolter; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s quad heavy bolter can be replaced with one of the following<ul><li>1 graviton cannon</li><li>1 laser destroyer</li><li>1 quad launcher</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000110:boltgun",
+                "name": "Boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Boltgun",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000110:graviton-cannon",
+                "name": "Graviton cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Graviton cannon",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+",
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000110:laser-destroyer",
+                "name": "Laser destroyer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Laser destroyer",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -4,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000110:quad-heavy-bolter",
+                "name": "Quad heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Quad heavy bolter",
+                        "attributes": [
+                            "HEAVY",
+                            "TWIN-LINKED",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000110:quad-launcher-shatter-shells",
+                "name": "Quad launcher – shatter shells",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Quad launcher – shatter shells",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000110:quad-launcher-thunderfire-shells",
+                "name": "Quad launcher – thunderfire shells",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Quad launcher – thunderfire shells",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 60,
+                        "type": "Ranged",
+                        "a": "D6+4",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000110:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000110",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000110",
+            "line": 1,
+            "name": "Rapier Carrier",
+            "m": 3,
+            "t": 6,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Rapier Carrier",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Powerful Volley",
+            "legend": "",
+            "description": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

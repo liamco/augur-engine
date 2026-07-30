@@ -1,0 +1,580 @@
+{
+    "id": "000000159",
+    "name": "Sanguinary Priest on Bike",
+    "slug": "sanguinary-priest-on-bike",
+    "legend": "",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000376",
+        "name": "Faction Pack: Blood Angels (Warhammer Legends)"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000002712",
+                "slug": "outrider-squad"
+            },
+            {
+                "id": "000000116",
+                "slug": "bike-squad"
+            },
+            {
+                "id": "000001166",
+                "slug": "company-veterans-on-bikes"
+            },
+            {
+                "id": "000000241",
+                "slug": "ravenwing-black-knights"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Mounted",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Sanguinary Priest",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000159",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000159:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:boltgun",
+                "name": "Boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Boltgun",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:grav-pistol",
+                "name": "Grav-pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Grav-pistol",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:hand-flamer",
+                "name": "Hand flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Hand flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:inferno-pistol",
+                "name": "Inferno pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Inferno pistol",
+                        "attributes": [
+                            "MELTA 2",
+                            "PISTOL"
+                        ],
+                        "range": 6,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -4,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:twin-boltgun",
+                "name": "Twin boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Twin boltgun",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 13,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000159:thunder-hammer",
+                "name": "Thunder hammer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000159",
+                        "line": 14,
+                        "dice": "",
+                        "name": "Thunder hammer",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels (Legends)",
+        "label": "Blood Angels (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000159",
+            "line": 1,
+            "name": "Sanguinary Priest On Bike",
+            "m": 12,
+            "t": 5,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "75 x 25mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Sanguinary Priest on Bike",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 135,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Sanguinary Priest",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Blood Chalice",
+            "legend": "",
+            "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

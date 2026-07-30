@@ -1,0 +1,224 @@
+{
+    "id": "000003698",
+    "name": "Inner Circle Companions",
+    "slug": "inner-circle-companions",
+    "legend": "Wielding Calibanite greatswords with breathtaking skill, wreathed in the incense smoke of their braziers of judgement, the Inner Circle Companions cut a crimson path through their foes. They are sinister warriors whether battling as ally or enemy, for they fight in silence save for the whine of their armour servos and the crunch of their blades through flesh and bone.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000023",
+        "name": "Faction Pack: Dark Angels"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dark Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Inner Circle Companions",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every Inner Circle Companion is equipped with:</b> heavy bolt pistol; Calibanite greatsword.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000003698:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003698",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003698:calibanite-greatsword",
+                "name": "Calibanite greatsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003698",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Calibanite greatsword - strike",
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    },
+                    {
+                        "datasheetId": "000003698",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Calibanite greatsword - sweep",
+                        "attributes": [
+                            "SUSTAINED HITS 2"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "dark-angels",
+        "slug": "dark-angels",
+        "name": "Dark Angels",
+        "label": "Dark Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000003698",
+            "line": 1,
+            "name": "Inner Circle Companions",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Inner Circle Companions",
+            "min": 3,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 3
+        },
+        {
+            "cost": 180,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Braziers of Judgement",
+            "legend": "",
+            "description": "While a Character model is leading this unit, each time an attack targets this unit, subtract 1 from the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Enmity for the Unworthy",
+            "legend": "",
+            "description": "Each time a model in this unit makes an attack that targets a <span class=\"kwb\">CHARACTER</span> unit, add 1 to the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Attached Unit",
+            "legend": "",
+            "description": "If a Character unit from your army with the Leader ability can be attached to a Sternguard Veteran Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

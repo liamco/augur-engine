@@ -1,0 +1,228 @@
+{
+    "id": "000000076",
+    "name": "Lieutenant With Combi-weapon",
+    "slug": "lieutenant-with-combi-weapon",
+    "legend": "Some Lieutenants in Phobos armour are tasked with operating behind enemy lines, acting as skilled assassins and intelligence gatherers. By the time the main Space Marine task force has arrived they have cast the enemy into disarray and collected incredible tactical data that will all but guarantee the assault’s success.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Lieutenant",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Lieutenant with Combi-weapon",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> combi-weapon; paired combat blades.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000076:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000076",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000076:paired-combat-blades",
+                "name": "Paired combat blades",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000076",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Paired combat blades",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000076",
+            "line": 1,
+            "name": "Lieutenant With Combi-weapon",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Lieutenant with Combi-weapon",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Lone Operative",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Priority Objective Identified",
+            "legend": "",
+            "description": "At the start of the first battle round, if your army includes one or more models with this ability, you can select one objective marker on the battlefield. Until the end of the battle, while one or more models with this ability are on the battlefield, each time a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model makes an attack that targets an enemy unit that is within range of that objective marker, re-roll a Wound roll of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Evade and Survive",
+            "legend": "",
+            "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "LAST SURVIVOR",
+            "legend": "",
+            "description": "This model cannot be selected as your Warlord.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

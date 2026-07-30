@@ -1,0 +1,311 @@
+{
+    "id": "000004133",
+    "name": "Wulfen Dreadnought",
+    "slug": "wulfen-dreadnought",
+    "legend": "Even near death and interred in a Dreadnought sarcophagus, a warrior may yet succumb to the Curse of the Wulfen. Joints and servos twitch and spasm like a crazed animal’s muscles as a Wulfen Dreadnought seeks to maul and eviscerate. From emitters, baleful howls blare its mindless hunger for violence.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000036",
+        "name": "Faction Pack: Space Wolves"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wulfen",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> storm bolter; Fenrisian greataxe; great wolf claw.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000004133",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s Fenrisian greataxe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 heavy flamer."
+                    },
+                    {
+                        "datasheetId": "000004133",
+                        "line": 2,
+                        "button": "•",
+                        "description": "If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004133:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004133",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004133:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004133",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004133:fenrisian-greataxe-strike",
+                "name": "Fenrisian greataxe – strike",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004133",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Fenrisian greataxe – strike",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -2,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004133:fenrisian-greataxe-sweep",
+                "name": "Fenrisian greataxe – sweep",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004133",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Fenrisian greataxe – sweep",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004133:great-wolf-claw",
+                "name": "Great wolf claw",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004133",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Great wolf claw",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves",
+        "label": "Space Wolves",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000004133",
+            "line": 1,
+            "name": "Wulfen Dreadnought",
+            "m": 9,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Wulfen Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 145,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Curse of the Wulfen",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Bestial Rage",
+            "legend": "",
+            "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if this model lost one or more wounds as a result of those attacks, this model can make a Bestial Rage move. To do so, roll one D6, adding 2 to the result: this model can be moved a number of inches up to the result, but must finish that move as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>), When doing so, this model can be moved within Engagement Range of that enemy unit. Each model can only make one Bestial Rage move per phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Violent Fury",
+            "legend": "",
+            "description": "If this model is equipped with two melee weapons, those weapon profiles have the [TWIN-LINKED] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Blizzard Shield",
+            "legend": "",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

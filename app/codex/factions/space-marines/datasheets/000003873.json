@@ -1,0 +1,529 @@
+{
+    "id": "000003873",
+    "name": "Deathwatch Terminator Squad",
+    "slug": "deathwatch-terminator-squad-2",
+    "legend": "The indomitable warriors honoured to wear hulking suits of Terminator armour are an inspiring sight to their brethren. Deathwatch Terminators carry the most powerful close combat weapons, and the strength and durability of their armour allows them to take the heaviest firepower directly into hidden xenos lairs.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000035",
+        "name": "Faction Pack: Deathwatch"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Deathwatch",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwatch Terminator Squad",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> power fist; storm bolter.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Up to 3 Deathwatch Terminators can each have their storm bolter replaced with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 cyclone missile launcher and 1 storm bolter (this model’s storm bolter cannot be replaced)</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000003873",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of models can each have their power fist and storm bolter replaced with one of the following:<ul><li>1 storm bolter and 1 power weapon</li><li>1 storm bolter and 1 chainfist</li><li>1 thunder hammer and 1 storm shield</li><li>1 twin lightning claws</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000003873:assault-cannon",
+                "name": "Assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:cyclone-missile-launcher-frag",
+                "name": "Cyclone missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Cyclone missile launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:cyclone-missile-launcher-krak",
+                "name": "Cyclone missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Cyclone missile launcher – krak",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:plasma-cannon-standard",
+                "name": "Plasma cannon – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma cannon – standard",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:plasma-cannon-supercharge",
+                "name": "Plasma cannon – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Plasma cannon – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:chainfist",
+                "name": "Chainfist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Chainfist",
+                        "attributes": [
+                            "ANTI-VEHICLE 3+"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:thunder-hammer",
+                "name": "Thunder hammer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Thunder hammer",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003873:twin-lightning-claws",
+                "name": "Twin lightning claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003873",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Twin lightning claws",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "deathwatch",
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "label": "Deathwatch",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000003873",
+            "line": 1,
+            "name": "Deathwatch Terminator Squad",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Deathwatch Terminator Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Deathwatch Terminators",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 190,
+            "count": 5
+        },
+        {
+            "cost": 350,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Mission Tactics",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Terminatus Assault",
+            "legend": "",
+            "description": "You can re-roll Charge rolls made for this unit. Each time this unit ends a Charge move, each enemy unit within Engagement Range of this unit must take a Battle-shock test. If that enemy unit does not have the <span class=\"kwb\">IMPERIUM</span> or <span class=\"kwb\">CHAOS</span> keywords, subtract 1 from that test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Teleport Homer",
+            "legend": "",
+            "description": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not within your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" of that token and not within 9\" horizontally of one or more enemy units. That token is then removed.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Storm Shield",
+            "legend": "",
+            "description": "The bearer has a Wounds characteristic of 4.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -70,7 +70,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Gauss blaster",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 2,
@@ -97,7 +99,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Tesla carbine",
-                        "attributes": [],
+                        "attributes": [
+                            "ASSAULT",
+                            "SUSTAINED HITS 2"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 2,
@@ -170,6 +175,14 @@
                 "min": 5,
                 "max": 10
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "5-10 Immortals",
+            "min": 5,
+            "max": 10
         }
     ],
     "pointsCosts": [

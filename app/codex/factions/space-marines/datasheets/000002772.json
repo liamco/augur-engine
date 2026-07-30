@@ -1,0 +1,330 @@
+{
+    "id": "000002772",
+    "name": "Company Heroes",
+    "slug": "company-heroes",
+    "legend": "A company’s most heroic battle-brothers fight alongside a Chapter’s high-ranking officers. These veterans and specialists serve as honour guards and provide vital support to a commander. Company Champions defend their Company’s honour with martial excellence, Ancients guard its inspirational banners and Company Veterans lay down hails o ffire from relic bolt weapons.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Company Heroes",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Ancient",
+            "model": "ANCIENT",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Ancient is equipped with:</b> bolt pistol; bolt rifle; close combat weapon. <br><br><b>The Company Champion is equipped with:</b> bolt pistol; master-crafted power weapon. <br><br><b>One Company Veteran is equipped with:</b> bolt pistol; master-crafted heavy bolter; close combat weapon. <br><br><b>One Company Veteran is equipped with:</b> bolt pistol; master-crafted bolt rifle; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002772:bolt-pistol",
+                "name": "Bolt Pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002772",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt Pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002772:bolt-rifle",
+                "name": "Bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002772",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt rifle",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002772:master-crafted-bolt-rifle",
+                "name": "Master-crafted bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002772",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Master-crafted bolt rifle",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002772:master-crafted-heavy-bolter",
+                "name": "Master-crafted heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002772",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Master-crafted heavy bolter",
+                        "attributes": [
+                            "HEAVY",
+                            "SUSTAINED HITS 2"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002772:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002772",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002772:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002772",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002772",
+            "line": 1,
+            "name": "Company Heroes",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Ancient",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "1 Company Champion",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 3,
+            "description": "2 Company Veterans",
+            "min": 2,
+            "max": 2
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 105,
+            "count": 4
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Astartes Banner",
+            "legend": "",
+            "description": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of models in this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Command Squad",
+            "legend": "",
+            "description": "While a CHARACTER model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "COMPANY HEROES",
+            "legend": "",
+            "description": "You must attach one CAPTAIN or CHAPTER MASTER model to this unit. If this is not possible, this unit does not take part in the battle and counts as having been destroyed.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

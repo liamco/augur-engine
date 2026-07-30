@@ -1,0 +1,493 @@
+{
+    "id": "000002799",
+    "name": "Crusader Squad",
+    "slug": "crusader-squad",
+    "legend": "Crusader Squads storm into battle with bolt rifles blazing and chainswords howling. Initiates aim jets of fire from their pyreblasters or swing crackling power fists into their foes, while hard-eyed Neophytes fight furiously to prove their martial worth under the stem gaze of their mentors.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000162",
+        "name": "Faction Pack: Black Templars"
+    },
+    "role": "Battleline",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Crusader Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Sword Brother is equipped with:</b> heavy bolt pistol; master-crafted power weapon.<br><br><b>Every Initiate is equipped with:</b> bolt pistol; bolt rifle; close combat weapon.<br><br><b>Every Neophyte is equipped with:</b> bolt pistol; Astartes chainsword.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Sword Brother’s heavy bolt pistol can be replaced with 1 pyre pistol."
+                    },
+                    {
+                        "datasheetId": "000002799",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon."
+                    },
+                    {
+                        "datasheetId": "000002799",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword."
+                    },
+                    {
+                        "datasheetId": "000002799",
+                        "line": 4,
+                        "button": "•",
+                        "description": "For every 10 models in this unit, up to 2 Initiates can each have their bolt rifle replaced with one of the following:<br><ul><li>1 heavy bolt pistol and 1 power fist</li><li>1 pyreblaster</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002799:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:bolt-rifle",
+                "name": "Bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt rifle",
+                        "attributes": [
+                            "ASSAULT",
+                            "HEAVY"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:neophyte-firearm",
+                "name": "Neophyte firearm",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Neophyte firearm",
+                        "attributes": [
+                            "ASSAULT"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:pyre-pistol",
+                "name": "Pyre pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Pyre pistol",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:pyreblaster",
+                "name": "Pyreblaster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Pyreblaster",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002799:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002799",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars",
+        "label": "Black Templars",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002799",
+            "line": 1,
+            "name": "NEOPHYTES",
+            "m": 6,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "28.5mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        {
+            "datasheetId": "000002799",
+            "line": 2,
+            "name": "OTHER MODELS",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "32mm",
+            "baseSizeDescr": "Sword Brother 40mm",
+            "composition": {
+                "min": 5,
+                "max": 11
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Sword Brother",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "5-11 Initiates",
+            "min": 5,
+            "max": 11
+        },
+        {
+            "line": 3,
+            "description": "4-8 Neophytes",
+            "min": 4,
+            "max": 8
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 150,
+            "count": 1
+        },
+        {
+            "cost": 310,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Righteous Zeal",
+            "legend": "",
+            "description": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models in this unit were destroyed as a result of those attacks, this unit can make a Righteous Zeal move. To do so, roll one D6 and add 2 to the result: models in this unit move a number of inches up to this result, but this unit must end that move as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Righteous Zeal move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Righteous Zeal move per phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

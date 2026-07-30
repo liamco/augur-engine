@@ -5,6 +5,7 @@ import {
     parseSaveStat,
     parseIntOrNull,
 } from "../utils/parseStats";
+import { parseCompositionCount } from "./transformUnitComposition";
 
 export interface ParsedModel {
     datasheetId: string;
@@ -23,23 +24,19 @@ export interface ParsedModel {
     composition: { min: number; max: number };
 }
 
-function parseComposition(description: string): { min: number; max: number } {
-    const match = description.match(/(\d+)(?:-(\d+))?/);
-    if (!match) return { min: 1, max: 1 };
-    const min = parseInt(match[1], 10);
-    const max = match[2] ? parseInt(match[2], 10) : min;
-    return { min, max };
-}
-
 export function transformModels(
     rawModels: RawModel[],
     rawComposition: RawUnitComposition[],
 ): ParsedModel[] {
-    // Build composition lookup by line
+    // Build composition lookup by line. Only lines that actually carry a count
+    // are recorded, so countless lines (e.g. an "OR" separator) fall through to
+    // the default below. See transformUnitComposition for the full, unmerged
+    // composition — statlines and composition lines don't map one-to-one.
     const compositionByLine = new Map<number, { min: number; max: number }>();
     for (const comp of rawComposition) {
         const line = parseInt(comp.line, 10);
-        compositionByLine.set(line, parseComposition(comp.description));
+        const count = parseCompositionCount(comp.description);
+        if (count) compositionByLine.set(line, count);
     }
 
     return rawModels.map((model) => {
@@ -51,13 +48,13 @@ export function transformModels(
             line,
             name: model.name,
             m: parseMovement(model.m) ?? 0,
-            t: parseInt(model.t, 10),
+            t: parseIntOrNull(model.t) ?? 0,
             sv: parseSkill(model.sv) ?? 0,
             invSv: parseSaveStat(model.invSv),
             invSvDescr: model.invSvDescr,
-            w: parseInt(model.w, 10),
+            w: parseIntOrNull(model.w) ?? 0,
             ld: parseSkill(model.ld) ?? 0,
-            oc: parseInt(model.oc, 10),
+            oc: parseIntOrNull(model.oc) ?? 0,
             baseSize: model.baseSize,
             baseSizeDescr: model.baseSizeDescr,
             composition,

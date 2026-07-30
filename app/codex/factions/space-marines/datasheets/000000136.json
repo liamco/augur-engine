@@ -1,0 +1,359 @@
+{
+    "id": "000000136",
+    "name": "Brutalis Dreadnought",
+    "slug": "brutalis-dreadnought",
+    "legend": "The Brutalis Dreadnought is a line-breaker and a terror weapon. As it storms towards the enemy lines it lays down a hail of anti-personnel fire. Yet the greatest threat lies in its massive ceramite-sheathed fists or talons, which can crush an armoured warrior like spoiled fruit or punch through a bunker wall like parchment.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Brutalis Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> twin Icarus ironhail heavy stubber; twin heavy bolter; Brutalis bolt rifles; Brutalis fists.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
+                    },
+                    {
+                        "datasheetId": "000000136",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s Brutalis fists and Brutalis bolt rifles can be replaced with 1 Brutalis talons."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000136:brutalis-bolt-rifles",
+                "name": "Brutalis bolt rifles",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Brutalis bolt rifles",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000136:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000136:twin-icarus-ironhail-heavy-stubber",
+                "name": "Twin Icarus ironhail heavy stubber",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Twin Icarus ironhail heavy stubber",
+                        "attributes": [
+                            "ANTI-FLY 4+",
+                            "RAPID FIRE 3",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000136:twin-multi-melta",
+                "name": "Twin multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin multi-melta",
+                        "attributes": [
+                            "MELTA 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000136:brutalis-fists",
+                "name": "Brutalis fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Brutalis fists",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000136:brutalis-talons-strike",
+                "name": "Brutalis talons – strike",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Brutalis talons – strike",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000136:brutalis-talons-sweep",
+                "name": "Brutalis talons – sweep",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000136",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Brutalis talons – sweep",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 10,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000136",
+            "line": 1,
+            "name": "Brutalis Dreadnought",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 6,
+            "oc": 4,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Brutalis Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 160,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Brutalis Charge",
+            "legend": "",
+            "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

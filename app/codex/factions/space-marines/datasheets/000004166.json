@@ -1,0 +1,279 @@
+{
+    "id": "000004166",
+    "name": "Caanok Var",
+    "slug": "caanok-var",
+    "legend": "Iron Captain of Clan Company Avernii, Caanok Var is a consummate leader and warrior champion. Whilst in command, he demonstrates a cold and calculating precision, yet a burning rage remains, and in battle he crushes the enemy with punishing blows from his power maul, Axiom.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000000231",
+                "slug": "deathwing-knights"
+            },
+            {
+                "id": "000004138",
+                "slug": "terminator-squad-2"
+            },
+            {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
+                "id": "000000104",
+                "slug": "relic-terminator-squad"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
+            },
+            {
+                "id": "000002302",
+                "slug": "deathwing-command-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Iron Hands",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Caanok Var",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 1 storm bolter; 1 Axiom",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004166:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004166",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004166:axiom-strike",
+                "name": "Axiom – strike",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004166",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Axiom – strike",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004166:axiom-sweep",
+                "name": "Axiom – sweep",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004166",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Axiom – sweep",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 10,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000004166",
+            "line": 1,
+            "name": "Captain",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Caanok Var – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 100,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Cold and Calculating",
+            "legend": "",
+            "description": "Each time a model in this model’s unit makes an attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, that attack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Cerebrex Logic Engine",
+            "legend": "",
+            "description": "<ul><li>At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability.</li><li>After both players have deployed their armies, you can select one <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.</li></ul>",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

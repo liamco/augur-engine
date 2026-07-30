@@ -1,0 +1,319 @@
+{
+    "id": "000002270",
+    "name": "Desolation Squad",
+    "slug": "desolation-squad",
+    "legend": "Desolation Marines specialise in unleashing widespread devastation throughout the enemy ranks. Whether direct-firing warheads into massed infantry or enemy armour, or raining salvoes down upon the enemy with their castellan launchers, these warriors reap a grievous toll amongst the foe.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Desolation Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; castellan launcher; superfrag rocket launcher; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All of the models in this unit can each have their superfrag rocket launcher replaced with 1 superkrak rocket launcher."
+                    },
+                    {
+                        "datasheetId": "000002270",
+                        "line": 2,
+                        "button": "•",
+                        "description": "The Desolation Sergeant’s superfrag rocket launcher or superkrak rocket launcher can be replaced with 1 vengor launcher."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002270:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002270:castellan-launcher",
+                "name": "Castellan launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Castellan launcher",
+                        "attributes": [
+                            "BLAST",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002270:superfrag-rocket-launcher",
+                "name": "Superfrag rocket launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Superfrag rocket launcher",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002270:superkrak-rocket-launcher",
+                "name": "Superkrak rocket launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Superkrak rocket launcher",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 10,
+                        "ap": -2,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002270:vengor-launcher",
+                "name": "Vengor launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Vengor launcher",
+                        "attributes": [
+                            "BLAST",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002270:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002270",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002270",
+            "line": 1,
+            "name": "Desolation Squad",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Desolation Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4 Desolation Marines",
+            "min": 4,
+            "max": 4
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 200,
+            "count": 5
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Targeter Optics",
+            "legend": "",
+            "description": "Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [IGNORES COVER] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

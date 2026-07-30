@@ -49,14 +49,45 @@ describe("transformDetachments", () => {
         ],
     };
 
-    it("transforms detachment with ability, stratagems, and enhancements", () => {
+    it("transforms detachment with abilities, stratagems, and enhancements", () => {
         const result = transformDetachments([rawDetachment]);
         expect(result).toHaveLength(1);
 
         const det = result[0];
         expect(det.name).toBe("Assimilation Swarm");
-        expect(det.ability.id).toBe("000008411");
-        expect(det.ability.name).toBe("Feed the Swarm");
+        expect(det.abilities).toHaveLength(1);
+        expect(det.abilities[0].id).toBe("000008411");
+        expect(det.abilities[0].name).toBe("Feed the Swarm");
+    });
+
+    it("keeps every ability, not just the first", () => {
+        const multiAbility: RawFactionDetachment = {
+            ...rawDetachment,
+            name: "Hammer of Avernii",
+            abilities: [
+                { ...rawDetachment.abilities[0], id: "1", name: "Calculated Annihilation" },
+                { ...rawDetachment.abilities[0], id: "2", name: "Recalculating" },
+                { ...rawDetachment.abilities[0], id: "3", name: "Restrictions" },
+            ],
+        };
+
+        const result = transformDetachments([multiAbility]);
+
+        expect(result[0].abilities.map((a) => a.name)).toEqual([
+            "Calculated Annihilation",
+            "Recalculating",
+            "Restrictions",
+        ]);
+    });
+
+    it("survives a detachment with no abilities", () => {
+        const noAbilities: RawFactionDetachment = {
+            ...rawDetachment,
+            abilities: [],
+        };
+
+        expect(() => transformDetachments([noAbilities])).not.toThrow();
+        expect(transformDetachments([noAbilities])[0].abilities).toEqual([]);
     });
 
     it("parses stratagem cpCost to number", () => {

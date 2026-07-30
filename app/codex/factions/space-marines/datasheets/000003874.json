@@ -1,0 +1,527 @@
+{
+    "id": "000003874",
+    "name": "Talonstrike Kill Team",
+    "slug": "talonstrike-kill-team",
+    "legend": "Diving from gunships or advancing in powered leaps across a war zone, the battle-brothers of a Talonstrike Kill Team crush their prey in shockingly sudden assaults. They attack with howling chainswords and blasts of heavy, short-range firepower. The roar of their jump packs follows each rapid kill as they close on their next targets.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000035",
+        "name": "Faction Pack: Deathwatch"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Deathwatch",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Talonstrike Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Kill Team Sergeant with Jump Pack is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Intercessor with Jump Pack is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Heavy Intercessor with Jump Pack is equipped with:</b> assault bolters; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Kill Team Sergeant with Jump Pack can replace its heavy bolt pistol with one of the following:<br><ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000003874",
+                        "line": 2,
+                        "button": "•",
+                        "description": "The Kill Team Sergeant with Jump Pack can replace its Astartes chainsword with one of the following:<br><ul><li>1 power fist</li><li>1 power weapon</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000003874",
+                        "line": 3,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 model can replace its heavy bolt pistol with 1 plasma pistol."
+                    },
+                    {
+                        "datasheetId": "000003874",
+                        "line": 4,
+                        "button": "•",
+                        "description": "Any number of models can each have their assault bolters replaced with 1 plasma exterminators."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000003874:assault-bolters",
+                "name": "Assault bolters",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault bolters",
+                        "attributes": [
+                            "ASSAULT",
+                            "PISTOL",
+                            "SUSTAINED HITS 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:hand-flamer",
+                "name": "Hand flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hand flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:plasma-exterminators-standard",
+                "name": "Plasma exterminators – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Plasma exterminators – standard",
+                        "attributes": [
+                            "ASSAULT",
+                            "PISTOL",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:plasma-exterminators-supercharge",
+                "name": "Plasma exterminators – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Plasma exterminators – supercharge",
+                        "attributes": [
+                            "ASSAULT",
+                            "HAZARDOUS",
+                            "PISTOL",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:plasma-pistol",
+                "name": "Plasma pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Plasma pistol - standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    },
+                    {
+                        "datasheetId": "000003874",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Plasma pistol - supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003874:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003874",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "deathwatch",
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "label": "Deathwatch",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000003874",
+            "line": 1,
+            "name": "KILL TEAM SERGEANT WITH JUMP PACK AND KILL TEAM INTERCESSORS WITH JUMP PACKS",
+            "m": 12,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 10,
+                "max": 10
+            }
+        },
+        {
+            "datasheetId": "000003874",
+            "line": 2,
+            "name": "KILL TEAM HEAVY INTERCESSORS WITH JUMP PACKS",
+            "m": 10,
+            "t": 6,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "10 MODELS MAXIMUM",
+            "min": 10,
+            "max": 10
+        },
+        {
+            "line": 2,
+            "description": "1 Kill Team Sergeant with Jump Pack",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 3,
+            "description": "2‑9 Kill Team Intercessors with Jump Packs",
+            "min": 2,
+            "max": 9
+        },
+        {
+            "line": 4,
+            "description": "0‑5 Kill Team Heavy Intercessors with Jump Packs",
+            "min": 0,
+            "max": 5
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 275,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Mission Tactics",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Talonstrike Doctrines",
+            "legend": "",
+            "description": "Each time this unit is set up on the battlefield, until the end of the turn:<br><ul><li>Improve the Armour Penetration characteristic of weapons equipped by models in this unit by 1.</li><li>Melee weapons equipped by models in this unit have the [LANCE] ability.</li></ul>",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character unit from your army with the Leader ability can be attached to an Assault Intercessors with Jump Packs unit, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

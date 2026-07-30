@@ -1,0 +1,157 @@
+{
+    "id": "000000476",
+    "name": "Venomthropes",
+    "slug": "venomthropes",
+    "legend": "Venomthropes drift forward amidst miasmal clouds of spores that spew from within their bodies. The touch of their tendrils is extremely poisonous, and those exposed to the Venomthropes’ spore clouds for any length of time drown on their own frothing fluids as they dissolve from the inside out.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Venomthropes",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> toxic lashes.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000476:toxic-lashes",
+                "name": "Toxic lashes",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000476",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Toxic lashes",
+                        "attributes": [
+                            "ANTI-INFANTRY 2+"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000476",
+            "line": 1,
+            "name": "Venomthropes",
+            "m": 6,
+            "t": 5,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Venomthropes",
+            "min": 3,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 3
+        },
+        {
+            "cost": 140,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Foul Spores (Aura)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">TYRANIDS</span> unit is within 6\" of this unit, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack. In addition, while a friendly <span class=\"kwb\">TYRANIDS</span> unit (excluding Monsters) is within 6\" of this unit, models in that unit have the Stealth ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

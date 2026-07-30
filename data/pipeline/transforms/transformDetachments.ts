@@ -67,7 +67,10 @@ export function transformDetachments(
 ): ParsedDetachment[] {
     return rawDetachments.map((det) => ({
         name: det.name,
-        ability: transformDetachmentAbility(det.abilities[0]),
+        // Every ability, not just the first: 4 detachments carry a second rule
+        // plus a separate "Restrictions" record. Others fold their restrictions
+        // into the single ability's description instead.
+        abilities: (det.abilities ?? []).map(transformDetachmentAbility),
         stratagems: det.stratagems.map(transformStratagem),
         enhancements: det.enhancements.map(transformEnhancement),
     }));
@@ -81,6 +84,9 @@ export function extractCoreStratagems(
     rawStratagems: RawStratagem[],
 ): ParsedStratagem[] {
     return rawStratagems
-        .filter((s) => !s.factionId && !s.detachmentId)
+        .filter(
+            (s): s is RawStratagem =>
+                s != null && !s.factionId && !s.detachmentId,
+        )
         .map(transformStratagem);
 }

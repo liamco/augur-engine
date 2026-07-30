@@ -1,0 +1,229 @@
+{
+    "id": "000002105",
+    "name": "Darnath Lysander",
+    "slug": "darnath-lysander",
+    "legend": "Raising high his storm shield, Rampart, as he swings the Fist of Dorn, Lysander wades through his foes like a warship smashing through stormy seas. Each hammer blow reduces enemies to bloody ruin, sweeping whole ranks of warriors from their feet. All the while, Lysander’s obstinate scowl never wavers, his determination absolute.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004138",
+                "slug": "terminator-squad-2"
+            },
+            {
+                "id": "000000231",
+                "slug": "deathwing-knights"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
+            },
+            {
+                "id": "000002302",
+                "slug": "deathwing-command-squad"
+            },
+            {
+                "id": "000000104",
+                "slug": "relic-terminator-squad"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
+            },
+            {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Imperial Fists",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Darnath Lysander",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 1 Fist of Dorn.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002105:fist-of-dorn",
+                "name": "Fist of Dorn",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002105",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Fist of Dorn",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 10,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002105",
+            "line": 1,
+            "name": "Darnath Lysander",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 7,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Darnath Lysander – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 100,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Icon of Obstinacy",
+            "legend": "",
+            "description": "Each time an attack targets this model’s unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Rampart",
+            "legend": "",
+            "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "INSPIRING COMMANDER",
+            "legend": "",
+            "description": "If you include this model in your army, until the end of the battle, non-<span class=\"kwb\">CHARACTER</span> models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

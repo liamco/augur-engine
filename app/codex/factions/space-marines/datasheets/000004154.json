@@ -1,0 +1,1120 @@
+{
+    "id": "000004154",
+    "name": "Crusader Squad (Legendary)",
+    "slug": "crusader-squad-legendary",
+    "legend": "Crusader Squads storm into battle with bolt rifles blazing and chainswords howling. Initiates aim jets of fire from their pyreblasters or swing crackling power fists into their foes, while hard-eyed Neophytes fight furiously to prove their martial worth under the stem gaze of their mentors.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000372",
+        "name": "Faction Pack: Black Templars (Warhammer Legends)"
+    },
+    "role": "Battleline",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Black Templars",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Crusader Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> boltgun; bolt pistol; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Sword Brother’s bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list*:<br><ul><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm bolter</li><li>1 thunder hammer</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000004154",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of Neophytes can each have their boltgun replaced with one of the following: <br><ul><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000004154",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword."
+                    },
+                    {
+                        "datasheetId": "000004154",
+                        "line": 4,
+                        "button": "•",
+                        "description": "1 Initiate’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 plasma gun</li><li>1 meltagun</li><li>1 grav-gun</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000004154",
+                        "line": 5,
+                        "button": "•",
+                        "description": "1 Initiate’s boltgun can be replaced with one of the following:<br><ul><li>1 power weapon</li><li>1 power fist</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 grav-cannon</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000004154",
+                        "line": 6,
+                        "button": "*",
+                        "description": "*This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004154:astartes-shotgun",
+                "name": "Astartes shotgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Astartes shotgun",
+                        "attributes": [
+                            "ASSAULT"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:boltgun",
+                "name": "Boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Boltgun",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:flamer",
+                "name": "Flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:grav-cannon",
+                "name": "Grav-cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Grav-cannon",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+",
+                            "HEAVY"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:grav-gun",
+                "name": "Grav-gun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Grav-gun",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:grav-pistol",
+                "name": "Grav-pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Grav-pistol",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:hand-flamer",
+                "name": "Hand flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Hand flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "HEAVY",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:inferno-pistol",
+                "name": "Inferno pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Inferno pistol",
+                        "attributes": [
+                            "MELTA 2",
+                            "PISTOL"
+                        ],
+                        "range": 6,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -4,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:lascannon",
+                "name": "Lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 13,
+                        "dice": "",
+                        "name": "Lascannon",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:meltagun",
+                "name": "Meltagun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 14,
+                        "dice": "",
+                        "name": "Meltagun",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:missile-launcher-frag",
+                "name": "Missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 15,
+                        "dice": "",
+                        "name": "Missile launcher – frag",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:missile-launcher-krak",
+                "name": "Missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 15,
+                        "dice": "",
+                        "name": "Missile launcher – krak",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 16,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "HEAVY",
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:plasma-cannon-standard",
+                "name": "Plasma cannon – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 17,
+                        "dice": "",
+                        "name": "Plasma cannon – standard",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:plasma-cannon-supercharge",
+                "name": "Plasma cannon – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 17,
+                        "dice": "",
+                        "name": "Plasma cannon – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS",
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:plasma-gun-standard",
+                "name": "Plasma gun – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 18,
+                        "dice": "",
+                        "name": "Plasma gun – standard",
+                        "attributes": [
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:plasma-gun-supercharge",
+                "name": "Plasma gun – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 19,
+                        "dice": "",
+                        "name": "Plasma gun – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 20,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 20,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 21,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 22,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:combat-knife",
+                "name": "Combat knife",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 23,
+                        "dice": "",
+                        "name": "Combat knife",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 24,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 25,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 26,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:thunder-hammer",
+                "name": "Thunder hammer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 27,
+                        "dice": "",
+                        "name": "Thunder hammer",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004154:twin-lightning-claws",
+                "name": "Twin lightning claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004154",
+                        "line": 28,
+                        "dice": "",
+                        "name": "Twin lightning claws",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "black-templars",
+        "slug": "black-templars",
+        "name": "Black Templars (Legends)",
+        "label": "Black Templars (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000004154",
+            "line": 1,
+            "name": "NEOPHYTES",
+            "m": 6,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "25mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        {
+            "datasheetId": "000004154",
+            "line": 2,
+            "name": "OTHER MODELS",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "32mm",
+            "baseSizeDescr": "Sword Brother 40mm",
+            "composition": {
+                "min": 4,
+                "max": 9
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Sword Brother",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Initiates",
+            "min": 4,
+            "max": 9
+        },
+        {
+            "line": 3,
+            "description": "0-10 Neophytes",
+            "min": 0,
+            "max": 10
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 1
+        },
+        {
+            "cost": 150,
+            "count": 1
+        },
+        {
+            "cost": 135,
+            "count": 1
+        },
+        {
+            "cost": 290,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Templar Vows",
+            "type": "Faction"
+        },
+        {
+            "name": "Righteous Zeal",
+            "legend": "",
+            "description": "You can re-roll Advance and Charge rolls made for this unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -148,6 +148,9 @@ export interface RawDatasheet {
     detachmentAbilities: RawDetachmentAbility[];
     leaders: RawLeaderRef[];
     supplementLabel: string;
+    // Only present on datasheets that belong to a supplement (296 of 417).
+    supplementSlug?: string;
+    supplementName?: string;
     isSupplement: boolean;
     roleLabel: string;
     sourceName: string;
@@ -221,7 +224,7 @@ export interface ParsedEnhancement {
 
 export interface ParsedDetachment {
     name: string;
-    ability: ParsedDetachmentAbility;
+    abilities: ParsedDetachmentAbility[];
     stratagems: ParsedStratagem[];
     enhancements: ParsedEnhancement[];
 }

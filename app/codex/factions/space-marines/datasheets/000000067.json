@@ -103,7 +103,11 @@
                         "line": 1,
                         "dice": "",
                         "name": "Combi-weapon",
-                        "attributes": [],
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 1,
@@ -157,7 +161,9 @@
                         "line": 3,
                         "dice": "",
                         "name": "Grav-cannon",
-                        "attributes": [],
+                        "attributes": [
+                            "ANTI-VEHICLE 2+"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 3,
@@ -184,7 +190,9 @@
                         "line": 4,
                         "dice": "",
                         "name": "Hunter-killer missile",
-                        "attributes": [],
+                        "attributes": [
+                            "ONE SHOT"
+                        ],
                         "range": 48,
                         "type": "Ranged",
                         "a": 1,
@@ -211,7 +219,9 @@
                         "line": 5,
                         "dice": "",
                         "name": "Multi-melta",
-                        "attributes": [],
+                        "attributes": [
+                            "MELTA 2"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": 2,
@@ -238,7 +248,9 @@
                         "line": 6,
                         "dice": "",
                         "name": "Storm bolter",
-                        "attributes": [],
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 2,
@@ -287,8 +299,8 @@
     },
     "supplement": {
         "key": "codex",
-        "slug": "",
-        "name": "",
+        "slug": "codex",
+        "name": "Codex (Legends)",
         "label": "None",
         "isSupplement": false
     },
@@ -311,6 +323,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Land Raider Excelsior",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

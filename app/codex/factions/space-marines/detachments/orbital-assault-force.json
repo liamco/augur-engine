@@ -1,11 +1,13 @@
 {
     "name": "Orbital Assault Force",
-    "ability": {
-        "id": "000010679",
-        "name": "Rapid-drop Deployment",
-        "description": "At the start of the Declare Battle Formations step, select a number of <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability.<br><br><div class=\"BreakInsideAvoid\"><table bordercolor=\"#888\"><tbody><tr><td><table class=\" customTable tablefont\" bordercolor=\"#888\"><tbody><tr><td><b>BATTLE SIZE</b></td><td><b>NUMBER OF UNITS</b></td></tr><tr><td>Incursion</td><td>2</td></tr><tr><td>Strike Force</td><td>3</td></tr><tr><td>Onslaught</td><td>4</td></tr></tbody></table></td></tr></tbody></table></div><br>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack, if it was set up on the battlefield this turn, re-roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re-roll a Hit roll of 1 as well.",
-        "legend": "Through the use of teleportation, Drop Pods and gunship insertion, entire strike forces of Space Marines and even their armoured support can deploy from orbit in a matter of moments, a capability that in and of itself has won entire wars."
-    },
+    "abilities": [
+        {
+            "id": "000010679",
+            "name": "Rapid-drop Deployment",
+            "description": "At the start of the Declare Battle Formations step, select a number of <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability.<br><br><div class=\"BreakInsideAvoid\"><table bordercolor=\"#888\"><tbody><tr><td><table class=\" customTable tablefont\" bordercolor=\"#888\"><tbody><tr><td><b>BATTLE SIZE</b></td><td><b>NUMBER OF UNITS</b></td></tr><tr><td>Incursion</td><td>2</td></tr><tr><td>Strike Force</td><td>3</td></tr><tr><td>Onslaught</td><td>4</td></tr></tbody></table></td></tr></tbody></table></div><br>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack, if it was set up on the battlefield this turn, re-roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re-roll a Hit roll of 1 as well.",
+            "legend": "Through the use of teleportation, Drop Pods and gunship insertion, entire strike forces of Space Marines and even their armoured support can deploy from orbit in a matter of moments, a capability that in and of itself has won entire wars."
+        }
+    ],
     "stratagems": [
         {
             "id": "000010681003",

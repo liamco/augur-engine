@@ -1,0 +1,481 @@
+{
+    "id": "000002781",
+    "name": "Indomitor Kill Team",
+    "slug": "indomitor-kill-team-2",
+    "legend": "Comprising warriors wearing the heavier Gravis variant of Mk X armour, Indomitor Kill Teams are mobile bastions capable of unleashing the firepower of a squadron of battle tanks. Before them, hordes of xenos and monstrous beasts alike are torn apart.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000035",
+        "name": "Faction Pack: Deathwatch"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Deathwatch",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Indomitor Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every Kill Team Heavy Intercessor is equipped with:</b> bolt pistol; Deathwatch heavy bolt rifle; close combat weapon.<br><br><b>Every Kill Team Heavy Intercessor with power fists is equipped with:</b> flamestorm gauntlets; twin power fists.<br><br><b>Every Kill Team Heavy Intercessor with melta rifle is equipped with:</b> bolt pistol; melta rifle; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 1,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 model can replace its Deathwatch heavy bolt rifle with 1 Deathwatch heavy bolter."
+                    },
+                    {
+                        "datasheetId": "000002781",
+                        "line": 2,
+                        "button": "•",
+                        "description": "1 model can replace its melta rifle with 1 multi-melta."
+                    },
+                    {
+                        "datasheetId": "000002781",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of models can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002781:auto-boltstorm-gauntlets",
+                "name": "Auto boltstorm gauntlets",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Auto boltstorm gauntlets",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:deathwatch-heavy-bolt-rifle",
+                "name": "Deathwatch heavy bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Deathwatch heavy bolt rifle",
+                        "attributes": [
+                            "ASSAULT",
+                            "HEAVY",
+                            "LETHAL HITS"
+                        ],
+                        "range": 30,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:deathwatch-heavy-bolter",
+                "name": "Deathwatch heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Deathwatch heavy bolter",
+                        "attributes": [
+                            "ASSAULT",
+                            "HEAVY",
+                            "LETHAL HITS",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:fragstorm-grenade-launcher",
+                "name": "Fragstorm grenade launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Fragstorm grenade launcher",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:flamestorm-gauntlets",
+                "name": "Flamestorm gauntlets",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Flamestorm gauntlets",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:melta-rifle",
+                "name": "Melta rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Melta rifle",
+                        "attributes": [
+                            "HEAVY",
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "HEAVY",
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002781:twin-power-fists",
+                "name": "Twin power fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002781",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Twin power fists",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "deathwatch",
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "label": "Deathwatch",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002781",
+            "line": 1,
+            "name": "Indomitor Kill Team",
+            "m": 5,
+            "t": 6,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 10,
+                "max": 10
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "10 MODELS MAXIMUM",
+            "min": 10,
+            "max": 10
+        },
+        {
+            "line": 2,
+            "description": "3‑10 Kill Team Heavy Intercessors",
+            "min": 3,
+            "max": 10
+        },
+        {
+            "line": 3,
+            "description": "0‑3 Kill Team Heavy Intercessors with power fists",
+            "min": 0,
+            "max": 3
+        },
+        {
+            "line": 4,
+            "description": "0‑3 Kill Team Heavy Intercessors with melta rifles",
+            "min": 0,
+            "max": 3
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 265,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Mission Tactics",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Indomitor Doctrines",
+            "legend": "",
+            "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, or makes a melee attack in a turn in which it made a Charge move, improve the Strength characteristic of that attack by 2.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character unit from your army can be attached to a Heavy Intercessor Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

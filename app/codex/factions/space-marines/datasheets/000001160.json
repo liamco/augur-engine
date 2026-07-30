@@ -1,0 +1,453 @@
+{
+    "id": "000001160",
+    "name": "Scout Squad",
+    "slug": "scout-squad",
+    "legend": "Space Marine neophytes, Scouts learn their deadly craft in daring missions independent of the main force. Led by seasoned Veteran Sergeants, they infiltrate enemy positions, clear potential drop zones, set ambushes, sabotage supply lines and complete all manner of other objectives to weaken the foe.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Scout Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Scout Sergeant's boltgun can be replaced with 1 Astartes chainsword."
+                    },
+                    {
+                        "datasheetId": "000001160",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of models can each have their boltgun replaced with one of the following: <br><ul><li>1 Astartes shotgun </li><li>1 combat knife</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000001160",
+                        "line": 3,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with 1 Scout sniper rifle."
+                    },
+                    {
+                        "datasheetId": "000001160",
+                        "line": 4,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with one of the following: <br><ul><li>1 heavy bolter </li><li>1 missile launcher</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001160:astartes-shotgun",
+                "name": "Astartes shotgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Astartes shotgun",
+                        "attributes": [
+                            "ASSAULT"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:boltgun",
+                "name": "Boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Boltgun",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "HEAVY",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:missile-launcher-frag",
+                "name": "Missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Missile launcher – frag",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:missile-launcher-krak",
+                "name": "Missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Missile launcher – krak",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:scout-sniper-rifle",
+                "name": "Scout sniper rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Scout sniper rifle",
+                        "attributes": [
+                            "HEAVY",
+                            "PRECISION"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001160:combat-knife",
+                "name": "Combat knife",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001160",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Combat knife",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001160",
+            "line": 1,
+            "name": "Scout Squad",
+            "m": 6,
+            "t": 4,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "28.5mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Scout Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Scouts",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 5
+        },
+        {
+            "cost": 140,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Guerrilla Tactics",
+            "legend": "",
+            "description": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy models, you can remove this unit from the battlefield and place it into Strategic Reserves.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

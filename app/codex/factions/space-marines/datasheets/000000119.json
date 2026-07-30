@@ -1,0 +1,297 @@
+{
+    "id": "000000119",
+    "name": "Librarian In Phobos Armour",
+    "slug": "librarian-in-phobos-armour",
+    "legend": "Many Librarians learn the arcane arts of obscuration and illusion as part of their long and dangerous training. Donning Phobos armour, they take to the field and use these skills to fog the minds of their enemies, prise vital battle plans from their foes’ minds and turn the enemy’s shadows against them.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000001159",
+                "slug": "incursor-squad"
+            },
+            {
+                "id": "000000128",
+                "slug": "infiltrator-squad"
+            },
+            {
+                "id": "000002806",
+                "slug": "hounds-of-morkai"
+            },
+            {
+                "id": "000002779",
+                "slug": "spectrus-kill-team-2"
+            },
+            {
+                "id": "000001668",
+                "slug": "eliminator-squad"
+            },
+            {
+                "id": "000002718",
+                "slug": "reiver-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Librarian",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bolt pistol; Smite; force weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000119:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000119",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000119:smite-witchfire",
+                "name": "Smite – witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000119",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Smite – witchfire",
+                        "attributes": [
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000119:smite-focused-witchfire",
+                "name": "Smite – focused witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000119",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Smite – focused witchfire",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "HAZARDOUS",
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000119:force-weapon",
+                "name": "Force weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000119",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Force weapon",
+                        "attributes": [
+                            "PSYCHIC"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000119",
+            "line": 1,
+            "name": "Librarian In Phobos Armour",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Librarian in Phobos Armour",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Psychic Hood",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Shrouding (Psychic)",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Stealth ability and that unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,163 @@
+{
+    "id": "000002693",
+    "name": "Von Ryan’s Leapers",
+    "slug": "von-ryan-s-leapers-2",
+    "legend": "Stealthy hunters and expert ambushers, Von Ryan’s Leapers are swift, agile and especially lethal when fighting in dense terrain. Akin to living mines, they lie still at the optimum locations to cause as much damage as possible. When they sense the perfect time to strike, they butcher all around in a murderous frenzy.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Von Ryan’s Leapers",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Leaper’s talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002693:leaper-s-talons",
+                "name": "Leaper’s talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002693",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Leaper’s talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002693",
+            "line": 1,
+            "name": "Von Ryan’s Leapers",
+            "m": 10,
+            "t": 5,
+            "sv": 4,
+            "invSv": 6,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Von Ryan’s Leapers",
+            "min": 3,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 3
+        },
+        {
+            "cost": 140,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Fights First",
+            "type": "Core"
+        },
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Pouncing Leap",
+            "legend": "",
+            "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,369 @@
+{
+    "id": "000000358",
+    "name": "Corvus Blackstar",
+    "slug": "corvus-blackstar-2",
+    "legend": "Corvus Blackstars are sleek and shrouded aircraft used to insert kill teams into heavily infested landing zones or even xenos strongholds. With a barrage of missiles, Blackstars secure aerial supremacy and sweep the target site clear before firing their hover jets and delivering their deadly payload of elite warriors.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000035",
+        "name": "Faction Pack: Deathwatch"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Deathwatch",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Corvus Blackstar",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry or Kill Team models. Each Jump Pack, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 Blackstar rocket launchers; twin assault cannon; armoured hull.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s twin assault cannon can be replaced with 1 twin lascannon."
+                    },
+                    {
+                        "datasheetId": "000000358",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s 2 Blackstar rocket launchers can be replaced with 2 stormstrike missile launchers."
+                    },
+                    {
+                        "datasheetId": "000000358",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 hurricane bolter."
+                    },
+                    {
+                        "datasheetId": "000000358",
+                        "line": 4,
+                        "button": "•",
+                        "description": "This model can be equipped with one of the following:<ul><li>1 auspex array</li><li>1 infernum halo-launcher</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000358:blackstar-rocket-launcher",
+                "name": "Blackstar rocket launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Blackstar rocket launcher",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 30,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000358:hurricane-bolter",
+                "name": "Hurricane bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hurricane bolter",
+                        "attributes": [
+                            "RAPID FIRE 6",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000358:stormstrike-missile-launcher",
+                "name": "Stormstrike missile launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Stormstrike missile launcher",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 10,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000358:twin-assault-cannon",
+                "name": "Twin assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000358:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000358:armoured-hull",
+                "name": "Armoured hull",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000358",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Armoured hull",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "deathwatch",
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "label": "Deathwatch",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000358",
+            "line": 1,
+            "name": "Corvus Blackstar",
+            "m": 20,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Corvus Blackstar",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 180,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Mission Tactics",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Blackstar Cluster Launcher",
+            "legend": "",
+            "description": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Auspex Array",
+            "legend": "",
+            "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Infernum Halo-launcher",
+            "legend": "",
+            "description": "The bearer has the <span class=\"kwb\">SMOKE</span> keyword.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

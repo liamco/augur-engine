@@ -1,0 +1,460 @@
+{
+    "id": "000000131",
+    "name": "Leviathan Dreadnought",
+    "slug": "leviathan-dreadnought-3",
+    "legend": "The Leviathan Dreadnought was the product of a secret development programme on Terra itself, which combined ancient technologies to create a savagely powerful siege and hunter-killer machine. Leviathans proved as costly as they were deadly, however, and of the limited quantities manufactured, only a handful now remain.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Leviathan Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 heavy flamers; 2 grav-flux bombards; armoured feet.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Each of this model’s grav-flux bombards can be replaced with one of the following<ul><li>1 cyclonic melta lance</li><li>1 storm cannon</li><li>1 meltagun and 1 Leviathan siege claw</li><li>1 meltagun and 1 Leviathan siege drill</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000131",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s 2 heavy flamers can be replaced with 2 twin volkite calivers."
+                    },
+                    {
+                        "datasheetId": "000000131",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with 3 hunter-killer missiles."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000131:cyclonic-melta-lance",
+                "name": "Cyclonic melta lance",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Cyclonic melta lance",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:grav-flux-bombard",
+                "name": "Grav-flux bombard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Grav-flux bombard",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+",
+                            "BLAST"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "2D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:hunter-killer-missile",
+                "name": "Hunter-killer missile",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Hunter-killer missile",
+                        "attributes": [
+                            "ONE SHOT"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 14,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:meltagun",
+                "name": "Meltagun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Meltagun",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:storm-cannon",
+                "name": "Storm cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Storm cannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:twin-volkite-caliver",
+                "name": "Twin volkite caliver",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin volkite caliver",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:armoured-feet",
+                "name": "Armoured feet",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Armoured feet",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:leviathan-siege-claw",
+                "name": "Leviathan siege claw",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Leviathan siege claw",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000131:leviathan-siege-drill",
+                "name": "Leviathan siege drill",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000131",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Leviathan siege drill",
+                        "attributes": [
+                            "ANTI-VEHICLE 3+"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000131",
+            "line": 1,
+            "name": "Leviathan Dreadnought",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 6,
+            "oc": 4,
+            "baseSize": "80mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Leviathan Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 160,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Duty Eternal",
+            "legend": "",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "One Shot",
+            "legend": "",
+            "description": "The bearer can only shoot with this weapon once per battle.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

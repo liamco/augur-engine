@@ -73,7 +73,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Heavy death ray",
-                        "attributes": [],
+                        "attributes": [
+                            "SUSTAINED HITS D3"
+                        ],
                         "range": 36,
                         "type": "Ranged",
                         "a": 3,
@@ -100,7 +102,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Twin tesla destructor",
-                        "attributes": [],
+                        "attributes": [
+                            "SUSTAINED HITS 2",
+                            "TWIN-LINKED"
+                        ],
                         "range": 36,
                         "type": "Ranged",
                         "a": 6,
@@ -173,6 +178,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Doom Scythe",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

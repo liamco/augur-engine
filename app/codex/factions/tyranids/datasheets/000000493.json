@@ -1,0 +1,190 @@
+{
+    "id": "000000493",
+    "name": "Trygon",
+    "slug": "trygon-2",
+    "legend": "Trygons are battle-tank-sized tunnelling machines. As they dig through the substrata of the prey world, they excavate huge tunnels for other Tyranid beasts to exploit. At the same time, the rasping of their chitinous plates builds up a powerful bio-electric charge that the Trygons can unleash as a weapon.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Burrower",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Trygon",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> bio-electric pulse; Trygon scything talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000493:bio-electric-pulse",
+                "name": "Bio-electric pulse",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000493",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bio-electric pulse",
+                        "attributes": [
+                            "SUSTAINED HITS 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000493:trygon-scything-talons",
+                "name": "Trygon scything talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000493",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Trygon scything talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000493",
+            "line": 1,
+            "name": "Trygon",
+            "m": 10,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 8,
+            "oc": 4,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Trygon",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 140,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Subterranean Tunnels",
+            "legend": "",
+            "description": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -83,7 +83,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Accelerator autocannon",
-                        "attributes": [],
+                        "attributes": [
+                            "HEAVY"
+                        ],
                         "range": 48,
                         "type": "Ranged",
                         "a": 3,
@@ -110,7 +112,9 @@
                         "line": 2,
                         "dice": "",
                         "name": "Bolt pistol",
-                        "attributes": [],
+                        "attributes": [
+                            "PISTOL"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": 1,
@@ -159,8 +163,8 @@
     },
     "supplement": {
         "key": "codex",
-        "slug": "",
-        "name": "",
+        "slug": "codex",
+        "name": "Codex",
         "label": "None",
         "isSupplement": false
     },
@@ -183,6 +187,20 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Suppressor Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "2 Suppressors",
+            "min": 2,
+            "max": 2
         }
     ],
     "pointsCosts": [

@@ -1,0 +1,203 @@
+{
+    "id": "000000462",
+    "name": "Old One Eye",
+    "slug": "old-one-eye",
+    "legend": "Known as the Beast of Calth, this unstoppable brute was first seen during the First Tyrannic War. Though many have thought it slain over the centuries, always the scarred monster rises again. Whether it is a Tyranid subgenus or the same unstoppable monster come again is a mystery few in its path live long enough to ponder.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000490",
+                "slug": "carnifexes"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Old One Eye",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Old One Eye’s claws and talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000462:old-one-eye-s-claws-and-talons-strike",
+                "name": "Old One Eye’s claws and talons – strike",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000462",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Old One Eye’s claws and talons – strike",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000462:old-one-eye-s-claws-and-talons-sweep",
+                "name": "Old One Eye’s claws and talons – sweep",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000462",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Old One Eye’s claws and talons – sweep",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000462",
+            "line": 1,
+            "name": "Old One Eye",
+            "m": 8,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 9,
+            "ld": 8,
+            "oc": 3,
+            "baseSize": "105 x 70mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Old One Eye – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 150,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Alpha Leader",
+            "legend": "",
+            "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Unstoppable Monster",
+            "legend": "",
+            "description": "At the start of each player’s Command phase, this model regains up to D3 lost wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

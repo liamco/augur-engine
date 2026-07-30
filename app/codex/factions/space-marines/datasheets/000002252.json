@@ -1,0 +1,414 @@
+{
+    "id": "000002252",
+    "name": "Spartan",
+    "slug": "spartan-3",
+    "legend": "An armoured transport of truly massive proportions, the Spartan is a heavy assault tank created to carry large numbers of troops into the very heart of enemy territory, shrugging off weapons fire that would annihilate lesser vehicles while its quad lascannons claim victims of their own.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Spartan",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 28 <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">INFANTRY</span> models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-6",
+        "threshold": 6,
+        "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 quad lascannons; twin heavy bolter; armoured tracks.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 quad lascannons can be replaced with 2 laser destroyers."
+                    },
+                    {
+                        "datasheetId": "000002252",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer"
+                    },
+                    {
+                        "datasheetId": "000002252",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002252:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "TORRENT",
+                            "IGNORES COVER"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:laser-destroyer",
+                "name": "Laser destroyer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Laser destroyer",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -4,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:quad-lascannon",
+                "name": "Quad lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Quad lascannon",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:twin-heavy-flamer",
+                "name": "Twin heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Twin heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002252:armoured-tracks",
+                "name": "Armoured tracks",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002252",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Armoured tracks",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002252",
+            "line": 1,
+            "name": "Spartan",
+            "m": 10,
+            "t": 12,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 18,
+            "ld": 6,
+            "oc": 6,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Spartan",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 300,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Assault Ramp",
+            "legend": "",
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

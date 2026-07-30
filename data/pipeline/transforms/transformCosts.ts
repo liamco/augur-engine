@@ -1,4 +1,5 @@
 import type { RawModelCost } from "../types";
+import { parseIntOrNull } from "../utils/parseStats";
 
 export interface ParsedCost {
     cost: number;
@@ -12,7 +13,7 @@ function parseCount(description: string): number {
 
 export function transformCosts(raw: RawModelCost[]): ParsedCost[] {
     return raw.map(({ cost, description }) => ({
-        cost: parseInt(cost, 10),
+        cost: parseIntOrNull(cost) ?? 0,
         count: parseCount(description),
     }));
 }

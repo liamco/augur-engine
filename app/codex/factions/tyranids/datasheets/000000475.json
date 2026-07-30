@@ -1,0 +1,239 @@
+{
+    "id": "000000475",
+    "name": "Zoanthropes",
+    "slug": "zoanthropes",
+    "legend": "A Zoanthrope’s physical form is given over to harnessing the might of the Hive Mind. Not only do they act as synapse nodes, but they can also draw upon the energies of the Hive Mind to unleash searing psychic blasts, and to generate fields of defensive power that can stop an artillery shell dead.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Zoanthropes",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Warp Blast; chitinous claws and teeth.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000475:warp-blast-witchfire",
+                "name": "Warp Blast – witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000475",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Warp Blast – witchfire",
+                        "attributes": [
+                            "BLAST",
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000475:warp-blast-focused-witchfire",
+                "name": "Warp Blast – focused witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000475",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Warp Blast – focused witchfire",
+                        "attributes": [
+                            "LETHAL HITS",
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000475:chitinous-claws-and-teeth",
+                "name": "Chitinous claws and teeth",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000475",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Chitinous claws and teeth",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 5,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000475",
+            "line": 1,
+            "name": "Zoanthropes",
+            "m": 5,
+            "t": 5,
+            "sv": 5,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Neurothrope",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "2-5 Zoanthropes",
+            "min": 2,
+            "max": 5
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 100,
+            "count": 3
+        },
+        {
+            "cost": 200,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Shadow in the Warp",
+            "type": "Faction"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Spirit Leech (Aura, Psychic)",
+            "legend": "",
+            "description": "While an enemy unit is within 6\" of this unit, if this unit contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Warp Field (Aura, Psychic)",
+            "legend": "",
+            "description": "While a friendly Tyranids unit is within 6\" of this unit, models in that unit have a 6+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

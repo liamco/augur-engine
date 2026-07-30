@@ -107,6 +107,29 @@ describe("transformWargear", () => {
         expect(result.abilities).toEqual([]);
     });
 
+    it("parses the comma-separated attributes the source actually ships", () => {
+        const weaponsWithAttrs: RawWeapon[] = [
+            {
+                ...rawWeapons[0],
+                profiles: [
+                    {
+                        ...rawWeapons[0].profiles[0],
+                        description:
+                            "anti-infantry 4+, devastating wounds, rapid fire 1",
+                    },
+                ],
+            },
+        ];
+
+        const result = transformWargear(weaponsWithAttrs, "", []);
+
+        expect(result.weapons[0].profiles[0].attributes).toEqual([
+            "ANTI-INFANTRY 4+",
+            "DEVASTATING WOUNDS",
+            "RAPID FIRE 1",
+        ]);
+    });
+
     it("parses weapon attributes from description", () => {
         const weaponsWithAttrs: RawWeapon[] = [
             {

@@ -1,0 +1,499 @@
+{
+    "id": "000002704",
+    "name": "Fellblade",
+    "slug": "fellblade-3",
+    "legend": "Now a rare jewel in loyalist or traitor arsenals, the Fellblade is a legendary war machine equipped with a panoply of weapons all but unknown in the 41st Millennium. Foremost of these is the accelerator cannon, which uses complex vacuum technologies to fire high-velocity shells that few targets can withstand.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Titanic",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fellblade",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-8",
+        "threshold": 8,
+        "description": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> demolisher cannon; Fellblade accelerator cannon; 2 quad lascannons; twin heavy bolter; armoured tracks.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 quad lascannons can be replaced with 2 laser destroyers."
+                    },
+                    {
+                        "datasheetId": "000002704",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer"
+                    },
+                    {
+                        "datasheetId": "000002704",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002704:demolisher-cannon",
+                "name": "Demolisher cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Demolisher cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6+3",
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:fellblade-accelerator-cannon-ap-shells",
+                "name": "Fellblade accelerator cannon – AP shells",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Fellblade accelerator cannon – AP shells",
+                        "attributes": [],
+                        "range": 72,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -3,
+                        "d": 6
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:fellblade-accelerator-cannon-he-shells",
+                "name": "Fellblade accelerator cannon – HE shells",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Fellblade accelerator cannon – HE shells",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 72,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:heavy-bolter",
+                "name": "Heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:laser-destroyer",
+                "name": "Laser destroyer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Laser destroyer",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -4,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:quad-lascannon",
+                "name": "Quad lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Quad lascannon",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:twin-heavy-flamer",
+                "name": "Twin heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Twin heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002704:armoured-tracks",
+                "name": "Armoured tracks",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002704",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Armoured tracks",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002704",
+            "line": 1,
+            "name": "Fellblade",
+            "m": 9,
+            "t": 13,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 24,
+            "ld": 6,
+            "oc": 8,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Fellblade",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 480,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Rolling Fortress",
+            "legend": "",
+            "description": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

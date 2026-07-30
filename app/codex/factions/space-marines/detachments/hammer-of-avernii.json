@@ -1,11 +1,25 @@
 {
     "name": "Hammer of Avernii",
-    "ability": {
-        "id": "000010620",
-        "name": "Calculated Annihilation",
-        "description": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll a Wound roll of 1.",
-        "legend": "Heavily enhanced with augmetics and the weight of many years of combat experience to aid them, the veteran warriors of Clan Company Avernii ruthlessly select and destroy their targets."
-    },
+    "abilities": [
+        {
+            "id": "000010620",
+            "name": "Calculated Annihilation",
+            "description": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll a Wound roll of 1.",
+            "legend": "Heavily enhanced with augmetics and the weight of many years of combat experience to aid them, the veteran warriors of Clan Company Avernii ruthlessly select and destroy their targets."
+        },
+        {
+            "id": "000010621",
+            "name": "Recalculating",
+            "description": "Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.",
+            "legend": "Caanok Var ensures every bolt shell is directed where it serves the greatest purpose."
+        },
+        {
+            "id": "000010622",
+            "name": "Restrictions",
+            "description": "Your army can include Iron Hands units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+            "legend": "Caanok Var ensures every bolt shell is directed where it serves the greatest purpose."
+        }
+    ],
     "stratagems": [
         {
             "id": "000010624002",

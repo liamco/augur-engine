@@ -1,0 +1,186 @@
+{
+    "id": "000002753",
+    "name": "Neurolictor",
+    "slug": "neurolictor-2",
+    "legend": "Neurolictors are nightmarish living weapons of psychological warfare. The field of neural disruption that they project causes atavistic terror responses in even the most hardened prey, rendered all the more nightmarish as - thanks to the Neurolictors’ nigh-supernatural abilities to fool their victims’ senses and evade notice - these effects seem often to come from out of thin air.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Neurolictor",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> piercing claws and talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002753:piercing-claws-and-talons",
+                "name": "Piercing claws and talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002753",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Piercing claws and talons",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002753",
+            "line": 1,
+            "name": "Neurolictor",
+            "m": 8,
+            "t": 5,
+            "sv": 4,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 7,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Neurolictor",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 70,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Infiltrators",
+            "type": "Core"
+        },
+        {
+            "name": "Lone Operative",
+            "type": "Core"
+        },
+        {
+            "name": "Stealth",
+            "type": "Core"
+        },
+        {
+            "name": "Shadow in the Warp",
+            "type": "Faction"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Feeder Tendrils",
+            "legend": "",
+            "description": "Each time this model destroys an enemy <span class=\"kwb\">CHARACTER</span> model, you gain 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Neural Disruption",
+            "legend": "",
+            "description": "In your Command phase, select one enemy unit within 12\" of this model. That unit must take a Battle-shock test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Psychological Saboteur (Aura)",
+            "legend": "",
+            "description": "While an enemy unit is within 12\" of this model, if that unit is Battle-shocked:<br><ul><li>Each time a model in that unit makes an attack, subtract 1 from the Hit roll.</li><li>Each time a friendly <span class=\"kwb\">TYRANIDS</span> model makes an attack that targets that unit, add 1 to the Wound roll.</li></ul>",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

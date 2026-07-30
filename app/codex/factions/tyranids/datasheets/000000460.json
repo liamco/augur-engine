@@ -1,0 +1,293 @@
+{
+    "id": "000000460",
+    "name": "Hive Tyrant",
+    "slug": "hive-tyrant",
+    "legend": "Hive Tyrants command the swarm on the Hive Mind’s behalf. Not only are they powerful warrior organisms in their own right, but they are also possessed of a depth of sentient autonomy and strategic cunning that makes them truly deadly foes. Where the Hive Tyrants bestride the battlefield, death comes for the prey.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000471",
+                "slug": "tyrant-guard"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hive Tyrant",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> monstrous bonesword and lash whip; monstrous scything talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000460",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s monstrous bonesword and lash whip can be replaced with one of the following:<ul><li>1 heavy venom cannon</li><li>1 stranglethorn cannon</li><li>1 monstrous scything talons</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000460",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s monstrous scything talons can be replaced with one of the following:<ul><li>1 heavy venom cannon*</li><li>1 stranglethorn cannon*</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000460",
+                        "line": 3,
+                        "button": "*",
+                        "description": "*This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon. This model cannot be equipped with more than 1 heavy venom cannon, and it cannot be equipped with more than 1 stranglethorn cannon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000460:heavy-venom-cannon",
+                "name": "Heavy venom cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000460",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy venom cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 2,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000460:stranglethorn-cannon",
+                "name": "Stranglethorn cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000460",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Stranglethorn cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000460:monstrous-bonesword-and-lash-whip",
+                "name": "Monstrous bonesword and lash whip",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000460",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Monstrous bonesword and lash whip",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000460:monstrous-scything-talons",
+                "name": "Monstrous scything talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000460",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Monstrous scything talons",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000460",
+            "line": 1,
+            "name": "Hive Tyrant",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 7,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Hive Tyrant",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 195,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Shadow in the Warp",
+            "type": "Faction"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Will of the Hive Mind",
+            "legend": "",
+            "description": "Once per battle round, one model from your army with this ability can use it when a friendly <span class=\"kwb\">TYRANIDS</span> unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Onslaught (Aura, Psychic)",
+            "legend": "",
+            "description": "While a friendly <span class=\"kwb\">TYRANIDS</span> unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

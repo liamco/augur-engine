@@ -1,11 +1,25 @@
 {
     "name": "Saga of the Great Wolf",
-    "ability": {
-        "id": "000010657",
-        "name": "Master of Wolves",
-        "description": "At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Hunting Pack once per battle.<br><ul><li><b>Encircling Jaws:</b> This unit can re-roll Advance rolls and Charge rolls.</li><li><b>Hunter’s Eye:</b> Each time a model in this unit makes a ranged attack, add 1 to the Hit roll.</li><li><b>Ferocious Strike:</b> Each time this unit is selected to fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.</li></ul>",
-        "legend": "With Logan Grimnar commanding them, the hunting packs of the Space Wolves fight at peak efficiency."
-    },
+    "abilities": [
+        {
+            "id": "000010657",
+            "name": "Master of Wolves",
+            "description": "At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Hunting Pack once per battle.<br><ul><li><b>Encircling Jaws:</b> This unit can re-roll Advance rolls and Charge rolls.</li><li><b>Hunter’s Eye:</b> Each time a model in this unit makes a ranged attack, add 1 to the Hit roll.</li><li><b>Ferocious Strike:</b> Each time this unit is selected to fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.</li></ul>",
+            "legend": "With Logan Grimnar commanding them, the hunting packs of the Space Wolves fight at peak efficiency."
+        },
+        {
+            "id": "000010658",
+            "name": "Howling Onslaught",
+            "description": "Once per battle, when selecting a Hunting Pack for the Master of Wolves Detachment rule, if a Logan Grimnar model from your army is on the battlefield, you can select a Hunting Pack you have already selected this battle.",
+            "legend": "When the Great Wolf gives the command, his packs descend upon the foe in a coordinated and utterly devastating strike."
+        },
+        {
+            "id": "000010659",
+            "name": "Restrictions",
+            "description": "Your army can include Space Wolves units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+            "legend": ""
+        }
+    ],
     "stratagems": [
         {
             "id": "000010661006",

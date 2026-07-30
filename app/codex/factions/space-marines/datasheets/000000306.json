@@ -1,0 +1,252 @@
+{
+    "id": "000000306",
+    "name": "Iron Priest",
+    "slug": "iron-priest",
+    "legend": "Space Wolves Techmarines – the Iron Priests – are holders of arcane technological lore that they use to repair the Chapter’s damaged war engines and soothe their affronted machine spirits. Warriors of Fenris first and foremost, Iron Priests will not hesitate to bring their own esoteric weapons to bear on the foe if needed.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000036",
+        "name": "Faction Pack: Space Wolves"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004131",
+                "slug": "wolf-guard-headtakers"
+            },
+            {
+                "id": "000000305",
+                "slug": "grey-hunters"
+            },
+            {
+                "id": "000000303",
+                "slug": "blood-claws"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Iron Priest",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Techmarine",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> helfrost pistol; tempest hammer and servo-arm.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000306:helfrost-pistol-dispersed",
+                "name": "Helfrost pistol – dispersed",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000306",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Helfrost pistol – dispersed",
+                        "attributes": [
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000306:helfrost-pistol-focused",
+                "name": "Helfrost pistol – focused",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000306",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Helfrost pistol – focused",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000306:tempest-hammer-and-servo-arm",
+                "name": "Tempest hammer and servo-arm",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000306",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Tempest hammer and servo-arm",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves",
+        "label": "Space Wolves",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000306",
+            "line": 1,
+            "name": "Iron Priest",
+            "m": 7,
+            "t": 4,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Iron Priest",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 55,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Iron Priest",
+            "legend": "",
+            "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, this model has the Lone Operative ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Gift of the Iron Wolf",
+            "legend": "",
+            "description": "In your Command phase, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, select one ranged weapon equipped by that model to have the [RAPID FIRE 1] ability. Each model can only be selected for this ability or the Blessing of the Omnissiah ability once per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Judgement of the Omnissiah",
+            "legend": "",
+            "description": "Each time this model makes an attack that targets an enemy unit within Engagement Range of one or more friendly Adeptus Astartes Vehicle units, you can re-roll the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

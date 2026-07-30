@@ -1,0 +1,187 @@
+{
+    "id": "000000503",
+    "name": "Barbed Hierodule",
+    "slug": "barbed-hierodule",
+    "legend": "First recorded during the invasion of Hamman’s World, these looming monstrosities are protected by thick armour plates that allow them to shrug off all but the most devastating of attacks, while their bio-cannons are able to hold off the foe as they charge forward to finish the prey at close quarters.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000379",
+        "name": "Faction Pack: Tyranids (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Barbed Hierodule",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-6",
+        "threshold": 6,
+        "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 bio-cannons; Hierodule scything talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000503",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000503:bio-cannon",
+                "name": "Bio-cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000503",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bio-cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6+3",
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000503:hierodule-scything-talons",
+                "name": "Hierodule scything talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000503",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hierodule scything talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -2,
+                        "d": "D3+3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000503",
+            "line": 1,
+            "name": "Barbed Hierodule",
+            "m": 8,
+            "t": 12,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 18,
+            "ld": 8,
+            "oc": 5,
+            "baseSize": "127mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Barbed Hierodule",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 340,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Overgrown Barbs",
+            "legend": "",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit (excluding <span class=\"kwb\">TITANIC</span> units) that was hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

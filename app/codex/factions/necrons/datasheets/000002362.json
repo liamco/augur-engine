@@ -80,7 +80,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Gauss exterminator",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
                         "range": 48,
                         "type": "Ranged",
                         "a": 1,
@@ -107,7 +109,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Twin tesla destructor",
-                        "attributes": [],
+                        "attributes": [
+                            "SUSTAINED HITS 2",
+                            "TWIN-LINKED"
+                        ],
                         "range": 36,
                         "type": "Ranged",
                         "a": 6,
@@ -153,6 +158,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Tomb Citadel",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

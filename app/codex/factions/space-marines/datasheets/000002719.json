@@ -1,0 +1,709 @@
+{
+    "id": "000002719",
+    "name": "Relic Contemptor Dreadnought",
+    "slug": "relic-contemptor-dreadnought-3",
+    "legend": "As relics of a lost age of martial design, Contemptor Dreadnoughts are exemplars of combat versatility. The best demonstration of this is the wide array of weapon arms compatible with the Contemptor chassis, ranging from conventional heavy weapons and power fists to some of the most esoteric firearms still in use on the battlefields of the 41st Millennium.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Relic Contemptor Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 heavy plasma cannons; armoured feet.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Each of this model’s heavy plasma cannons can be replaced with one of the following:<ul><li>1 conversion beam cannon</li><li>1 kheres-pattern assault cannon</li><li>1 multi-melta</li><li>1 twin autocannon</li><li>1 twin heavy bolter</li><li>1 twin lascannon</li><li>1 twin volkite culverin</li><li>1 Dreadnought chainfist and 1 combi-bolter</li><li>1 Dreadnought combat weapon and 1 combi-bolter</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000002719",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Each of this model’s combi-bolters can be replaced with one of the following:<ul><li>1 graviton blaster</li><li>1 heavy flamer</li><li>1 plasma blaster</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000002719",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 cyclone missile launcher."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002719:combi-bolter",
+                "name": "Combi-bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Combi-bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:conversion-beam-cannon",
+                "name": "Conversion beam cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Conversion beam cannon",
+                        "attributes": [
+                            "CONVERSION",
+                            "SUSTAINED HITS D3"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:cyclone-missile-launcher-frag",
+                "name": "Cyclone missile launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Cyclone missile launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:cyclone-missile-launcher-krak",
+                "name": "Cyclone missile launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Cyclone missile launcher – krak",
+                        "attributes": [],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:graviton-blaster",
+                "name": "Graviton blaster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Graviton blaster",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:twin-autocannon",
+                "name": "Twin autocannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Twin autocannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "TWIN-LINKED",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:heavy-plasma-cannon-standard",
+                "name": "Heavy plasma cannon – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Heavy plasma cannon – standard",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:heavy-plasma-cannon-supercharge",
+                "name": "Heavy plasma cannon – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Heavy plasma cannon – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:kheres-pattern-assault-cannon",
+                "name": "Kheres-pattern assault cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Kheres-pattern assault cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:multi-melta",
+                "name": "Multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 13,
+                        "dice": "",
+                        "name": "Multi-melta",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:plasma-blaster-standard",
+                "name": "Plasma blaster – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 14,
+                        "dice": "",
+                        "name": "Plasma blaster – standard",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:plasma-blaster-supercharge",
+                "name": "Plasma blaster – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 15,
+                        "dice": "",
+                        "name": "Plasma blaster – supercharge",
+                        "attributes": [
+                            "HAZARDOUS"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:twin-volkite-culverin",
+                "name": "Twin volkite culverin",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 16,
+                        "dice": "",
+                        "name": "Twin volkite culverin",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:armoured-feet",
+                "name": "Armoured feet",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 17,
+                        "dice": "",
+                        "name": "Armoured feet",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:dreadnought-chainfist",
+                "name": "Dreadnought chainfist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 18,
+                        "dice": "",
+                        "name": "Dreadnought chainfist",
+                        "attributes": [
+                            "ANTI-VEHICLE 3+"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002719:dreadnought-combat-weapon",
+                "name": "Dreadnought combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002719",
+                        "line": 19,
+                        "dice": "",
+                        "name": "Dreadnought combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002719",
+            "line": 1,
+            "name": "Relic Contemptor Dreadnought",
+            "m": 6,
+            "t": 9,
+            "sv": 2,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Relic Contemptor Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 140,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Even In Death I Serve",
+            "legend": "",
+            "description": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Conversion",
+            "legend": "",
+            "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

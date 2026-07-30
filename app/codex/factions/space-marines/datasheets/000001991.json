@@ -1,0 +1,292 @@
+{
+    "id": "000001991",
+    "name": "Terrax-pattern Termite",
+    "slug": "terrax-pattern-termite-4",
+    "legend": "Originally designed on Terra for the task of rooting out burrowing xenos species during the Great Crusade, canny commanders quickly found use for the Termite Assault Drill in tearing through the foundations of enemy bastions or emerging behind barricades or trench lines to lay waste to their defenders.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Dedicated Transports",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Terrax-pattern Termite",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dedicated Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding <span class=\"kwb\">TACTICUS</span> <span class=\"kwb\">CHARACTER</span> models that began the battle attached to a non-<span class=\"kwb\">TACTICUS</span> unit).",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Terrax melta cutter; 2 combi-bolters; Termite drill.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001991",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 combi-bolters can be replaced with one of the following<ul><li>2 heavy flamers</li><li>2 twin volkite chargers</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001991:combi-bolter",
+                "name": "Combi-bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001991",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Combi-bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001991:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001991",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "TORRENT",
+                            "IGNORES COVER"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001991:terrax-melta-cutter",
+                "name": "Terrax melta cutter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001991",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Terrax melta cutter",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001991:twin-volkite-charger",
+                "name": "Twin volkite charger",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001991",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin volkite charger",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001991:termite-drill",
+                "name": "Termite drill",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001991",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Termite drill",
+                        "attributes": [
+                            "ANTI-VEHICLE 3+"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 14,
+                        "ap": -2,
+                        "d": "D3+3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001991",
+            "line": 1,
+            "name": "Terrax-pattern Termite",
+            "m": 8,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Terrax-pattern Termite",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 200,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Termite Assault",
+            "legend": "",
+            "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,228 @@
+{
+    "id": "000002473",
+    "name": "Tor Garadon",
+    "slug": "tor-garadon",
+    "legend": "Shot after shot bounces from the indomitable plate of Tor Garadon’s Gravis armour as he advances across the battlefield. Sharp-minded and possessing a knack for improvised warfare, Garadon directs the lethal fire of his warriors through a combination of natural skill and the advanced targeting data fed to him by his signum array.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000103",
+                "slug": "eradicator-squad"
+            },
+            {
+                "id": "000002781",
+                "slug": "indomitor-kill-team-2"
+            },
+            {
+                "id": "000002099",
+                "slug": "aggressor-squad"
+            },
+            {
+                "id": "000001177",
+                "slug": "heavy-intercessor-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperial Fists",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tor Garadon",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Captain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> artificer grav-gun; Hand of Defiance.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002473:artificer-grav-gun",
+                "name": "Artificer grav-gun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002473",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Artificer grav-gun",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002473:hand-of-defiance",
+                "name": "Hand of Defiance",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002473",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hand of Defiance",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002473",
+            "line": 1,
+            "name": "Tor Garadon",
+            "m": 5,
+            "t": 6,
+            "sv": 3,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Tor Garadon – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Signum Array",
+            "legend": "",
+            "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Siege Captain",
+            "legend": "",
+            "description": "Each time this model makes an attack that targets a <span class=\"kwb\">MONSTER</span>, <span class=\"kwb\">VEHICLE</span>, or <span class=\"kwb\">FORTIFICATION</span> unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

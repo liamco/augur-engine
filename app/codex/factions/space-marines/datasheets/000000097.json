@@ -1,0 +1,269 @@
+{
+    "id": "000000097",
+    "name": "Hammerfall Bunker",
+    "slug": "hammerfall-bunker",
+    "legend": "Hammerfall Bunkers are launched from Space Marine warships in the same manner as Drop Pods. Automated area-denial assets crewed by hard-wired servitors, they have all kinds of battlefield roles, including securing beachheads, hampering enemy assaults and wreaking havoc behind the foe’s lines.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Fortifications",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Hammerfall Bunker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fortification",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Hammerfall heavy bolter array; Hammerfall missile launcher.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000097",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s Hammerfall heavy bolter array can be replaced with 1 Hammerfall heavy flamer array."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000097:hammerfall-heavy-bolter-array",
+                "name": "Hammerfall heavy bolter array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000097",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hammerfall heavy bolter array",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000097:hammerfall-heavy-flamer-array",
+                "name": "Hammerfall heavy flamer array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000097",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Hammerfall heavy flamer array",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000097:hammerfall-missile-launcher-superfrag",
+                "name": "Hammerfall missile launcher – superfrag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000097",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Hammerfall missile launcher – superfrag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "2D6+2",
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000097:hammerfall-missile-launcher-superkrak",
+                "name": "Hammerfall missile launcher – superkrak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000097",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Hammerfall missile launcher – superkrak",
+                        "attributes": [],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 10,
+                        "ap": -2,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000097",
+            "line": 1,
+            "name": "Hammerfall Bunker",
+            "m": 0,
+            "t": 12,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 6,
+            "oc": 0,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Hammerfall Bunker",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 175,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Fortification",
+            "legend": "",
+            "description": "While an enemy unit is only within Engagement Range of one or more <span class=\"kwb\">FORTIFICATIONS</span> from your army: <br><ul><li>That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. </li><li>Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.</li></ul>",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Ceramite Cover",
+            "legend": "",
+            "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this <span class=\"kwb\">FORTIFICATION</span>, that model has the Benefit of Cover against that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Defensive Array",
+            "legend": "",
+            "description": "You can target this <span class=\"kwb\">FORTIFICATION</span> with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This <span class=\"kwb\">FORTIFICATION</span> can only be targeted with that Stratagem once per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

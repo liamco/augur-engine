@@ -1,0 +1,317 @@
+{
+    "id": "000001193",
+    "name": "Centurion Devastator Squad",
+    "slug": "centurion-devastator-squad",
+    "legend": "Centurion Devastator Squads dominate the field of battle, their presence dictating the flow of action. They frequently operate with Stormraven Gunships, which transport the Space Marines inside their bulky warsuits to the next position, where they function as an armoured firebase to clear enemy-held positions of all opposition.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Centurion",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Centurion Devastator Squad",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> grav-cannon; Centurion bolters; Centurion fists.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their Centurion bolters replaced with 1 Centurion missile launcher."
+                    },
+                    {
+                        "datasheetId": "000001193",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of models can each have their grav-cannon replaced with one of the following:<ul><li>1 twin heavy bolter</li><li>1 twin lascannon</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001193:centurion-bolters",
+                "name": "Centurion bolters",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Centurion bolters",
+                        "attributes": [
+                            "RAPID FIRE 3",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001193:centurion-missile-launcher",
+                "name": "Centurion missile launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Centurion missile launcher",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001193:grav-cannon",
+                "name": "Grav-cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Grav-cannon",
+                        "attributes": [
+                            "ANTI-VEHICLE 2+"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001193:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001193:twin-lascannon",
+                "name": "Twin lascannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin lascannon",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001193:centurion-fists",
+                "name": "Centurion fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001193",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Centurion fists",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001193",
+            "line": 1,
+            "name": "Centurion Devastator Squad",
+            "m": 4,
+            "t": 7,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 4,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "50mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Devastator Centurion Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "2-5 Devastator Centurions",
+            "min": 2,
+            "max": 5
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 175,
+            "count": 3
+        },
+        {
+            "cost": 350,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Decimator Protocols",
+            "legend": "",
+            "description": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Hit roll instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

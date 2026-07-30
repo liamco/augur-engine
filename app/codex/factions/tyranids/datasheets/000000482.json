@@ -1,0 +1,165 @@
+{
+    "id": "000000482",
+    "name": "Raveners",
+    "slug": "raveners-2",
+    "legend": "Serpentine bioforms capable of a terrifying turn of speed, Raveners are made doubly dangerous by their ability to tunnel swiftly through even solid bedrock. Often assaulting their prey from below, Raveners are especially vicious and predatory warrior organisms used as shock troops by the hive mind.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Burrowers",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Raveners",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Ravener claws and talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000482",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000482:ravener-claws-and-talons",
+                "name": "Ravener claws and talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000482",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Ravener claws and talons",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000482",
+            "line": 1,
+            "name": "Raveners",
+            "m": 10,
+            "t": 5,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 5
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "5 Raveners",
+            "min": 5,
+            "max": 5
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 125,
+            "count": 5
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Death From Below",
+            "legend": "",
+            "description": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

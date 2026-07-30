@@ -1,0 +1,427 @@
+{
+    "id": "000002717",
+    "name": "Redemptor Dreadnought",
+    "slug": "redemptor-dreadnought",
+    "legend": "Redemptor Dreadnoughts are some of the largest of their kind ever fielded by the Adeptus Astartes. Armed to the teeth, they can be equipped to utterly destroy virtually any kind of battlefield target with hails of solid shot or super-heated plasma.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Redemptor Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Twin fragstorm grenade launcher; heavy flamer; heavy onslaught gatling cannon; Redemptor fist.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 Icarus rocket pod."
+                    },
+                    {
+                        "datasheetId": "000002717",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s heavy flamer can be replaced with 1 onslaught gatling cannon."
+                    },
+                    {
+                        "datasheetId": "000002717",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model’s heavy onslaught gatling cannon can be replaced with 1 macro plasma incinerator."
+                    },
+                    {
+                        "datasheetId": "000002717",
+                        "line": 4,
+                        "button": "•",
+                        "description": "This model’s twin fragstorm grenade launcher can be replaced with 1 twin storm bolter."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002717:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:heavy-onslaught-gatling-cannon",
+                "name": "Heavy onslaught gatling cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy onslaught gatling cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 12,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:icarus-rocket-pod",
+                "name": "Icarus rocket pod",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Icarus rocket pod",
+                        "attributes": [
+                            "ANTI-FLY 2+"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:macro-plasma-incinerator-standard",
+                "name": "Macro plasma incinerator – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Macro plasma incinerator – standard",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:macro-plasma-incinerator-supercharge",
+                "name": "Macro plasma incinerator – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Macro plasma incinerator – supercharge",
+                        "attributes": [
+                            "BLAST",
+                            "HAZARDOUS"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:onslaught-gatling-cannon",
+                "name": "Onslaught gatling cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Onslaught gatling cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:twin-fragstorm-grenade-launcher",
+                "name": "Twin fragstorm grenade launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin fragstorm grenade launcher",
+                        "attributes": [
+                            "BLAST",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:twin-storm-bolter",
+                "name": "Twin storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Twin storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002717:redemptor-fist",
+                "name": "Redemptor fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002717",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Redemptor fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002717",
+            "line": 1,
+            "name": "Redemptor Dreadnought",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 6,
+            "oc": 4,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Redemptor Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 195,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Duty Eternal",
+            "legend": "",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

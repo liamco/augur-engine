@@ -1,0 +1,248 @@
+{
+    "id": "000000124",
+    "name": "Storm Speeder Hailstrike",
+    "slug": "storm-speeder-hailstrike",
+    "legend": "The Hailstrike is so heavily armed that it can annihilate entire swathes of infantry in fusillades of blistering projectiles. Speeding over the battlefield, its specialised loadout shatters charging formations and shreds barricades and defences.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Ravenwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Storm Speeder Hailstrike",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> 2 fragstorm grenade launchers; onslaught gatling cannon; twin ironhail heavy stubber; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000124:fragstorm-grenade-launcher",
+                "name": "Fragstorm grenade launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000124",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Fragstorm grenade launcher",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000124:onslaught-gatling-cannon",
+                "name": "Onslaught gatling cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000124",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Onslaught gatling cannon",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000124:twin-ironhail-heavy-stubber",
+                "name": "Twin ironhail heavy stubber",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000124",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Twin ironhail heavy stubber",
+                        "attributes": [
+                            "RAPID FIRE 3",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000124:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000124",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000124",
+            "line": 1,
+            "name": "Storm Speeder Hailstrike",
+            "m": 14,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 11,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Storm Speeder Hailstrike",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 115,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Hailstrike",
+            "legend": "",
+            "description": "Each time this model has shot, select one enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) hit by one or more of those attacks. Until the end of the phase, each time a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -56,7 +56,7 @@ describe("restructureTopLevel", () => {
         });
     });
 
-    it("creates supplement object", () => {
+    it("creates supplement object, defaulting slug and name when the source omits them", () => {
         const result = restructureTopLevel(makeRaw());
         expect(result.supplement).toEqual({
             key: "codex",
@@ -64,6 +64,26 @@ describe("restructureTopLevel", () => {
             name: "",
             label: "None",
             isSupplement: false,
+        });
+    });
+
+    it("carries supplement slug and name through when the source has them", () => {
+        const result = restructureTopLevel(
+            makeRaw({
+                supplementKey: "space-wolves",
+                supplementSlug: "space-wolves",
+                supplementName: "Space Wolves (Legends)",
+                supplementLabel: "Space Wolves (Legends)",
+                isSupplement: true,
+            }),
+        );
+
+        expect(result.supplement).toEqual({
+            key: "space-wolves",
+            slug: "space-wolves",
+            name: "Space Wolves (Legends)",
+            label: "Space Wolves (Legends)",
+            isSupplement: true,
         });
     });
 

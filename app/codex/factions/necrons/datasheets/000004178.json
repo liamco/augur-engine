@@ -84,7 +84,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Tremorglaive – reverberating beam",
-                        "attributes": [],
+                        "attributes": [
+                            "MELTA 2"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": 2,
@@ -111,7 +113,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Tremorglaive – shock wave pulse",
-                        "attributes": [],
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6+2",
@@ -184,6 +189,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Geomancer",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

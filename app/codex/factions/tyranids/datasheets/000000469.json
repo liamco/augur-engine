@@ -1,0 +1,156 @@
+{
+    "id": "000000469",
+    "name": "Hormagaunts",
+    "slug": "hormagaunts",
+    "legend": "Swarming shock troops, Hormagaunts are seeded onto prey worlds in their billions. As simple hunter-slayer organisms, they can be left to rampage, wearing down defence lines and forcing the prey to expend lives and ammunition. Many formidable bastions have been buried in literal mountains of these chitinous horrors.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Battleline",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Hormagaunts",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Endless Multitude",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Battleline",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Hormagaunt talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000469:hormagaunt-talons",
+                "name": "Hormagaunt talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000469",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hormagaunt talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 3,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000469",
+            "line": 1,
+            "name": "Hormagaunts",
+            "m": 10,
+            "t": 3,
+            "sv": 5,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 8,
+            "oc": 2,
+            "baseSize": "28.5mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 10,
+                "max": 20
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "10-20 Hormagaunts",
+            "min": 10,
+            "max": 20
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 65,
+            "count": 10
+        },
+        {
+            "cost": 130,
+            "count": 20
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Bounding Leap",
+            "legend": "",
+            "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,197 @@
+{
+    "id": "000000489",
+    "name": "Tyrannocyte",
+    "slug": "tyrannocyte-2",
+    "legend": "Tyrannocytes are huge spores, heat-resistant to endure atmospheric re-entry and with wet, pulsing interior chambers within which broods of organisms can ride down to a world’s surface. Once its passengers spill forth into battle, the Tyrannocyte drifts skyward again and goes hunting for its own prey.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Dedicated Transports",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tyrannocyte",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dedicated Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 20 Tyranids Infantry models, or 1 Tyranids Monster model with a Wounds characteristic of 12 or less. Each <span class=\"kwb\">INFANTRY</span> model with a Wounds characteristic of more than 1 takes up the space of 3 models.",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Tyrannocyte bio-weapons; flensing whips.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000489:tyrannocyte-bio-weapons",
+                "name": "Tyrannocyte bio-weapons",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000489",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Tyrannocyte bio-weapons",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 5,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000489:flensing-whips",
+                "name": "Flensing whips",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000489",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Flensing whips",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000489",
+            "line": 1,
+            "name": "Tyrannocyte",
+            "m": 8,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 8,
+            "oc": 2,
+            "baseSize": "100mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Tyrannocyte",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 105,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Aerial Seeding",
+            "legend": "",
+            "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

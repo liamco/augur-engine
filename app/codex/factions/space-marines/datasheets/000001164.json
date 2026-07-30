@@ -1,0 +1,315 @@
+{
+    "id": "000001164",
+    "name": "Thunderfire Cannon",
+    "slug": "thunderfire-cannon",
+    "legend": "A massive, multi-barrelled artillery piece mounted on heavy, grinding tracks, the Thunderfire Cannon can tear apart the enemy’s assaults and blow huge holes in their strong-points in relentless barrages of shells. Able to traverse all kinds of difficult terrain, it excels in supporting Space Marine attacks or shoring up defences.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Artillery",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Thunderfire Cannon",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Techmarine Gunner is equipped with:</b> bolt pistol; flamer; plasma cutter; Gunner’s servo-arms; close combat weapon. <br><br><b>The Thunderfire Cannon is equipped with:</b> thunderfire cannon; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 1,
+                        "button": "•",
+                        "description": "None"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001164:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001164:flamer",
+                "name": "Flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001164:thunderfire-cannon",
+                "name": "Thunderfire cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Thunderfire cannon",
+                        "attributes": [
+                            "BLAST",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6+4",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001164:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001164:gunner-s-servo-arms",
+                "name": "Gunner’s servo-arms",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Gunner’s servo-arms",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001164:plasma-cutter",
+                "name": "Plasma cutter",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001164",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Plasma cutter",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001164",
+            "line": 1,
+            "name": "Thunderfire Cannon",
+            "m": 3,
+            "t": 6,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Techmarine Gunner",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "1 Thunderfire Cannon",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 2
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Tremor Shells",
+            "legend": "",
+            "description": "In your Shooting phase, after this unit has shot, if an enemy <span class=\"kwb\">INFANTRY</span> unit was hit by one or more attacks made by this unit’s thunderfire cannon this phase, until the end of your opponent’s next turn, that enemy unit is shaken. While a unit is shaken, subtract 2 from that unit’s Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Crewed Artillery",
+            "legend": "",
+            "description": "If one model in this unit is destroyed, the remaining model in this unit is also destroyed.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

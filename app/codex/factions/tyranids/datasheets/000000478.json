@@ -1,0 +1,214 @@
+{
+    "id": "000000478",
+    "name": "Haruspex",
+    "slug": "haruspex",
+    "legend": "The infinite hunger of the Haruspex can see it consume an entire platoon of prey organisms in moments. Nothing escapes its yawning gullet and lashing tongue for long; its victims meet a horrible end as they are swallowed down to be gradually dissolved into raw biomass within the monster’s churning innards.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Haruspex",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Harvester",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> grasping tongue; ravenous maw; shovelling claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000478:grasping-tongue",
+                "name": "Grasping tongue",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000478",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Grasping tongue",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000478:ravenous-maw",
+                "name": "Ravenous maw",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000478",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Ravenous maw",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 14,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000478:shovelling-claws",
+                "name": "Shovelling claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000478",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Shovelling claws",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 14,
+                        "ap": -2,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000478",
+            "line": 1,
+            "name": "Haruspex",
+            "m": 8,
+            "t": 11,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 14,
+            "ld": 8,
+            "oc": 4,
+            "baseSize": "120 x 92mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Haruspex",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 125,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Grisly Spectacle",
+            "legend": "",
+            "description": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

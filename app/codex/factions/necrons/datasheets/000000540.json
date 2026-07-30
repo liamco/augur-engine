@@ -75,7 +75,10 @@
                         "line": 1,
                         "dice": "",
                         "name": "Heat ray – dispersed",
-                        "attributes": [],
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
@@ -102,7 +105,9 @@
                         "line": 2,
                         "dice": "",
                         "name": "Heat ray – focused",
-                        "attributes": [],
+                        "attributes": [
+                            "MELTA 4"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": 2,
@@ -129,7 +134,10 @@
                         "line": 3,
                         "dice": "",
                         "name": "Particle shredder",
-                        "attributes": [],
+                        "attributes": [
+                            "BLAST",
+                            "DEVASTATING WOUNDS"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6+6",
@@ -156,7 +164,9 @@
                         "line": 4,
                         "dice": "",
                         "name": "Heavy gauss cannon array",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 6,
@@ -229,6 +239,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Triarch Stalker",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

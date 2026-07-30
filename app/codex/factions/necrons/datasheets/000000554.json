@@ -68,7 +68,10 @@
                         "line": 1,
                         "dice": "",
                         "name": "Doomsday cannon",
-                        "attributes": [],
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
                         "range": 72,
                         "type": "Ranged",
                         "a": "D6+1",
@@ -95,7 +98,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Gauss flayer array",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS",
+                            "RAPID FIRE 5"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 5,
@@ -168,6 +174,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Doomsday Ark",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

@@ -1,11 +1,25 @@
 {
     "name": "Spearpoint Task Force",
-    "ability": {
-        "id": "000010626",
-        "name": "Storm-swift Onslaught",
-        "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
-        "legend": "The White Scars are masters of high-speed tactics and hit-and-run warfare. They do battle on the move and from the saddle, outwitting their enemies with breakneck manoeuvres and melting away one moment only to crash home with bone-crushing force the next."
-    },
+    "abilities": [
+        {
+            "id": "000010626",
+            "name": "Storm-swift Onslaught",
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+            "legend": "The White Scars are masters of high-speed tactics and hit-and-run warfare. They do battle on the move and from the saddle, outwitting their enemies with breakneck manoeuvres and melting away one moment only to crash home with bone-crushing force the next."
+        },
+        {
+            "id": "000010627",
+            "name": "Wrath of the First Khan",
+            "description": "At the end of the Fight phase, if a Suboden Khan unit from your army destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\".",
+            "legend": "As swift and violent as a raging tempest, Suboden Khan drives into and through the heart of the enemy like a thrust lance."
+        },
+        {
+            "id": "000010628",
+            "name": "Restrictions",
+            "description": "Your army can include White Scars units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
+            "legend": ""
+        }
+    ],
     "stratagems": [
         {
             "id": "000010630004",

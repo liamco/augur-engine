@@ -70,7 +70,9 @@
                         "line": 1,
                         "dice": "",
                         "name": "Gauss cannon",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 3,
@@ -97,7 +99,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Particle beamer",
-                        "attributes": [],
+                        "attributes": [
+                            "BLAST",
+                            "DEVASTATING WOUNDS"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6",
@@ -124,7 +129,9 @@
                         "line": 3,
                         "dice": "",
                         "name": "Tesla cannon",
-                        "attributes": [],
+                        "attributes": [
+                            "SUSTAINED HITS 2"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 4,
@@ -151,7 +158,10 @@
                         "line": 4,
                         "dice": "",
                         "name": "Tesseract singularity chamber – particle hurricane",
-                        "attributes": [],
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
@@ -178,7 +188,9 @@
                         "line": 5,
                         "dice": "",
                         "name": "Tesseract singularity chamber – seismic lash",
-                        "attributes": [],
+                        "attributes": [
+                            "BLAST"
+                        ],
                         "range": 36,
                         "type": "Ranged",
                         "a": "D3",
@@ -251,6 +263,14 @@
                 "min": 1,
                 "max": 1
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Tesseract Ark",
+            "min": 1,
+            "max": 1
         }
     ],
     "pointsCosts": [

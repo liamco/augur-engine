@@ -1,0 +1,273 @@
+{
+    "id": "000000125",
+    "name": "Inceptor Squad",
+    "slug": "inceptor-squad",
+    "legend": "Equipped with heavy jump packs, Inceptor Squads are superb spearhead troops that deliver overwhelming blows to the enemy. Plummeting to the surface from the very edge of a world’s atmosphere, they strike with devastating force, unleashing a hurricane of fire that turns whole squads of enemy infantry to bloody mist.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Gravis",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Inceptor Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> assault bolters; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000125",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All models in this unit can each have their assault bolters replaced with 1 plasma exterminators."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000125:assault-bolters",
+                "name": "Assault bolters",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000125",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Assault bolters",
+                        "attributes": [
+                            "ASSAULT",
+                            "PISTOL",
+                            "SUSTAINED HITS 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000125:plasma-exterminators-standard",
+                "name": "Plasma exterminators – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000125",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Plasma exterminators – standard",
+                        "attributes": [
+                            "ASSAULT",
+                            "PISTOL",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000125:plasma-exterminators-supercharge",
+                "name": "Plasma exterminators – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000125",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Plasma exterminators – supercharge",
+                        "attributes": [
+                            "ASSAULT",
+                            "PISTOL",
+                            "HAZARDOUS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000125:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000125",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000125",
+            "line": 1,
+            "name": "Inceptor Squad",
+            "m": 10,
+            "t": 6,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Inceptor Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "2-5 Inceptors",
+            "min": 2,
+            "max": 5
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 120,
+            "count": 3
+        },
+        {
+            "cost": 240,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Meteoric Descent",
+            "legend": "",
+            "description": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can perform a meteoric descent. If it does, this unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,333 @@
+{
+    "id": "000003835",
+    "name": "Death Company Dreadnought with Magna-grapple",
+    "slug": "death-company-dreadnought-with-magna-grapple",
+    "legend": "Even being interred in a Dreadnought’s sarcophagus is insufficient to keep the Black Rage at bay. Death Company Dreadnoughts are like furious battering rams, desperate to smash into the enemy and tear them apart. They are potent terror weapons, unleashed to inflict as much damage as possible.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000376",
+        "name": "Faction Pack: Blood Angels (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Death Company Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> meltagun; storm bolter; twin Furioso fists.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000003835",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s storm bolter can be replaced with 1 heavy flamer."
+                    },
+                    {
+                        "datasheetId": "000003835",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s meltagun can be replaced with 1 heavy flamer."
+                    },
+                    {
+                        "datasheetId": "000003835",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model’s Furioso fists can be replaced with 1 blood talons."
+                    },
+                    {
+                        "datasheetId": "000003835",
+                        "line": 4,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 smoke launchers."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000003835:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003835",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003835:meltagun",
+                "name": "Meltagun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003835",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Meltagun",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003835:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000003835",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003835:blood-talons",
+                "name": "Blood talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003835",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Blood talons",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 7,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000003835:twin-furioso-fists",
+                "name": "Twin Furioso fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000003835",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin Furioso fists",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels (Legends)",
+        "label": "Blood Angels (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000003835",
+            "line": 1,
+            "name": "Death Company Dreadnought with Magna-grapple",
+            "m": 8,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Death Company Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 145,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Black Rage",
+            "legend": "",
+            "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Frenzied Reprisal",
+            "legend": "",
+            "description": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Magna-grapple",
+            "legend": "",
+            "description": "Add 2 to Charge rolls made for this model if one or more of the targets of that charge is a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Smoke Launchers",
+            "legend": "",
+            "description": "The bearer loses the Magna-grapple ability and gains the <span class=\"kwb\">SMOKE</span> keyword.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "id": "000000485",
+    "name": "Harpy",
+    "slug": "harpy",
+    "legend": "Harpies are flying bioforms whose natural agility allows them to outmanoeuvre most prey fighter craft. They are often sent in amidst the first waves of an invasion, dropping organic munitions onto panicked defenders and diving down to attack.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Aircraft",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Harpy",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> stinger salvoes; twin stranglethorn cannon; scything wings.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000485",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s twin stranglethorn cannon can be replaced with 1 twin heavy venom cannon."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000485:stinger-salvoes",
+                "name": "Stinger salvoes",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000485",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Stinger salvoes",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 8,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000485:twin-heavy-venom-cannon",
+                "name": "Twin heavy venom cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000485",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin heavy venom cannon",
+                        "attributes": [
+                            "BLAST",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000485:twin-stranglethorn-cannon",
+                "name": "Twin stranglethorn cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000485",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Twin stranglethorn cannon",
+                        "attributes": [
+                            "BLAST",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000485:scything-wings",
+                "name": "Scything wings",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000485",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Scything wings",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000485",
+            "line": 1,
+            "name": "Harpy",
+            "m": 20,
+            "t": 9,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "120 x 92mm flying base",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Harpy",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 215,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Hover",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Spore Mine Cysts",
+            "legend": "",
+            "description": "Each time this model ends a Normal move, you can select one of the following:<br><ul><li>Select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.</li><li>Add one new Spore Mines unit containing D3 models to your army and set it up anywhere on the battlefield that is wholly within 6\" of this model and more than 9\" horizontally away from all enemy units. You cannot select this option for more than one model per turn.</li></ul>",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,343 @@
+{
+    "id": "000000079",
+    "name": "Librarian In Terminator Armour",
+    "slug": "librarian-in-terminator-armour",
+    "legend": "The powers of a Chapter’s Librarians lend a lethal psychic edge to its elite infantry spearheads. Whether it be gruelling boarding actions, ferocious urban combat or on the front line against overwhelming enemy numbers, Librarians in Terminator armour blast at the foe with their powerful psychic energies.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004138",
+                "slug": "terminator-squad-2"
+            },
+            {
+                "id": "000000231",
+                "slug": "deathwing-knights"
+            },
+            {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
+                "id": "000000104",
+                "slug": "relic-terminator-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
+            },
+            {
+                "id": "000002302",
+                "slug": "deathwing-command-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Librarian",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Smite; force weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 storm bolter</li></ul>"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000079:combi-weapon",
+                "name": "Combi-weapon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Combi-weapon",
+                        "attributes": [
+                            "ANTI-INFANTRY 4+",
+                            "DEVASTATING WOUNDS",
+                            "RAPID FIRE 1"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:smite-witchfire",
+                "name": "Smite – witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Smite – witchfire",
+                        "attributes": [
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:smite-focused-witchfire",
+                "name": "Smite – focused witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Smite – focused witchfire",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "HAZARDOUS",
+                            "PSYCHIC"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000079:force-weapon",
+                "name": "Force weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000079",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Force weapon",
+                        "attributes": [
+                            "PSYCHIC"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000079",
+            "line": 1,
+            "name": "Librarian In Terminator Armour",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Librarian in Terminator Armour",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Psychic Hood",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Veil of Time (Psychic)",
+            "legend": "",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

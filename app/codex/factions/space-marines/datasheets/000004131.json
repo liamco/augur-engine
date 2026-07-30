@@ -1,0 +1,323 @@
+{
+    "id": "000004131",
+    "name": "Wolf Guard Headtakers",
+    "slug": "wolf-guard-headtakers",
+    "legend": "It is the duty of Wolf Guard Headtakers to break through the enemy line and hunt down commanders and champions. In this task, they are aided by packs of Fenrisian hunting wolves. These cunning beasts scatter enemy formations and harry the Headtakers’ prey, enabling their handlers to close in and dispense the Allfather’s justice with their master-crafted weapons.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000036",
+        "name": "Faction Pack: Space Wolves"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Space Wolves",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Hunting Wolves",
+            "model": "HUNTING WOLVES",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "HUNTING WOLVES",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Beasts",
+            "model": "HUNTING WOLVES",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Headtakers",
+            "model": "WOLF GUARD HEADTAKERS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Wolf Guard",
+            "model": "WOLF GUARD HEADTAKERS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "WOLF GUARD HEADTAKERS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "WOLF GUARD HEADTAKERS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "WOLF GUARD HEADTAKERS",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every Wolf Guard Headtaker is equipped with:</b> heavy bolt pistol; master-crafted power weapon; storm shield.<br><br><b>Every Hunting Wolf is equipped with:</b> teeth and claws.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000004131",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All of the models in this unit can each have their master-crafted power weapon and storm shield replaced with 1 paired master-crafted power weapons."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004131:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004131",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004131:master-crafted-power-weapon",
+                "name": "Master-crafted power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004131",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Master-crafted power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004131:paired-master-crafted-power-weapons",
+                "name": "Paired master-crafted power weapons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004131",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Paired master-crafted power weapons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004131:teeth-and-claws",
+                "name": "Teeth and claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004131",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Teeth and claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "space-wolves",
+        "slug": "space-wolves",
+        "name": "Space Wolves",
+        "label": "Space Wolves",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000004131",
+            "line": 1,
+            "name": "Wolf Guard Headtakers",
+            "m": 7,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        },
+        {
+            "datasheetId": "000004131",
+            "line": 2,
+            "name": "Hunting Wolves",
+            "m": 10,
+            "t": 4,
+            "sv": 6,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 1,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "60 x 35.5mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 0,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Wolf Guard Headtakers",
+            "min": 3,
+            "max": 6
+        },
+        {
+            "line": 2,
+            "description": "0-6 Hunting Wolves",
+            "min": 0,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 85,
+            "count": 3
+        },
+        {
+            "cost": 110,
+            "count": 3
+        },
+        {
+            "cost": 170,
+            "count": 6
+        },
+        {
+            "cost": 220,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Let Loose the Wolves",
+            "legend": "",
+            "description": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of its <span class=\"kwb\">HEADTAKERS</span> models and one containing all of its <span class=\"kwb\">HUNTING</span> <span class=\"kwb\">WOLVES</span> models, with new Starting Strengths accordingly.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Headhunters",
+            "legend": "",
+            "description": "At the start of the battle, select one unit from your opponent’s army to be this unit’s quarry. Weapons equipped by <span class=\"kwb\">HEADTAKERS</span> models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting its quarry. Each time this unit’s quarry is destroyed, select one new enemy unit to be this unit’s quarry. This ability can be used even if this unit is embarked within a Transport.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Hunting Hounds",
+            "legend": "",
+            "description": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models), if this unit is not Battle-shocked, <span class=\"kwb\">HUNTING</span> <span class=\"kwb\">WOLVES</span> models in it have an Objective Control characteristic of 1.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Storm Shield",
+            "legend": "",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

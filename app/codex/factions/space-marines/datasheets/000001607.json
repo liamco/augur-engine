@@ -1,0 +1,363 @@
+{
+    "id": "000001607",
+    "name": "Land Raider Achilles",
+    "slug": "land-raider-achilles-3",
+    "legend": "The Achilles is considered one of the rarest of all Land Raider variants, each one individually wrought under the scrupulous gaze of senior adepts of the Omnissiah. The result is an assault vehicle that is exceptionally resistant to energy-based weaponry. Roaring forward with impunity, the Achilles uses its thunderfire cannon and multi-meltas to suppress a wide range of foes.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Land Raider Achilles",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Transport",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "This model has a transport capacity of 12 <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">INFANTRY</span> models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
+    "damaged": {
+        "range": "1-5",
+        "threshold": 5,
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> quad launcher; 2 twin volkite culverins; armoured tracks.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s 2 twin volkite culverins can be replaced with 2 twin multi-melta"
+                    },
+                    {
+                        "datasheetId": "000001607",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 hunter-killer missile."
+                    },
+                    {
+                        "datasheetId": "000001607",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 storm bolter."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000001607:hunter-killer-missile",
+                "name": "Hunter-killer missile",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Hunter-killer missile",
+                        "attributes": [
+                            "ONE SHOT"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 14,
+                        "ap": -3,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001607:quad-launcher-shatter-shells",
+                "name": "Quad launcher – shatter shells",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Quad launcher – shatter shells",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001607:quad-launcher-thunderfire-shells",
+                "name": "Quad launcher – thunderfire shells",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Quad launcher – thunderfire shells",
+                        "attributes": [
+                            "BLAST",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 60,
+                        "type": "Ranged",
+                        "a": "D6+4",
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001607:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001607:twin-multi-melta",
+                "name": "Twin multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Twin multi-melta",
+                        "attributes": [
+                            "MELTA 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001607:twin-volkite-culverin",
+                "name": "Twin volkite culverin",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Twin volkite culverin",
+                        "attributes": [
+                            "DEVASTATING WOUNDS",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000001607:armoured-tracks",
+                "name": "Armoured tracks",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000001607",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Armoured tracks",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000001607",
+            "line": 1,
+            "name": "Land Raider Achilles",
+            "m": 10,
+            "t": 12,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 16,
+            "ld": 6,
+            "oc": 5,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Land Raider Achilles",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 230,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Assault Ramp",
+            "legend": "",
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "One Shot",
+            "legend": "",
+            "description": "The bearer can only shoot with this weapon once per battle.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

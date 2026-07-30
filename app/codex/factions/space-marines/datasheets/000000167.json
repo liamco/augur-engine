@@ -1,0 +1,370 @@
+{
+    "id": "000000167",
+    "name": "Furioso Dreadnought",
+    "slug": "furioso-dreadnought",
+    "legend": "Unique to the Chapter, Furiosos are frequently fitted with armaments only the Blood Angels have, from the infantry-shredding heavy frag cannon to the magna-grapple. The latter weapon’s bolts, attached to adamantine chains, pierce armour, enabling Furiosos to drag enemies into their reach.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000376",
+        "name": "Faction Pack: Blood Angels (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Furioso Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> heavy frag cannon; Furioso fist; storm bolter.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s heavy frag cannon and Furioso fist can be replaced with one of the following:<ul><li>1 Blood Talons and 1 meltagun</li><li>1 twin Furioso fist and 1 meltagun</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000167",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model’s storm bolter can be replaced with 1 heavy flamer."
+                    },
+                    {
+                        "datasheetId": "000000167",
+                        "line": 3,
+                        "button": "•",
+                        "description": "This model’s meltagun can be replaced with 1 heavy flamer."
+                    },
+                    {
+                        "datasheetId": "000000167",
+                        "line": 4,
+                        "button": "•",
+                        "description": "This model can be equipped with 1 magna-grapple."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000167:heavy-flamer",
+                "name": "Heavy flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Heavy flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000167:heavy-frag-cannon",
+                "name": "Heavy frag cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Heavy frag cannon",
+                        "attributes": [
+                            "BLAST",
+                            "RAPID FIRE D6"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000167:meltagun",
+                "name": "Meltagun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Meltagun",
+                        "attributes": [
+                            "MELTA 2"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000167:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000167:blood-talons",
+                "name": "Blood talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Blood talons",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 7,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000167:furioso-fist",
+                "name": "Furioso fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Furioso fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000167:twin-furioso-fists",
+                "name": "Twin Furioso fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000167",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Twin Furioso fists",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -3,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels (Legends)",
+        "label": "Blood Angels (Legends)",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000167",
+            "line": 1,
+            "name": "Furioso Dreadnought",
+            "m": 8,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 3,
+            "baseSize": "60mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Furioso Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 150,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Wrathful Rampage",
+            "legend": "",
+            "description": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Magna-grapple",
+            "legend": "",
+            "description": "The bearer loses the <span class=\"kwb\">SMOKE</span> keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

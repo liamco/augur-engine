@@ -1,0 +1,281 @@
+{
+    "id": "000004117",
+    "name": "Hyperadapted Raveners",
+    "slug": "hyperadapted-raveners-2",
+    "legend": "Created to fight amongst the vanguard swarms, Hyperadapted Raveners boast additional biomorphs and weapon symbiotes. The toxic scythes, rending talons and crushing claws of the heavier bioforms, coupled with bioacids and unnatural senses, allow them to pick off the armoured vehicles of the prey.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000000482",
+                "slug": "raveners-2"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Character",
+            "model": "RAVENER PRIME",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Synapse",
+            "model": "RAVENER PRIME",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Burrowers",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Hyperadapted Raveners",
+            "model": "ALL MODELS",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Ravener Prime is equipped with:</b> Prime claws and talons.<br><br><b>3 Raveners are equipped with:</b> Ravener heavy claws and talons.<br><br><b>1 Ravener is equipped with:</b> venom bolt; Ravener heavy claws and talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000004117:venom-bolt",
+                "name": "Venom bolt",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000004117",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Venom bolt",
+                        "attributes": [
+                            "ASSAULT",
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6+3",
+                        "bsWs": null,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004117:prime-claws-and-talons",
+                "name": "Prime claws and talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004117",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Prime claws and talons",
+                        "attributes": [
+                            "ANTI-MONSTER 5+",
+                            "ANTI-VEHICLE 5+",
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000004117:ravener-heavy-claws-and-talons",
+                "name": "Ravener heavy claws and talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000004117",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Ravener heavy claws and talons",
+                        "attributes": [
+                            "ANTI-MONSTER 5+",
+                            "ANTI-VEHICLE 5+",
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000004117",
+            "line": 1,
+            "name": "Ravener Prime",
+            "m": 10,
+            "t": 5,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        {
+            "datasheetId": "000004117",
+            "line": 2,
+            "name": "Raveners",
+            "m": 10,
+            "t": 5,
+            "sv": 4,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 8,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 4,
+                "max": 4
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Ravener Prime",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4 Raveners",
+            "min": 4,
+            "max": 4
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 165,
+            "count": 5
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Shadow in the Warp",
+            "type": "Faction"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Alpha Invader",
+            "legend": "",
+            "description": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Hypersensory Array",
+            "legend": "",
+            "description": "Once per battle round, you can target this unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

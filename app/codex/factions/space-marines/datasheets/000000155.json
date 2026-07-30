@@ -1,0 +1,317 @@
+{
+    "id": "000000155",
+    "name": "Chief Librarian Mephiston",
+    "slug": "chief-librarian-mephiston",
+    "legend": "Mephiston is an enormously powerful warrior and psyker. He is the only Blood Angel known to have suppressed the Black Rage, resurrecting from near death with exceptional strength, vigour and speed. Many whisper behind his back, asking what price he paid for such a transformation.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000021",
+        "name": "Faction Pack: Blood Angels"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Epic Hero",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Psyker",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chief Librarian Mephiston",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> plasma pistol; Fury of the Ancients; Vitarus.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000155:fury-of-the-ancients-witchfire",
+                "name": "Fury of the Ancients – witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000155",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Fury of the Ancients – witchfire",
+                        "attributes": [
+                            "PISTOL",
+                            "PSYCHIC",
+                            "SUSTAINED HITS 1"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -1,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000155:fury-of-the-ancients-focused-witchfire",
+                "name": "Fury of the Ancients – focused witchfire",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000155",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Fury of the Ancients – focused witchfire",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL",
+                            "PSYCHIC",
+                            "SUSTAINED HITS 3"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 2,
+                        "s": 5,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000155:plasma-pistol-standard",
+                "name": "Plasma pistol – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000155",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Plasma pistol – standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000155:plasma-pistol-supercharge",
+                "name": "Plasma pistol – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000155",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Plasma pistol – supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 2,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000155:vitarus",
+                "name": "Vitarus",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000155",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Vitarus",
+                        "attributes": [
+                            "LETHAL HITS",
+                            "PSYCHIC"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 2,
+                        "s": 9,
+                        "ap": -3,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels",
+        "label": "Blood Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000155",
+            "line": 1,
+            "name": "Chief Librarian Mephiston",
+            "m": 7,
+            "t": 5,
+            "sv": 2,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 6,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Chief Librarian Mephiston – EPIC HERO",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 120,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Fights First",
+            "type": "Core"
+        },
+        {
+            "name": "Lone Operative",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "The Quickening (Psychic)",
+            "legend": "",
+            "description": "This model is eligible to declare a charge in a turn in which it Advanced.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Transfixing Gaze (Aura, Psychic)",
+            "legend": "",
+            "description": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

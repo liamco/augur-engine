@@ -1,0 +1,789 @@
+{
+    "id": "000002780",
+    "name": "Fortis Kill Team",
+    "slug": "fortis-kill-team-2",
+    "legend": "Further refined from Watch Master Mordelai’s original concept, Fortis Kill Teams exemplify the supreme adaptability of the Tacticus variant of Mk X power armour, seamlessly merging a variety of close support roles and deadly firepower.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000035",
+        "name": "Faction Pack: Deathwatch"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Deathwatch",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Fortis Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Kill Team",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>The Kill Team Sergeant and every Kill Team Intercessor is equipped with:</b> bolt pistol; Deathwatch bolt rifle; close combat weapon.<br><br><b>Every Kill Team Intercessor with plasma incinerator is equipped with:</b> bolt pistol; plasma incinerator; close combat weapon.<br><br><b>Every Kill Team Intercessor with heavy bolt pistol is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Intercessor with pyreblaster is equipped with:</b> bolt pistol; pyreblaster; close combat weapon.<br><br><b>Every Kill Team Intercessor with superfrag rocket launcher is equipped with:</b> bolt pistol; castellan launcher; superfrag rocket launcher; close combat weapon.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 1,
+                        "button": "•",
+                        "description": "The Kill Team Sergeant can replace its Deathwatch bolt rifle with one of the following:<ul><li>1 Astartes chainsword</li><li>1 hand flamer</li><li>1 plasma pistol</li><li>1 power weapon</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000002780",
+                        "line": 2,
+                        "button": "•",
+                        "description": "The Kill Team Sergeant can replace its close combat weapon with one of the following:<br><ul><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000002780",
+                        "line": 3,
+                        "button": "•",
+                        "description": "For every 5 models in this unit, 1 model equipped with a Deathwatch bolt rifle can be equipped with 1 Astartes grenade launcher."
+                    },
+                    {
+                        "datasheetId": "000002780",
+                        "line": 4,
+                        "button": "•",
+                        "description": "One model equipped with a plasma incinerator can replace its bolt pistol with 1 plasma pistol."
+                    },
+                    {
+                        "datasheetId": "000002780",
+                        "line": 5,
+                        "button": "•",
+                        "description": "1 model can replace its superfrag rocket launcher with 1 vengor launcher."
+                    },
+                    {
+                        "datasheetId": "000002780",
+                        "line": 6,
+                        "button": "•",
+                        "description": "Any number of models can each replace their superfrag rocket launcher with 1 superkrak rocket launcher."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002780:astartes-grenade-launcher-frag",
+                "name": "Astartes grenade launcher – frag",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Astartes grenade launcher – frag",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:astartes-grenade-launcher-krak",
+                "name": "Astartes grenade launcher – krak",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Astartes grenade launcher – krak",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -2,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:bolt-pistol",
+                "name": "Bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:castellan-launcher",
+                "name": "Castellan launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Castellan launcher",
+                        "attributes": [
+                            "BLAST",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:deathwatch-bolt-rifle",
+                "name": "Deathwatch bolt rifle",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Deathwatch bolt rifle",
+                        "attributes": [
+                            "ASSAULT",
+                            "HEAVY",
+                            "LETHAL HITS"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:hand-flamer",
+                "name": "Hand flamer",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Hand flamer",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "PISTOL",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 3,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:heavy-bolt-pistol",
+                "name": "Heavy bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Heavy bolt pistol",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:plasma-incinerator-standard",
+                "name": "Plasma incinerator – standard",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Plasma incinerator – standard",
+                        "attributes": [
+                            "ASSAULT",
+                            "HEAVY"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:plasma-incinerator-supercharge",
+                "name": "Plasma incinerator – supercharge",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Plasma incinerator – supercharge",
+                        "attributes": [
+                            "ASSAULT",
+                            "HAZARDOUS",
+                            "HEAVY"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:plasma-pistol",
+                "name": "Plasma pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Plasma pistol - standard",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    },
+                    {
+                        "datasheetId": "000002780",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Plasma pistol - supercharge",
+                        "attributes": [
+                            "HAZARDOUS",
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:pyreblaster",
+                "name": "Pyreblaster",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Pyreblaster",
+                        "attributes": [
+                            "IGNORES COVER",
+                            "TORRENT"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": null,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:superfrag-rocket-launcher",
+                "name": "Superfrag rocket launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 11,
+                        "dice": "",
+                        "name": "Superfrag rocket launcher",
+                        "attributes": [
+                            "BLAST",
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:superkrak-rocket-launcher",
+                "name": "Superkrak rocket launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 12,
+                        "dice": "",
+                        "name": "Superkrak rocket launcher",
+                        "attributes": [
+                            "HEAVY"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 4,
+                        "s": 10,
+                        "ap": -2,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:vengor-launcher",
+                "name": "Vengor launcher",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 13,
+                        "dice": "",
+                        "name": "Vengor launcher",
+                        "attributes": [
+                            "BLAST",
+                            "INDIRECT FIRE"
+                        ],
+                        "range": 48,
+                        "type": "Ranged",
+                        "a": "D6",
+                        "bsWs": 2,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:astartes-chainsword",
+                "name": "Astartes chainsword",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 14,
+                        "dice": "",
+                        "name": "Astartes chainsword",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 15,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:power-fist",
+                "name": "Power fist",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 16,
+                        "dice": "",
+                        "name": "Power fist",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:power-weapon",
+                "name": "Power weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 17,
+                        "dice": "",
+                        "name": "Power weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002780:thunder-hammer",
+                "name": "Thunder hammer",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002780",
+                        "line": 18,
+                        "dice": "",
+                        "name": "Thunder hammer",
+                        "attributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "deathwatch",
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "label": "Deathwatch",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000002780",
+            "line": 1,
+            "name": "Fortis Kill Team",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 10,
+                "max": 10
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "10 MODELS MAXIMUM",
+            "min": 10,
+            "max": 10
+        },
+        {
+            "line": 2,
+            "description": "1 Kill Team Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 3,
+            "description": "2-9 Kill Team Intercessors",
+            "min": 2,
+            "max": 9
+        },
+        {
+            "line": 4,
+            "description": "0-4 Kill Team Intercessors with plasma incinerators",
+            "min": 0,
+            "max": 4
+        },
+        {
+            "line": 5,
+            "description": "0-4 Kill Team Intercessors with heavy bolt pistols",
+            "min": 0,
+            "max": 4
+        },
+        {
+            "line": 6,
+            "description": "0‑4 Kill Team Intercessors with pyreblasters",
+            "min": 0,
+            "max": 4
+        },
+        {
+            "line": 7,
+            "description": "0‑2 Kill Team Intercessors with superfrag rocket launchers",
+            "min": 0,
+            "max": 2
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 180,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Mission Tactics",
+            "type": "Faction"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Fortis Doctrines",
+            "legend": "",
+            "description": "Each time a model in this unit makes an attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

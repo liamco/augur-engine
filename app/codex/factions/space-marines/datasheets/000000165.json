@@ -1,0 +1,306 @@
+{
+    "id": "000000165",
+    "name": "Sanguinary Guard",
+    "slug": "sanguinary-guard",
+    "legend": "Sanguinary Guard are proven in mind, body and spirit in a way few of their brothers can match. Clad in irreplaceable golden armour believed to date back to the Horus Heresy and armed with the traditional relic weapons of their position, few embody the ideal of the wrathful angel more than they.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000021",
+        "name": "Faction Pack: Blood Angels"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Sanguinary Guard",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Tacticus",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Jump Pack",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Fly",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Angelus boltgun; encarmine blade.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000165",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their encarmine blade replaced with 1 encarmine spear."
+                    },
+                    {
+                        "datasheetId": "000000165",
+                        "line": 2,
+                        "button": "•",
+                        "description": "For every 3 models in this unit, 1 model’s Angelus boltgun can be replaced with 1 inferno pistol."
+                    },
+                    {
+                        "datasheetId": "000000165",
+                        "line": 3,
+                        "button": "•",
+                        "description": "One model can be equipped with 1 Sanguinary banner."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000165:angelus-boltgun",
+                "name": "Angelus boltgun",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000165",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Angelus boltgun",
+                        "attributes": [
+                            "PISTOL"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000165:inferno-pistol",
+                "name": "Inferno pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000165",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Inferno pistol",
+                        "attributes": [
+                            "MELTA 2",
+                            "PISTOL"
+                        ],
+                        "range": 6,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 8,
+                        "ap": -4,
+                        "d": "D3"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000165:encarmine-blade",
+                "name": "Encarmine blade",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000165",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Encarmine blade",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -3,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000165:encarmine-spear",
+                "name": "Encarmine spear",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000165",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Encarmine spear",
+                        "attributes": [
+                            "LANCE"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels",
+        "label": "Blood Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000165",
+            "line": 1,
+            "name": "Sanguinary Guard",
+            "m": 12,
+            "t": 4,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 3,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 3,
+                "max": 6
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Sanguinary Guard",
+            "min": 3,
+            "max": 6
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 125,
+            "count": 3
+        },
+        {
+            "cost": 260,
+            "count": 6
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Angelic Visage",
+            "legend": "",
+            "description": "Each time a melee attack targets this unit, subtract 1 from the Hit roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Heirs of Azkaellon",
+            "legend": "",
+            "description": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Sanguinary Banner",
+            "legend": "",
+            "description": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "ATTACHED UNIT",
+            "legend": "",
+            "description": "If a Captain model from your army with the Leader ability can be attached to an Assault Intercessors with Jump Packs unit, it can be attached to this unit instead.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -2,6 +2,7 @@ import type { RawDatasheet, ParsedStratagem } from "./types";
 import { restructureTopLevel } from "./transforms/restructureTopLevel";
 import { transformKeywords } from "./transforms/transformKeywords";
 import { transformModels } from "./transforms/transformModels";
+import { transformUnitComposition } from "./transforms/transformUnitComposition";
 import { transformCosts } from "./transforms/transformCosts";
 import { transformWargear } from "./transforms/transformWargear";
 import { transformAbilities } from "./transforms/transformAbilities";
@@ -22,6 +23,12 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
 
     // 3. Transform models (merge unit composition)
     const models = transformModels(raw.models, raw.unitComposition);
+
+    // 3b. Unit composition as its own structure. Model statlines and
+    // composition lines are independent axes (a single statline can cover
+    // several composition entries), so the counts are kept here in full
+    // rather than only as the per-statline merge above.
+    const unitComposition = transformUnitComposition(raw.unitComposition);
 
     // 4. Transform costs
     const pointsCosts = transformCosts(raw.modelCosts);
@@ -56,6 +63,7 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
         wargear,
         supplement,
         models,
+        unitComposition,
         pointsCosts,
         abilities,
     };

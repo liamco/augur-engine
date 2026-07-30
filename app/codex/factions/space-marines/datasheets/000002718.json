@@ -1,0 +1,308 @@
+{
+    "id": "000002718",
+    "name": "Reiver Squad",
+    "slug": "reiver-squad",
+    "legend": "Rapid-insertion terror troops, Reiver Squads often deploy using grav-chutes and directional fins to land with pinpoint accuracy. Operating with near perfect stealth to reach the optimum location to strike from, when ready they unleash their fury, surging forward with augmented guttural roars and blasts of weapons fire.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Phobos",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Reiver Squad",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Grenades",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Smoke",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> special issue bolt pistol; combat knife.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002718",
+                        "line": 1,
+                        "button": "•",
+                        "description": "All models in this unit can each have their combat knife replaced with 1 bolt carbine and 1 close combat weapon."
+                    },
+                    {
+                        "datasheetId": "000002718",
+                        "line": 2,
+                        "button": "•",
+                        "description": "If the Reiver Sergeant is equipped with 1 bolt carbine, it can be equipped with 1 combat knife."
+                    },
+                    {
+                        "datasheetId": "000002718",
+                        "line": 3,
+                        "button": "•",
+                        "description": "All models in this unit can each be equipped with 1 Reiver grav-chute."
+                    },
+                    {
+                        "datasheetId": "000002718",
+                        "line": 4,
+                        "button": "•",
+                        "description": "All models in this unit can each be equipped with 1 grapnel launcher."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002718:bolt-carbine",
+                "name": "Bolt carbine",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002718",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bolt carbine",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002718:special-issue-bolt-pistol",
+                "name": "Special issue bolt pistol",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002718",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Special issue bolt pistol",
+                        "attributes": [
+                            "PISTOL",
+                            "PRECISION"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": 1,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002718:close-combat-weapon",
+                "name": "Close combat weapon",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002718",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Close combat weapon",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002718:combat-knife",
+                "name": "Combat knife",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000002718",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Combat knife",
+                        "attributes": [
+                            "PRECISION"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002718",
+            "line": 1,
+            "name": "Reiver Squad",
+            "m": 6,
+            "t": 4,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 6,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Reiver Sergeant",
+            "min": 1,
+            "max": 1
+        },
+        {
+            "line": 2,
+            "description": "4-9 Reivers",
+            "min": 4,
+            "max": 9
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 80,
+            "count": 5
+        },
+        {
+            "cost": 160,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Fearsome Assault",
+            "legend": "",
+            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test, subtracting 1 from that test.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Terror Troops (Aura)",
+            "legend": "",
+            "description": "While an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) is within 3\" of one or more units with this ability, subtract 1 from the Objective Control characteristic of models in that enemy unit.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Grapnel Launcher",
+            "legend": "",
+            "description": "Each time the bearer’s unit makes a Normal, Advance, Fall Back or Charge move, ignore any vertical distance when determining the total distance the bearer can be moved during that move.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Reiver Grav-chute",
+            "legend": "",
+            "description": "The bearer has the Deep Strike ability.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

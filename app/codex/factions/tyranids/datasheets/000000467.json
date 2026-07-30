@@ -1,0 +1,155 @@
+{
+    "id": "000000467",
+    "name": "Genestealers",
+    "slug": "genestealers",
+    "legend": "Swift vanguard organisms armoured in chitin and possessed of terrifying strength and agility, Genestealers are peerless predators. Their broods move ahead of the hive fleets to seek out fresh feeding grounds. Then, when the invasion swarms descend, the Genestealers burst from hiding to begin the slaughter.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Vanguard Invader",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Genestealers",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Genestealer claws and talons.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000467:genestealer-claws-and-talons",
+                "name": "Genestealer claws and talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000467",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Genestealer claws and talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 2,
+                        "s": 4,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000467",
+            "line": 1,
+            "name": "Genestealers",
+            "m": 8,
+            "t": 4,
+            "sv": 5,
+            "invSv": 5,
+            "invSvDescr": "",
+            "w": 2,
+            "ld": 7,
+            "oc": 1,
+            "baseSize": "32mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 5,
+                "max": 10
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "5-10 Genestealers",
+            "min": 5,
+            "max": 10
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 5
+        },
+        {
+            "cost": 140,
+            "count": 10
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Scouts",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Vanguard Predator",
+            "legend": "",
+            "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll of 1 as well.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

@@ -1,0 +1,253 @@
+{
+    "id": "000000115",
+    "name": "Chaplain In Terminator Armour",
+    "slug": "chaplain-in-terminator-armour",
+    "legend": "Every Space Marine is roused to war by the litanies of their Chaplains, and never is this spiritual fortification more vital than amidst the blood and horror of boarding actions and beachhead strikes. Thus, Chaplains are trained to wear formidable Terminator armour so they can fight alongside Veteran battle-brothers.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000139",
+        "name": "Faction Pack: Space Marines"
+    },
+    "role": "Characters",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": {
+        "canLead": [
+            {
+                "id": "000004138",
+                "slug": "terminator-squad-2"
+            },
+            {
+                "id": "000000230",
+                "slug": "deathwing-terminator-squad"
+            },
+            {
+                "id": "000000104",
+                "slug": "relic-terminator-squad"
+            },
+            {
+                "id": "000001183",
+                "slug": "terminator-squad"
+            },
+            {
+                "id": "000003873",
+                "slug": "deathwatch-terminator-squad-2"
+            },
+            {
+                "id": "000000118",
+                "slug": "terminator-assault-squad"
+            },
+            {
+                "id": "000000231",
+                "slug": "deathwing-knights"
+            },
+            {
+                "id": "000002302",
+                "slug": "deathwing-command-squad"
+            }
+        ],
+        "leaderNotes": ""
+    },
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Infantry",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Character",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Terminator",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Chaplain",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Deathwing",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> storm bolter; crozius arcanum.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000115",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s storm bolter can be replaced with 1 relic shield."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000115:storm-bolter",
+                "name": "Storm bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000115",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Storm bolter",
+                        "attributes": [
+                            "RAPID FIRE 2"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000115:crozius-arcanum",
+                "name": "Crozius arcanum",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000115",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Crozius arcanum",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 5,
+                        "bsWs": 2,
+                        "s": 6,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000115",
+            "line": 1,
+            "name": "Chaplain In Terminator Armour",
+            "m": 5,
+            "t": 5,
+            "sv": 2,
+            "invSv": 4,
+            "invSvDescr": "",
+            "w": 5,
+            "ld": 5,
+            "oc": 1,
+            "baseSize": "40mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Chaplain in Terminator Armour",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 75,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Leader",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Litany of Hate",
+            "legend": "",
+            "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Recitation of Faith",
+            "legend": "",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against mortal wounds.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Relic Shield",
+            "legend": "",
+            "description": "The bearer has a Wounds characteristic of 6.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

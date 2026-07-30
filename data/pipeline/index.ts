@@ -11,6 +11,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "../..");
 const SRC_DIR = join(ROOT, "data/src/factions");
 const OUTPUT_DIR = join(ROOT, "app/codex");
+// Legacy/duplicate source folders to skip when walking all factions.
+const IGNORE_FACTIONS = new Set(["tyranids_old"]);
 
 const { values } = parseArgs({
     options: {
@@ -138,8 +140,10 @@ function main() {
             console.error(`Source directory not found: ${SRC_DIR}`);
             process.exit(1);
         }
-        const factions = readdirSync(SRC_DIR).filter((f) =>
-            existsSync(join(SRC_DIR, f, "faction.json")),
+        const factions = readdirSync(SRC_DIR).filter(
+            (f) =>
+                !IGNORE_FACTIONS.has(f) &&
+                existsSync(join(SRC_DIR, f, "faction.json")),
         );
 
         if (factions.length === 0) {

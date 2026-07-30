@@ -1,0 +1,363 @@
+{
+    "id": "000000166",
+    "name": "Death Company Dreadnought",
+    "slug": "death-company-dreadnought",
+    "legend": "Even being interred in a Dreadnought’s sarcophagus is insufficient to keep the Black Rage at bay. Death Company Dreadnoughts are like furious battering rams, desperate to smash into the enemy and tear them apart. They are potent terror weapons, unleashed to inflict as much damage as possible.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000021",
+        "name": "Faction Pack: Blood Angels"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Blood Angels",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Death Company",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Death Company Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Dreadnought",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Walker",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": {
+        "range": "1-4",
+        "threshold": 4,
+        "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+        "mechanics": []
+    },
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> twin Icarus ironhail heavy stubber; twin heavy bolter; blood fist bolt rifles; blood fists.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
+                    },
+                    {
+                        "datasheetId": "000000166",
+                        "line": 2,
+                        "button": "•",
+                        "description": "This model's blood fists and blood fist bolt rifles can be replaced with 1 blood talons."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000166:blood-fist-bolt-rifles",
+                "name": "Blood fist bolt rifles",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Blood fist bolt rifles",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 4,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": -1,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000166:twin-heavy-bolter",
+                "name": "Twin heavy bolter",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Twin heavy bolter",
+                        "attributes": [
+                            "SUSTAINED HITS 1",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000166:twin-icarus-ironhail-heavy-stubber",
+                "name": "Twin Icarus ironhail heavy stubber",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Twin Icarus ironhail heavy stubber",
+                        "attributes": [
+                            "ANTI-FLY 4+",
+                            "RAPID FIRE 3",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": 3,
+                        "bsWs": 3,
+                        "s": 4,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000166:twin-multi-melta",
+                "name": "Twin multi-melta",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Twin multi-melta",
+                        "attributes": [
+                            "MELTA 2",
+                            "TWIN-LINKED"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 2,
+                        "bsWs": 3,
+                        "s": 9,
+                        "ap": -4,
+                        "d": "D6"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000166:blood-fists",
+                "name": "Blood fists",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Blood fists",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000166:blood-talons",
+                "name": "Blood talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000166",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Blood talons - strike",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 3,
+                        "s": 12,
+                        "ap": -2,
+                        "d": 3
+                    },
+                    {
+                        "datasheetId": "000000166",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Blood talons - sweep",
+                        "attributes": [
+                            "TWIN-LINKED"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 10,
+                        "bsWs": 3,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "blood-angels",
+        "slug": "blood-angels",
+        "name": "Blood Angels",
+        "label": "Blood Angels",
+        "isSupplement": true
+    },
+    "models": [
+        {
+            "datasheetId": "000000166",
+            "line": 1,
+            "name": "Death Company Dreadnought",
+            "m": 8,
+            "t": 10,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 12,
+            "ld": 6,
+            "oc": 4,
+            "baseSize": "90mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Death Company Dreadnought",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 160,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Feel No Pain",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Black Rage",
+            "legend": "",
+            "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Driven by Fury",
+            "legend": "",
+            "description": "In your opponent’s Shooting phase, each time an enemy unit has shot, if this model was hit by one or more of those attacks, it can make a Driven by Fury move. To do so, roll one D6 and add 2 to the roll: this model moves a number of inches up to the result, but must finish as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>). When doing so, this model can be moved within Engagement Range of that enemy unit. A model cannot make a Driven by Fury move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Driven by Fury move per phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

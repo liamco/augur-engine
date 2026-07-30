@@ -1,0 +1,188 @@
+{
+    "id": "000002267",
+    "name": "Deathstorm Drop Pod",
+    "slug": "deathstorm-drop-pod",
+    "legend": "Deathstorm Drop Pods act as a battlefield delivery method not for troops or vehicles, but instead for automated weapons systems such as Whirlwind missile launchers or assault cannons. Once in place, these potent weapons unleash a massive volley of firepower, clearing the way for a full-scale ground assault.",
+    "faction": {
+        "id": "SM",
+        "slug": "space-marines"
+    },
+    "source": {
+        "id": "000000356",
+        "name": "Faction Pack: Space Marines (Warhammer Legends)"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": true,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Adeptus Astartes",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Deathstorm Drop Pod",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Vehicle",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Imperium",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> deathstorm cannon array.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000002267",
+                        "line": 1,
+                        "button": "•",
+                        "description": "This model’s deathstorm cannon array can be replaced with 1 deathstorm missile array"
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000002267:deathstorm-cannon-array",
+                "name": "Deathstorm cannon array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002267",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Deathstorm cannon array",
+                        "attributes": [
+                            "SUSTAINED HITS 2"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 12,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000002267:deathstorm-missile-array",
+                "name": "Deathstorm missile array",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000002267",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Deathstorm missile array",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": "2D6",
+                        "bsWs": 4,
+                        "s": 8,
+                        "ap": -2,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "codex",
+        "name": "Codex (Legends)",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000002267",
+            "line": 1,
+            "name": "Deathstorm Drop Pod",
+            "m": 0,
+            "t": 7,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 6,
+            "oc": 2,
+            "baseSize": "Use model",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Deathstorm Drop Pod",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 95,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Deep Strike",
+            "type": "Core"
+        },
+        {
+            "name": "Oath of Moment",
+            "type": "Faction"
+        },
+        {
+            "name": "Deathstorm Assault",
+            "legend": "",
+            "description": "This model must start the battle in Reserves, but it is not counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

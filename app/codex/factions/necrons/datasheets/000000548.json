@@ -82,7 +82,10 @@
                         "line": 1,
                         "dice": "",
                         "name": "Particle beamer",
-                        "attributes": [],
+                        "attributes": [
+                            "BLAST",
+                            "DEVASTATING WOUNDS"
+                        ],
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6",
@@ -109,7 +112,10 @@
                         "line": 2,
                         "dice": "",
                         "name": "Twin gauss blaster",
-                        "attributes": [],
+                        "attributes": [
+                            "LETHAL HITS",
+                            "TWIN-LINKED"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 2,
@@ -136,7 +142,11 @@
                         "line": 3,
                         "dice": "",
                         "name": "Twin tesla carbine",
-                        "attributes": [],
+                        "attributes": [
+                            "ASSAULT",
+                            "SUSTAINED HITS 2",
+                            "TWIN-LINKED"
+                        ],
                         "range": 24,
                         "type": "Ranged",
                         "a": 2,
@@ -209,6 +219,14 @@
                 "min": 3,
                 "max": 6
             }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "3-6 Tomb Blades",
+            "min": 3,
+            "max": 6
         }
     ],
     "pointsCosts": [

@@ -1,0 +1,181 @@
+{
+    "id": "000000498",
+    "name": "Sporocyst",
+    "slug": "sporocyst",
+    "legend": "Dropped from orbit, Sporocysts dig into the surface of the prey world like ticks then begin spewing toxic spores from their living chimneys. They are able to eject shoals of Mucolid Spores, while prey who stray too close are subjected to hails of organic projectiles from the bio-cannons grafted to the Sporocyst’s hide.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Sporocyst",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>This model is equipped with:</b> Sporocyst bio-weapons; flensing whips.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000498:sporocyst-bio-weapons",
+                "name": "Sporocyst bio-weapons",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000498",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Sporocyst bio-weapons",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 10,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000498:flensing-whips",
+                "name": "Flensing whips",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000498",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Flensing whips",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000498",
+            "line": 1,
+            "name": "Sporocyst",
+            "m": 0,
+            "t": 10,
+            "sv": 3,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 10,
+            "ld": 8,
+            "oc": 0,
+            "baseSize": "100mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 1
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1 Sporocyst",
+            "min": 1,
+            "max": 1
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 145,
+            "count": 1
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Seed Mucolids",
+            "legend": "",
+            "description": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new Mucolid Spores unit containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 9\" horizontally away from all enemy units.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        },
+        {
+            "name": "Hive Defences",
+            "legend": "",
+            "description": "You can target this model with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn. This model can only be targeted with that Stratagem once per turn.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}

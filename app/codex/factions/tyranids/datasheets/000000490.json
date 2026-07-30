@@ -1,0 +1,429 @@
+{
+    "id": "000000490",
+    "name": "Carnifexes",
+    "slug": "carnifexes",
+    "legend": "Carnifexes have been a mainstay of the hive fleets for centuries. Rugged and adaptable organisms, they can support a great range of weapon grafts and biomorphs while retaining the raw strength, durability and armoured ferocity that has seen them smash through countless prey defence lines like living battering rams.",
+    "faction": {
+        "id": "TYR",
+        "slug": "tyranids"
+    },
+    "source": {
+        "id": "000000020",
+        "name": "Faction Pack: Tyranids"
+    },
+    "role": "Other",
+    "isForgeWorld": false,
+    "isLegends": false,
+    "leader": null,
+    "keywords": [
+        {
+            "keyword": "Tyranids",
+            "model": "",
+            "isFactionKeyword": true
+        },
+        {
+            "keyword": "Carnifexes",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Great Devourer",
+            "model": "",
+            "isFactionKeyword": false
+        },
+        {
+            "keyword": "Monster",
+            "model": "",
+            "isFactionKeyword": false
+        }
+    ],
+    "transport": "",
+    "damaged": null,
+    "wargear": {
+        "loadouts": {
+            "default": {
+                "raw": "<b>Every model is equipped with:</b> Carnifex scything talons; Carnifex extra scything talons; chitinous claws and teeth.",
+                "parsed": [],
+                "byModelType": {}
+            },
+            "options": {
+                "raw": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 1,
+                        "button": "•",
+                        "description": "Any number of models can each have their Carnifex extra scything talons replaced with one of the following:<ul><li>1 deathspitters with slimer maggots</li><li>1 devourers with brainleech worms</li><li>1 heavy venom cannon</li><li>1 stranglethorn cannon</li><li>1 Carnifex crushing claws</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000490",
+                        "line": 2,
+                        "button": "•",
+                        "description": "Any number of models can each have their Carnifex scything talons replaced with one of the following:<ul><li>1 deathspitters with slimer maggots</li><li>1 devourers with brainleech worms</li><li>1 Carnifex crushing claws</li></ul>"
+                    },
+                    {
+                        "datasheetId": "000000490",
+                        "line": 3,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 1 bio-plasma."
+                    },
+                    {
+                        "datasheetId": "000000490",
+                        "line": 4,
+                        "button": "•",
+                        "description": "Any number of models can each be equipped with 1 spine banks."
+                    }
+                ],
+                "parsed": [],
+                "byModelType": {}
+            }
+        },
+        "weapons": [
+            {
+                "id": "000000490:bio-plasma",
+                "name": "Bio-plasma",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 1,
+                        "dice": "",
+                        "name": "Bio-plasma",
+                        "attributes": [
+                            "ASSAULT",
+                            "BLAST"
+                        ],
+                        "range": 12,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:deathspitters-with-slimer-maggots",
+                "name": "Deathspitters with slimer maggots",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 2,
+                        "dice": "",
+                        "name": "Deathspitters with slimer maggots",
+                        "attributes": [],
+                        "range": 24,
+                        "type": "Ranged",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -2,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:devourers-with-brainleech-worms",
+                "name": "Devourers with brainleech worms",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 3,
+                        "dice": "",
+                        "name": "Devourers with brainleech worms",
+                        "attributes": [],
+                        "range": 18,
+                        "type": "Ranged",
+                        "a": 12,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:heavy-venom-cannon",
+                "name": "Heavy venom cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 4,
+                        "dice": "",
+                        "name": "Heavy venom cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D3",
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:spine-banks",
+                "name": "Spine banks",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 5,
+                        "dice": "",
+                        "name": "Spine banks",
+                        "attributes": [
+                            "ASSAULT"
+                        ],
+                        "range": 6,
+                        "type": "Ranged",
+                        "a": 5,
+                        "bsWs": 4,
+                        "s": 5,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:stranglethorn-cannon",
+                "name": "Stranglethorn cannon",
+                "type": "Ranged",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 6,
+                        "dice": "",
+                        "name": "Stranglethorn cannon",
+                        "attributes": [
+                            "BLAST"
+                        ],
+                        "range": 36,
+                        "type": "Ranged",
+                        "a": "D6+1",
+                        "bsWs": 4,
+                        "s": 7,
+                        "ap": -1,
+                        "d": 2
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:carnifex-crushing-claws",
+                "name": "Carnifex crushing claws",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 7,
+                        "dice": "",
+                        "name": "Carnifex crushing claws",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 12,
+                        "ap": -3,
+                        "d": "D6+1"
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:carnifex-extra-scything-talons",
+                "name": "Carnifex extra scything talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 8,
+                        "dice": "",
+                        "name": "Carnifex extra scything talons",
+                        "attributes": [
+                            "EXTRA ATTACKS"
+                        ],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 2,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:carnifex-scything-talons",
+                "name": "Carnifex scything talons",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 9,
+                        "dice": "",
+                        "name": "Carnifex scything talons",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 6,
+                        "bsWs": 4,
+                        "s": 9,
+                        "ap": -2,
+                        "d": 3
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            },
+            {
+                "id": "000000490:chitinous-claws-and-teeth",
+                "name": "Chitinous claws and teeth",
+                "type": "Melee",
+                "profiles": [
+                    {
+                        "datasheetId": "000000490",
+                        "line": 10,
+                        "dice": "",
+                        "name": "Chitinous claws and teeth",
+                        "attributes": [],
+                        "range": "Melee",
+                        "type": "Melee",
+                        "a": 4,
+                        "bsWs": 4,
+                        "s": 6,
+                        "ap": 0,
+                        "d": 1
+                    }
+                ],
+                "eligibility": [
+                    {
+                        "type": "any"
+                    }
+                ],
+                "count": 1
+            }
+        ],
+        "abilities": []
+    },
+    "supplement": {
+        "key": "codex",
+        "slug": "",
+        "name": "",
+        "label": "None",
+        "isSupplement": false
+    },
+    "models": [
+        {
+            "datasheetId": "000000490",
+            "line": 1,
+            "name": "Carnifexes",
+            "m": 8,
+            "t": 9,
+            "sv": 2,
+            "invSv": null,
+            "invSvDescr": "",
+            "w": 8,
+            "ld": 8,
+            "oc": 3,
+            "baseSize": "105 x 70mm",
+            "baseSizeDescr": "",
+            "composition": {
+                "min": 1,
+                "max": 2
+            }
+        }
+    ],
+    "unitComposition": [
+        {
+            "line": 1,
+            "description": "1-2 Carnifexes",
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "pointsCosts": [
+        {
+            "cost": 90,
+            "count": 1
+        },
+        {
+            "cost": 180,
+            "count": 2
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Deadly Demise",
+            "type": "Core"
+        },
+        {
+            "name": "Synapse",
+            "type": "Faction"
+        },
+        {
+            "name": "Blistering Assault",
+            "legend": "",
+            "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if any models from this unit lost one or more wounds as a result of those attacks, this unit can make a Blistering Assault move. If it does, roll one D6, adding 2 to the result: each model in this unit can be moved a distance in inches up to the result, but this unit must finish that move as close as possible to the closest enemy unit. When doing so, those models can be moved within Engagement Range of that enemy unit. Each unit can only make one Blistering Assault move per phase.",
+            "type": "Datasheet",
+            "parameter": null,
+            "mechanics": []
+        }
+    ]
+}
