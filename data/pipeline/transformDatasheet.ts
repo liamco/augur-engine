@@ -5,13 +5,18 @@ import { transformModels } from "./transforms/transformModels";
 import { transformUnitComposition } from "./transforms/transformUnitComposition";
 import { transformCosts } from "./transforms/transformCosts";
 import { transformWargear } from "./transforms/transformWargear";
-import { transformAbilities } from "./transforms/transformAbilities";
+import {
+    transformAbilities,
+    extractFactionAbilities,
+    type ParsedFactionAbility,
+} from "./transforms/transformAbilities";
 import { transformDamaged } from "./transforms/transformDamaged";
 import { extractCoreStratagems } from "./transforms/transformDetachments";
 
 export interface TransformDatasheetResult {
     datasheet: Record<string, unknown>;
     coreStratagems: ParsedStratagem[];
+    factionAbilities: ParsedFactionAbility[];
 }
 
 export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult {
@@ -36,8 +41,11 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
     // 5. Transform wargear
     const wargear = transformWargear(raw.wargear, raw.loadout, raw.options);
 
-    // 6. Transform abilities
+    // 6. Transform abilities. Core/Faction abilities reduce to shells here;
+    // Faction rules text is emitted separately onto the faction file, and Core
+    // rules stay hand-authored in app/library.
     const abilities = transformAbilities(raw.abilities);
+    const factionAbilities = extractFactionAbilities(raw.abilities);
 
     // 7. Transform damaged profile
     const damaged = transformDamaged(raw.damagedW, raw.damagedDescription);
@@ -68,5 +76,5 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
         abilities,
     };
 
-    return { datasheet, coreStratagems };
+    return { datasheet, coreStratagems, factionAbilities };
 }

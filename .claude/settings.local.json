@@ -18,7 +18,10 @@
       "Bash(python3 *)",
       "Bash(sed -i '' 's|\\\\.\\\\./\\\\.\\\\./\\\\.\\\\./\\\\.\\\\./app/|/Users/liamco/Sites/Personal/augur-engine/app/|g' /private/tmp/claude-501/-Users-liamco-Sites-Personal-augur-engine/197169d5-e652-43e4-835f-d65109bd1163/scratchpad/check.ts)",
       "Bash(npx tsx *)",
-      "Bash(xxd)"
+      "Bash(xxd)",
+      "Bash(awk '$1==\"blob\"{print $3, $4}')",
+      "Bash(awk '{printf \"%.1f MB  %s\\\\n\", $1/1048576, $2}')",
+      "Bash(awk '{printf \"http.postBuffer now: %d bytes \\(%.0f MB\\) — local to this repo\\\\n\", $1, $1/1048576}')"
     ]
   }
 }

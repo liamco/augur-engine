@@ -27,23 +27,30 @@ describe("transformFaction", () => {
     it("assembles faction metadata including the source data version", () => {
         const { faction } = transformFaction(raw);
 
+        // datasheets is returned separately as datasheetIndex, so the faction
+        // file can be assembled with `abilities` ahead of that long array.
         expect(faction).toEqual({
             id: "TYR",
             slug: "tyranids",
             name: "Tyranids",
             // Records which source snapshot the codex was built from.
             dataVersion: "2026-01-14 00:30:31",
-            datasheets: [
-                {
-                    id: "000002694",
-                    slug: "winged-tyranid-prime",
-                    name: "Winged Tyranid Prime",
-                    role: "Characters",
-                    isForgeWorld: false,
-                    isLegends: false,
-                },
-            ],
         });
+    });
+
+    it("still returns the datasheet index separately", () => {
+        const { datasheetIndex } = transformFaction(raw);
+
+        expect(datasheetIndex).toEqual([
+            {
+                id: "000002694",
+                slug: "winged-tyranid-prime",
+                name: "Winged Tyranid Prime",
+                role: "Characters",
+                isForgeWorld: false,
+                isLegends: false,
+            },
+        ]);
     });
 
     it("omits dataVersion when the source has none", () => {

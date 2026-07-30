@@ -1,6 +1,58 @@
 import { describe, it, expect } from "vitest";
-import { transformAbilities } from "../transformAbilities";
+import {
+    transformAbilities,
+    extractFactionAbilities,
+} from "../transformAbilities";
 import type { RawAbility } from "../../types";
+
+describe("extractFactionAbilities", () => {
+    const oath = {
+        id: "000008350",
+        // The source tags Oath of Moment "WE" despite it being Space Marine
+        // only — the faction is derived from which datasheets carry it, never
+        // from this field.
+        factionId: "WE",
+        name: "Oath of Moment",
+        legend: "Duty and honour...",
+        description: "<p>At the start of your Command phase...</p>",
+        type: "Faction",
+        parameter: "",
+    };
+
+    it("extracts a Faction ability with its rules text", () => {
+        expect(extractFactionAbilities([oath] as never)).toEqual([
+            {
+                id: "000008350",
+                name: "Oath of Moment",
+                type: "Faction",
+                legend: "Duty and honour...",
+                description: "<p>At the start of your Command phase...</p>",
+            },
+        ]);
+    });
+
+    it("ignores Core abilities, which the library owns by hand", () => {
+        expect(
+            extractFactionAbilities([
+                { ...oath, id: "000008343", name: "Deep Strike", type: "Core" },
+            ] as never),
+        ).toEqual([]);
+    });
+
+    it("ignores bespoke Datasheet abilities, which keep their own description", () => {
+        expect(
+            extractFactionAbilities([
+                { ...oath, id: "", type: "Datasheet", name: "Alpha Warrior" },
+            ] as never),
+        ).toEqual([]);
+    });
+
+    it("ignores a Faction ability with no id to key it by", () => {
+        expect(extractFactionAbilities([{ ...oath, id: "" }] as never)).toEqual(
+            [],
+        );
+    });
+});
 
 describe("transformAbilities — definition ids", () => {
     it("carries the shared definition id on a Core ability", () => {

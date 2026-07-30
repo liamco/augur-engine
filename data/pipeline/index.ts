@@ -11,6 +11,7 @@ import {
     recordDatasheetEligibility,
 } from "./transforms/eligibility";
 import type { RawDatasheet, RawFaction, ParsedStratagem } from "./types";
+import type { ParsedFactionAbility } from "./transforms/transformAbilities";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "../..");
@@ -69,18 +70,17 @@ function processFaction(factionSlug: string) {
 
     // 1. Transform faction file (detachments, datasheet index)
     const rawFaction = readJson<RawFaction>(factionPath);
-    const { faction, detachments } = transformFaction(rawFaction);
+    const { faction, datasheetIndex, detachments } =
+        transformFaction(rawFaction);
 
-    // Write faction metadata
-    writeJson(
-        join(OUTPUT_DIR, "factions", factionSlug, "faction.json"),
-        faction,
-    );
-
-    // Detachment files are written *after* the datasheets below: datasheet
-    // eligibility for each stratagem/enhancement/ability is only known once
-    // every datasheet in the faction has been read.
+    // faction.json and the detachment files are both written *after* the
+    // datasheets below: the faction's abilities and each stratagem's datasheet
+    // eligibility are only known once every datasheet has been read.
     const eligibility = createEligibilityIndex();
+
+    // Faction abilities are repeated on every datasheet that has them, so they
+    // are deduped by id. Scoped to this faction, unlike core stratagems.
+    const factionAbilitiesById = new Map<string, ParsedFactionAbility>();
 
     // 2. Process individual datasheets
     const datasheetsDir = join(factionDir, "datasheets");
@@ -99,10 +99,15 @@ function processFaction(factionSlug: string) {
 
         console.log(`  Processing datasheet: ${rawDatasheet.name} (${rawDatasheet.id})`);
 
-        const { datasheet, coreStratagems } = transformDatasheet(rawDatasheet);
+        const { datasheet, coreStratagems, factionAbilities } =
+            transformDatasheet(rawDatasheet);
 
         for (const stratagem of coreStratagems) {
             coreStratagemsById.set(stratagem.id, stratagem);
+        }
+
+        for (const ability of factionAbilities) {
+            factionAbilitiesById.set(ability.id, ability);
         }
 
         recordDatasheetEligibility(eligibility, rawDatasheet);
@@ -124,15 +129,24 @@ function processFaction(factionSlug: string) {
         );
     }
 
-    // 3. Write detachment files, now annotated with datasheet eligibility.
+    // 3. Write faction.json and the detachment files, both of which need every
+    // datasheet to have been read first.
     if (validateOnly) return;
 
     if (values.datasheet) {
         console.log(
-            "  Skipping detachment files (single-datasheet run — eligibility would be incomplete).",
+            "  Skipping faction.json and detachment files (single-datasheet run — abilities and eligibility would be incomplete).",
         );
         return;
     }
+
+    writeJson(join(OUTPUT_DIR, "factions", factionSlug, "faction.json"), {
+        ...faction,
+        abilities: [...factionAbilitiesById.values()].sort((a, b) =>
+            a.id.localeCompare(b.id),
+        ),
+        datasheets: datasheetIndex,
+    });
 
     for (const det of applyEligibility(detachments, eligibility)) {
         writeJson(

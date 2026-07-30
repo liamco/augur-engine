@@ -5,13 +5,17 @@ import type {
 } from "./types";
 import { transformDetachments } from "./transforms/transformDetachments";
 
+/**
+ * Faction-file metadata. `datasheets` is deliberately not included — it comes
+ * back as `datasheetIndex` so the caller can assemble the file with the
+ * `abilities` array ahead of that long list.
+ */
 export interface ParsedFactionMeta {
     id: string;
     slug: string;
     name: string;
     /** Source snapshot the codex was built from; absent if the source omits it. */
     dataVersion?: string;
-    datasheets: DatasheetRef[];
 }
 
 export interface TransformFactionResult {
@@ -37,7 +41,6 @@ export function transformFaction(raw: RawFaction): TransformFactionResult {
         slug: raw.slug,
         name: raw.name,
         ...(raw.dataVersion ? { dataVersion: raw.dataVersion } : {}),
-        datasheets: datasheetIndex,
     };
 
     const detachments = transformDetachments(raw.detachments);
