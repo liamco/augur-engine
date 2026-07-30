@@ -82,12 +82,14 @@
         "weapons": [
             {
                 "id": "000002806:morkai-bolt-pistol",
+                "line": 1,
                 "name": "Morkai bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002806",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Morkai bolt pistol",
                         "attributes": [
@@ -114,12 +116,14 @@
             },
             {
                 "id": "000002806:morkai-combat-knife",
+                "line": 2,
                 "name": "Morkai combat knife",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002806",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Morkai combat knife",
                         "attributes": [
@@ -200,10 +204,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

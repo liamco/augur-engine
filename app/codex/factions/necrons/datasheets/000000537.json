@@ -50,12 +50,14 @@
         "weapons": [
             {
                 "id": "000000537:synaptic-disintegrator",
+                "line": 1,
                 "name": "Synaptic disintegrator",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000537",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Synaptic disintegrator",
                         "attributes": [
@@ -80,12 +82,14 @@
             },
             {
                 "id": "000000537:close-combat-weapon",
+                "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000537",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -156,10 +160,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

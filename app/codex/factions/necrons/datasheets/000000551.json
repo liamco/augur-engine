@@ -79,12 +79,14 @@
         "weapons": [
             {
                 "id": "000000551:particle-beamer",
+                "line": 1,
                 "name": "Particle beamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000551",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Particle beamer",
                         "attributes": [
@@ -109,12 +111,14 @@
             },
             {
                 "id": "000000551:automaton-claws",
+                "line": 2,
                 "name": "Automaton claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000551",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Automaton claws",
                         "attributes": [],
@@ -185,10 +189,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

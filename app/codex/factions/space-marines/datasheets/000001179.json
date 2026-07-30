@@ -92,12 +92,14 @@
         "weapons": [
             {
                 "id": "000001179:hellstrike-missile-battery",
+                "line": 1,
                 "name": "Hellstrike missile battery",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001179",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hellstrike missile battery",
                         "attributes": [
@@ -121,12 +123,14 @@
             },
             {
                 "id": "000001179:twin-heavy-bolter",
+                "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001179",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -151,12 +155,14 @@
             },
             {
                 "id": "000001179:twin-lascannon",
+                "line": 3,
                 "name": "Twin lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001179",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lascannon",
                         "attributes": [
@@ -180,12 +186,14 @@
             },
             {
                 "id": "000001179:armoured-hull",
+                "line": 4,
                 "name": "Armoured hull",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001179",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured hull",
                         "attributes": [],
@@ -252,14 +260,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008342",
             "name": "Hover",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

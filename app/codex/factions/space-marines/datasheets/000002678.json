@@ -129,12 +129,14 @@
         "weapons": [
             {
                 "id": "000002678:infernus",
+                "line": 1,
                 "name": "Infernus",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002678",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Infernus",
                         "attributes": [
@@ -161,12 +163,14 @@
             },
             {
                 "id": "000002678:artificer-crozius",
+                "line": 2,
                 "name": "Artificer crozius",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002678",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Artificer crozius",
                         "attributes": [],
@@ -233,14 +237,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

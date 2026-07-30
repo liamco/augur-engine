@@ -100,12 +100,14 @@
         "weapons": [
             {
                 "id": "000002473:artificer-grav-gun",
+                "line": 1,
                 "name": "Artificer grav-gun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002473",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Artificer grav-gun",
                         "attributes": [
@@ -129,12 +131,14 @@
             },
             {
                 "id": "000002473:hand-of-defiance",
+                "line": 2,
                 "name": "Hand of Defiance",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002473",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand of Defiance",
                         "attributes": [],
@@ -201,10 +205,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -160,12 +160,14 @@
         "weapons": [
             {
                 "id": "000000121:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000121",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -189,12 +191,14 @@
             },
             {
                 "id": "000000121:invictus",
+                "line": 2,
                 "name": "Invictus",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000121",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Invictus",
                         "attributes": [],
@@ -216,12 +220,14 @@
             },
             {
                 "id": "000000121:sword-of-idaeus",
+                "line": 3,
                 "name": "Sword of Idaeus",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000121",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Sword of Idaeus",
                         "attributes": [
@@ -290,10 +296,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

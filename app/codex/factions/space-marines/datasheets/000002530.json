@@ -94,12 +94,14 @@
         "weapons": [
             {
                 "id": "000002530:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002530",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -123,12 +125,14 @@
             },
             {
                 "id": "000002530:master-crafted-scoped-bolt-carbine",
+                "line": 2,
                 "name": "Master-crafted scoped bolt carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002530",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted scoped bolt carbine",
                         "attributes": [],
@@ -150,12 +154,14 @@
             },
             {
                 "id": "000002530:paired-combat-blades",
+                "line": 3,
                 "name": "Paired combat blades",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002530",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Paired combat blades",
                         "attributes": [
@@ -224,22 +230,27 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

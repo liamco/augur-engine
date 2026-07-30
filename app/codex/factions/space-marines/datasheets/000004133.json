@@ -83,12 +83,14 @@
         "weapons": [
             {
                 "id": "000004133:heavy-flamer",
+                "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004133",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy flamer",
                         "attributes": [
@@ -113,12 +115,14 @@
             },
             {
                 "id": "000004133:storm-bolter",
+                "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004133",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -142,12 +146,14 @@
             },
             {
                 "id": "000004133:fenrisian-greataxe-strike",
+                "line": 3,
                 "name": "Fenrisian greataxe – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004133",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Fenrisian greataxe – strike",
                         "attributes": [],
@@ -169,12 +175,14 @@
             },
             {
                 "id": "000004133:fenrisian-greataxe-sweep",
+                "line": 4,
                 "name": "Fenrisian greataxe – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004133",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Fenrisian greataxe – sweep",
                         "attributes": [],
@@ -196,12 +204,14 @@
             },
             {
                 "id": "000004133:great-wolf-claw",
+                "line": 5,
                 "name": "Great wolf claw",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004133",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Great wolf claw",
                         "attributes": [],
@@ -268,18 +278,22 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000010256",
             "name": "Curse of the Wulfen",
             "type": "Faction"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

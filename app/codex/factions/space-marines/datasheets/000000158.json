@@ -159,12 +159,14 @@
         "weapons": [
             {
                 "id": "000000158:absolvor-bolt-pistol",
+                "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000158",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Absolvor bolt pistol",
                         "attributes": [
@@ -188,12 +190,14 @@
             },
             {
                 "id": "000000158:astartes-chainsword",
+                "line": 2,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000158",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -260,10 +264,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

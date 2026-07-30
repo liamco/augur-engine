@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000002704:demolisher-cannon",
+                "line": 1,
                 "name": "Demolisher cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Demolisher cannon",
                         "attributes": [
@@ -118,12 +120,14 @@
             },
             {
                 "id": "000002704:fellblade-accelerator-cannon-ap-shells",
+                "line": 2,
                 "name": "Fellblade accelerator cannon – AP shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Fellblade accelerator cannon – AP shells",
                         "attributes": [],
@@ -145,12 +149,14 @@
             },
             {
                 "id": "000002704:fellblade-accelerator-cannon-he-shells",
+                "line": 3,
                 "name": "Fellblade accelerator cannon – HE shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Fellblade accelerator cannon – HE shells",
                         "attributes": [
@@ -174,12 +180,14 @@
             },
             {
                 "id": "000002704:heavy-bolter",
+                "line": 4,
                 "name": "Heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolter",
                         "attributes": [
@@ -203,12 +211,14 @@
             },
             {
                 "id": "000002704:heavy-flamer",
+                "line": 5,
                 "name": "Heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy flamer",
                         "attributes": [
@@ -233,12 +243,14 @@
             },
             {
                 "id": "000002704:laser-destroyer",
+                "line": 6,
                 "name": "Laser destroyer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Laser destroyer",
                         "attributes": [
@@ -262,12 +274,14 @@
             },
             {
                 "id": "000002704:multi-melta",
+                "line": 7,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -291,12 +305,14 @@
             },
             {
                 "id": "000002704:quad-lascannon",
+                "line": 8,
                 "name": "Quad lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Quad lascannon",
                         "attributes": [],
@@ -318,12 +334,14 @@
             },
             {
                 "id": "000002704:storm-bolter",
+                "line": 9,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -347,12 +365,14 @@
             },
             {
                 "id": "000002704:twin-heavy-bolter",
+                "line": 10,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -377,12 +397,14 @@
             },
             {
                 "id": "000002704:twin-heavy-flamer",
+                "line": 11,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 11,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy flamer",
                         "attributes": [
@@ -408,12 +430,14 @@
             },
             {
                 "id": "000002704:armoured-tracks",
+                "line": 12,
                 "name": "Armoured tracks",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002704",
                         "line": 12,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured tracks",
                         "attributes": [],
@@ -480,10 +504,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

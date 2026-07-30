@@ -118,12 +118,14 @@
         "weapons": [
             {
                 "id": "000000079:combi-weapon",
+                "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000079",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -149,12 +151,14 @@
             },
             {
                 "id": "000000079:smite-witchfire",
+                "line": 2,
                 "name": "Smite – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000079",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Smite – witchfire",
                         "attributes": [
@@ -178,12 +182,14 @@
             },
             {
                 "id": "000000079:smite-focused-witchfire",
+                "line": 3,
                 "name": "Smite – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000079",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Smite – focused witchfire",
                         "attributes": [
@@ -209,12 +215,14 @@
             },
             {
                 "id": "000000079:storm-bolter",
+                "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000079",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -238,12 +246,14 @@
             },
             {
                 "id": "000000079:force-weapon",
+                "line": 5,
                 "name": "Force weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000079",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Force weapon",
                         "attributes": [
@@ -312,14 +322,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

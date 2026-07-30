@@ -82,12 +82,14 @@
         "weapons": [
             {
                 "id": "000000530:staff-of-tomorrow",
+                "line": 1,
                 "name": "Staff of Tomorrow",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000530",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of Tomorrow",
                         "attributes": [
@@ -156,10 +158,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

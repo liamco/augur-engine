@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000002752:toxinjector-harpoon",
+                "line": 1,
                 "name": "Toxinjector Harpoon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002752",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Toxinjector Harpoon",
                         "attributes": [
@@ -99,12 +101,14 @@
             },
             {
                 "id": "000002752:monstrous-scything-talons",
+                "line": 2,
                 "name": "Monstrous scything talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002752",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Monstrous scything talons",
                         "attributes": [],
@@ -126,12 +130,14 @@
             },
             {
                 "id": "000002752:toxinjector-harpoon-2",
+                "line": 3,
                 "name": "Toxinjector harpoon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002752",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Toxinjector harpoon",
                         "attributes": [
@@ -200,14 +206,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000000707",
             "name": "Shadow in the Warp",
             "type": "Faction"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

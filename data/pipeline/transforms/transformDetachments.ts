@@ -6,6 +6,7 @@ import type {
     ParsedEnhancement,
     ParsedDetachmentAbility,
 } from "../types";
+import { slugify } from "../utils/slugify";
 
 /**
  * Strip detachment prefix from stratagem type.
@@ -62,10 +63,25 @@ function transformDetachmentAbility(raw: {
     };
 }
 
+/**
+ * The detachment's own id lives only on its child entries, which all agree on it
+ * (verified across all 64 detachments). Any populated array will do.
+ */
+function resolveDetachmentId(det: RawFactionDetachment): string {
+    for (const entries of [det.abilities, det.stratagems, det.enhancements]) {
+        for (const entry of entries ?? []) {
+            if (entry?.detachmentId) return entry.detachmentId;
+        }
+    }
+    return "";
+}
+
 export function transformDetachments(
     rawDetachments: RawFactionDetachment[],
 ): ParsedDetachment[] {
     return rawDetachments.map((det) => ({
+        id: resolveDetachmentId(det),
+        slug: slugify(det.name),
         name: det.name,
         // Every ability, not just the first: 4 detachments carry a second rule
         // plus a separate "Restrictions" record. Others fold their restrictions

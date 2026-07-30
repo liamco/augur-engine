@@ -110,12 +110,14 @@
         "weapons": [
             {
                 "id": "000002291:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002291",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -139,12 +141,14 @@
             },
             {
                 "id": "000002291:master-crafted-plasma-cannon",
+                "line": 2,
                 "name": "Master-crafted plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002291",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted plasma cannon",
                         "attributes": [
@@ -168,12 +172,14 @@
             },
             {
                 "id": "000002291:twin-storm-bolter",
+                "line": 3,
                 "name": "Twin storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002291",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin storm bolter",
                         "attributes": [
@@ -198,12 +204,14 @@
             },
             {
                 "id": "000002291:the-raven-sword",
+                "line": 4,
                 "name": "The Raven Sword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002291",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Raven Sword",
                         "attributes": [
@@ -272,10 +280,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

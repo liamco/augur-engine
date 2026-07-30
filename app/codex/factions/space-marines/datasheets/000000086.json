@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000086:twin-firestrike-autocannon",
+                "line": 1,
                 "name": "Twin Firestrike autocannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000086",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin Firestrike autocannon",
                         "attributes": [
@@ -96,12 +98,14 @@
             },
             {
                 "id": "000000086:twin-firestrike-las-talon",
+                "line": 2,
                 "name": "Twin Firestrike las-talon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000086",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin Firestrike las-talon",
                         "attributes": [
@@ -125,12 +129,14 @@
             },
             {
                 "id": "000000086:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000086",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -201,6 +207,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

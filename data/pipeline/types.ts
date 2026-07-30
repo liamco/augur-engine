@@ -39,6 +39,9 @@ export interface RawWeaponProfile {
     lineInWargear: string;
     dice: string;
     name: string;
+    // Only present on multi-profile weapons (19 profiles): "standard"/"supercharge",
+    // "strike"/"sweep", "frag"/"krak".
+    profileName?: string;
     description: string;
     range: string;
     type: string;
@@ -190,17 +193,30 @@ export interface RawFaction {
     slug: string;
     name: string;
     link: string;
+    /** Timestamp of the source data snapshot, e.g. "2026-01-14 00:30:31". */
+    dataVersion?: string;
     datasheets: RawDatasheetRef[];
     detachments: RawFactionDetachment[];
 }
 
 // Parsed output types (subset of TestUnit that the pipeline produces)
 
+/**
+ * Which datasheets a detachment, stratagem, enhancement or detachment ability
+ * applies to. "all" means every datasheet in the faction; otherwise whichever of
+ * include/exclude is the shorter list.
+ */
+export type DatasheetEligibility =
+    | "all"
+    | { include: string[] }
+    | { exclude: string[] };
+
 export interface ParsedDetachmentAbility {
     id: string;
     name: string;
     description: string;
     legend: string;
+    eligibleDatasheets?: DatasheetEligibility;
 }
 
 export interface ParsedStratagem {
@@ -212,6 +228,8 @@ export interface ParsedStratagem {
     turn: string;
     phase: string;
     description: string;
+    // Absent on core stratagems, which apply regardless of datasheet.
+    eligibleDatasheets?: DatasheetEligibility;
 }
 
 export interface ParsedEnhancement {
@@ -220,13 +238,25 @@ export interface ParsedEnhancement {
     cost: number;
     legend: string;
     description: string;
+    eligibleDatasheets?: DatasheetEligibility;
 }
 
 export interface ParsedDetachment {
+    /** Source detachmentId, lifted from the detachment's child entries. */
+    id: string;
+    /**
+     * Slug derived from `name` via slugify() and used for the output filename.
+     * Differs from the source slug only in apostrophe handling — we drop them
+     * ("lions-blade-task-force") where the source dashes them
+     * ("lion-s-blade-task-force").
+     */
+    slug: string;
     name: string;
     abilities: ParsedDetachmentAbility[];
     stratagems: ParsedStratagem[];
     enhancements: ParsedEnhancement[];
+    /** Union of the eligibility of everything the detachment contains. */
+    eligibleDatasheets?: DatasheetEligibility;
 }
 
 export interface DatasheetRef {

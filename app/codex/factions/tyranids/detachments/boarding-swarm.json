@@ -1,11 +1,23 @@
 {
+    "id": "000000974",
+    "slug": "boarding-swarm",
     "name": "Boarding Swarm",
     "abilities": [
         {
             "id": "000009689",
             "name": "Priority Predation",
             "description": "Each time an enemy unit within Engagement Range of one or more <span class=\"kwb\">TYRANIDS</span> units from your army is selected to Fall Back, after that enemy unit has made that Fall Back move, for each of those <span class=\"kwb\">TYRANIDS</span> units, if there are no other enemy units within Engagement Range of it, it can make a Normal move of up to 3\".",
-            "legend": "As these cunning vanguard predators move deeper into the prey vessel, they adapt their hunting patterns at need. They run down those victims worthy of slaughter while leaving lesser enemies to flee into the dark even as the Tyranids move away in search of far worthier prey."
+            "legend": "As these cunning vanguard predators move deeper into the prey vessel, they adapt their hunting patterns at need. They run down those victims worthy of slaughter while leaving lesser enemies to flee into the dark even as the Tyranids move away in search of far worthier prey.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000469",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000002693",
+                    "000002753"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +29,17 @@
             "legend": "These warrior organisms employ agility and stealth in place of resilience, weaving around their victims' blows and exploiting the tangled internal structures of the voidship to their advantage.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have a 5+ invulnerable save."
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have a 5+ invulnerable save.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000469",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000002693",
+                    "000002753"
+                ]
+            }
         },
         {
             "id": "000009691005",
@@ -27,7 +49,17 @@
             "legend": "The internal hatchways of prey voidships make excellent ambush sites for vanguard organisms.",
             "turn": "Opponent’s turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit opens a Hatchway.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is within 3\" of that Hatchway and is not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can make a Pounce move. To do so, your unit can be moved up to 3\", but must end that move as close as possible to that Hatchway. When doing so, those models can be moved within Engagement Range of that enemy unit, but only that enemy unit."
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit opens a Hatchway.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is within 3\" of that Hatchway and is not within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can make a Pounce move. To do so, your unit can be moved up to 3\", but must end that move as close as possible to that Hatchway. When doing so, those models can be moved within Engagement Range of that enemy unit, but only that enemy unit.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000469",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000002693",
+                    "000002753"
+                ]
+            }
         },
         {
             "id": "000009691004",
@@ -37,7 +69,17 @@
             "legend": "As they break the prey's lines, these organisms seek key strategic sites to tear apart.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after a <span class=\"kwb\">TYRANIDS</span> unit from your army destroys an enemy unit.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> unit.<br><br><b>EFFECT:</b> If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 3\". After that move, if your unit is within range of an objective marker and no enemy units are within range of that objective marker, that objective marker is Secured by your army."
+            "description": "<b>WHEN:</b> Fight phase, just after a <span class=\"kwb\">TYRANIDS</span> unit from your army destroys an enemy unit.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> unit.<br><br><b>EFFECT:</b> If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 3\". After that move, if your unit is within range of an objective marker and no enemy units are within range of that objective marker, that objective marker is Secured by your army.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000469",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000002693",
+                    "000002753"
+                ]
+            }
         },
         {
             "id": "000009691003",
@@ -47,7 +89,17 @@
             "legend": "These organisms contain additional adrenal biomorphs, which send them into a final killing frenzy just before death.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6. On a 5+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6. On a 5+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000469",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000002693",
+                    "000002753"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -56,7 +108,22 @@
             "name": "Monoform Predators",
             "cost": 0,
             "legend": "These hunter organisms are already perfectly tailored to their task. The Hive Mind does not waste biomass in altering them further.",
-            "description": "TYRANiDS models in this Detachment cannot be given Enhancements."
+            "description": "TYRANiDS models in this Detachment cannot be given Enhancements.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000479"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "include": [
+            "000000469",
+            "000000473",
+            "000000479",
+            "000000482",
+            "000002693",
+            "000002753"
+        ]
+    }
 }

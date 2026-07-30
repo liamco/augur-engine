@@ -49,6 +49,31 @@ describe("transformDetachments", () => {
         ],
     };
 
+    it("slugs the name itself, dropping apostrophes rather than dashing them", () => {
+        const curly: RawFactionDetachment = {
+            ...rawDetachment,
+            name: "Emperor’s Shield",
+            // The source's own slug dashes the apostrophe ("emperor-s-shield");
+            // we prefer it removed.
+            slug: "emperor-s-shield",
+        };
+
+        expect(transformDetachments([curly])[0].slug).toBe("emperors-shield");
+    });
+
+    it("lifts the detachment id from its child entries", () => {
+        expect(transformDetachments([rawDetachment])[0].id).toBe("000000771");
+    });
+
+    it("still resolves an id when the detachment has no abilities", () => {
+        const noAbilities: RawFactionDetachment = {
+            ...rawDetachment,
+            abilities: [],
+        };
+
+        expect(transformDetachments([noAbilities])[0].id).toBe("000000771");
+    });
+
     it("transforms detachment with abilities, stratagems, and enhancements", () => {
         const result = transformDetachments([rawDetachment]);
         expect(result).toHaveLength(1);

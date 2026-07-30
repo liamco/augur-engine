@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000000475:warp-blast-witchfire",
+                "line": 1,
                 "name": "Warp Blast – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000475",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Warp Blast – witchfire",
                         "attributes": [
@@ -100,12 +102,14 @@
             },
             {
                 "id": "000000475:warp-blast-focused-witchfire",
+                "line": 2,
                 "name": "Warp Blast – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000475",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Warp Blast – focused witchfire",
                         "attributes": [
@@ -130,12 +134,14 @@
             },
             {
                 "id": "000000475:chitinous-claws-and-teeth",
+                "line": 3,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000475",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chitinous claws and teeth",
                         "attributes": [],
@@ -212,10 +218,12 @@
     ],
     "abilities": [
         {
+            "id": "000000707",
             "name": "Shadow in the Warp",
             "type": "Faction"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

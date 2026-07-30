@@ -68,12 +68,14 @@
         "weapons": [
             {
                 "id": "000002109:enmitic-annihilator",
+                "line": 1,
                 "name": "Enmitic annihilator",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002109",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Enmitic annihilator",
                         "attributes": [
@@ -97,12 +99,14 @@
             },
             {
                 "id": "000002109:flensing-claw",
+                "line": 2,
                 "name": "Flensing claw",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002109",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Flensing claw",
                         "attributes": [],
@@ -124,12 +128,14 @@
             },
             {
                 "id": "000002109:hyperphase-harvester",
+                "line": 3,
                 "name": "Hyperphase harvester",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002109",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hyperphase harvester",
                         "attributes": [],
@@ -196,10 +202,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

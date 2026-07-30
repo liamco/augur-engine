@@ -85,12 +85,14 @@
         "weapons": [
             {
                 "id": "000000155:fury-of-the-ancients-witchfire",
+                "line": 1,
                 "name": "Fury of the Ancients – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000155",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Fury of the Ancients – witchfire",
                         "attributes": [
@@ -116,12 +118,14 @@
             },
             {
                 "id": "000000155:fury-of-the-ancients-focused-witchfire",
+                "line": 2,
                 "name": "Fury of the Ancients – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000155",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Fury of the Ancients – focused witchfire",
                         "attributes": [
@@ -148,12 +152,14 @@
             },
             {
                 "id": "000000155:plasma-pistol-standard",
+                "line": 3,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000155",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -177,12 +183,14 @@
             },
             {
                 "id": "000000155:plasma-pistol-supercharge",
+                "line": 4,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000155",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -207,12 +215,14 @@
             },
             {
                 "id": "000000155:vitarus",
+                "line": 5,
                 "name": "Vitarus",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000155",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Vitarus",
                         "attributes": [
@@ -282,18 +292,22 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008340",
             "name": "Fights First",
             "type": "Core"
         },
         {
+            "id": "000008336",
             "name": "Lone Operative",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

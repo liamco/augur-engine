@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000000482:ravener-claws-and-talons",
+                "line": 1,
                 "name": "Ravener claws and talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000482",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Ravener claws and talons",
                         "attributes": [
@@ -146,10 +148,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

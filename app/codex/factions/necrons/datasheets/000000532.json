@@ -81,12 +81,14 @@
         "weapons": [
             {
                 "id": "000000532:empathic-obliterator",
+                "line": 1,
                 "name": "Empathic Obliterator",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000532",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Empathic Obliterator",
                         "attributes": [
@@ -155,10 +157,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

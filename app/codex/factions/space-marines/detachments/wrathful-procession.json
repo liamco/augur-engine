@@ -1,11 +1,18 @@
 {
+    "id": "000001006",
+    "slug": "wrathful-procession",
     "name": "Wrathful Procession",
     "abilities": [
         {
             "id": "000009842",
             "name": "Zealous Litanies",
             "description": "At the start of the battle round, you can select one of the Litanies listed below. If you do, until the end of the battle round, that Litany is active and its effects apply to all Adeptus Astartes Infantry and Adeptus Astartes Mounted units from your army.<br><br><span class=\"hi_custom\">Chorus of Relentless Hate</span><br>Add 2\" to the Move characteristic of models in this unit and add 1 to Advance rolls made for it.<br><br><span class=\"hi_custom\">Rite of Perfervid Wrath</span><br>Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.<br><br><span class=\"kwb\">CHANT</span> <span class=\"kwb2\">OF</span> <span class=\"kwb\">DEATHLESS</span> <span class=\"kwb\">DEVOTION</span><br>Models in this unit have a 5+ invulnerable save against ranged attacks.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Black Templars units, but it cannot include <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
-            "legend": "Employing prayer as other warriors might use combat stimms, the Black Templars roar ritualised words of devotion that whip their ferocity and battle frenzy to near preternatural heights."
+            "legend": "Employing prayer as other warriors might use combat stimms, the Black Templars roar ritualised words of devotion that whip their ferocity and battle frenzy to near preternatural heights.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +24,12 @@
             "legend": "All the enemy’s skill, cunning and trickery come to naught in the face of the Black Templars’ direct and unrelenting brutality.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, re-roll a Hit roll of 1 and you can ignore any or all modifiers to the following: that attack’s Weapon Skill characteristic; the Hit roll; the Wound roll."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, re-roll a Hit roll of 1 and you can ignore any or all modifiers to the following: that attack’s Weapon Skill characteristic; the Hit roll; the Wound roll.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000009844004",
@@ -27,7 +39,12 @@
             "legend": "There is nowhere that the architects of heresy can hide from the righteous judgement of the Black Templars.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000009844003",
@@ -37,7 +54,12 @@
             "legend": "The belligerence and transhuman physiologies of the Adeptus Astartes make them unyielding foes.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000009844002",
@@ -47,7 +69,12 @@
             "legend": "So powerfully gripped by holy fervour are these warriors that they fight on through even the most grievous wounds to body and mind.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase, just after a mortal wound is allocated to an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."
+            "description": "<b>WHEN:</b> Any phase, just after a mortal wound is allocated to an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000009844007",
@@ -57,7 +84,123 @@
             "legend": "In the crucial moment, these battle-brothers switch to the most apposite devotional litany just as they might select the correct weapon from the Chapter’s armouries.",
             "turn": "Your turn",
             "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army.<br><br><b>EFFECT:</b> Select the Chorus of Relentless Hate, Rite of Perfervid Wrath or Chant of Deathless Devotion Litany. Until the end of the battle round, that Litany is active for your unit instead of any other Litany that is active for your army."
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army.<br><br><b>EFFECT:</b> Select the Chorus of Relentless Hate, Rite of Perfervid Wrath or Chant of Deathless Devotion Litany. Until the end of the battle round, that Litany is active for your unit instead of any other Litany that is active for your army.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000065",
+                    "000000066",
+                    "000000067",
+                    "000000072",
+                    "000000084",
+                    "000000085",
+                    "000000086",
+                    "000000087",
+                    "000000091",
+                    "000000092",
+                    "000000093",
+                    "000000096",
+                    "000000097",
+                    "000000098",
+                    "000000099",
+                    "000000107",
+                    "000000110",
+                    "000000111",
+                    "000000113",
+                    "000000114",
+                    "000000117",
+                    "000000120",
+                    "000000122",
+                    "000000123",
+                    "000000124",
+                    "000000129",
+                    "000000131",
+                    "000000132",
+                    "000000136",
+                    "000000138",
+                    "000000139",
+                    "000000146",
+                    "000000154",
+                    "000000166",
+                    "000000167",
+                    "000000168",
+                    "000000238",
+                    "000000239",
+                    "000000240",
+                    "000000242",
+                    "000000302",
+                    "000000314",
+                    "000000321",
+                    "000000323",
+                    "000000325",
+                    "000000358",
+                    "000001153",
+                    "000001156",
+                    "000001161",
+                    "000001163",
+                    "000001164",
+                    "000001168",
+                    "000001169",
+                    "000001175",
+                    "000001178",
+                    "000001179",
+                    "000001184",
+                    "000001185",
+                    "000001188",
+                    "000001189",
+                    "000001190",
+                    "000001191",
+                    "000001192",
+                    "000001347",
+                    "000001423",
+                    "000001607",
+                    "000001608",
+                    "000001609",
+                    "000001610",
+                    "000001666",
+                    "000001667",
+                    "000001825",
+                    "000001991",
+                    "000002102",
+                    "000002173",
+                    "000002252",
+                    "000002258",
+                    "000002267",
+                    "000002268",
+                    "000002269",
+                    "000002568",
+                    "000002682",
+                    "000002700",
+                    "000002704",
+                    "000002705",
+                    "000002706",
+                    "000002710",
+                    "000002711",
+                    "000002714",
+                    "000002715",
+                    "000002717",
+                    "000002719",
+                    "000002720",
+                    "000002721",
+                    "000002722",
+                    "000002723",
+                    "000002724",
+                    "000002727",
+                    "000002728",
+                    "000002729",
+                    "000002786",
+                    "000002787",
+                    "000002788",
+                    "000002789",
+                    "000002790",
+                    "000002791",
+                    "000002801",
+                    "000002805",
+                    "000003835",
+                    "000003875",
+                    "000004133",
+                    "000004139"
+                ]
+            }
         },
         {
             "id": "000009844006",
@@ -67,7 +210,12 @@
             "legend": "The sheer momentum and ferocity of so many charging, armoured killers are almost impossible to stop, carrying them forward through rank after rank of the heretical foe.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase and is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Until the end of the phase, when determining which models in your unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase and is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Until the end of the phase, when determining which models in your unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +224,122 @@
             "name": "Pyrebrand",
             "cost": 25,
             "legend": "Within this relic burns a seemingly eternal flame, believed to have first been lit by Sigismund himself. Its light burns the sight from the foes’ eyes just as its tongues of flame have ignited countless pyres.",
-            "description": "Black Templars model only. Models in the bearer’s unit have the Stealth ability."
+            "description": "Black Templars model only. Models in the bearer’s unit have the Stealth ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000009843003",
             "name": "Sacred Rage",
             "cost": 30,
             "legend": "So all-consuming is this warrior’s hatred of the foe, so infectious his rage at their continued existence, that it grips those who fight alongside him and goads them to smite their enemies all the more swiftly.",
-            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000009843004",
             "name": "Taramond’s Censer",
             "cost": 15,
             "legend": "Though the Black Templars are acclimatised to the acrid chemical incense burned within this iron thurible, their foes are not. Its fumes trigger nightmare visions and crippling terror amongst their ranks.",
-            "description": "Black Templars model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle-shock test. When doing so, subtract 1 from the result."
+            "description": "Black Templars model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle-shock test. When doing so, subtract 1 from the result.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000009843005",
             "name": "Benediction of Fury",
             "cost": 10,
             "legend": "Borne through a dozen bloody and hard-fought crusades, this crozius arcanum’s unique empathokinetic circuitry has absorbed the bellicosity and righteous wrath of every Chaplain who has ever wielded it. As a result, it now strikes with the force of a thunderbolt.",
-            "description": "Chaplain model only. The bearer’s melee weapons have the [DEVASTATING WOUNDS] ability."
+            "description": "Chaplain model only. The bearer’s melee weapons have the [DEVASTATING WOUNDS] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000001174",
+                    "000004135"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "exclude": [
+            "000003875"
+        ]
+    }
 }

@@ -175,12 +175,14 @@
         "weapons": [
             {
                 "id": "000000160:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000160",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -204,12 +206,14 @@
             },
             {
                 "id": "000000160:heaven-s-teeth",
+                "line": 2,
                 "name": "Heaven’s Teeth",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000160",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heaven’s Teeth",
                         "attributes": [
@@ -278,10 +282,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

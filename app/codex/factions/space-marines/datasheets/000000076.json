@@ -75,12 +75,14 @@
         "weapons": [
             {
                 "id": "000000076:combi-weapon",
+                "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000076",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000000076:paired-combat-blades",
+                "line": 2,
                 "name": "Paired combat blades",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000076",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Paired combat blades",
                         "attributes": [
@@ -181,22 +185,27 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008336",
             "name": "Lone Operative",
             "type": "Core"
         },
         {
+            "id": "000008337",
             "name": "Stealth",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

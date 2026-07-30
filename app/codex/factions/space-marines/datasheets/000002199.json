@@ -180,12 +180,14 @@
         "weapons": [
             {
                 "id": "000002199:gauntlets-of-ultramar",
+                "line": 1,
                 "name": "Gauntlets of Ultramar",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002199",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauntlets of Ultramar",
                         "attributes": [
@@ -210,12 +212,14 @@
             },
             {
                 "id": "000002199:gauntlets-of-ultramar-2",
+                "line": 2,
                 "name": "Gauntlets of Ultramar",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002199",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauntlets of Ultramar",
                         "attributes": [
@@ -239,12 +243,14 @@
             },
             {
                 "id": "000002199:victrix-power-sword",
+                "line": 3,
                 "name": "Victrix power sword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002199",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Victrix power sword",
                         "attributes": [],
@@ -336,10 +342,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

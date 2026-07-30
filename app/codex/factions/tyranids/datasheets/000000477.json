@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000000477:flamespurt",
+                "line": 1,
                 "name": "Flamespurt",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000477",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Flamespurt",
                         "attributes": [
@@ -91,12 +93,14 @@
             },
             {
                 "id": "000000477:chitin-barbed-limbs",
+                "line": 2,
                 "name": "Chitin-barbed limbs",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000477",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chitin-barbed limbs",
                         "attributes": [],
@@ -171,10 +175,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

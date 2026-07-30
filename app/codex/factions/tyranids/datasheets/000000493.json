@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000000493:bio-electric-pulse",
+                "line": 1,
                 "name": "Bio-electric pulse",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000493",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bio-electric pulse",
                         "attributes": [
@@ -99,12 +101,14 @@
             },
             {
                 "id": "000000493:trygon-scything-talons",
+                "line": 2,
                 "name": "Trygon scything talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000493",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Trygon scything talons",
                         "attributes": [],
@@ -171,10 +175,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

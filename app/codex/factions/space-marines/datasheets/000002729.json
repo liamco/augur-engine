@@ -82,12 +82,14 @@
         "weapons": [
             {
                 "id": "000002729:twin-lascannon",
+                "line": 1,
                 "name": "Twin lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002729",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lascannon",
                         "attributes": [
@@ -111,12 +113,14 @@
             },
             {
                 "id": "000002729:xiphon-missile-battery",
+                "line": 2,
                 "name": "Xiphon missile battery",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002729",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Xiphon missile battery",
                         "attributes": [
@@ -140,12 +144,14 @@
             },
             {
                 "id": "000002729:armoured-hull",
+                "line": 3,
                 "name": "Armoured hull",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002729",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured hull",
                         "attributes": [],
@@ -212,10 +218,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

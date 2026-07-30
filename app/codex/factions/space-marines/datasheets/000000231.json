@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000000231:great-weapon-of-the-unforgiven",
+                "line": 1,
                 "name": "Great weapon of the Unforgiven",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000231",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Great weapon of the Unforgiven",
                         "attributes": [
@@ -119,12 +121,14 @@
             },
             {
                 "id": "000000231:mace-of-absolution",
+                "line": 2,
                 "name": "Mace of absolution",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000231",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Mace of absolution",
                         "attributes": [
@@ -149,12 +153,14 @@
             },
             {
                 "id": "000000231:power-weapon",
+                "line": 3,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000231",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -176,12 +182,14 @@
             },
             {
                 "id": "000000231:relic-weapon",
+                "line": 4,
                 "name": "Relic weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000231",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Relic weapon",
                         "attributes": [
@@ -256,10 +264,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

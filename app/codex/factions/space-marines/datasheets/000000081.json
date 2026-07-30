@@ -140,12 +140,14 @@
         "weapons": [
             {
                 "id": "000000081:artisan-plasma-pistol",
+                "line": 1,
                 "name": "Artisan plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000081",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Artisan plasma pistol",
                         "attributes": [
@@ -169,12 +171,14 @@
             },
             {
                 "id": "000000081:talassarian-tempest-blade",
+                "line": 2,
                 "name": "Talassarian Tempest Blade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000081",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Talassarian Tempest Blade",
                         "attributes": [
@@ -243,10 +247,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -73,12 +73,14 @@
         "weapons": [
             {
                 "id": "000000462:old-one-eye-s-claws-and-talons-strike",
+                "line": 1,
                 "name": "Old One Eye’s claws and talons – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000462",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Old One Eye’s claws and talons – strike",
                         "attributes": [],
@@ -100,12 +102,14 @@
             },
             {
                 "id": "000000462:old-one-eye-s-claws-and-talons-sweep",
+                "line": 2,
                 "name": "Old One Eye’s claws and talons – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000462",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Old One Eye’s claws and talons – sweep",
                         "attributes": [],
@@ -172,14 +176,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

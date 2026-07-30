@@ -78,12 +78,14 @@
         "weapons": [
             {
                 "id": "000000322:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000322",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -107,12 +109,14 @@
             },
             {
                 "id": "000000322:boltgun",
+                "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000322",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -134,12 +138,14 @@
             },
             {
                 "id": "000000322:plasma-pistol-standard",
+                "line": 3,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000322",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -163,12 +169,14 @@
             },
             {
                 "id": "000000322:plasma-pistol-supercharge",
+                "line": 4,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000322",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -193,12 +201,14 @@
             },
             {
                 "id": "000000322:teeth-and-claws",
+                "line": 5,
                 "name": "Teeth and claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000322",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Teeth and claws",
                         "attributes": [
@@ -222,12 +232,14 @@
             },
             {
                 "id": "000000322:wolf-guard-weapon",
+                "line": 6,
                 "name": "Wolf Guard weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000322",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Wolf Guard weapon",
                         "attributes": [],
@@ -304,6 +316,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

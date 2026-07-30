@@ -81,12 +81,14 @@
         "weapons": [
             {
                 "id": "000002352:staff-of-light",
+                "line": 1,
                 "name": "Staff of light",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002352",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of light",
                         "attributes": [],
@@ -108,12 +110,14 @@
             },
             {
                 "id": "000002352:staff-of-light-2",
+                "line": 2,
                 "name": "Staff of light",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002352",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of light",
                         "attributes": [],
@@ -180,10 +184,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

@@ -103,12 +103,14 @@
         "weapons": [
             {
                 "id": "000000119:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000119",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -132,12 +134,14 @@
             },
             {
                 "id": "000000119:smite-witchfire",
+                "line": 2,
                 "name": "Smite – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000119",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Smite – witchfire",
                         "attributes": [
@@ -161,12 +165,14 @@
             },
             {
                 "id": "000000119:smite-focused-witchfire",
+                "line": 3,
                 "name": "Smite – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000119",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Smite – focused witchfire",
                         "attributes": [
@@ -192,12 +198,14 @@
             },
             {
                 "id": "000000119:force-weapon",
+                "line": 4,
                 "name": "Force weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000119",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Force weapon",
                         "attributes": [
@@ -266,14 +274,17 @@
     ],
     "abilities": [
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

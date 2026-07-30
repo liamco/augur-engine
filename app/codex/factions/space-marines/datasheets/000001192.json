@@ -83,12 +83,14 @@
         "weapons": [
             {
                 "id": "000001192:assault-cannon",
+                "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault cannon",
                         "attributes": [
@@ -112,12 +114,14 @@
             },
             {
                 "id": "000001192:dreadnought-inferno-cannon",
+                "line": 2,
                 "name": "Dreadnought inferno cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Dreadnought inferno cannon",
                         "attributes": [
@@ -142,12 +146,14 @@
             },
             {
                 "id": "000001192:heavy-flamer",
+                "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy flamer",
                         "attributes": [
@@ -172,12 +178,14 @@
             },
             {
                 "id": "000001192:heavy-plasma-cannon-standard",
+                "line": 4,
                 "name": "Heavy plasma cannon – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy plasma cannon – standard",
                         "attributes": [
@@ -201,12 +209,14 @@
             },
             {
                 "id": "000001192:heavy-plasma-cannon-supercharge",
+                "line": 5,
                 "name": "Heavy plasma cannon – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 5,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Heavy plasma cannon – supercharge",
                         "attributes": [
@@ -231,12 +241,14 @@
             },
             {
                 "id": "000001192:multi-melta",
+                "line": 6,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -260,12 +272,14 @@
             },
             {
                 "id": "000001192:storm-bolter",
+                "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -289,12 +303,14 @@
             },
             {
                 "id": "000001192:twin-lascannon",
+                "line": 8,
                 "name": "Twin lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lascannon",
                         "attributes": [
@@ -318,12 +334,14 @@
             },
             {
                 "id": "000001192:armoured-feet",
+                "line": 9,
                 "name": "Armoured feet",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured feet",
                         "attributes": [],
@@ -345,12 +363,14 @@
             },
             {
                 "id": "000001192:dreadnought-combat-weapon",
+                "line": 10,
                 "name": "Dreadnought combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001192",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Dreadnought combat weapon",
                         "attributes": [],
@@ -417,10 +437,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

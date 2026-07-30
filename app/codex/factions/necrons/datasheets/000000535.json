@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000535:gauss-blaster",
+                "line": 1,
                 "name": "Gauss blaster",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000535",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss blaster",
                         "attributes": [
@@ -91,12 +93,14 @@
             },
             {
                 "id": "000000535:tesla-carbine",
+                "line": 2,
                 "name": "Tesla carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000535",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla carbine",
                         "attributes": [
@@ -121,12 +125,14 @@
             },
             {
                 "id": "000000535:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000535",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -197,6 +203,7 @@
     ],
     "abilities": [
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

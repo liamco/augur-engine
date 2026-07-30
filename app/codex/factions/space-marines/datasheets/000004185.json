@@ -85,12 +85,14 @@
         "weapons": [
             {
                 "id": "000004185:master-crafted-bolt-carbine",
+                "line": 1,
                 "name": "Master-crafted bolt carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004185",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted bolt carbine",
                         "attributes": [],
@@ -112,12 +114,14 @@
             },
             {
                 "id": "000004185:blades-of-honour",
+                "line": 2,
                 "name": "Blades of honour",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004185",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blades of honour",
                         "attributes": [
@@ -142,12 +146,14 @@
             },
             {
                 "id": "000004185:master-crafted-power-weapon",
+                "line": 3,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004185",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [],
@@ -230,6 +236,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

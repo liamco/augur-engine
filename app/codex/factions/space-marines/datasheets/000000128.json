@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000000128:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000128",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -118,12 +120,14 @@
             },
             {
                 "id": "000000128:marksman-bolt-carbine",
+                "line": 2,
                 "name": "Marksman bolt carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000128",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Marksman bolt carbine",
                         "attributes": [
@@ -147,12 +151,14 @@
             },
             {
                 "id": "000000128:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000128",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -229,10 +235,12 @@
     ],
     "abilities": [
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

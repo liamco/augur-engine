@@ -97,12 +97,14 @@
         "weapons": [
             {
                 "id": "000000285:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000285",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -126,12 +128,14 @@
             },
             {
                 "id": "000000285:frostfang",
+                "line": 2,
                 "name": "Frostfang",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000285",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Frostfang",
                         "attributes": [
@@ -200,10 +204,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

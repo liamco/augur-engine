@@ -65,12 +65,14 @@
         "weapons": [
             {
                 "id": "000000126:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000126",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -94,12 +96,14 @@
             },
             {
                 "id": "000000126:pyreblaster",
+                "line": 2,
                 "name": "Pyreblaster",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000126",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Pyreblaster",
                         "attributes": [
@@ -124,12 +128,14 @@
             },
             {
                 "id": "000000126:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000126",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -206,6 +212,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

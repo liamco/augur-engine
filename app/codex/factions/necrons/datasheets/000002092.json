@@ -65,12 +65,14 @@
         "weapons": [
             {
                 "id": "000002092:eldritch-lance",
+                "line": 1,
                 "name": "Eldritch lance",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002092",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Eldritch lance",
                         "attributes": [],
@@ -92,12 +94,14 @@
             },
             {
                 "id": "000002092:eldritch-lance-2",
+                "line": 2,
                 "name": "Eldritch lance",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002092",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Eldritch lance",
                         "attributes": [],
@@ -119,12 +123,14 @@
             },
             {
                 "id": "000002092:impaling-legs",
+                "line": 3,
                 "name": "Impaling legs",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002092",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Impaling legs",
                         "attributes": [
@@ -193,10 +199,12 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

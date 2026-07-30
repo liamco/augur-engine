@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000001523:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001523",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000001523:missile-launcher-frag",
+                "line": 2,
                 "name": "Missile launcher – frag",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001523",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Missile launcher – frag",
                         "attributes": [
@@ -131,12 +135,14 @@
             },
             {
                 "id": "000001523:missile-launcher-krak",
+                "line": 3,
                 "name": "Missile launcher – krak",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001523",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Missile launcher – krak",
                         "attributes": [
@@ -160,12 +166,14 @@
             },
             {
                 "id": "000001523:scout-sniper-rifle",
+                "line": 4,
                 "name": "Scout sniper rifle",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001523",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Scout sniper rifle",
                         "attributes": [
@@ -190,12 +198,14 @@
             },
             {
                 "id": "000001523:close-combat-weapon",
+                "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001523",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -272,14 +282,17 @@
     ],
     "abilities": [
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008337",
             "name": "Stealth",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000000318:assault-cannon",
+                "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000318",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault cannon",
                         "attributes": [
@@ -118,12 +120,14 @@
             },
             {
                 "id": "000000318:storm-bolter",
+                "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000318",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -147,12 +151,14 @@
             },
             {
                 "id": "000000318:master-crafted-power-weapon",
+                "line": 3,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000318",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [],
@@ -174,12 +180,14 @@
             },
             {
                 "id": "000000318:power-fist",
+                "line": 4,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000318",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -201,12 +209,14 @@
             },
             {
                 "id": "000000318:relic-greataxe",
+                "line": 5,
                 "name": "Relic greataxe",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000318",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Relic greataxe",
                         "attributes": [
@@ -230,12 +240,14 @@
             },
             {
                 "id": "000000318:twin-lightning-claws",
+                "line": 6,
                 "name": "Twin lightning claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000318",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lightning claws",
                         "attributes": [
@@ -314,10 +326,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

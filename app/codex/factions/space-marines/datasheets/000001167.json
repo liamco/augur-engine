@@ -97,12 +97,14 @@
         "weapons": [
             {
                 "id": "000001167:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001167",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -126,12 +128,14 @@
             },
             {
                 "id": "000001167:twin-boltgun",
+                "line": 2,
                 "name": "Twin boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001167",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin boltgun",
                         "attributes": [
@@ -155,12 +159,14 @@
             },
             {
                 "id": "000001167:master-crafted-power-weapon",
+                "line": 3,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001167",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [
@@ -229,10 +235,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

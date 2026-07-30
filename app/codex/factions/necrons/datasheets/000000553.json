@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000553:gauss-cannon",
+                "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000553",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss cannon",
                         "attributes": [
@@ -91,12 +93,14 @@
             },
             {
                 "id": "000000553:tesla-cannon",
+                "line": 2,
                 "name": "Tesla cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000553",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla cannon",
                         "attributes": [
@@ -120,12 +124,14 @@
             },
             {
                 "id": "000000553:twin-tesla-destructor",
+                "line": 3,
                 "name": "Twin tesla destructor",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000553",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin tesla destructor",
                         "attributes": [
@@ -150,12 +156,14 @@
             },
             {
                 "id": "000000553:armoured-bulk",
+                "line": 4,
                 "name": "Armoured bulk",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000553",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured bulk",
                         "attributes": [],
@@ -222,10 +230,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

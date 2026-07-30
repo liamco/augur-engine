@@ -76,12 +76,14 @@
         "weapons": [
             {
                 "id": "000004178:tremorglaive-reverberating-beam",
+                "line": 1,
                 "name": "Tremorglaive – reverberating beam",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004178",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tremorglaive – reverberating beam",
                         "attributes": [
@@ -105,12 +107,14 @@
             },
             {
                 "id": "000004178:tremorglaive-shock-wave-pulse",
+                "line": 2,
                 "name": "Tremorglaive – shock wave pulse",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004178",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Tremorglaive – shock wave pulse",
                         "attributes": [
@@ -135,12 +139,14 @@
             },
             {
                 "id": "000004178:tremorglaive",
+                "line": 3,
                 "name": "Tremorglaive",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004178",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tremorglaive",
                         "attributes": [],
@@ -207,10 +213,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

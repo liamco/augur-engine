@@ -99,12 +99,14 @@
         "weapons": [
             {
                 "id": "000003872:hellfire-extremis",
+                "line": 1,
                 "name": "Hellfire Extremis",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003872",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hellfire Extremis",
                         "attributes": [
@@ -131,12 +133,14 @@
             },
             {
                 "id": "000003872:master-crafted-power-weapon",
+                "line": 2,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003872",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [],
@@ -203,18 +207,22 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },
         {
+            "id": "000008521",
             "name": "Mission Tactics",
             "type": "Faction"
         },

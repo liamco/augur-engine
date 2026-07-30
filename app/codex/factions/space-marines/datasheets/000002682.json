@@ -82,12 +82,14 @@
         "weapons": [
             {
                 "id": "000002682:arma-luminis-bolt",
+                "line": 1,
                 "name": "Arma Luminis – bolt",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002682",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Arma Luminis – bolt",
                         "attributes": [
@@ -111,12 +113,14 @@
             },
             {
                 "id": "000002682:arma-luminis-plasma",
+                "line": 2,
                 "name": "Arma Luminis – plasma",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002682",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Arma Luminis – plasma",
                         "attributes": [
@@ -140,12 +144,14 @@
             },
             {
                 "id": "000002682:fealty-strike",
+                "line": 3,
                 "name": "Fealty – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002682",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Fealty – strike",
                         "attributes": [
@@ -169,12 +175,14 @@
             },
             {
                 "id": "000002682:fealty-sweep",
+                "line": 4,
                 "name": "Fealty – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002682",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Fealty – sweep",
                         "attributes": [
@@ -243,14 +251,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008340",
             "name": "Fights First",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

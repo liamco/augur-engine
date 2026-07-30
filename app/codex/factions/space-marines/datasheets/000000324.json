@@ -94,12 +94,14 @@
         "weapons": [
             {
                 "id": "000000324:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -123,12 +125,14 @@
             },
             {
                 "id": "000000324:flamer",
+                "line": 2,
                 "name": "Flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Flamer",
                         "attributes": [
@@ -153,12 +157,14 @@
             },
             {
                 "id": "000000324:grav-gun",
+                "line": 3,
                 "name": "Grav-gun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Grav-gun",
                         "attributes": [
@@ -182,12 +188,14 @@
             },
             {
                 "id": "000000324:meltagun",
+                "line": 4,
                 "name": "Meltagun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Meltagun",
                         "attributes": [
@@ -211,12 +219,14 @@
             },
             {
                 "id": "000000324:plasma-pistol-standard",
+                "line": 5,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -240,12 +250,14 @@
             },
             {
                 "id": "000000324:plasma-pistol-supercharge",
+                "line": 6,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -270,12 +282,14 @@
             },
             {
                 "id": "000000324:plasma-gun-standard",
+                "line": 7,
                 "name": "Plasma gun – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma gun – standard",
                         "attributes": [
@@ -299,12 +313,14 @@
             },
             {
                 "id": "000000324:plasma-gun-supercharge",
+                "line": 8,
                 "name": "Plasma gun – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 8,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma gun – supercharge",
                         "attributes": [
@@ -329,12 +345,14 @@
             },
             {
                 "id": "000000324:astartes-chainsword",
+                "line": 9,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -356,12 +374,14 @@
             },
             {
                 "id": "000000324:close-combat-weapon",
+                "line": 10,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -383,12 +403,14 @@
             },
             {
                 "id": "000000324:power-fist",
+                "line": 11,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 11,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -410,12 +432,14 @@
             },
             {
                 "id": "000000324:power-weapon",
+                "line": 12,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000324",
                         "line": 12,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -496,10 +520,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

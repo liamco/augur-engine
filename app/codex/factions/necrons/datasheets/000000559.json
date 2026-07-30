@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000559:cutting-beam",
+                "line": 1,
                 "name": "Cutting beam",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000559",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Cutting beam",
                         "attributes": [
@@ -96,12 +98,14 @@
             },
             {
                 "id": "000000559:voidblade",
+                "line": 2,
                 "name": "Voidblade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000559",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Voidblade",
                         "attributes": [],
@@ -172,10 +176,12 @@
     ],
     "abilities": [
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

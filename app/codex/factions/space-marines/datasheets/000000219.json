@@ -121,12 +121,14 @@
         "weapons": [
             {
                 "id": "000000219:master-crafted-storm-bolter",
+                "line": 1,
                 "name": "Master-crafted storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000219",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted storm bolter",
                         "attributes": [
@@ -151,12 +153,14 @@
             },
             {
                 "id": "000000219:the-sword-of-silence",
+                "line": 2,
                 "name": "The Sword of Silence",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000219",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Sword of Silence",
                         "attributes": [
@@ -225,14 +229,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

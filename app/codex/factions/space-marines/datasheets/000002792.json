@@ -124,12 +124,14 @@
         "weapons": [
             {
                 "id": "000002792:plasma-pistol-standard",
+                "line": 1,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002792",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -153,12 +155,14 @@
             },
             {
                 "id": "000002792:plasma-pistol-supercharge",
+                "line": 2,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002792",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -183,12 +187,14 @@
             },
             {
                 "id": "000002792:artificer-crozius",
+                "line": 3,
                 "name": "Artificer crozius",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002792",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Artificer crozius",
                         "attributes": [],
@@ -210,12 +216,14 @@
             },
             {
                 "id": "000002792:close-combat-weapon",
+                "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002792",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -307,14 +315,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008526",
             "name": "Templar Vows",
             "type": "Faction"
         },

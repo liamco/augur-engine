@@ -93,12 +93,14 @@
         "weapons": [
             {
                 "id": "000000166:blood-fist-bolt-rifles",
+                "line": 1,
                 "name": "Blood fist bolt rifles",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000166",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blood fist bolt rifles",
                         "attributes": [
@@ -122,12 +124,14 @@
             },
             {
                 "id": "000000166:twin-heavy-bolter",
+                "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000166",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -152,12 +156,14 @@
             },
             {
                 "id": "000000166:twin-icarus-ironhail-heavy-stubber",
+                "line": 3,
                 "name": "Twin Icarus ironhail heavy stubber",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000166",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin Icarus ironhail heavy stubber",
                         "attributes": [
@@ -183,12 +189,14 @@
             },
             {
                 "id": "000000166:twin-multi-melta",
+                "line": 4,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000166",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin multi-melta",
                         "attributes": [
@@ -213,12 +221,14 @@
             },
             {
                 "id": "000000166:blood-fists",
+                "line": 5,
                 "name": "Blood fists",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000166",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blood fists",
                         "attributes": [
@@ -242,14 +252,17 @@
             },
             {
                 "id": "000000166:blood-talons",
+                "line": 6,
                 "name": "Blood talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000166",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blood talons - strike",
+                        "profileName": "strike",
                         "attributes": [
                             "TWIN-LINKED"
                         ],
@@ -264,8 +277,10 @@
                     {
                         "datasheetId": "000000166",
                         "line": 7,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Blood talons - sweep",
+                        "profileName": "sweep",
                         "attributes": [
                             "TWIN-LINKED"
                         ],
@@ -332,14 +347,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

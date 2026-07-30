@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000110:boltgun",
+                "line": 1,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -94,12 +96,14 @@
             },
             {
                 "id": "000000110:graviton-cannon",
+                "line": 2,
                 "name": "Graviton cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Graviton cannon",
                         "attributes": [
@@ -125,12 +129,14 @@
             },
             {
                 "id": "000000110:laser-destroyer",
+                "line": 3,
                 "name": "Laser destroyer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Laser destroyer",
                         "attributes": [
@@ -154,12 +160,14 @@
             },
             {
                 "id": "000000110:quad-heavy-bolter",
+                "line": 4,
                 "name": "Quad heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Quad heavy bolter",
                         "attributes": [
@@ -185,12 +193,14 @@
             },
             {
                 "id": "000000110:quad-launcher-shatter-shells",
+                "line": 5,
                 "name": "Quad launcher – shatter shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Quad launcher – shatter shells",
                         "attributes": [
@@ -214,12 +224,14 @@
             },
             {
                 "id": "000000110:quad-launcher-thunderfire-shells",
+                "line": 6,
                 "name": "Quad launcher – thunderfire shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Quad launcher – thunderfire shells",
                         "attributes": [
@@ -245,12 +257,14 @@
             },
             {
                 "id": "000000110:close-combat-weapon",
+                "line": 7,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000110",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -317,6 +331,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

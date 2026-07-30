@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000001524:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001524",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000001524:chronus-servo-arm",
+                "line": 2,
                 "name": "Chronus’ servo-arm",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001524",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chronus’ servo-arm",
                         "attributes": [],
@@ -178,6 +182,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000000118:thunder-hammer",
+                "line": 1,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000118",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000000118:twin-lightning-claws",
+                "line": 2,
                 "name": "Twin lightning claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000118",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lightning claws",
                         "attributes": [
@@ -185,10 +189,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

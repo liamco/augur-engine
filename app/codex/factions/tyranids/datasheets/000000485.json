@@ -82,12 +82,14 @@
         "weapons": [
             {
                 "id": "000000485:stinger-salvoes",
+                "line": 1,
                 "name": "Stinger salvoes",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000485",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stinger salvoes",
                         "attributes": [],
@@ -109,12 +111,14 @@
             },
             {
                 "id": "000000485:twin-heavy-venom-cannon",
+                "line": 2,
                 "name": "Twin heavy venom cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000485",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy venom cannon",
                         "attributes": [
@@ -139,12 +143,14 @@
             },
             {
                 "id": "000000485:twin-stranglethorn-cannon",
+                "line": 3,
                 "name": "Twin stranglethorn cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000485",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin stranglethorn cannon",
                         "attributes": [
@@ -169,12 +175,14 @@
             },
             {
                 "id": "000000485:scything-wings",
+                "line": 4,
                 "name": "Scything wings",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000485",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Scything wings",
                         "attributes": [],
@@ -241,14 +249,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008342",
             "name": "Hover",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

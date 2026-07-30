@@ -1,11 +1,44 @@
 {
+    "id": "000000769",
+    "slug": "crusher-stampede",
     "name": "Crusher Stampede",
     "abilities": [
         {
             "id": "000008403",
             "name": "Enraged Behemoths",
             "description": "Each time a Tyranids Monster model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a <span class=\"kwb\">TYRANIDS</span> <span class=\"kwb\">MONSTER</span> unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.",
-            "legend": "In their efforts to lay the monstrous beasts of a Crusher Stampede low, the prey only succeed in further enraging the rampaging monsters. The surviving beasts are driven to fight with greater fury the more of their number that fall."
+            "legend": "In their efforts to lay the monstrous beasts of a Crusher Stampede low, the prey only succeed in further enraging the rampaging monsters. The surviving beasts are driven to fight with greater fury the more of their number that fall.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +50,38 @@
             "legend": "This monster is even more terrifying to behold than other bioforms of its kind.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well."
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008422003",
@@ -27,7 +91,38 @@
             "legend": "Tyranid monsters have reserves of energy that they unleash in waves of devastating fury.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008422006",
@@ -37,7 +132,38 @@
             "legend": "One cannot hide from a gestalt entity with a million eyes, even in the densest cover.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll."
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008422007",
@@ -47,7 +173,38 @@
             "legend": "Employing their sheer bulk and vicious chitinous horns and spikes, the largest Tyranids crash headlong through the foe, often with devastating results.",
             "turn": "Your turn",
             "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your Charge phase, just after a Tyranids Monster model from your army ends a Charge move.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> <span class=\"kwb\">MONSTER</span> model.<br><br><b>EFFECT:</b> Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+            "description": "<b>WHEN:</b> Your Charge phase, just after a Tyranids Monster model from your army ends a Charge move.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> <span class=\"kwb\">MONSTER</span> model.<br><br><b>EFFECT:</b> Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008422002",
@@ -57,7 +214,38 @@
             "legend": "Highly acidic fluids spray from the creature’s wounds, lethal to those nearby.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after a Tyranids Monster model from your army with the Deadly Demise ability that cannot <span class=\"kwb\">FLY</span> is destroyed.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> <span class=\"kwb\">MONSTER</span> model. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after a Tyranids Monster model from your army with the Deadly Demise ability that cannot <span class=\"kwb\">FLY</span> is destroyed.<br><br><b>TARGET:</b> That <span class=\"kwb\">TYRANIDS</span> <span class=\"kwb\">MONSTER</span> model. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008422005",
@@ -67,7 +255,38 @@
             "legend": "Encircling and entrapping such physically powerful and fearless beasts is nigh on impossible.",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding <span class=\"kwb\">TITANIC</span> models) and sections of terrain features that are 4\" or less in height. When doing so: <br><ul><li>It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them. </li><li>It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.</li></ul>"
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One Tyranids Monster unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding <span class=\"kwb\">TITANIC</span> models) and sections of terrain features that are 4\" or less in height. When doing so: <br><ul><li>It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them. </li><li>It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.</li></ul>",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000474",
+                    "000000478",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000490",
+                    "000000493",
+                    "000000494",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002528",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +295,91 @@
             "name": "Ominous Presence",
             "cost": 15,
             "legend": "The crushing menace of the Hive Mind rolls off this monstrous creature in waves, causing it to loom even larger in the minds of its quailing prey and lending it absolute dominance of the battlefield.",
-            "description": "Tyranids Monster model only. Add 3 to the bearer’s Objective Control characteristic."
+            "description": "Tyranids Monster model only. Add 3 to the bearer’s Objective Control characteristic.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000465",
+                    "000002528",
+                    "000002688"
+                ]
+            }
         },
         {
             "id": "000008404003",
             "name": "Enraged Reserves",
             "cost": 20,
             "legend": "Contained deep within this organism’s body is a pulsating sac filled with a cocktail of adrenostimulant fluids linked to a ring of vascular-pneumatic sphincters, allowing them one last-ditch strike.",
-            "description": "Tyranids Monster model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+            "description": "Tyranids Monster model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000465",
+                    "000002528",
+                    "000002688"
+                ]
+            }
         },
         {
             "id": "000008404004",
             "name": "Null Nodules",
             "cost": 10,
             "legend": "A contraganglion knot in this creature’s cranium channels and amplifies the smothering power of the Shadow in the Warp to nullify its prey’s psychic abilities.",
-            "description": "Tyranids Monster model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks."
+            "description": "Tyranids Monster model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000465",
+                    "000002528",
+                    "000002688"
+                ]
+            }
         },
         {
             "id": "000008404005",
             "name": "Monstrous Nemesis",
             "cost": 25,
             "legend": "With its basic logic centres and instinctive drivers augmented, this warrior organism is capable of singling out and hunting down valuable prey without direct synaptic oversight.",
-            "description": "Tyranids Monster model only. Each time the bearer makes a melee attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, add 1 to the Wound roll."
+            "description": "Tyranids Monster model only. Each time the bearer makes a melee attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, add 1 to the Wound roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000465",
+                    "000002528",
+                    "000002688"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "include": [
+            "000000460",
+            "000000461",
+            "000000462",
+            "000000465",
+            "000000474",
+            "000000478",
+            "000000485",
+            "000000486",
+            "000000489",
+            "000000490",
+            "000000493",
+            "000000494",
+            "000000495",
+            "000000496",
+            "000000497",
+            "000000498",
+            "000000500",
+            "000000503",
+            "000000504",
+            "000000505",
+            "000000506",
+            "000002528",
+            "000002688",
+            "000002689",
+            "000002690",
+            "000002751",
+            "000002752"
+        ]
+    }
 }

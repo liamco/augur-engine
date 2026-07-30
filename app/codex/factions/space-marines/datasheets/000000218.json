@@ -166,12 +166,14 @@
         "weapons": [
             {
                 "id": "000000218:lion-s-wrath",
+                "line": 1,
                 "name": "Lion’s Wrath",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000218",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Lion’s Wrath",
                         "attributes": [
@@ -197,12 +199,14 @@
             },
             {
                 "id": "000000218:the-sword-of-secrets",
+                "line": 2,
                 "name": "The Sword of Secrets",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000218",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Sword of Secrets",
                         "attributes": [
@@ -271,10 +275,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

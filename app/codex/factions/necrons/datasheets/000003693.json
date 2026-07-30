@@ -81,12 +81,14 @@
         "weapons": [
             {
                 "id": "000003693:overlord-s-blade",
+                "line": 1,
                 "name": "Overlord's blade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003693",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Overlord's blade",
                         "attributes": [
@@ -155,10 +157,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

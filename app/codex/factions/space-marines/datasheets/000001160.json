@@ -90,12 +90,14 @@
         "weapons": [
             {
                 "id": "000001160:astartes-shotgun",
+                "line": 1,
                 "name": "Astartes shotgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes shotgun",
                         "attributes": [
@@ -119,12 +121,14 @@
             },
             {
                 "id": "000001160:bolt-pistol",
+                "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -148,12 +152,14 @@
             },
             {
                 "id": "000001160:boltgun",
+                "line": 3,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -175,12 +181,14 @@
             },
             {
                 "id": "000001160:heavy-bolter",
+                "line": 4,
                 "name": "Heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolter",
                         "attributes": [
@@ -205,12 +213,14 @@
             },
             {
                 "id": "000001160:missile-launcher-frag",
+                "line": 5,
                 "name": "Missile launcher – frag",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Missile launcher – frag",
                         "attributes": [
@@ -235,12 +245,14 @@
             },
             {
                 "id": "000001160:missile-launcher-krak",
+                "line": 6,
                 "name": "Missile launcher – krak",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Missile launcher – krak",
                         "attributes": [
@@ -264,12 +276,14 @@
             },
             {
                 "id": "000001160:scout-sniper-rifle",
+                "line": 7,
                 "name": "Scout sniper rifle",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Scout sniper rifle",
                         "attributes": [
@@ -294,12 +308,14 @@
             },
             {
                 "id": "000001160:astartes-chainsword",
+                "line": 8,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -321,12 +337,14 @@
             },
             {
                 "id": "000001160:close-combat-weapon",
+                "line": 9,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -348,12 +366,14 @@
             },
             {
                 "id": "000001160:combat-knife",
+                "line": 10,
                 "name": "Combat knife",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001160",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combat knife",
                         "attributes": [],
@@ -430,14 +450,17 @@
     ],
     "abilities": [
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

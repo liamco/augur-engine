@@ -88,12 +88,14 @@
         "weapons": [
             {
                 "id": "000000136:brutalis-bolt-rifles",
+                "line": 1,
                 "name": "Brutalis bolt rifles",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Brutalis bolt rifles",
                         "attributes": [
@@ -117,12 +119,14 @@
             },
             {
                 "id": "000000136:twin-heavy-bolter",
+                "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -147,12 +151,14 @@
             },
             {
                 "id": "000000136:twin-icarus-ironhail-heavy-stubber",
+                "line": 3,
                 "name": "Twin Icarus ironhail heavy stubber",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin Icarus ironhail heavy stubber",
                         "attributes": [
@@ -178,12 +184,14 @@
             },
             {
                 "id": "000000136:twin-multi-melta",
+                "line": 4,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin multi-melta",
                         "attributes": [
@@ -208,12 +216,14 @@
             },
             {
                 "id": "000000136:brutalis-fists",
+                "line": 5,
                 "name": "Brutalis fists",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Brutalis fists",
                         "attributes": [
@@ -237,12 +247,14 @@
             },
             {
                 "id": "000000136:brutalis-talons-strike",
+                "line": 6,
                 "name": "Brutalis talons – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Brutalis talons – strike",
                         "attributes": [
@@ -266,12 +278,14 @@
             },
             {
                 "id": "000000136:brutalis-talons-sweep",
+                "line": 7,
                 "name": "Brutalis talons – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000136",
                         "line": 7,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Brutalis talons – sweep",
                         "attributes": [
@@ -340,10 +354,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

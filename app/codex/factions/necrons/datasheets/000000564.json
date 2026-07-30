@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000564:gauss-cannon",
+                "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000564",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss cannon",
                         "attributes": [
@@ -91,12 +93,14 @@
             },
             {
                 "id": "000000564:particle-beamer",
+                "line": 2,
                 "name": "Particle beamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000564",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Particle beamer",
                         "attributes": [
@@ -121,12 +125,14 @@
             },
             {
                 "id": "000000564:tesla-cannon",
+                "line": 3,
                 "name": "Tesla cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000564",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla cannon",
                         "attributes": [
@@ -150,12 +156,14 @@
             },
             {
                 "id": "000000564:tesseract-singularity-chamber-particle-hurricane",
+                "line": 4,
                 "name": "Tesseract singularity chamber – particle hurricane",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000564",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesseract singularity chamber – particle hurricane",
                         "attributes": [
@@ -180,12 +188,14 @@
             },
             {
                 "id": "000000564:tesseract-singularity-chamber-seismic-lash",
+                "line": 5,
                 "name": "Tesseract singularity chamber – seismic lash",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000564",
                         "line": 5,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Tesseract singularity chamber – seismic lash",
                         "attributes": [
@@ -209,12 +219,14 @@
             },
             {
                 "id": "000000564:armoured-bulk",
+                "line": 6,
                 "name": "Armoured bulk",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000564",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured bulk",
                         "attributes": [],
@@ -281,10 +293,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

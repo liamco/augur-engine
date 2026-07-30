@@ -1,11 +1,18 @@
 {
+    "id": "000000793",
+    "slug": "anvil-siege-force",
     "name": "Anvil Siege Force",
     "abilities": [
         {
             "id": "000008473",
             "name": "Shield of the Imperium",
             "description": "Ranged weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
-            "legend": "Across blood-drenched battlefields, within towering citadels and isolated orbital stations, the Angels of Death throw back tides of traitors, mutants, xenos and heretics, and purge enemy holdings of foes thanks to their disciplined strategies and fighting skills. All who oppose them are met with volleys of deadly accurate firepower long before they reach the battle-brothers’ razor-sharp blades."
+            "legend": "Across blood-drenched battlefields, within towering citadels and isolated orbital stations, the Angels of Death throw back tides of traitors, mutants, xenos and heretics, and purge enemy holdings of foes thanks to their disciplined strategies and fighting skills. All who oppose them are met with volleys of deadly accurate firepower long before they reach the battle-brothers’ razor-sharp blades.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +24,12 @@
             "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008475006",
@@ -27,7 +39,12 @@
             "legend": "Space Marines train for countless hours to master their weapons and in the heat of battle can trigger mnemonic patterning to recall their ritual drills and ensure the foe’s destruction.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. If your unit Remained Stationary this turn, then until the end of the phase, each time a model in your unit makes a ranged attack, a successful unmodified Hit roll of 5+ scores a Critical Hit."
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. If your unit Remained Stationary this turn, then until the end of the phase, each time a model in your unit makes a ranged attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008475005",
@@ -37,7 +54,12 @@
             "legend": "To combat an entrenched force of Space Marines, foes resort to armoured vehicles or packs of murderous monstrosities. Even the greatest of behemoths has a chink in its armour and the Adeptus Astartes are well versed in exploiting such weaknesses.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a ranged attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, you can re-roll the Wound roll."
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a ranged attack that targets a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, you can re-roll the Wound roll.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008475003",
@@ -47,7 +69,12 @@
             "legend": "Cleaving to duty, the Adeptus Astartes refuse to be drawn out of position. Instead they secure ground to establish new fire lines to the enemy.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can immediately make a Fall Back move of up to 6\".<br><br><b>RESTRICTIONS:</b> When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker."
+            "description": "<b>WHEN:</b> End of the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is within Engagement Range of one or more enemy units.<br><br><b>EFFECT:</b> Your unit can immediately make a Fall Back move of up to 6\".<br><br><b>RESTRICTIONS:</b> When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008475007",
@@ -57,7 +84,12 @@
             "legend": "Space Marines' incredible battlefield awareness enables them to instinctively identify the origin of any enemy fire and punish their attackers.",
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008475004",
@@ -67,7 +99,148 @@
             "legend": "Siege warfare is incomparably brutal. Space Marines battle with the fiercest determination to achieve victory, and will fight unto death to hold every defensive line or to secure gains they have wrested from the enemy.",
             "turn": "Your turn",
             "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES INFANTRY unit from your army within range of an objective marker.<br><br><b>EFFECT:</b> Until the end of the turn, double the Objective Control characteristic of models in your unit, but it must Remain Stationary this turn."
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES INFANTRY unit from your army within range of an objective marker.<br><br><b>EFFECT:</b> Until the end of the turn, double the Objective Control characteristic of models in your unit, but it must Remain Stationary this turn.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000063",
+                    "000000065",
+                    "000000066",
+                    "000000067",
+                    "000000072",
+                    "000000084",
+                    "000000085",
+                    "000000086",
+                    "000000087",
+                    "000000091",
+                    "000000092",
+                    "000000093",
+                    "000000094",
+                    "000000096",
+                    "000000097",
+                    "000000098",
+                    "000000099",
+                    "000000107",
+                    "000000110",
+                    "000000111",
+                    "000000113",
+                    "000000114",
+                    "000000116",
+                    "000000117",
+                    "000000120",
+                    "000000122",
+                    "000000123",
+                    "000000124",
+                    "000000129",
+                    "000000131",
+                    "000000132",
+                    "000000136",
+                    "000000137",
+                    "000000138",
+                    "000000139",
+                    "000000146",
+                    "000000154",
+                    "000000159",
+                    "000000166",
+                    "000000167",
+                    "000000168",
+                    "000000238",
+                    "000000239",
+                    "000000240",
+                    "000000241",
+                    "000000242",
+                    "000000283",
+                    "000000284",
+                    "000000287",
+                    "000000288",
+                    "000000301",
+                    "000000302",
+                    "000000308",
+                    "000000314",
+                    "000000321",
+                    "000000322",
+                    "000000323",
+                    "000000325",
+                    "000000358",
+                    "000001153",
+                    "000001156",
+                    "000001158",
+                    "000001161",
+                    "000001163",
+                    "000001164",
+                    "000001166",
+                    "000001167",
+                    "000001168",
+                    "000001169",
+                    "000001175",
+                    "000001178",
+                    "000001179",
+                    "000001182",
+                    "000001184",
+                    "000001185",
+                    "000001188",
+                    "000001189",
+                    "000001190",
+                    "000001191",
+                    "000001192",
+                    "000001347",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000001607",
+                    "000001608",
+                    "000001609",
+                    "000001610",
+                    "000001666",
+                    "000001667",
+                    "000001825",
+                    "000001991",
+                    "000002076",
+                    "000002102",
+                    "000002173",
+                    "000002252",
+                    "000002258",
+                    "000002267",
+                    "000002268",
+                    "000002269",
+                    "000002291",
+                    "000002568",
+                    "000002682",
+                    "000002700",
+                    "000002702",
+                    "000002704",
+                    "000002705",
+                    "000002706",
+                    "000002710",
+                    "000002711",
+                    "000002712",
+                    "000002714",
+                    "000002715",
+                    "000002717",
+                    "000002719",
+                    "000002720",
+                    "000002721",
+                    "000002722",
+                    "000002723",
+                    "000002724",
+                    "000002727",
+                    "000002728",
+                    "000002729",
+                    "000002748",
+                    "000002786",
+                    "000002787",
+                    "000002788",
+                    "000002789",
+                    "000002790",
+                    "000002791",
+                    "000002801",
+                    "000002805",
+                    "000003835",
+                    "000003875",
+                    "000004133",
+                    "000004139",
+                    "000004167"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +249,179 @@
             "name": "Indomitable Fury",
             "cost": 20,
             "legend": "This hero refuses to yield whilst foes remain, fighting back from the brink of death like a vengeful demigod.",
-            "description": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining."
+            "description": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000001172"
+                ]
+            }
         },
         {
             "id": "000008474003",
             "name": "Fleet Commander",
             "cost": 15,
             "legend": "The Chapter’s orbiting warships stand ready to unleash devastation at this leader’s command.",
-            "description": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed."
+            "description": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000073",
+                    "000000083",
+                    "000000135",
+                    "000000284",
+                    "000001172",
+                    "000002701",
+                    "000002702",
+                    "000002796",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871"
+                ]
+            }
         },
         {
             "id": "000008474004",
             "name": "Stoic Defender",
             "cost": 15,
             "legend": "This commander and their warriors hold their ground tenaciously against even overwhelming numbers.",
-            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0."
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000008474005",
             "name": "Architect of War",
             "cost": 25,
             "legend": "There are few who have a deeper understanding of the tenets of siege warfare than this warrior.",
-            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "exclude": [
+            "000003875"
+        ]
+    }
 }

@@ -90,12 +90,14 @@
         "weapons": [
             {
                 "id": "000000283:storm-bolter",
+                "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000283",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -119,12 +121,14 @@
             },
             {
                 "id": "000000283:the-axe-morkai-one-handed",
+                "line": 2,
                 "name": "The Axe Morkai – one-handed",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000283",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Axe Morkai – one-handed",
                         "attributes": [],
@@ -146,12 +150,14 @@
             },
             {
                 "id": "000000283:the-axe-morkai-two-handed",
+                "line": 3,
                 "name": "The Axe Morkai – two-handed",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000283",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "The Axe Morkai – two-handed",
                         "attributes": [],
@@ -173,12 +179,14 @@
             },
             {
                 "id": "000000283:flurry-of-teeth-and-claws",
+                "line": 4,
                 "name": "Flurry of teeth and claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000283",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Flurry of teeth and claws",
                         "attributes": [
@@ -247,14 +255,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

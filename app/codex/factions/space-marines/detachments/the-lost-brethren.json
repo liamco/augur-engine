@@ -1,11 +1,25 @@
 {
+    "id": "000000900",
+    "slug": "the-lost-brethren",
     "name": "The Lost Brethren",
     "abilities": [
         {
             "id": "000009185",
             "name": "A Noble Death in Combat",
             "description": "Each time a Death Company model from your army makes a melee attack, re-roll a Wound roll of 1 if that model’s unit is below its Starting Strength; if that model’s unit is Below Half-strength, you can re-roll the Wound roll instead.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>If you select this Detachment, Death Company Marines and Death Company Marines with Bolt Rifles units from your army have the <span class=\"kwb\">BATTLELINE</span> keyword.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">BLOOD</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
-            "legend": "For the lost brothers of the Death Company one final battle remains. The sacrifice of each fallen warrior inspires his surviving brothers to ever greater acts of savage violence."
+            "legend": "For the lost brothers of the Death Company one final battle remains. The sacrifice of each fallen warrior inspires his surviving brothers to ever greater acts of savage violence.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +31,19 @@
             "legend": "The Lost push towards new foes, the bloodlust in their veins enhancing their preternatural speed.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Death Company unit from your army, just before that unit Piles-in.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Pile-in move, it can move up to D3+3\" instead of up to 3\". If your unit is within 12\" of one or more friendly Chaplain models, or if it is below Starting Strength, it can move up to 6\" instead. In either case, it can only do so provided your unit ends that Pile-in move in Unit Coherency and within Engagement Range of one or more enemy units."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Death Company unit from your army, just before that unit Piles-in.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Pile-in move, it can move up to D3+3\" instead of up to 3\". If your unit is within 12\" of one or more friendly Chaplain models, or if it is below Starting Strength, it can move up to 6\" instead. In either case, it can only do so provided your unit ends that Pile-in move in Unit Coherency and within Engagement Range of one or more enemy units.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
+                ]
+            }
         },
         {
             "id": "000009187006",
@@ -27,7 +53,19 @@
             "legend": "The Lost are consumed utterly by rage.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Death Company unit from your army that is below Starting Strength and has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, improve the Attacks, Stength and Armour Penetration characteristics of melee weapons equipped by models in your unit by 1 and, unless your unit is within 12\" of one or more friendly Chaplain models, until the end of the phase, those weapons have the [HAZARDOUS] ability."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Death Company unit from your army that is below Starting Strength and has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, improve the Attacks, Stength and Armour Penetration characteristics of melee weapons equipped by models in your unit by 1 and, unless your unit is within 12\" of one or more friendly Chaplain models, until the end of the phase, those weapons have the [HAZARDOUS] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
+                ]
+            }
         },
         {
             "id": "000009187003",
@@ -37,7 +75,12 @@
             "legend": "The belligerence of the Adeptus Astartes combined with their enhanced physiology makes them unyielding foes to face.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000009187002",
@@ -47,7 +90,19 @@
             "legend": "Even in death, the Lost bring victory to their Chapter.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Death Company unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Death Company unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed.<br><br><b>EFFECT:</b> That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
+                ]
+            }
         },
         {
             "id": "000009187004",
@@ -57,7 +112,19 @@
             "legend": "These battle-brothers have already accepted their deaths. They now seek to strike one last, telling blow against the enemy.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is within 12\" of one or more friendly Chaplain models; on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is within 12\" of one or more friendly Chaplain models; on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
+                ]
+            }
         },
         {
             "id": "000009187007",
@@ -67,7 +134,19 @@
             "legend": "So lost to rage are the Death Company that they surge unstoppably into battle, eagerly outpacing their brothers.",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase, just after a Death Company unit from your army Advances.<br><br><b>TARGET:</b> That <span class=\"kwb\">DEATH</span> <span class=\"kwb\">COMPANY</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced. If your unit is within 12\" of one or more friendly Chaplain models, or it is below its Starting Strength, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+            "description": "<b>WHEN:</b> Your Movement phase, just after a Death Company unit from your army Advances.<br><br><b>TARGET:</b> That <span class=\"kwb\">DEATH</span> <span class=\"kwb\">COMPANY</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced. If your unit is within 12\" of one or more friendly Chaplain models, or it is below its Starting Strength, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000166",
+                    "000001997",
+                    "000002285",
+                    "000002737",
+                    "000003832",
+                    "000003833",
+                    "000003836",
+                    "000003837"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +155,57 @@
             "name": "Sanguinius’ Grace",
             "cost": 20,
             "legend": "As maddening hallucinatory memories of long-forgotten battles flash across this warriors mind, he is granted a sliver of the Primarchs combat prowess.",
-            "description": "Death Company model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time."
+            "description": "Death Company model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000003832",
+                    "000003833"
+                ]
+            }
         },
         {
             "id": "000009186003",
             "name": "Blood Shard",
             "cost": 25,
             "legend": "Spiritual energy flows from this crimson gem, filling its bearer with a ferocious desire to tear their foes limb from limb. Those infused with its energies may fight on despite suffering seemingly mortal wounds.",
-            "description": "Death Company model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining."
+            "description": "Death Company model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000003832",
+                    "000003833"
+                ]
+            }
         },
         {
             "id": "000009186004",
             "name": "To Slay the Warmaster",
             "cost": 15,
             "legend": "Overcome by maddening hallucinations, this warrior sees in all enemy champions glimmers of Horus' dark majesty and thus strives to destroy them.",
-            "description": "Death Company model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of one or more enemy <span class=\"kwb\">CHARACTER</span> units, you can select one of those <span class=\"kwb\">CHARACTER</span> units and roll six D6: for each 4+, one <span class=\"kwb\">CHARACTER</span> model in that unit suffers 1 mortal wound."
+            "description": "Death Company model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of one or more enemy <span class=\"kwb\">CHARACTER</span> units, you can select one of those <span class=\"kwb\">CHARACTER</span> units and roll six D6: for each 4+, one <span class=\"kwb\">CHARACTER</span> model in that unit suffers 1 mortal wound.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000003832",
+                    "000003833"
+                ]
+            }
         },
         {
             "id": "000009186005",
             "name": "Vengeful Onslaught",
             "cost": 10,
             "legend": "This Son of Sanguinius appears to the brothers of the Death Company as a paragon of their Primarchs martial prowess. Should he fall in battle, the vengeful fury of the Lost will be inflamed.",
-            "description": "Death Company model only. It the bearer is destroyed, until the end of your next turn, each time a friendly <span class=\"kwb\">DEATH</span> <span class=\"kwb\">COMPANY</span> model makes an attack, add 1 to the 1 Hit roll."
+            "description": "Death Company model only. It the bearer is destroyed, until the end of your next turn, each time a friendly <span class=\"kwb\">DEATH</span> <span class=\"kwb\">COMPANY</span> model makes an attack, add 1 to the 1 Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000003832",
+                    "000003833"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "exclude": [
+            "000003875"
+        ]
+    }
 }

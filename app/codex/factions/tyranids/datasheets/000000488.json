@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000000488:wargear-1",
+                "line": 1,
                 "name": "Wargear 1",
                 "type": "",
                 "profiles": [
                     {
                         "datasheetId": "000000488",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "",
                         "attributes": [],
@@ -136,10 +138,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

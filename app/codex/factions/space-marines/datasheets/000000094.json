@@ -90,12 +90,14 @@
         "weapons": [
             {
                 "id": "000000094:absolvor-bolt-pistol",
+                "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000094",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Absolvor bolt pistol",
                         "attributes": [
@@ -119,12 +121,14 @@
             },
             {
                 "id": "000000094:twin-bolt-rifle",
+                "line": 2,
                 "name": "Twin bolt rifle",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000094",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin bolt rifle",
                         "attributes": [
@@ -148,12 +152,14 @@
             },
             {
                 "id": "000000094:crozius-arcanum",
+                "line": 3,
                 "name": "Crozius arcanum",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000094",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Crozius arcanum",
                         "attributes": [],
@@ -220,10 +226,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

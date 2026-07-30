@@ -65,12 +65,14 @@
         "weapons": [
             {
                 "id": "000002357:spear-of-the-void-dragon",
+                "line": 1,
                 "name": "Spear of the Void Dragon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002357",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Spear of the Void Dragon",
                         "attributes": [
@@ -94,12 +96,14 @@
             },
             {
                 "id": "000002357:voltaic-storm",
+                "line": 2,
                 "name": "Voltaic storm",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002357",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Voltaic storm",
                         "attributes": [
@@ -124,12 +128,14 @@
             },
             {
                 "id": "000002357:spear-of-the-void-dragon-strike",
+                "line": 3,
                 "name": "Spear of the Void Dragon – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002357",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Spear of the Void Dragon – strike",
                         "attributes": [
@@ -153,12 +159,14 @@
             },
             {
                 "id": "000002357:spear-of-the-void-dragon-sweep",
+                "line": 4,
                 "name": "Spear of the Void Dragon – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002357",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Spear of the Void Dragon – sweep",
                         "attributes": [],
@@ -180,12 +188,14 @@
             },
             {
                 "id": "000002357:canoptek-tail-blades",
+                "line": 5,
                 "name": "Canoptek tail blades",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002357",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Canoptek tail blades",
                         "attributes": [
@@ -254,18 +264,22 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

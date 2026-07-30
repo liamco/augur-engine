@@ -75,12 +75,14 @@
         "weapons": [
             {
                 "id": "000000138:hand-of-dominion",
+                "line": 1,
                 "name": "Hand of Dominion",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000138",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand of Dominion",
                         "attributes": [
@@ -104,12 +106,14 @@
             },
             {
                 "id": "000000138:emperor-s-sword",
+                "line": 2,
                 "name": "Emperor’s Sword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000138",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Emperor’s Sword",
                         "attributes": [
@@ -133,12 +137,14 @@
             },
             {
                 "id": "000000138:hand-of-dominion-2",
+                "line": 3,
                 "name": "Hand of Dominion",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000138",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand of Dominion",
                         "attributes": [
@@ -207,6 +213,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

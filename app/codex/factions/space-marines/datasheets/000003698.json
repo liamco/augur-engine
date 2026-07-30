@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000003698:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003698",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -99,14 +101,17 @@
             },
             {
                 "id": "000003698:calibanite-greatsword",
+                "line": 2,
                 "name": "Calibanite greatsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003698",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Calibanite greatsword - strike",
+                        "profileName": "strike",
                         "attributes": [
                             "LETHAL HITS"
                         ],
@@ -121,8 +126,10 @@
                     {
                         "datasheetId": "000003698",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Calibanite greatsword - sweep",
+                        "profileName": "sweep",
                         "attributes": [
                             "SUSTAINED HITS 2"
                         ],
@@ -193,6 +200,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

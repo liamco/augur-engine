@@ -151,12 +151,14 @@
         "weapons": [
             {
                 "id": "000002796:combi-weapon",
+                "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002796",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -182,12 +184,14 @@
             },
             {
                 "id": "000002796:plasma-pistol-standard",
+                "line": 2,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002796",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -211,12 +215,14 @@
             },
             {
                 "id": "000002796:plasma-pistol-supercharge",
+                "line": 3,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002796",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -241,12 +247,14 @@
             },
             {
                 "id": "000002796:master-crafted-power-weapon",
+                "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002796",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [
@@ -315,10 +323,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008526",
             "name": "Templar Vows",
             "type": "Faction"
         },

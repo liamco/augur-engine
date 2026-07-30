@@ -78,12 +78,14 @@
         "weapons": [
             {
                 "id": "000002728:hunter-killer-missile",
+                "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002728",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hunter-killer missile",
                         "attributes": [
@@ -107,12 +109,14 @@
             },
             {
                 "id": "000002728:scorpius-multi-launcher",
+                "line": 2,
                 "name": "Scorpius multi-launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002728",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Scorpius multi-launcher",
                         "attributes": [
@@ -137,12 +141,14 @@
             },
             {
                 "id": "000002728:storm-bolter",
+                "line": 3,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002728",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -166,12 +172,14 @@
             },
             {
                 "id": "000002728:armoured-tracks",
+                "line": 4,
                 "name": "Armoured tracks",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002728",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured tracks",
                         "attributes": [],
@@ -238,10 +246,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

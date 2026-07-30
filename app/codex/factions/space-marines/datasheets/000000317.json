@@ -83,12 +83,14 @@
         "weapons": [
             {
                 "id": "000000317:foehammer",
+                "line": 1,
                 "name": "Foehammer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000317",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Foehammer",
                         "attributes": [
@@ -114,12 +116,14 @@
             },
             {
                 "id": "000000317:foehammer-2",
+                "line": 2,
                 "name": "Foehammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000317",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Foehammer",
                         "attributes": [
@@ -190,14 +194,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

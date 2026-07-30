@@ -98,12 +98,14 @@
         "weapons": [
             {
                 "id": "000002688:psychic-scream",
+                "line": 1,
                 "name": "Psychic scream",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002688",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Psychic scream",
                         "attributes": [
@@ -129,12 +131,14 @@
             },
             {
                 "id": "000002688:neurotyrant-claws-and-lashes",
+                "line": 2,
                 "name": "Neurotyrant claws and lashes",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002688",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Neurotyrant claws and lashes",
                         "attributes": [],
@@ -201,14 +205,17 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },
         {
+            "id": "000000707",
             "name": "Shadow in the Warp",
             "type": "Faction"
         },

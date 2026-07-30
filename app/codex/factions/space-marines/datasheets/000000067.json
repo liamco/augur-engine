@@ -95,12 +95,14 @@
         "weapons": [
             {
                 "id": "000000067:combi-weapon",
+                "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -126,12 +128,14 @@
             },
             {
                 "id": "000000067:godhammer-lascannons",
+                "line": 2,
                 "name": "Godhammer lascannons",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Godhammer lascannons",
                         "attributes": [],
@@ -153,12 +157,14 @@
             },
             {
                 "id": "000000067:grav-cannon",
+                "line": 3,
                 "name": "Grav-cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Grav-cannon",
                         "attributes": [
@@ -182,12 +188,14 @@
             },
             {
                 "id": "000000067:hunter-killer-missile",
+                "line": 4,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hunter-killer missile",
                         "attributes": [
@@ -211,12 +219,14 @@
             },
             {
                 "id": "000000067:multi-melta",
+                "line": 5,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -240,12 +250,14 @@
             },
             {
                 "id": "000000067:storm-bolter",
+                "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -269,12 +281,14 @@
             },
             {
                 "id": "000000067:armoured-tracks",
+                "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000067",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured tracks",
                         "attributes": [],
@@ -341,10 +355,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

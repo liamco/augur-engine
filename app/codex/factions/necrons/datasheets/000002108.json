@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000002108:plasmic-lance",
+                "line": 1,
                 "name": "Plasmic lance",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002108",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasmic lance",
                         "attributes": [],
@@ -99,12 +101,14 @@
             },
             {
                 "id": "000002108:plasmic-lance-2",
+                "line": 2,
                 "name": "Plasmic lance",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002108",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasmic lance",
                         "attributes": [],
@@ -171,10 +175,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

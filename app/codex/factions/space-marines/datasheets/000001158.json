@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000001158:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001158",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000001158:multi-melta",
+                "line": 2,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001158",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -130,12 +134,14 @@
             },
             {
                 "id": "000001158:onslaught-gatling-cannon",
+                "line": 3,
                 "name": "Onslaught gatling cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001158",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Onslaught gatling cannon",
                         "attributes": [
@@ -159,12 +165,14 @@
             },
             {
                 "id": "000001158:twin-bolt-rifle",
+                "line": 4,
                 "name": "Twin bolt rifle",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001158",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin bolt rifle",
                         "attributes": [
@@ -188,12 +196,14 @@
             },
             {
                 "id": "000001158:close-combat-weapon",
+                "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001158",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -260,6 +270,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

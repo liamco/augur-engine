@@ -160,12 +160,14 @@
         "weapons": [
             {
                 "id": "000001611:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001611",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -189,12 +191,14 @@
             },
             {
                 "id": "000001611:storm-of-the-emperor-s-wrath-witchfire",
+                "line": 2,
                 "name": "Storm of the Emperor’s Wrath – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001611",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm of the Emperor’s Wrath – witchfire",
                         "attributes": [
@@ -219,12 +223,14 @@
             },
             {
                 "id": "000001611:storm-of-the-emperor-s-wrath-focused-witchfire",
+                "line": 3,
                 "name": "Storm of the Emperor’s Wrath – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001611",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Storm of the Emperor’s Wrath – focused witchfire",
                         "attributes": [
@@ -250,12 +256,14 @@
             },
             {
                 "id": "000001611:rod-of-tigurius",
+                "line": 4,
                 "name": "Rod of Tigurius",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001611",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Rod of Tigurius",
                         "attributes": [
@@ -324,10 +332,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

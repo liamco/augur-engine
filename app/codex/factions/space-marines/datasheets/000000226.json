@@ -166,12 +166,14 @@
         "weapons": [
             {
                 "id": "000000226:the-deliverer",
+                "line": 1,
                 "name": "The Deliverer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000226",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Deliverer",
                         "attributes": [
@@ -196,12 +198,14 @@
             },
             {
                 "id": "000000226:mind-wipe-witchfire",
+                "line": 2,
                 "name": "Mind Wipe – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000226",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Mind Wipe – witchfire",
                         "attributes": [
@@ -227,12 +231,14 @@
             },
             {
                 "id": "000000226:mind-wipe-focused-witchfire",
+                "line": 3,
                 "name": "Mind Wipe – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000226",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Mind Wipe – focused witchfire",
                         "attributes": [
@@ -260,12 +266,14 @@
             },
             {
                 "id": "000000226:traitor-s-bane",
+                "line": 4,
                 "name": "Traitor’s Bane",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000226",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Traitor’s Bane",
                         "attributes": [
@@ -335,10 +343,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

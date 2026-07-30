@@ -111,12 +111,14 @@
         "weapons": [
             {
                 "id": "000003833:hand-flamer",
+                "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003833",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand flamer",
                         "attributes": [
@@ -142,12 +144,14 @@
             },
             {
                 "id": "000003833:heavy-bolt-pistol",
+                "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003833",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -171,14 +175,17 @@
             },
             {
                 "id": "000003833:plasma-pistol",
+                "line": 3,
                 "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003833",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -193,8 +200,10 @@
                     {
                         "datasheetId": "000003833",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -217,12 +226,14 @@
             },
             {
                 "id": "000003833:astartes-chainsword",
+                "line": 5,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003833",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -244,12 +255,14 @@
             },
             {
                 "id": "000003833:power-fist",
+                "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003833",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -271,12 +284,14 @@
             },
             {
                 "id": "000003833:relic-weapon",
+                "line": 7,
                 "name": "Relic weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003833",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Relic weapon",
                         "attributes": [],
@@ -343,18 +358,22 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

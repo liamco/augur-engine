@@ -82,12 +82,14 @@
         "weapons": [
             {
                 "id": "000000465:stinger-salvoes",
+                "line": 1,
                 "name": "Stinger salvoes",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000465",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stinger salvoes",
                         "attributes": [],
@@ -109,12 +111,14 @@
             },
             {
                 "id": "000000465:massive-crushing-claws",
+                "line": 2,
                 "name": "Massive crushing claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000465",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Massive crushing claws",
                         "attributes": [],
@@ -136,12 +140,14 @@
             },
             {
                 "id": "000000465:massive-scything-talons-strike",
+                "line": 3,
                 "name": "Massive scything talons – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000465",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Massive scything talons – strike",
                         "attributes": [],
@@ -163,12 +169,14 @@
             },
             {
                 "id": "000000465:massive-scything-talons-sweep",
+                "line": 4,
                 "name": "Massive scything talons – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000465",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Massive scything talons – sweep",
                         "attributes": [],
@@ -235,14 +243,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000000707",
             "name": "Shadow in the Warp",
             "type": "Faction"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

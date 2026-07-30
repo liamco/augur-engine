@@ -1,11 +1,14 @@
 {
+    "id": "000000772",
+    "slug": "vanguard-onslaught",
     "name": "Vanguard Onslaught",
     "abilities": [
         {
             "id": "000008415",
             "name": "Questing Tendrils",
             "description": "<span class=\"kwb\">TYRANIDS</span> units with this ability are eligible to charge in a turn in which they Fell Back. Vanguard Invader units with this ability are eligible to charge in a turn in which they Advanced.",
-            "legend": "In the early stages of an invasion, the Hive Mind harries and unbalances its foes with lightning-fast flanking attacks, before encircling them for the final, bloody slaughter."
+            "legend": "In the early stages of an invasion, the Hive Mind harries and unbalances its foes with lightning-fast flanking attacks, before encircling them for the final, bloody slaughter.",
+            "eligibleDatasheets": "all"
         }
     ],
     "stratagems": [
@@ -17,7 +20,22 @@
             "legend": "These bioforms have been adapted to strike with pinpoint precision at the pre-assessed weak points of selected prey that require elimination.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Vanguard Invader Infantry unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One Vanguard Invader Infantry unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000463",
+                    "000000467",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000000484",
+                    "000002529",
+                    "000002693",
+                    "000002694",
+                    "000002753",
+                    "000004117"
+                ]
+            }
         },
         {
             "id": "000008418002",
@@ -27,7 +45,28 @@
             "legend": "Vanguard organisms strike from unexpected quarters with calculated and emotionless alien savagery that is appalling to behold.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after a Vanguard Invader unit from your army has selected its targets.<br><br><b>TARGET:</b> That <span class=\"kwb\">VANGUARD</span> <span class=\"kwb\">INVADER</span> unit.<br><br><b>EFFECT:</b> Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well."
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase, just after a Vanguard Invader unit from your army has selected its targets.<br><br><b>TARGET:</b> That <span class=\"kwb\">VANGUARD</span> <span class=\"kwb\">INVADER</span> unit.<br><br><b>EFFECT:</b> Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000463",
+                    "000000467",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000000484",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000493",
+                    "000000494",
+                    "000002528",
+                    "000002529",
+                    "000002693",
+                    "000002694",
+                    "000002753",
+                    "000004117"
+                ]
+            }
         },
         {
             "id": "000008418004",
@@ -37,7 +76,8 @@
             "legend": "Warrior organisms erupt from concealment straight into advanced positions.",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is in Reserves, or up to two Vanguard Invader units from your army that are in Reserves.<br><br><b>EFFECT:</b> Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is."
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">TYRANIDS</span> unit from your army that is in Reserves, or up to two Vanguard Invader units from your army that are in Reserves.<br><br><b>EFFECT:</b> Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is.",
+            "eligibleDatasheets": "all"
         },
         {
             "id": "000008418006",
@@ -47,7 +87,28 @@
             "legend": "Hyper-attuned senses warn vanguard organisms when they are being targeted by the prey.",
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Vanguard Invader unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One Vanguard Invader unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000463",
+                    "000000467",
+                    "000000473",
+                    "000000479",
+                    "000000482",
+                    "000000484",
+                    "000000485",
+                    "000000486",
+                    "000000489",
+                    "000000493",
+                    "000000494",
+                    "000002528",
+                    "000002529",
+                    "000002693",
+                    "000002694",
+                    "000002753",
+                    "000004117"
+                ]
+            }
         },
         {
             "id": "000008418007",
@@ -57,7 +118,36 @@
             "legend": "Hunter-slayer organisms can melt away before the eyes of their foes, only to strike from a new direction.",
             "turn": "Opponent’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> Up to two Vanguard Invader units from your army, or one Tyranids Infantry unit from your army.<br><br><b>EFFECT:</b> Remove the targeted units from the battlefield and place them into Strategic Reserves.<br><br><b>RESTRICTIONS:</b> The targeted units must be more than 3\" away from all enemy units."
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> Up to two Vanguard Invader units from your army, or one Tyranids Infantry unit from your army.<br><br><b>EFFECT:</b> Remove the targeted units from the battlefield and place them into Strategic Reserves.<br><br><b>RESTRICTIONS:</b> The targeted units must be more than 3\" away from all enemy units.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000470",
+                    "000000474",
+                    "000000478",
+                    "000000483",
+                    "000000487",
+                    "000000488",
+                    "000000490",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         },
         {
             "id": "000008418005",
@@ -67,7 +157,36 @@
             "legend": "Hissing clusters of scillia warn of the slightest prey movements, allowing the Tyranids to react.",
             "turn": "Opponent’s turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> Up to two Vanguard Invader units from your army that are within 9\" of that enemy unit, or one other Tyranids Infantry unit from your army that is within 9\" of that enemy unit.<br><br><b>EFFECT:</b> Those selected units can each make a Normal move of up to 6\".<br><br><b>RESTRICTIONS:</b> You cannot target units that are within Engagement Range of one or more enemy units."
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> Up to two Vanguard Invader units from your army that are within 9\" of that enemy unit, or one other Tyranids Infantry unit from your army that is within 9\" of that enemy unit.<br><br><b>EFFECT:</b> Those selected units can each make a Normal move of up to 6\".<br><br><b>RESTRICTIONS:</b> You cannot target units that are within Engagement Range of one or more enemy units.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000460",
+                    "000000461",
+                    "000000462",
+                    "000000465",
+                    "000000470",
+                    "000000474",
+                    "000000478",
+                    "000000483",
+                    "000000487",
+                    "000000488",
+                    "000000490",
+                    "000000495",
+                    "000000496",
+                    "000000497",
+                    "000000498",
+                    "000000500",
+                    "000000503",
+                    "000000504",
+                    "000000505",
+                    "000000506",
+                    "000002688",
+                    "000002689",
+                    "000002690",
+                    "000002751",
+                    "000002752"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +195,73 @@
             "name": "Hunting Grounds",
             "cost": 20,
             "legend": "This warrior organism has identified installations and routes of communication and supply vital to the prey. As the Tyranid invasion commences so the beast orchestrates ambushes and terror raids against these priority targets, ensuring that those enemy reinforcements who do reach the battlefield do so in bloodied disarray.",
-            "description": "<span class=\"kwb\">TYRANIDS</span> model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test."
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000463",
+                    "000000465",
+                    "000000499",
+                    "000002528",
+                    "000002529",
+                    "000002688",
+                    "000002694",
+                    "000004117"
+                ]
+            }
         },
         {
             "id": "000008417003",
             "name": "Chameleonic",
             "cost": 15,
             "legend": "Subdermal crystals in this organisms carapace capture and redirect light, helping to conceal it.",
-            "description": "Vanguard Invader model only. The bearer has the Stealth ability and each time a ranged attack targets the bearer’s unit, models in that unit have the Benefit of Cover against that attack."
+            "description": "Vanguard Invader model only. The bearer has the Stealth ability and each time a ranged attack targets the bearer’s unit, models in that unit have the Benefit of Cover against that attack.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000463",
+                    "000002528",
+                    "000002529",
+                    "000002694",
+                    "000004117"
+                ]
+            }
         },
         {
             "id": "000008417004",
             "name": "Stalker",
             "cost": 10,
             "legend": "This hunter seeks vital priority prey that has been pheromonally marked for swift slaughter.",
-            "description": "Vanguard Invader model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
+            "description": "Vanguard Invader model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000463",
+                    "000002528",
+                    "000002529",
+                    "000002694",
+                    "000004117"
+                ]
+            }
         },
         {
             "id": "000008417005",
             "name": "Neuronode",
             "cost": 20,
             "legend": "While no true synapse beast, this bioform has been grafted with a limited synaptic symbiote, the influence of which increases its host’s ability to formulate and enforce large-scale predatory strategies.",
-            "description": "<span class=\"kwb\">TYRANIDS</span> model only. After both players have deployed their armies, you can select up to three Vanguard Invader units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+            "description": "<span class=\"kwb\">TYRANIDS</span> model only. After both players have deployed their armies, you can select up to three Vanguard Invader units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000460",
+                    "000000463",
+                    "000000465",
+                    "000000499",
+                    "000002528",
+                    "000002529",
+                    "000002688",
+                    "000002694",
+                    "000004117"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": "all"
 }

@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000000095:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000095",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000000095:boltgun",
+                "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000095",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -128,12 +132,14 @@
             },
             {
                 "id": "000000095:power-weapon",
+                "line": 3,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000095",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -212,6 +218,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

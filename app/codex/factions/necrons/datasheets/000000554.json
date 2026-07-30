@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000000554:doomsday-cannon",
+                "line": 1,
                 "name": "Doomsday cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000554",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Doomsday cannon",
                         "attributes": [
@@ -90,12 +92,14 @@
             },
             {
                 "id": "000000554:gauss-flayer-array",
+                "line": 2,
                 "name": "Gauss flayer array",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000554",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss flayer array",
                         "attributes": [
@@ -120,12 +124,14 @@
             },
             {
                 "id": "000000554:armoured-bulk",
+                "line": 3,
                 "name": "Armoured bulk",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000554",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured bulk",
                         "attributes": [],
@@ -192,10 +198,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

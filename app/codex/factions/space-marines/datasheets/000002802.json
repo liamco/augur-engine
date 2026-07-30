@@ -112,12 +112,14 @@
         "weapons": [
             {
                 "id": "000002802:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -141,12 +143,14 @@
             },
             {
                 "id": "000002802:combi-weapon",
+                "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -172,12 +176,14 @@
             },
             {
                 "id": "000002802:plasma-pistol-standard",
+                "line": 3,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -201,12 +207,14 @@
             },
             {
                 "id": "000002802:plasma-pistol-supercharge",
+                "line": 4,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -231,12 +239,14 @@
             },
             {
                 "id": "000002802:storm-bolter",
+                "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -260,12 +270,14 @@
             },
             {
                 "id": "000002802:astartes-chainsword",
+                "line": 6,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -287,12 +299,14 @@
             },
             {
                 "id": "000002802:power-fist",
+                "line": 7,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -314,12 +328,14 @@
             },
             {
                 "id": "000002802:power-weapon",
+                "line": 8,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -341,12 +357,14 @@
             },
             {
                 "id": "000002802:thunder-hammer",
+                "line": 9,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -370,12 +388,14 @@
             },
             {
                 "id": "000002802:twin-lightning-claws",
+                "line": 10,
                 "name": "Twin lightning claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002802",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lightning claws",
                         "attributes": [
@@ -444,14 +464,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

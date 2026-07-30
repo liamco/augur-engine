@@ -1,11 +1,34 @@
 {
+    "id": "000000816",
+    "slug": "canoptek-court",
     "name": "Canoptek Court",
     "abilities": [
         {
             "id": "000008545",
             "name": "Power Matrix",
             "description": "Certain areas of the battlefield are considered to be within your army’s Power Matrix, as follows: <br><br><ul><li>Your deployment zone is always within your army’s Power Matrix. </li><li>At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Power Matrix. </li><li>At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Power Matrix. </li></ul>Each time a model in a CRYPTEK or CANOPTEK unit from your army makes an attack, re-roll a Hit roll of 1. If such a unit is wholly within your army’s Power Matrix, you can re-roll the Hit roll instead.",
-            "legend": "Countless worlds across the galaxy harbour quiescent Necron technology, buried beneath the surface or mistaken for mere xenoarchaeological ruins. Whether part of an awakening tomb world’s defences, phased beneath the crust of a planet to empower the Cryptek’s conquest or perhaps the very objects they seek, these strange engines can be roused to wakefulness. Linked in an interdimensional matrix, their ancient energy cores can be vampirically bled to empower the Crypteks’ arcane technologies as well as their artificial and servile constructs."
+            "legend": "Countless worlds across the galaxy harbour quiescent Necron technology, buried beneath the surface or mistaken for mere xenoarchaeological ruins. Whether part of an awakening tomb world’s defences, phased beneath the crust of a planet to empower the Cryptek’s conquest or perhaps the very objects they seek, these strange engines can be roused to wakefulness. Linked in an interdimensional matrix, their ancient energy cores can be vampirically bled to empower the Crypteks’ arcane technologies as well as their artificial and servile constructs.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000530",
+                    "000000546",
+                    "000000551",
+                    "000000558",
+                    "000000559",
+                    "000000560",
+                    "000002092",
+                    "000002108",
+                    "000002112",
+                    "000002114",
+                    "000002115",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004176",
+                    "000004177",
+                    "000004178"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +40,18 @@
             "legend": "Vindictive Crypteks often hardwire vengeance sub protocols into the ancient cores of their unliving servants, by which a last act of reprisal is assured.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has shot or fought.<br><br><b>TARGET:</b> One CRYPTEK model from your army that was destroyed by one of the attacking unit’s attacks. <br>You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> Until the end of the battle, each time a friendly CANOPTEK model makes an attack that targets the attacking unit, add 1 to the Hit roll and add 1 to the Wound roll."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has shot or fought.<br><br><b>TARGET:</b> One CRYPTEK model from your army that was destroyed by one of the attacking unit’s attacks. <br>You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> Until the end of the battle, each time a friendly CANOPTEK model makes an attack that targets the attacking unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000530",
+                    "000002092",
+                    "000002108",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008547003",
@@ -27,7 +61,28 @@
             "legend": "Only the foolish tread where a Cryptek has set their sights, for these arcane scientists will suffer no threat to their works.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> The start of your Shooting phase or the start of the Fight phase.<br><br><b>TARGET:</b> One CRYPTEK or CANOPTEK unit from your army that is wholly within your army’s Power Matrix.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by <span class=\"kwb\">CRYPTEK</span> or <span class=\"kwb\">CANOPTEK</span> models in your unit have the [DEVASTATING WOUNDS] ability."
+            "description": "<b>WHEN:</b> The start of your Shooting phase or the start of the Fight phase.<br><br><b>TARGET:</b> One CRYPTEK or CANOPTEK unit from your army that is wholly within your army’s Power Matrix.<br><br><b>EFFECT:</b> Until the end of the phase, weapons equipped by <span class=\"kwb\">CRYPTEK</span> or <span class=\"kwb\">CANOPTEK</span> models in your unit have the [DEVASTATING WOUNDS] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000530",
+                    "000000546",
+                    "000000551",
+                    "000000558",
+                    "000000559",
+                    "000000560",
+                    "000002092",
+                    "000002108",
+                    "000002112",
+                    "000002114",
+                    "000002115",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004176",
+                    "000004177",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008547004",
@@ -37,7 +92,18 @@
             "legend": "By remotely accessing a hidden engine's most illuminating protocols, a Cryptek can release the awesome power of a caged solar flare.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Start of your Shooting phase.<br><br><b>TARGET:</b> One CRYPTEK model from your army.<br><br><b>EFFECT:</b> Select one objective marker within 18\" of your <span class=\"kwb\">CRYPTEK</span> model. Until the end of the phase, weapons equipped by friendly <span class=\"kwb\">NECRONS</span> models have the [IGNORES COVER] ability while targeting units within range of that objective marker."
+            "description": "<b>WHEN:</b> Start of your Shooting phase.<br><br><b>TARGET:</b> One CRYPTEK model from your army.<br><br><b>EFFECT:</b> Select one objective marker within 18\" of your <span class=\"kwb\">CRYPTEK</span> model. Until the end of the phase, weapons equipped by friendly <span class=\"kwb\">NECRONS</span> models have the [IGNORES COVER] ability while targeting units within range of that objective marker.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000530",
+                    "000002092",
+                    "000002108",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008547007",
@@ -47,7 +113,21 @@
             "legend": "Canoptek constructs use sophisticated metalogic to craft sinister ambushes. Luring the foe in by appearing at suboptimal operation, a surge of reanimation protocols suddenly swells their numbers.",
             "turn": "Opponent’s turn",
             "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit has declared a charge.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as a target of that charge and is wholly within your army’s Power Matrix.<br><br><b>EFFECT:</b> Your unit’s Reanimation Protocols activate."
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit has declared a charge.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as a target of that charge and is wholly within your army’s Power Matrix.<br><br><b>EFFECT:</b> Your unit’s Reanimation Protocols activate.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000546",
+                    "000000551",
+                    "000000558",
+                    "000000559",
+                    "000000560",
+                    "000002112",
+                    "000002114",
+                    "000002115",
+                    "000004176",
+                    "000004177"
+                ]
+            }
         },
         {
             "id": "000008547006",
@@ -57,7 +137,21 @@
             "legend": "With a twist to the fabric of time, a bubble of another moment enshrouds these constructs. Strange emissions from long-dead elder stars or utter darkness from a nighttime far in the future occludes them from their master’s foes.",
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000546",
+                    "000000551",
+                    "000000558",
+                    "000000559",
+                    "000000560",
+                    "000002112",
+                    "000002114",
+                    "000002115",
+                    "000004176",
+                    "000004177"
+                ]
+            }
         },
         {
             "id": "000008547005",
@@ -67,7 +161,21 @@
             "legend": "Canoptek constructs spent the long Great Sleep in watchful vigilance. Triggering a surge of power, they are capable of responsive manoeuvres to outwit the swiftest of attackers.",
             "turn": "Opponent’s turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that is within 9\" of that enemy unit.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to 6\"."
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.<br><br><b>TARGET:</b> One CANOPTEK unit from your army that is within 9\" of that enemy unit.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to 6\".",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000546",
+                    "000000551",
+                    "000000558",
+                    "000000559",
+                    "000000560",
+                    "000002112",
+                    "000002114",
+                    "000002115",
+                    "000004176",
+                    "000004177"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +184,85 @@
             "name": "Dimensional Sanctum",
             "cost": 20,
             "legend": "This Cryptek has had a personal dimensional pocket reality crafted for them, from which they can emerge into battle at will.",
-            "description": "CRYPTEK model only. Models in the bearer’s unit have the Infiltrators ability."
+            "description": "CRYPTEK model only. Models in the bearer’s unit have the Infiltrators ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002108",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008546003",
             "name": "Hyperphasic Fulcrum",
             "cost": 15,
             "legend": "With this small orb, its surface shimmering in fractal hues and shifting in multidimensional facets, a Cryptek can bypass the ancient security protocols placed upon the areas dormant machineries. Esoteric data and unusual strands of energy can be accessed, the orb acting as a skeleton key to greater power.",
-            "description": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army’s Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1."
+            "description": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army’s Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002108",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008546004",
             "name": "Autodivinator",
             "cost": 15,
             "legend": "This cryptogeometric puzzle box harbours a chronoscarab. The tiny construct creeps forward in time along temporal webs before hauling back a captured net of future moments. Its master can scry these wriggling futures to predict their foe’s strategies, using the knowledge to develop new counter-tactics to ambush the attackers.",
-            "description": "CRYPTEK model only. Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP."
+            "description": "CRYPTEK model only. Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002108",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008546005",
             "name": "Metalodermal Tesla Weave",
             "cost": 10,
             "legend": "This microsilicate weave generates a cyclical electrostatic overload that, providing its user triggers it in time, sends arcing lightning leaping out to roast onrushing attackers.",
-            "description": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer’s unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+            "description": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer’s unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002108",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000004178"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "include": [
+            "000000530",
+            "000000546",
+            "000000551",
+            "000000558",
+            "000000559",
+            "000000560",
+            "000002092",
+            "000002108",
+            "000002112",
+            "000002114",
+            "000002115",
+            "000002352",
+            "000002353",
+            "000002354",
+            "000004176",
+            "000004177",
+            "000004178"
+        ]
+    }
 }

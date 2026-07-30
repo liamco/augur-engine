@@ -75,12 +75,14 @@
         "weapons": [
             {
                 "id": "000000489:tyrannocyte-bio-weapons",
+                "line": 1,
                 "name": "Tyrannocyte bio-weapons",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000489",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tyrannocyte bio-weapons",
                         "attributes": [],
@@ -102,12 +104,14 @@
             },
             {
                 "id": "000000489:flensing-whips",
+                "line": 2,
                 "name": "Flensing whips",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000489",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Flensing whips",
                         "attributes": [],
@@ -174,14 +178,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

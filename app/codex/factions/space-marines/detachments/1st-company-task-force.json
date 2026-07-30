@@ -1,11 +1,18 @@
 {
+    "id": "000000798",
+    "slug": "1st-company-task-force",
     "name": "1st Company Task Force",
     "abilities": [
         {
             "id": "000008493",
             "name": "Extremis-level Threat",
             "description": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
-            "legend": "The 1st Company’s veterans have fought at the forefront of their Chapter’s wars for many mortal lifespans. Experience has taught them to identify the foe’s lethal threats and to lead their battle-brothers to purge them from existence."
+            "legend": "The 1st Company’s veterans have fought at the forefront of their Chapter’s wars for many mortal lifespans. Experience has taught them to identify the foe’s lethal threats and to lead their battle-brothers to purge them from existence.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +24,38 @@
             "legend": "Many are the legendary tales of the 1st Company holding their ground against the odds, weathering assaults that would have swept away lesser warriors.",
             "turn": "Opponent’s turn",
             "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase, just after an enemy unit ends a Charge move.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000071",
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000147",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001154",
+                    "000001183",
+                    "000002105",
+                    "000002255",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004137",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
         },
         {
             "id": "000008495003",
@@ -27,7 +65,38 @@
             "legend": "When the fighting is at its fiercest, the veteran warriors of the Chapter truly show their quality.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well."
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000071",
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000147",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001154",
+                    "000001183",
+                    "000002105",
+                    "000002255",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004137",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
         },
         {
             "id": "000008495002",
@@ -37,7 +106,12 @@
             "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008495005",
@@ -47,7 +121,38 @@
             "legend": "Adeptus Astartes veterans claim critical objectives in daring strikes, annihilating resistance in their Chapter’s name before sweeping onto their next target.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.<br><br><b>EFFECT:</b> That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.<br><br><b>EFFECT:</b> That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000071",
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000147",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001154",
+                    "000001183",
+                    "000002105",
+                    "000002255",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004137",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
         },
         {
             "id": "000008495006",
@@ -57,7 +162,33 @@
             "legend": "Teleportarium chambers within orbiting strike cruisers are able to perform site-to-strike teleportations for Terminator-armoured battle-brothers in extremis.",
             "turn": "Opponent’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR unit from your army.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability.<br><br><b>RESTRICTIONS:</b> You cannot select a unit that is within Engagement Range of one or more enemy units."
+            "description": "<b>WHEN:</b> End of your opponent’s Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR unit from your army.<br><br><b>EFFECT:</b> Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability.<br><br><b>RESTRICTIONS:</b> You cannot select a unit that is within Engagement Range of one or more enemy units.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001183",
+                    "000002105",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
         },
         {
             "id": "000008495004",
@@ -67,7 +198,38 @@
             "legend": "The 1st Company's veterans unleash their skills with an efficiency that is harrowing to witness.",
             "turn": "Your turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Your Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that made a Charge move this turn and destroyed one or more enemy units this phase.<br><br><b>EFFECT:</b> In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase."
+            "description": "<b>WHEN:</b> Your Fight phase.<br><br><b>TARGET:</b> One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that made a Charge move this turn and destroyed one or more enemy units this phase.<br><br><b>EFFECT:</b> In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000071",
+                    "000000079",
+                    "000000104",
+                    "000000115",
+                    "000000118",
+                    "000000135",
+                    "000000147",
+                    "000000219",
+                    "000000230",
+                    "000000231",
+                    "000000282",
+                    "000000300",
+                    "000000317",
+                    "000000318",
+                    "000001154",
+                    "000001183",
+                    "000002105",
+                    "000002255",
+                    "000002302",
+                    "000002468",
+                    "000002677",
+                    "000002803",
+                    "000003873",
+                    "000004137",
+                    "000004138",
+                    "000004166",
+                    "000004183"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +238,179 @@
             "name": "The Imperium’s Sword",
             "cost": 25,
             "legend": "This hero and the veterans they lead cut down their foes like a reaping whirlwind.",
-            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well."
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000008494003",
             "name": "Fear Made Manifest (Aura)",
             "cost": 30,
             "legend": "This warrior personifies the Emperor’s wrath.",
-            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead."
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000008494004",
             "name": "Rites of War",
             "cost": 10,
             "legend": "The commanders of the 1st Company vow before the Chapter and the Emperor to secure victory.",
-            "description": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well."
+            "description": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000079",
+                    "000000115",
+                    "000000135",
+                    "000000300",
+                    "000002468",
+                    "000002677",
+                    "000002803"
+                ]
+            }
         },
         {
             "id": "000008494005",
             "name": "Iron Resolve",
             "cost": 15,
             "legend": "This hero shrugs off even horrendous wounds.",
-            "description": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability."
+            "description": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000079",
+                    "000000115",
+                    "000000135",
+                    "000000300",
+                    "000002468",
+                    "000002677",
+                    "000002803"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "exclude": [
+            "000003875"
+        ]
+    }
 }

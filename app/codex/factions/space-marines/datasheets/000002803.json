@@ -121,12 +121,14 @@
         "weapons": [
             {
                 "id": "000002803:assault-cannon",
+                "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault cannon",
                         "attributes": [
@@ -150,12 +152,14 @@
             },
             {
                 "id": "000002803:combi-weapon",
+                "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -181,12 +185,14 @@
             },
             {
                 "id": "000002803:cyclone-missile-launcher-frag",
+                "line": 3,
                 "name": "Cyclone missile launcher – frag",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Cyclone missile launcher – frag",
                         "attributes": [
@@ -210,12 +216,14 @@
             },
             {
                 "id": "000002803:cyclone-missile-launcher-krak",
+                "line": 4,
                 "name": "Cyclone missile launcher – krak",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Cyclone missile launcher – krak",
                         "attributes": [],
@@ -237,12 +245,14 @@
             },
             {
                 "id": "000002803:heavy-flamer",
+                "line": 5,
                 "name": "Heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy flamer",
                         "attributes": [
@@ -267,12 +277,14 @@
             },
             {
                 "id": "000002803:storm-bolter",
+                "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -296,12 +308,14 @@
             },
             {
                 "id": "000002803:chainfist",
+                "line": 7,
                 "name": "Chainfist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chainfist",
                         "attributes": [
@@ -325,12 +339,14 @@
             },
             {
                 "id": "000002803:power-fist",
+                "line": 8,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -352,12 +368,14 @@
             },
             {
                 "id": "000002803:power-weapon",
+                "line": 9,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -379,12 +397,14 @@
             },
             {
                 "id": "000002803:thunder-hammer",
+                "line": 10,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -408,12 +428,14 @@
             },
             {
                 "id": "000002803:twin-lightning-claws",
+                "line": 11,
                 "name": "Twin lightning claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002803",
                         "line": 11,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lightning claws",
                         "attributes": [
@@ -482,14 +504,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000472:impaler-cannon",
+                "line": 1,
                 "name": "Impaler cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000472",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Impaler cannon",
                         "attributes": [
@@ -92,12 +94,14 @@
             },
             {
                 "id": "000000472:shockcannon",
+                "line": 2,
                 "name": "Shockcannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000472",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Shockcannon",
                         "attributes": [
@@ -121,12 +125,14 @@
             },
             {
                 "id": "000000472:chitinous-claws-and-teeth",
+                "line": 3,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000472",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chitinous claws and teeth",
                         "attributes": [],
@@ -197,6 +203,7 @@
     ],
     "abilities": [
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

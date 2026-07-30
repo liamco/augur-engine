@@ -164,12 +164,14 @@
         "weapons": [
             {
                 "id": "000002100:drakkis",
+                "line": 1,
                 "name": "Drakkis",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002100",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Drakkis",
                         "attributes": [
@@ -195,12 +197,14 @@
             },
             {
                 "id": "000002100:malleus-noctum",
+                "line": 2,
                 "name": "Malleus Noctum",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002100",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Malleus Noctum",
                         "attributes": [],
@@ -267,10 +271,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

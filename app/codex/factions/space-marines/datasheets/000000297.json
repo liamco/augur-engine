@@ -96,12 +96,14 @@
         "weapons": [
             {
                 "id": "000000297:plasma-pistol-standard",
+                "line": 1,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000297",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -125,12 +127,14 @@
             },
             {
                 "id": "000000297:plasma-pistol-supercharge",
+                "line": 2,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000297",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -155,12 +159,14 @@
             },
             {
                 "id": "000000297:artificer-crozius-arcanum",
+                "line": 3,
                 "name": "Artificer crozius arcanum",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000297",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Artificer crozius arcanum",
                         "attributes": [
@@ -230,14 +236,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -87,12 +87,14 @@
         "weapons": [
             {
                 "id": "000000321:skyhammer-missile-launcher",
+                "line": 1,
                 "name": "Skyhammer missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Skyhammer missile launcher",
                         "attributes": [
@@ -116,12 +118,14 @@
             },
             {
                 "id": "000000321:twin-heavy-bolter",
+                "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -146,12 +150,14 @@
             },
             {
                 "id": "000000321:twin-helfrost-cannon-dispersed",
+                "line": 3,
                 "name": "Twin helfrost cannon – dispersed",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin helfrost cannon – dispersed",
                         "attributes": [
@@ -176,12 +182,14 @@
             },
             {
                 "id": "000000321:twin-helfrost-cannon-focused",
+                "line": 4,
                 "name": "Twin helfrost cannon – focused",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Twin helfrost cannon – focused",
                         "attributes": [
@@ -205,12 +213,14 @@
             },
             {
                 "id": "000000321:twin-lascannon",
+                "line": 5,
                 "name": "Twin lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lascannon",
                         "attributes": [
@@ -234,12 +244,14 @@
             },
             {
                 "id": "000000321:twin-multi-melta",
+                "line": 6,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin multi-melta",
                         "attributes": [
@@ -264,12 +276,14 @@
             },
             {
                 "id": "000000321:armoured-hull",
+                "line": 7,
                 "name": "Armoured hull",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000321",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured hull",
                         "attributes": [],
@@ -336,14 +350,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008342",
             "name": "Hover",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

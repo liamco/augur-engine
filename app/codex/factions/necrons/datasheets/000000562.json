@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000562:focused-death-ray",
+                "line": 1,
                 "name": "Focused death ray",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000562",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Focused death ray",
                         "attributes": [
@@ -91,12 +93,14 @@
             },
             {
                 "id": "000000562:gauss-exterminator",
+                "line": 2,
                 "name": "Gauss exterminator",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000562",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss exterminator",
                         "attributes": [
@@ -120,12 +124,14 @@
             },
             {
                 "id": "000000562:heat-cannon",
+                "line": 3,
                 "name": "Heat cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000562",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heat cannon",
                         "attributes": [
@@ -194,10 +200,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

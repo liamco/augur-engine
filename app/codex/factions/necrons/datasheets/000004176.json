@@ -79,12 +79,14 @@
         "weapons": [
             {
                 "id": "000004176:atomiser-beam",
+                "line": 1,
                 "name": "Atomiser beam",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004176",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Atomiser beam",
                         "attributes": [],
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000004176:gauss-scalpel",
+                "line": 2,
                 "name": "Gauss scalpel",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004176",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss scalpel",
                         "attributes": [
@@ -135,12 +139,14 @@
             },
             {
                 "id": "000004176:tesla-caster",
+                "line": 3,
                 "name": "Tesla caster",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004176",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla caster",
                         "attributes": [
@@ -165,12 +171,14 @@
             },
             {
                 "id": "000004176:claws",
+                "line": 4,
                 "name": "Claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004176",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Claws",
                         "attributes": [],
@@ -237,10 +245,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

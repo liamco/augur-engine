@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000000242:assault-cannon",
+                "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000242",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault cannon",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000000242:heavy-bolter",
+                "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000242",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolter",
                         "attributes": [
@@ -135,12 +139,14 @@
             },
             {
                 "id": "000000242:plasma-storm-battery-standard",
+                "line": 3,
                 "name": "Plasma storm battery – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000242",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma storm battery – standard",
                         "attributes": [
@@ -165,12 +171,14 @@
             },
             {
                 "id": "000000242:plasma-storm-battery-supercharge",
+                "line": 4,
                 "name": "Plasma storm battery – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000242",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma storm battery – supercharge",
                         "attributes": [
@@ -196,12 +204,14 @@
             },
             {
                 "id": "000000242:close-combat-weapon",
+                "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000242",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -268,10 +278,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

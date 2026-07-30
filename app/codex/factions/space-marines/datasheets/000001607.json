@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000001607:hunter-killer-missile",
+                "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hunter-killer missile",
                         "attributes": [
@@ -118,12 +120,14 @@
             },
             {
                 "id": "000001607:quad-launcher-shatter-shells",
+                "line": 2,
                 "name": "Quad launcher – shatter shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Quad launcher – shatter shells",
                         "attributes": [],
@@ -145,12 +149,14 @@
             },
             {
                 "id": "000001607:quad-launcher-thunderfire-shells",
+                "line": 3,
                 "name": "Quad launcher – thunderfire shells",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Quad launcher – thunderfire shells",
                         "attributes": [
@@ -175,12 +181,14 @@
             },
             {
                 "id": "000001607:storm-bolter",
+                "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -204,12 +212,14 @@
             },
             {
                 "id": "000001607:twin-multi-melta",
+                "line": 5,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin multi-melta",
                         "attributes": [
@@ -234,12 +244,14 @@
             },
             {
                 "id": "000001607:twin-volkite-culverin",
+                "line": 6,
                 "name": "Twin volkite culverin",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin volkite culverin",
                         "attributes": [
@@ -264,12 +276,14 @@
             },
             {
                 "id": "000001607:armoured-tracks",
+                "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001607",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured tracks",
                         "attributes": [],
@@ -336,10 +350,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

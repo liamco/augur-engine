@@ -104,12 +104,14 @@
         "weapons": [
             {
                 "id": "000004130:master-crafted-bolt-carbine",
+                "line": 1,
                 "name": "Master-crafted bolt carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004130",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted bolt carbine",
                         "attributes": [],
@@ -131,12 +133,14 @@
             },
             {
                 "id": "000004130:master-crafted-heavy-bolt-pistol",
+                "line": 2,
                 "name": "Master-crafted heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004130",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted heavy bolt pistol",
                         "attributes": [
@@ -160,12 +164,14 @@
             },
             {
                 "id": "000004130:plasma-pistol-standard",
+                "line": 3,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004130",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -189,12 +195,14 @@
             },
             {
                 "id": "000004130:plasma-pistol-supercharge",
+                "line": 4,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004130",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -219,12 +227,14 @@
             },
             {
                 "id": "000004130:master-crafted-power-weapon",
+                "line": 5,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004130",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [],
@@ -246,12 +256,14 @@
             },
             {
                 "id": "000004130:thunder-hammer",
+                "line": 6,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004130",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -320,10 +332,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

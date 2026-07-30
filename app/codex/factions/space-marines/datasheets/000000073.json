@@ -171,12 +171,14 @@
         "weapons": [
             {
                 "id": "000000073:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -200,12 +202,14 @@
             },
             {
                 "id": "000000073:heavy-bolt-pistol",
+                "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -229,12 +233,14 @@
             },
             {
                 "id": "000000073:master-crafted-bolter",
+                "line": 3,
                 "name": "Master-crafted bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted bolter",
                         "attributes": [],
@@ -256,12 +262,14 @@
             },
             {
                 "id": "000000073:neo-volkite-pistol",
+                "line": 4,
                 "name": "Neo-volkite pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Neo-volkite pistol",
                         "attributes": [
@@ -286,12 +294,14 @@
             },
             {
                 "id": "000000073:plasma-pistol-standard",
+                "line": 5,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -315,14 +325,17 @@
             },
             {
                 "id": "000000073:plasma-pistol",
+                "line": 6,
                 "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -345,12 +358,14 @@
             },
             {
                 "id": "000000073:close-combat-weapon",
+                "line": 7,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -372,12 +387,14 @@
             },
             {
                 "id": "000000073:master-crafted-power-weapon",
+                "line": 8,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [],
@@ -399,12 +416,14 @@
             },
             {
                 "id": "000000073:power-fist",
+                "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000073",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -471,10 +490,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

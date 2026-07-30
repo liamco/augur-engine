@@ -157,12 +157,14 @@
         "weapons": [
             {
                 "id": "000002793:combi-weapon",
+                "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002793",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -188,12 +190,14 @@
             },
             {
                 "id": "000002793:heavy-bolt-pistol",
+                "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002793",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -217,12 +221,14 @@
             },
             {
                 "id": "000002793:astartes-chainsword",
+                "line": 3,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002793",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [
@@ -246,12 +252,14 @@
             },
             {
                 "id": "000002793:master-crafted-power-weapon",
+                "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002793",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [
@@ -320,10 +328,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008526",
             "name": "Templar Vows",
             "type": "Faction"
         },

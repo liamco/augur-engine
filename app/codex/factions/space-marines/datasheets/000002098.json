@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000002098:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002098",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000002098:plasma-incinerator-standard",
+                "line": 2,
                 "name": "Plasma incinerator – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002098",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma incinerator – standard",
                         "attributes": [
@@ -131,12 +135,14 @@
             },
             {
                 "id": "000002098:plasma-incinerator-supercharge",
+                "line": 3,
                 "name": "Plasma incinerator – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002098",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma incinerator – supercharge",
                         "attributes": [
@@ -162,12 +168,14 @@
             },
             {
                 "id": "000002098:plasma-pistol-standard",
+                "line": 4,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002098",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -191,12 +199,14 @@
             },
             {
                 "id": "000002098:plasma-pistol-supercharge",
+                "line": 5,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002098",
                         "line": 5,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -221,12 +231,14 @@
             },
             {
                 "id": "000002098:close-combat-weapon",
+                "line": 6,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002098",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -303,6 +315,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

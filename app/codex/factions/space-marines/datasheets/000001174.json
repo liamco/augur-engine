@@ -158,12 +158,14 @@
         "weapons": [
             {
                 "id": "000001174:absolvor-bolt-pistol",
+                "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001174",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Absolvor bolt pistol",
                         "attributes": [
@@ -187,12 +189,14 @@
             },
             {
                 "id": "000001174:crozius-arcanum",
+                "line": 2,
                 "name": "Crozius arcanum",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001174",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Crozius arcanum",
                         "attributes": [],
@@ -259,10 +263,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

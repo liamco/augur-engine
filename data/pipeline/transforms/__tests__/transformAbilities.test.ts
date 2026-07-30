@@ -2,6 +2,44 @@ import { describe, it, expect } from "vitest";
 import { transformAbilities } from "../transformAbilities";
 import type { RawAbility } from "../../types";
 
+describe("transformAbilities — definition ids", () => {
+    it("carries the shared definition id on a Core ability", () => {
+        const result = transformAbilities([
+            {
+                id: "000008343",
+                factionId: "",
+                name: "Deep Strike",
+                legend: "",
+                description: "<p>rules text</p>",
+                type: "Core",
+                parameter: "",
+            },
+        ] as never);
+
+        expect(result[0]).toEqual({
+            id: "000008343",
+            name: "Deep Strike",
+            type: "Core",
+        });
+    });
+
+    it("omits the id on a bespoke Datasheet ability, where the source leaves it blank", () => {
+        const result = transformAbilities([
+            {
+                id: "",
+                factionId: "",
+                name: "Alpha Warrior",
+                legend: "",
+                description: "<p>rules text</p>",
+                type: "Datasheet",
+                parameter: "",
+            },
+        ] as never);
+
+        expect(result[0]).not.toHaveProperty("id");
+    });
+});
+
 describe("transformAbilities", () => {
     it("converts Core ability to minimal form", () => {
         const raw: RawAbility[] = [
@@ -17,6 +55,7 @@ describe("transformAbilities", () => {
 
         const result = transformAbilities(raw);
         expect(result[0]).toEqual({
+            id: "000008343",
             name: "Deep Strike",
             type: "Core",
         });
@@ -36,6 +75,7 @@ describe("transformAbilities", () => {
 
         const result = transformAbilities(raw);
         expect(result[0]).toEqual({
+            id: "000000707",
             name: "Shadow in the Warp",
             type: "Faction",
         });

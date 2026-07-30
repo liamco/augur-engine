@@ -87,12 +87,14 @@
         "weapons": [
             {
                 "id": "000000072:firefury-missile-batteries",
+                "line": 1,
                 "name": "Firefury missile batteries",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000072",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Firefury missile batteries",
                         "attributes": [
@@ -117,12 +119,14 @@
             },
             {
                 "id": "000000072:twin-magna-melta",
+                "line": 2,
                 "name": "Twin magna-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000072",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin magna-melta",
                         "attributes": [
@@ -147,12 +151,14 @@
             },
             {
                 "id": "000000072:armoured-hull",
+                "line": 3,
                 "name": "Armoured hull",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000072",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured hull",
                         "attributes": [
@@ -221,14 +227,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008342",
             "name": "Hover",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

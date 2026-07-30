@@ -55,12 +55,14 @@
         "weapons": [
             {
                 "id": "000002686:barblauncher",
+                "line": 1,
                 "name": "Barblauncher",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002686",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Barblauncher",
                         "attributes": [
@@ -85,12 +87,14 @@
             },
             {
                 "id": "000002686:chitinous-claws-and-teeth",
+                "line": 2,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002686",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chitinous claws and teeth",
                         "attributes": [],
@@ -161,6 +165,7 @@
     ],
     "abilities": [
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

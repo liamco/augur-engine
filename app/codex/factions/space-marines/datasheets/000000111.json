@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000000111:assault-cannon",
+                "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault cannon",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000000111:dreadnought-inferno-cannon",
+                "line": 2,
                 "name": "Dreadnought inferno cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Dreadnought inferno cannon",
                         "attributes": [
@@ -136,12 +140,14 @@
             },
             {
                 "id": "000000111:heavy-plasma-cannon-standard",
+                "line": 3,
                 "name": "Heavy plasma cannon – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy plasma cannon – standard",
                         "attributes": [
@@ -165,12 +171,14 @@
             },
             {
                 "id": "000000111:heavy-plasma-cannon-supercharge",
+                "line": 4,
                 "name": "Heavy plasma cannon – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Heavy plasma cannon – supercharge",
                         "attributes": [
@@ -195,12 +203,14 @@
             },
             {
                 "id": "000000111:missile-launcher-frag",
+                "line": 5,
                 "name": "Missile launcher – frag",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Missile launcher – frag",
                         "attributes": [
@@ -224,12 +234,14 @@
             },
             {
                 "id": "000000111:missile-launcher-krak",
+                "line": 6,
                 "name": "Missile launcher – krak",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Missile launcher – krak",
                         "attributes": [],
@@ -251,12 +263,14 @@
             },
             {
                 "id": "000000111:multi-melta",
+                "line": 7,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -280,12 +294,14 @@
             },
             {
                 "id": "000000111:twin-autocannon",
+                "line": 8,
                 "name": "Twin autocannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin autocannon",
                         "attributes": [
@@ -309,12 +325,14 @@
             },
             {
                 "id": "000000111:twin-heavy-bolter",
+                "line": 9,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -339,12 +357,14 @@
             },
             {
                 "id": "000000111:twin-lascannon",
+                "line": 10,
                 "name": "Twin lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin lascannon",
                         "attributes": [
@@ -368,12 +388,14 @@
             },
             {
                 "id": "000000111:armoured-feet",
+                "line": 11,
                 "name": "Armoured feet",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000111",
                         "line": 11,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured feet",
                         "attributes": [],
@@ -440,10 +462,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

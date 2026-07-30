@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000470:spinemaws",
+                "line": 1,
                 "name": "Spinemaws",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000470",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Spinemaws",
                         "attributes": [
@@ -96,12 +98,14 @@
             },
             {
                 "id": "000000470:chitinous-claws-and-teeth",
+                "line": 2,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000470",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Chitinous claws and teeth",
                         "attributes": [
@@ -178,10 +182,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

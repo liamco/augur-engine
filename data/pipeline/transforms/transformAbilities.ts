@@ -1,6 +1,11 @@
 import type { RawAbility } from "../types";
 
 export interface ParsedAbilityCore {
+    // Shared definition id — one per rule across every datasheet that has it
+    // (000008343 = Deep Strike, 000008350 = Oath of Moment). A stable join key
+    // to the library. The source leaves it blank on bespoke abilities, so it is
+    // only emitted where present.
+    id?: string;
     name: string;
     type: "Core" | "Faction";
     parameter?: number;
@@ -31,6 +36,7 @@ export function transformAbilities(raw: RawAbility[]): ParsedAbility[] {
         if (ability.type === "Core" || ability.type === "Faction") {
             const param = extractParameter(ability.name);
             const result: ParsedAbilityCore = {
+                ...(ability.id ? { id: ability.id } : {}),
                 name: ability.name,
                 type: ability.type,
             };

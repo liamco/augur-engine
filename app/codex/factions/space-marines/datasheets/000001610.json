@@ -65,12 +65,14 @@
         "weapons": [
             {
                 "id": "000001610:stormfury-missiles",
+                "line": 1,
                 "name": "Stormfury missiles",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001610",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stormfury missiles",
                         "attributes": [],
@@ -92,12 +94,14 @@
             },
             {
                 "id": "000001610:thunderstrike-las-talon",
+                "line": 2,
                 "name": "Thunderstrike las-talon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001610",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunderstrike las-talon",
                         "attributes": [],
@@ -119,12 +123,14 @@
             },
             {
                 "id": "000001610:twin-icarus-rocket-pod",
+                "line": 3,
                 "name": "Twin Icarus rocket pod",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001610",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin Icarus rocket pod",
                         "attributes": [
@@ -149,12 +155,14 @@
             },
             {
                 "id": "000001610:close-combat-weapon",
+                "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001610",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -221,14 +229,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

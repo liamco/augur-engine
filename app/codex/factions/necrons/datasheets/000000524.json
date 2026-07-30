@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000000524:staff-of-light",
+                "line": 1,
                 "name": "Staff of light",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000524",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of light",
                         "attributes": [],
@@ -116,12 +118,14 @@
             },
             {
                 "id": "000000524:staff-of-light-2",
+                "line": 2,
                 "name": "Staff of light",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000524",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of light",
                         "attributes": [],
@@ -143,12 +147,14 @@
             },
             {
                 "id": "000000524:lord-s-blade",
+                "line": 3,
                 "name": "Lord’s blade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000524",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Lord’s blade",
                         "attributes": [
@@ -217,10 +223,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

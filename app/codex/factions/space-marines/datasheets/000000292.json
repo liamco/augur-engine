@@ -96,12 +96,14 @@
         "weapons": [
             {
                 "id": "000000292:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000292",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -125,12 +127,14 @@
             },
             {
                 "id": "000000292:living-lightning-witchfire",
+                "line": 2,
                 "name": "Living Lightning – witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000292",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Living Lightning – witchfire",
                         "attributes": [
@@ -155,12 +159,14 @@
             },
             {
                 "id": "000000292:living-lightning-focused-witchfire",
+                "line": 3,
                 "name": "Living Lightning – focused witchfire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000292",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Living Lightning – focused witchfire",
                         "attributes": [
@@ -186,12 +192,14 @@
             },
             {
                 "id": "000000292:staff-of-the-stormcaller",
+                "line": 4,
                 "name": "Staff of the Stormcaller",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000292",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of the Stormcaller",
                         "attributes": [
@@ -261,10 +269,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

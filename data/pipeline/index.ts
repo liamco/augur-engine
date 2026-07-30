@@ -5,6 +5,11 @@ import { fileURLToPath } from "node:url";
 import { transformDatasheet } from "./transformDatasheet";
 import { transformFaction } from "./transformFaction";
 import { validateDatasheet } from "./validation/validateOutput";
+import {
+    applyEligibility,
+    createEligibilityIndex,
+    recordDatasheetEligibility,
+} from "./transforms/eligibility";
 import type { RawDatasheet, RawFaction, ParsedStratagem } from "./types";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -64,24 +69,18 @@ function processFaction(factionSlug: string) {
 
     // 1. Transform faction file (detachments, datasheet index)
     const rawFaction = readJson<RawFaction>(factionPath);
-    const { datasheetIndex, detachments } = transformFaction(rawFaction);
+    const { faction, detachments } = transformFaction(rawFaction);
 
     // Write faction metadata
-    writeJson(join(OUTPUT_DIR, "factions", factionSlug, "faction.json"), {
-        id: rawFaction.id,
-        slug: rawFaction.slug,
-        name: rawFaction.name,
-        datasheets: datasheetIndex,
-    });
+    writeJson(
+        join(OUTPUT_DIR, "factions", factionSlug, "faction.json"),
+        faction,
+    );
 
-    // Write detachment files
-    for (const det of detachments) {
-        const detSlug = det.name.toLowerCase().replace(/\s+/g, "-");
-        writeJson(
-            join(OUTPUT_DIR, "factions", factionSlug, "detachments", `${detSlug}.json`),
-            det,
-        );
-    }
+    // Detachment files are written *after* the datasheets below: datasheet
+    // eligibility for each stratagem/enhancement/ability is only known once
+    // every datasheet in the faction has been read.
+    const eligibility = createEligibilityIndex();
 
     // 2. Process individual datasheets
     const datasheetsDir = join(factionDir, "datasheets");
@@ -106,6 +105,8 @@ function processFaction(factionSlug: string) {
             coreStratagemsById.set(stratagem.id, stratagem);
         }
 
+        recordDatasheetEligibility(eligibility, rawDatasheet);
+
         if (validateOnly) {
             const errors = validateDatasheet(datasheet);
             if (errors.length > 0) {
@@ -123,6 +124,22 @@ function processFaction(factionSlug: string) {
         );
     }
 
+    // 3. Write detachment files, now annotated with datasheet eligibility.
+    if (validateOnly) return;
+
+    if (values.datasheet) {
+        console.log(
+            "  Skipping detachment files (single-datasheet run — eligibility would be incomplete).",
+        );
+        return;
+    }
+
+    for (const det of applyEligibility(detachments, eligibility)) {
+        writeJson(
+            join(OUTPUT_DIR, "factions", factionSlug, "detachments", `${det.slug}.json`),
+            det,
+        );
+    }
 }
 
 /**

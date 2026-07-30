@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000000315:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000000315:boltgun",
+                "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -128,12 +132,14 @@
             },
             {
                 "id": "000000315:combi-weapon",
+                "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -159,12 +165,14 @@
             },
             {
                 "id": "000000315:plasma-pistol-standard",
+                "line": 4,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -188,12 +196,14 @@
             },
             {
                 "id": "000000315:plasma-pistol-supercharge",
+                "line": 5,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 5,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -218,12 +228,14 @@
             },
             {
                 "id": "000000315:storm-bolter",
+                "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -247,12 +259,14 @@
             },
             {
                 "id": "000000315:heirloom-weapon",
+                "line": 7,
                 "name": "Heirloom weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000315",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heirloom weapon",
                         "attributes": [],
@@ -329,6 +343,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

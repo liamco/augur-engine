@@ -112,12 +112,14 @@
         "weapons": [
             {
                 "id": "000000148:disintegration-combi-gun",
+                "line": 1,
                 "name": "Disintegration combi-gun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000148",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Disintegration combi-gun",
                         "attributes": [
@@ -143,12 +145,14 @@
             },
             {
                 "id": "000000148:disintegration-pistol",
+                "line": 2,
                 "name": "Disintegration pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000148",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Disintegration pistol",
                         "attributes": [
@@ -174,12 +178,14 @@
             },
             {
                 "id": "000000148:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000148",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -246,10 +252,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

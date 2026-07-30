@@ -88,12 +88,14 @@
         "weapons": [
             {
                 "id": "000001165:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001165",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -117,12 +119,14 @@
             },
             {
                 "id": "000001165:close-combat-weapon",
+                "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001165",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -189,10 +193,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

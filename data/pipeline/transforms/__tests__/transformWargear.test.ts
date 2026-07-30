@@ -58,19 +58,49 @@ describe("transformWargear", () => {
         expect(weapon.profiles[0].line).toBe(1);
     });
 
-    it("removes datasheetId and line from weapon level", () => {
+    it("removes datasheetId from weapon level but keeps line", () => {
         const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
         const weapon = result.weapons[0] as unknown as Record<string, unknown>;
 
         expect(weapon).not.toHaveProperty("datasheetId");
-        expect(weapon).not.toHaveProperty("line");
+        // line is NOT recoverable from array position: 94 of 2198 weapons in the
+        // source have a line that differs from their index.
+        expect(weapon.line).toBe(1);
     });
 
-    it("removes lineInWargear from profiles", () => {
+    it("keeps lineInWargear on profiles", () => {
+        const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
+
+        // Likewise 178 of 2207 profiles have a lineInWargear that differs from
+        // their position within the weapon.
+        expect(result.weapons[0].profiles[0].lineInWargear).toBe(1);
+    });
+
+    it("carries profileName on a multi-profile weapon", () => {
+        const withProfileName: RawWeapon[] = [
+            {
+                ...rawWeapons[0],
+                name: "Plasma pistol",
+                profiles: [
+                    {
+                        ...rawWeapons[0].profiles[0],
+                        name: "Plasma pistol - supercharge",
+                        profileName: "supercharge",
+                    },
+                ],
+            },
+        ];
+
+        const result = transformWargear(withProfileName, "", []);
+
+        expect(result.weapons[0].profiles[0].profileName).toBe("supercharge");
+    });
+
+    it("omits profileName when the source has none", () => {
         const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
         const profile = result.weapons[0].profiles[0] as unknown as Record<string, unknown>;
 
-        expect(profile).not.toHaveProperty("lineInWargear");
+        expect(profile).not.toHaveProperty("profileName");
     });
 
     it("removes description from profiles", () => {

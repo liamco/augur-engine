@@ -94,12 +94,14 @@
         "weapons": [
             {
                 "id": "000002776:hand-flamer",
+                "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002776",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand flamer",
                         "attributes": [
@@ -125,12 +127,14 @@
             },
             {
                 "id": "000002776:heavy-bolt-pistol",
+                "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002776",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -154,14 +158,17 @@
             },
             {
                 "id": "000002776:plasma-pistol",
+                "line": 3,
                 "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002776",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -176,8 +183,10 @@
                     {
                         "datasheetId": "000002776",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -200,12 +209,14 @@
             },
             {
                 "id": "000002776:astartes-chainsword",
+                "line": 4,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002776",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -227,12 +238,14 @@
             },
             {
                 "id": "000002776:power-weapon",
+                "line": 5,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002776",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -254,12 +267,14 @@
             },
             {
                 "id": "000002776:power-fist",
+                "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002776",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -336,10 +351,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

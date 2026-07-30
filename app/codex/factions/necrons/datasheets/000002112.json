@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000002112:atomiser-beam",
+                "line": 1,
                 "name": "Atomiser beam",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002112",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Atomiser beam",
                         "attributes": [],
@@ -87,12 +89,14 @@
             },
             {
                 "id": "000002112:reanimator-s-claws",
+                "line": 2,
                 "name": "Reanimator’s claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002112",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Reanimator’s claws",
                         "attributes": [],
@@ -159,10 +163,12 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

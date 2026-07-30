@@ -1,11 +1,26 @@
 {
+    "id": "000000815",
+    "slug": "annihilation-legion",
     "name": "Annihilation Legion",
     "abilities": [
         {
             "id": "000008542",
             "name": "Annihilation Protocol",
             "description": "Each time a DESTROYER CULT or FLAYED ONES unit from your army declares a charge, you can re-roll the Charge roll. If one or more targets of that charge are Below Half-strength, add 1 to the Charge roll as well.<br><br>Each time a <span class=\"kwb\">DESTROYER</span> <span class=\"kwb\">CULT</span> unit from your army makes a ranged attack that targets the closest eligible target, add 1 to the Armour Penetration characteristic of that attack.",
-            "legend": "The most murderous Necrons of an Annihilation Legion retain no thought processes beyond destroying anything in reach. They are mechanised death, echoes of the industrialised and brutal processes of bio transference made manifest. Whether soullessly efficient or frenziedly deluded, these killing machines follow protocols that have atrophied into a singular and all-consuming insanity."
+            "legend": "The most murderous Necrons of an Annihilation Legion retain no thought processes beyond destroying anything in reach. They are mechanised death, echoes of the industrialised and brutal processes of bio transference made manifest. Whether soullessly efficient or frenziedly deluded, these killing machines follow protocols that have atrophied into a singular and all-consuming insanity.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +32,20 @@
             "legend": "Wreathed in tendrils of transdimensional shadow that intensify their deathly visages, these killing machines evoke such terror that steady aims tremble and blade arms are sapped of strength.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008405007",
@@ -27,7 +55,20 @@
             "legend": "To strike down one horror is merely to draw the rest of the pack's insane and murderous focus.",
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that had one or more of its models destroyed by the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move, but must end that move as close as possible to that enemy unit."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that had one or more of its models destroyed by the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move, but must end that move as close as possible to that enemy unit.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008405004",
@@ -37,7 +78,20 @@
             "legend": "Through some quirk of their kind's shared insanity, a spark of gruesome satisfaction surges through them with every enemy life snuffed out, triggering quiescent power reserves that drive them onwards.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has just destroyed an enemy unit, or just caused an enemy unit that was not Below Half-strength to become Below Half-strength.<br><br><b>EFFECT:</b> Your unit’s Reanimation Protocols activate."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has just destroyed an enemy unit, or just caused an enemy unit that was not Below Half-strength to become Below Half-strength.<br><br><b>EFFECT:</b> Your unit’s Reanimation Protocols activate.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008405003",
@@ -47,7 +101,20 @@
             "legend": "Where one foe falls, logic dictates all others must follow. Where blood is shed, ever must more flow.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model from your unit makes an attack that targets a unit below Starting Strength, add 1 to the Hit roll. If the target is Below Half-strength, add 1 to the Wound roll as well."
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model from your unit makes an attack that targets a unit below Starting Strength, add 1 to the Hit roll. If the target is Below Half-strength, add 1 to the Wound roll as well.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008405006",
@@ -57,7 +124,20 @@
             "legend": "Whatever strange afflictions eat away at the sanity of Destroyers and Flayed Ones, mercy is not one of them.",
             "turn": "Opponent’s turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that started the phase within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. Your unit can then make a Normal move, but must end that move as close as possible to that enemy unit."
+            "description": "<b>WHEN:</b> Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that started the phase within Engagement Range of that enemy unit.<br><br><b>EFFECT:</b> Roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. Your unit can then make a Normal move, but must end that move as close as possible to that enemy unit.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008405005",
@@ -67,7 +147,20 @@
             "legend": "Driven into a state of hyperaggression, an Annihilation Legion's most eager hunters plunge into their prey's midst to maximise their butchery.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\"."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000538",
+                    "000002109",
+                    "000002110",
+                    "000002116",
+                    "000002351",
+                    "000002355",
+                    "000002358",
+                    "000002359",
+                    "000004186"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +169,99 @@
             "name": "Eternal Madness",
             "cost": 25,
             "legend": "This Necrons sanity suffered during the Great Sleep. Now they are driven by a wrathful zeal, one which has seeped through the carrier waves of their commandments and into their followers.",
-            "description": "<span class=\"kwb\">NECRONS</span> model only. In the Fight phase, each time a model in the bearer’s unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking models unit has finished making its attacks, and is then removed from play."
+            "description": "<span class=\"kwb\">NECRONS</span> model only. In the Fight phase, each time a model in the bearer’s unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking models unit has finished making its attacks, and is then removed from play.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000000524",
+                    "000000533",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008543003",
             "name": "Ingrained Superiority",
             "cost": 10,
             "legend": "An immortal destroyer, this war leaders every victim is etched irrevocably into their cognitive engrams. Every weakness they ever overcame is recalled, frailties they can exploit on each new battlefield.",
-            "description": "<span class=\"kwb\">NECRONS</span> model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+            "description": "<span class=\"kwb\">NECRONS</span> model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000000524",
+                    "000000533",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008543004",
             "name": "Soulless Reaper",
             "cost": 20,
             "legend": "This deathly killer exudes a soul-sapping presence, the promise of lifes’ end so explicit in their chilling gaze that few can muster the strength of will to evade it.",
-            "description": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer’s unit is selected to Fall Back, roll one D6: on a 3+, that unit cannot Fall Back this phase and must Remain Stationary."
+            "description": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer’s unit is selected to Fall Back, roll one D6: on a 3+, that unit cannot Fall Back this phase and must Remain Stationary.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002109",
+                    "000002351",
+                    "000002355"
+                ]
+            }
         },
         {
             "id": "000008543005",
             "name": "Eldritch Nightmare",
             "cost": 15,
             "legend": "Atavistic fears are summoned from the pits of nightmare and thrust into the minds of all foes near this metal-skinned horror.",
-            "description": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+            "description": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000002109",
+                    "000002351",
+                    "000002355"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "include": [
+            "000000523",
+            "000000524",
+            "000000533",
+            "000000538",
+            "000002108",
+            "000002109",
+            "000002110",
+            "000002116",
+            "000002350",
+            "000002351",
+            "000002352",
+            "000002353",
+            "000002354",
+            "000002355",
+            "000002358",
+            "000002359",
+            "000003693",
+            "000004178",
+            "000004186"
+        ]
+    }
 }

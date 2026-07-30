@@ -1,11 +1,34 @@
 {
+    "id": "000000756",
+    "slug": "awakened-dynasty",
     "name": "Awakened Dynasty",
     "abilities": [
         {
             "id": "000008370",
             "name": "Command Protocols",
             "description": "While a Necrons Character model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll.",
-            "legend": "The Necron nobility and their high-ranking courtiers make war in a codified and relentless fashion. Their command protocols crackle out across multi-dimensional spectra from carrier-wave projectors, compelling their semi-sentient soldiery into battle one overriding directive at a time"
+            "legend": "The Necron nobility and their high-ranking courtiers make war in a codified and relentless fashion. Their command protocols crackle out across multi-dimensional spectra from carrier-wave projectors, compelling their semi-sentient soldiery into battle one overriding directive at a time",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000522",
+                    "000000523",
+                    "000000524",
+                    "000000527",
+                    "000000528",
+                    "000000530",
+                    "000000531",
+                    "000000532",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +40,8 @@
             "legend": "The legions employ the strategies of their masters in perfect synchronicity, laying down hails of mechanically coordinated fire.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets a unit within half range, re-roll a Hit roll of 1. If a NECRONS CHARACTER is leading your unit, until the end of the phase, you can re-roll the Hit roll for that attack instead."
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack that targets a unit within half range, re-roll a Hit roll of 1. If a NECRONS CHARACTER is leading your unit, until the end of the phase, you can re-roll the Hit roll for that attack instead.",
+            "eligibleDatasheets": "all"
         },
         {
             "id": "000008371004",
@@ -27,7 +51,8 @@
             "legend": "Necrons strike with data-augmented accuracy.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit. In addition, If a Necrons Character is leading your unit, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1. (this is not cumulative with any other modifiers that improve Armour Penetration]."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit. In addition, If a Necrons Character is leading your unit, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1. (this is not cumulative with any other modifiers that improve Armour Penetration].",
+            "eligibleDatasheets": "all"
         },
         {
             "id": "000008371002",
@@ -37,7 +62,30 @@
             "legend": "Necron rulers possess enhanced self-repair systems.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Necrons Infantry Character model from your army that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> At the end of the phase, set your model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with half of its starting number of wounds remaining.<br><br><b>RESTRICTIONS:</b> Each model can only be targeted with this Stratagem once per battle."
+            "description": "<b>WHEN:</b> Any phase.<br><br><b>TARGET:</b> One Necrons Infantry Character model from your army that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.<br><br><b>EFFECT:</b> At the end of the phase, set your model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with half of its starting number of wounds remaining.<br><br><b>RESTRICTIONS:</b> Each model can only be targeted with this Stratagem once per battle.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000522",
+                    "000000523",
+                    "000000524",
+                    "000000527",
+                    "000000528",
+                    "000000530",
+                    "000000531",
+                    "000000532",
+                    "000002092",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008371007",
@@ -47,7 +95,37 @@
             "legend": "Criss-crossfire leaps from the Necron ranks, forming a blazing corona of deadly energy to punish those who dare threaten the indignant nobility's legions.",
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit destroys a <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>TARGET:</b> One NECRONS CHARACTER unit from your army that was within 6\" of that <span class=\"kwb\">NECRONS</span> unit when it was destroyed.<br><br><b>EFFECT:</b> After the attacking unit has resolved its attacks, your unit can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit destroys a <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>TARGET:</b> One NECRONS CHARACTER unit from your army that was within 6\" of that <span class=\"kwb\">NECRONS</span> unit when it was destroyed.<br><br><b>EFFECT:</b> After the attacking unit has resolved its attacks, your unit can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000522",
+                    "000000523",
+                    "000000524",
+                    "000000527",
+                    "000000528",
+                    "000000530",
+                    "000000531",
+                    "000000532",
+                    "000000533",
+                    "000000541",
+                    "000000542",
+                    "000000555",
+                    "000002092",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000002357",
+                    "000002360",
+                    "000003693",
+                    "000004178",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008371005",
@@ -57,7 +135,15 @@
             "legend": "Arcing energies leap from one Necron to the next, lending them unnatural speed and surety",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, ranged weapons equipped by models in your unit have the [ASSAULT] ability. In addition, if a Necrons Character is leading your unit, until the end of the phase, you can re-roll Advance rolls made for your unit."
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army.<br><br><b>EFFECT:</b> Until the end of the turn, ranged weapons equipped by models in your unit have the [ASSAULT] ability. In addition, if a Necrons Character is leading your unit, until the end of the phase, you can re-roll Advance rolls made for your unit.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000562",
+                    "000000567",
+                    "000002361",
+                    "000002362"
+                ]
+            }
         },
         {
             "id": "000008371003",
@@ -67,7 +153,31 @@
             "legend": "Nanoscarabs are released in boiling black clouds that whirl about the legions and effect rapid repairs",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit activates its Reanimation Protocols and reanimates D3 wounds (or D3+1 wounds if a NECRONS CHARACTER is leading your unit]."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit activates its Reanimation Protocols and reanimates D3 wounds (or D3+1 wounds if a NECRONS CHARACTER is leading your unit].",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000534",
+                    "000000535",
+                    "000000536",
+                    "000000537",
+                    "000000538",
+                    "000000539",
+                    "000000546",
+                    "000000548",
+                    "000000551",
+                    "000000559",
+                    "000002110",
+                    "000002111",
+                    "000002114",
+                    "000002116",
+                    "000002358",
+                    "000002359",
+                    "000002360",
+                    "000002361",
+                    "000004176",
+                    "000004177"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +186,97 @@
             "name": "Veil of Darkness",
             "cost": 20,
             "legend": "With this device the bearer can twist space and time about them, enfolding them in a swirling darkness. When it fades, they have vanished, rematerialising elsewhere through a miracle of arcane science.",
-            "description": "<span class=\"kwb\">NECRONS</span> model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of any enemy units, the bearer can use this Enhancement. If it does, remove that unit from the battlefield. Then, in the Reinforcements step of your next Movement phase, set up that unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models."
+            "description": "<span class=\"kwb\">NECRONS</span> model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of any enemy units, the bearer can use this Enhancement. If it does, remove that unit from the battlefield. Then, in the Reinforcements step of your next Movement phase, set up that unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000000524",
+                    "000000533",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008372003",
             "name": "Nether-realm Casket",
             "cost": 20,
             "legend": "Clouds of hyper-dense particles billow from this small artefact, to obscure and shield the bearer from the foe.",
-            "description": "<span class=\"kwb\">NECRONS</span> model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+            "description": "<span class=\"kwb\">NECRONS</span> model only. While the bearer is leading a unit, models in that unit have the Stealth ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000000524",
+                    "000000533",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008372004",
             "name": "Phasal Subjugator (Aura)",
             "cost": 35,
             "legend": "This engraved sigil-circuitry transforms the fierce will of the bearer into a surging lash across every phasal state.",
-            "description": "<span class=\"kwb\">NECRONS</span> model only. While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the Hit roll."
+            "description": "<span class=\"kwb\">NECRONS</span> model only. While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000000524",
+                    "000000533",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         },
         {
             "id": "000008372005",
             "name": "Enaegic Dermal Bond",
             "cost": 30,
             "legend": "The bearers living metal mantle is bonded to mirror versions of itself across many dimensional thresholds.",
-            "description": "<span class=\"kwb\">NECRONS</span> model only. The bearer has the Feel No Pain 4+ ability."
+            "description": "<span class=\"kwb\">NECRONS</span> model only. The bearer has the Feel No Pain 4+ ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000000524",
+                    "000000533",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000003693",
+                    "000004178"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": "all"
 }

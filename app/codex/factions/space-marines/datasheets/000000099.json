@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000099:tarantula-air-defence-missiles",
+                "line": 1,
                 "name": "Tarantula air defence missiles",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000099",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tarantula air defence missiles",
                         "attributes": [
@@ -92,12 +94,14 @@
             },
             {
                 "id": "000000099:armoured-hull",
+                "line": 2,
                 "name": "Armoured hull",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000099",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured hull",
                         "attributes": [],
@@ -164,6 +168,7 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },

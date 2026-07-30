@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000503:bio-cannon",
+                "line": 1,
                 "name": "Bio-cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000503",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bio-cannon",
                         "attributes": [
@@ -96,12 +98,14 @@
             },
             {
                 "id": "000000503:hierodule-scything-talons",
+                "line": 2,
                 "name": "Hierodule scything talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000503",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hierodule scything talons",
                         "attributes": [],
@@ -168,10 +172,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

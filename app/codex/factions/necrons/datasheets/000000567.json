@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000000567:gauss-annihilator",
+                "line": 1,
                 "name": "Gauss annihilator",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000567",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss annihilator",
                         "attributes": [
@@ -100,12 +102,14 @@
             },
             {
                 "id": "000000567:tesla-arc",
+                "line": 2,
                 "name": "Tesla arc",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000567",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla arc",
                         "attributes": [
@@ -174,10 +178,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

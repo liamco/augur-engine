@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000000467:genestealer-claws-and-talons",
+                "line": 1,
                 "name": "Genestealer claws and talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000467",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Genestealer claws and talons",
                         "attributes": [],
@@ -136,10 +138,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

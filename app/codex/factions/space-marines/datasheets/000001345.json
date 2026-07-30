@@ -92,12 +92,14 @@
         "weapons": [
             {
                 "id": "000001345:master-crafted-special-issue-bolt-pistol",
+                "line": 1,
                 "name": "Master-crafted special issue bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001345",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted special issue bolt pistol",
                         "attributes": [
@@ -122,12 +124,14 @@
             },
             {
                 "id": "000001345:combat-knife",
+                "line": 2,
                 "name": "Combat knife",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001345",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combat knife",
                         "attributes": [
@@ -196,14 +200,17 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

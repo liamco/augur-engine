@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000000557:tesla-sphere",
+                "line": 1,
                 "name": "Tesla sphere",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000557",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla sphere",
                         "attributes": [
@@ -100,12 +102,14 @@
             },
             {
                 "id": "000000557:armoured-bulk",
+                "line": 2,
                 "name": "Armoured bulk",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000557",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured bulk",
                         "attributes": [],
@@ -172,14 +176,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

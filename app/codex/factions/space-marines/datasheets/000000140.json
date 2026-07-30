@@ -126,12 +126,14 @@
         "weapons": [
             {
                 "id": "000000140:forge-bolter",
+                "line": 1,
                 "name": "Forge bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000140",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Forge bolter",
                         "attributes": [],
@@ -153,12 +155,14 @@
             },
             {
                 "id": "000000140:grav-pistol",
+                "line": 2,
                 "name": "Grav-pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000140",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Grav-pistol",
                         "attributes": [
@@ -183,12 +187,14 @@
             },
             {
                 "id": "000000140:omnissian-power-axe",
+                "line": 3,
                 "name": "Omnissian power axe",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000140",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Omnissian power axe",
                         "attributes": [],
@@ -210,12 +216,14 @@
             },
             {
                 "id": "000000140:servo-arm",
+                "line": 4,
                 "name": "Servo-arm",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000140",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Servo-arm",
                         "attributes": [
@@ -284,10 +292,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

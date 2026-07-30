@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000540:heat-ray-dispersed",
+                "line": 1,
                 "name": "Heat ray – dispersed",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000540",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heat ray – dispersed",
                         "attributes": [
@@ -97,12 +99,14 @@
             },
             {
                 "id": "000000540:heat-ray-focused",
+                "line": 2,
                 "name": "Heat ray – focused",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000540",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Heat ray – focused",
                         "attributes": [
@@ -126,12 +130,14 @@
             },
             {
                 "id": "000000540:particle-shredder",
+                "line": 3,
                 "name": "Particle shredder",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000540",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Particle shredder",
                         "attributes": [
@@ -156,12 +162,14 @@
             },
             {
                 "id": "000000540:heavy-gauss-cannon-array",
+                "line": 4,
                 "name": "Heavy gauss cannon array",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000540",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy gauss cannon array",
                         "attributes": [
@@ -185,12 +193,14 @@
             },
             {
                 "id": "000000540:stalker-s-forelimbs",
+                "line": 5,
                 "name": "Stalker’s forelimbs",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000540",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stalker’s forelimbs",
                         "attributes": [],
@@ -257,14 +267,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

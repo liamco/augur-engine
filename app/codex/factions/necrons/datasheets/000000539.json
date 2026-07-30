@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000539:particle-caster",
+                "line": 1,
                 "name": "Particle caster",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000539",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Particle caster",
                         "attributes": [
@@ -97,12 +99,14 @@
             },
             {
                 "id": "000000539:rod-of-covenant",
+                "line": 2,
                 "name": "Rod of covenant",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000539",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Rod of covenant",
                         "attributes": [],
@@ -124,12 +128,14 @@
             },
             {
                 "id": "000000539:rod-of-covenant-2",
+                "line": 3,
                 "name": "Rod of covenant",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000539",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Rod of covenant",
                         "attributes": [],
@@ -151,12 +157,14 @@
             },
             {
                 "id": "000000539:voidblade",
+                "line": 4,
                 "name": "Voidblade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000539",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Voidblade",
                         "attributes": [],
@@ -227,10 +235,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

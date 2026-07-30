@@ -79,12 +79,14 @@
         "weapons": [
             {
                 "id": "000000533:gauss-cannon",
+                "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000533",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss cannon",
                         "attributes": [
@@ -108,12 +110,14 @@
             },
             {
                 "id": "000000533:staff-of-light",
+                "line": 2,
                 "name": "Staff of light",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000533",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of light",
                         "attributes": [],
@@ -135,12 +139,14 @@
             },
             {
                 "id": "000000533:tesla-cannon",
+                "line": 3,
                 "name": "Tesla cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000533",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tesla cannon",
                         "attributes": [
@@ -164,12 +170,14 @@
             },
             {
                 "id": "000000533:overlord-s-blade",
+                "line": 4,
                 "name": "Overlord’s blade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000533",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Overlord’s blade",
                         "attributes": [
@@ -193,12 +201,14 @@
             },
             {
                 "id": "000000533:staff-of-light-2",
+                "line": 5,
                 "name": "Staff of light",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000533",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of light",
                         "attributes": [],
@@ -265,10 +275,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

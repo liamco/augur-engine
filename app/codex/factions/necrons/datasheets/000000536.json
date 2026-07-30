@@ -57,12 +57,14 @@
         "weapons": [
             {
                 "id": "000000536:hyperphase-sword",
+                "line": 1,
                 "name": "Hyperphase sword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000536",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hyperphase sword",
                         "attributes": [],
@@ -84,12 +86,14 @@
             },
             {
                 "id": "000000536:warscythe",
+                "line": 2,
                 "name": "Warscythe",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000536",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Warscythe",
                         "attributes": [
@@ -162,6 +166,7 @@
     ],
     "abilities": [
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

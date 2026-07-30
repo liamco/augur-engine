@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000122:wargear-1",
+                "line": 1,
                 "name": "Wargear 1",
                 "type": "",
                 "profiles": [
                     {
                         "datasheetId": "000000122",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "",
                         "attributes": [],
@@ -139,14 +141,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -46,7 +46,11 @@ describe("pipeline structural parity (WTP, basics)", () => {
     it("reduces Core abilities to name+type shells, keeps Datasheet descriptions (no mechanics)", () => {
         const abilities = d.abilities as Record<string, unknown>[];
         const core = abilities.find((a) => a.name === "Deep Strike");
-        expect(core).toEqual({ name: "Deep Strike", type: "Core" });
+        expect(core).toEqual({
+            id: "000008343",
+            name: "Deep Strike",
+            type: "Core",
+        });
 
         const ds = abilities.find((a) => a.name === "Alpha Warrior");
         expect(ds?.type).toBe("Datasheet");

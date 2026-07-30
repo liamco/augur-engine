@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000004132:stormfrag-auto-launcher",
+                "line": 1,
                 "name": "Stormfrag auto-launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004132",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stormfrag auto-launcher",
                         "attributes": [
@@ -102,12 +104,14 @@
             },
             {
                 "id": "000004132:thunder-hammer",
+                "line": 2,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004132",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -181,10 +185,12 @@
     ],
     "abilities": [
         {
+            "id": "000010256",
             "name": "Curse of the Wulfen",
             "type": "Faction"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

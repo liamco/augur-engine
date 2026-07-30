@@ -109,12 +109,14 @@
         "weapons": [
             {
                 "id": "000004135:absolvor-bolt-pistol",
+                "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004135",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Absolvor bolt pistol",
                         "attributes": [
@@ -138,12 +140,14 @@
             },
             {
                 "id": "000004135:pyre-pistol",
+                "line": 2,
                 "name": "Pyre pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004135",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Pyre pistol",
                         "attributes": [
@@ -169,12 +173,14 @@
             },
             {
                 "id": "000004135:crozius-arcanum",
+                "line": 3,
                 "name": "Crozius arcanum",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004135",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Crozius arcanum",
                         "attributes": [],
@@ -196,12 +202,14 @@
             },
             {
                 "id": "000004135:master-crafted-power-weapon",
+                "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004135",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [
@@ -271,10 +279,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008526",
             "name": "Templar Vows",
             "type": "Faction"
         },

@@ -95,12 +95,14 @@
         "weapons": [
             {
                 "id": "000002718:bolt-carbine",
+                "line": 1,
                 "name": "Bolt carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002718",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt carbine",
                         "attributes": [
@@ -124,12 +126,14 @@
             },
             {
                 "id": "000002718:special-issue-bolt-pistol",
+                "line": 2,
                 "name": "Special issue bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002718",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Special issue bolt pistol",
                         "attributes": [
@@ -154,12 +158,14 @@
             },
             {
                 "id": "000002718:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002718",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -181,12 +187,14 @@
             },
             {
                 "id": "000002718:combat-knife",
+                "line": 4,
                 "name": "Combat knife",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002718",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combat knife",
                         "attributes": [
@@ -265,10 +273,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

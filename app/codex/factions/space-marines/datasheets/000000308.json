@@ -85,12 +85,14 @@
         "weapons": [
             {
                 "id": "000000308:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -114,12 +116,14 @@
             },
             {
                 "id": "000000308:boltgun",
+                "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -141,12 +145,14 @@
             },
             {
                 "id": "000000308:helfrost-pistol-dispersed",
+                "line": 3,
                 "name": "Helfrost pistol – dispersed",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Helfrost pistol – dispersed",
                         "attributes": [
@@ -171,12 +177,14 @@
             },
             {
                 "id": "000000308:helfrost-pistol-focused",
+                "line": 4,
                 "name": "Helfrost pistol – focused",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Helfrost pistol – focused",
                         "attributes": [
@@ -200,12 +208,14 @@
             },
             {
                 "id": "000000308:crushing-teeth-and-claws",
+                "line": 5,
                 "name": "Crushing teeth and claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Crushing teeth and claws",
                         "attributes": [
@@ -229,12 +239,14 @@
             },
             {
                 "id": "000000308:iron-priest-hammer",
+                "line": 6,
                 "name": "Iron Priest hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Iron Priest hammer",
                         "attributes": [],
@@ -256,12 +268,14 @@
             },
             {
                 "id": "000000308:servo-arm",
+                "line": 7,
                 "name": "Servo arm",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000308",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Servo arm",
                         "attributes": [
@@ -330,10 +344,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

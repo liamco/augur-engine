@@ -90,12 +90,14 @@
         "weapons": [
             {
                 "id": "000000304:plasma-pistol-standard",
+                "line": 1,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000304",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -119,12 +121,14 @@
             },
             {
                 "id": "000000304:plasma-pistol-supercharge",
+                "line": 2,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000304",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -149,12 +153,14 @@
             },
             {
                 "id": "000000304:claw-of-the-jackalwolf",
+                "line": 3,
                 "name": "Claw of the Jackalwolf",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000304",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Claw of the Jackalwolf",
                         "attributes": [],
@@ -221,10 +227,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

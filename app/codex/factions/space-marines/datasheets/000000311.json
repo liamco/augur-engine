@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000000311:stormfrag-auto-launcher",
+                "line": 1,
                 "name": "Stormfrag auto-launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000311",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stormfrag auto-launcher",
                         "attributes": [
@@ -97,12 +99,14 @@
             },
             {
                 "id": "000000311:wulfen-weapons",
+                "line": 2,
                 "name": "Wulfen weapons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000311",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Wulfen weapons",
                         "attributes": [
@@ -175,10 +179,12 @@
     ],
     "abilities": [
         {
+            "id": "000010256",
             "name": "Curse of the Wulfen",
             "type": "Faction"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

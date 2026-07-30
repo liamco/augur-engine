@@ -90,12 +90,14 @@
         "weapons": [
             {
                 "id": "000004148:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004148",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -119,12 +121,14 @@
             },
             {
                 "id": "000004148:claws-of-severax",
+                "line": 2,
                 "name": "Claws of Severax",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004148",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Claws of Severax",
                         "attributes": [
@@ -194,18 +198,22 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008336",
             "name": "Lone Operative",
             "type": "Core"
         },
         {
+            "id": "000008337",
             "name": "Stealth",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

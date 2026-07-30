@@ -178,12 +178,14 @@
         "weapons": [
             {
                 "id": "000000225:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000225",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -207,14 +209,17 @@
             },
             {
                 "id": "000000225:crozius-arcanum-and-power-weapon",
+                "line": 2,
                 "name": "Crozius arcanum and power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000225",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Crozius arcanum and power weapon - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -227,8 +232,10 @@
                     {
                         "datasheetId": "000000225",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Crozius arcanum and power weapon - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -293,10 +300,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

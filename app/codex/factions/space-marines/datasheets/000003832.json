@@ -105,12 +105,14 @@
         "weapons": [
             {
                 "id": "000003832:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003832",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -134,12 +136,14 @@
             },
             {
                 "id": "000003832:inferno-pistol",
+                "line": 2,
                 "name": "Inferno pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003832",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Inferno pistol",
                         "attributes": [
@@ -164,12 +168,14 @@
             },
             {
                 "id": "000003832:master-crafted-chainsword",
+                "line": 3,
                 "name": "Master-crafted chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003832",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted chainsword",
                         "attributes": [],
@@ -191,12 +197,14 @@
             },
             {
                 "id": "000003832:power-fist",
+                "line": 4,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003832",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -218,12 +226,14 @@
             },
             {
                 "id": "000003832:relic-weapon",
+                "line": 5,
                 "name": "Relic weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003832",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Relic weapon",
                         "attributes": [],
@@ -290,14 +300,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

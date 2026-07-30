@@ -87,12 +87,14 @@
         "weapons": [
             {
                 "id": "000000504:dire-bio-cannon",
+                "line": 1,
                 "name": "Dire bio-cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000504",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Dire bio-cannon",
                         "attributes": [
@@ -116,12 +118,14 @@
             },
             {
                 "id": "000000504:gargantuan-scything-talons",
+                "line": 2,
                 "name": "Gargantuan scything talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000504",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gargantuan scything talons",
                         "attributes": [],
@@ -188,14 +192,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008342",
             "name": "Hover",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

@@ -179,12 +179,14 @@
         "weapons": [
             {
                 "id": "000000152:blood-song",
+                "line": 1,
                 "name": "Blood Song",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000152",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blood Song",
                         "attributes": [
@@ -210,12 +212,14 @@
             },
             {
                 "id": "000000152:bolt-pistol",
+                "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000152",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -239,12 +243,14 @@
             },
             {
                 "id": "000000152:dead-man-s-hand",
+                "line": 3,
                 "name": "Dead Man’s Hand",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000152",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Dead Man’s Hand",
                         "attributes": [],
@@ -311,10 +317,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

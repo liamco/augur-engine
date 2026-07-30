@@ -89,12 +89,14 @@
         "weapons": [
             {
                 "id": "000000288:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000288",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -118,12 +120,14 @@
             },
             {
                 "id": "000000288:crushing-teeth-and-claws",
+                "line": 2,
                 "name": "Crushing teeth and claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000288",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Crushing teeth and claws",
                         "attributes": [
@@ -147,12 +151,14 @@
             },
             {
                 "id": "000000288:wolf-claws",
+                "line": 3,
                 "name": "Wolf claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000288",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Wolf claws",
                         "attributes": [
@@ -221,10 +227,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

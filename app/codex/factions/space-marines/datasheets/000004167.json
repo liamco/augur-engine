@@ -100,12 +100,14 @@
         "weapons": [
             {
                 "id": "000004167:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004167",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -129,12 +131,14 @@
             },
             {
                 "id": "000004167:onslaught-gatling-cannon",
+                "line": 2,
                 "name": "Onslaught gatling cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004167",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Onslaught gatling cannon",
                         "attributes": [
@@ -158,12 +162,14 @@
             },
             {
                 "id": "000004167:stormtooth",
+                "line": 3,
                 "name": "Stormtooth",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004167",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Stormtooth",
                         "attributes": [
@@ -189,12 +195,14 @@
             },
             {
                 "id": "000004167:power-sword",
+                "line": 4,
                 "name": "Power sword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004167",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power sword",
                         "attributes": [],
@@ -261,10 +269,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

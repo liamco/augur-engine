@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000000241:astartes-grenade-launcher-frag",
+                "line": 1,
                 "name": "Astartes grenade launcher – frag",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000241",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes grenade launcher – frag",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000000241:astartes-grenade-launcher-krak",
+                "line": 2,
                 "name": "Astartes grenade launcher – krak",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000241",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Astartes grenade launcher – krak",
                         "attributes": [],
@@ -133,12 +137,14 @@
             },
             {
                 "id": "000000241:bolt-pistol",
+                "line": 3,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000241",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -162,12 +168,14 @@
             },
             {
                 "id": "000000241:plasma-talon-standard",
+                "line": 4,
                 "name": "Plasma talon – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000241",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma talon – standard",
                         "attributes": [
@@ -191,12 +199,14 @@
             },
             {
                 "id": "000000241:plasma-talon-supercharge",
+                "line": 5,
                 "name": "Plasma talon – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000241",
                         "line": 5,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma talon – supercharge",
                         "attributes": [
@@ -221,12 +231,14 @@
             },
             {
                 "id": "000000241:black-knight-combat-weapon",
+                "line": 6,
                 "name": "Black Knight combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000241",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Black Knight combat weapon",
                         "attributes": [
@@ -305,6 +317,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -50,12 +50,14 @@
         "weapons": [
             {
                 "id": "000002111:scouring-eye",
+                "line": 1,
                 "name": "Scouring eye",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002111",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Scouring eye",
                         "attributes": [],
@@ -77,12 +79,14 @@
             },
             {
                 "id": "000002111:scythed-limbs",
+                "line": 2,
                 "name": "Scythed limbs",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002111",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Scythed limbs",
                         "attributes": [],
@@ -149,6 +153,7 @@
     ],
     "abilities": [
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

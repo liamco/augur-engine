@@ -1,11 +1,18 @@
 {
+    "id": "000000758",
+    "slug": "liberator-assault-group",
     "name": "Liberator Assault Group",
     "abilities": [
         {
             "id": "000008374",
             "name": "Red Thirst",
             "description": "Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">BLOOD</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
-            "legend": "Though they strive to restrain it, the murderous ferocity of the Blood Angels simmers beneath the surface of their thoughts. In battle, this rage drives them towards the foe and lends great strength to their blows."
+            "legend": "Though they strive to restrain it, the murderous ferocity of the Blood Angels simmers beneath the surface of their thoughts. In battle, this rage drives them towards the foe and lends great strength to their blows.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +24,12 @@
             "legend": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008375004",
@@ -27,7 +39,12 @@
             "legend": "The Sons of Sanguinius may embrace the Red Thirst but for a moment, if the need arises.",
             "turn": "Opponent’s turn",
             "phase": "Charge phase",
-            "description": "<b>WHEN:</b> Your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was just charged by an enemy unit.<br><br><b>EFFECT:</b> Select either the Strength or Attacks characteristic of melee weapons equipped by models in your unit. Until the end of the turn, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in your unit."
+            "description": "<b>WHEN:</b> Your opponent’s Charge phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was just charged by an enemy unit.<br><br><b>EFFECT:</b> Select either the Strength or Attacks characteristic of melee weapons equipped by models in your unit. Until the end of the turn, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in your unit.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008375005",
@@ -37,7 +54,12 @@
             "legend": "In times of great desperation, fury and ferocity can be a warrior's strongest allies.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Select either the [LANCE] or [LETHAL HITS] abilities. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability. You can instead choose for your unit to give in to the Red Thirst; if it does, then it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] and [LETHAL HITS] abilities."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Select either the [LANCE] or [LETHAL HITS] abilities. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability. You can instead choose for your unit to give in to the Red Thirst; if it does, then it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] and [LETHAL HITS] abilities.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008375007",
@@ -47,7 +69,12 @@
             "legend": "When Blood Angels execute a tactical withdrawal it is but a prelude to a renewed assault.",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back."
+            "description": "<b>WHEN:</b> Your Movement phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army Falls Back.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008375002",
@@ -57,7 +84,12 @@
             "legend": "Sanguinius' sons are blessed with the spiritual fortitude of their Primarch.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army has a mortal wound allocated to it.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."
+            "description": "<b>WHEN:</b> Any phase, just after an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army has a mortal wound allocated to it.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000008375006",
@@ -67,7 +99,12 @@
             "legend": "The Blood Angels enact a sweeping advance.",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase, just after an Adeptus Astartes unit from your army has Advanced.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge, even though it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Advanced."
+            "description": "<b>WHEN:</b> Your Movement phase, just after an Adeptus Astartes unit from your army has Advanced.<br><br><b>TARGET:</b> That <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to either shoot or declare a charge, even though it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Advanced.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +113,281 @@
             "name": "Speed of the Primarch",
             "cost": 25,
             "legend": "Such is this warriors rage-fuelled speed, it is as if the Primarch himself fights alongside his sons.",
-            "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
+            "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000008376003",
             "name": "Rage-fuelled Warrior",
             "cost": 35,
             "legend": "Fury burns in this warrior's soul. A single moment of savage brutality stands between them and the maddening embrace of the Black Rage.",
-            "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearers melee weapons have the [sustained hits 3] ability."
+            "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearers melee weapons have the [sustained hits 3] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000008376004",
             "name": "Icon of the Angel",
             "cost": 20,
             "legend": "The Icon of the Angel reminds the Blood Angels of the heretics who fled after laying low Sanguinius, exhorting them to let no enemy escape their grasp again.",
-            "description": "Adeptus Astartes model only. Each time an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) within Engagement Range of the bearer’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests."
+            "description": "Adeptus Astartes model only. Each time an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) within Engagement Range of the bearer’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000008376005",
             "name": "Gift of Foresight",
             "cost": 15,
             "legend": "This heroic warrior bears a glimmering of Sanguinius' prophetic gifts. Flashes of foresight allow him to weave around his enemy's blows with supernatural skill.",
-            "description": "Adeptus Astartes model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead."
+            "description": "Adeptus Astartes model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "exclude": [
+            "000003875"
+        ]
+    }
 }

@@ -212,12 +212,14 @@
         "weapons": [
             {
                 "id": "000004183:gauntlets-of-ultramar",
+                "line": 1,
                 "name": "Gauntlets of Ultramar",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004183",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauntlets of Ultramar",
                         "attributes": [
@@ -242,12 +244,14 @@
             },
             {
                 "id": "000004183:gauntlets-of-ultramar-2",
+                "line": 2,
                 "name": "Gauntlets of Ultramar",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004183",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauntlets of Ultramar",
                         "attributes": [
@@ -316,14 +320,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

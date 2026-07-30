@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000001177:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001177",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000001177:heavy-bolt-rifle",
+                "line": 2,
                 "name": "Heavy bolt rifle",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001177",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt rifle",
                         "attributes": [
@@ -136,12 +140,14 @@
             },
             {
                 "id": "000001177:heavy-bolter",
+                "line": 3,
                 "name": "Heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001177",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolter",
                         "attributes": [
@@ -167,12 +173,14 @@
             },
             {
                 "id": "000001177:close-combat-weapon",
+                "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001177",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -249,6 +257,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

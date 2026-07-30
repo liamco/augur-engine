@@ -62,12 +62,14 @@
         "weapons": [
             {
                 "id": "000000558:gauss-slicers",
+                "line": 1,
                 "name": "Gauss slicers",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000558",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss slicers",
                         "attributes": [
@@ -91,12 +93,14 @@
             },
             {
                 "id": "000000558:tomb-stalker-claws",
+                "line": 2,
                 "name": "Tomb Stalker claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000558",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tomb Stalker claws",
                         "attributes": [
@@ -165,10 +169,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

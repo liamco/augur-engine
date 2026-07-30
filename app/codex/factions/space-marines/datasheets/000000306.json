@@ -86,12 +86,14 @@
         "weapons": [
             {
                 "id": "000000306:helfrost-pistol-dispersed",
+                "line": 1,
                 "name": "Helfrost pistol – dispersed",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000306",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Helfrost pistol – dispersed",
                         "attributes": [
@@ -116,12 +118,14 @@
             },
             {
                 "id": "000000306:helfrost-pistol-focused",
+                "line": 2,
                 "name": "Helfrost pistol – focused",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000306",
                         "line": 2,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Helfrost pistol – focused",
                         "attributes": [
@@ -145,12 +149,14 @@
             },
             {
                 "id": "000000306:tempest-hammer-and-servo-arm",
+                "line": 3,
                 "name": "Tempest hammer and servo-arm",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000306",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Tempest hammer and servo-arm",
                         "attributes": [],
@@ -217,10 +223,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

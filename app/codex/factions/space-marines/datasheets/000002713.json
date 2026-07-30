@@ -129,12 +129,14 @@
         "weapons": [
             {
                 "id": "000002713:dorn-s-arrow",
+                "line": 1,
                 "name": "Dorn’s Arrow",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002713",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Dorn’s Arrow",
                         "attributes": [
@@ -159,12 +161,14 @@
             },
             {
                 "id": "000002713:fist-of-retribution",
+                "line": 2,
                 "name": "Fist of Retribution",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002713",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Fist of Retribution",
                         "attributes": [],
@@ -231,14 +235,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

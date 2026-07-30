@@ -152,12 +152,14 @@
         "weapons": [
             {
                 "id": "000004179:absolvor-bolt-pistol",
+                "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004179",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Absolvor bolt pistol",
                         "attributes": [
@@ -181,12 +183,14 @@
             },
             {
                 "id": "000004179:executioner-relic-blade",
+                "line": 2,
                 "name": "Executioner relic blade",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004179",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Executioner relic blade",
                         "attributes": [
@@ -256,10 +260,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

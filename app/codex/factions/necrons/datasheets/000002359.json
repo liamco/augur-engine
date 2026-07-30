@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000002359:gauss-cannon",
+                "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002359",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss cannon",
                         "attributes": [
@@ -89,12 +91,14 @@
             },
             {
                 "id": "000002359:close-combat-weapon",
+                "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002359",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -173,6 +177,7 @@
     ],
     "abilities": [
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

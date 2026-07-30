@@ -94,12 +94,14 @@
         "weapons": [
             {
                 "id": "000003871:vigil-spear",
+                "line": 1,
                 "name": "Vigil spear",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000003871",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Vigil spear",
                         "attributes": [],
@@ -121,12 +123,14 @@
             },
             {
                 "id": "000003871:vigil-spear-2",
+                "line": 2,
                 "name": "Vigil spear",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000003871",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Vigil spear",
                         "attributes": [
@@ -195,14 +199,17 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008521",
             "name": "Mission Tactics",
             "type": "Faction"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

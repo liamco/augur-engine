@@ -125,12 +125,14 @@
         "weapons": [
             {
                 "id": "000002726:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002726",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -154,12 +156,14 @@
             },
             {
                 "id": "000002726:gauntlet-of-the-forge",
+                "line": 2,
                 "name": "Gauntlet of the Forge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002726",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauntlet of the Forge",
                         "attributes": [
@@ -185,12 +189,14 @@
             },
             {
                 "id": "000002726:spear-of-vulkan",
+                "line": 3,
                 "name": "Spear of Vulkan",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002726",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Spear of Vulkan",
                         "attributes": [
@@ -259,14 +265,17 @@
     ],
     "abilities": [
         {
+            "id": "000008338",
             "name": "Feel No Pain",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

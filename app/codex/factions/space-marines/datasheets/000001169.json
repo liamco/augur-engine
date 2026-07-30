@@ -78,12 +78,14 @@
         "weapons": [
             {
                 "id": "000001169:assault-cannon",
+                "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001169",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault cannon",
                         "attributes": [
@@ -107,12 +109,14 @@
             },
             {
                 "id": "000001169:heavy-bolter",
+                "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001169",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolter",
                         "attributes": [
@@ -136,12 +140,14 @@
             },
             {
                 "id": "000001169:heavy-flamer",
+                "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001169",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy flamer",
                         "attributes": [
@@ -166,12 +172,14 @@
             },
             {
                 "id": "000001169:multi-melta",
+                "line": 4,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001169",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -195,12 +203,14 @@
             },
             {
                 "id": "000001169:close-combat-weapon",
+                "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001169",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -267,14 +277,17 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

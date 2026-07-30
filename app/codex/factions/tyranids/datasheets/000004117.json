@@ -83,12 +83,14 @@
         "weapons": [
             {
                 "id": "000004117:venom-bolt",
+                "line": 1,
                 "name": "Venom bolt",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004117",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Venom bolt",
                         "attributes": [
@@ -114,12 +116,14 @@
             },
             {
                 "id": "000004117:prime-claws-and-talons",
+                "line": 2,
                 "name": "Prime claws and talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004117",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Prime claws and talons",
                         "attributes": [
@@ -145,12 +149,14 @@
             },
             {
                 "id": "000004117:ravener-heavy-claws-and-talons",
+                "line": 3,
                 "name": "Ravener heavy claws and talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004117",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Ravener heavy claws and talons",
                         "attributes": [
@@ -246,18 +252,22 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000000707",
             "name": "Shadow in the Warp",
             "type": "Faction"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

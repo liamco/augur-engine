@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000001159:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001159",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -106,12 +108,14 @@
             },
             {
                 "id": "000001159:occulus-bolt-carbine",
+                "line": 2,
                 "name": "Occulus bolt carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001159",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Occulus bolt carbine",
                         "attributes": [
@@ -136,12 +140,14 @@
             },
             {
                 "id": "000001159:paired-combat-blades",
+                "line": 3,
                 "name": "Paired combat blades",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001159",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Paired combat blades",
                         "attributes": [
@@ -220,10 +226,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

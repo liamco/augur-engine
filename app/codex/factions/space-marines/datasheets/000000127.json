@@ -95,12 +95,14 @@
         "weapons": [
             {
                 "id": "000000127:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000127",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -124,12 +126,14 @@
             },
             {
                 "id": "000000127:gorgon-s-wrath",
+                "line": 2,
                 "name": "Gorgon’s Wrath",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000127",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gorgon’s Wrath",
                         "attributes": [
@@ -153,12 +157,14 @@
             },
             {
                 "id": "000000127:harrowhand",
+                "line": 3,
                 "name": "Harrowhand",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000127",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Harrowhand",
                         "attributes": [],
@@ -180,12 +186,14 @@
             },
             {
                 "id": "000000127:medusan-manipuli",
+                "line": 4,
                 "name": "Medusan Manipuli",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000127",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Medusan Manipuli",
                         "attributes": [
@@ -254,10 +262,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

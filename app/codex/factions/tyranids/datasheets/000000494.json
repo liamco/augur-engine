@@ -70,12 +70,14 @@
         "weapons": [
             {
                 "id": "000000494:distensible-jaw",
+                "line": 1,
                 "name": "Distensible jaw",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000494",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Distensible jaw",
                         "attributes": [
@@ -101,12 +103,14 @@
             },
             {
                 "id": "000000494:mawloc-scything-talons",
+                "line": 2,
                 "name": "Mawloc scything talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000494",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Mawloc scything talons",
                         "attributes": [],
@@ -173,10 +177,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

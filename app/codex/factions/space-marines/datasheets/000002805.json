@@ -80,12 +80,14 @@
         "weapons": [
             {
                 "id": "000002805:teeth-and-claws",
+                "line": 1,
                 "name": "Teeth and claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002805",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Teeth and claws",
                         "attributes": [],
@@ -152,10 +154,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

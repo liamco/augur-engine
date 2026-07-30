@@ -55,12 +55,14 @@
         "weapons": [
             {
                 "id": "000000498:sporocyst-bio-weapons",
+                "line": 1,
                 "name": "Sporocyst bio-weapons",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000498",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Sporocyst bio-weapons",
                         "attributes": [],
@@ -82,12 +84,14 @@
             },
             {
                 "id": "000000498:flensing-whips",
+                "line": 2,
                 "name": "Flensing whips",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000498",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Flensing whips",
                         "attributes": [],
@@ -154,10 +158,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

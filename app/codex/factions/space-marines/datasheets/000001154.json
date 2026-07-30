@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000001154:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -96,12 +98,14 @@
             },
             {
                 "id": "000001154:grav-pistol",
+                "line": 2,
                 "name": "Grav-pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Grav-pistol",
                         "attributes": [
@@ -126,12 +130,14 @@
             },
             {
                 "id": "000001154:hand-flamer",
+                "line": 3,
                 "name": "Hand flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand flamer",
                         "attributes": [
@@ -157,12 +163,14 @@
             },
             {
                 "id": "000001154:inferno-pistol",
+                "line": 4,
                 "name": "Inferno pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Inferno pistol",
                         "attributes": [
@@ -187,12 +195,14 @@
             },
             {
                 "id": "000001154:plasma-pistol-standard",
+                "line": 5,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -216,12 +226,14 @@
             },
             {
                 "id": "000001154:plasma-pistol-supercharge",
+                "line": 6,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -246,12 +258,14 @@
             },
             {
                 "id": "000001154:heirloom-weapon",
+                "line": 7,
                 "name": "Heirloom weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001154",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heirloom weapon",
                         "attributes": [],
@@ -328,10 +342,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

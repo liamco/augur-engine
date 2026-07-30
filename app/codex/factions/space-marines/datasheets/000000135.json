@@ -119,12 +119,14 @@
         "weapons": [
             {
                 "id": "000000135:storm-bolter",
+                "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000135",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -148,12 +150,14 @@
             },
             {
                 "id": "000000135:combi-weapon",
+                "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000135",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -179,12 +183,14 @@
             },
             {
                 "id": "000000135:relic-fist",
+                "line": 3,
                 "name": "Relic fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000135",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Relic fist",
                         "attributes": [],
@@ -206,12 +212,14 @@
             },
             {
                 "id": "000000135:relic-weapon",
+                "line": 4,
                 "name": "Relic weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000135",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Relic weapon",
                         "attributes": [],
@@ -278,14 +286,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

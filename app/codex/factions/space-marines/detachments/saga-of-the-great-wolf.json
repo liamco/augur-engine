@@ -1,23 +1,38 @@
 {
+    "id": "000001126",
+    "slug": "saga-of-the-great-wolf",
     "name": "Saga of the Great Wolf",
     "abilities": [
         {
             "id": "000010657",
             "name": "Master of Wolves",
             "description": "At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Hunting Pack once per battle.<br><ul><li><b>Encircling Jaws:</b> This unit can re-roll Advance rolls and Charge rolls.</li><li><b>Hunter’s Eye:</b> Each time a model in this unit makes a ranged attack, add 1 to the Hit roll.</li><li><b>Ferocious Strike:</b> Each time this unit is selected to fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.</li></ul>",
-            "legend": "With Logan Grimnar commanding them, the hunting packs of the Space Wolves fight at peak efficiency."
+            "legend": "With Logan Grimnar commanding them, the hunting packs of the Space Wolves fight at peak efficiency.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000010658",
             "name": "Howling Onslaught",
             "description": "Once per battle, when selecting a Hunting Pack for the Master of Wolves Detachment rule, if a Logan Grimnar model from your army is on the battlefield, you can select a Hunting Pack you have already selected this battle.",
-            "legend": "When the Great Wolf gives the command, his packs descend upon the foe in a coordinated and utterly devastating strike."
+            "legend": "When the Great Wolf gives the command, his packs descend upon the foe in a coordinated and utterly devastating strike.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000010659",
             "name": "Restrictions",
             "description": "Your army can include Space Wolves units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
-            "legend": ""
+            "legend": "",
+            "eligibleDatasheets": {
+                "include": []
+            }
         }
     ],
     "stratagems": [
@@ -29,7 +44,12 @@
             "legend": "Once one Fenrisian warrior has perceived some slight weakness in the defences of their foes, they all strike at it like encircling predators dragging down prey.",
             "turn": "Your turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can add 1 to the Wound roll."
+            "description": "<b>WHEN:</b> Your Shooting phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to shoot this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, you can add 1 to the Wound roll.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000010661004",
@@ -39,7 +59,57 @@
             "legend": "Even the most challenging terrain or formidable fortifications cannot stop the Great Wolf’s chief hunters once they are in motion.",
             "turn": "Your turn",
             "phase": "Movement or Charge phase",
-            "description": "<b>WHEN:</b> Your Movement phase or your Charge phase.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Walker unit from your army that has not been selected to move or charge this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models (excluding <span class=\"kwb\">TITANIC</span> models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end a Normal, Advance or Fall Back move within Engagement Range of them."
+            "description": "<b>WHEN:</b> Your Movement phase or your Charge phase.<br><br><b>TARGET:</b> One Adeptus Astartes Mounted or Adeptus Astartes Walker unit from your army that has not been selected to move or charge this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models (excluding <span class=\"kwb\">TITANIC</span> models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end a Normal, Advance or Fall Back move within Engagement Range of them.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000063",
+                    "000000091",
+                    "000000094",
+                    "000000096",
+                    "000000111",
+                    "000000116",
+                    "000000117",
+                    "000000120",
+                    "000000131",
+                    "000000136",
+                    "000000137",
+                    "000000154",
+                    "000000159",
+                    "000000166",
+                    "000000167",
+                    "000000241",
+                    "000000283",
+                    "000000284",
+                    "000000287",
+                    "000000288",
+                    "000000301",
+                    "000000302",
+                    "000000308",
+                    "000000314",
+                    "000000322",
+                    "000001156",
+                    "000001158",
+                    "000001166",
+                    "000001167",
+                    "000001182",
+                    "000001192",
+                    "000001348",
+                    "000001527",
+                    "000002076",
+                    "000002269",
+                    "000002291",
+                    "000002702",
+                    "000002706",
+                    "000002712",
+                    "000002717",
+                    "000002719",
+                    "000002748",
+                    "000002801",
+                    "000003835",
+                    "000004133",
+                    "000004167"
+                ]
+            }
         },
         {
             "id": "000010661007",
@@ -49,7 +119,52 @@
             "legend": "These champions of Fenris respond to enemy fire with instinctive swiftness, rarely giving their foes a second chance to shoot at them.",
             "turn": "Opponent’s turn",
             "phase": "Shooting phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One Space Wolves unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\"."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase, just after an enemy unit has shot.<br><br><b>TARGET:</b> One Space Wolves unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Your unit can make a Normal move of up to D6\".",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000282",
+                    "000000283",
+                    "000000284",
+                    "000000285",
+                    "000000286",
+                    "000000287",
+                    "000000288",
+                    "000000292",
+                    "000000297",
+                    "000000300",
+                    "000000301",
+                    "000000302",
+                    "000000303",
+                    "000000304",
+                    "000000305",
+                    "000000306",
+                    "000000308",
+                    "000000310",
+                    "000000311",
+                    "000000314",
+                    "000000315",
+                    "000000317",
+                    "000000318",
+                    "000000321",
+                    "000000322",
+                    "000000323",
+                    "000000324",
+                    "000000325",
+                    "000000326",
+                    "000002801",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000002806",
+                    "000004129",
+                    "000004130",
+                    "000004131",
+                    "000004132",
+                    "000004133",
+                    "000004182"
+                ]
+            }
         },
         {
             "id": "000010661005",
@@ -59,7 +174,12 @@
             "legend": "Knowing their part in the grand plan and determined to execute it with the magnificence of true champions, these warriors fight with a fluid and inescapable ferocity.",
             "turn": "Your turn",
             "phase": "Movement phase",
-            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a Space Wolves unit, until the end of the turn, it is eligible to declare a charge in a turn in which it Advanced or Fell Back."
+            "description": "<b>WHEN:</b> Your Movement phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that has not been selected to move this phase.<br><br><b>EFFECT:</b> Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a Space Wolves unit, until the end of the turn, it is eligible to declare a charge in a turn in which it Advanced or Fell Back.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000010661002",
@@ -69,7 +189,12 @@
             "legend": "With his great strategic wisdom, Grimnar predicted the peril these warriors would encounter and warned them to be ready for it.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         },
         {
             "id": "000010661003",
@@ -79,7 +204,12 @@
             "legend": "Pivotal as they are to the Great Wolf’s plans, this pack have their own orders to fulfil in this moment that come directly from Grimnar himself.",
             "turn": "Your turn",
             "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hunting Pack from the Master of Wolves Detachment rule. Until the start of your next Command phase, that Hunting Pack is active for your unit instead of any other Hunting Pack that is active, even if you have already selected that Hunting Pack this battle."
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army.<br><br><b>EFFECT:</b> Select one Hunting Pack from the Master of Wolves Detachment rule. Until the start of your next Command phase, that Hunting Pack is active for your unit instead of any other Hunting Pack that is active, even if you have already selected that Hunting Pack this battle.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000003875"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -88,28 +218,110 @@
             "name": "Grimnar’s Mark",
             "cost": 20,
             "legend": "This moonsilver wolf-talisman is bestowed by the Great Wolf himself before battle, a mark of favour that fills the bearer with an eagerness to slay the foe.",
-            "description": "Adeptus Astartes Terminator Captain model only. Once per battle round, from the second battle round onwards, you can target the bearer’s unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.<br><br>In the Declare Battle Formations step, the bearer can be attached to a Wolf Guard Terminators unit."
+            "description": "Adeptus Astartes Terminator Captain model only. Once per battle round, from the second battle round onwards, you can target the bearer’s unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.<br><br>In the Declare Battle Formations step, the bearer can be attached to a Wolf Guard Terminators unit.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000135"
+                ]
+            }
         },
         {
             "id": "000010660003",
             "name": "Howlmaw",
             "cost": 15,
             "legend": "An ancient hunting horn with a built-in vox amplification unit, this relic’s stirring howl can be heard even through the wild clangour of battle.",
-            "description": "Wolf priest model only. At the start of the Fight phase, you can select one enemy unit within 6\" of the bearer. That unit must take a Battle-shock, subtracting 1 from the result."
+            "description": "Wolf priest model only. At the start of the Fight phase, you can select one enemy unit within 6\" of the bearer. That unit must take a Battle-shock, subtracting 1 from the result.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000004129"
+                ]
+            }
         },
         {
             "id": "000010660004",
             "name": "Chariots of the Storm",
             "cost": 25,
             "legend": "This dedicated flight of gunships attends the Great Wolf and his packs, and can be called in to rapidly reposition his forces in the moments before battle is joined.",
-            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. After both players have deployed their armies, select up to three <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+            "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. After both players have deployed their armies, select up to three <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000060",
+                    "000000063",
+                    "000000073",
+                    "000000076",
+                    "000000079",
+                    "000000083",
+                    "000000094",
+                    "000000112",
+                    "000000115",
+                    "000000119",
+                    "000000135",
+                    "000000140",
+                    "000000148",
+                    "000000158",
+                    "000000159",
+                    "000000284",
+                    "000000300",
+                    "000000301",
+                    "000000306",
+                    "000000308",
+                    "000001165",
+                    "000001167",
+                    "000001172",
+                    "000001174",
+                    "000001182",
+                    "000001344",
+                    "000001345",
+                    "000001346",
+                    "000001348",
+                    "000001423",
+                    "000001527",
+                    "000002234",
+                    "000002266",
+                    "000002468",
+                    "000002530",
+                    "000002677",
+                    "000002701",
+                    "000002702",
+                    "000002707",
+                    "000002738",
+                    "000002748",
+                    "000002773",
+                    "000002775",
+                    "000002793",
+                    "000002795",
+                    "000002796",
+                    "000002802",
+                    "000002803",
+                    "000002804",
+                    "000002805",
+                    "000003831",
+                    "000003832",
+                    "000003833",
+                    "000003871",
+                    "000004129",
+                    "000004130",
+                    "000004135",
+                    "000004136"
+                ]
+            }
         },
         {
             "id": "000010660005",
             "name": "Skjald’s Foretelling",
             "cost": 25,
             "legend": "Great deeds have been prophesied for this champion, such that those who fight alongside him do so all the harder as they play out the self-fulfilling prophecy.",
-            "description": "Wolf Guard Battle Leader model only. While the bearer is leading a unit, weapons equipped by models in that unit have the [LANCE] ability."
+            "description": "Wolf Guard Battle Leader model only. While the bearer is leading a unit, weapons equipped by models in that unit have the [LANCE] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000004130"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": {
+        "exclude": [
+            "000003875"
+        ]
+    }
 }

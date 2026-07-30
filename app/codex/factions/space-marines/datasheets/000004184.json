@@ -93,12 +93,14 @@
         "weapons": [
             {
                 "id": "000004184:artisan-plasma-pistol",
+                "line": 1,
                 "name": "Artisan plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004184",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Artisan plasma pistol",
                         "attributes": [
@@ -122,12 +124,14 @@
             },
             {
                 "id": "000004184:talassarian-tempest-blade-strike",
+                "line": 2,
                 "name": "Talassarian tempest blade – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004184",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Talassarian tempest blade – strike",
                         "attributes": [
@@ -151,12 +155,14 @@
             },
             {
                 "id": "000004184:talassarian-tempest-blade-sweep",
+                "line": 3,
                 "name": "Talassarian tempest blade – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004184",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Talassarian tempest blade – sweep",
                         "attributes": [
@@ -180,12 +186,14 @@
             },
             {
                 "id": "000004184:talassarian-tempest-blade-coup-de-grace",
+                "line": 4,
                 "name": "Talassarian tempest blade – coup de grace",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004184",
                         "line": 4,
+                        "lineInWargear": 3,
                         "dice": "",
                         "name": "Talassarian tempest blade – coup de grace",
                         "attributes": [
@@ -254,10 +262,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

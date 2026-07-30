@@ -131,12 +131,14 @@
         "weapons": [
             {
                 "id": "000000151:perdition-pistol",
+                "line": 1,
                 "name": "Perdition Pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000151",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Perdition Pistol",
                         "attributes": [
@@ -162,12 +164,14 @@
             },
             {
                 "id": "000000151:the-axe-mortalis",
+                "line": 2,
                 "name": "The Axe Mortalis",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000151",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Axe Mortalis",
                         "attributes": [
@@ -236,14 +240,17 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

@@ -81,12 +81,14 @@
         "weapons": [
             {
                 "id": "000000522:gauntlet-of-fire",
+                "line": 1,
                 "name": "Gauntlet of Fire",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000522",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauntlet of Fire",
                         "attributes": [
@@ -111,12 +113,14 @@
             },
             {
                 "id": "000000522:staff-of-the-destroyer",
+                "line": 2,
                 "name": "Staff of the Destroyer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000522",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of the Destroyer",
                         "attributes": [],
@@ -138,12 +142,14 @@
             },
             {
                 "id": "000000522:staff-of-the-destroyer-2",
+                "line": 3,
                 "name": "Staff of the Destroyer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000522",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Staff of the Destroyer",
                         "attributes": [
@@ -212,10 +218,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

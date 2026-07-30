@@ -83,12 +83,14 @@
         "weapons": [
             {
                 "id": "000001606:hand-flamer",
+                "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Hand flamer",
                         "attributes": [
@@ -114,12 +116,14 @@
             },
             {
                 "id": "000001606:heavy-bolt-pistol",
+                "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -143,12 +147,14 @@
             },
             {
                 "id": "000001606:plasma-pistol-standard",
+                "line": 3,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -172,12 +178,14 @@
             },
             {
                 "id": "000001606:plasma-pistol-supercharge",
+                "line": 4,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 4,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -202,12 +210,14 @@
             },
             {
                 "id": "000001606:astartes-chainsword",
+                "line": 5,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -229,12 +239,14 @@
             },
             {
                 "id": "000001606:power-fist",
+                "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 6,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -256,12 +268,14 @@
             },
             {
                 "id": "000001606:power-weapon",
+                "line": 7,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -283,12 +297,14 @@
             },
             {
                 "id": "000001606:thunder-hammer",
+                "line": 8,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001606",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -367,6 +383,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

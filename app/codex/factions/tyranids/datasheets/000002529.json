@@ -75,12 +75,14 @@
         "weapons": [
             {
                 "id": "000002529:barbed-ovipositor",
+                "line": 1,
                 "name": "Barbed ovipositor",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002529",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Barbed ovipositor",
                         "attributes": [
@@ -105,12 +107,14 @@
             },
             {
                 "id": "000002529:clawed-limbs",
+                "line": 2,
                 "name": "Clawed limbs",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002529",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Clawed limbs",
                         "attributes": [],
@@ -177,18 +181,22 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008336",
             "name": "Lone Operative",
             "type": "Core"
         },
         {
+            "id": "000008337",
             "name": "Stealth",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

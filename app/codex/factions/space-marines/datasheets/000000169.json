@@ -175,12 +175,14 @@
         "weapons": [
             {
                 "id": "000000169:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000169",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -204,12 +206,14 @@
             },
             {
                 "id": "000000169:blood-reaver",
+                "line": 2,
                 "name": "Blood Reaver",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000169",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blood Reaver",
                         "attributes": [
@@ -278,10 +282,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

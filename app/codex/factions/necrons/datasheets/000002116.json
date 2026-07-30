@@ -67,12 +67,14 @@
         "weapons": [
             {
                 "id": "000002116:enmitic-exterminator",
+                "line": 1,
                 "name": "Enmitic exterminator",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002116",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Enmitic exterminator",
                         "attributes": [
@@ -98,12 +100,14 @@
             },
             {
                 "id": "000002116:gauss-destructor",
+                "line": 2,
                 "name": "Gauss destructor",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002116",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Gauss destructor",
                         "attributes": [
@@ -128,12 +132,14 @@
             },
             {
                 "id": "000002116:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002116",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -208,6 +214,7 @@
     ],
     "abilities": [
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

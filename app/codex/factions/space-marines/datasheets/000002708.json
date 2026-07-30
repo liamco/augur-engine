@@ -118,12 +118,14 @@
         "weapons": [
             {
                 "id": "000002708:blackout",
+                "line": 1,
                 "name": "Blackout",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002708",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blackout",
                         "attributes": [
@@ -148,12 +150,14 @@
             },
             {
                 "id": "000002708:the-raven-s-talons",
+                "line": 2,
                 "name": "The Raven’s Talons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002708",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "The Raven’s Talons",
                         "attributes": [
@@ -223,22 +227,27 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008336",
             "name": "Lone Operative",
             "type": "Core"
         },
         {
+            "id": "000008337",
             "name": "Stealth",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

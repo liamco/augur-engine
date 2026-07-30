@@ -1,11 +1,28 @@
 {
+    "id": "000000817",
+    "slug": "obeisance-phalanx",
     "name": "Obeisance Phalanx",
     "abilities": [
         {
             "id": "000008549",
             "name": "Worthy Foes",
             "description": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a Noble, Lychguard or Triarch unit from your army makes an attack that targets that unit, add 1 to the Wound roll.",
-            "legend": "With a command transmitted by regal carrier wave, signalled by a glowing glyph or via a haughty gesture with their blade, the ruling nobles mark their chosen enemy. With this declaration are the Triarchal Codes observed, and the ignorant foe doomed. The nobles’ powerful servants and the Triarch’s guardians of tradition march to war obediently, driven to best the mightiest of foes on the battlefield as a demonstration of the dynasty’s honour and a warning to the rest of their enemies’ foolish kind."
+            "legend": "With a command transmitted by regal carrier wave, signalled by a glowing glyph or via a haughty gesture with their blade, the ruling nobles mark their chosen enemy. With this declaration are the Triarchal Codes observed, and the ignorant foe doomed. The nobles’ powerful servants and the Triarch’s guardians of tradition march to war obediently, driven to best the mightiest of foes on the battlefield as a demonstration of the dynasty’s honour and a warning to the rest of their enemies’ foolish kind.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000522",
+                    "000000523",
+                    "000000524",
+                    "000000527",
+                    "000000531",
+                    "000000532",
+                    "000000536",
+                    "000000539",
+                    "000000540",
+                    "000002360",
+                    "000003693"
+                ]
+            }
         }
     ],
     "stratagems": [
@@ -17,7 +34,17 @@
             "legend": "It is not only android soldiery that be compelled to serve. With a command, prized war engines and ornate weapons are empowered to hyperlethality.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army (excluding TITANIC units) that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+            "description": "<b>WHEN:</b> Your Shooting phase or the Fight phase.<br><br><b>TARGET:</b> One <span class=\"kwb\">NECRONS</span> unit from your army (excluding TITANIC units) that has not been selected to shoot or fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+            "eligibleDatasheets": {
+                "exclude": [
+                    "000000552",
+                    "000000556",
+                    "000000557",
+                    "000000567",
+                    "000001577",
+                    "000002362"
+                ]
+            }
         },
         {
             "id": "000008551004",
@@ -27,7 +54,32 @@
             "legend": "A tomb world’s war engines are the pride of its nobility and they will suffer no affront to them, demanding the reassembly of slablike armour atom by atom even as the foe seek to sunder the vehicles.",
             "turn": "Either player’s turn",
             "phase": "Shooting or Fight phase",
-            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One NECRONS VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+            "description": "<b>WHEN:</b> Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One NECRONS VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000533",
+                    "000000540",
+                    "000000543",
+                    "000000544",
+                    "000000545",
+                    "000000551",
+                    "000000552",
+                    "000000553",
+                    "000000554",
+                    "000000556",
+                    "000000557",
+                    "000000561",
+                    "000000562",
+                    "000000564",
+                    "000000567",
+                    "000001577",
+                    "000002112",
+                    "000002115",
+                    "000002360",
+                    "000002361",
+                    "000002362"
+                ]
+            }
         },
         {
             "id": "000008551006",
@@ -37,7 +89,15 @@
             "legend": "Few enemy are worthy of a duel. What dangerous vermin are encountered are prioritised for execution to safeguard the nobles' honour.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One LYCHGUARD or TRIARCH unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
+            "description": "<b>WHEN:</b> Fight phase.<br><br><b>TARGET:</b> One LYCHGUARD or TRIARCH unit from your army that has not been selected to fight this phase.<br><br><b>EFFECT:</b> Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000536",
+                    "000000539",
+                    "000000540",
+                    "000002360"
+                ]
+            }
         },
         {
             "id": "000008551002",
@@ -47,7 +107,33 @@
             "legend": "With a pulse of necroneural energy that erodes the foe’s will, the Necron commander declares the fall of the enemy general, promising their remaining forces that it is only a matter of time until they join their master in ignoble death.",
             "turn": "Either player’s turn",
             "phase": "Any phase",
-            "description": "<b>WHEN:</b> Any phase, just after your opponent’s <span class=\"kwb\">WARLORD</span> is destroyed.<br><br><b>TARGET:</b> Your <span class=\"kwb\">NECRONS</span> <span class=\"kwb\">WARLORD</span>.<br><br><b>EFFECT:</b> Until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result."
+            "description": "<b>WHEN:</b> Any phase, just after your opponent’s <span class=\"kwb\">WARLORD</span> is destroyed.<br><br><b>TARGET:</b> Your <span class=\"kwb\">NECRONS</span> <span class=\"kwb\">WARLORD</span>.<br><br><b>EFFECT:</b> Until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000522",
+                    "000000523",
+                    "000000524",
+                    "000000527",
+                    "000000528",
+                    "000000530",
+                    "000000531",
+                    "000000532",
+                    "000000533",
+                    "000002092",
+                    "000002108",
+                    "000002109",
+                    "000002350",
+                    "000002351",
+                    "000002352",
+                    "000002353",
+                    "000002354",
+                    "000002355",
+                    "000002360",
+                    "000003693",
+                    "000004178",
+                    "000004186"
+                ]
+            }
         },
         {
             "id": "000008551005",
@@ -57,7 +143,13 @@
             "legend": "Lychguard never tire, nor give a thought to their own safety over that of their master. With parrying blows and blocking shots they protect their liege even as they continue to strike down their opponents.",
             "turn": "Either player’s turn",
             "phase": "Fight phase",
-            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One LYCHGUARD or TRIARCH PRAETORIANS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
+            "description": "<b>WHEN:</b> Fight phase, just after an enemy unit has selected its targets.<br><br><b>TARGET:</b> One LYCHGUARD or TRIARCH PRAETORIANS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.<br><br><b>EFFECT:</b> Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000536",
+                    "000000539"
+                ]
+            }
         },
         {
             "id": "000008551007",
@@ -67,7 +159,15 @@
             "legend": "The ancient and arrogant will of the nobility drives their powerful servants to stand their ground defiantly as they claim the dynasty's rightful lands.",
             "turn": "Your turn",
             "phase": "Command phase",
-            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Lychguard or Triarch unit from your army.<br><br><b>EFFECT:</b> Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the VEHICLE keyword, add 3 to the Objective Control characteristic instead."
+            "description": "<b>WHEN:</b> Your Command phase.<br><br><b>TARGET:</b> One Lychguard or Triarch unit from your army.<br><br><b>EFFECT:</b> Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the VEHICLE keyword, add 3 to the Objective Control characteristic instead.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000536",
+                    "000000539",
+                    "000000540",
+                    "000002360"
+                ]
+            }
         }
     ],
     "enhancements": [
@@ -76,28 +176,53 @@
             "name": "Honourable Combatant",
             "cost": 10,
             "legend": "A strict adherent to the ancient codes, this noble reserves their greatest displays of power to execute the enemy's leaders. Such champions are brought low in ostentatious manner, the inspiration or strategy they once provided severed at a stroke.",
-            "description": "OVERLORD model only. Each time the bearer’s unit destroys an enemy <span class=\"kwb\">CHARACTER</span> unit, your opponent loses 1CP if they have any."
+            "description": "OVERLORD model only. Each time the bearer’s unit destroys an enemy <span class=\"kwb\">CHARACTER</span> unit, your opponent loses 1CP if they have any.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000003693"
+                ]
+            }
         },
         {
             "id": "000008550003",
             "name": "Unflinching Will",
             "cost": 20,
             "legend": "With sheer will this noble drives their warriors into battle against the most malevolent foes. Not from pretenders to nobility, nor marauding beasts, nor titanic machineries will this noble turn; they have faced greater horrors during their long existence.",
-            "description": "OVERLORD model only. The bearer’s melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities."
+            "description": "OVERLORD model only. The bearer’s melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000003693"
+                ]
+            }
         },
         {
             "id": "000008550004",
             "name": "Warrior Noble",
             "cost": 15,
             "legend": "This dynastic scion is an expert in the arts of martial excellence, and their living metal form has been enhanced by their Crypteks. With effortless arrogance, they and their guardians parry or contemptuously swat aside the strikes of those they see as their lessers.",
-            "description": "OVERLORD model only. Each time a melee attack targets the bearer’s unit, subtract 1 from the Hit roll."
+            "description": "OVERLORD model only. Each time a melee attack targets the bearer’s unit, subtract 1 from the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000003693"
+                ]
+            }
         },
         {
             "id": "000008550005",
             "name": "Eternal Conqueror",
             "cost": 25,
             "legend": "This insatiable subjugator sees all before them as theirs for the taking by ancient right of conquest. They wield their legion like an iron gauntlet, using it to seize the battlefield in a demonstration of their power and strength, daring others to try taking it from them.",
-            "description": "OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll."
+            "description": "OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll.",
+            "eligibleDatasheets": {
+                "include": [
+                    "000000523",
+                    "000003693"
+                ]
+            }
         }
-    ]
+    ],
+    "eligibleDatasheets": "all"
 }

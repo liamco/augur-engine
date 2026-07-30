@@ -97,12 +97,14 @@
         "weapons": [
             {
                 "id": "000001182:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -126,12 +128,14 @@
             },
             {
                 "id": "000001182:boltgun",
+                "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Boltgun",
                         "attributes": [],
@@ -153,12 +157,14 @@
             },
             {
                 "id": "000001182:combi-weapon",
+                "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combi-weapon",
                         "attributes": [
@@ -184,12 +190,14 @@
             },
             {
                 "id": "000001182:grav-pistol",
+                "line": 4,
                 "name": "Grav-pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Grav-pistol",
                         "attributes": [
@@ -214,12 +222,14 @@
             },
             {
                 "id": "000001182:plasma-pistol-standard",
+                "line": 5,
                 "name": "Plasma pistol – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma pistol – standard",
                         "attributes": [
@@ -243,12 +253,14 @@
             },
             {
                 "id": "000001182:plasma-pistol-supercharge",
+                "line": 6,
                 "name": "Plasma pistol – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma pistol – supercharge",
                         "attributes": [
@@ -273,12 +285,14 @@
             },
             {
                 "id": "000001182:storm-bolter",
+                "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Storm bolter",
                         "attributes": [
@@ -302,12 +316,14 @@
             },
             {
                 "id": "000001182:twin-boltgun",
+                "line": 8,
                 "name": "Twin boltgun",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin boltgun",
                         "attributes": [
@@ -331,12 +347,14 @@
             },
             {
                 "id": "000001182:astartes-chainsword",
+                "line": 9,
                 "name": "Astartes chainsword",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Astartes chainsword",
                         "attributes": [],
@@ -358,12 +376,14 @@
             },
             {
                 "id": "000001182:power-fist",
+                "line": 10,
                 "name": "Power fist",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power fist",
                         "attributes": [],
@@ -385,12 +405,14 @@
             },
             {
                 "id": "000001182:power-weapon",
+                "line": 11,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 11,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -412,12 +434,14 @@
             },
             {
                 "id": "000001182:thunder-hammer",
+                "line": 12,
                 "name": "Thunder hammer",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001182",
                         "line": 12,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Thunder hammer",
                         "attributes": [
@@ -486,10 +510,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

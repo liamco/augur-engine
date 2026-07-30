@@ -74,12 +74,14 @@
         "weapons": [
             {
                 "id": "000000548:particle-beamer",
+                "line": 1,
                 "name": "Particle beamer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000548",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Particle beamer",
                         "attributes": [
@@ -104,12 +106,14 @@
             },
             {
                 "id": "000000548:twin-gauss-blaster",
+                "line": 2,
                 "name": "Twin gauss blaster",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000548",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin gauss blaster",
                         "attributes": [
@@ -134,12 +138,14 @@
             },
             {
                 "id": "000000548:twin-tesla-carbine",
+                "line": 3,
                 "name": "Twin tesla carbine",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000548",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin tesla carbine",
                         "attributes": [
@@ -165,12 +171,14 @@
             },
             {
                 "id": "000000548:close-combat-weapon",
+                "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000548",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -241,10 +249,12 @@
     ],
     "abilities": [
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

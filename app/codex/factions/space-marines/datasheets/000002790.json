@@ -94,12 +94,14 @@
         "weapons": [
             {
                 "id": "000002790:heavy-laser-destroyer",
+                "line": 1,
                 "name": "Heavy laser destroyer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy laser destroyer",
                         "attributes": [
@@ -123,12 +125,14 @@
             },
             {
                 "id": "000002790:heavy-onslaught-gatling-cannon",
+                "line": 2,
                 "name": "Heavy onslaught gatling cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy onslaught gatling cannon",
                         "attributes": [
@@ -152,12 +156,14 @@
             },
             {
                 "id": "000002790:icarus-rocket-pod",
+                "line": 3,
                 "name": "Icarus rocket pod",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Icarus rocket pod",
                         "attributes": [
@@ -181,12 +187,14 @@
             },
             {
                 "id": "000002790:ironhail-heavy-stubber",
+                "line": 4,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Ironhail heavy stubber",
                         "attributes": [
@@ -210,12 +218,14 @@
             },
             {
                 "id": "000002790:macro-plasma-incinerator-standard",
+                "line": 5,
                 "name": "Macro plasma incinerator – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 5,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Macro plasma incinerator – standard",
                         "attributes": [
@@ -239,12 +249,14 @@
             },
             {
                 "id": "000002790:macro-plasma-incinerator-supercharge",
+                "line": 6,
                 "name": "Macro plasma incinerator – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 6,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Macro plasma incinerator – supercharge",
                         "attributes": [
@@ -269,12 +281,14 @@
             },
             {
                 "id": "000002790:multi-melta",
+                "line": 7,
                 "name": "Multi-melta",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 7,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Multi-melta",
                         "attributes": [
@@ -298,12 +312,14 @@
             },
             {
                 "id": "000002790:repulsor-executioner-defensive-array",
+                "line": 8,
                 "name": "Repulsor Executioner defensive array",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 8,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Repulsor Executioner defensive array",
                         "attributes": [],
@@ -325,12 +341,14 @@
             },
             {
                 "id": "000002790:twin-heavy-bolter",
+                "line": 9,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 9,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin heavy bolter",
                         "attributes": [
@@ -355,12 +373,14 @@
             },
             {
                 "id": "000002790:twin-icarus-ironhail-heavy-stubber",
+                "line": 10,
                 "name": "Twin Icarus ironhail heavy stubber",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 10,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Twin Icarus ironhail heavy stubber",
                         "attributes": [
@@ -386,12 +406,14 @@
             },
             {
                 "id": "000002790:armoured-hull",
+                "line": 11,
                 "name": "Armoured hull",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002790",
                         "line": 11,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Armoured hull",
                         "attributes": [],
@@ -458,10 +480,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000008526",
             "name": "Templar Vows",
             "type": "Faction"
         },

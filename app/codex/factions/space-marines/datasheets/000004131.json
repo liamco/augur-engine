@@ -92,12 +92,14 @@
         "weapons": [
             {
                 "id": "000004131:heavy-bolt-pistol",
+                "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000004131",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Heavy bolt pistol",
                         "attributes": [
@@ -121,12 +123,14 @@
             },
             {
                 "id": "000004131:master-crafted-power-weapon",
+                "line": 2,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004131",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Master-crafted power weapon",
                         "attributes": [],
@@ -148,12 +152,14 @@
             },
             {
                 "id": "000004131:paired-master-crafted-power-weapons",
+                "line": 3,
                 "name": "Paired master-crafted power weapons",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004131",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Paired master-crafted power weapons",
                         "attributes": [],
@@ -175,12 +181,14 @@
             },
             {
                 "id": "000004131:teeth-and-claws",
+                "line": 4,
                 "name": "Teeth and claws",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000004131",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Teeth and claws",
                         "attributes": [],
@@ -284,6 +292,7 @@
     ],
     "abilities": [
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

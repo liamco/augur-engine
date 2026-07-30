@@ -161,12 +161,14 @@
         "weapons": [
             {
                 "id": "000002775:bolt-pistol",
+                "line": 1,
                 "name": "Bolt Pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002775",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt Pistol",
                         "attributes": [
@@ -190,12 +192,14 @@
             },
             {
                 "id": "000002775:bolt-rifle",
+                "line": 2,
                 "name": "Bolt rifle",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002775",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt rifle",
                         "attributes": [
@@ -220,12 +224,14 @@
             },
             {
                 "id": "000002775:close-combat-weapon",
+                "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002775",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -247,12 +253,14 @@
             },
             {
                 "id": "000002775:power-weapon",
+                "line": 4,
                 "name": "Power weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002775",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Power weapon",
                         "attributes": [],
@@ -319,10 +327,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

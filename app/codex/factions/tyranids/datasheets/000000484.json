@@ -75,12 +75,14 @@
         "weapons": [
             {
                 "id": "000000484:fleshborer",
+                "line": 1,
                 "name": "Fleshborer",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000484",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Fleshborer",
                         "attributes": [
@@ -104,12 +106,14 @@
             },
             {
                 "id": "000000484:blinding-venom",
+                "line": 2,
                 "name": "Blinding venom",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000484",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Blinding venom",
                         "attributes": [],
@@ -180,10 +184,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

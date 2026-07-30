@@ -28,15 +28,45 @@ Related: [2026-07-30-datasheet-pipeline-basics-design.md](2026-07-30-datasheet-p
 
 ### 1. Per-datasheet `stratagems`, `enhancements`, `detachmentAbilities`
 
-Dropped from datasheet output entirely. **Not** redundant duplication, which is the easy assumption:
+Dropped from datasheet output entirely. The definitions survive in `app/codex/factions/{slug}/detachments/*.json`, but the datasheet → detachment relationship exists nowhere in the codex.
 
-| Faction | sheets | distinct `stratagems` sets | distinct `enhancements` sets | distinct `detachmentAbilities` sets |
-|---|---|---|---|---|
-| space-marines | 298 | 146 | 54 | 61 |
-| tyranids | 55 | 35 | 10 | 12 |
-| necrons | 64 | 35 | 13 | 20 |
+> **Correction.** An earlier revision of this doc cited "146 distinct `stratagems` sets across 298 Space Marine datasheets" and concluded the arrays encode rich per-datasheet eligibility. That counted distinct sets of stratagem *ids*, which vary incidentally. At the level that matters — which **detachments** a datasheet references — Space Marines has only **15** distinct sets, of size 35–39 out of 40. The loss is much smaller than first documented.
 
-These arrays encode *which detachments each datasheet is eligible for*. The definitions survive in `app/codex/factions/{slug}/detachments/*.json`, but the datasheet → detachment relationship now exists nowhere in the codex. Needs a decision: reconstruct from keywords/restrictions, or carry an explicit eligibility list.
+#### Detachment eligibility — small, but not reconstructible
+
+| Faction | detachments | effectively universal | genuinely varying |
+|---|---|---|---|
+| space-marines | 40 | 35 (on 297 of 298 datasheets) | 5 |
+| tyranids | 12 | 6 | 6 |
+| necrons | 12 | 6 | 6 |
+
+Sole Space Marine outlier: **Kill Team Cassius** (Legends kill team, 2 detachments). The five that vary: Black Spear Task Force (284/298), Saga of the Bold (132), Boarding Strike (112), Terminator Assault (17), Pilum Strike Team (10). Tyranids/Necrons carry proportionally more signal — Crusher Stampede 27/55 down to Infestation Swarm 2/55; Cursed Legion 52/64 down to Deranged Outcasts 5/64.
+
+Not derivable from keywords. Terminator Assault vs the `TERMINATOR` keyword fails both directions — Njal Stormcaller and Terminator Assault Squad have the detachment without the keyword; Wolf Guard Terminators, Deathwatch Terminator Squad, Deathwing Command Squad, Deathwing Strikemaster, Relic Terminator Squad and Marneus Calgar in Armour of Antilochus have the keyword without the detachment. Nor from supplement (Terminator Assault spans codex, dark-angels, space-wolves, black-templars). `PHOBOS` comes closest for Pilum Strike Team (14 have the keyword, 4 of those lack the detachment) but is still inexact. Unclear whether the residue is an unspotted rule or source imperfection.
+
+#### Enhancement eligibility — almost fully reconstructible
+
+| CHARACTER | EPIC HERO | datasheets | enhancement-list size |
+|---|---|---|---|
+| no | no | 181 | 1–2 |
+| no | yes | 2 | 0 |
+| yes | no | 58 | 78–103 |
+| yes | yes | 57 | 0 |
+
+`CHARACTER && !EPIC HERO` reconstructs the eligible pool exactly for 115 of 298 datasheets — the zero on every Epic Hero is the 10th-ed rule that Epic Heroes cannot take Enhancements. The only real loss is the 1–2 entries on the 181 non-character datasheets (e.g. Eliminator Squad ← *Calibanite Armaments*).
+
+#### Proposed shape (deferred)
+
+Store exceptions on the **detachment**, not the datasheet — 35 of 40 collapse to nothing:
+
+```json
+{ "name": "Gladius Task Force",  "eligibleDatasheets": "all" }
+{ "name": "Terminator Assault",  "eligibleDatasheets": { "include": ["000000123", "…"] } }
+```
+
+Exhaustive storage is ~11,000 pairs on either side; as `all`/`include`/`exclude` it collapses to five short lists plus one exclusion. Detachment files already exist, are slug-keyed, and are regenerated each run. For enhancements, derive from `CHARACTER`/`EPIC HERO` and carry only the non-character residue.
+
+**Deferred:** nothing consumes detachments yet. This becomes concrete when the detachment-points list building in `todo.md` lands, since that needs to know which units a detachment can take.
 
 ---
 

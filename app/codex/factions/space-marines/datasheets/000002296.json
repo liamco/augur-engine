@@ -162,12 +162,14 @@
         "weapons": [
             {
                 "id": "000002296:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002296",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -191,12 +193,14 @@
             },
             {
                 "id": "000002296:enmity-s-edge",
+                "line": 2,
                 "name": "Enmity’s Edge",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002296",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Enmity’s Edge",
                         "attributes": [
@@ -265,10 +269,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

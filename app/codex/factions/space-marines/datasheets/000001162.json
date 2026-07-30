@@ -93,12 +93,14 @@
         "weapons": [
             {
                 "id": "000001162:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001162",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -122,12 +124,14 @@
             },
             {
                 "id": "000001162:quietus",
+                "line": 2,
                 "name": "Quietus",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000001162",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Quietus",
                         "attributes": [
@@ -151,12 +155,14 @@
             },
             {
                 "id": "000001162:combat-knife",
+                "line": 3,
                 "name": "Combat knife",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000001162",
                         "line": 3,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Combat knife",
                         "attributes": [],
@@ -223,22 +229,27 @@
     ],
     "abilities": [
         {
+            "id": "000008345",
             "name": "Infiltrators",
             "type": "Core"
         },
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008344",
             "name": "Scouts",
             "type": "Core"
         },
         {
+            "id": "000008337",
             "name": "Stealth",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

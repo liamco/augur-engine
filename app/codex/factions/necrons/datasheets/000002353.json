@@ -72,12 +72,14 @@
         "weapons": [
             {
                 "id": "000002353:abyssal-lance",
+                "line": 1,
                 "name": "Abyssal lance",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002353",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Abyssal lance",
                         "attributes": [],
@@ -99,12 +101,14 @@
             },
             {
                 "id": "000002353:abyssal-lance-2",
+                "line": 2,
                 "name": "Abyssal lance",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002353",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Abyssal lance",
                         "attributes": [],
@@ -171,10 +175,12 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
         },

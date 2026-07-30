@@ -77,12 +77,14 @@
         "weapons": [
             {
                 "id": "000000125:assault-bolters",
+                "line": 1,
                 "name": "Assault bolters",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000125",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Assault bolters",
                         "attributes": [
@@ -109,12 +111,14 @@
             },
             {
                 "id": "000000125:plasma-exterminators-standard",
+                "line": 2,
                 "name": "Plasma exterminators – standard",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000125",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Plasma exterminators – standard",
                         "attributes": [
@@ -140,12 +144,14 @@
             },
             {
                 "id": "000000125:plasma-exterminators-supercharge",
+                "line": 3,
                 "name": "Plasma exterminators – supercharge",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000125",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Plasma exterminators – supercharge",
                         "attributes": [
@@ -172,12 +178,14 @@
             },
             {
                 "id": "000000125:close-combat-weapon",
+                "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000125",
                         "line": 4,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Close combat weapon",
                         "attributes": [],
@@ -254,10 +262,12 @@
     ],
     "abilities": [
         {
+            "id": "000008343",
             "name": "Deep Strike",
             "type": "Core"
         },
         {
+            "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
         },

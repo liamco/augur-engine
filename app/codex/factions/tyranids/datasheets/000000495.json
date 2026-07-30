@@ -60,12 +60,14 @@
         "weapons": [
             {
                 "id": "000000495:bio-plasmic-cannon",
+                "line": 1,
                 "name": "Bio-plasmic cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000000495",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bio-plasmic cannon",
                         "attributes": [
@@ -90,12 +92,14 @@
             },
             {
                 "id": "000000495:powerful-limbs",
+                "line": 2,
                 "name": "Powerful limbs",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000000495",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Powerful limbs",
                         "attributes": [],
@@ -162,10 +166,12 @@
     ],
     "abilities": [
         {
+            "id": "000008339",
             "name": "Deadly Demise",
             "type": "Core"
         },
         {
+            "id": "000000705",
             "name": "Synapse",
             "type": "Faction"
         },

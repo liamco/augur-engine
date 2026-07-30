@@ -9,8 +9,13 @@ import { parseWeaponAttributes } from "../utils/parseWeaponAttributes";
 export interface ParsedWeaponProfile {
     datasheetId: string;
     line: number;
+    // The source's printed row index within the weapon. Kept because it does not
+    // always match array position (178 of 2207 profiles differ).
+    lineInWargear: number;
     dice: string;
     name: string;
+    // Sub-profile label on multi-profile weapons ("supercharge", "sweep", "krak").
+    profileName?: string;
     attributes: string[];
     range: number | string;
     type: "Ranged" | "Melee";
@@ -23,6 +28,9 @@ export interface ParsedWeaponProfile {
 
 export interface ParsedWeapon {
     id: string;
+    // The source's printed row index on the datasheet. Kept because it does not
+    // always match array position (94 of 2198 weapons differ).
+    line: number;
     name: string;
     type: "Ranged" | "Melee";
     profiles: ParsedWeaponProfile[];
@@ -61,13 +69,18 @@ export function transformWargear(
 ): ParsedWargearData {
     const weapons: ParsedWeapon[] = rawWeapons.map((weapon) => ({
         id: weapon.id,
+        line: parseInt(weapon.line, 10),
         name: weapon.name,
         type: weapon.type as "Ranged" | "Melee",
         profiles: weapon.profiles.map((profile) => ({
             datasheetId: profile.datasheetId,
             line: parseInt(profile.line, 10),
+            lineInWargear: parseInt(profile.lineInWargear, 10),
             dice: profile.dice,
             name: profile.name,
+            ...(profile.profileName
+                ? { profileName: profile.profileName }
+                : {}),
             attributes: parseWeaponAttributes(profile.description),
             range: parseRange(profile.range) ?? "Melee",
             type: profile.type as "Ranged" | "Melee",

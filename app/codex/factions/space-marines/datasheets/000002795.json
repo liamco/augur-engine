@@ -135,12 +135,14 @@
         "weapons": [
             {
                 "id": "000002795:bolt-pistol",
+                "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
                         "datasheetId": "000002795",
                         "line": 1,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Bolt pistol",
                         "attributes": [
@@ -164,12 +166,14 @@
             },
             {
                 "id": "000002795:black-sword-strike",
+                "line": 2,
                 "name": "Black Sword – strike",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002795",
                         "line": 2,
+                        "lineInWargear": 1,
                         "dice": "",
                         "name": "Black Sword – strike",
                         "attributes": [
@@ -194,12 +198,14 @@
             },
             {
                 "id": "000002795:black-sword-sweep",
+                "line": 3,
                 "name": "Black Sword – sweep",
                 "type": "Melee",
                 "profiles": [
                     {
                         "datasheetId": "000002795",
                         "line": 3,
+                        "lineInWargear": 2,
                         "dice": "",
                         "name": "Black Sword – sweep",
                         "attributes": [],
@@ -266,14 +272,17 @@
     ],
     "abilities": [
         {
+            "id": "000008346",
             "name": "Leader",
             "type": "Core"
         },
         {
+            "id": "000008336",
             "name": "Lone Operative",
             "type": "Core"
         },
         {
+            "id": "000008526",
             "name": "Templar Vows",
             "type": "Faction"
         },
