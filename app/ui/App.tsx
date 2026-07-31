@@ -6,10 +6,9 @@ import Logo from "./assets/Logo.tsx";
 import SidebarNavigation from "#components/SidebarNavigation/SidebarNavigation.tsx";
 import Scanlines from "#assets/Scanlines.tsx";
 import Octagon from "#modules/Engagements/Octagon.tsx";
+import ListIndex from "#modules/Lists/ListIndex.tsx";
+import ListEditor from "#modules/Lists/ListEditor.tsx";
 
-// import ListIndex from "#modules/Lists/ListIndex";
-// import ViewList from "#modules/Lists/ViewList";
-// import CreateList from "#modules/Lists/CreateList";
 // import EngagementIndex from "#modules/Engagements/EngagementIndex";
 // import CreateEngagement from "#modules/Engagements/CreateEngagement";
 // import ViewEngagement from "#modules/Engagements/ViewEngagement";
@@ -38,6 +37,9 @@ export default function App() {
                 {/*{/*<EngagementManagerProvider>*/}
                 <Routes>
                     <Route path="/test-lab" element={<Octagon />} />
+                    <Route path="/lists" element={<ListIndex />} />
+                    <Route path="/lists/new" element={<ListEditor />} />
+                    <Route path="/lists/:listId" element={<ListEditor />} />
                     {/*<Route path="/engagements">
                             <Route index element={<EngagementIndex />} />
                             <Route path="new" element={<CreateEngagement />} />

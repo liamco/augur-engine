@@ -16,6 +16,9 @@ build/
 npm-debug.log*
 
 # env files
+# `.env*.local` alone does not match a bare `.env`, which is where a connection
+# string is most likely to end up.
+.env
 .env*.local
 
 # typescript
