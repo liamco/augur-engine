@@ -55,28 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolter; plasma storm battery; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000242",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy bolter can be replaced with 1 assault cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolter; plasma storm battery; close combat weapon.",
+            "parsed": [
+                "000000242:heavy-bolter",
+                "000000242:plasma-storm-battery",
+                "000000242:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Land Speeder Vengeance": [
+                    "000000242:heavy-bolter",
+                    "000000242:plasma-storm-battery",
+                    "000000242:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000242:assault-cannon",
+                "datasheetId": "000000242",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -108,6 +105,7 @@
             },
             {
                 "id": "000000242:heavy-bolter",
+                "datasheetId": "000000242",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -138,9 +136,10 @@
                 "count": 1
             },
             {
-                "id": "000000242:plasma-storm-battery-standard",
+                "id": "000000242:plasma-storm-battery",
+                "datasheetId": "000000242",
                 "line": 3,
-                "name": "Plasma storm battery – standard",
+                "name": "Plasma storm battery",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -148,7 +147,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma storm battery – standard",
+                        "name": "Plasma storm battery - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST",
                             "TWIN-LINKED"
@@ -160,27 +160,14 @@
                         "s": 8,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000242:plasma-storm-battery-supercharge",
-                "line": 4,
-                "name": "Plasma storm battery – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000242",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma storm battery – supercharge",
+                        "name": "Plasma storm battery - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS",
@@ -204,6 +191,7 @@
             },
             {
                 "id": "000000242:close-combat-weapon",
+                "datasheetId": "000000242",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -232,7 +220,35 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000242",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy bolter can be replaced with 1 assault cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000242:heavy-bolter",
+                        "000000242:plasma-storm-battery",
+                        "000000242:close-combat-weapon"
+                    ],
+                    [
+                        "000000242:plasma-storm-battery",
+                        "000000242:close-combat-weapon",
+                        "000000242:assault-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

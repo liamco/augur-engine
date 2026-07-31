@@ -63,21 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin tesla destructor; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin tesla destructor; armoured bulk.",
+            "parsed": [
+                "000000544:twin-tesla-destructor",
+                "000000544:armoured-bulk"
+            ],
+            "byModelType": {
+                "Night Scythe": [
+                    "000000544:twin-tesla-destructor",
+                    "000000544:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000544:twin-tesla-destructor",
+                "datasheetId": "000000544",
                 "line": 1,
                 "name": "Twin tesla destructor",
                 "type": "Ranged",
@@ -110,6 +112,7 @@
             },
             {
                 "id": "000000544:armoured-bulk",
+                "datasheetId": "000000544",
                 "line": 2,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -138,7 +141,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000544:twin-tesla-destructor",
+                        "000000544:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

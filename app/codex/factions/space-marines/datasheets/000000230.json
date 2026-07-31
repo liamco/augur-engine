@@ -55,40 +55,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Deathwing Sergeant is equipped with:</b> storm bolter; power weapon. <br><br><b>Every Deathwing Terminator is equipped with:</b> storm bolter; power fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000230",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of Deathwing Terminators can each have their power fist replaced with 1 chainfist."
-                    },
-                    {
-                        "datasheetId": "000000230",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Deathwing Terminator can replace its storm bolter with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000230",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This unit can be equipped with 1 Watcher in the Dark."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Deathwing Sergeant is equipped with:</b> storm bolter; power weapon. <br><br><b>Every Deathwing Terminator is equipped with:</b> storm bolter; power fist.",
+            "parsed": [
+                "000000230:storm-bolter",
+                "000000230:power-weapon"
+            ],
+            "byModelType": {
+                "Deathwing Sergeant": [
+                    "000000230:storm-bolter",
+                    "000000230:power-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Deathwing Terminator": [
+                    "000000230:storm-bolter",
+                    "000000230:power-fist"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000230:assault-cannon",
+                "datasheetId": "000000230",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -113,15 +100,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000230:cyclone-missile-launcher-frag",
+                "id": "000000230:cyclone-missile-launcher",
+                "datasheetId": "000000230",
                 "line": 2,
-                "name": "Cyclone missile launcher – frag",
+                "name": "Cyclone missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -129,7 +119,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Cyclone missile launcher – frag",
+                        "name": "Cyclone missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -140,27 +131,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000230:cyclone-missile-launcher-krak",
-                "line": 3,
-                "name": "Cyclone missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000230",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Cyclone missile launcher – krak",
+                        "name": "Cyclone missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -173,13 +151,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000230:heavy-flamer",
+                "datasheetId": "000000230",
                 "line": 4,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -197,7 +178,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -205,15 +186,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000230:plasma-cannon-standard",
+                "id": "000000230:plasma-cannon",
+                "datasheetId": "000000230",
                 "line": 5,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -221,7 +205,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -232,27 +217,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000230:plasma-cannon-supercharge",
-                "line": 6,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000230",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -268,13 +240,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000230:storm-bolter",
+                "datasheetId": "000000230",
                 "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -306,6 +281,7 @@
             },
             {
                 "id": "000000230:chainfist",
+                "datasheetId": "000000230",
                 "line": 8,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -337,6 +313,7 @@
             },
             {
                 "id": "000000230:power-fist",
+                "datasheetId": "000000230",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -359,13 +336,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Deathwing Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000230:power-weapon",
+                "datasheetId": "000000230",
                 "line": 10,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -388,13 +369,200 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Deathwing Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000230",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of Deathwing Terminators can each have their power fist replaced with 1 chainfist."
+                },
+                {
+                    "datasheetId": "000000230",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Deathwing Terminator can replace its storm bolter with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)</li></ul>"
+                },
+                {
+                    "datasheetId": "000000230",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This unit can be equipped with 1 Watcher in the Dark."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000230:watcher-in-the-dark",
+                "name": "Watcher in the Dark",
+                "description": "Once per battle, in any phase, just after a mortal wound is allocated to an ADEPTUS ASTARTES model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds. Designer's Note: Place a Watcher in the Dark token next to the unit, removing it when this ability has been used.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Deathwing Sergeant",
+                "items": [
+                    [
+                        "000000230:storm-bolter",
+                        "000000230:power-weapon"
+                    ],
+                    [
+                        "000000230:storm-bolter",
+                        "000000230:power-weapon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:assault-cannon"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:assault-cannon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:heavy-flamer"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:heavy-flamer",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:plasma-cannon"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:plasma-cannon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:storm-bolter",
+                        "000000230:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000000230:power-weapon",
+                        "000000230:storm-bolter",
+                        "000000230:cyclone-missile-launcher",
+                        "000000230:watcher-in-the-dark"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwing Terminator",
+                "items": [
+                    [
+                        "000000230:storm-bolter",
+                        "000000230:power-fist"
+                    ],
+                    [
+                        "000000230:storm-bolter",
+                        "000000230:power-fist",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:assault-cannon"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:assault-cannon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:heavy-flamer"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:heavy-flamer",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:plasma-cannon"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:plasma-cannon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:storm-bolter",
+                        "000000230:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000000230:power-fist",
+                        "000000230:storm-bolter",
+                        "000000230:cyclone-missile-launcher",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:storm-bolter",
+                        "000000230:chainfist"
+                    ],
+                    [
+                        "000000230:storm-bolter",
+                        "000000230:chainfist",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:assault-cannon"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:assault-cannon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:heavy-flamer"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:heavy-flamer",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:plasma-cannon"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:plasma-cannon",
+                        "000000230:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:storm-bolter",
+                        "000000230:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000000230:chainfist",
+                        "000000230:storm-bolter",
+                        "000000230:cyclone-missile-launcher",
+                        "000000230:watcher-in-the-dark"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",
@@ -493,23 +661,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Watcher in the Dark",
-            "legend": "",
-            "description": "Once per battle, in any phase, just after a mortal wound is allocated to an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds.<br><br><b>Designer’s Note:</b> Place a Watcher in the Dark token next to the unit, removing it when this ability has been used.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Watcher in the Dark",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

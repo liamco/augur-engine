@@ -73,21 +73,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; Axe Morkai; Tyrnak and Fenrir.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; Axe Morkai; Tyrnak and Fenrir.",
+            "parsed": [
+                "000000282:storm-bolter",
+                "000000282:axe-morkai",
+                "000000282:tyrnak-and-fenrir"
+            ],
+            "byModelType": {
+                "Logan Grimnar – EPIC HERO": [
+                    "000000282:storm-bolter",
+                    "000000282:axe-morkai",
+                    "000000282:tyrnak-and-fenrir"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000282:storm-bolter",
+                "datasheetId": "000000282",
                 "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -118,9 +122,10 @@
                 "count": 1
             },
             {
-                "id": "000000282:axe-morkai-strike",
+                "id": "000000282:axe-morkai",
+                "datasheetId": "000000282",
                 "line": 2,
-                "name": "Axe Morkai – strike",
+                "name": "Axe Morkai",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -128,7 +133,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Axe Morkai – strike",
+                        "name": "Axe Morkai - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -137,27 +143,14 @@
                         "s": 8,
                         "ap": -2,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000282:axe-morkai-sweep",
-                "line": 3,
-                "name": "Axe Morkai – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000282",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Axe Morkai – sweep",
+                        "name": "Axe Morkai - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -177,6 +170,7 @@
             },
             {
                 "id": "000000282:tyrnak-and-fenrir",
+                "datasheetId": "000000282",
                 "line": 4,
                 "name": "Tyrnak and Fenrir",
                 "type": "Melee",
@@ -207,7 +201,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000282:storm-bolter",
+                        "000000282:axe-morkai",
+                        "000000282:tyrnak-and-fenrir"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

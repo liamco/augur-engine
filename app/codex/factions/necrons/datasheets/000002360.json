@@ -55,21 +55,23 @@
         "mechanics": []
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Szarekh is equipped with:</b> Sceptre of Eternal Glory; Staff of Stars; Weapons of the Final Triarch.<br><br><b>Every Triarchal Menhir is equipped with:</b> annihilator beam; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Szarekh is equipped with:</b> Sceptre of Eternal Glory; Staff of Stars; Weapons of the Final Triarch.<br><br><b>Every Triarchal Menhir is equipped with:</b> annihilator beam; armoured bulk.",
+            "parsed": [
+                "000002360:annihilator-beam",
+                "000002360:armoured-bulk"
+            ],
+            "byModelType": {
+                "Triarchal Menhir": [
+                    "000002360:annihilator-beam",
+                    "000002360:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002360:annihilator-beam",
+                "datasheetId": "000002360",
                 "line": 1,
                 "name": "Annihilator beam",
                 "type": "Ranged",
@@ -99,6 +101,7 @@
             },
             {
                 "id": "000002360:sceptre-of-eternal-glory",
+                "datasheetId": "000002360",
                 "line": 2,
                 "name": "Sceptre of Eternal Glory",
                 "type": "Ranged",
@@ -130,6 +133,7 @@
             },
             {
                 "id": "000002360:staff-of-stars",
+                "datasheetId": "000002360",
                 "line": 3,
                 "name": "Staff of Stars",
                 "type": "Ranged",
@@ -161,6 +165,7 @@
             },
             {
                 "id": "000002360:armoured-bulk",
+                "datasheetId": "000002360",
                 "line": 4,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -190,6 +195,7 @@
             },
             {
                 "id": "000002360:weapons-of-the-final-triarch",
+                "datasheetId": "000002360",
                 "line": 5,
                 "name": "Weapons of the Final Triarch",
                 "type": "Melee",
@@ -220,7 +226,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002360:annihilator-beam",
+                        "000002360:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

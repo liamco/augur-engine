@@ -72,28 +72,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> vigil spear.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003871",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> vigil spear.",
+            "parsed": [
+                "000003871:vigil-spear"
+            ],
+            "byModelType": {
+                "Watch Master": [
+                    "000003871:vigil-spear"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003871:vigil-spear",
+                "datasheetId": "000003871",
                 "line": 1,
                 "name": "Vigil spear",
                 "type": "Ranged",
@@ -123,6 +116,7 @@
             },
             {
                 "id": "000003871:vigil-spear-2",
+                "datasheetId": "000003871",
                 "line": 2,
                 "name": "Vigil spear",
                 "type": "Melee",
@@ -153,7 +147,28 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003871",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003871:vigil-spear"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",

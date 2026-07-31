@@ -10,6 +10,23 @@ export const resolveHitRoll = (
     const baseSkill = Number(context.weaponProfile.bsWs);
     const hitMods = modifiers.get("hit");
 
+    // A weapon with no Ballistic or Weapon Skill — Torrent and a few others,
+    // written "N/A" in the source — hits automatically. This has to be checked
+    // before anything else: no modifier applies to a roll that is never made.
+    //
+    // Checked as "not a real skill" rather than `=== "N/A"` so the older `null`
+    // and `"-"` spellings land here too. Previously they fell through to
+    // Number(null) === 0 and were clamped up to 2, so 125 profiles were hitting
+    // on 2+ instead of automatically.
+    if (!Number.isFinite(baseSkill) || baseSkill <= 0) {
+        return {
+            baseValue: baseSkill,
+            modifiedValue: 0,
+            modifiers,
+            targetRoll: 0,
+        };
+    }
+
     if (hitMods?.ignoreBehaviour || hitMods?.autoSuccess) {
         return {
             baseValue: baseSkill,

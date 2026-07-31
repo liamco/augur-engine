@@ -92,21 +92,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; the Blood Crozius.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; the Blood Crozius.",
+            "parsed": [
+                "000000164:absolvor-bolt-pistol",
+                "000000164:the-blood-crozius"
+            ],
+            "byModelType": {
+                "Lemartes – EPIC HERO": [
+                    "000000164:absolvor-bolt-pistol",
+                    "000000164:the-blood-crozius"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000164:absolvor-bolt-pistol",
+                "datasheetId": "000000164",
                 "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
@@ -138,6 +140,7 @@
             },
             {
                 "id": "000000164:the-blood-crozius",
+                "datasheetId": "000000164",
                 "line": 2,
                 "name": "The Blood Crozius",
                 "type": "Melee",
@@ -168,7 +171,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000164:absolvor-bolt-pistol",
+                        "000000164:the-blood-crozius"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -239,8 +257,16 @@
             "description": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Guardian of the Lost",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Fury Unbound",

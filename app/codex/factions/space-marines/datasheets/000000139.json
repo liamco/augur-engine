@@ -78,34 +78,29 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 lascannons; Thunderhawk heavy cannon; 4 twin heavy bolters; armoured hull; Thunderhawk cluster bombs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000139",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor."
-                    },
-                    {
-                        "datasheetId": "000000139",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 lascannons; Thunderhawk heavy cannon; 4 twin heavy bolters; armoured hull; Thunderhawk cluster bombs.",
+            "parsed": [
+                "000000139:lascannon",
+                "000000139:thunderhawk-heavy-cannon",
+                "000000139:twin-heavy-bolter",
+                "000000139:armoured-hull",
+                "000000139:thunderhawk-cluster-bombs"
+            ],
+            "byModelType": {
+                "Thunderhawk Gunship": [
+                    "000000139:lascannon",
+                    "000000139:thunderhawk-heavy-cannon",
+                    "000000139:twin-heavy-bolter",
+                    "000000139:armoured-hull",
+                    "000000139:thunderhawk-cluster-bombs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000139:hellstrike-missile-battery",
+                "datasheetId": "000000139",
                 "line": 1,
                 "name": "Hellstrike missile battery",
                 "type": "Ranged",
@@ -137,6 +132,7 @@
             },
             {
                 "id": "000000139:lascannon",
+                "datasheetId": "000000139",
                 "line": 2,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -166,6 +162,7 @@
             },
             {
                 "id": "000000139:thunderhawk-heavy-cannon",
+                "datasheetId": "000000139",
                 "line": 3,
                 "name": "Thunderhawk heavy cannon",
                 "type": "Ranged",
@@ -197,6 +194,7 @@
             },
             {
                 "id": "000000139:turbo-laser-destructor",
+                "datasheetId": "000000139",
                 "line": 4,
                 "name": "Turbo-laser destructor",
                 "type": "Ranged",
@@ -228,6 +226,7 @@
             },
             {
                 "id": "000000139:twin-heavy-bolter",
+                "datasheetId": "000000139",
                 "line": 5,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -260,6 +259,7 @@
             },
             {
                 "id": "000000139:armoured-hull",
+                "datasheetId": "000000139",
                 "line": 6,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -288,7 +288,67 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000139",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor."
+                },
+                {
+                    "datasheetId": "000000139",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000139:thunderhawk-cluster-bombs",
+                "name": "Thunderhawk Cluster Bombs",
+                "description": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000139:lascannon",
+                        "000000139:thunderhawk-heavy-cannon",
+                        "000000139:twin-heavy-bolter",
+                        "000000139:armoured-hull",
+                        "000000139:thunderhawk-cluster-bombs"
+                    ],
+                    [
+                        "000000139:lascannon",
+                        "000000139:thunderhawk-heavy-cannon",
+                        "000000139:twin-heavy-bolter",
+                        "000000139:armoured-hull",
+                        "000000139:hellstrike-missile-battery"
+                    ],
+                    [
+                        "000000139:lascannon",
+                        "000000139:twin-heavy-bolter",
+                        "000000139:armoured-hull",
+                        "000000139:thunderhawk-cluster-bombs",
+                        "000000139:turbo-laser-destructor"
+                    ],
+                    [
+                        "000000139:lascannon",
+                        "000000139:twin-heavy-bolter",
+                        "000000139:armoured-hull",
+                        "000000139:turbo-laser-destructor",
+                        "000000139:hellstrike-missile-battery"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -347,15 +407,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Thunderhawk Cluster Bombs",
-            "legend": "",
-            "description": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Aerial Assault",

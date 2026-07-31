@@ -62,34 +62,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> staff of light.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002351",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s staff of light can be replaced with 1 Lord’s blade."
-                    },
-                    {
-                        "datasheetId": "000002351",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 nanoscarab amulet</li><li>1 resurrection orb</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> staff of light.",
+            "parsed": [
+                "000002351:staff-of-light"
+            ],
+            "byModelType": {
+                "Lokhust Lord": [
+                    "000002351:staff-of-light"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002351:staff-of-light",
+                "datasheetId": "000002351",
                 "line": 1,
                 "name": "Staff of light",
                 "type": "Ranged",
@@ -119,6 +106,7 @@
             },
             {
                 "id": "000002351:lord-s-blade",
+                "datasheetId": "000002351",
                 "line": 2,
                 "name": "Lord’s blade",
                 "type": "Melee",
@@ -150,6 +138,7 @@
             },
             {
                 "id": "000002351:staff-of-light-2",
+                "datasheetId": "000002351",
                 "line": 3,
                 "name": "Staff of light",
                 "type": "Melee",
@@ -178,7 +167,84 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002351",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s staff of light can be replaced with 1 Lord’s blade."
+                },
+                {
+                    "datasheetId": "000002351",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 nanoscarab amulet</li><li>1 resurrection orb</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002351:nanoscarab-amulet",
+                "name": "Nanoscarab Amulet",
+                "description": "The bearer has the Feel No Pain 5+ ability.",
+                "mechanics": [
+                    {
+                        "name": "Nanoscarab Amulet",
+                        "entity": "thisUnit",
+                        "effect": "setsFnp",
+                        "attribute": "feelNoPain",
+                        "value": 5,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000002351:resurrection-orb",
+                "name": "Resurrection Orb",
+                "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002351:staff-of-light"
+                    ],
+                    [
+                        "000002351:staff-of-light",
+                        "000002351:nanoscarab-amulet"
+                    ],
+                    [
+                        "000002351:staff-of-light",
+                        "000002351:resurrection-orb"
+                    ],
+                    [
+                        "000002351:lord-s-blade"
+                    ],
+                    [
+                        "000002351:lord-s-blade",
+                        "000002351:nanoscarab-amulet"
+                    ],
+                    [
+                        "000002351:lord-s-blade",
+                        "000002351:resurrection-orb"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -234,32 +300,6 @@
             "type": "Faction"
         },
         {
-            "name": "Nanoscarab Amulet",
-            "legend": "",
-            "description": "The bearer has the Feel No Pain 5+ ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Nanoscarab Amulet",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Resurrection Orb",
-            "legend": "",
-            "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
             "name": "Destroyer Cult",
             "legend": "",
             "description": "While this model is leading a unit, each time a model in that unit makes a ranged attack, a successful unmodifed Hit roll of 5+ scores a Critical Hit.",
@@ -274,8 +314,23 @@
             "description": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, you can re-roll the Hit roll and you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Driven by Hatred",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true
+                },
+                {
+                    "name": "Driven by Hatred",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

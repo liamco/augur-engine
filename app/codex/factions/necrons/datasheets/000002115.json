@@ -58,21 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> doomsday blaster; twin gauss flayer; Doomstalker limbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> doomsday blaster; twin gauss flayer; Doomstalker limbs.",
+            "parsed": [
+                "000002115:doomsday-blaster",
+                "000002115:twin-gauss-flayer",
+                "000002115:doomstalker-limbs"
+            ],
+            "byModelType": {
+                "Canoptek Doomstalker": [
+                    "000002115:doomsday-blaster",
+                    "000002115:twin-gauss-flayer",
+                    "000002115:doomstalker-limbs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002115:doomsday-blaster",
+                "datasheetId": "000002115",
                 "line": 1,
                 "name": "Doomsday blaster",
                 "type": "Ranged",
@@ -105,6 +109,7 @@
             },
             {
                 "id": "000002115:twin-gauss-flayer",
+                "datasheetId": "000002115",
                 "line": 2,
                 "name": "Twin gauss flayer",
                 "type": "Ranged",
@@ -138,6 +143,7 @@
             },
             {
                 "id": "000002115:doomstalker-limbs",
+                "datasheetId": "000002115",
                 "line": 3,
                 "name": "Doomstalker limbs",
                 "type": "Melee",
@@ -166,7 +172,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002115:doomsday-blaster",
+                        "000002115:twin-gauss-flayer",
+                        "000002115:doomstalker-limbs"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -50,40 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> boltgun; bolt pistol; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000326",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of Long Fangs can each have their boltgun replaced with one of the following:<ul><li>1 grav-cannon</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000326",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Long Fang Pack Leader’s boltgun can be replace with one of the following<ul><li>1 flamer</li><li>1 grav-gun</li><li>1 meltagun</li><li>1 plasma gun</li><li>1 plasma pistol</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000326",
-                        "line": 3,
-                        "button": "•",
-                        "description": "The Long Fang Pack Leader’s close combat weapon can be replaced with one of the following:<ul><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> boltgun; bolt pistol; close combat weapon.",
+            "parsed": [
+                "000000326:boltgun",
+                "000000326:bolt-pistol",
+                "000000326:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000326:boltgun",
+                    "000000326:bolt-pistol",
+                    "000000326:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000326:bolt-pistol",
+                "datasheetId": "000000326",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -115,6 +100,7 @@
             },
             {
                 "id": "000000326:boltgun",
+                "datasheetId": "000000326",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -144,6 +130,7 @@
             },
             {
                 "id": "000000326:grav-cannon",
+                "datasheetId": "000000326",
                 "line": 3,
                 "name": "Grav-cannon",
                 "type": "Ranged",
@@ -176,6 +163,7 @@
             },
             {
                 "id": "000000326:grav-gun",
+                "datasheetId": "000000326",
                 "line": 4,
                 "name": "Grav-gun",
                 "type": "Ranged",
@@ -207,6 +195,7 @@
             },
             {
                 "id": "000000326:heavy-bolter",
+                "datasheetId": "000000326",
                 "line": 5,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -239,6 +228,7 @@
             },
             {
                 "id": "000000326:heavy-flamer",
+                "datasheetId": "000000326",
                 "line": 6,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -256,7 +246,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -271,6 +261,7 @@
             },
             {
                 "id": "000000326:lascannon",
+                "datasheetId": "000000326",
                 "line": 7,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -302,6 +293,7 @@
             },
             {
                 "id": "000000326:flamer",
+                "datasheetId": "000000326",
                 "line": 8,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -319,7 +311,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -333,9 +325,10 @@
                 "count": 1
             },
             {
-                "id": "000000326:missile-launcher-frag",
+                "id": "000000326:missile-launcher",
+                "datasheetId": "000000326",
                 "line": 9,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -343,7 +336,8 @@
                         "line": 9,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -355,27 +349,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000326:missile-launcher-krak",
-                "line": 10,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000326",
                         "line": 10,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -397,6 +378,7 @@
             },
             {
                 "id": "000000326:meltagun",
+                "datasheetId": "000000326",
                 "line": 11,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -428,6 +410,7 @@
             },
             {
                 "id": "000000326:multi-melta",
+                "datasheetId": "000000326",
                 "line": 12,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -459,9 +442,10 @@
                 "count": 1
             },
             {
-                "id": "000000326:plasma-cannon-standard",
+                "id": "000000326:plasma-cannon",
+                "datasheetId": "000000326",
                 "line": 13,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -469,7 +453,8 @@
                         "line": 13,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -481,27 +466,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000326:plasma-cannon-supercharge",
-                "line": 14,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000326",
                         "line": 14,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS",
@@ -524,9 +496,10 @@
                 "count": 1
             },
             {
-                "id": "000000326:plasma-gun-standard",
+                "id": "000000326:plasma-gun",
+                "datasheetId": "000000326",
                 "line": 15,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -534,7 +507,8 @@
                         "line": 15,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -545,27 +519,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000326:plasma-gun-supercharge",
-                "line": 15,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000326",
                         "line": 15,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -587,9 +548,10 @@
                 "count": 1
             },
             {
-                "id": "000000326:plasma-pistol-standard",
+                "id": "000000326:plasma-pistol",
+                "datasheetId": "000000326",
                 "line": 16,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -597,7 +559,8 @@
                         "line": 16,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -608,27 +571,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000326:plasma-pistol-supercharge",
-                "line": 16,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000326",
                         "line": 16,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -651,6 +601,7 @@
             },
             {
                 "id": "000000326:astartes-chainsword",
+                "datasheetId": "000000326",
                 "line": 17,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -673,13 +624,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Long Fang Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000326:close-combat-weapon",
+                "datasheetId": "000000326",
                 "line": 18,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -709,6 +664,7 @@
             },
             {
                 "id": "000000326:power-fist",
+                "datasheetId": "000000326",
                 "line": 19,
                 "name": "Power fist",
                 "type": "Melee",
@@ -731,13 +687,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Long Fang Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000326:power-weapon",
+                "datasheetId": "000000326",
                 "line": 20,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -760,13 +720,251 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Long Fang Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000326",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of Long Fangs can each have their boltgun replaced with one of the following:<ul><li>1 grav-cannon</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000000326",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Long Fang Pack Leader’s boltgun can be replace with one of the following<ul><li>1 flamer</li><li>1 grav-gun</li><li>1 meltagun</li><li>1 plasma gun</li><li>1 plasma pistol</li></ul>"
+                },
+                {
+                    "datasheetId": "000000326",
+                    "line": 3,
+                    "button": "•",
+                    "description": "The Long Fang Pack Leader’s close combat weapon can be replaced with one of the following:<ul><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Long Fang Pack Leader",
+                "items": [
+                    [
+                        "000000326:boltgun",
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon"
+                    ],
+                    [
+                        "000000326:boltgun",
+                        "000000326:bolt-pistol",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:boltgun",
+                        "000000326:bolt-pistol",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:boltgun",
+                        "000000326:bolt-pistol",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:grav-cannon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:grav-cannon",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:grav-cannon",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:grav-cannon",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:heavy-bolter"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:heavy-bolter",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:heavy-bolter",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:heavy-bolter",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:heavy-flamer"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:heavy-flamer",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:heavy-flamer",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:heavy-flamer",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:lascannon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:lascannon",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:lascannon",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:lascannon",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:missile-launcher"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:missile-launcher",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:missile-launcher",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:missile-launcher",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:multi-melta"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:multi-melta",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:multi-melta",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:multi-melta",
+                        "000000326:power-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:plasma-cannon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:plasma-cannon",
+                        "000000326:astartes-chainsword"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:plasma-cannon",
+                        "000000326:power-fist"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:plasma-cannon",
+                        "000000326:power-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Long Fang",
+                "items": [
+                    [
+                        "000000326:boltgun",
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:grav-cannon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:heavy-bolter"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:heavy-flamer"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:lascannon"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:missile-launcher"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:multi-melta"
+                    ],
+                    [
+                        "000000326:bolt-pistol",
+                        "000000326:close-combat-weapon",
+                        "000000326:plasma-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",

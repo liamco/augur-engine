@@ -45,21 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Genestealer claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Genestealer claws and talons.",
+            "parsed": [
+                "000000467:genestealer-claws-and-talons"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000467:genestealer-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000467:genestealer-claws-and-talons",
+                "datasheetId": "000000467",
                 "line": 1,
                 "name": "Genestealer claws and talons",
                 "type": "Melee",
@@ -88,7 +88,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000467:genestealer-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

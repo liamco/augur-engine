@@ -60,28 +60,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin assault cannon; twin heavy bolter; power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001423",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin assault cannon; twin heavy bolter; power weapon.",
+            "parsed": [
+                "000001423:twin-assault-cannon",
+                "000001423:twin-heavy-bolter",
+                "000001423:power-weapon"
+            ],
+            "byModelType": {
+                "Ravenwing Talonmaster": [
+                    "000001423:twin-assault-cannon",
+                    "000001423:twin-heavy-bolter",
+                    "000001423:power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001423:twin-assault-cannon",
+                "datasheetId": "000001423",
                 "line": 1,
                 "name": "Twin assault cannon",
                 "type": "Ranged",
@@ -114,6 +111,7 @@
             },
             {
                 "id": "000001423:twin-heavy-bolter",
+                "datasheetId": "000001423",
                 "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -146,6 +144,7 @@
             },
             {
                 "id": "000001423:power-weapon",
+                "datasheetId": "000001423",
                 "line": 3,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -174,7 +173,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001423",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001423:twin-assault-cannon",
+                        "000001423:twin-heavy-bolter",
+                        "000001423:power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

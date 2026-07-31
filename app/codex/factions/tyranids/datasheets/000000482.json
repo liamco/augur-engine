@@ -50,28 +50,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Ravener claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000482",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Ravener claws and talons.",
+            "parsed": [
+                "000000482:ravener-claws-and-talons"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000482:ravener-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000482:ravener-claws-and-talons",
+                "datasheetId": "000000482",
                 "line": 1,
                 "name": "Ravener claws and talons",
                 "type": "Melee",
@@ -102,7 +95,28 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000482",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000482:ravener-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

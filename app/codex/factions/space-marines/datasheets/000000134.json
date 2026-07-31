@@ -40,28 +40,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Servitor servo-arm.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000134",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Up to 2 models can each have their Servitor servo-arm replaced with one of the following:<ul><li>1 heavy bolter and 1 close combat weapon</li><li>1 multi-melta and 1 close combat weapon</li><li>1 plasma cannon and 1 close combat weapon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Servitor servo-arm.",
+            "parsed": [
+                "000000134:servitor-servo-arm"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000134:servitor-servo-arm"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000134:heavy-bolter",
+                "datasheetId": "000000134",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -87,13 +80,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000134:multi-melta",
+                "datasheetId": "000000134",
                 "line": 2,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -119,15 +117,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000134:plasma-cannon-standard",
+                "id": "000000134:plasma-cannon",
+                "datasheetId": "000000134",
                 "line": 3,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -135,7 +138,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -147,27 +151,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000134:plasma-cannon-supercharge",
-                "line": 4,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000134",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS",
@@ -184,13 +175,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000134:close-combat-weapon",
+                "datasheetId": "000000134",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -213,13 +209,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000134:servitor-servo-arm",
+                "datasheetId": "000000134",
                 "line": 6,
                 "name": "Servitor servo-arm",
                 "type": "Melee",
@@ -248,7 +249,28 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000134",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Up to 2 models can each have their Servitor servo-arm replaced with one of the following:<ul><li>1 heavy bolter and 1 close combat weapon</li><li>1 multi-melta and 1 close combat weapon</li><li>1 plasma cannon and 1 close combat weapon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000134:servitor-servo-arm"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

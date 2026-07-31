@@ -45,21 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> teeth and claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> teeth and claws.",
+            "parsed": [
+                "000000323:teeth-and-claws"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000323:teeth-and-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000323:teeth-and-claws",
+                "datasheetId": "000000323",
                 "line": 1,
                 "name": "Teeth and claws",
                 "type": "Melee",
@@ -88,7 +88,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000323:teeth-and-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

@@ -63,46 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 twin lascannons; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001608",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 multi-melta</li><li>1 twin heavy bolter</li><li>1 twin heavy flamer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001608",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000001608",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    },
-                    {
-                        "datasheetId": "000001608",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 explorator augury web."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 twin lascannons; armoured tracks.",
+            "parsed": [
+                "000001608:twin-lascannon",
+                "000001608:armoured-tracks"
+            ],
+            "byModelType": {
+                "Land Raider Proteu": [
+                    "000001608:twin-lascannon",
+                    "000001608:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001608:heavy-bolter",
+                "datasheetId": "000001608",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -134,6 +111,7 @@
             },
             {
                 "id": "000001608:hunter-killer-missile",
+                "datasheetId": "000001608",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -165,6 +143,7 @@
             },
             {
                 "id": "000001608:multi-melta",
+                "datasheetId": "000001608",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -196,6 +175,7 @@
             },
             {
                 "id": "000001608:storm-bolter",
+                "datasheetId": "000001608",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -227,6 +207,7 @@
             },
             {
                 "id": "000001608:twin-heavy-bolter",
+                "datasheetId": "000001608",
                 "line": 5,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -259,6 +240,7 @@
             },
             {
                 "id": "000001608:twin-heavy-flamer",
+                "datasheetId": "000001608",
                 "line": 6,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
@@ -277,7 +259,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -292,6 +274,7 @@
             },
             {
                 "id": "000001608:twin-lascannon",
+                "datasheetId": "000001608",
                 "line": 7,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -323,6 +306,7 @@
             },
             {
                 "id": "000001608:armoured-tracks",
+                "datasheetId": "000001608",
                 "line": 8,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -351,7 +335,303 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001608",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 multi-melta</li><li>1 twin heavy bolter</li><li>1 twin heavy flamer</li></ul>"
+                },
+                {
+                    "datasheetId": "000001608",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000001608",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                },
+                {
+                    "datasheetId": "000001608",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 explorator augury web."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000001608:explorator-augury-web",
+                "name": "Explorator Augury Web",
+                "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this bearer, but the bearer must halve its Transport Capacity.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:hunter-killer-missile"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:hunter-killer-missile",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:hunter-killer-missile"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:hunter-killer-missile",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:heavy-bolter",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:hunter-killer-missile"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:hunter-killer-missile",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:multi-melta",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:hunter-killer-missile"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:hunter-killer-missile",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-bolter",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:hunter-killer-missile"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:hunter-killer-missile",
+                        "000001608:explorator-augury-web"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter"
+                    ],
+                    [
+                        "000001608:twin-lascannon",
+                        "000001608:armoured-tracks",
+                        "000001608:twin-heavy-flamer",
+                        "000001608:hunter-killer-missile",
+                        "000001608:storm-bolter",
+                        "000001608:explorator-augury-web"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -405,15 +685,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Explorator Augury Web",
-            "legend": "",
-            "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this bearer, but the bearer must halve its Transport Capacity.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Assault Ramp",

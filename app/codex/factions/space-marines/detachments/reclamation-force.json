@@ -355,8 +355,39 @@
             "cost": 25,
             "legend": "Forged on Macragge by the finest artisans, this weapon’s machine spirit is said to burn with a desire to see the Five Hundred Worlds ripped from the grasp of heretics and despots.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Liberatum",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Liberatum",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

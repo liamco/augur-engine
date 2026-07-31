@@ -75,28 +75,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> master-crafted heavy bolt rifle; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001172",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s master-crafted heavy bolt rifle and master-crafted power weapon can be replaced with:<ul><li>1 boltstorm gauntlet, 1 power fist and 1 relic chainsword</li><li>1 boltstorm gauntlet, 1 power fist and 1 relic blade</li><li>1 boltstorm gauntlet, 1 power fist and 1 relic fist</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> master-crafted heavy bolt rifle; master-crafted power weapon.",
+            "parsed": [
+                "000001172:master-crafted-heavy-bolt-rifle",
+                "000001172:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Captain in Gravis Armour": [
+                    "000001172:master-crafted-heavy-bolt-rifle",
+                    "000001172:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001172:boltstorm-gauntlet",
+                "datasheetId": "000001172",
                 "line": 1,
                 "name": "Boltstorm gauntlet",
                 "type": "Ranged",
@@ -128,6 +123,7 @@
             },
             {
                 "id": "000001172:master-crafted-heavy-bolt-rifle",
+                "datasheetId": "000001172",
                 "line": 2,
                 "name": "Master-crafted heavy bolt rifle",
                 "type": "Ranged",
@@ -160,6 +156,7 @@
             },
             {
                 "id": "000001172:master-crafted-power-weapon",
+                "datasheetId": "000001172",
                 "line": 3,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -189,6 +186,7 @@
             },
             {
                 "id": "000001172:power-fist",
+                "datasheetId": "000001172",
                 "line": 4,
                 "name": "Power fist",
                 "type": "Melee",
@@ -218,6 +216,7 @@
             },
             {
                 "id": "000001172:relic-blade",
+                "datasheetId": "000001172",
                 "line": 5,
                 "name": "Relic blade",
                 "type": "Melee",
@@ -249,6 +248,7 @@
             },
             {
                 "id": "000001172:relic-chainsword",
+                "datasheetId": "000001172",
                 "line": 6,
                 "name": "Relic chainsword",
                 "type": "Melee",
@@ -280,6 +280,7 @@
             },
             {
                 "id": "000001172:relic-fist",
+                "datasheetId": "000001172",
                 "line": 7,
                 "name": "Relic fist",
                 "type": "Melee",
@@ -310,7 +311,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001172",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s master-crafted heavy bolt rifle and master-crafted power weapon can be replaced with:<ul><li>1 boltstorm gauntlet, 1 power fist and 1 relic chainsword</li><li>1 boltstorm gauntlet, 1 power fist and 1 relic blade</li><li>1 boltstorm gauntlet, 1 power fist and 1 relic fist</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001172:master-crafted-heavy-bolt-rifle",
+                        "000001172:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -380,8 +403,16 @@
             "description": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Refuse to Yield",
+                    "entity": "thisUnit",
+                    "effect": "halveDamage",
+                    "attribute": "damage",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

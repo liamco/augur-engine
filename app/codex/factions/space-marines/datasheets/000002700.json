@@ -65,40 +65,31 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 Astraeus las-rippers; ironhail heavy stubber; storm bolter; twin heavy bolter; twin macro-accelerator cannon; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002700",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 Astraeus las-rippers can be replaced with 2 plasma eradicators."
-                    },
-                    {
-                        "datasheetId": "000002700",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin lascannon."
-                    },
-                    {
-                        "datasheetId": "000002700",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 ironhail heavy stubber."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 Astraeus las-rippers; ironhail heavy stubber; storm bolter; twin heavy bolter; twin macro-accelerator cannon; armoured hull.",
+            "parsed": [
+                "000002700:astraeus-las-ripper",
+                "000002700:ironhail-heavy-stubber",
+                "000002700:storm-bolter",
+                "000002700:twin-heavy-bolter",
+                "000002700:twin-macro-accelerator-cannon",
+                "000002700:armoured-hull"
+            ],
+            "byModelType": {
+                "Astraeu": [
+                    "000002700:astraeus-las-ripper",
+                    "000002700:ironhail-heavy-stubber",
+                    "000002700:storm-bolter",
+                    "000002700:twin-heavy-bolter",
+                    "000002700:twin-macro-accelerator-cannon",
+                    "000002700:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002700:astraeus-las-ripper",
+                "datasheetId": "000002700",
                 "line": 1,
                 "name": "Astraeus las-ripper",
                 "type": "Ranged",
@@ -128,6 +119,7 @@
             },
             {
                 "id": "000002700:ironhail-heavy-stubber",
+                "datasheetId": "000002700",
                 "line": 2,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
@@ -158,9 +150,10 @@
                 "count": 1
             },
             {
-                "id": "000002700:plasma-eradicator-standard",
+                "id": "000002700:plasma-eradicator",
+                "datasheetId": "000002700",
                 "line": 3,
-                "name": "Plasma eradicator – standard",
+                "name": "Plasma eradicator",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -168,7 +161,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma eradicator – standard",
+                        "name": "Plasma eradicator - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -179,27 +173,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002700:plasma-eradicator-supercharge",
-                "line": 4,
-                "name": "Plasma eradicator – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002700",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma eradicator – supercharge",
+                        "name": "Plasma eradicator - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -222,6 +203,7 @@
             },
             {
                 "id": "000002700:storm-bolter",
+                "datasheetId": "000002700",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -253,6 +235,7 @@
             },
             {
                 "id": "000002700:twin-heavy-bolter",
+                "datasheetId": "000002700",
                 "line": 6,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -285,6 +268,7 @@
             },
             {
                 "id": "000002700:twin-lascannon",
+                "datasheetId": "000002700",
                 "line": 7,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -316,6 +300,7 @@
             },
             {
                 "id": "000002700:twin-macro-accelerator-cannon",
+                "datasheetId": "000002700",
                 "line": 8,
                 "name": "Twin macro-accelerator cannon",
                 "type": "Ranged",
@@ -348,6 +333,7 @@
             },
             {
                 "id": "000002700:armoured-hull",
+                "datasheetId": "000002700",
                 "line": 9,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -376,7 +362,69 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002700",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 Astraeus las-rippers can be replaced with 2 plasma eradicators."
+                },
+                {
+                    "datasheetId": "000002700",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin lascannon."
+                },
+                {
+                    "datasheetId": "000002700",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 ironhail heavy stubber."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002700:astraeus-las-ripper",
+                        "000002700:ironhail-heavy-stubber",
+                        "000002700:storm-bolter",
+                        "000002700:twin-heavy-bolter",
+                        "000002700:twin-macro-accelerator-cannon",
+                        "000002700:armoured-hull"
+                    ],
+                    [
+                        "000002700:astraeus-las-ripper",
+                        "000002700:ironhail-heavy-stubber",
+                        "000002700:storm-bolter",
+                        "000002700:twin-macro-accelerator-cannon",
+                        "000002700:armoured-hull",
+                        "000002700:twin-lascannon"
+                    ],
+                    [
+                        "000002700:ironhail-heavy-stubber",
+                        "000002700:storm-bolter",
+                        "000002700:twin-heavy-bolter",
+                        "000002700:twin-macro-accelerator-cannon",
+                        "000002700:armoured-hull",
+                        "000002700:plasma-eradicator"
+                    ],
+                    [
+                        "000002700:ironhail-heavy-stubber",
+                        "000002700:storm-bolter",
+                        "000002700:twin-macro-accelerator-cannon",
+                        "000002700:armoured-hull",
+                        "000002700:plasma-eradicator",
+                        "000002700:twin-lascannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -78,21 +78,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 artisan plasma pistol; 1 Talassarian tempest blade.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 artisan plasma pistol; 1 Talassarian tempest blade.",
+            "parsed": [
+                "000004184:artisan-plasma-pistol",
+                "000004184:talassarian-tempest-blade"
+            ],
+            "byModelType": {
+                "Cato Sicarius – EPIC HERO": [
+                    "000004184:artisan-plasma-pistol",
+                    "000004184:talassarian-tempest-blade"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004184:artisan-plasma-pistol",
+                "datasheetId": "000004184",
                 "line": 1,
                 "name": "Artisan plasma pistol",
                 "type": "Ranged",
@@ -123,9 +125,10 @@
                 "count": 1
             },
             {
-                "id": "000004184:talassarian-tempest-blade-strike",
+                "id": "000004184:talassarian-tempest-blade",
+                "datasheetId": "000004184",
                 "line": 2,
-                "name": "Talassarian tempest blade – strike",
+                "name": "Talassarian tempest blade",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -133,7 +136,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Talassarian tempest blade – strike",
+                        "name": "Talassarian tempest blade - strike",
+                        "profileName": "strike",
                         "attributes": [
                             "DEVASTATING WOUNDS"
                         ],
@@ -144,27 +148,14 @@
                         "s": 6,
                         "ap": -3,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004184:talassarian-tempest-blade-sweep",
-                "line": 3,
-                "name": "Talassarian tempest blade – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004184",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Talassarian tempest blade – sweep",
+                        "name": "Talassarian tempest blade - sweep",
+                        "profileName": "sweep",
                         "attributes": [
                             "SUSTAINED HITS 1"
                         ],
@@ -175,27 +166,14 @@
                         "s": 5,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004184:talassarian-tempest-blade-coup-de-grace",
-                "line": 4,
-                "name": "Talassarian tempest blade – coup de grace",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004184",
                         "line": 4,
                         "lineInWargear": 3,
                         "dice": "",
-                        "name": "Talassarian tempest blade – coup de grace",
+                        "name": "Talassarian tempest blade - coup de grace",
+                        "profileName": "coup de grace",
                         "attributes": [
                             "PRECISION"
                         ],
@@ -216,7 +194,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004184:artisan-plasma-pistol",
+                        "000004184:talassarian-tempest-blade"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -60,40 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Each model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002776",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Assault Intercessor with Jump Pack’s heavy bolt pistol can be replaced with 1 plasma pistol."
-                    },
-                    {
-                        "datasheetId": "000002776",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Assault Intercessor Sergeant with Jump Pack’s Astartes chainsword can be replaced with one of the following: <br><ul><li>1 power weapon </li><li>1 power fist </li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002776",
-                        "line": 3,
-                        "button": "•",
-                        "description": "The Assault Intercessor Sergeant with Jump Pack’s heavy bolt pistol can be replaced with one of the following: <br><ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Each model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000002776:heavy-bolt-pistol",
+                "000002776:astartes-chainsword"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002776:heavy-bolt-pistol",
+                    "000002776:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002776:hand-flamer",
+                "datasheetId": "000002776",
                 "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -112,7 +95,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -120,13 +103,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002776:heavy-bolt-pistol",
+                "datasheetId": "000002776",
                 "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -158,6 +145,7 @@
             },
             {
                 "id": "000002776:plasma-pistol",
+                "datasheetId": "000002776",
                 "line": 3,
                 "name": "Plasma pistol",
                 "type": "Ranged",
@@ -202,13 +190,25 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Assault Intercessor with Jump Pack"
+                        ]
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002776:astartes-chainsword",
+                "datasheetId": "000002776",
                 "line": 4,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -238,6 +238,7 @@
             },
             {
                 "id": "000002776:power-weapon",
+                "datasheetId": "000002776",
                 "line": 5,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -260,13 +261,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002776:power-fist",
+                "datasheetId": "000002776",
                 "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
@@ -289,13 +294,95 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002776",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Assault Intercessor with Jump Pack’s heavy bolt pistol can be replaced with 1 plasma pistol."
+                },
+                {
+                    "datasheetId": "000002776",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Assault Intercessor Sergeant with Jump Pack’s Astartes chainsword can be replaced with one of the following: <br><ul><li>1 power weapon </li><li>1 power fist </li></ul>"
+                },
+                {
+                    "datasheetId": "000002776",
+                    "line": 3,
+                    "button": "•",
+                    "description": "The Assault Intercessor Sergeant with Jump Pack’s heavy bolt pistol can be replaced with one of the following: <br><ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Assault Intercessor Sergeant with Jump Pack",
+                "items": [
+                    [
+                        "000002776:heavy-bolt-pistol",
+                        "000002776:astartes-chainsword"
+                    ],
+                    [
+                        "000002776:astartes-chainsword",
+                        "000002776:hand-flamer"
+                    ],
+                    [
+                        "000002776:astartes-chainsword",
+                        "000002776:plasma-pistol"
+                    ],
+                    [
+                        "000002776:heavy-bolt-pistol",
+                        "000002776:power-weapon"
+                    ],
+                    [
+                        "000002776:power-weapon",
+                        "000002776:hand-flamer"
+                    ],
+                    [
+                        "000002776:power-weapon",
+                        "000002776:plasma-pistol"
+                    ],
+                    [
+                        "000002776:heavy-bolt-pistol",
+                        "000002776:power-fist"
+                    ],
+                    [
+                        "000002776:power-fist",
+                        "000002776:hand-flamer"
+                    ],
+                    [
+                        "000002776:power-fist",
+                        "000002776:plasma-pistol"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Assault Intercessors with Jump Pack",
+                "items": [
+                    [
+                        "000002776:heavy-bolt-pistol",
+                        "000002776:astartes-chainsword"
+                    ],
+                    [
+                        "000002776:astartes-chainsword",
+                        "000002776:plasma-pistol"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

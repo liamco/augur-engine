@@ -58,40 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolter; Venator neutron laser; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000092",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000092",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000000092",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolter; Venator neutron laser; armoured tracks.",
+            "parsed": [
+                "000000092:heavy-bolter",
+                "000000092:venator-neutron-laser",
+                "000000092:armoured-tracks"
+            ],
+            "byModelType": {
+                "Sicaran Venator": [
+                    "000000092:heavy-bolter",
+                    "000000092:venator-neutron-laser",
+                    "000000092:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000092:heavy-bolter",
+                "datasheetId": "000000092",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -123,6 +108,7 @@
             },
             {
                 "id": "000000092:hunter-killer-missile",
+                "datasheetId": "000000092",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -154,6 +140,7 @@
             },
             {
                 "id": "000000092:lascannon",
+                "datasheetId": "000000092",
                 "line": 3,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -183,6 +170,7 @@
             },
             {
                 "id": "000000092:storm-bolter",
+                "datasheetId": "000000092",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -214,6 +202,7 @@
             },
             {
                 "id": "000000092:venator-neutron-laser",
+                "datasheetId": "000000092",
                 "line": 5,
                 "name": "Venator neutron laser",
                 "type": "Ranged",
@@ -245,6 +234,7 @@
             },
             {
                 "id": "000000092:armoured-tracks",
+                "datasheetId": "000000092",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -273,7 +263,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000092",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000000092",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000000092",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:storm-bolter"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:hunter-killer-missile"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:hunter-killer-missile",
+                        "000000092:storm-bolter"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:lascannon"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:lascannon",
+                        "000000092:storm-bolter"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:lascannon",
+                        "000000092:hunter-killer-missile"
+                    ],
+                    [
+                        "000000092:heavy-bolter",
+                        "000000092:venator-neutron-laser",
+                        "000000092:armoured-tracks",
+                        "000000092:lascannon",
+                        "000000092:hunter-killer-missile",
+                        "000000092:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -55,28 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolt rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001177",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Heavy Intercessor’s heavy bolt rifle can be replaced with 1 heavy bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolt rifle; close combat weapon.",
+            "parsed": [
+                "000001177:bolt-pistol",
+                "000001177:heavy-bolt-rifle",
+                "000001177:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001177:bolt-pistol",
+                    "000001177:heavy-bolt-rifle",
+                    "000001177:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001177:bolt-pistol",
+                "datasheetId": "000001177",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -108,6 +105,7 @@
             },
             {
                 "id": "000001177:heavy-bolt-rifle",
+                "datasheetId": "000001177",
                 "line": 2,
                 "name": "Heavy bolt rifle",
                 "type": "Ranged",
@@ -140,6 +138,7 @@
             },
             {
                 "id": "000001177:heavy-bolter",
+                "datasheetId": "000001177",
                 "line": 3,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -166,13 +165,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Heavy Intercessor"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001177:close-combat-weapon",
+                "datasheetId": "000001177",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -201,7 +206,45 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001177",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Heavy Intercessor’s heavy bolt rifle can be replaced with 1 heavy bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Heavy Intercessor Sergeant",
+                "items": [
+                    [
+                        "000001177:bolt-pistol",
+                        "000001177:heavy-bolt-rifle",
+                        "000001177:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Heavy Intercessor",
+                "items": [
+                    [
+                        "000001177:bolt-pistol",
+                        "000001177:heavy-bolt-rifle",
+                        "000001177:close-combat-weapon"
+                    ],
+                    [
+                        "000001177:bolt-pistol",
+                        "000001177:close-combat-weapon",
+                        "000001177:heavy-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

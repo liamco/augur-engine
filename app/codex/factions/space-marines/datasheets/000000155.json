@@ -70,23 +70,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> plasma pistol; Fury of the Ancients; Vitarus.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> plasma pistol; Fury of the Ancients; Vitarus.",
+            "parsed": [
+                "000000155:plasma-pistol",
+                "000000155:fury-of-the-ancients",
+                "000000155:vitarus"
+            ],
+            "byModelType": {
+                "Chief Librarian Mephiston – EPIC HERO": [
+                    "000000155:plasma-pistol",
+                    "000000155:fury-of-the-ancients",
+                    "000000155:vitarus"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000155:fury-of-the-ancients-witchfire",
+                "id": "000000155:fury-of-the-ancients",
+                "datasheetId": "000000155",
                 "line": 1,
-                "name": "Fury of the Ancients – witchfire",
+                "name": "Fury of the Ancients",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -94,7 +98,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Fury of the Ancients – witchfire",
+                        "name": "Fury of the Ancients - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "PISTOL",
                             "PSYCHIC",
@@ -107,27 +112,14 @@
                         "s": 4,
                         "ap": -1,
                         "d": "D3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000155:fury-of-the-ancients-focused-witchfire",
-                "line": 2,
-                "name": "Fury of the Ancients – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000155",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Fury of the Ancients – focused witchfire",
+                        "name": "Fury of the Ancients - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL",
@@ -151,9 +143,10 @@
                 "count": 1
             },
             {
-                "id": "000000155:plasma-pistol-standard",
+                "id": "000000155:plasma-pistol",
+                "datasheetId": "000000155",
                 "line": 3,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -161,7 +154,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -172,27 +166,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000155:plasma-pistol-supercharge",
-                "line": 4,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000155",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -215,6 +196,7 @@
             },
             {
                 "id": "000000155:vitarus",
+                "datasheetId": "000000155",
                 "line": 5,
                 "name": "Vitarus",
                 "type": "Melee",
@@ -246,7 +228,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000155:plasma-pistol",
+                        "000000155:fury-of-the-ancients",
+                        "000000155:vitarus"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

@@ -78,28 +78,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> hellstrike missile battery; 4 twin heavy bolters; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002724",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> hellstrike missile battery; 4 twin heavy bolters; armoured hull.",
+            "parsed": [
+                "000002724:hellstrike-missile-battery",
+                "000002724:twin-heavy-bolter",
+                "000002724:armoured-hull"
+            ],
+            "byModelType": {
+                "Thunderhawk Transporter": [
+                    "000002724:hellstrike-missile-battery",
+                    "000002724:twin-heavy-bolter",
+                    "000002724:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002724:hellstrike-missile-battery",
+                "datasheetId": "000002724",
                 "line": 1,
                 "name": "Hellstrike missile battery",
                 "type": "Ranged",
@@ -131,6 +128,7 @@
             },
             {
                 "id": "000002724:twin-heavy-bolter",
+                "datasheetId": "000002724",
                 "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -163,6 +161,7 @@
             },
             {
                 "id": "000002724:armoured-hull",
+                "datasheetId": "000002724",
                 "line": 3,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -191,7 +190,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002724",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002724:hellstrike-missile-battery",
+                        "000002724:twin-heavy-bolter",
+                        "000002724:armoured-hull"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

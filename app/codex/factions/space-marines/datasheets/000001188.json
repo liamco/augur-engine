@@ -58,34 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> demolisher cannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001188",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000001188",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> demolisher cannon; armoured tracks.",
+            "parsed": [
+                "000001188:demolisher-cannon",
+                "000001188:armoured-tracks"
+            ],
+            "byModelType": {
+                "Vindicator": [
+                    "000001188:demolisher-cannon",
+                    "000001188:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001188:demolisher-cannon",
+                "datasheetId": "000001188",
                 "line": 1,
                 "name": "Demolisher cannon",
                 "type": "Ranged",
@@ -117,6 +106,7 @@
             },
             {
                 "id": "000001188:hunter-killer-missile",
+                "datasheetId": "000001188",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -148,6 +138,7 @@
             },
             {
                 "id": "000001188:storm-bolter",
+                "datasheetId": "000001188",
                 "line": 3,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -179,6 +170,7 @@
             },
             {
                 "id": "000001188:armoured-tracks",
+                "datasheetId": "000001188",
                 "line": 4,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -207,7 +199,51 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001188",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000001188",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001188:demolisher-cannon",
+                        "000001188:armoured-tracks"
+                    ],
+                    [
+                        "000001188:demolisher-cannon",
+                        "000001188:armoured-tracks",
+                        "000001188:storm-bolter"
+                    ],
+                    [
+                        "000001188:demolisher-cannon",
+                        "000001188:armoured-tracks",
+                        "000001188:hunter-killer-missile"
+                    ],
+                    [
+                        "000001188:demolisher-cannon",
+                        "000001188:armoured-tracks",
+                        "000001188:hunter-killer-missile",
+                        "000001188:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

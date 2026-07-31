@@ -91,34 +91,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; power fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002677",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s power fist can be replaced with one of the following:<ul><li>1 chainfist</li><li>1 close combat weapon</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002677",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s storm bolter and power fist can be replaced with one of the following:<ul><li>1 twin lightning claws</li><li>1 thunder hammer and 1 Terminator storm shield</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; power fist.",
+            "parsed": [
+                "000002677:storm-bolter",
+                "000002677:power-fist"
+            ],
+            "byModelType": {
+                "Ancient in Terminator Armour": [
+                    "000002677:storm-bolter",
+                    "000002677:power-fist"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002677:storm-bolter",
+                "datasheetId": "000002677",
                 "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -150,6 +139,7 @@
             },
             {
                 "id": "000002677:chainfist",
+                "datasheetId": "000002677",
                 "line": 2,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -181,6 +171,7 @@
             },
             {
                 "id": "000002677:close-combat-weapon",
+                "datasheetId": "000002677",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -210,6 +201,7 @@
             },
             {
                 "id": "000002677:power-fist",
+                "datasheetId": "000002677",
                 "line": 4,
                 "name": "Power fist",
                 "type": "Melee",
@@ -239,6 +231,7 @@
             },
             {
                 "id": "000002677:power-weapon",
+                "datasheetId": "000002677",
                 "line": 5,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -268,6 +261,7 @@
             },
             {
                 "id": "000002677:thunder-hammer",
+                "datasheetId": "000002677",
                 "line": 6,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -299,6 +293,7 @@
             },
             {
                 "id": "000002677:twin-lightning-claws",
+                "datasheetId": "000002677",
                 "line": 7,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -329,7 +324,66 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002677",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s power fist can be replaced with one of the following:<ul><li>1 chainfist</li><li>1 close combat weapon</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000002677",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s storm bolter and power fist can be replaced with one of the following:<ul><li>1 twin lightning claws</li><li>1 thunder hammer and 1 Terminator storm shield</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002677:terminator-storm-shield",
+                "name": "Terminator Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002677:storm-bolter",
+                        "000002677:power-fist"
+                    ],
+                    [
+                        "000002677:twin-lightning-claws"
+                    ],
+                    [
+                        "000002677:thunder-hammer",
+                        "000002677:terminator-storm-shield"
+                    ],
+                    [
+                        "000002677:storm-bolter",
+                        "000002677:chainfist"
+                    ],
+                    [
+                        "000002677:storm-bolter",
+                        "000002677:close-combat-weapon"
+                    ],
+                    [
+                        "000002677:storm-bolter",
+                        "000002677:power-weapon"
+                    ],
+                    [
+                        "000002677:storm-bolter",
+                        "000002677:thunder-hammer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -410,15 +464,6 @@
             "name": "Keep the Banner High",
             "legend": "",
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Terminator Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

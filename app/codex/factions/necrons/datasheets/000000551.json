@@ -45,40 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> automaton claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000551",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 2 particle beamers."
-                    },
-                    {
-                        "datasheetId": "000000551",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 1 fabricator claw array."
-                    },
-                    {
-                        "datasheetId": "000000551",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 1 gloom prism."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> automaton claws.",
+            "parsed": [
+                "000000551:automaton-claws"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000551:automaton-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000551:particle-beamer",
+                "datasheetId": "000000551",
                 "line": 1,
                 "name": "Particle beamer",
                 "type": "Ranged",
@@ -111,6 +92,7 @@
             },
             {
                 "id": "000000551:automaton-claws",
+                "datasheetId": "000000551",
                 "line": 2,
                 "name": "Automaton claws",
                 "type": "Melee",
@@ -139,7 +121,88 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000551",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 2 particle beamers."
+                },
+                {
+                    "datasheetId": "000000551",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 1 fabricator claw array."
+                },
+                {
+                    "datasheetId": "000000551",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 1 gloom prism."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000551:fabricator-claw-array-aura",
+                "name": "Fabricator Claw Array (Aura)",
+                "description": "While a friendly Necrons Vehicle unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            },
+            {
+                "id": "000000551:gloom-prism-aura",
+                "name": "Gloom Prism (Aura)",
+                "description": "While a friendly NECRONS unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000551:automaton-claws"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:gloom-prism-aura"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:fabricator-claw-array-aura"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:fabricator-claw-array-aura",
+                        "000000551:gloom-prism-aura"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:particle-beamer"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:particle-beamer",
+                        "000000551:gloom-prism-aura"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:particle-beamer",
+                        "000000551:fabricator-claw-array-aura"
+                    ],
+                    [
+                        "000000551:automaton-claws",
+                        "000000551:particle-beamer",
+                        "000000551:fabricator-claw-array-aura",
+                        "000000551:gloom-prism-aura"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -197,40 +260,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Fabricator Claw Array (Aura)",
-            "legend": "",
-            "description": "While a friendly Necrons Vehicle unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Fabricator Claw Array (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 6
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Gloom Prism (Aura)",
-            "legend": "",
-            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Gloom Prism (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Canoptek Swarm",

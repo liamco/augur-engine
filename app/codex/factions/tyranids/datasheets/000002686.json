@@ -40,21 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> barblauncher; chitinous claws and teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> barblauncher; chitinous claws and teeth.",
+            "parsed": [
+                "000002686:barblauncher",
+                "000002686:chitinous-claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002686:barblauncher",
+                    "000002686:chitinous-claws-and-teeth"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002686:barblauncher",
+                "datasheetId": "000002686",
                 "line": 1,
                 "name": "Barblauncher",
                 "type": "Ranged",
@@ -87,6 +89,7 @@
             },
             {
                 "id": "000002686:chitinous-claws-and-teeth",
+                "datasheetId": "000002686",
                 "line": 2,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
@@ -115,7 +118,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002686:barblauncher",
+                        "000002686:chitinous-claws-and-teeth"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

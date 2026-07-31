@@ -45,21 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> enmitic disintegrator pistols; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> enmitic disintegrator pistols; close combat weapon.",
+            "parsed": [
+                "000002355:enmitic-disintegrator-pistols",
+                "000002355:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002355:enmitic-disintegrator-pistols",
+                    "000002355:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002355:enmitic-disintegrator-pistols",
+                "datasheetId": "000002355",
                 "line": 1,
                 "name": "Enmitic disintegrator pistols",
                 "type": "Ranged",
@@ -92,6 +94,7 @@
             },
             {
                 "id": "000002355:close-combat-weapon",
+                "datasheetId": "000002355",
                 "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -120,7 +123,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002355:enmitic-disintegrator-pistols",
+                        "000002355:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

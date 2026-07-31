@@ -58,40 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Arcus multi-launcher; heavy bolter, armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001161",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001161",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000001161",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Arcus multi-launcher; heavy bolter, armoured tracks.",
+            "parsed": [
+                "000001161:arcus-multi-launcher",
+                "000001161:heavy-bolter",
+                "000001161:armoured-tracks"
+            ],
+            "byModelType": {
+                "Sicaran Arcu": [
+                    "000001161:arcus-multi-launcher",
+                    "000001161:heavy-bolter",
+                    "000001161:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001161:arcus-multi-launcher",
+                "datasheetId": "000001161",
                 "line": 1,
                 "name": "Arcus multi-launcher",
                 "type": "Ranged",
@@ -123,6 +108,7 @@
             },
             {
                 "id": "000001161:heavy-bolter",
+                "datasheetId": "000001161",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -154,6 +140,7 @@
             },
             {
                 "id": "000001161:hunter-killer-missile",
+                "datasheetId": "000001161",
                 "line": 3,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -185,6 +172,7 @@
             },
             {
                 "id": "000001161:lascannon",
+                "datasheetId": "000001161",
                 "line": 4,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -214,6 +202,7 @@
             },
             {
                 "id": "000001161:storm-bolter",
+                "datasheetId": "000001161",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -245,6 +234,7 @@
             },
             {
                 "id": "000001161:armoured-tracks",
+                "datasheetId": "000001161",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -273,7 +263,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001161",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000001161",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000001161",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:storm-bolter"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:hunter-killer-missile"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:hunter-killer-missile",
+                        "000001161:storm-bolter"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:lascannon"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:lascannon",
+                        "000001161:storm-bolter"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:lascannon",
+                        "000001161:hunter-killer-missile"
+                    ],
+                    [
+                        "000001161:arcus-multi-launcher",
+                        "000001161:heavy-bolter",
+                        "000001161:armoured-tracks",
+                        "000001161:lascannon",
+                        "000001161:hunter-killer-missile",
+                        "000001161:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

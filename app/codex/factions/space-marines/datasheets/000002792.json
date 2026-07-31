@@ -109,23 +109,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "* If this unit’s Chaplain Grimaldus model is ever destroyed, all of this unit’s remaining Cenobyte Servitor models are also destroyed. While embarking within a Transport and while embarked within a <span class=\"kwb\">TRANSPORT</span>, each Cenobyte Servitor model in this unit takes up the space of 0 models.<br><br><b>Chaplain Grimaldus is equipped with:</b> plasma pistol; artificer crozius. <br><br><b>Every Cenobyte Servitor is equipped with:</b> close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "* If this unit’s Chaplain Grimaldus model is ever destroyed, all of this unit’s remaining Cenobyte Servitor models are also destroyed. While embarking within a Transport and while embarked within a <span class=\"kwb\">TRANSPORT</span>, each Cenobyte Servitor model in this unit takes up the space of 0 models.<br><br><b>Chaplain Grimaldus is equipped with:</b> plasma pistol; artificer crozius. <br><br><b>Every Cenobyte Servitor is equipped with:</b> close combat weapon.",
+            "parsed": [
+                "000002792:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Cenobyte Servitor": [
+                    "000002792:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000002792:plasma-pistol-standard",
+                "id": "000002792:plasma-pistol",
+                "datasheetId": "000002792",
                 "line": 1,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -133,7 +133,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -144,27 +145,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002792:plasma-pistol-supercharge",
-                "line": 2,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002792",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -187,6 +175,7 @@
             },
             {
                 "id": "000002792:artificer-crozius",
+                "datasheetId": "000002792",
                 "line": 3,
                 "name": "Artificer crozius",
                 "type": "Melee",
@@ -216,6 +205,7 @@
             },
             {
                 "id": "000002792:close-combat-weapon",
+                "datasheetId": "000002792",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -244,7 +234,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002792:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",
@@ -335,8 +339,19 @@
             "description": "While this unit is leading a unit and contains a Chaplain Grimaldus model, each time a model in that unit makes a melee attack, you can re-roll the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Litanies of the Devout",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Temple Relics",

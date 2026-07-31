@@ -60,28 +60,25 @@
     "transport": "This model has a transport capacity of 6 models. It can only transport Scout Squad, Scout Sniper Squad and Sergeant Telion models.",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Cerberus launcher; heavy bolter; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000132",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Cerberus launcher; heavy bolter; close combat weapon.",
+            "parsed": [
+                "000000132:cerberus-launcher",
+                "000000132:heavy-bolter",
+                "000000132:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Land Speeder Storm": [
+                    "000000132:cerberus-launcher",
+                    "000000132:heavy-bolter",
+                    "000000132:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000132:cerberus-launcher",
+                "datasheetId": "000000132",
                 "line": 1,
                 "name": "Cerberus launcher",
                 "type": "Ranged",
@@ -113,6 +110,7 @@
             },
             {
                 "id": "000000132:heavy-bolter",
+                "datasheetId": "000000132",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -144,6 +142,7 @@
             },
             {
                 "id": "000000132:close-combat-weapon",
+                "datasheetId": "000000132",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -172,7 +171,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000132",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000132:cerberus-launcher",
+                        "000000132:heavy-bolter",
+                        "000000132:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

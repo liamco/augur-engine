@@ -58,46 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> plasma destroyer; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002268",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s plasma destroyer can be replaced with one of the following:<ul><li>1 conversion beam cannon</li><li>1 infernus cannon</li><li>1 magna-melta cannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002268",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 heavy flamers</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002268",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    },
-                    {
-                        "datasheetId": "000002268",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> plasma destroyer; armoured tracks.",
+            "parsed": [
+                "000002268:plasma-destroyer",
+                "000002268:armoured-tracks"
+            ],
+            "byModelType": {
+                "Deimos Predator": [
+                    "000002268:plasma-destroyer",
+                    "000002268:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002268:conversion-beam-cannon",
+                "datasheetId": "000002268",
                 "line": 1,
                 "name": "Conversion beam cannon",
                 "type": "Ranged",
@@ -130,6 +107,7 @@
             },
             {
                 "id": "000002268:heavy-bolter",
+                "datasheetId": "000002268",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -161,6 +139,7 @@
             },
             {
                 "id": "000002268:heavy-flamer",
+                "datasheetId": "000002268",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -178,7 +157,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -193,6 +172,7 @@
             },
             {
                 "id": "000002268:hunter-killer-missile",
+                "datasheetId": "000002268",
                 "line": 4,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -224,6 +204,7 @@
             },
             {
                 "id": "000002268:infernus-cannon",
+                "datasheetId": "000002268",
                 "line": 5,
                 "name": "Infernus cannon",
                 "type": "Ranged",
@@ -241,7 +222,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -256,6 +237,7 @@
             },
             {
                 "id": "000002268:lascannon",
+                "datasheetId": "000002268",
                 "line": 6,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -285,6 +267,7 @@
             },
             {
                 "id": "000002268:magna-melta-cannon",
+                "datasheetId": "000002268",
                 "line": 7,
                 "name": "Magna-melta cannon",
                 "type": "Ranged",
@@ -315,9 +298,10 @@
                 "count": 1
             },
             {
-                "id": "000002268:plasma-destroyer-standard",
+                "id": "000002268:plasma-destroyer",
+                "datasheetId": "000002268",
                 "line": 8,
-                "name": "Plasma destroyer – standard",
+                "name": "Plasma destroyer",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -325,7 +309,8 @@
                         "line": 8,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma destroyer – standard",
+                        "name": "Plasma destroyer - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -336,27 +321,14 @@
                         "s": 8,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002268:plasma-destroyer-supercharge",
-                "line": 9,
-                "name": "Plasma destroyer – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002268",
                         "line": 9,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma destroyer – supercharge",
+                        "name": "Plasma destroyer - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -379,6 +351,7 @@
             },
             {
                 "id": "000002268:storm-bolter",
+                "datasheetId": "000002268",
                 "line": 10,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -410,6 +383,7 @@
             },
             {
                 "id": "000002268:armoured-tracks",
+                "datasheetId": "000002268",
                 "line": 11,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -438,7 +412,411 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002268",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s plasma destroyer can be replaced with one of the following:<ul><li>1 conversion beam cannon</li><li>1 infernus cannon</li><li>1 magna-melta cannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000002268",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 heavy flamers</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000002268",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                },
+                {
+                    "datasheetId": "000002268",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-bolter"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-flamer"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-flamer",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:lascannon"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:lascannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:plasma-destroyer",
+                        "000002268:armoured-tracks",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-flamer"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:lascannon"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:lascannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:conversion-beam-cannon",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-flamer"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:lascannon"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:lascannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:infernus-cannon",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-bolter",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-flamer"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:heavy-flamer",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:lascannon"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:lascannon",
+                        "000002268:hunter-killer-missile"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter"
+                    ],
+                    [
+                        "000002268:armoured-tracks",
+                        "000002268:magna-melta-cannon",
+                        "000002268:lascannon",
+                        "000002268:storm-bolter",
+                        "000002268:hunter-killer-missile"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

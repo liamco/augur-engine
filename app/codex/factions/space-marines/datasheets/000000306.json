@@ -71,23 +71,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> helfrost pistol; tempest hammer and servo-arm.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> helfrost pistol; tempest hammer and servo-arm.",
+            "parsed": [
+                "000000306:helfrost-pistol",
+                "000000306:tempest-hammer-and-servo-arm"
+            ],
+            "byModelType": {
+                "Iron Priest": [
+                    "000000306:helfrost-pistol",
+                    "000000306:tempest-hammer-and-servo-arm"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000306:helfrost-pistol-dispersed",
+                "id": "000000306:helfrost-pistol",
+                "datasheetId": "000000306",
                 "line": 1,
-                "name": "Helfrost pistol – dispersed",
+                "name": "Helfrost pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -95,7 +97,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Helfrost pistol – dispersed",
+                        "name": "Helfrost pistol - dispersed",
+                        "profileName": "dispersed",
                         "attributes": [
                             "PISTOL",
                             "TORRENT"
@@ -103,31 +106,18 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": -1,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000306:helfrost-pistol-focused",
-                "line": 2,
-                "name": "Helfrost pistol – focused",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000306",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Helfrost pistol – focused",
+                        "name": "Helfrost pistol - focused",
+                        "profileName": "focused",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -149,6 +139,7 @@
             },
             {
                 "id": "000000306:tempest-hammer-and-servo-arm",
+                "datasheetId": "000000306",
                 "line": 3,
                 "name": "Tempest hammer and servo-arm",
                 "type": "Melee",
@@ -177,7 +168,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000306:helfrost-pistol",
+                        "000000306:tempest-hammer-and-servo-arm"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -276,8 +282,16 @@
             "description": "Each time this model makes an attack that targets an enemy unit within Engagement Range of one or more friendly Adeptus Astartes Vehicle units, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Judgement of the Omnissiah",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

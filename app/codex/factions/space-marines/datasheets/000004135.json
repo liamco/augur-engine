@@ -81,34 +81,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; crozius arcanum.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004135",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s absolvor bolt pistol can be replaced with 1 pyre pistol."
-                    },
-                    {
-                        "datasheetId": "000004135",
-                        "line": 2,
-                        "button": "•",
-                        "description": "If this model is equipped with an absolvor bolt pistol, it can be equipped with 1 master-crafted power weapon (this model’s absolvor bolt pistol cannot be replaced)."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; crozius arcanum.",
+            "parsed": [
+                "000004135:absolvor-bolt-pistol",
+                "000004135:crozius-arcanum"
+            ],
+            "byModelType": {
+                "Execrator": [
+                    "000004135:absolvor-bolt-pistol",
+                    "000004135:crozius-arcanum"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004135:absolvor-bolt-pistol",
+                "datasheetId": "000004135",
                 "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
@@ -140,6 +129,7 @@
             },
             {
                 "id": "000004135:pyre-pistol",
+                "datasheetId": "000004135",
                 "line": 2,
                 "name": "Pyre pistol",
                 "type": "Ranged",
@@ -158,7 +148,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -173,6 +163,7 @@
             },
             {
                 "id": "000004135:crozius-arcanum",
+                "datasheetId": "000004135",
                 "line": 3,
                 "name": "Crozius arcanum",
                 "type": "Melee",
@@ -202,6 +193,7 @@
             },
             {
                 "id": "000004135:master-crafted-power-weapon",
+                "datasheetId": "000004135",
                 "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -233,7 +225,44 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004135",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s absolvor bolt pistol can be replaced with 1 pyre pistol."
+                },
+                {
+                    "datasheetId": "000004135",
+                    "line": 2,
+                    "button": "•",
+                    "description": "If this model is equipped with an absolvor bolt pistol, it can be equipped with 1 master-crafted power weapon (this model’s absolvor bolt pistol cannot be replaced)."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004135:absolvor-bolt-pistol",
+                        "000004135:crozius-arcanum"
+                    ],
+                    [
+                        "000004135:absolvor-bolt-pistol",
+                        "000004135:crozius-arcanum",
+                        "000004135:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000004135:crozius-arcanum",
+                        "000004135:pyre-pistol"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

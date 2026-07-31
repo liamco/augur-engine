@@ -90,28 +90,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> disintegration combi-gun; disintegration pistol; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000148",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> disintegration combi-gun; disintegration pistol; close combat weapon.",
+            "parsed": [
+                "000000148:disintegration-combi-gun",
+                "000000148:disintegration-pistol",
+                "000000148:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Imperial Space Marine": [
+                    "000000148:disintegration-combi-gun",
+                    "000000148:disintegration-pistol",
+                    "000000148:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000148:disintegration-combi-gun",
+                "datasheetId": "000000148",
                 "line": 1,
                 "name": "Disintegration combi-gun",
                 "type": "Ranged",
@@ -145,6 +142,7 @@
             },
             {
                 "id": "000000148:disintegration-pistol",
+                "datasheetId": "000000148",
                 "line": 2,
                 "name": "Disintegration pistol",
                 "type": "Ranged",
@@ -178,6 +176,7 @@
             },
             {
                 "id": "000000148:close-combat-weapon",
+                "datasheetId": "000000148",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -206,7 +205,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000148",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000148:disintegration-combi-gun",
+                        "000000148:disintegration-pistol",
+                        "000000148:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -294,16 +316,8 @@
             "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Unbreakable Duty",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

@@ -1,5 +1,6 @@
 import type { Condition, Mechanic } from "@/app/types/Mechanic";
 import type { Pattern } from "./types";
+import { hasUnexpressedScope } from "../guards";
 
 /**
  * Grants of existing rules — the largest cleanly-parseable group in the corpus
@@ -61,6 +62,12 @@ export const feelNoPainGrant: Pattern = {
     extract(text, { abilityName }) {
         const match = text.match(/Feel\s+No\s+Pain\s+(\d)\+/i);
         if (!match) return null;
+
+        // Feel No Pain is often granted only against Psychic Attacks or mortal
+        // wounds, and the engine cannot tell what an attack's source is. Emitting
+        // it anyway grants the save against *everything* — a much larger buff than
+        // the rule allows, which is worse than leaving it for the skill.
+        if (hasUnexpressedScope(text)) return null;
 
         const conditions = leadingCondition(text);
         return [

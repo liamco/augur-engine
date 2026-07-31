@@ -45,21 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 atomiser beams; Reanimator’s claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 atomiser beams; Reanimator’s claws.",
+            "parsed": [
+                "000002112:atomiser-beam",
+                "000002112:reanimator-s-claws"
+            ],
+            "byModelType": {
+                "Canoptek Reanimator": [
+                    "000002112:atomiser-beam",
+                    "000002112:reanimator-s-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002112:atomiser-beam",
+                "datasheetId": "000002112",
                 "line": 1,
                 "name": "Atomiser beam",
                 "type": "Ranged",
@@ -89,6 +91,7 @@
             },
             {
                 "id": "000002112:reanimator-s-claws",
+                "datasheetId": "000002112",
                 "line": 2,
                 "name": "Reanimator’s claws",
                 "type": "Melee",
@@ -117,7 +120,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002112:atomiser-beam",
+                        "000002112:reanimator-s-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

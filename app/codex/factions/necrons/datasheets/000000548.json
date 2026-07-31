@@ -40,40 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> twin gauss blaster; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000548",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their twin gauss blaster replaced with one of the following:<ul><li>1 particle beamer</li><li>1 twin tesla carbine</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000548",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 1 shieldvanes."
-                    },
-                    {
-                        "datasheetId": "000000548",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with one of the following:<ul><li>1 nebuloscope</li><li>1 shadowloom</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> twin gauss blaster; close combat weapon.",
+            "parsed": [
+                "000000548:twin-gauss-blaster",
+                "000000548:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000548:twin-gauss-blaster",
+                    "000000548:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000548:particle-beamer",
+                "datasheetId": "000000548",
                 "line": 1,
                 "name": "Particle beamer",
                 "type": "Ranged",
@@ -106,6 +89,7 @@
             },
             {
                 "id": "000000548:twin-gauss-blaster",
+                "datasheetId": "000000548",
                 "line": 2,
                 "name": "Twin gauss blaster",
                 "type": "Ranged",
@@ -138,6 +122,7 @@
             },
             {
                 "id": "000000548:twin-tesla-carbine",
+                "datasheetId": "000000548",
                 "line": 3,
                 "name": "Twin tesla carbine",
                 "type": "Ranged",
@@ -171,6 +156,7 @@
             },
             {
                 "id": "000000548:close-combat-weapon",
+                "datasheetId": "000000548",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -199,7 +185,139 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000548",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their twin gauss blaster replaced with one of the following:<ul><li>1 particle beamer</li><li>1 twin tesla carbine</li></ul>"
+                },
+                {
+                    "datasheetId": "000000548",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 1 shieldvanes."
+                },
+                {
+                    "datasheetId": "000000548",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with one of the following:<ul><li>1 nebuloscope</li><li>1 shadowloom</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000548:nebuloscope",
+                "name": "Nebuloscope",
+                "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
+                "mechanics": [
+                    {
+                        "name": "Nebuloscope",
+                        "entity": "thisUnit",
+                        "effect": "addsWeaponAttribute",
+                        "weaponAttributes": [
+                            "IGNORES COVER"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nebuloscope",
+                        "entity": "thisUnit",
+                        "effect": "addsAbility",
+                        "abilities": [
+                            "IGNORES COVER"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000000548:shadowloom",
+                "name": "Shadowloom",
+                "description": "The bearer has the Stealth ability.",
+                "mechanics": [
+                    {
+                        "name": "Shadowloom",
+                        "entity": "thisUnit",
+                        "effect": "addsAbility",
+                        "abilities": [
+                            "STEALTH"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000000548:shieldvanes",
+                "name": "Shieldvanes",
+                "description": "The bearer has a 3+ Save characteristic and a Move characteristic of 8\".",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000548:twin-gauss-blaster",
+                        "000000548:close-combat-weapon"
+                    ],
+                    [
+                        "000000548:twin-gauss-blaster",
+                        "000000548:close-combat-weapon",
+                        "000000548:shieldvanes"
+                    ],
+                    [
+                        "000000548:close-combat-weapon",
+                        "000000548:particle-beamer"
+                    ],
+                    [
+                        "000000548:close-combat-weapon",
+                        "000000548:particle-beamer",
+                        "000000548:shieldvanes"
+                    ],
+                    [
+                        "000000548:close-combat-weapon",
+                        "000000548:twin-tesla-carbine"
+                    ],
+                    [
+                        "000000548:close-combat-weapon",
+                        "000000548:twin-tesla-carbine",
+                        "000000548:shieldvanes"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -257,62 +375,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Nebuloscope",
-            "legend": "",
-            "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Nebuloscope",
-                    "entity": "thisUnit",
-                    "effect": "addsWeaponAttribute",
-                    "weaponAttributes": [
-                        "IGNORES COVER"
-                    ],
-                    "value": true
-                },
-                {
-                    "name": "Nebuloscope",
-                    "entity": "thisUnit",
-                    "effect": "addsAbility",
-                    "abilities": [
-                        "IGNORES COVER"
-                    ],
-                    "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Shadowloom",
-            "legend": "",
-            "description": "The bearer has the Stealth ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Shadowloom",
-                    "entity": "thisUnit",
-                    "effect": "addsAbility",
-                    "abilities": [
-                        "STEALTH"
-                    ],
-                    "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Shieldvanes",
-            "legend": "",
-            "description": "The bearer has a 3+ Save characteristic and a Move characteristic of 8\".",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Evasion Engrams",

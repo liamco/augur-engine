@@ -50,28 +50,23 @@
     "transport": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator or Tacticus models (except for Tacticus Character models that begin the battle attached to a non-<span class=\"kwb\">TACTICUS</span> unit).",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin plasma gun; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000085",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin plasma gun; armoured tracks.",
+            "parsed": [
+                "000000085:twin-plasma-gun",
+                "000000085:armoured-tracks"
+            ],
+            "byModelType": {
+                "Rhino Primari": [
+                    "000000085:twin-plasma-gun",
+                    "000000085:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000085:hunter-killer-missile",
+                "datasheetId": "000000085",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -102,9 +97,10 @@
                 "count": 1
             },
             {
-                "id": "000000085:twin-plasma-gun-standard",
+                "id": "000000085:twin-plasma-gun",
+                "datasheetId": "000000085",
                 "line": 2,
-                "name": "Twin plasma gun – standard",
+                "name": "Twin plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -112,7 +108,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Twin plasma gun – standard",
+                        "name": "Twin plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1",
                             "TWIN-LINKED"
@@ -124,27 +121,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000085:twin-plasma-gun-supercharge",
-                "line": 3,
-                "name": "Twin plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000085",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Twin plasma gun – supercharge",
+                        "name": "Twin plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1",
@@ -168,6 +152,7 @@
             },
             {
                 "id": "000000085:armoured-tracks",
+                "datasheetId": "000000085",
                 "line": 4,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -196,7 +181,34 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000085",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000085:twin-plasma-gun",
+                        "000000085:armoured-tracks"
+                    ],
+                    [
+                        "000000085:twin-plasma-gun",
+                        "000000085:armoured-tracks",
+                        "000000085:hunter-killer-missile"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

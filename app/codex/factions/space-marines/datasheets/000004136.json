@@ -81,21 +81,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted power weapon.",
+            "parsed": [
+                "000004136:bolt-pistol",
+                "000004136:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Crusade Ancient": [
+                    "000004136:bolt-pistol",
+                    "000004136:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004136:bolt-pistol",
+                "datasheetId": "000004136",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -127,6 +129,7 @@
             },
             {
                 "id": "000004136:master-crafted-power-weapon",
+                "datasheetId": "000004136",
                 "line": 2,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -157,7 +160,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004136:bolt-pistol",
+                        "000004136:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

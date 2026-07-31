@@ -8,6 +8,33 @@ const makeContext = (bsWs: number): CombatContext =>
         weaponProfile: { bsWs },
     }) as unknown as CombatContext;
 
+describe("resolveHitRoll — weapons with no BS/WS", () => {
+    const makeSkillless = (bsWs: unknown): CombatContext =>
+        ({ weaponProfile: { bsWs } }) as unknown as CombatContext;
+
+    it('hits automatically when BS/WS is "N/A"', () => {
+        // Torrent and similar. targetRoll 0 is the existing auto-hit convention,
+        // shared with the autoSuccess branch.
+        const result = resolveHitRoll(makeSkillless("N/A"), new Map());
+        expect(result.targetRoll).toBe(0);
+        expect(result.modifiedValue).toBe(0);
+    });
+
+    it("does not let a modifier turn an auto-hit into a real roll", () => {
+        const modifiers: ResolvedModifiers = new Map();
+        modifiers.set("hit", { rollPenalty: 1, sources: [] });
+        expect(resolveHitRoll(makeSkillless("N/A"), modifiers).targetRoll).toBe(0);
+    });
+
+    it("hits automatically for any unparseable skill rather than rolling 0+", () => {
+        // Guards the old failure mode: bsWs null made Number(null) 0, which read
+        // as auto-hit by accident and displayed as "0+".
+        for (const bsWs of [null, undefined, "-", ""]) {
+            expect(resolveHitRoll(makeSkillless(bsWs), new Map()).targetRoll).toBe(0);
+        }
+    });
+});
+
 describe("resolveHitRoll", () => {
     it("returns the weapon's BS/WS as the hit target with no modifiers", () => {
         const modifiers: ResolvedModifiers = new Map();

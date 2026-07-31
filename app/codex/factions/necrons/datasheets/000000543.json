@@ -50,21 +50,23 @@
     "transport": "This model has a transport capacity of 10 Necron Warrior models and 1 Necrons Infantry Character model.",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 gauss flayer arrays; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 gauss flayer arrays; armoured bulk.",
+            "parsed": [
+                "000000543:gauss-flayer-array",
+                "000000543:armoured-bulk"
+            ],
+            "byModelType": {
+                "Ghost Ark": [
+                    "000000543:gauss-flayer-array",
+                    "000000543:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000543:gauss-flayer-array",
+                "datasheetId": "000000543",
                 "line": 1,
                 "name": "Gauss flayer array",
                 "type": "Ranged",
@@ -97,6 +99,7 @@
             },
             {
                 "id": "000000543:armoured-bulk",
+                "datasheetId": "000000543",
                 "line": 2,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -125,7 +128,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000543:gauss-flayer-array",
+                        "000000543:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

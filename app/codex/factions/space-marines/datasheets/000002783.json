@@ -60,76 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> boltgun; power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002783",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, up to 2 models can each have their boltgun and power weapon replaced with one of the following:<br><ul><li>1 boltgun, 1 Astartes shield and 1 close combat weapon</li><li>1 power weapon and 1 Astartes shield</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, up to 2 models can each have their boltgun and power weapon replaced with 1 Deathwatch thunder hammer."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model can have its boltgun and power weapon replaced with 1 stalker-pattern boltgun and 1 close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, up to 2 models can each have their boltgun and power weapon replaced with 1 Deathwatch shotgun and 1 close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 5,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model can have its boltgun and power weapon replaced with 1 frag cannon and 1 close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 6,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model can have its boltgun and power weapon replaced with 1 infernus heavy bolter and 1 close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 7,
-                        "button": "•",
-                        "description": "1 model’s boltgun and power weapon can be replaced with 1 Black Shield blades."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 8,
-                        "button": "•",
-                        "description": "The Watch Sergeant’s power weapon can be replaced with 1 xenophase blade."
-                    },
-                    {
-                        "datasheetId": "000002783",
-                        "line": 9,
-                        "button": "•",
-                        "description": "The Watch Sergeant’s boltgun can be replaced with 1 combi-weapon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> boltgun; power weapon.",
+            "parsed": [
+                "000002783:boltgun",
+                "000002783:power-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002783:boltgun",
+                    "000002783:power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002783:boltgun",
+                "datasheetId": "000002783",
                 "line": 1,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -159,6 +106,7 @@
             },
             {
                 "id": "000002783:combi-weapon",
+                "datasheetId": "000002783",
                 "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -185,13 +133,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Watch Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:deathwatch-shotgun",
+                "datasheetId": "000002783",
                 "line": 3,
                 "name": "Deathwatch shotgun",
                 "type": "Ranged",
@@ -216,13 +168,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 2,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:frag-cannon",
+                "datasheetId": "000002783",
                 "line": 4,
                 "name": "Frag cannon",
                 "type": "Ranged",
@@ -249,15 +207,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000002783:infernus-heavy-bolter-heavy-bolter",
+                "id": "000002783:infernus-heavy-bolter",
+                "datasheetId": "000002783",
                 "line": 5,
-                "name": "Infernus heavy bolter – heavy bolter",
+                "name": "Infernus heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -265,7 +226,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Infernus heavy bolter – heavy bolter",
+                        "name": "Infernus heavy bolter - heavy bolter",
+                        "profileName": "heavy bolter",
                         "attributes": [
                             "HEAVY",
                             "SUSTAINED HITS 1"
@@ -277,27 +239,14 @@
                         "s": 5,
                         "ap": -1,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002783:infernus-heavy-bolter-heavy-flamer",
-                "line": 6,
-                "name": "Infernus heavy bolter – heavy flamer",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002783",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Infernus heavy bolter – heavy flamer",
+                        "name": "Infernus heavy bolter - heavy flamer",
+                        "profileName": "heavy flamer",
                         "attributes": [
                             "IGNORES COVER",
                             "TORRENT"
@@ -305,7 +254,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -313,13 +262,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:stalker-pattern-boltgun",
+                "datasheetId": "000002783",
                 "line": 7,
                 "name": "Stalker-pattern boltgun",
                 "type": "Ranged",
@@ -345,13 +297,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:black-shield-blades",
+                "datasheetId": "000002783",
                 "line": 8,
                 "name": "Black Shield blades",
                 "type": "Melee",
@@ -376,13 +331,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:close-combat-weapon",
+                "datasheetId": "000002783",
                 "line": 9,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -405,13 +365,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:deathwatch-thunder-hammer",
+                "datasheetId": "000002783",
                 "line": 10,
                 "name": "Deathwatch thunder hammer",
                 "type": "Melee",
@@ -436,13 +399,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 2,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002783:power-weapon",
+                "datasheetId": "000002783",
                 "line": 11,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -472,6 +441,7 @@
             },
             {
                 "id": "000002783:xenophase-blade",
+                "datasheetId": "000002783",
                 "line": 12,
                 "name": "Xenophase blade",
                 "type": "Melee",
@@ -496,13 +466,155 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Watch Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002783",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, up to 2 models can each have their boltgun and power weapon replaced with one of the following:<br><ul><li>1 boltgun, 1 Astartes shield and 1 close combat weapon</li><li>1 power weapon and 1 Astartes shield</li></ul>"
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, up to 2 models can each have their boltgun and power weapon replaced with 1 Deathwatch thunder hammer."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model can have its boltgun and power weapon replaced with 1 stalker-pattern boltgun and 1 close combat weapon."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, up to 2 models can each have their boltgun and power weapon replaced with 1 Deathwatch shotgun and 1 close combat weapon."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 5,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model can have its boltgun and power weapon replaced with 1 frag cannon and 1 close combat weapon."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 6,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model can have its boltgun and power weapon replaced with 1 infernus heavy bolter and 1 close combat weapon."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 7,
+                    "button": "•",
+                    "description": "1 model’s boltgun and power weapon can be replaced with 1 Black Shield blades."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 8,
+                    "button": "•",
+                    "description": "The Watch Sergeant’s power weapon can be replaced with 1 xenophase blade."
+                },
+                {
+                    "datasheetId": "000002783",
+                    "line": 9,
+                    "button": "•",
+                    "description": "The Watch Sergeant’s boltgun can be replaced with 1 combi-weapon."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002783:astartes-shield",
+                "name": "Astartes Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Astartes Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Watch Sergeant",
+                "items": [
+                    [
+                        "000002783:boltgun",
+                        "000002783:power-weapon"
+                    ],
+                    [
+                        "000002783:power-weapon",
+                        "000002783:combi-weapon"
+                    ],
+                    [
+                        "000002783:boltgun",
+                        "000002783:xenophase-blade"
+                    ],
+                    [
+                        "000002783:xenophase-blade",
+                        "000002783:combi-weapon"
+                    ],
+                    [
+                        "000002783:infernus-heavy-bolter",
+                        "000002783:close-combat-weapon"
+                    ],
+                    [
+                        "000002783:frag-cannon",
+                        "000002783:close-combat-weapon"
+                    ],
+                    [
+                        "000002783:stalker-pattern-boltgun",
+                        "000002783:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwatch Veteran",
+                "items": [
+                    [
+                        "000002783:boltgun",
+                        "000002783:power-weapon"
+                    ],
+                    [
+                        "000002783:infernus-heavy-bolter",
+                        "000002783:close-combat-weapon"
+                    ],
+                    [
+                        "000002783:frag-cannon",
+                        "000002783:close-combat-weapon"
+                    ],
+                    [
+                        "000002783:stalker-pattern-boltgun",
+                        "000002783:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",
@@ -580,23 +692,6 @@
                     "effect": "reroll",
                     "attribute": "hit",
                     "value": 1
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Astartes Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Astartes Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
                 }
             ],
             "mechanicsSource": "regex"

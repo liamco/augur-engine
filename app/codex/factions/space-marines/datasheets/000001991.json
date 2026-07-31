@@ -63,28 +63,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Terrax melta cutter; 2 combi-bolters; Termite drill.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001991",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 combi-bolters can be replaced with one of the following<ul><li>2 heavy flamers</li><li>2 twin volkite chargers</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Terrax melta cutter; 2 combi-bolters; Termite drill.",
+            "parsed": [
+                "000001991:terrax-melta-cutter",
+                "000001991:combi-bolter",
+                "000001991:termite-drill"
+            ],
+            "byModelType": {
+                "Terrax-pattern Termite": [
+                    "000001991:terrax-melta-cutter",
+                    "000001991:combi-bolter",
+                    "000001991:termite-drill"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001991:combi-bolter",
+                "datasheetId": "000001991",
                 "line": 1,
                 "name": "Combi-bolter",
                 "type": "Ranged",
@@ -116,6 +113,7 @@
             },
             {
                 "id": "000001991:heavy-flamer",
+                "datasheetId": "000001991",
                 "line": 2,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -133,7 +131,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -148,6 +146,7 @@
             },
             {
                 "id": "000001991:terrax-melta-cutter",
+                "datasheetId": "000001991",
                 "line": 3,
                 "name": "Terrax melta cutter",
                 "type": "Ranged",
@@ -179,6 +178,7 @@
             },
             {
                 "id": "000001991:twin-volkite-charger",
+                "datasheetId": "000001991",
                 "line": 4,
                 "name": "Twin volkite charger",
                 "type": "Ranged",
@@ -211,6 +211,7 @@
             },
             {
                 "id": "000001991:termite-drill",
+                "datasheetId": "000001991",
                 "line": 5,
                 "name": "Termite drill",
                 "type": "Melee",
@@ -241,7 +242,40 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001991",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 combi-bolters can be replaced with one of the following<ul><li>2 heavy flamers</li><li>2 twin volkite chargers</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001991:terrax-melta-cutter",
+                        "000001991:combi-bolter",
+                        "000001991:termite-drill"
+                    ],
+                    [
+                        "000001991:terrax-melta-cutter",
+                        "000001991:termite-drill",
+                        "000001991:heavy-flamer"
+                    ],
+                    [
+                        "000001991:terrax-melta-cutter",
+                        "000001991:termite-drill",
+                        "000001991:twin-volkite-charger"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

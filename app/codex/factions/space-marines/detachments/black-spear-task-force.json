@@ -487,8 +487,24 @@
             "cost": 30,
             "legend": "This grimoire, bound in the skin of the alien, holds the most powerful truths the Deathwatch have uncovered about their foes, whether xenos or those who harbour them. On occasion, such knowledge has been known to save not only the book’s custodian, but entire worlds.",
             "description": "Watch Master or Captain model only. Once per battle, after you have selected your Oath of Moment target, the bearer can use this Enhancement. If it does, select a second enemy unit to be an Oath of Moment target.<br><br><b>Designer’s Note:</b> This means that each time a model with the Oath of Moment ability makes an attack that targets either of your Oath of Moment targets, you can re-roll the Hit roll.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "The Tome of Ectoclades",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000073",

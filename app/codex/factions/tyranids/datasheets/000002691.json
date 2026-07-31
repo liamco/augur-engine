@@ -45,21 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Tyranid Warrior claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Tyranid Warrior claws and talons.",
+            "parsed": [
+                "000002691:tyranid-warrior-claws-and-talons"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002691:tyranid-warrior-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002691:tyranid-warrior-claws-and-talons",
+                "datasheetId": "000002691",
                 "line": 1,
                 "name": "Tyranid Warrior claws and talons",
                 "type": "Melee",
@@ -90,7 +90,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002691:tyranid-warrior-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

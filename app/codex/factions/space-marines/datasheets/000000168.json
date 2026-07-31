@@ -63,46 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin assault cannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000168",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model's twin assault cannon can be replaced with 1 Baal flamestorm cannon."
-                    },
-                    {
-                        "datasheetId": "000000168",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000000168",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    },
-                    {
-                        "datasheetId": "000000168",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following<ul><li>2 heavy bolters</li><li>2 heavy flamers</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin assault cannon; armoured tracks.",
+            "parsed": [
+                "000000168:twin-assault-cannon",
+                "000000168:armoured-tracks"
+            ],
+            "byModelType": {
+                "Baal Predator": [
+                    "000000168:twin-assault-cannon",
+                    "000000168:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000168:baal-flamestorm-cannon",
+                "datasheetId": "000000168",
                 "line": 1,
                 "name": "Baal flamestorm cannon",
                 "type": "Ranged",
@@ -121,7 +98,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -2,
                         "d": 2
@@ -136,6 +113,7 @@
             },
             {
                 "id": "000000168:heavy-bolter",
+                "datasheetId": "000000168",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -168,6 +146,7 @@
             },
             {
                 "id": "000000168:heavy-flamer",
+                "datasheetId": "000000168",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -186,7 +165,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -201,6 +180,7 @@
             },
             {
                 "id": "000000168:hunter-killer-missile",
+                "datasheetId": "000000168",
                 "line": 4,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -232,6 +212,7 @@
             },
             {
                 "id": "000000168:storm-bolter",
+                "datasheetId": "000000168",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -263,6 +244,7 @@
             },
             {
                 "id": "000000168:twin-assault-cannon",
+                "datasheetId": "000000168",
                 "line": 6,
                 "name": "Twin assault cannon",
                 "type": "Ranged",
@@ -296,6 +278,7 @@
             },
             {
                 "id": "000000168:armoured-tracks",
+                "datasheetId": "000000168",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -324,7 +307,179 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000168",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model's twin assault cannon can be replaced with 1 Baal flamestorm cannon."
+                },
+                {
+                    "datasheetId": "000000168",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000000168",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                },
+                {
+                    "datasheetId": "000000168",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following<ul><li>2 heavy bolters</li><li>2 heavy flamers</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:storm-bolter"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:hunter-killer-missile"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:hunter-killer-missile",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:hunter-killer-missile",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:hunter-killer-missile",
+                        "000000168:storm-bolter"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:hunter-killer-missile",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:twin-assault-cannon",
+                        "000000168:armoured-tracks",
+                        "000000168:hunter-killer-missile",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:storm-bolter"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:hunter-killer-missile"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:hunter-killer-missile",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:hunter-killer-missile",
+                        "000000168:heavy-flamer"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:hunter-killer-missile",
+                        "000000168:storm-bolter"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:hunter-killer-missile",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-bolter"
+                    ],
+                    [
+                        "000000168:armoured-tracks",
+                        "000000168:baal-flamestorm-cannon",
+                        "000000168:hunter-killer-missile",
+                        "000000168:storm-bolter",
+                        "000000168:heavy-flamer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

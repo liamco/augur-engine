@@ -50,28 +50,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol, twin bolt rifle; onslaught gatling cannon; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001158",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s onslaught gatling cannon can be replaced with 1 multi-melta."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol, twin bolt rifle; onslaught gatling cannon; close combat weapon.",
+            "parsed": [
+                "000001158:bolt-pistol",
+                "000001158:twin-bolt-rifle",
+                "000001158:onslaught-gatling-cannon",
+                "000001158:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Invader ATV": [
+                    "000001158:bolt-pistol",
+                    "000001158:twin-bolt-rifle",
+                    "000001158:onslaught-gatling-cannon",
+                    "000001158:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001158:bolt-pistol",
+                "datasheetId": "000001158",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -103,6 +102,7 @@
             },
             {
                 "id": "000001158:multi-melta",
+                "datasheetId": "000001158",
                 "line": 2,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -134,6 +134,7 @@
             },
             {
                 "id": "000001158:onslaught-gatling-cannon",
+                "datasheetId": "000001158",
                 "line": 3,
                 "name": "Onslaught gatling cannon",
                 "type": "Ranged",
@@ -165,6 +166,7 @@
             },
             {
                 "id": "000001158:twin-bolt-rifle",
+                "datasheetId": "000001158",
                 "line": 4,
                 "name": "Twin bolt rifle",
                 "type": "Ranged",
@@ -196,6 +198,7 @@
             },
             {
                 "id": "000001158:close-combat-weapon",
+                "datasheetId": "000001158",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -224,7 +227,37 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001158",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s onslaught gatling cannon can be replaced with 1 multi-melta."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001158:bolt-pistol",
+                        "000001158:twin-bolt-rifle",
+                        "000001158:onslaught-gatling-cannon",
+                        "000001158:close-combat-weapon"
+                    ],
+                    [
+                        "000001158:bolt-pistol",
+                        "000001158:twin-bolt-rifle",
+                        "000001158:close-combat-weapon",
+                        "000001158:multi-melta"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

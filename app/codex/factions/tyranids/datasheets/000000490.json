@@ -40,46 +40,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Carnifex scything talons; Carnifex extra scything talons; chitinous claws and teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000490",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their Carnifex extra scything talons replaced with one of the following:<ul><li>1 deathspitters with slimer maggots</li><li>1 devourers with brainleech worms</li><li>1 heavy venom cannon</li><li>1 stranglethorn cannon</li><li>1 Carnifex crushing claws</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000490",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their Carnifex scything talons replaced with one of the following:<ul><li>1 deathspitters with slimer maggots</li><li>1 devourers with brainleech worms</li><li>1 Carnifex crushing claws</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000490",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 1 bio-plasma."
-                    },
-                    {
-                        "datasheetId": "000000490",
-                        "line": 4,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 1 spine banks."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Carnifex scything talons; Carnifex extra scything talons; chitinous claws and teeth.",
+            "parsed": [
+                "000000490:carnifex-scything-talons",
+                "000000490:carnifex-extra-scything-talons",
+                "000000490:chitinous-claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000490:carnifex-scything-talons",
+                    "000000490:carnifex-extra-scything-talons",
+                    "000000490:chitinous-claws-and-teeth"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000490:bio-plasma",
+                "datasheetId": "000000490",
                 "line": 1,
                 "name": "Bio-plasma",
                 "type": "Ranged",
@@ -112,6 +91,7 @@
             },
             {
                 "id": "000000490:deathspitters-with-slimer-maggots",
+                "datasheetId": "000000490",
                 "line": 2,
                 "name": "Deathspitters with slimer maggots",
                 "type": "Ranged",
@@ -141,6 +121,7 @@
             },
             {
                 "id": "000000490:devourers-with-brainleech-worms",
+                "datasheetId": "000000490",
                 "line": 3,
                 "name": "Devourers with brainleech worms",
                 "type": "Ranged",
@@ -170,6 +151,7 @@
             },
             {
                 "id": "000000490:heavy-venom-cannon",
+                "datasheetId": "000000490",
                 "line": 4,
                 "name": "Heavy venom cannon",
                 "type": "Ranged",
@@ -201,6 +183,7 @@
             },
             {
                 "id": "000000490:spine-banks",
+                "datasheetId": "000000490",
                 "line": 5,
                 "name": "Spine banks",
                 "type": "Ranged",
@@ -232,6 +215,7 @@
             },
             {
                 "id": "000000490:stranglethorn-cannon",
+                "datasheetId": "000000490",
                 "line": 6,
                 "name": "Stranglethorn cannon",
                 "type": "Ranged",
@@ -263,6 +247,7 @@
             },
             {
                 "id": "000000490:carnifex-crushing-claws",
+                "datasheetId": "000000490",
                 "line": 7,
                 "name": "Carnifex crushing claws",
                 "type": "Melee",
@@ -292,6 +277,7 @@
             },
             {
                 "id": "000000490:carnifex-extra-scything-talons",
+                "datasheetId": "000000490",
                 "line": 8,
                 "name": "Carnifex extra scything talons",
                 "type": "Melee",
@@ -323,6 +309,7 @@
             },
             {
                 "id": "000000490:carnifex-scything-talons",
+                "datasheetId": "000000490",
                 "line": 9,
                 "name": "Carnifex scything talons",
                 "type": "Melee",
@@ -352,6 +339,7 @@
             },
             {
                 "id": "000000490:chitinous-claws-and-teeth",
+                "datasheetId": "000000490",
                 "line": 10,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
@@ -380,7 +368,535 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000490",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their Carnifex extra scything talons replaced with one of the following:<ul><li>1 deathspitters with slimer maggots</li><li>1 devourers with brainleech worms</li><li>1 heavy venom cannon</li><li>1 stranglethorn cannon</li><li>1 Carnifex crushing claws</li></ul>"
+                },
+                {
+                    "datasheetId": "000000490",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their Carnifex scything talons replaced with one of the following:<ul><li>1 deathspitters with slimer maggots</li><li>1 devourers with brainleech worms</li><li>1 Carnifex crushing claws</li></ul>"
+                },
+                {
+                    "datasheetId": "000000490",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 1 bio-plasma."
+                },
+                {
+                    "datasheetId": "000000490",
+                    "line": 4,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 1 spine banks."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-extra-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:devourers-with-brainleech-worms"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:deathspitters-with-slimer-maggots"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:devourers-with-brainleech-worms"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:heavy-venom-cannon",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:deathspitters-with-slimer-maggots"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:deathspitters-with-slimer-maggots",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:devourers-with-brainleech-worms"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:devourers-with-brainleech-worms",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:stranglethorn-cannon",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:carnifex-scything-talons",
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:spine-banks"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma"
+                    ],
+                    [
+                        "000000490:chitinous-claws-and-teeth",
+                        "000000490:carnifex-crushing-claws",
+                        "000000490:bio-plasma",
+                        "000000490:spine-banks"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

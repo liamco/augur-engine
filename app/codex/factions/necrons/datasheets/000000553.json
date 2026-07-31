@@ -40,28 +40,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> gauss cannon; twin tesla destructor; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000553",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s gauss cannon can be replaced with 1 tesla cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> gauss cannon; twin tesla destructor; armoured bulk.",
+            "parsed": [
+                "000000553:gauss-cannon",
+                "000000553:twin-tesla-destructor",
+                "000000553:armoured-bulk"
+            ],
+            "byModelType": {
+                "Annihilation Barge": [
+                    "000000553:gauss-cannon",
+                    "000000553:twin-tesla-destructor",
+                    "000000553:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000553:gauss-cannon",
+                "datasheetId": "000000553",
                 "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
@@ -93,6 +90,7 @@
             },
             {
                 "id": "000000553:tesla-cannon",
+                "datasheetId": "000000553",
                 "line": 2,
                 "name": "Tesla cannon",
                 "type": "Ranged",
@@ -124,6 +122,7 @@
             },
             {
                 "id": "000000553:twin-tesla-destructor",
+                "datasheetId": "000000553",
                 "line": 3,
                 "name": "Twin tesla destructor",
                 "type": "Ranged",
@@ -156,6 +155,7 @@
             },
             {
                 "id": "000000553:armoured-bulk",
+                "datasheetId": "000000553",
                 "line": 4,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -184,7 +184,35 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000553",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s gauss cannon can be replaced with 1 tesla cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000553:gauss-cannon",
+                        "000000553:twin-tesla-destructor",
+                        "000000553:armoured-bulk"
+                    ],
+                    [
+                        "000000553:twin-tesla-destructor",
+                        "000000553:armoured-bulk",
+                        "000000553:tesla-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

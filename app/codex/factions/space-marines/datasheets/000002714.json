@@ -58,40 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Predator twin lascannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002714",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002714",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000002714",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Predator twin lascannon; armoured tracks.",
+            "parsed": [
+                "000002714:predator-twin-lascannon",
+                "000002714:armoured-tracks"
+            ],
+            "byModelType": {
+                "Predator Annihilator": [
+                    "000002714:predator-twin-lascannon",
+                    "000002714:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002714:predator-twin-lascannon",
+                "datasheetId": "000002714",
                 "line": 1,
                 "name": "Predator twin lascannon",
                 "type": "Ranged",
@@ -123,6 +106,7 @@
             },
             {
                 "id": "000002714:heavy-bolter",
+                "datasheetId": "000002714",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -154,6 +138,7 @@
             },
             {
                 "id": "000002714:hunter-killer-missile",
+                "datasheetId": "000002714",
                 "line": 3,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -185,6 +170,7 @@
             },
             {
                 "id": "000002714:lascannon",
+                "datasheetId": "000002714",
                 "line": 4,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -214,6 +200,7 @@
             },
             {
                 "id": "000002714:storm-bolter",
+                "datasheetId": "000002714",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -245,6 +232,7 @@
             },
             {
                 "id": "000002714:armoured-tracks",
+                "datasheetId": "000002714",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -273,7 +261,105 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002714",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000002714",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000002714",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:storm-bolter"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:hunter-killer-missile"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:hunter-killer-missile",
+                        "000002714:storm-bolter"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:heavy-bolter"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:heavy-bolter",
+                        "000002714:storm-bolter"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:heavy-bolter",
+                        "000002714:hunter-killer-missile"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:heavy-bolter",
+                        "000002714:hunter-killer-missile",
+                        "000002714:storm-bolter"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:lascannon"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:lascannon",
+                        "000002714:storm-bolter"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:lascannon",
+                        "000002714:hunter-killer-missile"
+                    ],
+                    [
+                        "000002714:predator-twin-lascannon",
+                        "000002714:armoured-tracks",
+                        "000002714:lascannon",
+                        "000002714:hunter-killer-missile",
+                        "000002714:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

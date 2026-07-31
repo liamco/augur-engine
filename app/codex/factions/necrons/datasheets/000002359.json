@@ -45,21 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> gauss cannon; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> gauss cannon; close combat weapon.",
+            "parsed": [
+                "000002359:gauss-cannon",
+                "000002359:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002359:gauss-cannon",
+                    "000002359:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002359:gauss-cannon",
+                "datasheetId": "000002359",
                 "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
@@ -91,6 +93,7 @@
             },
             {
                 "id": "000002359:close-combat-weapon",
+                "datasheetId": "000002359",
                 "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -119,7 +122,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002359:gauss-cannon",
+                        "000002359:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

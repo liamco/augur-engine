@@ -40,28 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> gauss flayer; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000534",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their gauss flayer replaced with 1 gauss reaper."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> gauss flayer; close combat weapon.",
+            "parsed": [
+                "000000534:gauss-flayer",
+                "000000534:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000534:gauss-flayer",
+                    "000000534:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000534:gauss-flayer",
+                "datasheetId": "000000534",
                 "line": 1,
                 "name": "Gauss flayer",
                 "type": "Ranged",
@@ -94,6 +89,7 @@
             },
             {
                 "id": "000000534:gauss-reaper",
+                "datasheetId": "000000534",
                 "line": 2,
                 "name": "Gauss reaper",
                 "type": "Ranged",
@@ -125,6 +121,7 @@
             },
             {
                 "id": "000000534:close-combat-weapon",
+                "datasheetId": "000000534",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -153,7 +150,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000534",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their gauss flayer replaced with 1 gauss reaper."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000534:gauss-flayer",
+                        "000000534:close-combat-weapon"
+                    ],
+                    [
+                        "000000534:close-combat-weapon",
+                        "000000534:gauss-reaper"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

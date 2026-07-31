@@ -55,42 +55,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; bolt rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001157",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Intercessor Sergeant’s bolt rifle can be replaced with one of the following:<ul><li>1 Astartes chainsword</li><li>1 hand flamer</li><li>1 plasma pistol</li><li>1 power weapon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001157",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Intercessor Sergeant’s close combat weapon can be replaced with one of the following:<ul><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001157",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model equipped with a bolt rifle can be equipped with 1 Astartes grenade launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; bolt rifle; close combat weapon.",
+            "parsed": [
+                "000001157:bolt-pistol",
+                "000001157:bolt-rifle",
+                "000001157:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001157:bolt-pistol",
+                    "000001157:bolt-rifle",
+                    "000001157:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000001157:astartes-grenade-launcher-frag",
+                "id": "000001157:astartes-grenade-launcher",
+                "datasheetId": "000001157",
                 "line": 1,
-                "name": "Astartes grenade launcher – frag",
+                "name": "Astartes grenade launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -98,7 +83,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Astartes grenade launcher – frag",
+                        "name": "Astartes grenade launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -109,27 +95,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001157:astartes-grenade-launcher-krak",
-                "line": 2,
-                "name": "Astartes grenade launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001157",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Astartes grenade launcher – krak",
+                        "name": "Astartes grenade launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 24,
                         "type": "Ranged",
@@ -142,13 +115,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001157:bolt-pistol",
+                "datasheetId": "000001157",
                 "line": 3,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -180,6 +156,7 @@
             },
             {
                 "id": "000001157:bolt-rifle",
+                "datasheetId": "000001157",
                 "line": 4,
                 "name": "Bolt rifle",
                 "type": "Ranged",
@@ -212,6 +189,7 @@
             },
             {
                 "id": "000001157:hand-flamer",
+                "datasheetId": "000001157",
                 "line": 5,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -230,7 +208,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -238,15 +216,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000001157:plasma-pistol-standard",
+                "id": "000001157:plasma-pistol",
+                "datasheetId": "000001157",
                 "line": 6,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -254,7 +236,8 @@
                         "line": 6,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -265,27 +248,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001157:plasma-pistol-supercharge",
-                "line": 7,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001157",
                         "line": 7,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -301,13 +271,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001157:astartes-chainsword",
+                "datasheetId": "000001157",
                 "line": 8,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -330,13 +304,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001157:close-combat-weapon",
+                "datasheetId": "000001157",
                 "line": 9,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -366,6 +344,7 @@
             },
             {
                 "id": "000001157:power-fist",
+                "datasheetId": "000001157",
                 "line": 10,
                 "name": "Power fist",
                 "type": "Melee",
@@ -388,13 +367,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001157:power-weapon",
+                "datasheetId": "000001157",
                 "line": 11,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -417,13 +400,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001157:thunder-hammer",
+                "datasheetId": "000001157",
                 "line": 12,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -448,13 +435,322 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001157",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Intercessor Sergeant’s bolt rifle can be replaced with one of the following:<ul><li>1 Astartes chainsword</li><li>1 hand flamer</li><li>1 plasma pistol</li><li>1 power weapon</li></ul>"
+                },
+                {
+                    "datasheetId": "000001157",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Intercessor Sergeant’s close combat weapon can be replaced with one of the following:<ul><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000001157",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model equipped with a bolt rifle can be equipped with 1 Astartes grenade launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Intercessor Sergeant",
+                "items": [
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:close-combat-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:close-combat-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:astartes-chainsword"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:astartes-chainsword",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:power-fist"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:power-fist",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:power-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:power-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:thunder-hammer"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:thunder-hammer",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:astartes-chainsword"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:astartes-chainsword",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:power-fist"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:power-fist",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:power-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:power-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:thunder-hammer"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:thunder-hammer",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:hand-flamer"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:hand-flamer",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:astartes-chainsword"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:astartes-chainsword",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:power-fist"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:power-fist",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:power-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:power-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:thunder-hammer"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:hand-flamer",
+                        "000001157:thunder-hammer",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:plasma-pistol"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:plasma-pistol",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:astartes-chainsword"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:astartes-chainsword",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:power-fist"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:power-fist",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:power-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:power-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:thunder-hammer"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:plasma-pistol",
+                        "000001157:thunder-hammer",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:power-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:close-combat-weapon",
+                        "000001157:power-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:power-weapon",
+                        "000001157:power-fist"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:power-weapon",
+                        "000001157:power-fist",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:power-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:power-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:power-weapon",
+                        "000001157:thunder-hammer"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:power-weapon",
+                        "000001157:thunder-hammer",
+                        "000001157:astartes-grenade-launcher"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Intercessor",
+                "items": [
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:close-combat-weapon"
+                    ],
+                    [
+                        "000001157:bolt-pistol",
+                        "000001157:bolt-rifle",
+                        "000001157:close-combat-weapon",
+                        "000001157:astartes-grenade-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

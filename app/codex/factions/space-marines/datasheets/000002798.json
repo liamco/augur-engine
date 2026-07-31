@@ -55,52 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002798",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of Sword Brothers can each have their Astartes chainsword replaced with 1 master-crafted power weapon."
-                    },
-                    {
-                        "datasheetId": "000002798",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Sword Brother’s Astartes chainsword can be replaced with 1 thunder hammer."
-                    },
-                    {
-                        "datasheetId": "000002798",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Sword Brother’s heavy bolt pistol can be replaced with 1 plasma pistol."
-                    },
-                    {
-                        "datasheetId": "000002798",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, up to 2 Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol."
-                    },
-                    {
-                        "datasheetId": "000002798",
-                        "line": 5,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Sword Brother’s heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000002798:heavy-bolt-pistol",
+                "000002798:astartes-chainsword"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002798:heavy-bolt-pistol",
+                    "000002798:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002798:heavy-bolt-pistol",
+                "datasheetId": "000002798",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -131,9 +102,10 @@
                 "count": 1
             },
             {
-                "id": "000002798:plasma-pistol-standard",
+                "id": "000002798:plasma-pistol",
+                "datasheetId": "000002798",
                 "line": 2,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -141,7 +113,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -152,27 +125,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002798:plasma-pistol-supercharge",
-                "line": 3,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002798",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -188,13 +148,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002798:pyre-pistol",
+                "datasheetId": "000002798",
                 "line": 4,
                 "name": "Pyre pistol",
                 "type": "Ranged",
@@ -213,7 +179,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -221,13 +187,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 2,
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002798:astartes-chainsword",
+                "datasheetId": "000002798",
                 "line": 5,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -259,6 +231,7 @@
             },
             {
                 "id": "000002798:master-crafted-power-weapon",
+                "datasheetId": "000002798",
                 "line": 6,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -290,6 +263,7 @@
             },
             {
                 "id": "000002798:thunder-hammer",
+                "datasheetId": "000002798",
                 "line": 7,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -314,13 +288,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002798:twin-lightning-claws",
+                "datasheetId": "000002798",
                 "line": 8,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -345,13 +325,99 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002798",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of Sword Brothers can each have their Astartes chainsword replaced with 1 master-crafted power weapon."
+                },
+                {
+                    "datasheetId": "000002798",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Sword Brother’s Astartes chainsword can be replaced with 1 thunder hammer."
+                },
+                {
+                    "datasheetId": "000002798",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Sword Brother’s heavy bolt pistol can be replaced with 1 plasma pistol."
+                },
+                {
+                    "datasheetId": "000002798",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, up to 2 Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol."
+                },
+                {
+                    "datasheetId": "000002798",
+                    "line": 5,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Sword Brother’s heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002798:heavy-bolt-pistol",
+                        "000002798:astartes-chainsword"
+                    ],
+                    [
+                        "000002798:twin-lightning-claws"
+                    ],
+                    [
+                        "000002798:astartes-chainsword",
+                        "000002798:pyre-pistol"
+                    ],
+                    [
+                        "000002798:astartes-chainsword",
+                        "000002798:plasma-pistol"
+                    ],
+                    [
+                        "000002798:heavy-bolt-pistol",
+                        "000002798:thunder-hammer"
+                    ],
+                    [
+                        "000002798:thunder-hammer",
+                        "000002798:pyre-pistol"
+                    ],
+                    [
+                        "000002798:thunder-hammer",
+                        "000002798:plasma-pistol"
+                    ],
+                    [
+                        "000002798:heavy-bolt-pistol",
+                        "000002798:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000002798:master-crafted-power-weapon",
+                        "000002798:pyre-pistol"
+                    ],
+                    [
+                        "000002798:master-crafted-power-weapon",
+                        "000002798:plasma-pistol"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

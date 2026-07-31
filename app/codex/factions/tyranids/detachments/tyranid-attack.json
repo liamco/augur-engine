@@ -116,8 +116,24 @@
             "cost": 0,
             "legend": "Threaded with molecular veins of absorbed alloys and minerals, this bioforms chitinous carapace has a dull glint that hints at its formidable resilience.",
             "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack (note that if given to a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">PRIME</span> model, this only affects that model and not other models in its unit).",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Reinforced Carapace",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000002694"

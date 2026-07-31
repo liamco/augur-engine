@@ -395,88 +395,15 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003875",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Chaplain Cassius is equipped with: artificer crozius; bolt pistol."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Vael Donatus is equipped with: boltgun; bolt pistol; close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Zameon Gydrael is equipped with: Long Vigil ranged weapon; Long Vigil melee weapon."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 4,
-                        "button": "•",
-                        "description": "Rodricus Grytt is equipped with: frag cannon; bolt pistol; close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 5,
-                        "button": "•",
-                        "description": "Antor Delassio is equipped with: Long Vigil ranged weapon; Long Vigil melee weapon, jump pack."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 6,
-                        "button": "•",
-                        "description": "Edryc Setorax is equipped with: twin lightning claws, jump pack."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 7,
-                        "button": "•",
-                        "description": "Jensus Natorian is equipped with: psychic Cleanse; bolt pistol; force weapon; psychic hood."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 8,
-                        "button": "•",
-                        "description": "Drenn Redblade is equipped with: Long Vigil melee weapon; boltgun."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 9,
-                        "button": "•",
-                        "description": "Garran Branatar is equipped with: heavy flamer; Long Vigil ranged weapon; power fist."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 10,
-                        "button": "•",
-                        "description": "Ennox Sorrlock is equipped with: Long Vigil ranged weapon; close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000003875",
-                        "line": 11,
-                        "button": "•",
-                        "description": "Jetek Suberei is equipped with: Deathwatch twin boltgun; Long Vigil melee weapon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
-            }
+        "defaultLoadout": {
+            "raw": "",
+            "parsed": [],
+            "byModelType": {}
         },
         "weapons": [
             {
                 "id": "000003875:boltgun",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -506,6 +433,7 @@
             },
             {
                 "id": "000003875:long-vigil-melee-weapon",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Long Vigil melee weapon",
                 "type": "Melee",
@@ -535,6 +463,7 @@
             },
             {
                 "id": "000003875:power-fist",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Power fist",
                 "type": "Melee",
@@ -564,6 +493,7 @@
             },
             {
                 "id": "000003875:twin-lightning-claws",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -595,6 +525,7 @@
             },
             {
                 "id": "000003875:bolt-pistol",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -626,6 +557,7 @@
             },
             {
                 "id": "000003875:deathwatch-twin-boltgun",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Deathwatch twin boltgun",
                 "type": "Ranged",
@@ -657,6 +589,7 @@
             },
             {
                 "id": "000003875:frag-cannon",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Frag cannon",
                 "type": "Ranged",
@@ -690,6 +623,7 @@
             },
             {
                 "id": "000003875:heavy-flamer",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -707,7 +641,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -722,6 +656,7 @@
             },
             {
                 "id": "000003875:long-vigil-ranged-weapon",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Long Vigil ranged weapon",
                 "type": "Ranged",
@@ -755,6 +690,7 @@
             },
             {
                 "id": "000003875:psychic-cleanse",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Psychic Cleanse",
                 "type": "Ranged",
@@ -786,6 +722,7 @@
             },
             {
                 "id": "000003875:artificer-crozius",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Artificer crozius",
                 "type": "Melee",
@@ -815,6 +752,7 @@
             },
             {
                 "id": "000003875:close-combat-weapon",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -844,6 +782,7 @@
             },
             {
                 "id": "000003875:force-weapon",
+                "datasheetId": "000003875",
                 "line": 1,
                 "name": "Force weapon",
                 "type": "Melee",
@@ -874,7 +813,94 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003875",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Chaplain Cassius is equipped with: artificer crozius; bolt pistol."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Vael Donatus is equipped with: boltgun; bolt pistol; close combat weapon."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Zameon Gydrael is equipped with: Long Vigil ranged weapon; Long Vigil melee weapon."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 4,
+                    "button": "•",
+                    "description": "Rodricus Grytt is equipped with: frag cannon; bolt pistol; close combat weapon."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 5,
+                    "button": "•",
+                    "description": "Antor Delassio is equipped with: Long Vigil ranged weapon; Long Vigil melee weapon, jump pack."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 6,
+                    "button": "•",
+                    "description": "Edryc Setorax is equipped with: twin lightning claws, jump pack."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 7,
+                    "button": "•",
+                    "description": "Jensus Natorian is equipped with: psychic Cleanse; bolt pistol; force weapon; psychic hood."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 8,
+                    "button": "•",
+                    "description": "Drenn Redblade is equipped with: Long Vigil melee weapon; boltgun."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 9,
+                    "button": "•",
+                    "description": "Garran Branatar is equipped with: heavy flamer; Long Vigil ranged weapon; power fist."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 10,
+                    "button": "•",
+                    "description": "Ennox Sorrlock is equipped with: Long Vigil ranged weapon; close combat weapon."
+                },
+                {
+                    "datasheetId": "000003875",
+                    "line": 11,
+                    "button": "•",
+                    "description": "Jetek Suberei is equipped with: Deathwatch twin boltgun; Long Vigil melee weapon."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000003875:jump-pack",
+                "name": "Jump Pack",
+                "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain as if they were not there.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            },
+            {
+                "id": "000003875:psychic-hood",
+                "name": "Psychic Hood",
+                "description": "Models in the bearer's unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "imperial-agents-legends",
@@ -1036,32 +1062,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Jump Pack",
-            "legend": "",
-            "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain as if they were not there.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Psychic Hood",
-            "legend": "",
-            "description": "Models in the bearer’s unit have the Feel No Pain 4+ ability against Psychic Attacks.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Psychic Hood",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "CASSIUS",

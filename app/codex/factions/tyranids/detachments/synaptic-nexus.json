@@ -224,8 +224,24 @@
             "cost": 20,
             "legend": "The Hive Mind’s synaptic network is so strong that even the mangled remains of mortally wounded beasts can be compelled to fight on.",
             "description": "Tyranids Synapse model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Synaptic Control",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",

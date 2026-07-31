@@ -93,28 +93,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Wyrmclaw.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000286",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Wyrmclaw.",
+            "parsed": [
+                "000000286:bolt-pistol",
+                "000000286:wyrmclaw"
+            ],
+            "byModelType": {
+                "Krom Dragongaze": [
+                    "000000286:bolt-pistol",
+                    "000000286:wyrmclaw"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000286:bolt-pistol",
+                "datasheetId": "000000286",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -146,6 +141,7 @@
             },
             {
                 "id": "000000286:wyrmclaw",
+                "datasheetId": "000000286",
                 "line": 2,
                 "name": "Wyrmclaw",
                 "type": "Melee",
@@ -176,7 +172,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000286",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000286:bolt-pistol",
+                        "000000286:wyrmclaw"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

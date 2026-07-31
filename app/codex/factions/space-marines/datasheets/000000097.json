@@ -58,28 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Hammerfall heavy bolter array; Hammerfall missile launcher.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000097",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s Hammerfall heavy bolter array can be replaced with 1 Hammerfall heavy flamer array."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Hammerfall heavy bolter array; Hammerfall missile launcher.",
+            "parsed": [
+                "000000097:hammerfall-heavy-bolter-array",
+                "000000097:hammerfall-missile-launcher"
+            ],
+            "byModelType": {
+                "Hammerfall Bunker": [
+                    "000000097:hammerfall-heavy-bolter-array",
+                    "000000097:hammerfall-missile-launcher"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000097:hammerfall-heavy-bolter-array",
+                "datasheetId": "000000097",
                 "line": 1,
                 "name": "Hammerfall heavy bolter array",
                 "type": "Ranged",
@@ -112,6 +107,7 @@
             },
             {
                 "id": "000000097:hammerfall-heavy-flamer-array",
+                "datasheetId": "000000097",
                 "line": 2,
                 "name": "Hammerfall heavy flamer array",
                 "type": "Ranged",
@@ -130,7 +126,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -144,9 +140,10 @@
                 "count": 1
             },
             {
-                "id": "000000097:hammerfall-missile-launcher-superfrag",
+                "id": "000000097:hammerfall-missile-launcher",
+                "datasheetId": "000000097",
                 "line": 3,
-                "name": "Hammerfall missile launcher – superfrag",
+                "name": "Hammerfall missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -154,7 +151,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Hammerfall missile launcher – superfrag",
+                        "name": "Hammerfall missile launcher - superfrag",
+                        "profileName": "superfrag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -165,27 +163,14 @@
                         "s": 5,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000097:hammerfall-missile-launcher-superkrak",
-                "line": 4,
-                "name": "Hammerfall missile launcher – superkrak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000097",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Hammerfall missile launcher – superkrak",
+                        "name": "Hammerfall missile launcher - superkrak",
+                        "profileName": "superkrak",
                         "attributes": [],
                         "range": 48,
                         "type": "Ranged",
@@ -204,7 +189,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000097",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s Hammerfall heavy bolter array can be replaced with 1 Hammerfall heavy flamer array."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000097:hammerfall-heavy-bolter-array",
+                        "000000097:hammerfall-missile-launcher"
+                    ],
+                    [
+                        "000000097:hammerfall-missile-launcher",
+                        "000000097:hammerfall-heavy-flamer-array"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -45,40 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> devourer; Tyranid Warrior claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002692",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their devourer replaced with one of the following:<ul><li>1 deathspitter</li><li>1 spinefists</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002692",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 barbed strangler."
-                    },
-                    {
-                        "datasheetId": "000002692",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 venom cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> devourer; Tyranid Warrior claws and talons.",
+            "parsed": [
+                "000002692:devourer",
+                "000002692:tyranid-warrior-claws-and-talons"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002692:devourer",
+                    "000002692:tyranid-warrior-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002692:barbed-strangler",
+                "datasheetId": "000002692",
                 "line": 1,
                 "name": "Barbed strangler",
                 "type": "Ranged",
@@ -103,13 +86,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002692:deathspitter",
+                "datasheetId": "000002692",
                 "line": 2,
                 "name": "Deathspitter",
                 "type": "Ranged",
@@ -139,6 +125,7 @@
             },
             {
                 "id": "000002692:devourer",
+                "datasheetId": "000002692",
                 "line": 3,
                 "name": "Devourer",
                 "type": "Ranged",
@@ -168,6 +155,7 @@
             },
             {
                 "id": "000002692:spinefists",
+                "datasheetId": "000002692",
                 "line": 4,
                 "name": "Spinefists",
                 "type": "Ranged",
@@ -201,6 +189,7 @@
             },
             {
                 "id": "000002692:venom-cannon",
+                "datasheetId": "000002692",
                 "line": 5,
                 "name": "Venom cannon",
                 "type": "Ranged",
@@ -225,13 +214,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002692:tyranid-warrior-claws-and-talons",
+                "datasheetId": "000002692",
                 "line": 6,
                 "name": "Tyranid Warrior claws and talons",
                 "type": "Melee",
@@ -260,7 +252,57 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002692",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their devourer replaced with one of the following:<ul><li>1 deathspitter</li><li>1 spinefists</li></ul>"
+                },
+                {
+                    "datasheetId": "000002692",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 barbed strangler."
+                },
+                {
+                    "datasheetId": "000002692",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 venom cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002692:devourer",
+                        "000002692:tyranid-warrior-claws-and-talons"
+                    ],
+                    [
+                        "000002692:tyranid-warrior-claws-and-talons",
+                        "000002692:venom-cannon"
+                    ],
+                    [
+                        "000002692:tyranid-warrior-claws-and-talons",
+                        "000002692:barbed-strangler"
+                    ],
+                    [
+                        "000002692:tyranid-warrior-claws-and-talons",
+                        "000002692:deathspitter"
+                    ],
+                    [
+                        "000002692:tyranid-warrior-claws-and-talons",
+                        "000002692:spinefists"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

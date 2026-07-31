@@ -164,24 +164,8 @@
             "cost": 25,
             "legend": "The same weapon rarely works against this leader-beast twice, as its alien physiology adapts at an astonishing rate to counter the attacks of the foe.",
             "description": "<span class=\"kwb\">TYRANIDS</span> model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead.",
-            "mechanics": [
-                {
-                    "name": "Adaptive Biology",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "startingModelCount",
-                            "operator": "equals",
-                            "value": 1
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",

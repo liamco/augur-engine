@@ -75,28 +75,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bio-plasma torrent; 2 dire bio-cannons; lashwhip pods; titanic scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000505",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bio-plasma torrent; 2 dire bio-cannons; lashwhip pods; titanic scything talons.",
+            "parsed": [
+                "000000505:bio-plasma-torrent",
+                "000000505:dire-bio-cannon",
+                "000000505:lashwhip-pods",
+                "000000505:titanic-scything-talons"
+            ],
+            "byModelType": {
+                "Hierophant": [
+                    "000000505:bio-plasma-torrent",
+                    "000000505:dire-bio-cannon",
+                    "000000505:lashwhip-pods",
+                    "000000505:titanic-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000505:bio-plasma-torrent",
+                "datasheetId": "000000505",
                 "line": 1,
                 "name": "Bio-plasma torrent",
                 "type": "Ranged",
@@ -114,7 +113,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "3D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 7,
                         "ap": -2,
                         "d": 1
@@ -129,6 +128,7 @@
             },
             {
                 "id": "000000505:dire-bio-cannon",
+                "datasheetId": "000000505",
                 "line": 2,
                 "name": "Dire bio-cannon",
                 "type": "Ranged",
@@ -160,6 +160,7 @@
             },
             {
                 "id": "000000505:lashwhip-pods",
+                "datasheetId": "000000505",
                 "line": 3,
                 "name": "Lashwhip pods",
                 "type": "Melee",
@@ -191,6 +192,7 @@
             },
             {
                 "id": "000000505:titanic-scything-talons",
+                "datasheetId": "000000505",
                 "line": 4,
                 "name": "Titanic scything talons",
                 "type": "Melee",
@@ -219,7 +221,31 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000505",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000505:bio-plasma-torrent",
+                        "000000505:dire-bio-cannon",
+                        "000000505:lashwhip-pods",
+                        "000000505:titanic-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

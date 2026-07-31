@@ -58,28 +58,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> teeth and claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002805",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> teeth and claws.",
+            "parsed": [
+                "000002805:teeth-and-claws"
+            ],
+            "byModelType": {
+                "Cyberwolf": [
+                    "000002805:teeth-and-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002805:teeth-and-claws",
+                "datasheetId": "000002805",
                 "line": 1,
                 "name": "Teeth and claws",
                 "type": "Melee",
@@ -108,7 +101,28 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002805",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002805:teeth-and-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

@@ -1,6 +1,11 @@
 import type { Mechanic } from "@/app/types/Mechanic";
 import type { RawAbility } from "../types";
-import { extractAbilityMechanics } from "./abilityMechanics";
+import {
+    cleanDescription,
+    extractAbilityMechanics,
+    extractDetachmentRuleMechanics,
+} from "./abilityMechanics";
+import { slugify } from "../utils/slugify";
 
 /**
  * How an ability's `mechanics` was produced.
@@ -20,6 +25,15 @@ export type MechanicsSource =
     | "skill"
     | "outOfScope"
     | "needsSchema";
+
+export interface ParsedWargearAbility {
+    /** `{datasheetId}:{slug}` — what a loadout reference resolves to. */
+    id: string;
+    name: string;
+    description: string;
+    mechanics: Mechanic[];
+    mechanicsSource: MechanicsSource;
+}
 
 export interface ParsedAbilityCore {
     // Shared definition id — one per rule across every datasheet that has it
@@ -132,14 +146,59 @@ function extractParameter(name: string): number | undefined {
     return match ? parseInt(match[1], 10) : undefined;
 }
 
+/**
+ * Wargear-conferred abilities — a storm shield, a resurrection orb, a jump pack.
+ *
+ * The source marks these `type: "Wargear"` inside the datasheet's abilities.
+ * They belong on `wargear.abilities`, where `collectWargearMechanics` reads them
+ * and where the loadout parser can resolve a reference to one: an option saying
+ * "equipped with 1 storm shield" has nothing to point at otherwise.
+ *
+ * Left in the main abilities list they were labelled "Datasheet", which both
+ * double-counted them in the mechanics coverage report and applied a
+ * single-model item to the whole unit.
+ *
+ * `"Wargear profile"` is deliberately not included: "One Shot" annotates a
+ * weapon rather than being a selectable item, so no loadout can name it.
+ */
+export function extractWargearAbilities(
+    raw: RawAbility[],
+    datasheetId: string,
+): ParsedWargearAbility[] {
+    return raw
+        .filter((ability) => ability.type === "Wargear")
+        .map((ability) => {
+            const description = cleanDescription(ability.description) ?? "";
+            const { mechanics } = extractDetachmentRuleMechanics(
+                ability.name,
+                ability.description,
+                // A piece of wargear is worn by one model, so an unqualified
+                // effect is the bearer's — the same default as an Enhancement.
+                "bearer",
+            );
+
+            return {
+                id: `${datasheetId}:${slugify(ability.name)}`,
+                name: ability.name,
+                description,
+                mechanics,
+                mechanicsSource: (mechanics.length > 0
+                    ? "regex"
+                    : "unparsed") as MechanicsSource,
+            };
+        });
+}
+
 export function transformAbilities(raw: RawAbility[]): ParsedAbility[] {
-    return raw.map((ability) => {
+    return raw
+        .filter((ability) => ability.type !== "Wargear")
+        .map((ability) => {
         if (ability.type === "Core" || ability.type === "Faction") {
             const param = extractParameter(ability.name);
             const result: ParsedAbilityCore = {
                 ...(ability.id ? { id: ability.id } : {}),
                 name: ability.name,
-                type: ability.type,
+                type: ability.type as "Core" | "Faction",
             };
             if (param !== undefined) {
                 result.parameter = param;

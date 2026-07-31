@@ -58,40 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Predator autocannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002715",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002715",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000002715",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Predator autocannon; armoured tracks.",
+            "parsed": [
+                "000002715:predator-autocannon",
+                "000002715:armoured-tracks"
+            ],
+            "byModelType": {
+                "Predator Destructor": [
+                    "000002715:predator-autocannon",
+                    "000002715:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002715:heavy-bolter",
+                "datasheetId": "000002715",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -123,6 +106,7 @@
             },
             {
                 "id": "000002715:hunter-killer-missile",
+                "datasheetId": "000002715",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -154,6 +138,7 @@
             },
             {
                 "id": "000002715:lascannon",
+                "datasheetId": "000002715",
                 "line": 3,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -183,6 +168,7 @@
             },
             {
                 "id": "000002715:predator-autocannon",
+                "datasheetId": "000002715",
                 "line": 4,
                 "name": "Predator autocannon",
                 "type": "Ranged",
@@ -214,6 +200,7 @@
             },
             {
                 "id": "000002715:storm-bolter",
+                "datasheetId": "000002715",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -245,6 +232,7 @@
             },
             {
                 "id": "000002715:armoured-tracks",
+                "datasheetId": "000002715",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -273,7 +261,105 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002715",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000002715",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000002715",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:storm-bolter"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:hunter-killer-missile"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:hunter-killer-missile",
+                        "000002715:storm-bolter"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:heavy-bolter"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:heavy-bolter",
+                        "000002715:storm-bolter"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:heavy-bolter",
+                        "000002715:hunter-killer-missile"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:heavy-bolter",
+                        "000002715:hunter-killer-missile",
+                        "000002715:storm-bolter"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:lascannon"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:lascannon",
+                        "000002715:storm-bolter"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:lascannon",
+                        "000002715:hunter-killer-missile"
+                    ],
+                    [
+                        "000002715:predator-autocannon",
+                        "000002715:armoured-tracks",
+                        "000002715:lascannon",
+                        "000002715:hunter-killer-missile",
+                        "000002715:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

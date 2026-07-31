@@ -45,28 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> twin Firestrike las-talon; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000086",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their twin Firestrike las-talon replaced with 1 twin Firestrike autocannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> twin Firestrike las-talon; close combat weapon.",
+            "parsed": [
+                "000000086:twin-firestrike-las-talon",
+                "000000086:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000086:twin-firestrike-las-talon",
+                    "000000086:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000086:twin-firestrike-autocannon",
+                "datasheetId": "000000086",
                 "line": 1,
                 "name": "Twin Firestrike autocannon",
                 "type": "Ranged",
@@ -98,6 +93,7 @@
             },
             {
                 "id": "000000086:twin-firestrike-las-talon",
+                "datasheetId": "000000086",
                 "line": 2,
                 "name": "Twin Firestrike las-talon",
                 "type": "Ranged",
@@ -129,6 +125,7 @@
             },
             {
                 "id": "000000086:close-combat-weapon",
+                "datasheetId": "000000086",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -157,7 +154,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000086",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their twin Firestrike las-talon replaced with 1 twin Firestrike autocannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000086:twin-firestrike-las-talon",
+                        "000000086:close-combat-weapon"
+                    ],
+                    [
+                        "000000086:close-combat-weapon",
+                        "000000086:twin-firestrike-autocannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

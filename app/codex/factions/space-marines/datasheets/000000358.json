@@ -73,46 +73,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 Blackstar rocket launchers; twin assault cannon; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000358",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin assault cannon can be replaced with 1 twin lascannon."
-                    },
-                    {
-                        "datasheetId": "000000358",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s 2 Blackstar rocket launchers can be replaced with 2 stormstrike missile launchers."
-                    },
-                    {
-                        "datasheetId": "000000358",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hurricane bolter."
-                    },
-                    {
-                        "datasheetId": "000000358",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 auspex array</li><li>1 infernum halo-launcher</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 Blackstar rocket launchers; twin assault cannon; armoured hull.",
+            "parsed": [
+                "000000358:blackstar-rocket-launcher",
+                "000000358:twin-assault-cannon",
+                "000000358:armoured-hull"
+            ],
+            "byModelType": {
+                "Corvus Blackstar": [
+                    "000000358:blackstar-rocket-launcher",
+                    "000000358:twin-assault-cannon",
+                    "000000358:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000358:blackstar-rocket-launcher",
+                "datasheetId": "000000358",
                 "line": 1,
                 "name": "Blackstar rocket launcher",
                 "type": "Ranged",
@@ -144,6 +123,7 @@
             },
             {
                 "id": "000000358:hurricane-bolter",
+                "datasheetId": "000000358",
                 "line": 2,
                 "name": "Hurricane bolter",
                 "type": "Ranged",
@@ -176,6 +156,7 @@
             },
             {
                 "id": "000000358:stormstrike-missile-launcher",
+                "datasheetId": "000000358",
                 "line": 3,
                 "name": "Stormstrike missile launcher",
                 "type": "Ranged",
@@ -205,6 +186,7 @@
             },
             {
                 "id": "000000358:twin-assault-cannon",
+                "datasheetId": "000000358",
                 "line": 4,
                 "name": "Twin assault cannon",
                 "type": "Ranged",
@@ -237,6 +219,7 @@
             },
             {
                 "id": "000000358:twin-lascannon",
+                "datasheetId": "000000358",
                 "line": 5,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -268,6 +251,7 @@
             },
             {
                 "id": "000000358:armoured-hull",
+                "datasheetId": "000000358",
                 "line": 6,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -296,7 +280,259 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000358",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin assault cannon can be replaced with 1 twin lascannon."
+                },
+                {
+                    "datasheetId": "000000358",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s 2 Blackstar rocket launchers can be replaced with 2 stormstrike missile launchers."
+                },
+                {
+                    "datasheetId": "000000358",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hurricane bolter."
+                },
+                {
+                    "datasheetId": "000000358",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 auspex array</li><li>1 infernum halo-launcher</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000358:auspex-array",
+                "name": "Auspex Array",
+                "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
+                "mechanics": [
+                    {
+                        "name": "Auspex Array",
+                        "entity": "thisUnit",
+                        "effect": "addsWeaponAttribute",
+                        "weaponAttributes": [
+                            "IGNORES COVER"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Auspex Array",
+                        "entity": "thisUnit",
+                        "effect": "addsAbility",
+                        "abilities": [
+                            "IGNORES COVER"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000000358:infernum-halo-launcher",
+                "name": "Infernum Halo-launcher",
+                "description": "The bearer has the SMOKE keyword.",
+                "mechanics": [
+                    {
+                        "name": "Infernum Halo-launcher",
+                        "entity": "thisUnit",
+                        "effect": "addsKeyword",
+                        "keywords": [
+                            "SMOKE"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:hurricane-bolter"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:hurricane-bolter",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:hurricane-bolter",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:stormstrike-missile-launcher"
+                    ],
+                    [
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:hurricane-bolter"
+                    ],
+                    [
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:hurricane-bolter",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:twin-assault-cannon",
+                        "000000358:armoured-hull",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:hurricane-bolter",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:hurricane-bolter"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:hurricane-bolter",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:blackstar-rocket-launcher",
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:hurricane-bolter",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:stormstrike-missile-launcher"
+                    ],
+                    [
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:infernum-halo-launcher"
+                    ],
+                    [
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:hurricane-bolter"
+                    ],
+                    [
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:hurricane-bolter",
+                        "000000358:auspex-array"
+                    ],
+                    [
+                        "000000358:armoured-hull",
+                        "000000358:twin-lascannon",
+                        "000000358:stormstrike-missile-launcher",
+                        "000000358:hurricane-bolter",
+                        "000000358:infernum-halo-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",
@@ -374,53 +610,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Auspex Array",
-            "legend": "",
-            "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Auspex Array",
-                    "entity": "thisUnit",
-                    "effect": "addsWeaponAttribute",
-                    "weaponAttributes": [
-                        "IGNORES COVER"
-                    ],
-                    "value": true
-                },
-                {
-                    "name": "Auspex Array",
-                    "entity": "thisUnit",
-                    "effect": "addsAbility",
-                    "abilities": [
-                        "IGNORES COVER"
-                    ],
-                    "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Infernum Halo-launcher",
-            "legend": "",
-            "description": "The bearer has the <span class=\"kwb\">SMOKE</span> keyword.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Infernum Halo-launcher",
-                    "entity": "thisUnit",
-                    "effect": "addsKeyword",
-                    "keywords": [
-                        "SMOKE"
-                    ],
-                    "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

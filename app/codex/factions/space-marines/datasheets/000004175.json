@@ -70,48 +70,30 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Kill Team Sergeant is equipped with:</b> plasma pistol; power weapon.<br><br><b>Each Gravis Veteran is equipped with:</b> infernus heavy bolter; bolt pistol; close combat weapon.<br><br><b>For every 5 models in the unit, 1 Deathwatch Veteran is equipped with:</b> stalker bolt rifle; bolt pistol; close combat weapon.<br><br><b>For every 5 models in the unit, 1 Deathwatch Veteran is equipped with:</b> bolt pistol; heavy thunder hammer.<br><br><b>For every 5 models in the unit, 1 Deathwatch Veteran is equipped with:</b> Deathwatch marksman bolt carbine; special-issue bolt pistol; close combat weapon.<br><br><b>If the unit contains 10 models, 1 Deathwatch Veteran is equipped with:</b> special-issue bolt pistol; xenophase blade.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004175",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 5 models in the unit, up to 1 model’s infernus heavy bolter can be replaced with one of the following:<ul><li>1 frag cannon.</li><li>1 hellstorm bolt rifle and 1 Astartes grenade launcher.</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000004175",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 5 models in the unit, up to 1 model’s heavy thunder hammer can be replaced with 1 power weapon and 1 Astartes shield."
-                    },
-                    {
-                        "datasheetId": "000004175",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in the unit, up to 1 model’s stalker bolt rifle can be replaced with 1 plasma incinerator."
-                    },
-                    {
-                        "datasheetId": "000004175",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 5 models in the unit, up to 1 model’s Deathwatch marksman bolt carbine can be replaced with 1 combat knife."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Kill Team Sergeant is equipped with:</b> plasma pistol; power weapon.<br><br><b>Each Gravis Veteran is equipped with:</b> infernus heavy bolter; bolt pistol; close combat weapon.<br><br><b>For every 5 models in the unit, 1 Deathwatch Veteran is equipped with:</b> stalker bolt rifle; bolt pistol; close combat weapon.<br><br><b>For every 5 models in the unit, 1 Deathwatch Veteran is equipped with:</b> bolt pistol; heavy thunder hammer.<br><br><b>For every 5 models in the unit, 1 Deathwatch Veteran is equipped with:</b> Deathwatch marksman bolt carbine; special-issue bolt pistol; close combat weapon.<br><br><b>If the unit contains 10 models, 1 Deathwatch Veteran is equipped with:</b> special-issue bolt pistol; xenophase blade.",
+            "parsed": [
+                "000004175:plasma-pistol",
+                "000004175:power-weapon"
+            ],
+            "byModelType": {
+                "Kill Team Sergeant": [
+                    "000004175:plasma-pistol",
+                    "000004175:power-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Gravis Veteran": [
+                    "000004175:infernus-heavy-bolter",
+                    "000004175:bolt-pistol",
+                    "000004175:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000004175:astartes-grenade-launcher-frag",
+                "id": "000004175:astartes-grenade-launcher",
+                "datasheetId": "000004175",
                 "line": 1,
-                "name": "Astartes grenade launcher – frag",
+                "name": "Astartes grenade launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -119,7 +101,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Astartes grenade launcher – frag",
+                        "name": "Astartes grenade launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -130,27 +113,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004175:astartes-grenade-launcher-krak",
-                "line": 1,
-                "name": "Astartes grenade launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004175",
                         "line": 1,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Astartes grenade launcher – krak",
+                        "name": "Astartes grenade launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 24,
                         "type": "Ranged",
@@ -163,13 +133,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:bolt-pistol",
+                "datasheetId": "000004175",
                 "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -195,13 +168,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Gravis Veteran"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:deathwatch-marksman-bolt-carbine",
+                "datasheetId": "000004175",
                 "line": 3,
                 "name": "Deathwatch marksman bolt carbine",
                 "type": "Ranged",
@@ -234,6 +211,7 @@
             },
             {
                 "id": "000004175:frag-cannon",
+                "datasheetId": "000004175",
                 "line": 4,
                 "name": "Frag cannon",
                 "type": "Ranged",
@@ -261,13 +239,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:hellstorm-bolt-rifle",
+                "datasheetId": "000004175",
                 "line": 5,
                 "name": "Hellstorm bolt rifle",
                 "type": "Ranged",
@@ -294,15 +275,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004175:infernus-heavy-bolter-heavy-bolter",
+                "id": "000004175:infernus-heavy-bolter",
+                "datasheetId": "000004175",
                 "line": 6,
-                "name": "Infernus heavy bolter – heavy bolter",
+                "name": "Infernus heavy bolter",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -310,7 +294,8 @@
                         "line": 6,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Infernus heavy bolter – heavy bolter",
+                        "name": "Infernus heavy bolter - heavy bolter",
+                        "profileName": "heavy bolter",
                         "attributes": [
                             "SUSTAINED HITS 1"
                         ],
@@ -321,27 +306,14 @@
                         "s": 5,
                         "ap": -2,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004175:infernus-heavy-bolter-heavy-flamer",
-                "line": 6,
-                "name": "Infernus heavy bolter – heavy flamer",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004175",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Infernus heavy bolter – heavy flamer",
+                        "name": "Infernus heavy bolter - heavy flamer",
+                        "profileName": "heavy flamer",
                         "attributes": [
                             "IGNORES COVER",
                             "TORRENT"
@@ -349,7 +321,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -357,15 +329,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Gravis Veteran"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004175:plasma-incinerator-standard",
+                "id": "000004175:plasma-incinerator",
+                "datasheetId": "000004175",
                 "line": 7,
-                "name": "Plasma incinerator – standard",
+                "name": "Plasma incinerator",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -373,7 +349,8 @@
                         "line": 7,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma incinerator – standard",
+                        "name": "Plasma incinerator - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "ASSAULT",
                             "HEAVY"
@@ -385,27 +362,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004175:plasma-incinerator-supercharge",
-                "line": 8,
-                "name": "Plasma incinerator – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004175",
                         "line": 8,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma incinerator – supercharge",
+                        "name": "Plasma incinerator - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "ASSAULT",
                             "HAZARDOUS",
@@ -422,13 +386,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:plasma-pistol",
+                "datasheetId": "000004175",
                 "line": 9,
                 "name": "Plasma pistol",
                 "type": "Ranged",
@@ -473,13 +440,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:special-issue-bolt-pistol",
+                "datasheetId": "000004175",
                 "line": 10,
                 "name": "Special-issue bolt pistol",
                 "type": "Ranged",
@@ -513,6 +484,7 @@
             },
             {
                 "id": "000004175:stalker-bolt-rifle",
+                "datasheetId": "000004175",
                 "line": 11,
                 "name": "Stalker bolt rifle",
                 "type": "Ranged",
@@ -546,6 +518,7 @@
             },
             {
                 "id": "000004175:close-combat-weapon",
+                "datasheetId": "000004175",
                 "line": 12,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -568,13 +541,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Gravis Veteran"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:combat-knife",
+                "datasheetId": "000004175",
                 "line": 13,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -599,13 +576,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:heavy-thunder-hammer",
+                "datasheetId": "000004175",
                 "line": 14,
                 "name": "Heavy thunder hammer",
                 "type": "Melee",
@@ -637,6 +617,7 @@
             },
             {
                 "id": "000004175:power-weapon",
+                "datasheetId": "000004175",
                 "line": 15,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -661,13 +642,22 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004175:xenophase-blade",
+                "datasheetId": "000004175",
                 "line": 16,
                 "name": "Xenophase blade",
                 "type": "Melee",
@@ -698,7 +688,81 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004175",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 5 models in the unit, up to 1 model’s infernus heavy bolter can be replaced with one of the following:<ul><li>1 frag cannon.</li><li>1 hellstorm bolt rifle and 1 Astartes grenade launcher.</li></ul>"
+                },
+                {
+                    "datasheetId": "000004175",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 5 models in the unit, up to 1 model’s heavy thunder hammer can be replaced with 1 power weapon and 1 Astartes shield."
+                },
+                {
+                    "datasheetId": "000004175",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in the unit, up to 1 model’s stalker bolt rifle can be replaced with 1 plasma incinerator."
+                },
+                {
+                    "datasheetId": "000004175",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 5 models in the unit, up to 1 model’s Deathwatch marksman bolt carbine can be replaced with 1 combat knife."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000004175:astartes-shield",
+                "name": "Astartes Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Astartes Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Kill Team Sergeant",
+                "items": [
+                    [
+                        "000004175:plasma-pistol",
+                        "000004175:power-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Gravis Veteran",
+                "items": [
+                    [
+                        "000004175:infernus-heavy-bolter",
+                        "000004175:bolt-pistol",
+                        "000004175:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",
@@ -825,23 +889,6 @@
                     "effect": "reroll",
                     "attribute": "hit",
                     "value": 1
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Astartes Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Astartes Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
                 }
             ],
             "mechanicsSource": "regex"

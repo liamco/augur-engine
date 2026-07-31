@@ -55,58 +55,34 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Deathwing Ancient is equipped with:</b> storm bolter; power fist. <br><br><b>The Deathwing Apothecary is equipped with:</b> storm bolter; chainfist. <br><br><b>The Deathwing Champion is equipped with:</b> halberd of Caliban. <br><br><b>Every Deathwing Command Terminator is equipped with:</b> storm bolter; power fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002302",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of Deathwing Command Terminators can each have their storm bolter and power fist replaced with one of the following:<ul><li>1 twin lightning claws</li><li>1 thunder hammer and 1 storm shield</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002302",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of Deathwing Command Terminators can each have their power fist replaced with 1 chainfist."
-                    },
-                    {
-                        "datasheetId": "000002302",
-                        "line": 3,
-                        "button": "•",
-                        "description": "1 Deathwing Command Terminator’s power fist can be replaced with 1 power weapon."
-                    },
-                    {
-                        "datasheetId": "000002302",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Deathwing Command Terminator can replace its storm bolter with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002302",
-                        "line": 5,
-                        "button": "•",
-                        "description": "This unit can be equipped with 1 Watcher in the Dark.*"
-                    },
-                    {
-                        "datasheetId": "000002302",
-                        "line": 6,
-                        "button": "*",
-                        "description": "* The rules for a Watcher in the Dark can be found on the Deathwing Knights datasheet."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Deathwing Ancient is equipped with:</b> storm bolter; power fist. <br><br><b>The Deathwing Apothecary is equipped with:</b> storm bolter; chainfist. <br><br><b>The Deathwing Champion is equipped with:</b> halberd of Caliban. <br><br><b>Every Deathwing Command Terminator is equipped with:</b> storm bolter; power fist.",
+            "parsed": [
+                "000002302:storm-bolter",
+                "000002302:power-fist"
+            ],
+            "byModelType": {
+                "Deathwing Ancient": [
+                    "000002302:storm-bolter",
+                    "000002302:power-fist"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Deathwing Apothecary": [
+                    "000002302:storm-bolter",
+                    "000002302:chainfist"
+                ],
+                "Deathwing Champion": [
+                    "000002302:halberd-of-caliban"
+                ],
+                "Deathwing Command Terminator": [
+                    "000002302:storm-bolter",
+                    "000002302:power-fist"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002302:assault-cannon",
+                "datasheetId": "000002302",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -131,15 +107,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000002302:cyclone-missile-launcher-frag",
+                "id": "000002302:cyclone-missile-launcher",
+                "datasheetId": "000002302",
                 "line": 2,
-                "name": "Cyclone missile launcher – frag",
+                "name": "Cyclone missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -147,7 +126,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Cyclone missile launcher – frag",
+                        "name": "Cyclone missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -158,27 +138,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002302:cyclone-missile-launcher-krak",
-                "line": 3,
-                "name": "Cyclone missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002302",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Cyclone missile launcher – krak",
+                        "name": "Cyclone missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -191,13 +158,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002302:heavy-flamer",
+                "datasheetId": "000002302",
                 "line": 4,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -215,7 +185,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -223,15 +193,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000002302:plasma-cannon-standard",
+                "id": "000002302:plasma-cannon",
+                "datasheetId": "000002302",
                 "line": 5,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -239,7 +212,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -250,27 +224,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002302:plasma-cannon-supercharge",
-                "line": 6,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002302",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -286,13 +247,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002302:storm-bolter",
+                "datasheetId": "000002302",
                 "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -317,13 +281,24 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Deathwing Ancient",
+                            "Deathwing Apothecary",
+                            "Deathwing Command Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002302:chainfist",
+                "datasheetId": "000002302",
                 "line": 8,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -355,6 +330,7 @@
             },
             {
                 "id": "000002302:halberd-of-caliban",
+                "datasheetId": "000002302",
                 "line": 9,
                 "name": "Halberd of Caliban",
                 "type": "Melee",
@@ -379,13 +355,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Deathwing Champion"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002302:power-fist",
+                "datasheetId": "000002302",
                 "line": 10,
                 "name": "Power fist",
                 "type": "Melee",
@@ -408,13 +388,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Deathwing Ancient",
+                            "Deathwing Command Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002302:power-weapon",
+                "datasheetId": "000002302",
                 "line": 11,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -437,13 +422,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Deathwing Command Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002302:thunder-hammer",
+                "datasheetId": "000002302",
                 "line": 12,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -475,6 +465,7 @@
             },
             {
                 "id": "000002302:twin-lightning-claws",
+                "datasheetId": "000002302",
                 "line": 13,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -505,7 +496,221 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002302",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of Deathwing Command Terminators can each have their storm bolter and power fist replaced with one of the following:<ul><li>1 twin lightning claws</li><li>1 thunder hammer and 1 storm shield</li></ul>"
+                },
+                {
+                    "datasheetId": "000002302",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of Deathwing Command Terminators can each have their power fist replaced with 1 chainfist."
+                },
+                {
+                    "datasheetId": "000002302",
+                    "line": 3,
+                    "button": "•",
+                    "description": "1 Deathwing Command Terminator’s power fist can be replaced with 1 power weapon."
+                },
+                {
+                    "datasheetId": "000002302",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Deathwing Command Terminator can replace its storm bolter with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)</li></ul>"
+                },
+                {
+                    "datasheetId": "000002302",
+                    "line": 5,
+                    "button": "•",
+                    "description": "This unit can be equipped with 1 Watcher in the Dark.*"
+                },
+                {
+                    "datasheetId": "000002302",
+                    "line": 6,
+                    "button": "*",
+                    "description": "* The rules for a Watcher in the Dark can be found on the Deathwing Knights datasheet."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002302:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 4.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Deathwing Ancient",
+                "items": [
+                    [
+                        "000002302:storm-bolter",
+                        "000002302:power-fist"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:assault-cannon"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:heavy-flamer"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:plasma-cannon"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:storm-bolter",
+                        "000002302:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000002302:storm-bolter",
+                        "000002302:chainfist"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:assault-cannon"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:heavy-flamer"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:plasma-cannon"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:storm-bolter",
+                        "000002302:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000002302:twin-lightning-claws"
+                    ],
+                    [
+                        "000002302:thunder-hammer",
+                        "000002302:storm-shield"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwing Apothecary",
+                "items": [
+                    [
+                        "000002302:storm-bolter",
+                        "000002302:chainfist"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:assault-cannon"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:heavy-flamer"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:plasma-cannon"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:storm-bolter",
+                        "000002302:cyclone-missile-launcher"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwing Champion",
+                "items": [
+                    [
+                        "000002302:halberd-of-caliban"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwing Command Terminator",
+                "items": [
+                    [
+                        "000002302:storm-bolter",
+                        "000002302:power-fist"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:assault-cannon"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:heavy-flamer"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:plasma-cannon"
+                    ],
+                    [
+                        "000002302:power-fist",
+                        "000002302:storm-bolter",
+                        "000002302:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000002302:storm-bolter",
+                        "000002302:power-weapon"
+                    ],
+                    [
+                        "000002302:power-weapon",
+                        "000002302:assault-cannon"
+                    ],
+                    [
+                        "000002302:power-weapon",
+                        "000002302:heavy-flamer"
+                    ],
+                    [
+                        "000002302:power-weapon",
+                        "000002302:plasma-cannon"
+                    ],
+                    [
+                        "000002302:power-weapon",
+                        "000002302:storm-bolter",
+                        "000002302:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000002302:storm-bolter",
+                        "000002302:chainfist"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:assault-cannon"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:heavy-flamer"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:plasma-cannon"
+                    ],
+                    [
+                        "000002302:chainfist",
+                        "000002302:storm-bolter",
+                        "000002302:cyclone-missile-launcher"
+                    ],
+                    [
+                        "000002302:twin-lightning-claws"
+                    ],
+                    [
+                        "000002302:thunder-hammer",
+                        "000002302:storm-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "dark-angels",
@@ -581,15 +786,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 4.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Narthecium",

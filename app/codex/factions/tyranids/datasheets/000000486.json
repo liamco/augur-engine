@@ -68,21 +68,29 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> drool cannon; stinger salvoes; tentaclids; scything wings; thorax spur.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> drool cannon; stinger salvoes; tentaclids; scything wings; thorax spur.",
+            "parsed": [
+                "000000486:drool-cannon",
+                "000000486:stinger-salvoes",
+                "000000486:tentaclids",
+                "000000486:scything-wings",
+                "000000486:thorax-spur"
+            ],
+            "byModelType": {
+                "Hive Crone": [
+                    "000000486:drool-cannon",
+                    "000000486:stinger-salvoes",
+                    "000000486:tentaclids",
+                    "000000486:scything-wings",
+                    "000000486:thorax-spur"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000486:drool-cannon",
+                "datasheetId": "000000486",
                 "line": 1,
                 "name": "Drool cannon",
                 "type": "Ranged",
@@ -99,7 +107,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -114,6 +122,7 @@
             },
             {
                 "id": "000000486:stinger-salvoes",
+                "datasheetId": "000000486",
                 "line": 2,
                 "name": "Stinger salvoes",
                 "type": "Ranged",
@@ -143,6 +152,7 @@
             },
             {
                 "id": "000000486:tentaclids",
+                "datasheetId": "000000486",
                 "line": 3,
                 "name": "Tentaclids",
                 "type": "Ranged",
@@ -175,6 +185,7 @@
             },
             {
                 "id": "000000486:scything-wings",
+                "datasheetId": "000000486",
                 "line": 4,
                 "name": "Scything wings",
                 "type": "Melee",
@@ -204,6 +215,7 @@
             },
             {
                 "id": "000000486:thorax-spur",
+                "datasheetId": "000000486",
                 "line": 5,
                 "name": "Thorax spur",
                 "type": "Melee",
@@ -235,7 +247,25 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000486:drool-cannon",
+                        "000000486:stinger-salvoes",
+                        "000000486:tentaclids",
+                        "000000486:scything-wings",
+                        "000000486:thorax-spur"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

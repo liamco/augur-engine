@@ -53,28 +53,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 bio-cannons; Hierodule scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000503",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 bio-cannons; Hierodule scything talons.",
+            "parsed": [
+                "000000503:bio-cannon",
+                "000000503:hierodule-scything-talons"
+            ],
+            "byModelType": {
+                "Barbed Hierodule": [
+                    "000000503:bio-cannon",
+                    "000000503:hierodule-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000503:bio-cannon",
+                "datasheetId": "000000503",
                 "line": 1,
                 "name": "Bio-cannon",
                 "type": "Ranged",
@@ -106,6 +101,7 @@
             },
             {
                 "id": "000000503:hierodule-scything-talons",
+                "datasheetId": "000000503",
                 "line": 2,
                 "name": "Hierodule scything talons",
                 "type": "Melee",
@@ -134,7 +130,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000503",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000503:bio-cannon",
+                        "000000503:hierodule-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

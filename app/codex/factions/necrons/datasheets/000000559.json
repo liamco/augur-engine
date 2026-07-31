@@ -45,28 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> cutting beam; voidblade.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000559",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> cutting beam; voidblade.",
+            "parsed": [
+                "000000559:cutting-beam",
+                "000000559:voidblade"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000559:cutting-beam",
+                    "000000559:voidblade"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000559:cutting-beam",
+                "datasheetId": "000000559",
                 "line": 1,
                 "name": "Cutting beam",
                 "type": "Ranged",
@@ -98,6 +93,7 @@
             },
             {
                 "id": "000000559:voidblade",
+                "datasheetId": "000000559",
                 "line": 2,
                 "name": "Voidblade",
                 "type": "Melee",
@@ -126,7 +122,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000559",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000559:cutting-beam",
+                        "000000559:voidblade"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

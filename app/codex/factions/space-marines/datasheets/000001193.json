@@ -45,34 +45,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> grav-cannon; Centurion bolters; Centurion fists.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001193",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their Centurion bolters replaced with 1 Centurion missile launcher."
-                    },
-                    {
-                        "datasheetId": "000001193",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their grav-cannon replaced with one of the following:<ul><li>1 twin heavy bolter</li><li>1 twin lascannon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> grav-cannon; Centurion bolters; Centurion fists.",
+            "parsed": [
+                "000001193:grav-cannon",
+                "000001193:centurion-bolters",
+                "000001193:centurion-fists"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001193:grav-cannon",
+                    "000001193:centurion-bolters",
+                    "000001193:centurion-fists"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001193:centurion-bolters",
+                "datasheetId": "000001193",
                 "line": 1,
                 "name": "Centurion bolters",
                 "type": "Ranged",
@@ -105,6 +96,7 @@
             },
             {
                 "id": "000001193:centurion-missile-launcher",
+                "datasheetId": "000001193",
                 "line": 2,
                 "name": "Centurion missile launcher",
                 "type": "Ranged",
@@ -136,6 +128,7 @@
             },
             {
                 "id": "000001193:grav-cannon",
+                "datasheetId": "000001193",
                 "line": 3,
                 "name": "Grav-cannon",
                 "type": "Ranged",
@@ -167,6 +160,7 @@
             },
             {
                 "id": "000001193:twin-heavy-bolter",
+                "datasheetId": "000001193",
                 "line": 4,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -199,6 +193,7 @@
             },
             {
                 "id": "000001193:twin-lascannon",
+                "datasheetId": "000001193",
                 "line": 5,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -230,6 +225,7 @@
             },
             {
                 "id": "000001193:centurion-fists",
+                "datasheetId": "000001193",
                 "line": 6,
                 "name": "Centurion fists",
                 "type": "Melee",
@@ -258,7 +254,61 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001193",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their Centurion bolters replaced with 1 Centurion missile launcher."
+                },
+                {
+                    "datasheetId": "000001193",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their grav-cannon replaced with one of the following:<ul><li>1 twin heavy bolter</li><li>1 twin lascannon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001193:grav-cannon",
+                        "000001193:centurion-bolters",
+                        "000001193:centurion-fists"
+                    ],
+                    [
+                        "000001193:centurion-bolters",
+                        "000001193:centurion-fists",
+                        "000001193:twin-heavy-bolter"
+                    ],
+                    [
+                        "000001193:centurion-bolters",
+                        "000001193:centurion-fists",
+                        "000001193:twin-lascannon"
+                    ],
+                    [
+                        "000001193:grav-cannon",
+                        "000001193:centurion-fists",
+                        "000001193:centurion-missile-launcher"
+                    ],
+                    [
+                        "000001193:centurion-fists",
+                        "000001193:centurion-missile-launcher",
+                        "000001193:twin-heavy-bolter"
+                    ],
+                    [
+                        "000001193:centurion-fists",
+                        "000001193:centurion-missile-launcher",
+                        "000001193:twin-lascannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

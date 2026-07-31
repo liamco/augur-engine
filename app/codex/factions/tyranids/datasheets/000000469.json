@@ -50,21 +50,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Hormagaunt talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Hormagaunt talons.",
+            "parsed": [
+                "000000469:hormagaunt-talons"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000469:hormagaunt-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000469:hormagaunt-talons",
+                "datasheetId": "000000469",
                 "line": 1,
                 "name": "Hormagaunt talons",
                 "type": "Melee",
@@ -93,7 +93,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000469:hormagaunt-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

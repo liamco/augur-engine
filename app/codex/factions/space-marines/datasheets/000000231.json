@@ -55,40 +55,24 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Knight Master is equipped with:</b> great weapon of the Unforgiven.<br><br><b>Every Deathwing Knight is equipped with:</b> mace of absolution.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000231",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Knight Master’s great weapon of the Unforgiven can be replaced with 1 relic weapon."
-                    },
-                    {
-                        "datasheetId": "000000231",
-                        "line": 2,
-                        "button": "•",
-                        "description": "All Deathwing Knights in this unit can each have their mace of absolution replaced with 1 power weapon."
-                    },
-                    {
-                        "datasheetId": "000000231",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This unit can be equipped with 1 Watcher in the Dark."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Knight Master is equipped with:</b> great weapon of the Unforgiven.<br><br><b>Every Deathwing Knight is equipped with:</b> mace of absolution.",
+            "parsed": [
+                "000000231:great-weapon-of-the-unforgiven"
+            ],
+            "byModelType": {
+                "Knight Master": [
+                    "000000231:great-weapon-of-the-unforgiven"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Deathwing Knight": [
+                    "000000231:mace-of-absolution"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000231:great-weapon-of-the-unforgiven",
+                "datasheetId": "000000231",
                 "line": 1,
                 "name": "Great weapon of the Unforgiven",
                 "type": "Melee",
@@ -114,13 +98,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Knight Master"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000231:mace-of-absolution",
+                "datasheetId": "000000231",
                 "line": 2,
                 "name": "Mace of absolution",
                 "type": "Melee",
@@ -146,13 +134,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Deathwing Knight"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000231:power-weapon",
+                "datasheetId": "000000231",
                 "line": 3,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -182,6 +174,7 @@
             },
             {
                 "id": "000000231:relic-weapon",
+                "datasheetId": "000000231",
                 "line": 4,
                 "name": "Relic weapon",
                 "type": "Melee",
@@ -206,13 +199,80 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Knight Master"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000231",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Knight Master’s great weapon of the Unforgiven can be replaced with 1 relic weapon."
+                },
+                {
+                    "datasheetId": "000000231",
+                    "line": 2,
+                    "button": "•",
+                    "description": "All Deathwing Knights in this unit can each have their mace of absolution replaced with 1 power weapon."
+                },
+                {
+                    "datasheetId": "000000231",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This unit can be equipped with 1 Watcher in the Dark."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000231:watcher-in-the-dark",
+                "name": "Watcher in the Dark",
+                "description": "Once per battle, in any phase, just after a mortal wound is allocated to an ADEPTUS ASTARTES model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds. Designer's Note: Place a Watcher in the Dark token next to the unit, removing it when this ability has been used.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Knight Master",
+                "items": [
+                    [
+                        "000000231:great-weapon-of-the-unforgiven"
+                    ],
+                    [
+                        "000000231:great-weapon-of-the-unforgiven",
+                        "000000231:watcher-in-the-dark"
+                    ],
+                    [
+                        "000000231:relic-weapon"
+                    ],
+                    [
+                        "000000231:relic-weapon",
+                        "000000231:watcher-in-the-dark"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwing Knight",
+                "items": [
+                    [
+                        "000000231:mace-of-absolution"
+                    ],
+                    [
+                        "000000231:mace-of-absolution",
+                        "000000231:watcher-in-the-dark"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "dark-angels",
@@ -288,22 +348,13 @@
             "description": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Watcher in the Dark",
-            "legend": "",
-            "description": "Once per battle, in any phase, just after a mortal wound is allocated to an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds.<br><br><b>Designer’s Note:</b> Place a Watcher in the Dark token next to the unit, removing it when this ability has been used.",
-            "type": "Datasheet",
-            "parameter": null,
             "mechanics": [
                 {
-                    "name": "Watcher in the Dark",
+                    "name": "Inner Circle",
                     "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
                 }
             ],
             "mechanicsSource": "regex"

@@ -40,21 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bio-plasmic scream; Screamer-Killer talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bio-plasmic scream; Screamer-Killer talons.",
+            "parsed": [
+                "000002690:bio-plasmic-scream",
+                "000002690:screamer-killer-talons"
+            ],
+            "byModelType": {
+                "Screamer-Killer": [
+                    "000002690:bio-plasmic-scream",
+                    "000002690:screamer-killer-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002690:bio-plasmic-scream",
+                "datasheetId": "000002690",
                 "line": 1,
                 "name": "Bio-plasmic scream",
                 "type": "Ranged",
@@ -87,6 +89,7 @@
             },
             {
                 "id": "000002690:screamer-killer-talons",
+                "datasheetId": "000002690",
                 "line": 2,
                 "name": "Screamer-killer talons",
                 "type": "Melee",
@@ -115,7 +118,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002690:bio-plasmic-scream",
+                        "000002690:screamer-killer-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

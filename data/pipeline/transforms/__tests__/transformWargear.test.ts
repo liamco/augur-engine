@@ -58,11 +58,15 @@ describe("transformWargear", () => {
         expect(weapon.profiles[0].line).toBe(1);
     });
 
-    it("removes datasheetId from weapon level but keeps line", () => {
+    it("keeps datasheetId and line at weapon level", () => {
         const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
         const weapon = result.weapons[0] as unknown as Record<string, unknown>;
 
-        expect(weapon).not.toHaveProperty("datasheetId");
+        // datasheetId was previously trimmed here as redundant — it prefixes the
+        // id and repeats on every profile. It is emitted again because the
+        // agreed wargear shape carries it, and a consumer holding a weapon alone
+        // should not have to parse the id to learn which datasheet it came from.
+        expect(weapon.datasheetId).toBe("000002694");
         // line is NOT recoverable from array position: 94 of 2198 weapons in the
         // source have a line that differs from their index.
         expect(weapon.line).toBe(1);
@@ -110,19 +114,41 @@ describe("transformWargear", () => {
         expect(profile).not.toHaveProperty("description");
     });
 
-    it("sets up loadouts structure with empty parsed fields", () => {
+    it("keeps the default loadout's raw text", () => {
         const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
+        expect(result.defaultLoadout.raw).toBe(loadoutHtml);
+    });
 
-        expect(result.loadouts.default.raw).toBe(loadoutHtml);
-        expect(result.loadouts.default.parsed).toEqual([]);
-        expect(result.loadouts.default.byModelType).toEqual({});
-        expect(result.loadouts.options.parsed).toEqual([]);
+    it("enumerates loadouts and reports whether they can be trusted", () => {
+        // An empty validLoadouts must never read as "this unit has no legal
+        // loadouts" — loadoutsParsed is what says the list is complete.
+        const result = transformWargear(rawWeapons, loadoutHtml, rawOptions, [
+            { line: 1, description: "1 Winged Tyranid Prime", min: 1, max: 1 },
+        ]);
+        expect(Array.isArray(result.validLoadouts)).toBe(true);
+        expect(typeof result.loadoutsParsed).toBe("boolean");
+        // The fixture's only option is "None", so there is exactly the default.
+        expect(result.loadoutsParsed).toBe(true);
+        expect(result.validLoadouts).toHaveLength(1);
+        expect(result.validLoadouts[0].items).toHaveLength(1);
+    });
+
+    it("gives every weapon at least one eligibility rule", () => {
+        const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
+        for (const weapon of result.weapons) {
+            expect(weapon.eligibility.length).toBeGreaterThan(0);
+        }
+    });
+
+    it("carries the datasheetId onto each weapon", () => {
+        const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
+        expect(result.weapons[0].datasheetId).toBe("000002694");
     });
 
     it("transforms options with parsed line numbers", () => {
         const result = transformWargear(rawWeapons, loadoutHtml, rawOptions);
 
-        expect(result.loadouts.options.raw).toEqual([
+        expect(result.options.raw).toEqual([
             {
                 datasheetId: "000002694",
                 line: 1,

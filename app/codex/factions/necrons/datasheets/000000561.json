@@ -58,21 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin tesla destructor; armoured bulk",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin tesla destructor; armoured bulk",
+            "parsed": [
+                "000000561:twin-tesla-destructor",
+                "000000561:armoured-bulk"
+            ],
+            "byModelType": {
+                "Night Shroud": [
+                    "000000561:twin-tesla-destructor",
+                    "000000561:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000561:twin-tesla-destructor",
+                "datasheetId": "000000561",
                 "line": 1,
                 "name": "Twin tesla destructor",
                 "type": "Ranged",
@@ -105,6 +107,7 @@
             },
             {
                 "id": "000000561:armoured-bulk",
+                "datasheetId": "000000561",
                 "line": 2,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -133,7 +136,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000561:twin-tesla-destructor",
+                        "000000561:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

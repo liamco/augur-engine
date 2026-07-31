@@ -55,28 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> assault bolters; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000125",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their assault bolters replaced with 1 plasma exterminators."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> assault bolters; close combat weapon.",
+            "parsed": [
+                "000000125:assault-bolters",
+                "000000125:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000125:assault-bolters",
+                    "000000125:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000125:assault-bolters",
+                "datasheetId": "000000125",
                 "line": 1,
                 "name": "Assault bolters",
                 "type": "Ranged",
@@ -110,9 +105,10 @@
                 "count": 1
             },
             {
-                "id": "000000125:plasma-exterminators-standard",
+                "id": "000000125:plasma-exterminators",
+                "datasheetId": "000000125",
                 "line": 2,
-                "name": "Plasma exterminators – standard",
+                "name": "Plasma exterminators",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -120,7 +116,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma exterminators – standard",
+                        "name": "Plasma exterminators - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "ASSAULT",
                             "PISTOL",
@@ -133,27 +130,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000125:plasma-exterminators-supercharge",
-                "line": 3,
-                "name": "Plasma exterminators – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000125",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma exterminators – supercharge",
+                        "name": "Plasma exterminators - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "ASSAULT",
                             "PISTOL",
@@ -178,6 +162,7 @@
             },
             {
                 "id": "000000125:close-combat-weapon",
+                "datasheetId": "000000125",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -206,7 +191,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000125",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their assault bolters replaced with 1 plasma exterminators."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000125:assault-bolters",
+                        "000000125:close-combat-weapon"
+                    ],
+                    [
+                        "000000125:close-combat-weapon",
+                        "000000125:plasma-exterminators"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

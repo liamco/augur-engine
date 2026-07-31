@@ -50,28 +50,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> thunder hammer; storm shield.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000118",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their thunder hammer and storm shield replaced with 1 twin lightning claws."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> thunder hammer; storm shield.",
+            "parsed": [
+                "000000118:thunder-hammer",
+                "000000118:storm-shield"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000118:thunder-hammer",
+                    "000000118:storm-shield"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000118:thunder-hammer",
+                "datasheetId": "000000118",
                 "line": 1,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -103,6 +98,7 @@
             },
             {
                 "id": "000000118:twin-lightning-claws",
+                "datasheetId": "000000118",
                 "line": 2,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -133,7 +129,40 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000118",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their thunder hammer and storm shield replaced with 1 twin lightning claws."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000118:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 4.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000118:thunder-hammer",
+                        "000000118:storm-shield"
+                    ],
+                    [
+                        "000000118:twin-lightning-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -211,15 +240,6 @@
             "name": "Terminatus Assault",
             "legend": "",
             "description": "At the start of the Fight phase, each enemy unit within Engagement Range of this unit must take a Battle-shock test.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 4.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

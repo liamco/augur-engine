@@ -66,21 +66,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Empathic Obliterator.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Empathic Obliterator.",
+            "parsed": [
+                "000000532:empathic-obliterator"
+            ],
+            "byModelType": {
+                "Trazyn the Infinite – EPIC HERO": [
+                    "000000532:empathic-obliterator"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000532:empathic-obliterator",
+                "datasheetId": "000000532",
                 "line": 1,
                 "name": "Empathic Obliterator",
                 "type": "Melee",
@@ -111,7 +111,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000532:empathic-obliterator"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

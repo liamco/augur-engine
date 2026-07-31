@@ -77,28 +77,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Hellfire Extremis; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003872",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Hellfire Extremis; master-crafted power weapon.",
+            "parsed": [
+                "000003872:hellfire-extremis",
+                "000003872:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Watch Captain Artemi": [
+                    "000003872:hellfire-extremis",
+                    "000003872:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003872:hellfire-extremis",
+                "datasheetId": "000003872",
                 "line": 1,
                 "name": "Hellfire Extremis",
                 "type": "Ranged",
@@ -118,7 +113,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": -1,
                         "d": 1
@@ -133,6 +128,7 @@
             },
             {
                 "id": "000003872:master-crafted-power-weapon",
+                "datasheetId": "000003872",
                 "line": 2,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -161,7 +157,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003872",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003872:hellfire-extremis",
+                        "000003872:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",

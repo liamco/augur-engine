@@ -35,21 +35,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> flayer claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> flayer claws.",
+            "parsed": [
+                "000000538:flayer-claws"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000538:flayer-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000538:flayer-claws",
+                "datasheetId": "000000538",
                 "line": 1,
                 "name": "Flayer claws",
                 "type": "Melee",
@@ -81,7 +81,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000538:flayer-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

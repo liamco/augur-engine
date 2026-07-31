@@ -50,28 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolter; Typhoon missile launcher; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002102",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy bolter can be replaced with 1 multi-melta."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolter; Typhoon missile launcher; close combat weapon.",
+            "parsed": [
+                "000002102:heavy-bolter",
+                "000002102:typhoon-missile-launcher",
+                "000002102:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Land Speeder Typhoon": [
+                    "000002102:heavy-bolter",
+                    "000002102:typhoon-missile-launcher",
+                    "000002102:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002102:heavy-bolter",
+                "datasheetId": "000002102",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -103,6 +100,7 @@
             },
             {
                 "id": "000002102:multi-melta",
+                "datasheetId": "000002102",
                 "line": 2,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -133,9 +131,10 @@
                 "count": 1
             },
             {
-                "id": "000002102:typhoon-missile-launcher-frag",
+                "id": "000002102:typhoon-missile-launcher",
+                "datasheetId": "000002102",
                 "line": 3,
-                "name": "Typhoon missile launcher – frag",
+                "name": "Typhoon missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -143,7 +142,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Typhoon missile launcher – frag",
+                        "name": "Typhoon missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -154,27 +154,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002102:typhoon-missile-launcher-krak",
-                "line": 4,
-                "name": "Typhoon missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002102",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Typhoon missile launcher – krak",
+                        "name": "Typhoon missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 48,
                         "type": "Ranged",
@@ -194,6 +181,7 @@
             },
             {
                 "id": "000002102:close-combat-weapon",
+                "datasheetId": "000002102",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -222,7 +210,35 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002102",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy bolter can be replaced with 1 multi-melta."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002102:heavy-bolter",
+                        "000002102:typhoon-missile-launcher",
+                        "000002102:close-combat-weapon"
+                    ],
+                    [
+                        "000002102:typhoon-missile-launcher",
+                        "000002102:close-combat-weapon",
+                        "000002102:multi-melta"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

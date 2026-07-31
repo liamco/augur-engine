@@ -103,4 +103,14 @@ describe("parseWeaponSkill", () => {
     it('"-" → "N/A" for torrent weapons', () => {
         expect(parseWeaponSkill("-")).toBe("N/A");
     });
+    it('"N/A" → "N/A", which is what the source actually writes', () => {
+        // parseInt("N/A") is NaN, which JSON serialises as null — 125 profiles
+        // in the codex were carrying null because only "-" was handled.
+        expect(parseWeaponSkill("N/A")).toBe("N/A");
+    });
+    it("never returns NaN for an unparseable value", () => {
+        for (const raw of ["", "n/a", "—", "?"]) {
+            expect(parseWeaponSkill(raw)).toBe("N/A");
+        }
+    });
 });

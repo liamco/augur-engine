@@ -21,8 +21,11 @@ You edit the codex **in place**, so that when you finish it is 100% engine-ready
 | rule | file | engine reads it via |
 |---|---|---|
 | datasheet ability | `app/codex/factions/*/datasheets/*.json` → `abilities[]` | `collectUnitMechanics` |
+| wargear ability | `app/codex/factions/*/datasheets/*.json` → `wargear.abilities[]` | `collectWargearMechanics` |
 | detachment ability | `app/codex/factions/*/detachments/*.json` → `abilities[]` | `collectDetachmentMechanics` |
 | Enhancement | `app/codex/factions/*/detachments/*.json` → `enhancements[]` | `collectEnhancementMechanics` |
+
+**Wargear abilities are bearer-scoped**, like Enhancements: a storm shield is carried by one model. Apply the same single-model gate (below). Their ids are also what a loadout reference resolves to, so never change an `id`.
 
 **After editing any detachment file, run `npm run reindex-detachments`.** The app reads detachments through the generated `app/codex/detachment-index.json`, so an edit that skips the reindex never reaches the engine. It re-derives the index from the codex, so it is safe to run any time — on an unmodified codex it is a no-op.
 
@@ -81,7 +84,7 @@ Find abilities with `"mechanicsSource": "unparsed"` and replace both fields in p
 
 ## Required steps
 
-1. **Get the queue.** Rules with `"mechanicsSource": "unparsed"`, in datasheets and detachments alike.
+1. **Get the queue.** Run `npm run coverage-report` and read `.claude/coverage/` — one report per category, listing every rule still lacking mechanics, grouped by rules text and ordered so the entry at the top affects the most files. Prefer this to grepping for `"mechanicsSource": "unparsed"`: the reports fold repeats together, so 786 unit abilities become 469 distinct texts, and each entry already names every file to edit.
 2. **Read the vocabulary.** `app/types/Mechanic.ts` is the only authority for `effect`, `entity`, `attribute` and `operator`. Do not invent members. Then check the attribute is one the engine consumes (below).
 3. **Check the library first.** If the rule grants an existing one, emit `addsAbility` / `addsWeaponAttribute` naming it — the rule's own mechanics live in `app/library/`. Don't restate its effects.
 4. **Edit every occurrence** of that description. Datasheet abilities repeat across datasheets; Enhancements repeat across detachments.
@@ -111,6 +114,17 @@ armourPenetration  invulnSave  attacks  damage  feelNoPain  detectionRange
 ```
 
 `wounds`, `movement`, `leadership`, `objectiveControl`, `range` and `distanceToTarget` are valid to write but **no resolver reads them** — a mechanic targeting one is inert. If a rule's whole effect is one of those, it is `needsSchema`, not `skill`.
+
+## Effects the engine cannot scope
+
+Nothing tracks *where damage came from* or *how long a rule lasts*. If the text limits the effect to a subset of attacks or a window of time, and you cannot express that with `phase` or a `condition`, it is `needsSchema`:
+
+- "Feel No Pain 4+ **against Psychic Attacks**" / "**against mortal wounds**" — extracted flat this grants the save against everything
+- "**Until the end of the phase**…", "**Once per battle**…"
+- "**On a Critical Wound**, improve the Armour Penetration characteristic" — there is no post-crit trigger
+- "**While within 6"** of this model…" — no aura ranges
+
+The regex layer already declines these (`hasUnexpressedScope` in `data/pipeline/transforms/abilityMechanics/guards.ts`); don't reintroduce them by hand.
 
 ## Setting a characteristic vs adding to it
 

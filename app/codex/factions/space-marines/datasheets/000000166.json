@@ -73,34 +73,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin Icarus ironhail heavy stubber; twin heavy bolter; blood fist bolt rifles; blood fists.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000166",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
-                    },
-                    {
-                        "datasheetId": "000000166",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model's blood fists and blood fist bolt rifles can be replaced with 1 blood talons."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin Icarus ironhail heavy stubber; twin heavy bolter; blood fist bolt rifles; blood fists.",
+            "parsed": [
+                "000000166:twin-icarus-ironhail-heavy-stubber",
+                "000000166:twin-heavy-bolter",
+                "000000166:blood-fist-bolt-rifles",
+                "000000166:blood-fists"
+            ],
+            "byModelType": {
+                "Death Company Dreadnought": [
+                    "000000166:twin-icarus-ironhail-heavy-stubber",
+                    "000000166:twin-heavy-bolter",
+                    "000000166:blood-fist-bolt-rifles",
+                    "000000166:blood-fists"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000166:blood-fist-bolt-rifles",
+                "datasheetId": "000000166",
                 "line": 1,
                 "name": "Blood fist bolt rifles",
                 "type": "Ranged",
@@ -132,6 +125,7 @@
             },
             {
                 "id": "000000166:twin-heavy-bolter",
+                "datasheetId": "000000166",
                 "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -164,6 +158,7 @@
             },
             {
                 "id": "000000166:twin-icarus-ironhail-heavy-stubber",
+                "datasheetId": "000000166",
                 "line": 3,
                 "name": "Twin Icarus ironhail heavy stubber",
                 "type": "Ranged",
@@ -197,6 +192,7 @@
             },
             {
                 "id": "000000166:twin-multi-melta",
+                "datasheetId": "000000166",
                 "line": 4,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
@@ -229,6 +225,7 @@
             },
             {
                 "id": "000000166:blood-fists",
+                "datasheetId": "000000166",
                 "line": 5,
                 "name": "Blood fists",
                 "type": "Melee",
@@ -260,6 +257,7 @@
             },
             {
                 "id": "000000166:blood-talons",
+                "datasheetId": "000000166",
                 "line": 6,
                 "name": "Blood talons",
                 "type": "Melee",
@@ -309,7 +307,53 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000166",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
+                },
+                {
+                    "datasheetId": "000000166",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model's blood fists and blood fist bolt rifles can be replaced with 1 blood talons."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000166:twin-icarus-ironhail-heavy-stubber",
+                        "000000166:twin-heavy-bolter",
+                        "000000166:blood-fist-bolt-rifles",
+                        "000000166:blood-fists"
+                    ],
+                    [
+                        "000000166:twin-icarus-ironhail-heavy-stubber",
+                        "000000166:twin-heavy-bolter",
+                        "000000166:blood-talons"
+                    ],
+                    [
+                        "000000166:twin-icarus-ironhail-heavy-stubber",
+                        "000000166:blood-fist-bolt-rifles",
+                        "000000166:blood-fists",
+                        "000000166:twin-multi-melta"
+                    ],
+                    [
+                        "000000166:twin-icarus-ironhail-heavy-stubber",
+                        "000000166:twin-multi-melta",
+                        "000000166:blood-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -375,8 +419,19 @@
             "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Black Rage",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Driven by Fury",

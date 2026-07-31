@@ -65,28 +65,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; Vanguard Veteran weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000147",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their bolt pistol replaced one of the following:<ul><li>1 storm shield</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; Vanguard Veteran weapon.",
+            "parsed": [
+                "000000147:bolt-pistol",
+                "000000147:vanguard-veteran-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000147:bolt-pistol",
+                    "000000147:vanguard-veteran-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000147:bolt-pistol",
+                "datasheetId": "000000147",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -118,6 +113,7 @@
             },
             {
                 "id": "000000147:grav-pistol",
+                "datasheetId": "000000147",
                 "line": 2,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -150,6 +146,7 @@
             },
             {
                 "id": "000000147:hand-flamer",
+                "datasheetId": "000000147",
                 "line": 3,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -168,7 +165,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -183,6 +180,7 @@
             },
             {
                 "id": "000000147:inferno-pistol",
+                "datasheetId": "000000147",
                 "line": 4,
                 "name": "Inferno pistol",
                 "type": "Ranged",
@@ -214,9 +212,10 @@
                 "count": 1
             },
             {
-                "id": "000000147:plasma-pistol-standard",
+                "id": "000000147:plasma-pistol",
+                "datasheetId": "000000147",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -224,7 +223,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -235,27 +235,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000147:plasma-pistol-supercharge",
-                "line": 6,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000147",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -278,6 +265,7 @@
             },
             {
                 "id": "000000147:vanguard-veteran-weapon",
+                "datasheetId": "000000147",
                 "line": 7,
                 "name": "Vanguard Veteran weapon",
                 "type": "Melee",
@@ -306,7 +294,53 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000147",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their bolt pistol replaced one of the following:<ul><li>1 storm shield</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000147:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000147:bolt-pistol",
+                        "000000147:vanguard-veteran-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -386,23 +420,6 @@
                         "LETHAL HITS"
                     ],
                     "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
                 }
             ],
             "mechanicsSource": "regex"

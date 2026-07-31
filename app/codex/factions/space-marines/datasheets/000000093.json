@@ -58,34 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> dreadhammer siege cannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000093",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000093",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> dreadhammer siege cannon; armoured tracks.",
+            "parsed": [
+                "000000093:dreadhammer-siege-cannon",
+                "000000093:armoured-tracks"
+            ],
+            "byModelType": {
+                "Typhon": [
+                    "000000093:dreadhammer-siege-cannon",
+                    "000000093:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000093:dreadhammer-siege-cannon",
+                "datasheetId": "000000093",
                 "line": 1,
                 "name": "Dreadhammer siege cannon",
                 "type": "Ranged",
@@ -117,6 +106,7 @@
             },
             {
                 "id": "000000093:heavy-bolter",
+                "datasheetId": "000000093",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -148,6 +138,7 @@
             },
             {
                 "id": "000000093:heavy-flamer",
+                "datasheetId": "000000093",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -165,7 +156,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -180,6 +171,7 @@
             },
             {
                 "id": "000000093:lascannon",
+                "datasheetId": "000000093",
                 "line": 4,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -209,6 +201,7 @@
             },
             {
                 "id": "000000093:multi-melta",
+                "datasheetId": "000000093",
                 "line": 5,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -240,6 +233,7 @@
             },
             {
                 "id": "000000093:storm-bolter",
+                "datasheetId": "000000093",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -271,6 +265,7 @@
             },
             {
                 "id": "000000093:armoured-tracks",
+                "datasheetId": "000000093",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -299,7 +294,102 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000093",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000000093",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:heavy-bolter"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:heavy-flamer"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:multi-melta"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:storm-bolter"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:heavy-bolter",
+                        "000000093:heavy-flamer"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:heavy-bolter",
+                        "000000093:multi-melta"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:heavy-bolter",
+                        "000000093:storm-bolter"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:lascannon"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:lascannon",
+                        "000000093:heavy-bolter"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:lascannon",
+                        "000000093:heavy-flamer"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:lascannon",
+                        "000000093:multi-melta"
+                    ],
+                    [
+                        "000000093:dreadhammer-siege-cannon",
+                        "000000093:armoured-tracks",
+                        "000000093:lascannon",
+                        "000000093:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

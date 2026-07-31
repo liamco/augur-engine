@@ -40,28 +40,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> gauss exterminator.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000562",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s gauss exterminator can be replaced with one of the following:<ul><li>1 focused death ray</li><li>1 heat cannon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> gauss exterminator.",
+            "parsed": [
+                "000000562:gauss-exterminator"
+            ],
+            "byModelType": {
+                "Sentry Pylon": [
+                    "000000562:gauss-exterminator"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000562:focused-death-ray",
+                "datasheetId": "000000562",
                 "line": 1,
                 "name": "Focused death ray",
                 "type": "Ranged",
@@ -93,6 +86,7 @@
             },
             {
                 "id": "000000562:gauss-exterminator",
+                "datasheetId": "000000562",
                 "line": 2,
                 "name": "Gauss exterminator",
                 "type": "Ranged",
@@ -124,6 +118,7 @@
             },
             {
                 "id": "000000562:heat-cannon",
+                "datasheetId": "000000562",
                 "line": 3,
                 "name": "Heat cannon",
                 "type": "Ranged",
@@ -154,7 +149,34 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000562",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s gauss exterminator can be replaced with one of the following:<ul><li>1 focused death ray</li><li>1 heat cannon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000562:gauss-exterminator"
+                    ],
+                    [
+                        "000000562:focused-death-ray"
+                    ],
+                    [
+                        "000000562:heat-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

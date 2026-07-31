@@ -13,17 +13,29 @@ import type { Pattern } from "./types";
  * A re-roll always benefits the roller, so these are attacker-side only; a
  * description that reads as imposed is declined rather than guessed at.
  */
+/**
+ * Determiners the rules text puts between "re-roll" and the roll.
+ *
+ * `the` matters most and was missing: "you can re-roll **the** Hit roll" is the
+ * commonest phrasing in the corpus by a wide margin, and without it the pattern
+ * matched none of the 30 unparsed descriptions that use it.
+ */
+const DETERMINER = "(?:a|an|the|all|that|one|any|its)\\s+";
+
 const SCOPES: { pattern: (word: string) => RegExp; value: number | string | boolean }[] = [
     {
-        pattern: (w) => new RegExp(`re-?roll\\s+(?:a\\s+|all\\s+)?${w}\\s+rolls?\\s+of\\s+1`, "i"),
+        pattern: (w) =>
+            new RegExp(`re-?roll\\s+(?:${DETERMINER})?${w}\\s+rolls?\\s+of\\s+1`, "i"),
         value: 1,
     },
     {
-        pattern: (w) => new RegExp(`re-?roll\\s+(?:all\\s+)?failed\\s+${w}\\s+rolls?`, "i"),
+        pattern: (w) =>
+            new RegExp(`re-?roll\\s+(?:${DETERMINER})?failed\\s+${w}\\s+rolls?`, "i"),
         value: "failed",
     },
     {
-        pattern: (w) => new RegExp(`re-?roll\\s+(?:all\\s+)?${w}\\s+rolls?(?!\\s+of)`, "i"),
+        pattern: (w) =>
+            new RegExp(`re-?roll\\s+(?:${DETERMINER})?${w}\\s+rolls?(?!\\s+of)`, "i"),
         value: true,
     },
 ];

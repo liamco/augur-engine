@@ -114,21 +114,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Dorn’s Arrow; Fist of Retribution.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Dorn’s Arrow; Fist of Retribution.",
+            "parsed": [
+                "000002713:dorn-s-arrow",
+                "000002713:fist-of-retribution"
+            ],
+            "byModelType": {
+                "Pedro Kantor – EPIC HERO": [
+                    "000002713:dorn-s-arrow",
+                    "000002713:fist-of-retribution"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002713:dorn-s-arrow",
+                "datasheetId": "000002713",
                 "line": 1,
                 "name": "Dorn’s Arrow",
                 "type": "Ranged",
@@ -161,6 +163,7 @@
             },
             {
                 "id": "000002713:fist-of-retribution",
+                "datasheetId": "000002713",
                 "line": 2,
                 "name": "Fist of Retribution",
                 "type": "Melee",
@@ -189,7 +192,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002713:dorn-s-arrow",
+                        "000002713:fist-of-retribution"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

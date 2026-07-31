@@ -101,28 +101,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002468",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s storm bolter and master-crafted power weapon can be replaced with either 1 twin lightning claws, or two different weapons from the following list:<ul><li>1 storm bolter</li><li>1 chainfist</li><li>1 mace of absolution</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; master-crafted power weapon.",
+            "parsed": [
+                "000002468:storm-bolter",
+                "000002468:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Deathwing Strikemaster": [
+                    "000002468:storm-bolter",
+                    "000002468:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002468:storm-bolter",
+                "datasheetId": "000002468",
                 "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -154,6 +149,7 @@
             },
             {
                 "id": "000002468:chainfist",
+                "datasheetId": "000002468",
                 "line": 2,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -185,6 +181,7 @@
             },
             {
                 "id": "000002468:mace-of-absolution",
+                "datasheetId": "000002468",
                 "line": 3,
                 "name": "Mace of absolution",
                 "type": "Melee",
@@ -214,6 +211,7 @@
             },
             {
                 "id": "000002468:master-crafted-power-weapon",
+                "datasheetId": "000002468",
                 "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -243,6 +241,7 @@
             },
             {
                 "id": "000002468:power-fist",
+                "datasheetId": "000002468",
                 "line": 5,
                 "name": "Power fist",
                 "type": "Melee",
@@ -272,6 +271,7 @@
             },
             {
                 "id": "000002468:thunder-hammer",
+                "datasheetId": "000002468",
                 "line": 6,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -303,6 +303,7 @@
             },
             {
                 "id": "000002468:twin-lightning-claws",
+                "datasheetId": "000002468",
                 "line": 7,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -333,7 +334,55 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002468",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s storm bolter and master-crafted power weapon can be replaced with either 1 twin lightning claws, or two different weapons from the following list:<ul><li>1 storm bolter</li><li>1 chainfist</li><li>1 mace of absolution</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002468:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002468:storm-bolter",
+                        "000002468:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000002468:storm-bolter"
+                    ],
+                    [
+                        "000002468:chainfist"
+                    ],
+                    [
+                        "000002468:mace-of-absolution"
+                    ],
+                    [
+                        "000002468:power-fist"
+                    ],
+                    [
+                        "000002468:thunder-hammer"
+                    ],
+                    [
+                        "000002468:storm-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",
@@ -392,15 +441,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Tactical Precision",

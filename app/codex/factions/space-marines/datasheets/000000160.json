@@ -153,28 +153,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Heaven’s Teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000160",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Heaven’s Teeth.",
+            "parsed": [
+                "000000160:bolt-pistol",
+                "000000160:heaven-s-teeth"
+            ],
+            "byModelType": {
+                "Brother Corbulo – EPIC HERO": [
+                    "000000160:bolt-pistol",
+                    "000000160:heaven-s-teeth"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000160:bolt-pistol",
+                "datasheetId": "000000160",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -206,6 +201,7 @@
             },
             {
                 "id": "000000160:heaven-s-teeth",
+                "datasheetId": "000000160",
                 "line": 2,
                 "name": "Heaven’s Teeth",
                 "type": "Melee",
@@ -236,7 +232,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000160",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000160:bolt-pistol",
+                        "000000160:heaven-s-teeth"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

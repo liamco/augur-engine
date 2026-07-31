@@ -85,21 +85,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 heavy bolt pistol; 1 onslaught gatling cannon; Stormtooth; power sword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 heavy bolt pistol; 1 onslaught gatling cannon; Stormtooth; power sword.",
+            "parsed": [
+                "000004167:heavy-bolt-pistol",
+                "000004167:onslaught-gatling-cannon",
+                "000004167:stormtooth",
+                "000004167:power-sword"
+            ],
+            "byModelType": {
+                "Suboden Khan – EPIC HERO": [
+                    "000004167:heavy-bolt-pistol",
+                    "000004167:onslaught-gatling-cannon",
+                    "000004167:stormtooth",
+                    "000004167:power-sword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004167:heavy-bolt-pistol",
+                "datasheetId": "000004167",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -131,6 +137,7 @@
             },
             {
                 "id": "000004167:onslaught-gatling-cannon",
+                "datasheetId": "000004167",
                 "line": 2,
                 "name": "Onslaught gatling cannon",
                 "type": "Ranged",
@@ -162,6 +169,7 @@
             },
             {
                 "id": "000004167:stormtooth",
+                "datasheetId": "000004167",
                 "line": 3,
                 "name": "Stormtooth",
                 "type": "Melee",
@@ -195,6 +203,7 @@
             },
             {
                 "id": "000004167:power-sword",
+                "datasheetId": "000004167",
                 "line": 4,
                 "name": "Power sword",
                 "type": "Melee",
@@ -223,7 +232,24 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004167:heavy-bolt-pistol",
+                        "000004167:onslaught-gatling-cannon",
+                        "000004167:stormtooth",
+                        "000004167:power-sword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

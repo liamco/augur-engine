@@ -45,28 +45,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> boltgun; quad heavy bolter; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000110",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s quad heavy bolter can be replaced with one of the following<ul><li>1 graviton cannon</li><li>1 laser destroyer</li><li>1 quad launcher</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> boltgun; quad heavy bolter; close combat weapon.",
+            "parsed": [
+                "000000110:boltgun",
+                "000000110:quad-heavy-bolter",
+                "000000110:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Rapier Carrier": [
+                    "000000110:boltgun",
+                    "000000110:quad-heavy-bolter",
+                    "000000110:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000110:boltgun",
+                "datasheetId": "000000110",
                 "line": 1,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -96,6 +93,7 @@
             },
             {
                 "id": "000000110:graviton-cannon",
+                "datasheetId": "000000110",
                 "line": 2,
                 "name": "Graviton cannon",
                 "type": "Ranged",
@@ -129,6 +127,7 @@
             },
             {
                 "id": "000000110:laser-destroyer",
+                "datasheetId": "000000110",
                 "line": 3,
                 "name": "Laser destroyer",
                 "type": "Ranged",
@@ -160,6 +159,7 @@
             },
             {
                 "id": "000000110:quad-heavy-bolter",
+                "datasheetId": "000000110",
                 "line": 4,
                 "name": "Quad heavy bolter",
                 "type": "Ranged",
@@ -192,9 +192,10 @@
                 "count": 1
             },
             {
-                "id": "000000110:quad-launcher-shatter-shells",
+                "id": "000000110:quad-launcher",
+                "datasheetId": "000000110",
                 "line": 5,
-                "name": "Quad launcher – shatter shells",
+                "name": "Quad launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -202,7 +203,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Quad launcher – shatter shells",
+                        "name": "Quad launcher - shatter shells",
+                        "profileName": "shatter shells",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -213,27 +215,14 @@
                         "s": 9,
                         "ap": -2,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000110:quad-launcher-thunderfire-shells",
-                "line": 6,
-                "name": "Quad launcher – thunderfire shells",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000110",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Quad launcher – thunderfire shells",
+                        "name": "Quad launcher - thunderfire shells",
+                        "profileName": "thunderfire shells",
                         "attributes": [
                             "BLAST",
                             "HEAVY",
@@ -257,6 +246,7 @@
             },
             {
                 "id": "000000110:close-combat-weapon",
+                "datasheetId": "000000110",
                 "line": 7,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -285,7 +275,45 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000110",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s quad heavy bolter can be replaced with one of the following<ul><li>1 graviton cannon</li><li>1 laser destroyer</li><li>1 quad launcher</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000110:boltgun",
+                        "000000110:quad-heavy-bolter",
+                        "000000110:close-combat-weapon"
+                    ],
+                    [
+                        "000000110:boltgun",
+                        "000000110:close-combat-weapon",
+                        "000000110:graviton-cannon"
+                    ],
+                    [
+                        "000000110:boltgun",
+                        "000000110:close-combat-weapon",
+                        "000000110:laser-destroyer"
+                    ],
+                    [
+                        "000000110:boltgun",
+                        "000000110:close-combat-weapon",
+                        "000000110:quad-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

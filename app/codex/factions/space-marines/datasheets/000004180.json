@@ -158,21 +158,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; crozius arcanum.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; crozius arcanum.",
+            "parsed": [
+                "000004180:absolvor-bolt-pistol",
+                "000004180:crozius-arcanum"
+            ],
+            "byModelType": {
+                "Chaplain Kastiel – EPIC HERO": [
+                    "000004180:absolvor-bolt-pistol",
+                    "000004180:crozius-arcanum"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004180:absolvor-bolt-pistol",
+                "datasheetId": "000004180",
                 "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
@@ -204,6 +206,7 @@
             },
             {
                 "id": "000004180:crozius-arcanum",
+                "datasheetId": "000004180",
                 "line": 2,
                 "name": "Crozius arcanum",
                 "type": "Melee",
@@ -232,7 +235,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004180:absolvor-bolt-pistol",
+                        "000004180:crozius-arcanum"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

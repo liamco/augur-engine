@@ -45,21 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> toxic lashes.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> toxic lashes.",
+            "parsed": [
+                "000000476:toxic-lashes"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000476:toxic-lashes"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000476:toxic-lashes",
+                "datasheetId": "000000476",
                 "line": 1,
                 "name": "Toxic lashes",
                 "type": "Melee",
@@ -90,7 +90,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000476:toxic-lashes"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

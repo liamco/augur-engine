@@ -40,28 +40,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> tesseract singularity chamber; 2 tesla cannons; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000564",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 tesla cannons can be replaced with one of the following:<ul><li>2 gauss cannons</li><li>2 particle beamers</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> tesseract singularity chamber; 2 tesla cannons; armoured bulk.",
+            "parsed": [
+                "000000564:tesseract-singularity-chamber",
+                "000000564:tesla-cannon",
+                "000000564:armoured-bulk"
+            ],
+            "byModelType": {
+                "Tesseract Ark": [
+                    "000000564:tesseract-singularity-chamber",
+                    "000000564:tesla-cannon",
+                    "000000564:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000564:gauss-cannon",
+                "datasheetId": "000000564",
                 "line": 1,
                 "name": "Gauss cannon",
                 "type": "Ranged",
@@ -93,6 +90,7 @@
             },
             {
                 "id": "000000564:particle-beamer",
+                "datasheetId": "000000564",
                 "line": 2,
                 "name": "Particle beamer",
                 "type": "Ranged",
@@ -125,6 +123,7 @@
             },
             {
                 "id": "000000564:tesla-cannon",
+                "datasheetId": "000000564",
                 "line": 3,
                 "name": "Tesla cannon",
                 "type": "Ranged",
@@ -155,9 +154,10 @@
                 "count": 1
             },
             {
-                "id": "000000564:tesseract-singularity-chamber-particle-hurricane",
+                "id": "000000564:tesseract-singularity-chamber",
+                "datasheetId": "000000564",
                 "line": 4,
-                "name": "Tesseract singularity chamber – particle hurricane",
+                "name": "Tesseract singularity chamber",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -165,7 +165,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Tesseract singularity chamber – particle hurricane",
+                        "name": "Tesseract singularity chamber - particle hurricane",
+                        "profileName": "particle hurricane",
                         "attributes": [
                             "IGNORES COVER",
                             "TORRENT"
@@ -173,31 +174,18 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000564:tesseract-singularity-chamber-seismic-lash",
-                "line": 5,
-                "name": "Tesseract singularity chamber – seismic lash",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000564",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Tesseract singularity chamber – seismic lash",
+                        "name": "Tesseract singularity chamber - seismic lash",
+                        "profileName": "seismic lash",
                         "attributes": [
                             "BLAST"
                         ],
@@ -219,6 +207,7 @@
             },
             {
                 "id": "000000564:armoured-bulk",
+                "datasheetId": "000000564",
                 "line": 6,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -247,7 +236,40 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000564",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 tesla cannons can be replaced with one of the following:<ul><li>2 gauss cannons</li><li>2 particle beamers</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000564:tesseract-singularity-chamber",
+                        "000000564:tesla-cannon",
+                        "000000564:armoured-bulk"
+                    ],
+                    [
+                        "000000564:tesseract-singularity-chamber",
+                        "000000564:armoured-bulk",
+                        "000000564:gauss-cannon"
+                    ],
+                    [
+                        "000000564:tesseract-singularity-chamber",
+                        "000000564:armoured-bulk",
+                        "000000564:particle-beamer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

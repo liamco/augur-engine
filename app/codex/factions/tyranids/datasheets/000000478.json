@@ -58,21 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> grasping tongue; ravenous maw; shovelling claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> grasping tongue; ravenous maw; shovelling claws.",
+            "parsed": [
+                "000000478:grasping-tongue",
+                "000000478:ravenous-maw",
+                "000000478:shovelling-claws"
+            ],
+            "byModelType": {
+                "Haruspex": [
+                    "000000478:grasping-tongue",
+                    "000000478:ravenous-maw",
+                    "000000478:shovelling-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000478:grasping-tongue",
+                "datasheetId": "000000478",
                 "line": 1,
                 "name": "Grasping tongue",
                 "type": "Ranged",
@@ -104,6 +108,7 @@
             },
             {
                 "id": "000000478:ravenous-maw",
+                "datasheetId": "000000478",
                 "line": 2,
                 "name": "Ravenous maw",
                 "type": "Melee",
@@ -133,6 +138,7 @@
             },
             {
                 "id": "000000478:shovelling-claws",
+                "datasheetId": "000000478",
                 "line": 3,
                 "name": "Shovelling claws",
                 "type": "Melee",
@@ -163,7 +169,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000478:grasping-tongue",
+                        "000000478:ravenous-maw",
+                        "000000478:shovelling-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

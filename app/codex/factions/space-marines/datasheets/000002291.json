@@ -95,21 +95,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted plasma cannon; twin storm bolter; the Raven Sword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted plasma cannon; twin storm bolter; the Raven Sword.",
+            "parsed": [
+                "000002291:bolt-pistol",
+                "000002291:master-crafted-plasma-cannon",
+                "000002291:twin-storm-bolter",
+                "000002291:the-raven-sword"
+            ],
+            "byModelType": {
+                "Sammael – EPIC HERO": [
+                    "000002291:bolt-pistol",
+                    "000002291:master-crafted-plasma-cannon",
+                    "000002291:twin-storm-bolter",
+                    "000002291:the-raven-sword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002291:bolt-pistol",
+                "datasheetId": "000002291",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -141,6 +147,7 @@
             },
             {
                 "id": "000002291:master-crafted-plasma-cannon",
+                "datasheetId": "000002291",
                 "line": 2,
                 "name": "Master-crafted plasma cannon",
                 "type": "Ranged",
@@ -172,6 +179,7 @@
             },
             {
                 "id": "000002291:twin-storm-bolter",
+                "datasheetId": "000002291",
                 "line": 3,
                 "name": "Twin storm bolter",
                 "type": "Ranged",
@@ -204,6 +212,7 @@
             },
             {
                 "id": "000002291:the-raven-sword",
+                "datasheetId": "000002291",
                 "line": 4,
                 "name": "The Raven Sword",
                 "type": "Melee",
@@ -234,7 +243,24 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002291:bolt-pistol",
+                        "000002291:master-crafted-plasma-cannon",
+                        "000002291:twin-storm-bolter",
+                        "000002291:the-raven-sword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

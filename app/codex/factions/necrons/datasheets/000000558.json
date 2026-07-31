@@ -40,28 +40,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> gauss slicers; Tomb Stalker claws; gloom prism.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000558",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> gauss slicers; Tomb Stalker claws; gloom prism.",
+            "parsed": [
+                "000000558:gauss-slicers",
+                "000000558:tomb-stalker-claws",
+                "000000558:gloom-prism-aura"
+            ],
+            "byModelType": {
+                "Canoptek Tomb Stalker": [
+                    "000000558:gauss-slicers",
+                    "000000558:tomb-stalker-claws",
+                    "000000558:gloom-prism-aura"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000558:gauss-slicers",
+                "datasheetId": "000000558",
                 "line": 1,
                 "name": "Gauss slicers",
                 "type": "Ranged",
@@ -93,6 +90,7 @@
             },
             {
                 "id": "000000558:tomb-stalker-claws",
+                "datasheetId": "000000558",
                 "line": 2,
                 "name": "Tomb Stalker claws",
                 "type": "Melee",
@@ -123,7 +121,38 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000558",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000558:gloom-prism-aura",
+                "name": "Gloom Prism (Aura)",
+                "description": "While a friendly NECRONS unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000558:gauss-slicers",
+                        "000000558:tomb-stalker-claws",
+                        "000000558:gloom-prism-aura"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -177,23 +206,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Gloom Prism (Aura)",
-            "legend": "",
-            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Gloom Prism (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Snaking Ambush",

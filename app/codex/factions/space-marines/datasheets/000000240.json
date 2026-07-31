@@ -73,21 +73,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> rift cannon; 2 hurricane bolters; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> rift cannon; 2 hurricane bolters; armoured hull.",
+            "parsed": [
+                "000000240:rift-cannon",
+                "000000240:hurricane-bolter",
+                "000000240:armoured-hull"
+            ],
+            "byModelType": {
+                "Ravenwing Dark Talon": [
+                    "000000240:rift-cannon",
+                    "000000240:hurricane-bolter",
+                    "000000240:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000240:hurricane-bolter",
+                "datasheetId": "000000240",
                 "line": 1,
                 "name": "Hurricane bolter",
                 "type": "Ranged",
@@ -120,6 +124,7 @@
             },
             {
                 "id": "000000240:rift-cannon",
+                "datasheetId": "000000240",
                 "line": 2,
                 "name": "Rift cannon",
                 "type": "Ranged",
@@ -152,6 +157,7 @@
             },
             {
                 "id": "000000240:armoured-hull",
+                "datasheetId": "000000240",
                 "line": 3,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -180,7 +186,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000240:rift-cannon",
+                        "000000240:hurricane-bolter",
+                        "000000240:armoured-hull"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

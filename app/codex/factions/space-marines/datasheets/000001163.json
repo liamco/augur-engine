@@ -58,40 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolter; omega plasma array; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001163",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001163",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000001163",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolter; omega plasma array; armoured tracks.",
+            "parsed": [
+                "000001163:heavy-bolter",
+                "000001163:omega-plasma-array",
+                "000001163:armoured-tracks"
+            ],
+            "byModelType": {
+                "Sicaran Omega": [
+                    "000001163:heavy-bolter",
+                    "000001163:omega-plasma-array",
+                    "000001163:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001163:heavy-bolter",
+                "datasheetId": "000001163",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -123,6 +108,7 @@
             },
             {
                 "id": "000001163:hunter-killer-missile",
+                "datasheetId": "000001163",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -154,6 +140,7 @@
             },
             {
                 "id": "000001163:lascannon",
+                "datasheetId": "000001163",
                 "line": 3,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -182,9 +169,10 @@
                 "count": 1
             },
             {
-                "id": "000001163:omega-plasma-array-standard",
+                "id": "000001163:omega-plasma-array",
+                "datasheetId": "000001163",
                 "line": 4,
-                "name": "Omega plasma array – standard",
+                "name": "Omega plasma array",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -192,7 +180,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Omega plasma array – standard",
+                        "name": "Omega plasma array - standard",
+                        "profileName": "standard",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -201,27 +190,14 @@
                         "s": 9,
                         "ap": -3,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001163:omega-plasma-array-supercharge",
-                "line": 5,
-                "name": "Omega plasma array – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001163",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Omega plasma array – supercharge",
+                        "name": "Omega plasma array - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS"
                         ],
@@ -243,6 +219,7 @@
             },
             {
                 "id": "000001163:storm-bolter",
+                "datasheetId": "000001163",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -274,6 +251,7 @@
             },
             {
                 "id": "000001163:armoured-tracks",
+                "datasheetId": "000001163",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -302,7 +280,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001163",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000001163",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000001163",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:storm-bolter"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:hunter-killer-missile"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:hunter-killer-missile",
+                        "000001163:storm-bolter"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:lascannon"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:lascannon",
+                        "000001163:storm-bolter"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:lascannon",
+                        "000001163:hunter-killer-missile"
+                    ],
+                    [
+                        "000001163:heavy-bolter",
+                        "000001163:omega-plasma-array",
+                        "000001163:armoured-tracks",
+                        "000001163:lascannon",
+                        "000001163:hunter-killer-missile",
+                        "000001163:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -370,6 +430,13 @@
                     "effect": "reroll",
                     "attribute": "hit",
                     "value": 1
+                },
+                {
+                    "name": "Overwhelming Short-range Firepower",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
                 }
             ],
             "mechanicsSource": "regex"

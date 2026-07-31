@@ -73,28 +73,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> avenger mega bolter; blacksword missiles; twin heavy bolter; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000239",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s avenger mega bolter can be replaced with 1 Nephilim lascannons."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> avenger mega bolter; blacksword missiles; twin heavy bolter; armoured hull.",
+            "parsed": [
+                "000000239:avenger-mega-bolter",
+                "000000239:blacksword-missiles",
+                "000000239:twin-heavy-bolter",
+                "000000239:armoured-hull"
+            ],
+            "byModelType": {
+                "Nephilim Jetfighter": [
+                    "000000239:avenger-mega-bolter",
+                    "000000239:blacksword-missiles",
+                    "000000239:twin-heavy-bolter",
+                    "000000239:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000239:avenger-mega-bolter",
+                "datasheetId": "000000239",
                 "line": 1,
                 "name": "Avenger mega bolter",
                 "type": "Ranged",
@@ -126,6 +125,7 @@
             },
             {
                 "id": "000000239:blacksword-missiles",
+                "datasheetId": "000000239",
                 "line": 2,
                 "name": "Blacksword missiles",
                 "type": "Ranged",
@@ -157,6 +157,7 @@
             },
             {
                 "id": "000000239:nephilim-lascannons",
+                "datasheetId": "000000239",
                 "line": 3,
                 "name": "Nephilim lascannons",
                 "type": "Ranged",
@@ -186,6 +187,7 @@
             },
             {
                 "id": "000000239:twin-heavy-bolter",
+                "datasheetId": "000000239",
                 "line": 4,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -218,6 +220,7 @@
             },
             {
                 "id": "000000239:armoured-hull",
+                "datasheetId": "000000239",
                 "line": 5,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -246,7 +249,37 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000239",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s avenger mega bolter can be replaced with 1 Nephilim lascannons."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000239:avenger-mega-bolter",
+                        "000000239:blacksword-missiles",
+                        "000000239:twin-heavy-bolter",
+                        "000000239:armoured-hull"
+                    ],
+                    [
+                        "000000239:blacksword-missiles",
+                        "000000239:twin-heavy-bolter",
+                        "000000239:armoured-hull",
+                        "000000239:nephilim-lascannons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

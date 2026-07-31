@@ -11,6 +11,7 @@ import {
 } from "./patterns/grants";
 import { characteristics } from "./patterns/characteristics";
 import { keywordGrant } from "./patterns/keywords";
+import { damageReduction } from "./patterns/damageReduction";
 import { applyScope, classifyScope, type Scope } from "./bearerScope";
 
 /**
@@ -34,6 +35,7 @@ const PATTERNS: Pattern[] = [
     rollModifiers,
     rerolls,
     characteristics,
+    damageReduction,
 ];
 
 export interface ExtractionResult {

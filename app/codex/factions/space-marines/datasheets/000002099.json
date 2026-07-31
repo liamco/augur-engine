@@ -45,28 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> flamestorm gauntlets; twin power fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002099",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> flamestorm gauntlets; twin power fist.",
+            "parsed": [
+                "000002099:flamestorm-gauntlets",
+                "000002099:twin-power-fists"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002099:flamestorm-gauntlets",
+                    "000002099:twin-power-fists"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002099:auto-boltstorm-gauntlets",
+                "datasheetId": "000002099",
                 "line": 1,
                 "name": "Auto boltstorm gauntlets",
                 "type": "Ranged",
@@ -98,6 +93,7 @@
             },
             {
                 "id": "000002099:flamestorm-gauntlets",
+                "datasheetId": "000002099",
                 "line": 2,
                 "name": "Flamestorm gauntlets",
                 "type": "Ranged",
@@ -116,7 +112,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+1",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -131,6 +127,7 @@
             },
             {
                 "id": "000002099:fragstorm-grenade-launcher",
+                "datasheetId": "000002099",
                 "line": 3,
                 "name": "Fragstorm grenade launcher",
                 "type": "Ranged",
@@ -162,6 +159,7 @@
             },
             {
                 "id": "000002099:twin-power-fists",
+                "datasheetId": "000002099",
                 "line": 4,
                 "name": "Twin power fists",
                 "type": "Melee",
@@ -192,7 +190,34 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002099",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002099:flamestorm-gauntlets",
+                        "000002099:twin-power-fists"
+                    ],
+                    [
+                        "000002099:twin-power-fists",
+                        "000002099:auto-boltstorm-gauntlets",
+                        "000002099:fragstorm-grenade-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

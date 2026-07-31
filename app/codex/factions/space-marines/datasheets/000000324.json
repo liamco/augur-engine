@@ -60,40 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000324",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Skyclaw Pack Leader’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000324",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Skyclaw Pack Leader’s bolt pistol can be replaced with 1 plasma pistol."
-                    },
-                    {
-                        "datasheetId": "000000324",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Up to 2 Skyclaws can each have their bolt pistol and Astartes chainsword replaced with one of the following:<ul><li>1 plasma pistol and 1 Astartes chainsword</li><li>1 flamer and 1 close combat weapon</li><li>1 grav-gun and 1 close combat weapon</li><li>1 meltagun and 1 close combat weapon</li><li>1 plasma gun and 1 close combat weapon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000000324:bolt-pistol",
+                "000000324:astartes-chainsword"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000324:bolt-pistol",
+                    "000000324:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000324:bolt-pistol",
+                "datasheetId": "000000324",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -125,6 +108,7 @@
             },
             {
                 "id": "000000324:flamer",
+                "datasheetId": "000000324",
                 "line": 2,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -142,7 +126,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -150,13 +134,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Skyclaw"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000324:grav-gun",
+                "datasheetId": "000000324",
                 "line": 3,
                 "name": "Grav-gun",
                 "type": "Ranged",
@@ -181,13 +170,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Skyclaw"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000324:meltagun",
+                "datasheetId": "000000324",
                 "line": 4,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -212,15 +206,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Skyclaw"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000324:plasma-pistol-standard",
+                "id": "000000324:plasma-pistol",
+                "datasheetId": "000000324",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -228,7 +227,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -239,27 +239,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000324:plasma-pistol-supercharge",
-                "line": 6,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000324",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -275,15 +262,26 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Skyclaw"
+                        ]
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Skyclaw Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000324:plasma-gun-standard",
+                "id": "000000324:plasma-gun",
+                "datasheetId": "000000324",
                 "line": 7,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -291,7 +289,8 @@
                         "line": 7,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -302,27 +301,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000324:plasma-gun-supercharge",
-                "line": 8,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000324",
                         "line": 8,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -338,13 +324,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Skyclaw"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000324:astartes-chainsword",
+                "datasheetId": "000000324",
                 "line": 9,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -374,6 +365,7 @@
             },
             {
                 "id": "000000324:close-combat-weapon",
+                "datasheetId": "000000324",
                 "line": 10,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -396,13 +388,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Skyclaw"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000324:power-fist",
+                "datasheetId": "000000324",
                 "line": 11,
                 "name": "Power fist",
                 "type": "Melee",
@@ -425,13 +422,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Skyclaw Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000324:power-weapon",
+                "datasheetId": "000000324",
                 "line": 12,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -454,13 +455,99 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Skyclaw Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000324",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Skyclaw Pack Leader’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li></ul>"
+                },
+                {
+                    "datasheetId": "000000324",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Skyclaw Pack Leader’s bolt pistol can be replaced with 1 plasma pistol."
+                },
+                {
+                    "datasheetId": "000000324",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Up to 2 Skyclaws can each have their bolt pistol and Astartes chainsword replaced with one of the following:<ul><li>1 plasma pistol and 1 Astartes chainsword</li><li>1 flamer and 1 close combat weapon</li><li>1 grav-gun and 1 close combat weapon</li><li>1 meltagun and 1 close combat weapon</li><li>1 plasma gun and 1 close combat weapon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Skyclaw Pack Leader",
+                "items": [
+                    [
+                        "000000324:bolt-pistol",
+                        "000000324:astartes-chainsword"
+                    ],
+                    [
+                        "000000324:astartes-chainsword",
+                        "000000324:plasma-pistol"
+                    ],
+                    [
+                        "000000324:bolt-pistol",
+                        "000000324:power-fist"
+                    ],
+                    [
+                        "000000324:power-fist",
+                        "000000324:plasma-pistol"
+                    ],
+                    [
+                        "000000324:bolt-pistol",
+                        "000000324:power-weapon"
+                    ],
+                    [
+                        "000000324:power-weapon",
+                        "000000324:plasma-pistol"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Skyclaw",
+                "items": [
+                    [
+                        "000000324:bolt-pistol",
+                        "000000324:astartes-chainsword"
+                    ],
+                    [
+                        "000000324:plasma-pistol",
+                        "000000324:astartes-chainsword"
+                    ],
+                    [
+                        "000000324:flamer",
+                        "000000324:close-combat-weapon"
+                    ],
+                    [
+                        "000000324:grav-gun",
+                        "000000324:close-combat-weapon"
+                    ],
+                    [
+                        "000000324:meltagun",
+                        "000000324:close-combat-weapon"
+                    ],
+                    [
+                        "000000324:plasma-gun",
+                        "000000324:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

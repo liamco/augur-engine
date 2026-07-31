@@ -66,21 +66,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Gauntlet of Fire; Staff of the Destroyer.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Gauntlet of Fire; Staff of the Destroyer.",
+            "parsed": [
+                "000000522:gauntlet-of-fire",
+                "000000522:staff-of-the-destroyer"
+            ],
+            "byModelType": {
+                "Imotekh the Stormlord – EPIC HERO": [
+                    "000000522:gauntlet-of-fire",
+                    "000000522:staff-of-the-destroyer"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000522:gauntlet-of-fire",
+                "datasheetId": "000000522",
                 "line": 1,
                 "name": "Gauntlet of Fire",
                 "type": "Ranged",
@@ -98,7 +100,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -113,6 +115,7 @@
             },
             {
                 "id": "000000522:staff-of-the-destroyer",
+                "datasheetId": "000000522",
                 "line": 2,
                 "name": "Staff of the Destroyer",
                 "type": "Ranged",
@@ -142,6 +145,7 @@
             },
             {
                 "id": "000000522:staff-of-the-destroyer-2",
+                "datasheetId": "000000522",
                 "line": 3,
                 "name": "Staff of the Destroyer",
                 "type": "Melee",
@@ -172,7 +176,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000522:gauntlet-of-fire",
+                        "000000522:staff-of-the-destroyer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

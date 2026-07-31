@@ -101,21 +101,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 Fist of Dorn.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 Fist of Dorn.",
+            "parsed": [
+                "000002105:fist-of-dorn"
+            ],
+            "byModelType": {
+                "Darnath Lysander – EPIC HERO": [
+                    "000002105:fist-of-dorn"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002105:fist-of-dorn",
+                "datasheetId": "000002105",
                 "line": 1,
                 "name": "Fist of Dorn",
                 "type": "Melee",
@@ -146,7 +146,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002105:fist-of-dorn"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

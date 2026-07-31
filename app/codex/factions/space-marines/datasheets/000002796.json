@@ -129,28 +129,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> plasma pistol; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002796",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s plasma pistol can be replaced with one combi-weapon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> plasma pistol; master-crafted power weapon.",
+            "parsed": [
+                "000002796:plasma-pistol",
+                "000002796:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Marshal": [
+                    "000002796:plasma-pistol",
+                    "000002796:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002796:combi-weapon",
+                "datasheetId": "000002796",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -183,9 +178,10 @@
                 "count": 1
             },
             {
-                "id": "000002796:plasma-pistol-standard",
+                "id": "000002796:plasma-pistol",
+                "datasheetId": "000002796",
                 "line": 2,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -193,7 +189,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -204,27 +201,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002796:plasma-pistol-supercharge",
-                "line": 3,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002796",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -247,6 +231,7 @@
             },
             {
                 "id": "000002796:master-crafted-power-weapon",
+                "datasheetId": "000002796",
                 "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -277,7 +262,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002796",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s plasma pistol can be replaced with one combi-weapon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002796:plasma-pistol",
+                        "000002796:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "black-templars",

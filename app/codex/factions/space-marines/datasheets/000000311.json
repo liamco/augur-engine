@@ -45,28 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Wulfen weapons; death totem.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000311",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Wulfen weapons; death totem.",
+            "parsed": [
+                "000000311:wulfen-weapons",
+                "000000311:death-totem"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000311:wulfen-weapons",
+                    "000000311:death-totem"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000311:stormfrag-auto-launcher",
+                "datasheetId": "000000311",
                 "line": 1,
                 "name": "Stormfrag auto-launcher",
                 "type": "Ranged",
@@ -99,6 +94,7 @@
             },
             {
                 "id": "000000311:wulfen-weapons",
+                "datasheetId": "000000311",
                 "line": 2,
                 "name": "Wulfen weapons",
                 "type": "Melee",
@@ -129,7 +125,60 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000311",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000311:death-totem",
+                "name": "Death Totem",
+                "description": "Each time the bearer makes a melee attack, re-roll a Hit roll of 1.",
+                "mechanics": [
+                    {
+                        "name": "Death Totem",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "hit",
+                        "value": 1,
+                        "phase": [
+                            "fight"
+                        ],
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000311:wulfen-weapons",
+                        "000000311:death-totem"
+                    ],
+                    [
+                        "000000311:wulfen-weapons",
+                        "000000311:stormfrag-auto-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -196,26 +245,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Death Totem",
-            "legend": "",
-            "description": "Each time the bearer makes a melee attack, re-roll a Hit roll of 1.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Death Totem",
-                    "entity": "thisUnit",
-                    "effect": "reroll",
-                    "attribute": "hit",
-                    "value": 1,
-                    "phase": [
-                        "fight"
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

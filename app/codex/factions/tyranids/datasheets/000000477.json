@@ -45,21 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> flamespurt; chitin-barbed limbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> flamespurt; chitin-barbed limbs.",
+            "parsed": [
+                "000000477:flamespurt",
+                "000000477:chitin-barbed-limbs"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000477:flamespurt",
+                    "000000477:chitin-barbed-limbs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000477:flamespurt",
+                "datasheetId": "000000477",
                 "line": 1,
                 "name": "Flamespurt",
                 "type": "Ranged",
@@ -78,7 +80,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+1",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -93,6 +95,7 @@
             },
             {
                 "id": "000000477:chitin-barbed-limbs",
+                "datasheetId": "000000477",
                 "line": 2,
                 "name": "Chitin-barbed limbs",
                 "type": "Melee",
@@ -121,7 +124,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000477:flamespurt",
+                        "000000477:chitin-barbed-limbs"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

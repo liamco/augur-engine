@@ -58,34 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 multi-meltas; twin las-talon; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001825",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 ironhail heavy stubber."
-                    },
-                    {
-                        "datasheetId": "000001825",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 Icarus rocket pod."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 multi-meltas; twin las-talon; armoured hull.",
+            "parsed": [
+                "000001825:multi-melta",
+                "000001825:twin-las-talon",
+                "000001825:armoured-hull"
+            ],
+            "byModelType": {
+                "Gladiator Valiant": [
+                    "000001825:multi-melta",
+                    "000001825:twin-las-talon",
+                    "000001825:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001825:icarus-rocket-pod",
+                "datasheetId": "000001825",
                 "line": 1,
                 "name": "Icarus rocket pod",
                 "type": "Ranged",
@@ -117,6 +108,7 @@
             },
             {
                 "id": "000001825:ironhail-heavy-stubber",
+                "datasheetId": "000001825",
                 "line": 2,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
@@ -148,6 +140,7 @@
             },
             {
                 "id": "000001825:multi-melta",
+                "datasheetId": "000001825",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -179,6 +172,7 @@
             },
             {
                 "id": "000001825:twin-las-talon",
+                "datasheetId": "000001825",
                 "line": 4,
                 "name": "Twin las-talon",
                 "type": "Ranged",
@@ -210,6 +204,7 @@
             },
             {
                 "id": "000001825:armoured-hull",
+                "datasheetId": "000001825",
                 "line": 5,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -238,7 +233,55 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001825",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 ironhail heavy stubber."
+                },
+                {
+                    "datasheetId": "000001825",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 Icarus rocket pod."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001825:multi-melta",
+                        "000001825:twin-las-talon",
+                        "000001825:armoured-hull"
+                    ],
+                    [
+                        "000001825:multi-melta",
+                        "000001825:twin-las-talon",
+                        "000001825:armoured-hull",
+                        "000001825:icarus-rocket-pod"
+                    ],
+                    [
+                        "000001825:multi-melta",
+                        "000001825:twin-las-talon",
+                        "000001825:armoured-hull",
+                        "000001825:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000001825:multi-melta",
+                        "000001825:twin-las-talon",
+                        "000001825:armoured-hull",
+                        "000001825:ironhail-heavy-stubber",
+                        "000001825:icarus-rocket-pod"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

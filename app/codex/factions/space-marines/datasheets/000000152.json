@@ -157,28 +157,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Blood Song; bolt pistol; Dead Man’s Hand.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000152",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Blood Song; bolt pistol; Dead Man’s Hand.",
+            "parsed": [
+                "000000152:blood-song",
+                "000000152:bolt-pistol",
+                "000000152:dead-man-s-hand"
+            ],
+            "byModelType": {
+                "Captain Tycho – EPIC HERO": [
+                    "000000152:blood-song",
+                    "000000152:bolt-pistol",
+                    "000000152:dead-man-s-hand"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000152:blood-song",
+                "datasheetId": "000000152",
                 "line": 1,
                 "name": "Blood Song",
                 "type": "Ranged",
@@ -212,6 +209,7 @@
             },
             {
                 "id": "000000152:bolt-pistol",
+                "datasheetId": "000000152",
                 "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -243,6 +241,7 @@
             },
             {
                 "id": "000000152:dead-man-s-hand",
+                "datasheetId": "000000152",
                 "line": 3,
                 "name": "Dead Man’s Hand",
                 "type": "Melee",
@@ -271,7 +270,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000152",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000152:blood-song",
+                        "000000152:bolt-pistol",
+                        "000000152:dead-man-s-hand"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

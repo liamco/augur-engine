@@ -58,52 +58,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> autocannon; Kratos battle cannon; 4 heavy bolters; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001175",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s Kratos battle cannon can be replaced with one of the following:<ul><li>1 melta blast-gun</li><li>1 volkite cardanelle</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001175",
-                        "line": 2,
-                        "button": "•",
-                        "description": "2 of this model’s heavy bolters can be replaced with one of the following:<ul><li>2 autocannons</li><li>2 lascannons</li><li>2 volkite calivers</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001175",
-                        "line": 3,
-                        "button": "•",
-                        "description": "2 of this model’s heavy bolters can be replaced with one of the following:<ul><li>2 heavy flamers</li><li>2 lascannons</li><li>2 volkite culverins </li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001175",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 havoc launcher</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 twin boltgun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001175",
-                        "line": 5,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter killer missile"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> autocannon; Kratos battle cannon; 4 heavy bolters; armoured tracks.",
+            "parsed": [
+                "000001175:autocannon",
+                "000001175:kratos-battle-cannon",
+                "000001175:heavy-bolter",
+                "000001175:armoured-tracks"
+            ],
+            "byModelType": {
+                "Krato": [
+                    "000001175:autocannon",
+                    "000001175:kratos-battle-cannon",
+                    "000001175:heavy-bolter",
+                    "000001175:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001175:autocannon",
+                "datasheetId": "000001175",
                 "line": 1,
                 "name": "Autocannon",
                 "type": "Ranged",
@@ -133,6 +108,7 @@
             },
             {
                 "id": "000001175:combi-weapon",
+                "datasheetId": "000001175",
                 "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -166,6 +142,7 @@
             },
             {
                 "id": "000001175:havoc-launcher",
+                "datasheetId": "000001175",
                 "line": 3,
                 "name": "Havoc launcher",
                 "type": "Ranged",
@@ -197,6 +174,7 @@
             },
             {
                 "id": "000001175:heavy-bolter",
+                "datasheetId": "000001175",
                 "line": 4,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -228,6 +206,7 @@
             },
             {
                 "id": "000001175:heavy-flamer",
+                "datasheetId": "000001175",
                 "line": 5,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -245,7 +224,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -260,6 +239,7 @@
             },
             {
                 "id": "000001175:hunter-killer-missile",
+                "datasheetId": "000001175",
                 "line": 6,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -290,9 +270,10 @@
                 "count": 1
             },
             {
-                "id": "000001175:kratos-battle-cannon-ap",
+                "id": "000001175:kratos-battle-cannon",
+                "datasheetId": "000001175",
                 "line": 7,
-                "name": "Kratos battle cannon – AP",
+                "name": "Kratos battle cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -300,7 +281,8 @@
                         "line": 7,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Kratos battle cannon – AP",
+                        "name": "Kratos battle cannon - AP",
+                        "profileName": "AP",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -311,27 +293,14 @@
                         "s": 18,
                         "ap": -4,
                         "d": "D6+3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001175:kratos-battle-cannon-he",
-                "line": 8,
-                "name": "Kratos battle cannon – HE",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001175",
                         "line": 8,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Kratos battle cannon – HE",
+                        "name": "Kratos battle cannon - HE",
+                        "profileName": "HE",
                         "attributes": [
                             "BLAST"
                         ],
@@ -353,6 +322,7 @@
             },
             {
                 "id": "000001175:lascannons",
+                "datasheetId": "000001175",
                 "line": 9,
                 "name": "Lascannons",
                 "type": "Ranged",
@@ -375,13 +345,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 4,
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001175:melta-blast-gun",
+                "datasheetId": "000001175",
                 "line": 10,
                 "name": "Melta blast-gun",
                 "type": "Ranged",
@@ -413,6 +388,7 @@
             },
             {
                 "id": "000001175:multi-melta",
+                "datasheetId": "000001175",
                 "line": 11,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -444,6 +420,7 @@
             },
             {
                 "id": "000001175:twin-boltgun",
+                "datasheetId": "000001175",
                 "line": 12,
                 "name": "Twin boltgun",
                 "type": "Ranged",
@@ -475,6 +452,7 @@
             },
             {
                 "id": "000001175:volkite-caliver",
+                "datasheetId": "000001175",
                 "line": 13,
                 "name": "Volkite caliver",
                 "type": "Ranged",
@@ -499,13 +477,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001175:volkite-cardanelle",
+                "datasheetId": "000001175",
                 "line": 14,
                 "name": "Volkite cardanelle",
                 "type": "Ranged",
@@ -537,6 +520,7 @@
             },
             {
                 "id": "000001175:volkite-culverin",
+                "datasheetId": "000001175",
                 "line": 15,
                 "name": "Volkite culverin",
                 "type": "Ranged",
@@ -561,13 +545,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001175:armoured-tracks",
+                "datasheetId": "000001175",
                 "line": 16,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -596,7 +585,172 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001175",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s Kratos battle cannon can be replaced with one of the following:<ul><li>1 melta blast-gun</li><li>1 volkite cardanelle</li></ul>"
+                },
+                {
+                    "datasheetId": "000001175",
+                    "line": 2,
+                    "button": "•",
+                    "description": "2 of this model’s heavy bolters can be replaced with one of the following:<ul><li>2 autocannons</li><li>2 lascannons</li><li>2 volkite calivers</li></ul>"
+                },
+                {
+                    "datasheetId": "000001175",
+                    "line": 3,
+                    "button": "•",
+                    "description": "2 of this model’s heavy bolters can be replaced with one of the following:<ul><li>2 heavy flamers</li><li>2 lascannons</li><li>2 volkite culverins </li></ul>"
+                },
+                {
+                    "datasheetId": "000001175",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 havoc launcher</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 twin boltgun</li></ul>"
+                },
+                {
+                    "datasheetId": "000001175",
+                    "line": 5,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter killer missile"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001175:autocannon",
+                        "000001175:kratos-battle-cannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:kratos-battle-cannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:combi-weapon"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:kratos-battle-cannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:havoc-launcher"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:kratos-battle-cannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:heavy-flamer"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:kratos-battle-cannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:multi-melta"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:kratos-battle-cannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:twin-boltgun"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:melta-blast-gun"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:melta-blast-gun",
+                        "000001175:combi-weapon"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:melta-blast-gun",
+                        "000001175:havoc-launcher"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:melta-blast-gun",
+                        "000001175:heavy-flamer"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:melta-blast-gun",
+                        "000001175:multi-melta"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:melta-blast-gun",
+                        "000001175:twin-boltgun"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:volkite-cardanelle"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:volkite-cardanelle",
+                        "000001175:combi-weapon"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:volkite-cardanelle",
+                        "000001175:havoc-launcher"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:volkite-cardanelle",
+                        "000001175:heavy-flamer"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:volkite-cardanelle",
+                        "000001175:multi-melta"
+                    ],
+                    [
+                        "000001175:autocannon",
+                        "000001175:heavy-bolter",
+                        "000001175:armoured-tracks",
+                        "000001175:volkite-cardanelle",
+                        "000001175:twin-boltgun"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",

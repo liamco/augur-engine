@@ -143,34 +143,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted bolter; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000073",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s bolt pistol, master-crafted bolter and close combat weapon can be replaced with one of the following: <br><ul><li>1 heavy bolt pistol and 1 power fist </li><li>1 heavy bolt pistol and 1 master-crafted power weapon </li><li>1 neo-volkite pistol and 1 power fist </li><li>1 neo-volkite pistol and 1 master-crafted power weapon </li><li>1 plasma pistol and 1 power fist </li><li>1 plasma pistol and 1 master-crafted power weapon </li><li>1 heavy bolt pistol, 1 master-crafted power weapon and 1 relic shield</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000073",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s close combat weapon can be replaced with one of the following: <br><ul><li>1 master-crafted power weapon </li><li>1 power fist</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted bolter; close combat weapon.",
+            "parsed": [
+                "000000073:bolt-pistol",
+                "000000073:master-crafted-bolter",
+                "000000073:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Captain": [
+                    "000000073:bolt-pistol",
+                    "000000073:master-crafted-bolter",
+                    "000000073:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000073:bolt-pistol",
+                "datasheetId": "000000073",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -202,6 +193,7 @@
             },
             {
                 "id": "000000073:heavy-bolt-pistol",
+                "datasheetId": "000000073",
                 "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -233,6 +225,7 @@
             },
             {
                 "id": "000000073:master-crafted-bolter",
+                "datasheetId": "000000073",
                 "line": 3,
                 "name": "Master-crafted bolter",
                 "type": "Ranged",
@@ -262,6 +255,7 @@
             },
             {
                 "id": "000000073:neo-volkite-pistol",
+                "datasheetId": "000000073",
                 "line": 4,
                 "name": "Neo-volkite pistol",
                 "type": "Ranged",
@@ -293,9 +287,10 @@
                 "count": 1
             },
             {
-                "id": "000000073:plasma-pistol-standard",
+                "id": "000000073:plasma-pistol",
+                "datasheetId": "000000073",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -303,7 +298,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -314,21 +310,7 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000073:plasma-pistol",
-                "line": 6,
-                "name": "Plasma pistol",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000073",
                         "line": 6,
@@ -358,6 +340,7 @@
             },
             {
                 "id": "000000073:close-combat-weapon",
+                "datasheetId": "000000073",
                 "line": 7,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -387,6 +370,7 @@
             },
             {
                 "id": "000000073:master-crafted-power-weapon",
+                "datasheetId": "000000073",
                 "line": 8,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -416,6 +400,7 @@
             },
             {
                 "id": "000000073:power-fist",
+                "datasheetId": "000000073",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -444,7 +429,54 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000073",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s bolt pistol, master-crafted bolter and close combat weapon can be replaced with one of the following: <br><ul><li>1 heavy bolt pistol and 1 power fist </li><li>1 heavy bolt pistol and 1 master-crafted power weapon </li><li>1 neo-volkite pistol and 1 power fist </li><li>1 neo-volkite pistol and 1 master-crafted power weapon </li><li>1 plasma pistol and 1 power fist </li><li>1 plasma pistol and 1 master-crafted power weapon </li><li>1 heavy bolt pistol, 1 master-crafted power weapon and 1 relic shield</li></ul>"
+                },
+                {
+                    "datasheetId": "000000073",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s close combat weapon can be replaced with one of the following: <br><ul><li>1 master-crafted power weapon </li><li>1 power fist</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000073:relic-shield",
+                "name": "Relic Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000073:bolt-pistol",
+                        "000000073:master-crafted-bolter",
+                        "000000073:close-combat-weapon"
+                    ],
+                    [
+                        "000000073:bolt-pistol",
+                        "000000073:master-crafted-bolter",
+                        "000000073:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000000073:bolt-pistol",
+                        "000000073:master-crafted-bolter",
+                        "000000073:power-fist"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -498,15 +530,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Relic Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Rites of Battle",

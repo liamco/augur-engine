@@ -87,21 +87,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> the Executioner’s Axe.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> the Executioner’s Axe.",
+            "parsed": [
+                "000000157:the-executioner-s-axe"
+            ],
+            "byModelType": {
+                "Astorath – EPIC HERO": [
+                    "000000157:the-executioner-s-axe"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000157:the-executioner-s-axe",
+                "datasheetId": "000000157",
                 "line": 1,
                 "name": "The Executioner’s Axe",
                 "type": "Melee",
@@ -133,7 +133,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000157:the-executioner-s-axe"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

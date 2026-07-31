@@ -78,40 +78,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 flamestorm cannons; twin assault cannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002173",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000002173",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 multi-melta."
-                    },
-                    {
-                        "datasheetId": "000002173",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 flamestorm cannons; twin assault cannon; armoured tracks.",
+            "parsed": [
+                "000002173:flamestorm-cannon",
+                "000002173:twin-assault-cannon",
+                "000002173:armoured-tracks"
+            ],
+            "byModelType": {
+                "Land Raider Redeemer": [
+                    "000002173:flamestorm-cannon",
+                    "000002173:twin-assault-cannon",
+                    "000002173:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002173:flamestorm-cannon",
+                "datasheetId": "000002173",
                 "line": 1,
                 "name": "Flamestorm cannon",
                 "type": "Ranged",
@@ -129,7 +114,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -2,
                         "d": 2
@@ -144,6 +129,7 @@
             },
             {
                 "id": "000002173:hunter-killer-missile",
+                "datasheetId": "000002173",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -175,6 +161,7 @@
             },
             {
                 "id": "000002173:multi-melta",
+                "datasheetId": "000002173",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -206,6 +193,7 @@
             },
             {
                 "id": "000002173:storm-bolter",
+                "datasheetId": "000002173",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -237,6 +225,7 @@
             },
             {
                 "id": "000002173:twin-assault-cannon",
+                "datasheetId": "000002173",
                 "line": 5,
                 "name": "Twin assault cannon",
                 "type": "Ranged",
@@ -269,6 +258,7 @@
             },
             {
                 "id": "000002173:armoured-tracks",
+                "datasheetId": "000002173",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -297,7 +287,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002173",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000002173",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 multi-melta."
+                },
+                {
+                    "datasheetId": "000002173",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:storm-bolter"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:multi-melta"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:multi-melta",
+                        "000002173:storm-bolter"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:hunter-killer-missile"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:hunter-killer-missile",
+                        "000002173:storm-bolter"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:hunter-killer-missile",
+                        "000002173:multi-melta"
+                    ],
+                    [
+                        "000002173:flamestorm-cannon",
+                        "000002173:twin-assault-cannon",
+                        "000002173:armoured-tracks",
+                        "000002173:hunter-killer-missile",
+                        "000002173:multi-melta",
+                        "000002173:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -116,21 +116,15 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Perdition; the Axe Mortalis.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
-            }
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Perdition; the Axe Mortalis.",
+            "parsed": [],
+            "byModelType": {}
         },
         "weapons": [
             {
                 "id": "000000151:perdition-pistol",
+                "datasheetId": "000000151",
                 "line": 1,
                 "name": "Perdition Pistol",
                 "type": "Ranged",
@@ -164,6 +158,7 @@
             },
             {
                 "id": "000000151:the-axe-mortalis",
+                "datasheetId": "000000151",
                 "line": 2,
                 "name": "The Axe Mortalis",
                 "type": "Melee",
@@ -194,7 +189,12 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "blood-angels",

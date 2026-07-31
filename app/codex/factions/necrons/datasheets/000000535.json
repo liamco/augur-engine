@@ -40,28 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> gauss blaster; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000535",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their gauss blaster replaced with 1 tesla carbine."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> gauss blaster; close combat weapon.",
+            "parsed": [
+                "000000535:gauss-blaster",
+                "000000535:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000535:gauss-blaster",
+                    "000000535:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000535:gauss-blaster",
+                "datasheetId": "000000535",
                 "line": 1,
                 "name": "Gauss blaster",
                 "type": "Ranged",
@@ -93,6 +88,7 @@
             },
             {
                 "id": "000000535:tesla-carbine",
+                "datasheetId": "000000535",
                 "line": 2,
                 "name": "Tesla carbine",
                 "type": "Ranged",
@@ -125,6 +121,7 @@
             },
             {
                 "id": "000000535:close-combat-weapon",
+                "datasheetId": "000000535",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -153,7 +150,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000535",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their gauss blaster replaced with 1 tesla carbine."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000535:gauss-blaster",
+                        "000000535:close-combat-weapon"
+                    ],
+                    [
+                        "000000535:close-combat-weapon",
+                        "000000535:tesla-carbine"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

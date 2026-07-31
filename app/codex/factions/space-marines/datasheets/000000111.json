@@ -55,28 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 twin heavy bolters; armoured feet.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000111",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 twin heavy bolters can be replaced with one of the following:<ul><li>2 assault cannons</li><li>2 Dreadnought inferno cannons</li><li>2 heavy plasma cannons</li><li>2 missile launchers</li><li>2 multi-meltas</li><li>2 twin autocannons</li><li>2 twin lascannons</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 twin heavy bolters; armoured feet.",
+            "parsed": [
+                "000000111:twin-heavy-bolter",
+                "000000111:armoured-feet"
+            ],
+            "byModelType": {
+                "Mortis Dreadnought": [
+                    "000000111:twin-heavy-bolter",
+                    "000000111:armoured-feet"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000111:assault-cannon",
+                "datasheetId": "000000111",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -108,6 +103,7 @@
             },
             {
                 "id": "000000111:dreadnought-inferno-cannon",
+                "datasheetId": "000000111",
                 "line": 2,
                 "name": "Dreadnought inferno cannon",
                 "type": "Ranged",
@@ -125,7 +121,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -139,9 +135,10 @@
                 "count": 1
             },
             {
-                "id": "000000111:heavy-plasma-cannon-standard",
+                "id": "000000111:heavy-plasma-cannon",
+                "datasheetId": "000000111",
                 "line": 3,
-                "name": "Heavy plasma cannon – standard",
+                "name": "Heavy plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -149,7 +146,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Heavy plasma cannon – standard",
+                        "name": "Heavy plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -160,27 +158,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000111:heavy-plasma-cannon-supercharge",
-                "line": 4,
-                "name": "Heavy plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000111",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Heavy plasma cannon – supercharge",
+                        "name": "Heavy plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -202,9 +187,10 @@
                 "count": 1
             },
             {
-                "id": "000000111:missile-launcher-frag",
+                "id": "000000111:missile-launcher",
+                "datasheetId": "000000111",
                 "line": 5,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -212,7 +198,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -223,27 +210,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000111:missile-launcher-krak",
-                "line": 6,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000111",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 48,
                         "type": "Ranged",
@@ -263,6 +237,7 @@
             },
             {
                 "id": "000000111:multi-melta",
+                "datasheetId": "000000111",
                 "line": 7,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -294,6 +269,7 @@
             },
             {
                 "id": "000000111:twin-autocannon",
+                "datasheetId": "000000111",
                 "line": 8,
                 "name": "Twin autocannon",
                 "type": "Ranged",
@@ -325,6 +301,7 @@
             },
             {
                 "id": "000000111:twin-heavy-bolter",
+                "datasheetId": "000000111",
                 "line": 9,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -357,6 +334,7 @@
             },
             {
                 "id": "000000111:twin-lascannon",
+                "datasheetId": "000000111",
                 "line": 10,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -388,6 +366,7 @@
             },
             {
                 "id": "000000111:armoured-feet",
+                "datasheetId": "000000111",
                 "line": 11,
                 "name": "Armoured feet",
                 "type": "Melee",
@@ -416,7 +395,57 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000111",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 twin heavy bolters can be replaced with one of the following:<ul><li>2 assault cannons</li><li>2 Dreadnought inferno cannons</li><li>2 heavy plasma cannons</li><li>2 missile launchers</li><li>2 multi-meltas</li><li>2 twin autocannons</li><li>2 twin lascannons</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000111:twin-heavy-bolter",
+                        "000000111:armoured-feet"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:assault-cannon"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:dreadnought-inferno-cannon"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:missile-launcher"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:multi-melta"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:twin-autocannon"
+                    ],
+                    [
+                        "000000111:armoured-feet",
+                        "000000111:twin-lascannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -477,8 +506,19 @@
             "description": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Mortis Strike",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

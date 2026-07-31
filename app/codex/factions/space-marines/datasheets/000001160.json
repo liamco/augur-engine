@@ -50,46 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001160",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Scout Sergeant's boltgun can be replaced with 1 Astartes chainsword."
-                    },
-                    {
-                        "datasheetId": "000001160",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their boltgun replaced with one of the following: <br><ul><li>1 Astartes shotgun </li><li>1 combat knife</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001160",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with 1 Scout sniper rifle."
-                    },
-                    {
-                        "datasheetId": "000001160",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with one of the following: <br><ul><li>1 heavy bolter </li><li>1 missile launcher</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+            "parsed": [
+                "000001160:bolt-pistol",
+                "000001160:boltgun",
+                "000001160:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001160:bolt-pistol",
+                    "000001160:boltgun",
+                    "000001160:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001160:astartes-shotgun",
+                "datasheetId": "000001160",
                 "line": 1,
                 "name": "Astartes shotgun",
                 "type": "Ranged",
@@ -121,6 +100,7 @@
             },
             {
                 "id": "000001160:bolt-pistol",
+                "datasheetId": "000001160",
                 "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -152,6 +132,7 @@
             },
             {
                 "id": "000001160:boltgun",
+                "datasheetId": "000001160",
                 "line": 3,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -181,6 +162,7 @@
             },
             {
                 "id": "000001160:heavy-bolter",
+                "datasheetId": "000001160",
                 "line": 4,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -206,15 +188,21 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000001160:missile-launcher-frag",
+                "id": "000001160:missile-launcher",
+                "datasheetId": "000001160",
                 "line": 5,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -222,7 +210,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -234,27 +223,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001160:missile-launcher-krak",
-                "line": 6,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001160",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -269,13 +245,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001160:scout-sniper-rifle",
+                "datasheetId": "000001160",
                 "line": 7,
                 "name": "Scout sniper rifle",
                 "type": "Ranged",
@@ -301,13 +283,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001160:astartes-chainsword",
+                "datasheetId": "000001160",
                 "line": 8,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -330,13 +318,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Scout Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001160:close-combat-weapon",
+                "datasheetId": "000001160",
                 "line": 9,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -366,6 +358,7 @@
             },
             {
                 "id": "000001160:combat-knife",
+                "datasheetId": "000001160",
                 "line": 10,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -394,7 +387,98 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001160",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Scout Sergeant's boltgun can be replaced with 1 Astartes chainsword."
+                },
+                {
+                    "datasheetId": "000001160",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their boltgun replaced with one of the following: <br><ul><li>1 Astartes shotgun </li><li>1 combat knife</li></ul>"
+                },
+                {
+                    "datasheetId": "000001160",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with 1 Scout sniper rifle."
+                },
+                {
+                    "datasheetId": "000001160",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with one of the following: <br><ul><li>1 heavy bolter </li><li>1 missile launcher</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Scout Sergeant",
+                "items": [
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:boltgun",
+                        "000001160:close-combat-weapon"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:astartes-shotgun"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:combat-knife"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:astartes-chainsword"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Scout",
+                "items": [
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:boltgun",
+                        "000001160:close-combat-weapon"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:heavy-bolter"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:missile-launcher"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:scout-sniper-rifle"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:astartes-shotgun"
+                    ],
+                    [
+                        "000001160:bolt-pistol",
+                        "000001160:close-combat-weapon",
+                        "000001160:combat-knife"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

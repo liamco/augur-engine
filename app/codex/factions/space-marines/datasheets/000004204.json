@@ -153,21 +153,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolt pistol; relic thunder hammer.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolt pistol; relic thunder hammer.",
+            "parsed": [
+                "000004204:heavy-bolt-pistol",
+                "000004204:relic-thunder-hammer"
+            ],
+            "byModelType": {
+                "Ferren Areios – EPIC HERO": [
+                    "000004204:heavy-bolt-pistol",
+                    "000004204:relic-thunder-hammer"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004204:heavy-bolt-pistol",
+                "datasheetId": "000004204",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -199,6 +201,7 @@
             },
             {
                 "id": "000004204:relic-thunder-hammer",
+                "datasheetId": "000004204",
                 "line": 2,
                 "name": "Relic thunder hammer",
                 "type": "Melee",
@@ -229,7 +232,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004204:heavy-bolt-pistol",
+                        "000004204:relic-thunder-hammer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -68,34 +68,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin Icarus ironhail heavy stubber; twin heavy bolter; Brutalis bolt rifles; Brutalis fists.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000136",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
-                    },
-                    {
-                        "datasheetId": "000000136",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s Brutalis fists and Brutalis bolt rifles can be replaced with 1 Brutalis talons."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin Icarus ironhail heavy stubber; twin heavy bolter; Brutalis bolt rifles; Brutalis fists.",
+            "parsed": [
+                "000000136:twin-icarus-ironhail-heavy-stubber",
+                "000000136:twin-heavy-bolter",
+                "000000136:brutalis-bolt-rifles",
+                "000000136:brutalis-fists"
+            ],
+            "byModelType": {
+                "Brutalis Dreadnought": [
+                    "000000136:twin-icarus-ironhail-heavy-stubber",
+                    "000000136:twin-heavy-bolter",
+                    "000000136:brutalis-bolt-rifles",
+                    "000000136:brutalis-fists"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000136:brutalis-bolt-rifles",
+                "datasheetId": "000000136",
                 "line": 1,
                 "name": "Brutalis bolt rifles",
                 "type": "Ranged",
@@ -127,6 +120,7 @@
             },
             {
                 "id": "000000136:twin-heavy-bolter",
+                "datasheetId": "000000136",
                 "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -159,6 +153,7 @@
             },
             {
                 "id": "000000136:twin-icarus-ironhail-heavy-stubber",
+                "datasheetId": "000000136",
                 "line": 3,
                 "name": "Twin Icarus ironhail heavy stubber",
                 "type": "Ranged",
@@ -192,6 +187,7 @@
             },
             {
                 "id": "000000136:twin-multi-melta",
+                "datasheetId": "000000136",
                 "line": 4,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
@@ -224,6 +220,7 @@
             },
             {
                 "id": "000000136:brutalis-fists",
+                "datasheetId": "000000136",
                 "line": 5,
                 "name": "Brutalis fists",
                 "type": "Melee",
@@ -254,9 +251,10 @@
                 "count": 1
             },
             {
-                "id": "000000136:brutalis-talons-strike",
+                "id": "000000136:brutalis-talons",
+                "datasheetId": "000000136",
                 "line": 6,
-                "name": "Brutalis talons – strike",
+                "name": "Brutalis talons",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -264,7 +262,8 @@
                         "line": 6,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Brutalis talons – strike",
+                        "name": "Brutalis talons - strike",
+                        "profileName": "strike",
                         "attributes": [
                             "TWIN-LINKED"
                         ],
@@ -275,27 +274,14 @@
                         "s": 12,
                         "ap": -2,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000136:brutalis-talons-sweep",
-                "line": 7,
-                "name": "Brutalis talons – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000136",
                         "line": 7,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Brutalis talons – sweep",
+                        "name": "Brutalis talons - sweep",
+                        "profileName": "sweep",
                         "attributes": [
                             "TWIN-LINKED"
                         ],
@@ -316,7 +302,53 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000136",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
+                },
+                {
+                    "datasheetId": "000000136",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s Brutalis fists and Brutalis bolt rifles can be replaced with 1 Brutalis talons."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000136:twin-icarus-ironhail-heavy-stubber",
+                        "000000136:twin-heavy-bolter",
+                        "000000136:brutalis-bolt-rifles",
+                        "000000136:brutalis-fists"
+                    ],
+                    [
+                        "000000136:twin-icarus-ironhail-heavy-stubber",
+                        "000000136:twin-heavy-bolter",
+                        "000000136:brutalis-talons"
+                    ],
+                    [
+                        "000000136:twin-icarus-ironhail-heavy-stubber",
+                        "000000136:brutalis-bolt-rifles",
+                        "000000136:brutalis-fists",
+                        "000000136:twin-multi-melta"
+                    ],
+                    [
+                        "000000136:twin-icarus-ironhail-heavy-stubber",
+                        "000000136:twin-multi-melta",
+                        "000000136:brutalis-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

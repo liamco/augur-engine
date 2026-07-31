@@ -73,28 +73,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 dire bio-cannons; gargantuan scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000504",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 dire bio-cannons; gargantuan scything talons.",
+            "parsed": [
+                "000000504:dire-bio-cannon",
+                "000000504:gargantuan-scything-talons"
+            ],
+            "byModelType": {
+                "Harridan": [
+                    "000000504:dire-bio-cannon",
+                    "000000504:gargantuan-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000504:dire-bio-cannon",
+                "datasheetId": "000000504",
                 "line": 1,
                 "name": "Dire bio-cannon",
                 "type": "Ranged",
@@ -126,6 +121,7 @@
             },
             {
                 "id": "000000504:gargantuan-scything-talons",
+                "datasheetId": "000000504",
                 "line": 2,
                 "name": "Gargantuan scything talons",
                 "type": "Melee",
@@ -154,7 +150,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000504",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000504:dire-bio-cannon",
+                        "000000504:gargantuan-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

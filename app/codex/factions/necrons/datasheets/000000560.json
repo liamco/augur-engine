@@ -40,28 +40,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> exile cannon; Tomb Sentinel claws; gloom prism.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000560",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> exile cannon; Tomb Sentinel claws; gloom prism.",
+            "parsed": [
+                "000000560:exile-cannon",
+                "000000560:tomb-sentinel-claws",
+                "000000560:gloom-prism-aura"
+            ],
+            "byModelType": {
+                "Canoptek Tomb Sentinel": [
+                    "000000560:exile-cannon",
+                    "000000560:tomb-sentinel-claws",
+                    "000000560:gloom-prism-aura"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000560:exile-cannon",
+                "datasheetId": "000000560",
                 "line": 1,
                 "name": "Exile cannon",
                 "type": "Ranged",
@@ -93,6 +90,7 @@
             },
             {
                 "id": "000000560:tomb-sentinel-claws",
+                "datasheetId": "000000560",
                 "line": 2,
                 "name": "Tomb Sentinel claws",
                 "type": "Melee",
@@ -121,7 +119,38 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000560",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000560:gloom-prism-aura",
+                "name": "Gloom Prism (Aura)",
+                "description": "While a friendly NECRONS unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000560:exile-cannon",
+                        "000000560:tomb-sentinel-claws",
+                        "000000560:gloom-prism-aura"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -175,23 +204,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Gloom Prism (Aura)",
-            "legend": "",
-            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Gloom Prism (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Aggressor Guardian",

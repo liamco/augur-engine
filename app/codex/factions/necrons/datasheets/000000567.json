@@ -63,21 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> gauss annihilator; tesla arc.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> gauss annihilator; tesla arc.",
+            "parsed": [
+                "000000567:gauss-annihilator",
+                "000000567:tesla-arc"
+            ],
+            "byModelType": {
+                "Gauss Pylon": [
+                    "000000567:gauss-annihilator",
+                    "000000567:tesla-arc"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000567:gauss-annihilator",
+                "datasheetId": "000000567",
                 "line": 1,
                 "name": "Gauss annihilator",
                 "type": "Ranged",
@@ -110,6 +112,7 @@
             },
             {
                 "id": "000000567:tesla-arc",
+                "datasheetId": "000000567",
                 "line": 2,
                 "name": "Tesla arc",
                 "type": "Ranged",
@@ -140,7 +143,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000567:gauss-annihilator",
+                        "000000567:tesla-arc"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

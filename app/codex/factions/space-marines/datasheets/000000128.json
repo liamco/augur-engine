@@ -55,40 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; marksman bolt carbine; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000128",
-                        "line": 1,
-                        "button": "•",
-                        "description": "1 Infiltrator can be equipped with 1 helix gauntlet.*"
-                    },
-                    {
-                        "datasheetId": "000000128",
-                        "line": 2,
-                        "button": "•",
-                        "description": "1 Infiltrator can be equipped with 1 Infiltrator comms array.*"
-                    },
-                    {
-                        "datasheetId": "000000128",
-                        "line": 3,
-                        "button": "*",
-                        "description": "* These options cannot be taken on the same model."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; marksman bolt carbine; close combat weapon.",
+            "parsed": [
+                "000000128:bolt-pistol",
+                "000000128:marksman-bolt-carbine",
+                "000000128:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000128:bolt-pistol",
+                    "000000128:marksman-bolt-carbine",
+                    "000000128:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000128:bolt-pistol",
+                "datasheetId": "000000128",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -120,6 +105,7 @@
             },
             {
                 "id": "000000128:marksman-bolt-carbine",
+                "datasheetId": "000000128",
                 "line": 2,
                 "name": "Marksman bolt carbine",
                 "type": "Ranged",
@@ -151,6 +137,7 @@
             },
             {
                 "id": "000000128:close-combat-weapon",
+                "datasheetId": "000000128",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -179,7 +166,94 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000128",
+                    "line": 1,
+                    "button": "•",
+                    "description": "1 Infiltrator can be equipped with 1 helix gauntlet.*"
+                },
+                {
+                    "datasheetId": "000000128",
+                    "line": 2,
+                    "button": "•",
+                    "description": "1 Infiltrator can be equipped with 1 Infiltrator comms array.*"
+                },
+                {
+                    "datasheetId": "000000128",
+                    "line": 3,
+                    "button": "*",
+                    "description": "* These options cannot be taken on the same model."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000128:helix-gauntlet",
+                "name": "Helix Gauntlet",
+                "description": "Models in the bearer's unit have the Feel No Pain 6+ ability.",
+                "mechanics": [
+                    {
+                        "name": "Helix Gauntlet",
+                        "entity": "thisUnit",
+                        "effect": "setsFnp",
+                        "attribute": "feelNoPain",
+                        "value": 6
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000000128:infiltrator-comms-array",
+                "name": "Infiltrator Comms Array",
+                "description": "Each time you target the bearer's unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Infiltrator Sergeant",
+                "items": [
+                    [
+                        "000000128:bolt-pistol",
+                        "000000128:marksman-bolt-carbine",
+                        "000000128:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Infiltrator",
+                "items": [
+                    [
+                        "000000128:bolt-pistol",
+                        "000000128:marksman-bolt-carbine",
+                        "000000128:close-combat-weapon"
+                    ],
+                    [
+                        "000000128:bolt-pistol",
+                        "000000128:marksman-bolt-carbine",
+                        "000000128:close-combat-weapon",
+                        "000000128:infiltrator-comms-array"
+                    ],
+                    [
+                        "000000128:bolt-pistol",
+                        "000000128:marksman-bolt-carbine",
+                        "000000128:close-combat-weapon",
+                        "000000128:helix-gauntlet"
+                    ],
+                    [
+                        "000000128:bolt-pistol",
+                        "000000128:marksman-bolt-carbine",
+                        "000000128:close-combat-weapon",
+                        "000000128:helix-gauntlet",
+                        "000000128:infiltrator-comms-array"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -248,32 +322,6 @@
             "name": "Omni-scramblers",
             "legend": "",
             "description": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Helix Gauntlet",
-            "legend": "",
-            "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Helix Gauntlet",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 6
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Infiltrator Comms Array",
-            "legend": "",
-            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

@@ -91,34 +91,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; relic weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000135",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s storm bolter can be replaced with 1 combi-weapon"
-                    },
-                    {
-                        "datasheetId": "000000135",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s relic weapon can be replaced with 1 relic fist"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; relic weapon.",
+            "parsed": [
+                "000000135:storm-bolter",
+                "000000135:relic-weapon"
+            ],
+            "byModelType": {
+                "Captain in Terminator Armour": [
+                    "000000135:storm-bolter",
+                    "000000135:relic-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000135:storm-bolter",
+                "datasheetId": "000000135",
                 "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -150,6 +139,7 @@
             },
             {
                 "id": "000000135:combi-weapon",
+                "datasheetId": "000000135",
                 "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -183,6 +173,7 @@
             },
             {
                 "id": "000000135:relic-fist",
+                "datasheetId": "000000135",
                 "line": 3,
                 "name": "Relic fist",
                 "type": "Melee",
@@ -212,6 +203,7 @@
             },
             {
                 "id": "000000135:relic-weapon",
+                "datasheetId": "000000135",
                 "line": 4,
                 "name": "Relic weapon",
                 "type": "Melee",
@@ -240,7 +232,47 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000135",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s storm bolter can be replaced with 1 combi-weapon"
+                },
+                {
+                    "datasheetId": "000000135",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s relic weapon can be replaced with 1 relic fist"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000135:storm-bolter",
+                        "000000135:relic-weapon"
+                    ],
+                    [
+                        "000000135:storm-bolter",
+                        "000000135:relic-fist"
+                    ],
+                    [
+                        "000000135:relic-weapon",
+                        "000000135:combi-weapon"
+                    ],
+                    [
+                        "000000135:combi-weapon",
+                        "000000135:relic-fist"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

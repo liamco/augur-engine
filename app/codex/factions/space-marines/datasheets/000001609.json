@@ -68,34 +68,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin avenger bolt cannon; 2 twin autocannons; 2 twin hellstrike launchers; armoured hull",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001609",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 twin hellstrike missile launchers can be replaced with 2 twin lascannons"
-                    },
-                    {
-                        "datasheetId": "000001609",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s 2 twin autocannons can be replaced with 2 quad heavy bolters."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin avenger bolt cannon; 2 twin autocannons; 2 twin hellstrike launchers; armoured hull",
+            "parsed": [
+                "000001609:twin-avenger-bolt-cannon",
+                "000001609:twin-autocannon",
+                "000001609:twin-hellstrike-launcher",
+                "000001609:armoured-hull"
+            ],
+            "byModelType": {
+                "Fire Raptor Gunship": [
+                    "000001609:twin-avenger-bolt-cannon",
+                    "000001609:twin-autocannon",
+                    "000001609:twin-hellstrike-launcher",
+                    "000001609:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001609:quad-heavy-bolter",
+                "datasheetId": "000001609",
                 "line": 1,
                 "name": "Quad heavy bolter",
                 "type": "Ranged",
@@ -128,6 +121,7 @@
             },
             {
                 "id": "000001609:twin-autocannon",
+                "datasheetId": "000001609",
                 "line": 2,
                 "name": "Twin autocannon",
                 "type": "Ranged",
@@ -159,6 +153,7 @@
             },
             {
                 "id": "000001609:twin-avenger-bolt-cannon",
+                "datasheetId": "000001609",
                 "line": 3,
                 "name": "Twin avenger bolt cannon",
                 "type": "Ranged",
@@ -190,6 +185,7 @@
             },
             {
                 "id": "000001609:twin-hellstrike-launcher",
+                "datasheetId": "000001609",
                 "line": 4,
                 "name": "Twin hellstrike launcher",
                 "type": "Ranged",
@@ -222,6 +218,7 @@
             },
             {
                 "id": "000001609:twin-lascannon",
+                "datasheetId": "000001609",
                 "line": 5,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -253,6 +250,7 @@
             },
             {
                 "id": "000001609:armoured-hull",
+                "datasheetId": "000001609",
                 "line": 6,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -281,7 +279,43 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001609",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 twin hellstrike missile launchers can be replaced with 2 twin lascannons"
+                },
+                {
+                    "datasheetId": "000001609",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s 2 twin autocannons can be replaced with 2 quad heavy bolters."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001609:twin-avenger-bolt-cannon",
+                        "000001609:twin-autocannon",
+                        "000001609:twin-hellstrike-launcher",
+                        "000001609:armoured-hull"
+                    ],
+                    [
+                        "000001609:twin-avenger-bolt-cannon",
+                        "000001609:twin-hellstrike-launcher",
+                        "000001609:armoured-hull",
+                        "000001609:quad-heavy-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

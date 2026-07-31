@@ -107,28 +107,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Infernus; artificer crozius.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002678",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Infernus; artificer crozius.",
+            "parsed": [
+                "000002678:infernus",
+                "000002678:artificer-crozius"
+            ],
+            "byModelType": {
+                "Chaplain Cassius – EPIC HERO": [
+                    "000002678:infernus",
+                    "000002678:artificer-crozius"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002678:infernus",
+                "datasheetId": "000002678",
                 "line": 1,
                 "name": "Infernus",
                 "type": "Ranged",
@@ -148,7 +143,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": -1,
                         "d": 1
@@ -163,6 +158,7 @@
             },
             {
                 "id": "000002678:artificer-crozius",
+                "datasheetId": "000002678",
                 "line": 2,
                 "name": "Artificer crozius",
                 "type": "Melee",
@@ -191,7 +187,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002678",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002678:infernus",
+                        "000002678:artificer-crozius"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -60,46 +60,32 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Sword Brother is equipped with:</b> heavy bolt pistol; master-crafted power weapon.<br><br><b>Every Initiate is equipped with:</b> bolt pistol; bolt rifle; close combat weapon.<br><br><b>Every Neophyte is equipped with:</b> bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002799",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Sword Brother’s heavy bolt pistol can be replaced with 1 pyre pistol."
-                    },
-                    {
-                        "datasheetId": "000002799",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon."
-                    },
-                    {
-                        "datasheetId": "000002799",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword."
-                    },
-                    {
-                        "datasheetId": "000002799",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 10 models in this unit, up to 2 Initiates can each have their bolt rifle replaced with one of the following:<br><ul><li>1 heavy bolt pistol and 1 power fist</li><li>1 pyreblaster</li></ul>"
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Sword Brother is equipped with:</b> heavy bolt pistol; master-crafted power weapon.<br><br><b>Every Initiate is equipped with:</b> bolt pistol; bolt rifle; close combat weapon.<br><br><b>Every Neophyte is equipped with:</b> bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000002799:heavy-bolt-pistol",
+                "000002799:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Sword Brother": [
+                    "000002799:heavy-bolt-pistol",
+                    "000002799:master-crafted-power-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Initiate": [
+                    "000002799:bolt-pistol",
+                    "000002799:bolt-rifle",
+                    "000002799:close-combat-weapon"
+                ],
+                "Neophyte": [
+                    "000002799:bolt-pistol",
+                    "000002799:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002799:bolt-pistol",
+                "datasheetId": "000002799",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -124,13 +110,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Initiate",
+                            "Neophyte"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002799:bolt-rifle",
+                "datasheetId": "000002799",
                 "line": 2,
                 "name": "Bolt rifle",
                 "type": "Ranged",
@@ -156,13 +147,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002799:heavy-bolt-pistol",
+                "datasheetId": "000002799",
                 "line": 3,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -194,6 +189,7 @@
             },
             {
                 "id": "000002799:neophyte-firearm",
+                "datasheetId": "000002799",
                 "line": 4,
                 "name": "Neophyte firearm",
                 "type": "Ranged",
@@ -225,6 +221,7 @@
             },
             {
                 "id": "000002799:pyre-pistol",
+                "datasheetId": "000002799",
                 "line": 5,
                 "name": "Pyre pistol",
                 "type": "Ranged",
@@ -243,7 +240,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -251,13 +248,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002799:pyreblaster",
+                "datasheetId": "000002799",
                 "line": 6,
                 "name": "Pyreblaster",
                 "type": "Ranged",
@@ -275,7 +276,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": 0,
                         "d": 1
@@ -283,13 +284,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 2,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002799:astartes-chainsword",
+                "datasheetId": "000002799",
                 "line": 7,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -321,6 +328,7 @@
             },
             {
                 "id": "000002799:close-combat-weapon",
+                "datasheetId": "000002799",
                 "line": 8,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -350,6 +358,7 @@
             },
             {
                 "id": "000002799:master-crafted-power-weapon",
+                "datasheetId": "000002799",
                 "line": 9,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -374,13 +383,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002799:power-fist",
+                "datasheetId": "000002799",
                 "line": 10,
                 "name": "Power fist",
                 "type": "Melee",
@@ -403,13 +416,102 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 2,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002799",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Sword Brother’s heavy bolt pistol can be replaced with 1 pyre pistol."
+                },
+                {
+                    "datasheetId": "000002799",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon."
+                },
+                {
+                    "datasheetId": "000002799",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword."
+                },
+                {
+                    "datasheetId": "000002799",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, up to 2 Initiates can each have their bolt rifle replaced with one of the following:<br><ul><li>1 heavy bolt pistol and 1 power fist</li><li>1 pyreblaster</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Sword Brother",
+                "items": [
+                    [
+                        "000002799:heavy-bolt-pistol",
+                        "000002799:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000002799:master-crafted-power-weapon",
+                        "000002799:pyre-pistol"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Initiate",
+                "items": [
+                    [
+                        "000002799:bolt-pistol",
+                        "000002799:bolt-rifle",
+                        "000002799:close-combat-weapon"
+                    ],
+                    [
+                        "000002799:bolt-pistol",
+                        "000002799:close-combat-weapon",
+                        "000002799:heavy-bolt-pistol",
+                        "000002799:power-fist"
+                    ],
+                    [
+                        "000002799:bolt-pistol",
+                        "000002799:close-combat-weapon",
+                        "000002799:pyreblaster"
+                    ],
+                    [
+                        "000002799:bolt-pistol",
+                        "000002799:close-combat-weapon",
+                        "000002799:heavy-bolt-pistol",
+                        "000002799:astartes-chainsword"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Neophyte",
+                "items": [
+                    [
+                        "000002799:bolt-pistol",
+                        "000002799:astartes-chainsword"
+                    ],
+                    [
+                        "000002799:neophyte-firearm",
+                        "000002799:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

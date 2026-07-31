@@ -45,28 +45,17 @@
     "transport": "This model has a transport capacity of 1 Dreadnought model.",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> nothing.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000122",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> nothing.",
+            "parsed": [],
+            "byModelType": {
+                "Dreadnought Drop Pod": []
             }
         },
         "weapons": [
             {
                 "id": "000000122:wargear-1",
+                "datasheetId": "000000122",
                 "line": 1,
                 "name": "Wargear 1",
                 "type": "",
@@ -95,7 +84,26 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000122",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    []
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

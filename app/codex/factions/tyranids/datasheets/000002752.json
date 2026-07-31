@@ -63,21 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> toxinjector harpoon; monstrous scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> toxinjector harpoon; monstrous scything talons.",
+            "parsed": [
+                "000002752:toxinjector-harpoon",
+                "000002752:monstrous-scything-talons"
+            ],
+            "byModelType": {
+                "Norn Assimilator": [
+                    "000002752:toxinjector-harpoon",
+                    "000002752:monstrous-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002752:toxinjector-harpoon",
+                "datasheetId": "000002752",
                 "line": 1,
                 "name": "Toxinjector Harpoon",
                 "type": "Ranged",
@@ -109,6 +111,7 @@
             },
             {
                 "id": "000002752:monstrous-scything-talons",
+                "datasheetId": "000002752",
                 "line": 2,
                 "name": "Monstrous scything talons",
                 "type": "Melee",
@@ -138,6 +141,7 @@
             },
             {
                 "id": "000002752:toxinjector-harpoon-2",
+                "datasheetId": "000002752",
                 "line": 3,
                 "name": "Toxinjector harpoon",
                 "type": "Melee",
@@ -168,7 +172,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002752:toxinjector-harpoon",
+                        "000002752:monstrous-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -238,9 +257,16 @@
                 {
                     "name": "Singular Purpose",
                     "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true
+                },
+                {
+                    "name": "Singular Purpose",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
                 }
             ],
             "mechanicsSource": "regex"

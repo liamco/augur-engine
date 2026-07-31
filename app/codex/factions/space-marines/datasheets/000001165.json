@@ -73,21 +73,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolt pistol; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolt pistol; close combat weapon.",
+            "parsed": [
+                "000001165:heavy-bolt-pistol",
+                "000001165:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Bladeguard Ancient": [
+                    "000001165:heavy-bolt-pistol",
+                    "000001165:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001165:heavy-bolt-pistol",
+                "datasheetId": "000001165",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -119,6 +121,7 @@
             },
             {
                 "id": "000001165:close-combat-weapon",
+                "datasheetId": "000001165",
                 "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -147,7 +150,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001165:heavy-bolt-pistol",
+                        "000001165:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -40,21 +40,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> transdimensional abductor.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> transdimensional abductor.",
+            "parsed": [
+                "000002361:transdimensional-abductor"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002361:transdimensional-abductor"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002361:transdimensional-abductor",
+                "datasheetId": "000002361",
                 "line": 1,
                 "name": "Transdimensional abductor",
                 "type": "Ranged",
@@ -83,7 +83,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002361:transdimensional-abductor"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -147,16 +161,8 @@
             "description": "While a friendly Necrons Infantry unit is within 6\" of this Fortification, models in that unit have Feel No Pain 6+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Reanimation Nodes (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 6
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Ancient Cover",

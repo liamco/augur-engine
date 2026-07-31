@@ -75,21 +75,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 heavy bolt pistol; 1 Claws of Severax.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 heavy bolt pistol; 1 Claws of Severax.",
+            "parsed": [
+                "000004148:heavy-bolt-pistol",
+                "000004148:claws-of-severax"
+            ],
+            "byModelType": {
+                "Aethon Shaan – EPIC HERO": [
+                    "000004148:heavy-bolt-pistol",
+                    "000004148:claws-of-severax"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004148:heavy-bolt-pistol",
+                "datasheetId": "000004148",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -121,6 +123,7 @@
             },
             {
                 "id": "000004148:claws-of-severax",
+                "datasheetId": "000004148",
                 "line": 2,
                 "name": "Claws of Severax",
                 "type": "Melee",
@@ -152,7 +155,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004148:heavy-bolt-pistol",
+                        "000004148:claws-of-severax"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

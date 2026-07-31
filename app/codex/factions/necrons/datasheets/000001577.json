@@ -70,28 +70,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 singularity generators; titanic forelimbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001577",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 singularity generators; titanic forelimbs.",
+            "parsed": [
+                "000001577:singularity-generator",
+                "000001577:titanic-forelimbs"
+            ],
+            "byModelType": {
+                "Seraptek Heavy Construct": [
+                    "000001577:singularity-generator",
+                    "000001577:titanic-forelimbs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001577:singularity-generator",
+                "datasheetId": "000001577",
                 "line": 1,
                 "name": "Singularity generator",
                 "type": "Ranged",
@@ -124,6 +119,7 @@
             },
             {
                 "id": "000001577:synaptic-obliterator",
+                "datasheetId": "000001577",
                 "line": 2,
                 "name": "Synaptic obliterator",
                 "type": "Ranged",
@@ -155,6 +151,7 @@
             },
             {
                 "id": "000001577:transdimensional-projector",
+                "datasheetId": "000001577",
                 "line": 3,
                 "name": "Transdimensional projector",
                 "type": "Ranged",
@@ -183,9 +180,10 @@
                 "count": 1
             },
             {
-                "id": "000001577:titanic-forelimbs-strike",
+                "id": "000001577:titanic-forelimbs",
+                "datasheetId": "000001577",
                 "line": 4,
-                "name": "Titanic forelimbs – strike",
+                "name": "Titanic forelimbs",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -193,7 +191,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Titanic forelimbs – strike",
+                        "name": "Titanic forelimbs - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -202,27 +201,14 @@
                         "s": 14,
                         "ap": -3,
                         "d": 5
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001577:titanic-forelimbs-sweep",
-                "line": 5,
-                "name": "Titanic forelimbs – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001577",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Titanic forelimbs – sweep",
+                        "name": "Titanic forelimbs - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -241,7 +227,34 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001577",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001577:singularity-generator",
+                        "000001577:titanic-forelimbs"
+                    ],
+                    [
+                        "000001577:titanic-forelimbs",
+                        "000001577:synaptic-obliterator",
+                        "000001577:transdimensional-projector"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

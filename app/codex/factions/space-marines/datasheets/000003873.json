@@ -55,34 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> power fist; storm bolter.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003873",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Up to 3 Deathwatch Terminators can each have their storm bolter replaced with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 cyclone missile launcher and 1 storm bolter (this model’s storm bolter cannot be replaced)</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000003873",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their power fist and storm bolter replaced with one of the following:<ul><li>1 storm bolter and 1 power weapon</li><li>1 storm bolter and 1 chainfist</li><li>1 thunder hammer and 1 storm shield</li><li>1 twin lightning claws</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> power fist; storm bolter.",
+            "parsed": [
+                "000003873:power-fist",
+                "000003873:storm-bolter"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000003873:power-fist",
+                    "000003873:storm-bolter"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003873:assault-cannon",
+                "datasheetId": "000003873",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -107,15 +96,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 3,
+                        "modelType": [
+                            "Deathwatch Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000003873:cyclone-missile-launcher-frag",
+                "id": "000003873:cyclone-missile-launcher",
+                "datasheetId": "000003873",
                 "line": 2,
-                "name": "Cyclone missile launcher – frag",
+                "name": "Cyclone missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -123,7 +117,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Cyclone missile launcher – frag",
+                        "name": "Cyclone missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -134,27 +129,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000003873:cyclone-missile-launcher-krak",
-                "line": 3,
-                "name": "Cyclone missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000003873",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Cyclone missile launcher – krak",
+                        "name": "Cyclone missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -167,13 +149,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 3,
+                        "modelType": [
+                            "Deathwatch Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003873:heavy-flamer",
+                "datasheetId": "000003873",
                 "line": 4,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -191,7 +178,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -199,15 +186,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 3,
+                        "modelType": [
+                            "Deathwatch Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000003873:plasma-cannon-standard",
+                "id": "000003873:plasma-cannon",
+                "datasheetId": "000003873",
                 "line": 5,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -215,7 +207,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -226,27 +219,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000003873:plasma-cannon-supercharge",
-                "line": 6,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000003873",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -262,13 +242,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 3,
+                        "modelType": [
+                            "Deathwatch Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003873:storm-bolter",
+                "datasheetId": "000003873",
                 "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -300,6 +285,7 @@
             },
             {
                 "id": "000003873:chainfist",
+                "datasheetId": "000003873",
                 "line": 8,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -331,6 +317,7 @@
             },
             {
                 "id": "000003873:power-fist",
+                "datasheetId": "000003873",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -360,6 +347,7 @@
             },
             {
                 "id": "000003873:power-weapon",
+                "datasheetId": "000003873",
                 "line": 10,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -389,6 +377,7 @@
             },
             {
                 "id": "000003873:thunder-hammer",
+                "datasheetId": "000003873",
                 "line": 11,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -420,6 +409,7 @@
             },
             {
                 "id": "000003873:twin-lightning-claws",
+                "datasheetId": "000003873",
                 "line": 12,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -450,7 +440,118 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003873",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Up to 3 Deathwatch Terminators can each have their storm bolter replaced with one of the following:<ul><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 plasma cannon</li><li>1 cyclone missile launcher and 1 storm bolter (this model’s storm bolter cannot be replaced)</li></ul>"
+                },
+                {
+                    "datasheetId": "000003873",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their power fist and storm bolter replaced with one of the following:<ul><li>1 storm bolter and 1 power weapon</li><li>1 storm bolter and 1 chainfist</li><li>1 thunder hammer and 1 storm shield</li><li>1 twin lightning claws</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000003873:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 4.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Deathwatch Terminator Sergeant",
+                "items": [
+                    [
+                        "000003873:power-fist",
+                        "000003873:storm-bolter"
+                    ],
+                    [
+                        "000003873:storm-bolter",
+                        "000003873:power-weapon"
+                    ],
+                    [
+                        "000003873:storm-bolter",
+                        "000003873:chainfist"
+                    ],
+                    [
+                        "000003873:thunder-hammer",
+                        "000003873:storm-shield"
+                    ],
+                    [
+                        "000003873:twin-lightning-claws"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Deathwatch Terminator",
+                "items": [
+                    [
+                        "000003873:power-fist",
+                        "000003873:storm-bolter"
+                    ],
+                    [
+                        "000003873:storm-bolter",
+                        "000003873:power-weapon"
+                    ],
+                    [
+                        "000003873:storm-bolter",
+                        "000003873:chainfist"
+                    ],
+                    [
+                        "000003873:thunder-hammer",
+                        "000003873:storm-shield"
+                    ],
+                    [
+                        "000003873:twin-lightning-claws"
+                    ],
+                    [
+                        "000003873:power-fist",
+                        "000003873:assault-cannon"
+                    ],
+                    [
+                        "000003873:power-fist",
+                        "000003873:heavy-flamer"
+                    ],
+                    [
+                        "000003873:power-fist",
+                        "000003873:plasma-cannon"
+                    ],
+                    [
+                        "000003873:power-fist",
+                        "000003873:cyclone-missile-launcher",
+                        "000003873:storm-bolter"
+                    ],
+                    [
+                        "000003873:cyclone-missile-launcher",
+                        "000003873:storm-bolter",
+                        "000003873:power-weapon"
+                    ],
+                    [
+                        "000003873:cyclone-missile-launcher",
+                        "000003873:storm-bolter",
+                        "000003873:chainfist"
+                    ],
+                    [
+                        "000003873:cyclone-missile-launcher",
+                        "000003873:thunder-hammer",
+                        "000003873:storm-shield"
+                    ],
+                    [
+                        "000003873:cyclone-missile-launcher",
+                        "000003873:twin-lightning-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",
@@ -533,15 +634,6 @@
             "name": "Teleport Homer",
             "legend": "",
             "description": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not within your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" of that token and not within 9\" horizontally of one or more enemy units. That token is then removed.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 4.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

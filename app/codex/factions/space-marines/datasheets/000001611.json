@@ -145,21 +145,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Storm of the Emperor’s Wrath; Rod of Tigurius.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Storm of the Emperor’s Wrath; Rod of Tigurius.",
+            "parsed": [
+                "000001611:bolt-pistol",
+                "000001611:storm-of-the-emperor-s-wrath",
+                "000001611:rod-of-tigurius"
+            ],
+            "byModelType": {
+                "Chief Librarian Tigurius – EPIC HERO": [
+                    "000001611:bolt-pistol",
+                    "000001611:storm-of-the-emperor-s-wrath",
+                    "000001611:rod-of-tigurius"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001611:bolt-pistol",
+                "datasheetId": "000001611",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -190,9 +194,10 @@
                 "count": 1
             },
             {
-                "id": "000001611:storm-of-the-emperor-s-wrath-witchfire",
+                "id": "000001611:storm-of-the-emperor-s-wrath",
+                "datasheetId": "000001611",
                 "line": 2,
-                "name": "Storm of the Emperor’s Wrath – witchfire",
+                "name": "Storm of the Emperor’s Wrath",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -200,7 +205,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Storm of the Emperor’s Wrath – witchfire",
+                        "name": "Storm of the Emperor’s Wrath - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "BLAST",
                             "PSYCHIC"
@@ -212,27 +218,14 @@
                         "s": 6,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001611:storm-of-the-emperor-s-wrath-focused-witchfire",
-                "line": 3,
-                "name": "Storm of the Emperor’s Wrath – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001611",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Storm of the Emperor’s Wrath – focused witchfire",
+                        "name": "Storm of the Emperor’s Wrath - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS",
@@ -256,6 +249,7 @@
             },
             {
                 "id": "000001611:rod-of-tigurius",
+                "datasheetId": "000001611",
                 "line": 4,
                 "name": "Rod of Tigurius",
                 "type": "Melee",
@@ -286,7 +280,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001611:bolt-pistol",
+                        "000001611:storm-of-the-emperor-s-wrath",
+                        "000001611:rod-of-tigurius"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -347,24 +357,8 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Hood of Hellfire",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "isLeadingUnit",
-                            "operator": "equals",
-                            "value": true
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Master of Prescience (Psychic)",

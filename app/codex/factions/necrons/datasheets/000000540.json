@@ -45,30 +45,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heat ray; Stalker’s forelimbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000540",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heat ray can be replaced with one of the following:<ul><li>1 particle shredder</li><li>1 heavy gauss cannon array</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heat ray; Stalker’s forelimbs.",
+            "parsed": [
+                "000000540:heat-ray",
+                "000000540:stalker-s-forelimbs"
+            ],
+            "byModelType": {
+                "Triarch Stalker": [
+                    "000000540:heat-ray",
+                    "000000540:stalker-s-forelimbs"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000540:heat-ray-dispersed",
+                "id": "000000540:heat-ray",
+                "datasheetId": "000000540",
                 "line": 1,
-                "name": "Heat ray – dispersed",
+                "name": "Heat ray",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -76,7 +71,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Heat ray – dispersed",
+                        "name": "Heat ray - dispersed",
+                        "profileName": "dispersed",
                         "attributes": [
                             "IGNORES COVER",
                             "TORRENT"
@@ -84,31 +80,18 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000540:heat-ray-focused",
-                "line": 2,
-                "name": "Heat ray – focused",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000540",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Heat ray – focused",
+                        "name": "Heat ray - focused",
+                        "profileName": "focused",
                         "attributes": [
                             "MELTA 4"
                         ],
@@ -130,6 +113,7 @@
             },
             {
                 "id": "000000540:particle-shredder",
+                "datasheetId": "000000540",
                 "line": 3,
                 "name": "Particle shredder",
                 "type": "Ranged",
@@ -162,6 +146,7 @@
             },
             {
                 "id": "000000540:heavy-gauss-cannon-array",
+                "datasheetId": "000000540",
                 "line": 4,
                 "name": "Heavy gauss cannon array",
                 "type": "Ranged",
@@ -193,6 +178,7 @@
             },
             {
                 "id": "000000540:stalker-s-forelimbs",
+                "datasheetId": "000000540",
                 "line": 5,
                 "name": "Stalker’s forelimbs",
                 "type": "Melee",
@@ -221,7 +207,37 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000540",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heat ray can be replaced with one of the following:<ul><li>1 particle shredder</li><li>1 heavy gauss cannon array</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000540:heat-ray",
+                        "000000540:stalker-s-forelimbs"
+                    ],
+                    [
+                        "000000540:stalker-s-forelimbs",
+                        "000000540:particle-shredder"
+                    ],
+                    [
+                        "000000540:stalker-s-forelimbs",
+                        "000000540:heavy-gauss-cannon-array"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

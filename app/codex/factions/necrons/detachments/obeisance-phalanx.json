@@ -250,8 +250,16 @@
             "cost": 25,
             "legend": "This insatiable subjugator sees all before them as theirs for the taking by ancient right of conquest. They wield their legion like an iron gauntlet, using it to seize the battlefield in a demonstration of their power and strength, daring others to try taking it from them.",
             "description": "OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Eternal Conqueror",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",

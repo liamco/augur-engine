@@ -58,34 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 tempest bolters; twin heavy onslaught gatling cannon; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001667",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 ironhail heavy stubber."
-                    },
-                    {
-                        "datasheetId": "000001667",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 Icarus rocket pod."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 tempest bolters; twin heavy onslaught gatling cannon; armoured hull.",
+            "parsed": [
+                "000001667:tempest-bolter",
+                "000001667:twin-heavy-onslaught-gatling-cannon",
+                "000001667:armoured-hull"
+            ],
+            "byModelType": {
+                "Gladiator Reaper": [
+                    "000001667:tempest-bolter",
+                    "000001667:twin-heavy-onslaught-gatling-cannon",
+                    "000001667:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001667:icarus-rocket-pod",
+                "datasheetId": "000001667",
                 "line": 1,
                 "name": "Icarus rocket pod",
                 "type": "Ranged",
@@ -117,6 +108,7 @@
             },
             {
                 "id": "000001667:ironhail-heavy-stubber",
+                "datasheetId": "000001667",
                 "line": 2,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
@@ -148,6 +140,7 @@
             },
             {
                 "id": "000001667:tempest-bolter",
+                "datasheetId": "000001667",
                 "line": 3,
                 "name": "Tempest bolter",
                 "type": "Ranged",
@@ -179,6 +172,7 @@
             },
             {
                 "id": "000001667:twin-heavy-onslaught-gatling-cannon",
+                "datasheetId": "000001667",
                 "line": 4,
                 "name": "Twin heavy onslaught gatling cannon",
                 "type": "Ranged",
@@ -211,6 +205,7 @@
             },
             {
                 "id": "000001667:armoured-hull",
+                "datasheetId": "000001667",
                 "line": 5,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -239,7 +234,55 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001667",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 ironhail heavy stubber."
+                },
+                {
+                    "datasheetId": "000001667",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 Icarus rocket pod."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001667:tempest-bolter",
+                        "000001667:twin-heavy-onslaught-gatling-cannon",
+                        "000001667:armoured-hull"
+                    ],
+                    [
+                        "000001667:tempest-bolter",
+                        "000001667:twin-heavy-onslaught-gatling-cannon",
+                        "000001667:armoured-hull",
+                        "000001667:icarus-rocket-pod"
+                    ],
+                    [
+                        "000001667:tempest-bolter",
+                        "000001667:twin-heavy-onslaught-gatling-cannon",
+                        "000001667:armoured-hull",
+                        "000001667:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000001667:tempest-bolter",
+                        "000001667:twin-heavy-onslaught-gatling-cannon",
+                        "000001667:armoured-hull",
+                        "000001667:ironhail-heavy-stubber",
+                        "000001667:icarus-rocket-pod"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

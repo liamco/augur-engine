@@ -97,46 +97,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000083",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy bolt pistol can be replaced with one of the following: <br><ul><li>1 plasma pistol </li><li>1 hand flamer </li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000083",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s Astartes chainsword can be replaced with one of the following: <br><ul><li>1 power fist </li><li>1 relic weapon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000083",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model’s heavy bolt pistol and Astartes chainsword can be replaced with 1 thunder hammer and 1 relic shield."
-                    },
-                    {
-                        "datasheetId": "000000083",
-                        "line": 4,
-                        "button": "•",
-                        "description": "If this model is equipped with a heavy bolt pistol and an Astartes chainsword, it can be equipped with 1 relic shield. This model’s heavy bolt pistol and Astartes chainsword cannot be replaced."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000000083:heavy-bolt-pistol",
+                "000000083:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Captain with Jump Pack": [
+                    "000000083:heavy-bolt-pistol",
+                    "000000083:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000083:hand-flamer",
+                "datasheetId": "000000083",
                 "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -155,7 +132,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -170,6 +147,7 @@
             },
             {
                 "id": "000000083:heavy-bolt-pistol",
+                "datasheetId": "000000083",
                 "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -200,9 +178,10 @@
                 "count": 1
             },
             {
-                "id": "000000083:plasma-pistol-standard",
+                "id": "000000083:plasma-pistol",
+                "datasheetId": "000000083",
                 "line": 3,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -210,7 +189,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -221,27 +201,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000083:plasma-pistol-supercharge",
-                "line": 4,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000083",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -264,6 +231,7 @@
             },
             {
                 "id": "000000083:astartes-chainsword",
+                "datasheetId": "000000083",
                 "line": 5,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -293,6 +261,7 @@
             },
             {
                 "id": "000000083:power-fist",
+                "datasheetId": "000000083",
                 "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
@@ -322,6 +291,7 @@
             },
             {
                 "id": "000000083:relic-weapon",
+                "datasheetId": "000000083",
                 "line": 7,
                 "name": "Relic weapon",
                 "type": "Melee",
@@ -351,6 +321,7 @@
             },
             {
                 "id": "000000083:thunder-hammer",
+                "datasheetId": "000000083",
                 "line": 8,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -381,7 +352,96 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000083",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy bolt pistol can be replaced with one of the following: <br><ul><li>1 plasma pistol </li><li>1 hand flamer </li></ul>"
+                },
+                {
+                    "datasheetId": "000000083",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s Astartes chainsword can be replaced with one of the following: <br><ul><li>1 power fist </li><li>1 relic weapon</li></ul>"
+                },
+                {
+                    "datasheetId": "000000083",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model’s heavy bolt pistol and Astartes chainsword can be replaced with 1 thunder hammer and 1 relic shield."
+                },
+                {
+                    "datasheetId": "000000083",
+                    "line": 4,
+                    "button": "•",
+                    "description": "If this model is equipped with a heavy bolt pistol and an Astartes chainsword, it can be equipped with 1 relic shield. This model’s heavy bolt pistol and Astartes chainsword cannot be replaced."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000083:relic-shield",
+                "name": "Relic Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000083:heavy-bolt-pistol",
+                        "000000083:astartes-chainsword"
+                    ],
+                    [
+                        "000000083:heavy-bolt-pistol",
+                        "000000083:astartes-chainsword",
+                        "000000083:relic-shield"
+                    ],
+                    [
+                        "000000083:thunder-hammer",
+                        "000000083:relic-shield"
+                    ],
+                    [
+                        "000000083:heavy-bolt-pistol",
+                        "000000083:power-fist"
+                    ],
+                    [
+                        "000000083:heavy-bolt-pistol",
+                        "000000083:relic-weapon"
+                    ],
+                    [
+                        "000000083:astartes-chainsword",
+                        "000000083:plasma-pistol"
+                    ],
+                    [
+                        "000000083:plasma-pistol",
+                        "000000083:power-fist"
+                    ],
+                    [
+                        "000000083:plasma-pistol",
+                        "000000083:relic-weapon"
+                    ],
+                    [
+                        "000000083:astartes-chainsword",
+                        "000000083:hand-flamer"
+                    ],
+                    [
+                        "000000083:hand-flamer",
+                        "000000083:power-fist"
+                    ],
+                    [
+                        "000000083:hand-flamer",
+                        "000000083:relic-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -454,15 +514,6 @@
             "name": "Rites of Battle",
             "legend": "",
             "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Relic Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

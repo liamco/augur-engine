@@ -70,21 +70,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 4 tesla spheres; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 4 tesla spheres; armoured bulk.",
+            "parsed": [
+                "000000557:tesla-sphere",
+                "000000557:armoured-bulk"
+            ],
+            "byModelType": {
+                "Obelisk": [
+                    "000000557:tesla-sphere",
+                    "000000557:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000557:tesla-sphere",
+                "datasheetId": "000000557",
                 "line": 1,
                 "name": "Tesla sphere",
                 "type": "Ranged",
@@ -117,6 +119,7 @@
             },
             {
                 "id": "000000557:armoured-bulk",
+                "datasheetId": "000000557",
                 "line": 2,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -145,7 +148,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000557:tesla-sphere",
+                        "000000557:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

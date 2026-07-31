@@ -82,21 +82,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Frostfang.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Frostfang.",
+            "parsed": [
+                "000000285:bolt-pistol",
+                "000000285:frostfang"
+            ],
+            "byModelType": {
+                "Ragnar Blackmane – EPIC HERO": [
+                    "000000285:bolt-pistol",
+                    "000000285:frostfang"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000285:bolt-pistol",
+                "datasheetId": "000000285",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -128,6 +130,7 @@
             },
             {
                 "id": "000000285:frostfang",
+                "datasheetId": "000000285",
                 "line": 2,
                 "name": "Frostfang",
                 "type": "Melee",
@@ -158,7 +161,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000285:bolt-pistol",
+                        "000000285:frostfang"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -219,8 +237,19 @@
             "description": "While this model is leading a Blood Claws unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll. While this model is leading a Wolf Guard Headtakers unit, that unit is eligible to declare a charge in a turn in which it Advanced.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "War Howl",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Battle-lust",

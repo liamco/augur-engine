@@ -40,21 +40,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> massive toxic lashes.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> massive toxic lashes.",
+            "parsed": [
+                "000000497:massive-toxic-lashes"
+            ],
+            "byModelType": {
+                "Toxicrene": [
+                    "000000497:massive-toxic-lashes"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000497:massive-toxic-lashes",
+                "datasheetId": "000000497",
                 "line": 1,
                 "name": "Massive toxic lashes",
                 "type": "Ranged",
@@ -86,6 +86,7 @@
             },
             {
                 "id": "000000497:massive-toxic-lashes-2",
+                "datasheetId": "000000497",
                 "line": 2,
                 "name": "Massive toxic lashes",
                 "type": "Melee",
@@ -116,7 +117,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000497:massive-toxic-lashes"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

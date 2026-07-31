@@ -65,21 +65,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Ancient Gadriel is equipped with:</b> bolt rifle; close combat weapon.<br><br><b>Veteran Sergeant Metaurus is equipped with:</b> heavy bolt pistol; master-crafted power weapon; storm shield.<br><br><b>Gaius Silva is equipped with:</b> archeotech laspistol; power weapon; refractor field.<br><br><b>Aemelia Minervas is equipped with:</b> archeotech laspistol; power weapon.<br><br><b>Dainal Kornelius is equipped with:</b> Astropathic Blast; force stave.<br><br><b>Lucia Vestha is equipped with:</b> archeotech laspistol; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Ancient Gadriel is equipped with:</b> bolt rifle; close combat weapon.<br><br><b>Veteran Sergeant Metaurus is equipped with:</b> heavy bolt pistol; master-crafted power weapon; storm shield.<br><br><b>Gaius Silva is equipped with:</b> archeotech laspistol; power weapon; refractor field.<br><br><b>Aemelia Minervas is equipped with:</b> archeotech laspistol; power weapon.<br><br><b>Dainal Kornelius is equipped with:</b> Astropathic Blast; force stave.<br><br><b>Lucia Vestha is equipped with:</b> archeotech laspistol; close combat weapon.",
+            "parsed": [
+                "000004188:bolt-rifle",
+                "000004188:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Ancient Gadriel – EPIC HERO": [
+                    "000004188:bolt-rifle",
+                    "000004188:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004188:archeotech-laspistol",
+                "datasheetId": "000004188",
                 "line": 1,
                 "name": "Archeotech laspistol",
                 "type": "Ranged",
@@ -111,6 +113,7 @@
             },
             {
                 "id": "000004188:astropathic-blast",
+                "datasheetId": "000004188",
                 "line": 2,
                 "name": "Astropathic Blast",
                 "type": "Ranged",
@@ -143,6 +146,7 @@
             },
             {
                 "id": "000004188:bolt-rifle",
+                "datasheetId": "000004188",
                 "line": 3,
                 "name": "Bolt rifle",
                 "type": "Ranged",
@@ -175,6 +179,7 @@
             },
             {
                 "id": "000004188:heavy-bolt-pistol",
+                "datasheetId": "000004188",
                 "line": 4,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -206,6 +211,7 @@
             },
             {
                 "id": "000004188:close-combat-weapon",
+                "datasheetId": "000004188",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -235,6 +241,7 @@
             },
             {
                 "id": "000004188:force-stave",
+                "datasheetId": "000004188",
                 "line": 6,
                 "name": "Force stave",
                 "type": "Melee",
@@ -266,6 +273,7 @@
             },
             {
                 "id": "000004188:power-weapon",
+                "datasheetId": "000004188",
                 "line": 7,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -295,6 +303,7 @@
             },
             {
                 "id": "000004188:master-crafted-power-weapon",
+                "datasheetId": "000004188",
                 "line": 8,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -323,7 +332,69 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [
+            {
+                "id": "000004188:refractor-field",
+                "name": "Refractor Field",
+                "description": "The bearer has a 5+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Refractor Field",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 5,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000004188:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004188:bolt-rifle",
+                        "000004188:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -454,40 +525,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Refractor Field",
-            "legend": "",
-            "description": "The bearer has a 5+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Refractor Field",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 5
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "HEROES OF ULTRAMAR",

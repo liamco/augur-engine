@@ -50,42 +50,25 @@
     "transport": "This model has a transport capacity of 7 Tacticus or Phobos Infantry models. It cannot transport Jump Pack models.",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 storm bolters; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002568",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 ironhail heavy stubber."
-                    },
-                    {
-                        "datasheetId": "000002568",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers."
-                    },
-                    {
-                        "datasheetId": "000002568",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 bellicatus missile array</li><li>1 ironhail skytalon array</li><li>1 orbital comms array</li><li>1 shield dome</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 storm bolters; armoured hull.",
+            "parsed": [
+                "000002568:storm-bolter",
+                "000002568:armoured-hull"
+            ],
+            "byModelType": {
+                "Impulsor": [
+                    "000002568:storm-bolter",
+                    "000002568:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000002568:bellicatus-missile-array-frag",
+                "id": "000002568:bellicatus-missile-array",
+                "datasheetId": "000002568",
                 "line": 1,
-                "name": "Bellicatus missile array – frag",
+                "name": "Bellicatus missile array",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -93,7 +76,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Bellicatus missile array – frag",
+                        "name": "Bellicatus missile array - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -104,27 +88,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002568:bellicatus-missile-array-icarus",
-                "line": 2,
-                "name": "Bellicatus missile array – Icarus",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002568",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Bellicatus missile array – Icarus",
+                        "name": "Bellicatus missile array - Icarus",
+                        "profileName": "Icarus",
                         "attributes": [
                             "ANTI-FLY 2+"
                         ],
@@ -135,27 +106,14 @@
                         "s": 8,
                         "ap": -1,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002568:bellicatus-missile-array-krak",
-                "line": 3,
-                "name": "Bellicatus missile array – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002568",
                         "line": 3,
                         "lineInWargear": 3,
                         "dice": "",
-                        "name": "Bellicatus missile array – krak",
+                        "name": "Bellicatus missile array - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 48,
                         "type": "Ranged",
@@ -175,6 +133,7 @@
             },
             {
                 "id": "000002568:fragstorm-grenade-launcher",
+                "datasheetId": "000002568",
                 "line": 4,
                 "name": "Fragstorm grenade launcher",
                 "type": "Ranged",
@@ -206,6 +165,7 @@
             },
             {
                 "id": "000002568:ironhail-heavy-stubber",
+                "datasheetId": "000002568",
                 "line": 5,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
@@ -237,6 +197,7 @@
             },
             {
                 "id": "000002568:ironhail-skytalon-array",
+                "datasheetId": "000002568",
                 "line": 6,
                 "name": "Ironhail skytalon array",
                 "type": "Ranged",
@@ -269,6 +230,7 @@
             },
             {
                 "id": "000002568:storm-bolter",
+                "datasheetId": "000002568",
                 "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -300,6 +262,7 @@
             },
             {
                 "id": "000002568:armoured-hull",
+                "datasheetId": "000002568",
                 "line": 8,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -328,7 +291,174 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002568",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 ironhail heavy stubber."
+                },
+                {
+                    "datasheetId": "000002568",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers."
+                },
+                {
+                    "datasheetId": "000002568",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 bellicatus missile array</li><li>1 ironhail skytalon array</li><li>1 orbital comms array</li><li>1 shield dome</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002568:orbital-comms-array-aura",
+                "name": "Orbital Comms Array (Aura)",
+                "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            },
+            {
+                "id": "000002568:shield-dome",
+                "name": "Shield Dome",
+                "description": "The bearer has a 5+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Shield Dome",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 5,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:bellicatus-missile-array"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-skytalon-array"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:orbital-comms-array-aura"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:shield-dome"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:fragstorm-grenade-launcher"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:bellicatus-missile-array"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:ironhail-skytalon-array"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:orbital-comms-array-aura"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:shield-dome"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:bellicatus-missile-array"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:ironhail-skytalon-array"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:orbital-comms-array-aura"
+                    ],
+                    [
+                        "000002568:storm-bolter",
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:shield-dome"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:fragstorm-grenade-launcher"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:bellicatus-missile-array"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:ironhail-skytalon-array"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:orbital-comms-array-aura"
+                    ],
+                    [
+                        "000002568:armoured-hull",
+                        "000002568:ironhail-heavy-stubber",
+                        "000002568:fragstorm-grenade-launcher",
+                        "000002568:shield-dome"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -396,32 +526,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Orbital Comms Array (Aura)",
-            "legend": "",
-            "description": "While a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Shield Dome",
-            "legend": "",
-            "description": "The bearer has a 5+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Shield Dome",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 5
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

@@ -94,8 +94,9 @@ const readJson = (path: string) => JSON.parse(readFileSync(path, "utf-8"));
 const factionDirs = () =>
     readdirSync(FACTIONS, { withFileTypes: true }).filter((f) => f.isDirectory());
 
-function checkDatasheets(): Tally {
-    const tally = emptyTally();
+function checkDatasheets(): { abilities: Tally; wargear: Tally } {
+    const abilities = emptyTally();
+    const wargear = emptyTally();
 
     for (const faction of factionDirs()) {
         const dir = join(FACTIONS, faction.name, "datasheets");
@@ -104,15 +105,22 @@ function checkDatasheets(): Tally {
         for (const file of readdirSync(dir)) {
             if (!file.endsWith(".json")) continue;
             const sheet = readJson(join(dir, file));
+            const at = `${faction.name}/${file}`;
 
             for (const ability of (sheet.abilities ?? []) as Rule[]) {
                 if (ability.type !== "Datasheet") continue;
-                checkRule(ability, `${faction.name}/${file} ${ability.name}`, tally);
+                checkRule(ability, `${at} ${ability.name}`, abilities);
+            }
+
+            // Wargear-conferred abilities carry mechanics too, read by
+            // collectWargearMechanics, so they need the same checking.
+            for (const item of (sheet.wargear?.abilities ?? []) as Rule[]) {
+                checkRule(item, `${at} wargear "${item.name}"`, wargear);
             }
         }
     }
 
-    return tally;
+    return { abilities, wargear };
 }
 
 function checkDetachments(): { abilities: Tally; enhancements: Tally } {
@@ -157,11 +165,12 @@ function report(label: string, tally: Tally): void {
 function main() {
     console.log("Validating mechanics in app/codex\n");
 
-    const datasheets = checkDatasheets();
+    const { abilities: datasheetAbilities, wargear } = checkDatasheets();
     const { abilities, enhancements } = checkDetachments();
-    const all = [datasheets, abilities, enhancements];
+    const all = [datasheetAbilities, wargear, abilities, enhancements];
 
-    report("datasheet abilities", datasheets);
+    report("datasheet abilities", datasheetAbilities);
+    report("wargear abilities", wargear);
     report("detachment abilities", abilities);
     report("enhancements", enhancements);
 

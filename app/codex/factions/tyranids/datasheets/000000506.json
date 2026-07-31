@@ -53,28 +53,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bio-acid spray; Hierodule scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000506",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bio-acid spray; Hierodule scything talons.",
+            "parsed": [
+                "000000506:bio-acid-spray",
+                "000000506:hierodule-scything-talons"
+            ],
+            "byModelType": {
+                "Scythed Hierodule": [
+                    "000000506:bio-acid-spray",
+                    "000000506:hierodule-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000506:bio-acid-spray",
+                "datasheetId": "000000506",
                 "line": 1,
                 "name": "Bio-acid spray",
                 "type": "Ranged",
@@ -91,7 +86,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "3D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -2,
                         "d": 1
@@ -106,6 +101,7 @@
             },
             {
                 "id": "000000506:hierodule-scything-talons",
+                "datasheetId": "000000506",
                 "line": 2,
                 "name": "Hierodule scything talons",
                 "type": "Melee",
@@ -134,7 +130,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000506",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000506:bio-acid-spray",
+                        "000000506:hierodule-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

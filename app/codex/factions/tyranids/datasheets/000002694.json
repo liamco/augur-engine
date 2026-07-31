@@ -76,28 +76,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Prime talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002694",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Prime talons.",
+            "parsed": [
+                "000002694:prime-talons"
+            ],
+            "byModelType": {
+                "Winged Tyranid Prime": [
+                    "000002694:prime-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002694:prime-talons",
+                "datasheetId": "000002694",
                 "line": 1,
                 "name": "Prime talons",
                 "type": "Melee",
@@ -126,7 +119,28 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002694",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002694:prime-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

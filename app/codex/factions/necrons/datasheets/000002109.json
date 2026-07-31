@@ -53,21 +53,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> enmitic annihilator; flensing claw; hyperphase harvester.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> enmitic annihilator; flensing claw; hyperphase harvester.",
+            "parsed": [
+                "000002109:enmitic-annihilator",
+                "000002109:flensing-claw",
+                "000002109:hyperphase-harvester"
+            ],
+            "byModelType": {
+                "Skorpekh Lord": [
+                    "000002109:enmitic-annihilator",
+                    "000002109:flensing-claw",
+                    "000002109:hyperphase-harvester"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002109:enmitic-annihilator",
+                "datasheetId": "000002109",
                 "line": 1,
                 "name": "Enmitic annihilator",
                 "type": "Ranged",
@@ -99,6 +103,7 @@
             },
             {
                 "id": "000002109:flensing-claw",
+                "datasheetId": "000002109",
                 "line": 2,
                 "name": "Flensing claw",
                 "type": "Melee",
@@ -128,6 +133,7 @@
             },
             {
                 "id": "000002109:hyperphase-harvester",
+                "datasheetId": "000002109",
                 "line": 3,
                 "name": "Hyperphase harvester",
                 "type": "Melee",
@@ -156,7 +162,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002109:enmitic-annihilator",
+                        "000002109:flensing-claw",
+                        "000002109:hyperphase-harvester"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

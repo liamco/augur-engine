@@ -76,40 +76,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002804",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s bolt pistol and boltgun can be replaced with 1 twin lightning claws."
-                    },
-                    {
-                        "datasheetId": "000002804",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s bolt pistol and boltgun can be replaced with two different weapons from the following list:*<ul><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002804",
-                        "line": 3,
-                        "button": "*",
-                        "description": "*  This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+            "parsed": [
+                "000002804:bolt-pistol",
+                "000002804:boltgun",
+                "000002804:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Wolf Guard Pack Leader": [
+                    "000002804:bolt-pistol",
+                    "000002804:boltgun",
+                    "000002804:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002804:bolt-pistol",
+                "datasheetId": "000002804",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -141,6 +126,7 @@
             },
             {
                 "id": "000002804:boltgun",
+                "datasheetId": "000002804",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -170,6 +156,7 @@
             },
             {
                 "id": "000002804:combi-weapon",
+                "datasheetId": "000002804",
                 "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -202,9 +189,10 @@
                 "count": 1
             },
             {
-                "id": "000002804:plasma-pistol-standard",
+                "id": "000002804:plasma-pistol",
+                "datasheetId": "000002804",
                 "line": 4,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -212,7 +200,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -223,27 +212,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002804:plasma-pistol-supercharge",
-                "line": 5,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002804",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -266,6 +242,7 @@
             },
             {
                 "id": "000002804:storm-bolter",
+                "datasheetId": "000002804",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -297,6 +274,7 @@
             },
             {
                 "id": "000002804:astartes-chainsword",
+                "datasheetId": "000002804",
                 "line": 7,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -326,6 +304,7 @@
             },
             {
                 "id": "000002804:close-combat-weapon",
+                "datasheetId": "000002804",
                 "line": 8,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -355,6 +334,7 @@
             },
             {
                 "id": "000002804:power-fist",
+                "datasheetId": "000002804",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -384,6 +364,7 @@
             },
             {
                 "id": "000002804:power-weapon",
+                "datasheetId": "000002804",
                 "line": 10,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -413,6 +394,7 @@
             },
             {
                 "id": "000002804:thunder-hammer",
+                "datasheetId": "000002804",
                 "line": 11,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -444,6 +426,7 @@
             },
             {
                 "id": "000002804:twin-lightning-claws",
+                "datasheetId": "000002804",
                 "line": 12,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -474,7 +457,110 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002804",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s bolt pistol and boltgun can be replaced with 1 twin lightning claws."
+                },
+                {
+                    "datasheetId": "000002804",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s bolt pistol and boltgun can be replaced with two different weapons from the following list:*<ul><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
+                },
+                {
+                    "datasheetId": "000002804",
+                    "line": 3,
+                    "button": "*",
+                    "description": "*  This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002804:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002804:bolt-pistol",
+                        "000002804:boltgun",
+                        "000002804:close-combat-weapon"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:bolt-pistol"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:boltgun"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:combi-weapon"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:plasma-pistol"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:storm-bolter"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:astartes-chainsword"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:power-fist"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:power-weapon"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:thunder-hammer"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:storm-shield"
+                    ],
+                    [
+                        "000002804:close-combat-weapon",
+                        "000002804:twin-lightning-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -528,23 +614,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Inspiring Leader",

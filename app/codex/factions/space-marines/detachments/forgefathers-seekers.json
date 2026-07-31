@@ -647,8 +647,24 @@
             "cost": 20,
             "legend": "This flowing cloak or finely wrought tabard is laced through with threads of braided adamantine. When combined with armour and energy fields, it has been shown time and again that these symbols of office are proof against even the very strongest attacks.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Adamantine Mantle",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

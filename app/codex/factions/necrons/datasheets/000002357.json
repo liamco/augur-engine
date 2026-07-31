@@ -50,21 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> spear of the Void Dragon; voltaic storm; canoptek tail blades.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> spear of the Void Dragon; voltaic storm; canoptek tail blades.",
+            "parsed": [
+                "000002357:spear-of-the-void-dragon",
+                "000002357:voltaic-storm",
+                "000002357:canoptek-tail-blades"
+            ],
+            "byModelType": {
+                "C’tan Shard of the Void Dragon – EPIC HERO": [
+                    "000002357:spear-of-the-void-dragon",
+                    "000002357:voltaic-storm",
+                    "000002357:canoptek-tail-blades"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002357:spear-of-the-void-dragon",
+                "datasheetId": "000002357",
                 "line": 1,
                 "name": "Spear of the Void Dragon",
                 "type": "Ranged",
@@ -96,6 +100,7 @@
             },
             {
                 "id": "000002357:voltaic-storm",
+                "datasheetId": "000002357",
                 "line": 2,
                 "name": "Voltaic storm",
                 "type": "Ranged",
@@ -127,9 +132,10 @@
                 "count": 1
             },
             {
-                "id": "000002357:spear-of-the-void-dragon-strike",
+                "id": "000002357:spear-of-the-void-dragon-2",
+                "datasheetId": "000002357",
                 "line": 3,
-                "name": "Spear of the Void Dragon – strike",
+                "name": "Spear of the Void Dragon",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -137,7 +143,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Spear of the Void Dragon – strike",
+                        "name": "Spear of the Void Dragon - strike",
+                        "profileName": "strike",
                         "attributes": [
                             "ANTI-VEHICLE 2+"
                         ],
@@ -148,27 +155,14 @@
                         "s": 12,
                         "ap": -4,
                         "d": "D6+2"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002357:spear-of-the-void-dragon-sweep",
-                "line": 4,
-                "name": "Spear of the Void Dragon – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002357",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Spear of the Void Dragon – sweep",
+                        "name": "Spear of the Void Dragon - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -188,6 +182,7 @@
             },
             {
                 "id": "000002357:canoptek-tail-blades",
+                "datasheetId": "000002357",
                 "line": 5,
                 "name": "Canoptek tail blades",
                 "type": "Melee",
@@ -218,7 +213,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002357:spear-of-the-void-dragon",
+                        "000002357:voltaic-storm",
+                        "000002357:canoptek-tail-blades"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -298,8 +309,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Necrodermis",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ENSLAVED STAR GOD",

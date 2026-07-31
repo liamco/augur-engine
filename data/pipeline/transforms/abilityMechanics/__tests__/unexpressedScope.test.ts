@@ -47,6 +47,33 @@ describe("hasUnexpressedScope", () => {
         ).toBe(true);
     });
 
+    it("catches an effect scoped to a subset of attacks", () => {
+        // Psychic Hood grants Feel No Pain 4+ *against Psychic Attacks*. Nothing
+        // tracks the attack's source, so extracting it flat hands the unit
+        // blanket FNP against everything.
+        expect(
+            hasUnexpressedScope(
+                "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            ),
+        ).toBe(true);
+        expect(
+            hasUnexpressedScope("Models in this unit have the Feel No Pain 5+ ability against mortal wounds."),
+        ).toBe(true);
+    });
+
+    it("does not catch an ordinary 'against' clause naming a target", () => {
+        // "against that unit" restricts who is attacked, which conditions and
+        // phase already express — not the damage source.
+        expect(
+            hasUnexpressedScope(
+                "Each time a model in this unit makes an attack against that unit, add 1 to the Hit roll.",
+            ),
+        ).toBe(false);
+        expect(
+            hasUnexpressedScope("Add 1 to the Hit roll against an enemy unit."),
+        ).toBe(false);
+    });
+
     it("passes a plain, unconditional characteristic modifier", () => {
         expect(
             hasUnexpressedScope(

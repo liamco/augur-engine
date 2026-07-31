@@ -70,21 +70,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy flamer; storm bolter; Murderclaws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy flamer; storm bolter; Murderclaws.",
+            "parsed": [
+                "000000314:heavy-flamer",
+                "000000314:storm-bolter",
+                "000000314:murderclaws"
+            ],
+            "byModelType": {
+                "Murderfang – EPIC HERO": [
+                    "000000314:heavy-flamer",
+                    "000000314:storm-bolter",
+                    "000000314:murderclaws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000314:heavy-flamer",
+                "datasheetId": "000000314",
                 "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -102,7 +106,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -117,6 +121,7 @@
             },
             {
                 "id": "000000314:storm-bolter",
+                "datasheetId": "000000314",
                 "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -148,6 +153,7 @@
             },
             {
                 "id": "000000314:murderclaws",
+                "datasheetId": "000000314",
                 "line": 3,
                 "name": "Murderclaws",
                 "type": "Melee",
@@ -179,7 +185,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000314:heavy-flamer",
+                        "000000314:storm-bolter",
+                        "000000314:murderclaws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

@@ -8,8 +8,16 @@
             "name": "Extremis-level Threat",
             "description": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
             "legend": "The 1st Company’s veterans have fought at the forefront of their Chapter’s wars for many mortal lifespans. Experience has taught them to identify the foe’s lethal threats and to lead their battle-brothers to purge them from existence.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Extremis-level Threat",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"

@@ -75,21 +75,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; close combat weapon.",
+            "parsed": [
+                "000000060:absolvor-bolt-pistol",
+                "000000060:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Apothecary Biologi": [
+                    "000000060:absolvor-bolt-pistol",
+                    "000000060:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000060:absolvor-bolt-pistol",
+                "datasheetId": "000000060",
                 "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
@@ -121,6 +123,7 @@
             },
             {
                 "id": "000000060:close-combat-weapon",
+                "datasheetId": "000000060",
                 "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -149,7 +152,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000060:absolvor-bolt-pistol",
+                        "000000060:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

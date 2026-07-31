@@ -35,21 +35,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> synaptic disintegrator; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> synaptic disintegrator; close combat weapon.",
+            "parsed": [
+                "000000537:synaptic-disintegrator",
+                "000000537:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000537:synaptic-disintegrator",
+                    "000000537:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000537:synaptic-disintegrator",
+                "datasheetId": "000000537",
                 "line": 1,
                 "name": "Synaptic disintegrator",
                 "type": "Ranged",
@@ -82,6 +84,7 @@
             },
             {
                 "id": "000000537:close-combat-weapon",
+                "datasheetId": "000000537",
                 "line": 2,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -110,7 +113,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000537:synaptic-disintegrator",
+                        "000000537:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

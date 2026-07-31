@@ -58,23 +58,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Old One Eye’s claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Old One Eye’s claws and talons.",
+            "parsed": [
+                "000000462:old-one-eye-s-claws-and-talons"
+            ],
+            "byModelType": {
+                "Old One Eye – EPIC HERO": [
+                    "000000462:old-one-eye-s-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000462:old-one-eye-s-claws-and-talons-strike",
+                "id": "000000462:old-one-eye-s-claws-and-talons",
+                "datasheetId": "000000462",
                 "line": 1,
-                "name": "Old One Eye’s claws and talons – strike",
+                "name": "Old One Eye’s claws and talons",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -82,7 +82,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Old One Eye’s claws and talons – strike",
+                        "name": "Old One Eye’s claws and talons - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -91,27 +92,14 @@
                         "s": 14,
                         "ap": -3,
                         "d": "D6+1"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000462:old-one-eye-s-claws-and-talons-sweep",
-                "line": 2,
-                "name": "Old One Eye’s claws and talons – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000462",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Old One Eye’s claws and talons – sweep",
+                        "name": "Old One Eye’s claws and talons - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -130,7 +118,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000462:old-one-eye-s-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -196,8 +198,16 @@
             "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Alpha Leader",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Unstoppable Monster",

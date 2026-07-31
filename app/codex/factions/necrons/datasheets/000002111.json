@@ -35,21 +35,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> scouring eye; scythed limbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> scouring eye; scythed limbs.",
+            "parsed": [
+                "000002111:scouring-eye",
+                "000002111:scythed-limbs"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002111:scouring-eye",
+                    "000002111:scythed-limbs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002111:scouring-eye",
+                "datasheetId": "000002111",
                 "line": 1,
                 "name": "Scouring eye",
                 "type": "Ranged",
@@ -79,6 +81,7 @@
             },
             {
                 "id": "000002111:scythed-limbs",
+                "datasheetId": "000002111",
                 "line": 2,
                 "name": "Scythed limbs",
                 "type": "Melee",
@@ -107,7 +110,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002111:scouring-eye",
+                        "000002111:scythed-limbs"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

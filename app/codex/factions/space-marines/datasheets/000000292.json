@@ -81,21 +81,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Living Lightning; Staff of the Stormcaller.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Living Lightning; Staff of the Stormcaller.",
+            "parsed": [
+                "000000292:bolt-pistol",
+                "000000292:living-lightning",
+                "000000292:staff-of-the-stormcaller"
+            ],
+            "byModelType": {
+                "Njal Stormcaller – EPIC HERO": [
+                    "000000292:bolt-pistol",
+                    "000000292:living-lightning",
+                    "000000292:staff-of-the-stormcaller"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000292:bolt-pistol",
+                "datasheetId": "000000292",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -126,9 +130,10 @@
                 "count": 1
             },
             {
-                "id": "000000292:living-lightning-witchfire",
+                "id": "000000292:living-lightning",
+                "datasheetId": "000000292",
                 "line": 2,
-                "name": "Living Lightning – witchfire",
+                "name": "Living Lightning",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -136,7 +141,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Living Lightning – witchfire",
+                        "name": "Living Lightning - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "PSYCHIC",
                             "SUSTAINED HITS 2"
@@ -148,27 +154,14 @@
                         "s": 7,
                         "ap": -1,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000292:living-lightning-focused-witchfire",
-                "line": 3,
-                "name": "Living Lightning – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000292",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Living Lightning – focused witchfire",
+                        "name": "Living Lightning - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "HAZARDOUS",
                             "PSYCHIC",
@@ -192,6 +185,7 @@
             },
             {
                 "id": "000000292:staff-of-the-stormcaller",
+                "datasheetId": "000000292",
                 "line": 4,
                 "name": "Staff of the Stormcaller",
                 "type": "Melee",
@@ -223,7 +217,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000292:bolt-pistol",
+                        "000000292:living-lightning",
+                        "000000292:staff-of-the-stormcaller"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

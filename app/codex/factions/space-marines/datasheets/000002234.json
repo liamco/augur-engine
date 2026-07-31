@@ -119,28 +119,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002234",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; master-crafted power weapon.",
+            "parsed": [
+                "000002234:bolt-pistol",
+                "000002234:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Primaris Company Champion": [
+                    "000002234:bolt-pistol",
+                    "000002234:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002234:bolt-pistol",
+                "datasheetId": "000002234",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -172,6 +167,7 @@
             },
             {
                 "id": "000002234:master-crafted-power-weapon",
+                "datasheetId": "000002234",
                 "line": 2,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -202,7 +198,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002234",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002234:bolt-pistol",
+                        "000002234:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -272,8 +290,29 @@
             "description": "Each time this model makes a melee attack that targets a <span class=\"kwb\">CHARACTER</span> unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Martial Superiority",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                },
+                {
+                    "name": "Martial Superiority",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

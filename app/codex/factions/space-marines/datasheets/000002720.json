@@ -55,40 +55,23 @@
     "transport": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator or Tacticus models (except for Tacticus Character models that begin the battle attached to a non-<span class=\"kwb\">TACTICUS</span> unit).",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin heavy bolter; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002720",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with one of the following:<ul><li>1 multi-melta</li><li>1 twin assault cannon</li><li>1 twin lascannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002720",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000002720",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin heavy bolter; armoured tracks.",
+            "parsed": [
+                "000002720:twin-heavy-bolter",
+                "000002720:armoured-tracks"
+            ],
+            "byModelType": {
+                "Relic Razorback": [
+                    "000002720:twin-heavy-bolter",
+                    "000002720:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002720:hunter-killer-missile",
+                "datasheetId": "000002720",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -120,6 +103,7 @@
             },
             {
                 "id": "000002720:multi-melta",
+                "datasheetId": "000002720",
                 "line": 2,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -151,6 +135,7 @@
             },
             {
                 "id": "000002720:storm-bolter",
+                "datasheetId": "000002720",
                 "line": 3,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -182,6 +167,7 @@
             },
             {
                 "id": "000002720:twin-assault-cannon",
+                "datasheetId": "000002720",
                 "line": 4,
                 "name": "Twin assault cannon",
                 "type": "Ranged",
@@ -214,6 +200,7 @@
             },
             {
                 "id": "000002720:twin-heavy-bolter",
+                "datasheetId": "000002720",
                 "line": 5,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -246,6 +233,7 @@
             },
             {
                 "id": "000002720:twin-lascannon",
+                "datasheetId": "000002720",
                 "line": 6,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -277,6 +265,7 @@
             },
             {
                 "id": "000002720:armoured-tracks",
+                "datasheetId": "000002720",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -305,7 +294,117 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002720",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with one of the following:<ul><li>1 multi-melta</li><li>1 twin assault cannon</li><li>1 twin lascannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000002720",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000002720",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002720:twin-heavy-bolter",
+                        "000002720:armoured-tracks"
+                    ],
+                    [
+                        "000002720:twin-heavy-bolter",
+                        "000002720:armoured-tracks",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:twin-heavy-bolter",
+                        "000002720:armoured-tracks",
+                        "000002720:hunter-killer-missile"
+                    ],
+                    [
+                        "000002720:twin-heavy-bolter",
+                        "000002720:armoured-tracks",
+                        "000002720:hunter-killer-missile",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:multi-melta"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:multi-melta",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:multi-melta",
+                        "000002720:hunter-killer-missile"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:multi-melta",
+                        "000002720:hunter-killer-missile",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-assault-cannon"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-assault-cannon",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-assault-cannon",
+                        "000002720:hunter-killer-missile"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-assault-cannon",
+                        "000002720:hunter-killer-missile",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-lascannon"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-lascannon",
+                        "000002720:storm-bolter"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-lascannon",
+                        "000002720:hunter-killer-missile"
+                    ],
+                    [
+                        "000002720:armoured-tracks",
+                        "000002720:twin-lascannon",
+                        "000002720:hunter-killer-missile",
+                        "000002720:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -366,8 +465,19 @@
             "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this <span class=\"kwb\">TRANSPORT</span> this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Fire Support",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "One Shot",

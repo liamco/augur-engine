@@ -19,6 +19,7 @@ import {
     type DetachmentIndexInput,
 } from "./transforms/detachmentIndex";
 import { findInertAttributes } from "./transforms/abilityMechanics";
+import type { ParsedWargearData } from "./transforms/transformWargear";
 import type { RawDatasheet, RawFaction, ParsedStratagem } from "./types";
 import type { ParsedFactionAbility } from "./transforms/transformAbilities";
 
@@ -140,6 +141,7 @@ function processFaction(factionSlug: string) {
         }
 
         recordDatasheetEligibility(eligibility, rawDatasheet);
+        recordLoadoutCoverage(rawDatasheet.name, datasheet.wargear);
 
         if (validateOnly) {
             const errors = validateDatasheet(datasheet);
@@ -238,6 +240,53 @@ function reportMechanicsCoverage() {
                 `  This parse reset any previously skill-authored mechanics in the codex.\n` +
                 `  Run the parse-ability-mechanics skill, then npm run validate-mechanics.`,
         );
+    }
+}
+
+/**
+ * Wargear loadout coverage for the run. Silent partial enumeration is the
+ * failure mode to avoid: a datasheet with an unread option reports
+ * loadoutsParsed false, and without a count that is invisible.
+ */
+const loadoutTotals = {
+    withOptions: 0,
+    parsed: 0,
+    combos: 0,
+    /** Datasheets whose combination count is worth a second look. */
+    outliers: [] as { name: string; combos: number }[],
+};
+
+function recordLoadoutCoverage(name: string, wargear: ParsedWargearData) {
+    const hasOptions = wargear.options.raw.some((opt) => {
+        const text = opt.description.trim().toLowerCase();
+        return text !== "none" && text !== "none." && !text.startsWith("*");
+    });
+    if (!hasOptions) return;
+
+    loadoutTotals.withOptions++;
+    if (wargear.loadoutsParsed) loadoutTotals.parsed++;
+
+    const combos = wargear.validLoadouts.reduce((n, g) => n + g.items.length, 0);
+    loadoutTotals.combos += combos;
+    if (combos > 200) loadoutTotals.outliers.push({ name, combos });
+}
+
+function reportLoadoutCoverage() {
+    const { withOptions, parsed, combos, outliers } = loadoutTotals;
+    if (withOptions === 0) return;
+
+    console.log(
+        `\nWargear loadouts: ${parsed}/${withOptions} datasheets with options fully parsed ` +
+            `(${Math.round((100 * parsed) / withOptions)}%), ${combos} combinations total`,
+    );
+    if (parsed < withOptions) {
+        console.log(
+            `  ${withOptions - parsed} report loadoutsParsed false — an option went unread ` +
+                `or named wargear the datasheet does not list.`,
+        );
+    }
+    for (const { name, combos: n } of outliers.sort((a, b) => b.combos - a.combos)) {
+        console.log(`  NOTE: ${name} generates ${n} combinations`);
     }
 }
 
@@ -371,6 +420,7 @@ function main() {
 
     reportMechanicsCoverage();
     reportDetachmentMechanicsCoverage();
+    reportLoadoutCoverage();
 
     if (!validateOnly) {
         writeCoreStratagems();

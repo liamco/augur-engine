@@ -60,34 +60,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> assault cannon; storm bolter; armoured feet; Dreadnought combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000120",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin autocannon</li><li>1 twin heavy bolter</li><li>1 twin heavy flamer</li><li>1 twin lascannon</li><li>1 Dreadnought inferno cannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000120",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 missile launcher</li><li>1 twin autocannon </li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> assault cannon; storm bolter; armoured feet; Dreadnought combat weapon.",
+            "parsed": [
+                "000000120:assault-cannon",
+                "000000120:storm-bolter",
+                "000000120:armoured-feet",
+                "000000120:dreadnought-combat-weapon"
+            ],
+            "byModelType": {
+                "Venerable Dreadnought": [
+                    "000000120:assault-cannon",
+                    "000000120:storm-bolter",
+                    "000000120:armoured-feet",
+                    "000000120:dreadnought-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000120:assault-cannon",
+                "datasheetId": "000000120",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -119,6 +112,7 @@
             },
             {
                 "id": "000000120:dreadnought-inferno-cannon",
+                "datasheetId": "000000120",
                 "line": 2,
                 "name": "Dreadnought inferno cannon",
                 "type": "Ranged",
@@ -136,7 +130,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -151,6 +145,7 @@
             },
             {
                 "id": "000000120:heavy-flamer",
+                "datasheetId": "000000120",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -168,7 +163,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -182,9 +177,10 @@
                 "count": 1
             },
             {
-                "id": "000000120:heavy-plasma-cannon-standard",
+                "id": "000000120:heavy-plasma-cannon",
+                "datasheetId": "000000120",
                 "line": 4,
-                "name": "Heavy plasma cannon – standard",
+                "name": "Heavy plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -192,7 +188,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Heavy plasma cannon – standard",
+                        "name": "Heavy plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -203,27 +200,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000120:heavy-plasma-cannon-supercharge",
-                "line": 5,
-                "name": "Heavy plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000120",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Heavy plasma cannon – supercharge",
+                        "name": "Heavy plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -245,9 +229,10 @@
                 "count": 1
             },
             {
-                "id": "000000120:missile-launcher-frag",
+                "id": "000000120:missile-launcher",
+                "datasheetId": "000000120",
                 "line": 6,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -255,7 +240,8 @@
                         "line": 6,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -266,27 +252,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000120:missile-launcher-krak",
-                "line": 7,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000120",
                         "line": 7,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 48,
                         "type": "Ranged",
@@ -306,6 +279,7 @@
             },
             {
                 "id": "000000120:multi-melta",
+                "datasheetId": "000000120",
                 "line": 8,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -337,6 +311,7 @@
             },
             {
                 "id": "000000120:storm-bolter",
+                "datasheetId": "000000120",
                 "line": 9,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -368,6 +343,7 @@
             },
             {
                 "id": "000000120:twin-autocannon",
+                "datasheetId": "000000120",
                 "line": 10,
                 "name": "Twin autocannon",
                 "type": "Ranged",
@@ -399,6 +375,7 @@
             },
             {
                 "id": "000000120:twin-heavy-bolter",
+                "datasheetId": "000000120",
                 "line": 11,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -431,6 +408,7 @@
             },
             {
                 "id": "000000120:twin-heavy-flamer",
+                "datasheetId": "000000120",
                 "line": 12,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
@@ -449,7 +427,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -464,6 +442,7 @@
             },
             {
                 "id": "000000120:twin-lascannon",
+                "datasheetId": "000000120",
                 "line": 13,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -495,6 +474,7 @@
             },
             {
                 "id": "000000120:armoured-feet",
+                "datasheetId": "000000120",
                 "line": 14,
                 "name": "Armoured feet",
                 "type": "Melee",
@@ -524,6 +504,7 @@
             },
             {
                 "id": "000000120:dreadnought-combat-weapon",
+                "datasheetId": "000000120",
                 "line": 15,
                 "name": "Dreadnought combat weapon",
                 "type": "Melee",
@@ -552,7 +533,206 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000120",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin autocannon</li><li>1 twin heavy bolter</li><li>1 twin heavy flamer</li><li>1 twin lascannon</li><li>1 Dreadnought inferno cannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000000120",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 missile launcher</li><li>1 twin autocannon </li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000120:assault-cannon",
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:assault-cannon",
+                        "000000120:armoured-feet",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:assault-cannon",
+                        "000000120:armoured-feet",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:assault-cannon",
+                        "000000120:armoured-feet",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:heavy-plasma-cannon",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:heavy-plasma-cannon",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:heavy-plasma-cannon",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:multi-melta"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:multi-melta",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:multi-melta",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:multi-melta",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-autocannon",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-autocannon",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:twin-heavy-bolter"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-heavy-bolter",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-heavy-bolter",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-heavy-bolter",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:twin-heavy-flamer"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-heavy-flamer",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-heavy-flamer",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-heavy-flamer",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:twin-lascannon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-lascannon",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-lascannon",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:twin-lascannon",
+                        "000000120:twin-autocannon"
+                    ],
+                    [
+                        "000000120:storm-bolter",
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-combat-weapon",
+                        "000000120:dreadnought-inferno-cannon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-inferno-cannon",
+                        "000000120:heavy-flamer",
+                        "000000120:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-inferno-cannon",
+                        "000000120:missile-launcher"
+                    ],
+                    [
+                        "000000120:armoured-feet",
+                        "000000120:dreadnought-inferno-cannon",
+                        "000000120:twin-autocannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

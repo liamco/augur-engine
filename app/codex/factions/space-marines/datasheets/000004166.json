@@ -101,21 +101,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 storm bolter; 1 Axiom",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 storm bolter; 1 Axiom",
+            "parsed": [
+                "000004166:storm-bolter",
+                "000004166:axiom"
+            ],
+            "byModelType": {
+                "Caanok Var – EPIC HERO": [
+                    "000004166:storm-bolter",
+                    "000004166:axiom"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004166:storm-bolter",
+                "datasheetId": "000004166",
                 "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -146,9 +148,10 @@
                 "count": 1
             },
             {
-                "id": "000004166:axiom-strike",
+                "id": "000004166:axiom",
+                "datasheetId": "000004166",
                 "line": 2,
-                "name": "Axiom – strike",
+                "name": "Axiom",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -156,7 +159,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Axiom – strike",
+                        "name": "Axiom - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -165,27 +169,14 @@
                         "s": 8,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004166:axiom-sweep",
-                "line": 3,
-                "name": "Axiom – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004166",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Axiom – sweep",
+                        "name": "Axiom - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -204,7 +195,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004166:storm-bolter",
+                        "000004166:axiom"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

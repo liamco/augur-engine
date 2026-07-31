@@ -147,21 +147,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Enmity’s Edge.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Enmity’s Edge.",
+            "parsed": [
+                "000002296:bolt-pistol",
+                "000002296:enmity-s-edge"
+            ],
+            "byModelType": {
+                "Lazarus – EPIC HERO": [
+                    "000002296:bolt-pistol",
+                    "000002296:enmity-s-edge"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002296:bolt-pistol",
+                "datasheetId": "000002296",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -193,6 +195,7 @@
             },
             {
                 "id": "000002296:enmity-s-edge",
+                "datasheetId": "000002296",
                 "line": 2,
                 "name": "Enmity’s Edge",
                 "type": "Melee",
@@ -223,7 +226,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002296:bolt-pistol",
+                        "000002296:enmity-s-edge"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",
@@ -293,16 +311,8 @@
             "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "The Spiritshield Helm",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 3
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

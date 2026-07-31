@@ -63,40 +63,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Lancer laser destroyer; 2 storm bolters; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002787",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers."
-                    },
-                    {
-                        "datasheetId": "000002787",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002787",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 Icarus rocket pod."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Lancer laser destroyer; 2 storm bolters; armoured hull.",
+            "parsed": [
+                "000002787:lancer-laser-destroyer",
+                "000002787:storm-bolter",
+                "000002787:armoured-hull"
+            ],
+            "byModelType": {
+                "Gladiator Lancer": [
+                    "000002787:lancer-laser-destroyer",
+                    "000002787:storm-bolter",
+                    "000002787:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002787:fragstorm-grenade-launcher",
+                "datasheetId": "000002787",
                 "line": 1,
                 "name": "Fragstorm grenade launcher",
                 "type": "Ranged",
@@ -128,6 +113,7 @@
             },
             {
                 "id": "000002787:icarus-rocket-pod",
+                "datasheetId": "000002787",
                 "line": 2,
                 "name": "Icarus rocket pod",
                 "type": "Ranged",
@@ -159,6 +145,7 @@
             },
             {
                 "id": "000002787:ironhail-heavy-stubber",
+                "datasheetId": "000002787",
                 "line": 3,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
@@ -190,6 +177,7 @@
             },
             {
                 "id": "000002787:lancer-laser-destroyer",
+                "datasheetId": "000002787",
                 "line": 4,
                 "name": "Lancer laser destroyer",
                 "type": "Ranged",
@@ -221,6 +209,7 @@
             },
             {
                 "id": "000002787:multi-melta",
+                "datasheetId": "000002787",
                 "line": 5,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -252,6 +241,7 @@
             },
             {
                 "id": "000002787:storm-bolter",
+                "datasheetId": "000002787",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -283,6 +273,7 @@
             },
             {
                 "id": "000002787:armoured-hull",
+                "datasheetId": "000002787",
                 "line": 7,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -311,7 +302,111 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002787",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers."
+                },
+                {
+                    "datasheetId": "000002787",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>"
+                },
+                {
+                    "datasheetId": "000002787",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 Icarus rocket pod."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:storm-bolter",
+                        "000002787:armoured-hull"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:storm-bolter",
+                        "000002787:armoured-hull",
+                        "000002787:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:storm-bolter",
+                        "000002787:armoured-hull",
+                        "000002787:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:storm-bolter",
+                        "000002787:armoured-hull",
+                        "000002787:ironhail-heavy-stubber",
+                        "000002787:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:storm-bolter",
+                        "000002787:armoured-hull",
+                        "000002787:multi-melta"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:storm-bolter",
+                        "000002787:armoured-hull",
+                        "000002787:multi-melta",
+                        "000002787:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:armoured-hull",
+                        "000002787:fragstorm-grenade-launcher"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:armoured-hull",
+                        "000002787:fragstorm-grenade-launcher",
+                        "000002787:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:armoured-hull",
+                        "000002787:fragstorm-grenade-launcher",
+                        "000002787:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:armoured-hull",
+                        "000002787:fragstorm-grenade-launcher",
+                        "000002787:ironhail-heavy-stubber",
+                        "000002787:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:armoured-hull",
+                        "000002787:fragstorm-grenade-launcher",
+                        "000002787:multi-melta"
+                    ],
+                    [
+                        "000002787:lancer-laser-destroyer",
+                        "000002787:armoured-hull",
+                        "000002787:fragstorm-grenade-launcher",
+                        "000002787:multi-melta",
+                        "000002787:icarus-rocket-pod"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

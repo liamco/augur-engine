@@ -2,7 +2,20 @@ import { createSlugGenerator } from './slug';
 import type { Datasheet, Wargear, WargearProfile } from '../types/depot';
 import type { DatasheetWargear } from '../types/wahapedia';
 
-const PROFILE_SEPARATORS = [' - ', ' - ', ' - '];
+/**
+ * Separators Wahapedia uses between a weapon's base name and its sub-profile
+ * label ("Macro plasma incinerator – supercharge").
+ *
+ * Written as \u escapes on purpose. These were once three identical ASCII
+ * hyphens - the dashes had been flattened to U+002D somewhere upstream - so the
+ * source's real separator (U+2013) never matched and no multi-profile weapon was
+ * ever grouped. Escapes cannot be flattened by an editor or a copy-paste.
+ */
+const PROFILE_SEPARATORS = [
+  ' \u2013 ', // en dash - what the source actually uses
+  ' \u2014 ', // em dash
+  ' - ', // ASCII hyphen
+];
 
 interface SplitNameResult {
   baseName: string;

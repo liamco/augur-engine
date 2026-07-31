@@ -50,28 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; melta rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000103",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, 1 Eradicator’s melta rifle can be replaced with 1 multi-melta."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; melta rifle; close combat weapon.",
+            "parsed": [
+                "000000103:bolt-pistol",
+                "000000103:melta-rifle",
+                "000000103:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000103:bolt-pistol",
+                    "000000103:melta-rifle",
+                    "000000103:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000103:bolt-pistol",
+                "datasheetId": "000000103",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -103,6 +100,7 @@
             },
             {
                 "id": "000000103:melta-rifle",
+                "datasheetId": "000000103",
                 "line": 2,
                 "name": "Melta rifle",
                 "type": "Ranged",
@@ -135,6 +133,7 @@
             },
             {
                 "id": "000000103:multi-melta",
+                "datasheetId": "000000103",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -160,13 +159,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1,
+                        "modelType": [
+                            "Eradicator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000103:close-combat-weapon",
+                "datasheetId": "000000103",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -195,7 +200,45 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000103",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, 1 Eradicator’s melta rifle can be replaced with 1 multi-melta."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Eradicator Sergeant",
+                "items": [
+                    [
+                        "000000103:bolt-pistol",
+                        "000000103:melta-rifle",
+                        "000000103:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Eradicator",
+                "items": [
+                    [
+                        "000000103:bolt-pistol",
+                        "000000103:melta-rifle",
+                        "000000103:close-combat-weapon"
+                    ],
+                    [
+                        "000000103:bolt-pistol",
+                        "000000103:close-combat-weapon",
+                        "000000103:multi-melta"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

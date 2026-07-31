@@ -40,28 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> shockcannon; chitinous claws and teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000472",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their shockcannon replaced with 1 impaler cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> shockcannon; chitinous claws and teeth.",
+            "parsed": [
+                "000000472:shockcannon",
+                "000000472:chitinous-claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000472:shockcannon",
+                    "000000472:chitinous-claws-and-teeth"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000472:impaler-cannon",
+                "datasheetId": "000000472",
                 "line": 1,
                 "name": "Impaler cannon",
                 "type": "Ranged",
@@ -94,6 +89,7 @@
             },
             {
                 "id": "000000472:shockcannon",
+                "datasheetId": "000000472",
                 "line": 2,
                 "name": "Shockcannon",
                 "type": "Ranged",
@@ -125,6 +121,7 @@
             },
             {
                 "id": "000000472:chitinous-claws-and-teeth",
+                "datasheetId": "000000472",
                 "line": 3,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
@@ -153,7 +150,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000472",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their shockcannon replaced with 1 impaler cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000472:shockcannon",
+                        "000000472:chitinous-claws-and-teeth"
+                    ],
+                    [
+                        "000000472:chitinous-claws-and-teeth",
+                        "000000472:impaler-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

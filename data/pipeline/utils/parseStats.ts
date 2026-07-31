@@ -49,9 +49,18 @@ export function parseRange(raw: string): number | string | null {
 }
 
 /**
- * Parse weapon BS/WS: "2" → 2, "-" → "N/A" (torrent weapons), "4+" → 4
+ * Parse weapon BS/WS: "2" → 2, "4+" → 4, anything unparseable → "N/A".
+ *
+ * A weapon with no Ballistic or Weapon Skill (Torrent, and a handful of others)
+ * hits automatically. The source writes that as "N/A", though "-" also appears —
+ * and previously only "-" was handled, so `parseInt("N/A")` returned NaN, which
+ * JSON serialises as `null`. 125 of 2,212 profiles carried that null, and
+ * `Number(null)` is 0, which the hit resolver read as auto-hit by accident.
+ *
+ * The catch-all is deliberate: any future spelling degrades to the honest "N/A"
+ * rather than a silent NaN.
  */
 export function parseWeaponSkill(raw: string): number | string {
-    if (raw === "-") return "N/A";
-    return parseInt(raw.replace("+", ""), 10);
+    const parsed = parseInt(raw.replace("+", ""), 10);
+    return Number.isNaN(parsed) ? "N/A" : parsed;
 }

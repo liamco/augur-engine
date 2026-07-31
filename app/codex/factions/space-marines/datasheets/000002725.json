@@ -50,28 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002725",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+            "parsed": [
+                "000002725:bolt-pistol",
+                "000002725:boltgun",
+                "000002725:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002725:bolt-pistol",
+                    "000002725:boltgun",
+                    "000002725:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002725:bolt-pistol",
+                "datasheetId": "000002725",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -104,6 +101,7 @@
             },
             {
                 "id": "000002725:boltgun",
+                "datasheetId": "000002725",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -135,6 +133,7 @@
             },
             {
                 "id": "000002725:close-combat-weapon",
+                "datasheetId": "000002725",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -165,7 +164,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002725",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002725:bolt-pistol",
+                        "000002725:boltgun",
+                        "000002725:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -40,28 +40,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> deathstorm cannon array.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002267",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s deathstorm cannon array can be replaced with 1 deathstorm missile array"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> deathstorm cannon array.",
+            "parsed": [
+                "000002267:deathstorm-cannon-array"
+            ],
+            "byModelType": {
+                "Deathstorm Drop Pod": [
+                    "000002267:deathstorm-cannon-array"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002267:deathstorm-cannon-array",
+                "datasheetId": "000002267",
                 "line": 1,
                 "name": "Deathstorm cannon array",
                 "type": "Ranged",
@@ -93,6 +86,7 @@
             },
             {
                 "id": "000002267:deathstorm-missile-array",
+                "datasheetId": "000002267",
                 "line": 2,
                 "name": "Deathstorm missile array",
                 "type": "Ranged",
@@ -123,7 +117,31 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002267",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s deathstorm cannon array can be replaced with 1 deathstorm missile array"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002267:deathstorm-cannon-array"
+                    ],
+                    [
+                        "000002267:deathstorm-missile-array"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

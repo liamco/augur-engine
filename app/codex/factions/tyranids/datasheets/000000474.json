@@ -63,21 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> psychic overload; massive scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> psychic overload; massive scything talons.",
+            "parsed": [
+                "000000474:psychic-overload",
+                "000000474:massive-scything-talons"
+            ],
+            "byModelType": {
+                "Maleceptor": [
+                    "000000474:psychic-overload",
+                    "000000474:massive-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000474:psychic-overload",
+                "datasheetId": "000000474",
                 "line": 1,
                 "name": "Psychic overload",
                 "type": "Ranged",
@@ -109,9 +111,10 @@
                 "count": 1
             },
             {
-                "id": "000000474:massive-scything-talons-strike",
+                "id": "000000474:massive-scything-talons",
+                "datasheetId": "000000474",
                 "line": 2,
-                "name": "Massive scything talons – strike",
+                "name": "Massive scything talons",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -119,7 +122,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Massive scything talons – strike",
+                        "name": "Massive scything talons - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -128,27 +132,14 @@
                         "s": 9,
                         "ap": -2,
                         "d": "D6+1"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000474:massive-scything-talons-sweep",
-                "line": 3,
-                "name": "Massive scything talons – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000474",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Massive scything talons – sweep",
+                        "name": "Massive scything talons - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -167,7 +158,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000474:psychic-overload",
+                        "000000474:massive-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

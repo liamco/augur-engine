@@ -80,28 +80,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; force weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001348",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; force weapon.",
+            "parsed": [
+                "000001348:bolt-pistol",
+                "000001348:twin-boltgun",
+                "000001348:force-weapon"
+            ],
+            "byModelType": {
+                "Librarian on Bike": [
+                    "000001348:bolt-pistol",
+                    "000001348:twin-boltgun",
+                    "000001348:force-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001348:bolt-pistol",
+                "datasheetId": "000001348",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -133,6 +130,7 @@
             },
             {
                 "id": "000001348:boltgun",
+                "datasheetId": "000001348",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -162,6 +160,7 @@
             },
             {
                 "id": "000001348:combi-weapon",
+                "datasheetId": "000001348",
                 "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -195,6 +194,7 @@
             },
             {
                 "id": "000001348:grav-pistol",
+                "datasheetId": "000001348",
                 "line": 4,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -226,9 +226,10 @@
                 "count": 1
             },
             {
-                "id": "000001348:plasma-pistol-standard",
+                "id": "000001348:plasma-pistol",
+                "datasheetId": "000001348",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -236,7 +237,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -247,27 +249,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001348:plasma-pistol-supercharge",
-                "line": 6,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001348",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -289,9 +278,10 @@
                 "count": 1
             },
             {
-                "id": "000001348:smite-focused-witchfire",
+                "id": "000001348:smite",
+                "datasheetId": "000001348",
                 "line": 7,
-                "name": "Smite – focused witchfire",
+                "name": "Smite",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -299,7 +289,8 @@
                         "line": 7,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Smite – focused witchfire",
+                        "name": "Smite - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "DEVASTATING WOUNDS",
                             "HAZARDOUS",
@@ -312,27 +303,14 @@
                         "s": 6,
                         "ap": -2,
                         "d": "D3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001348:smite-witchfire",
-                "line": 8,
-                "name": "Smite – witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001348",
                         "line": 8,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Smite – witchfire",
+                        "name": "Smite - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "PSYCHIC"
                         ],
@@ -354,6 +332,7 @@
             },
             {
                 "id": "000001348:storm-bolter",
+                "datasheetId": "000001348",
                 "line": 9,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -385,6 +364,7 @@
             },
             {
                 "id": "000001348:twin-boltgun",
+                "datasheetId": "000001348",
                 "line": 10,
                 "name": "Twin boltgun",
                 "type": "Ranged",
@@ -416,6 +396,7 @@
             },
             {
                 "id": "000001348:force-weapon",
+                "datasheetId": "000001348",
                 "line": 11,
                 "name": "Force weapon",
                 "type": "Melee",
@@ -446,7 +427,55 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001348",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001348:bolt-pistol",
+                        "000001348:twin-boltgun",
+                        "000001348:force-weapon"
+                    ],
+                    [
+                        "000001348:twin-boltgun",
+                        "000001348:force-weapon",
+                        "000001348:boltgun"
+                    ],
+                    [
+                        "000001348:twin-boltgun",
+                        "000001348:force-weapon",
+                        "000001348:combi-weapon"
+                    ],
+                    [
+                        "000001348:twin-boltgun",
+                        "000001348:force-weapon",
+                        "000001348:grav-pistol"
+                    ],
+                    [
+                        "000001348:twin-boltgun",
+                        "000001348:force-weapon",
+                        "000001348:plasma-pistol"
+                    ],
+                    [
+                        "000001348:twin-boltgun",
+                        "000001348:force-weapon",
+                        "000001348:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -507,24 +536,8 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Psychic Hood",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "isLeadingUnit",
-                            "operator": "equals",
-                            "value": true
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Mental Fortress (Psychic)",

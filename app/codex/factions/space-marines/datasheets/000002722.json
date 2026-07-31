@@ -68,40 +68,31 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy onslaught gatling cannon; macro plasma incinerator; Repulsor Executioner defensive array; twin heavy bolter; twin Icarus ironhail heavy stubber; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002722",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s macro plasma incinerator can be replaced with 1 heavy laser destroyer."
-                    },
-                    {
-                        "datasheetId": "000002722",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 ironhail heavy stubber."
-                    },
-                    {
-                        "datasheetId": "000002722",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 Icarus rocket pod."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy onslaught gatling cannon; macro plasma incinerator; Repulsor Executioner defensive array; twin heavy bolter; twin Icarus ironhail heavy stubber; armoured hull.",
+            "parsed": [
+                "000002722:heavy-onslaught-gatling-cannon",
+                "000002722:macro-plasma-incinerator",
+                "000002722:repulsor-executioner-defensive-array",
+                "000002722:twin-heavy-bolter",
+                "000002722:twin-icarus-ironhail-heavy-stubber",
+                "000002722:armoured-hull"
+            ],
+            "byModelType": {
+                "Repulsor Executioner": [
+                    "000002722:heavy-onslaught-gatling-cannon",
+                    "000002722:macro-plasma-incinerator",
+                    "000002722:repulsor-executioner-defensive-array",
+                    "000002722:twin-heavy-bolter",
+                    "000002722:twin-icarus-ironhail-heavy-stubber",
+                    "000002722:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002722:heavy-laser-destroyer",
+                "datasheetId": "000002722",
                 "line": 1,
                 "name": "Heavy laser destroyer",
                 "type": "Ranged",
@@ -133,6 +124,7 @@
             },
             {
                 "id": "000002722:heavy-onslaught-gatling-cannon",
+                "datasheetId": "000002722",
                 "line": 2,
                 "name": "Heavy onslaught gatling cannon",
                 "type": "Ranged",
@@ -164,6 +156,7 @@
             },
             {
                 "id": "000002722:icarus-rocket-pod",
+                "datasheetId": "000002722",
                 "line": 3,
                 "name": "Icarus rocket pod",
                 "type": "Ranged",
@@ -195,6 +188,7 @@
             },
             {
                 "id": "000002722:ironhail-heavy-stubber",
+                "datasheetId": "000002722",
                 "line": 4,
                 "name": "Ironhail heavy stubber",
                 "type": "Ranged",
@@ -225,9 +219,10 @@
                 "count": 1
             },
             {
-                "id": "000002722:macro-plasma-incinerator-standard",
+                "id": "000002722:macro-plasma-incinerator",
+                "datasheetId": "000002722",
                 "line": 5,
-                "name": "Macro plasma incinerator – standard",
+                "name": "Macro plasma incinerator",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -235,7 +230,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Macro plasma incinerator – standard",
+                        "name": "Macro plasma incinerator - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -246,27 +242,14 @@
                         "s": 8,
                         "ap": -3,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002722:macro-plasma-incinerator-supercharge",
-                "line": 6,
-                "name": "Macro plasma incinerator – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002722",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Macro plasma incinerator – supercharge",
+                        "name": "Macro plasma incinerator - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -289,6 +272,7 @@
             },
             {
                 "id": "000002722:repulsor-executioner-defensive-array",
+                "datasheetId": "000002722",
                 "line": 7,
                 "name": "Repulsor Executioner defensive array",
                 "type": "Ranged",
@@ -318,6 +302,7 @@
             },
             {
                 "id": "000002722:twin-heavy-bolter",
+                "datasheetId": "000002722",
                 "line": 8,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -350,6 +335,7 @@
             },
             {
                 "id": "000002722:twin-icarus-ironhail-heavy-stubber",
+                "datasheetId": "000002722",
                 "line": 9,
                 "name": "Twin Icarus ironhail heavy stubber",
                 "type": "Ranged",
@@ -383,6 +369,7 @@
             },
             {
                 "id": "000002722:armoured-hull",
+                "datasheetId": "000002722",
                 "line": 10,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -411,7 +398,109 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002722",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s macro plasma incinerator can be replaced with 1 heavy laser destroyer."
+                },
+                {
+                    "datasheetId": "000002722",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 ironhail heavy stubber."
+                },
+                {
+                    "datasheetId": "000002722",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 Icarus rocket pod."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:macro-plasma-incinerator",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:macro-plasma-incinerator",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:macro-plasma-incinerator",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:macro-plasma-incinerator",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:ironhail-heavy-stubber",
+                        "000002722:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:heavy-laser-destroyer"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:heavy-laser-destroyer",
+                        "000002722:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:heavy-laser-destroyer",
+                        "000002722:ironhail-heavy-stubber"
+                    ],
+                    [
+                        "000002722:heavy-onslaught-gatling-cannon",
+                        "000002722:repulsor-executioner-defensive-array",
+                        "000002722:twin-heavy-bolter",
+                        "000002722:twin-icarus-ironhail-heavy-stubber",
+                        "000002722:armoured-hull",
+                        "000002722:heavy-laser-destroyer",
+                        "000002722:ironhail-heavy-stubber",
+                        "000002722:icarus-rocket-pod"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

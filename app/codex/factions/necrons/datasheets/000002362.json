@@ -58,28 +58,17 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "This unit is equipped with: nothing.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002362",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This unit can be equipped with one of the following:<ul><li>1 gauss exterminator and 1 twin tesla destructor</li><li>2 gauss exterminators</li><li>2 twin tesla destructors</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "This unit is equipped with: nothing.",
+            "parsed": [],
+            "byModelType": {
+                "Tomb Citadel": []
             }
         },
         "weapons": [
             {
                 "id": "000002362:gauss-exterminator",
+                "datasheetId": "000002362",
                 "line": 1,
                 "name": "Gauss exterminator",
                 "type": "Ranged",
@@ -111,6 +100,7 @@
             },
             {
                 "id": "000002362:twin-tesla-destructor",
+                "datasheetId": "000002362",
                 "line": 2,
                 "name": "Twin tesla destructor",
                 "type": "Ranged",
@@ -142,7 +132,36 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002362",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This unit can be equipped with one of the following:<ul><li>1 gauss exterminator and 1 twin tesla destructor</li><li>2 gauss exterminators</li><li>2 twin tesla destructors</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [],
+                    [
+                        "000002362:gauss-exterminator",
+                        "000002362:twin-tesla-destructor"
+                    ],
+                    [
+                        "000002362:gauss-exterminator"
+                    ],
+                    [
+                        "000002362:twin-tesla-destructor"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

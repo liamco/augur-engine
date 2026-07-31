@@ -45,34 +45,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> twin flamer; siege drills; Centurion bolters.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002703",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their twin flamer replaced with 1 twin meltagun."
-                    },
-                    {
-                        "datasheetId": "000002703",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their Centurion bolters replaced with 1 Centurion assault launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> twin flamer; siege drills; Centurion bolters.",
+            "parsed": [
+                "000002703:twin-flamer",
+                "000002703:siege-drills",
+                "000002703:centurion-bolters"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002703:twin-flamer",
+                    "000002703:siege-drills",
+                    "000002703:centurion-bolters"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002703:centurion-bolters",
+                "datasheetId": "000002703",
                 "line": 1,
                 "name": "Centurion bolters",
                 "type": "Ranged",
@@ -105,6 +96,7 @@
             },
             {
                 "id": "000002703:twin-flamer",
+                "datasheetId": "000002703",
                 "line": 2,
                 "name": "Twin flamer",
                 "type": "Ranged",
@@ -123,7 +115,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -138,6 +130,7 @@
             },
             {
                 "id": "000002703:twin-meltagun",
+                "datasheetId": "000002703",
                 "line": 3,
                 "name": "Twin meltagun",
                 "type": "Ranged",
@@ -170,6 +163,7 @@
             },
             {
                 "id": "000002703:siege-drills",
+                "datasheetId": "000002703",
                 "line": 4,
                 "name": "Siege drills",
                 "type": "Melee",
@@ -200,7 +194,77 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002703",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their twin flamer replaced with 1 twin meltagun."
+                },
+                {
+                    "datasheetId": "000002703",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their Centurion bolters replaced with 1 Centurion assault launcher."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002703:centurion-assault-launcher",
+                "name": "Centurion Assault Launcher",
+                "description": "The bearer has the Grenades keyword.",
+                "mechanics": [
+                    {
+                        "name": "Centurion Assault Launcher",
+                        "entity": "thisUnit",
+                        "effect": "addsKeyword",
+                        "keywords": [
+                            "GRENADES"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002703:twin-flamer",
+                        "000002703:siege-drills",
+                        "000002703:centurion-bolters"
+                    ],
+                    [
+                        "000002703:twin-flamer",
+                        "000002703:siege-drills",
+                        "000002703:centurion-assault-launcher"
+                    ],
+                    [
+                        "000002703:siege-drills",
+                        "000002703:centurion-bolters",
+                        "000002703:twin-meltagun"
+                    ],
+                    [
+                        "000002703:siege-drills",
+                        "000002703:twin-meltagun",
+                        "000002703:centurion-assault-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -275,25 +339,6 @@
                         "SUSTAINED HITS"
                     ],
                     "value": 2
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Centurion Assault Launcher",
-            "legend": "",
-            "description": "The bearer has the Grenades keyword.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Centurion Assault Launcher",
-                    "entity": "thisUnit",
-                    "effect": "addsKeyword",
-                    "keywords": [
-                        "GRENADES"
-                    ],
-                    "value": true
                 }
             ],
             "mechanicsSource": "regex"

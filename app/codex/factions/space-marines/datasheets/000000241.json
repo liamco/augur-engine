@@ -55,30 +55,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; plasma talon; Black Knight combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000241",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, 1 model can replace its plasma talon with 1 Astartes grenade launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; plasma talon; Black Knight combat weapon.",
+            "parsed": [
+                "000000241:bolt-pistol",
+                "000000241:plasma-talon",
+                "000000241:black-knight-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000241:bolt-pistol",
+                    "000000241:plasma-talon",
+                    "000000241:black-knight-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000241:astartes-grenade-launcher-frag",
+                "id": "000000241:astartes-grenade-launcher",
+                "datasheetId": "000000241",
                 "line": 1,
-                "name": "Astartes grenade launcher – frag",
+                "name": "Astartes grenade launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -86,7 +83,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Astartes grenade launcher – frag",
+                        "name": "Astartes grenade launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -97,27 +95,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000241:astartes-grenade-launcher-krak",
-                "line": 2,
-                "name": "Astartes grenade launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000241",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Astartes grenade launcher – krak",
+                        "name": "Astartes grenade launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 24,
                         "type": "Ranged",
@@ -130,13 +115,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000241:bolt-pistol",
+                "datasheetId": "000000241",
                 "line": 3,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -167,9 +155,10 @@
                 "count": 1
             },
             {
-                "id": "000000241:plasma-talon-standard",
+                "id": "000000241:plasma-talon",
+                "datasheetId": "000000241",
                 "line": 4,
-                "name": "Plasma talon – standard",
+                "name": "Plasma talon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -177,7 +166,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma talon – standard",
+                        "name": "Plasma talon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -188,27 +178,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000241:plasma-talon-supercharge",
-                "line": 5,
-                "name": "Plasma talon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000241",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma talon – supercharge",
+                        "name": "Plasma talon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -231,6 +208,7 @@
             },
             {
                 "id": "000000241:black-knight-combat-weapon",
+                "datasheetId": "000000241",
                 "line": 6,
                 "name": "Black Knight combat weapon",
                 "type": "Melee",
@@ -261,7 +239,35 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000241",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, 1 model can replace its plasma talon with 1 Astartes grenade launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000241:bolt-pistol",
+                        "000000241:plasma-talon",
+                        "000000241:black-knight-combat-weapon"
+                    ],
+                    [
+                        "000000241:bolt-pistol",
+                        "000000241:black-knight-combat-weapon",
+                        "000000241:astartes-grenade-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

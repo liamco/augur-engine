@@ -58,28 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> laser volley cannon; storm bolter; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001178",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> laser volley cannon; storm bolter; armoured tracks.",
+            "parsed": [
+                "000001178:laser-volley-cannon",
+                "000001178:storm-bolter",
+                "000001178:armoured-tracks"
+            ],
+            "byModelType": {
+                "Vindicator Laser Destroyer": [
+                    "000001178:laser-volley-cannon",
+                    "000001178:storm-bolter",
+                    "000001178:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001178:hunter-killer-missile",
+                "datasheetId": "000001178",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -110,9 +107,10 @@
                 "count": 1
             },
             {
-                "id": "000001178:laser-volley-cannon-overcharge-fire",
+                "id": "000001178:laser-volley-cannon",
+                "datasheetId": "000001178",
                 "line": 2,
-                "name": "Laser volley cannon – overcharge fire",
+                "name": "Laser volley cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -120,7 +118,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Laser volley cannon – overcharge fire",
+                        "name": "Laser volley cannon - overcharge fire",
+                        "profileName": "overcharge fire",
                         "attributes": [
                             "HAZARDOUS"
                         ],
@@ -131,27 +130,14 @@
                         "s": 14,
                         "ap": -4,
                         "d": "D6+3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001178:laser-volley-cannon-volley-fire",
-                "line": 3,
-                "name": "Laser volley cannon – volley fire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001178",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Laser volley cannon – volley fire",
+                        "name": "Laser volley cannon - volley fire",
+                        "profileName": "volley fire",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -171,6 +157,7 @@
             },
             {
                 "id": "000001178:storm-bolter",
+                "datasheetId": "000001178",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -202,6 +189,7 @@
             },
             {
                 "id": "000001178:armoured-tracks",
+                "datasheetId": "000001178",
                 "line": 5,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -230,7 +218,36 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001178",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001178:laser-volley-cannon",
+                        "000001178:storm-bolter",
+                        "000001178:armoured-tracks"
+                    ],
+                    [
+                        "000001178:laser-volley-cannon",
+                        "000001178:storm-bolter",
+                        "000001178:armoured-tracks",
+                        "000001178:hunter-killer-missile"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

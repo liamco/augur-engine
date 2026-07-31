@@ -55,40 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 heavy plasma cannons; armoured feet.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002719",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Each of this model’s heavy plasma cannons can be replaced with one of the following:<ul><li>1 conversion beam cannon</li><li>1 kheres-pattern assault cannon</li><li>1 multi-melta</li><li>1 twin autocannon</li><li>1 twin heavy bolter</li><li>1 twin lascannon</li><li>1 twin volkite culverin</li><li>1 Dreadnought chainfist and 1 combi-bolter</li><li>1 Dreadnought combat weapon and 1 combi-bolter</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002719",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Each of this model’s combi-bolters can be replaced with one of the following:<ul><li>1 graviton blaster</li><li>1 heavy flamer</li><li>1 plasma blaster</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002719",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 cyclone missile launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 heavy plasma cannons; armoured feet.",
+            "parsed": [
+                "000002719:heavy-plasma-cannon",
+                "000002719:armoured-feet"
+            ],
+            "byModelType": {
+                "Relic Contemptor Dreadnought": [
+                    "000002719:heavy-plasma-cannon",
+                    "000002719:armoured-feet"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002719:combi-bolter",
+                "datasheetId": "000002719",
                 "line": 1,
                 "name": "Combi-bolter",
                 "type": "Ranged",
@@ -113,13 +96,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:conversion-beam-cannon",
+                "datasheetId": "000002719",
                 "line": 2,
                 "name": "Conversion beam cannon",
                 "type": "Ranged",
@@ -145,15 +132,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000002719:cyclone-missile-launcher-frag",
+                "id": "000002719:cyclone-missile-launcher",
+                "datasheetId": "000002719",
                 "line": 3,
-                "name": "Cyclone missile launcher – frag",
+                "name": "Cyclone missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -161,7 +152,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Cyclone missile launcher – frag",
+                        "name": "Cyclone missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -172,27 +164,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002719:cyclone-missile-launcher-krak",
-                "line": 4,
-                "name": "Cyclone missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002719",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Cyclone missile launcher – krak",
+                        "name": "Cyclone missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -212,6 +191,7 @@
             },
             {
                 "id": "000002719:graviton-blaster",
+                "datasheetId": "000002719",
                 "line": 5,
                 "name": "Graviton blaster",
                 "type": "Ranged",
@@ -236,13 +216,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:twin-autocannon",
+                "datasheetId": "000002719",
                 "line": 6,
                 "name": "Twin autocannon",
                 "type": "Ranged",
@@ -267,13 +251,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:twin-heavy-bolter",
+                "datasheetId": "000002719",
                 "line": 7,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -299,13 +287,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:twin-lascannon",
+                "datasheetId": "000002719",
                 "line": 8,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -330,13 +322,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:heavy-flamer",
+                "datasheetId": "000002719",
                 "line": 9,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -354,7 +350,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -362,15 +358,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000002719:heavy-plasma-cannon-standard",
+                "id": "000002719:heavy-plasma-cannon",
+                "datasheetId": "000002719",
                 "line": 10,
-                "name": "Heavy plasma cannon – standard",
+                "name": "Heavy plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -378,7 +378,8 @@
                         "line": 10,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Heavy plasma cannon – standard",
+                        "name": "Heavy plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -389,27 +390,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002719:heavy-plasma-cannon-supercharge",
-                "line": 11,
-                "name": "Heavy plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002719",
                         "line": 11,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Heavy plasma cannon – supercharge",
+                        "name": "Heavy plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -432,6 +420,7 @@
             },
             {
                 "id": "000002719:kheres-pattern-assault-cannon",
+                "datasheetId": "000002719",
                 "line": 12,
                 "name": "Kheres-pattern assault cannon",
                 "type": "Ranged",
@@ -456,13 +445,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:multi-melta",
+                "datasheetId": "000002719",
                 "line": 13,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -487,15 +480,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000002719:plasma-blaster-standard",
+                "id": "000002719:plasma-blaster",
+                "datasheetId": "000002719",
                 "line": 14,
-                "name": "Plasma blaster – standard",
+                "name": "Plasma blaster",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -503,7 +500,8 @@
                         "line": 14,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma blaster – standard",
+                        "name": "Plasma blaster - standard",
+                        "profileName": "standard",
                         "attributes": [],
                         "range": 18,
                         "type": "Ranged",
@@ -512,27 +510,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002719:plasma-blaster-supercharge",
-                "line": 15,
-                "name": "Plasma blaster – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002719",
                         "line": 15,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma blaster – supercharge",
+                        "name": "Plasma blaster - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS"
                         ],
@@ -547,13 +532,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:twin-volkite-culverin",
+                "datasheetId": "000002719",
                 "line": 16,
                 "name": "Twin volkite culverin",
                 "type": "Ranged",
@@ -579,13 +568,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:armoured-feet",
+                "datasheetId": "000002719",
                 "line": 17,
                 "name": "Armoured feet",
                 "type": "Melee",
@@ -615,6 +608,7 @@
             },
             {
                 "id": "000002719:dreadnought-chainfist",
+                "datasheetId": "000002719",
                 "line": 18,
                 "name": "Dreadnought chainfist",
                 "type": "Melee",
@@ -639,13 +633,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002719:dreadnought-combat-weapon",
+                "datasheetId": "000002719",
                 "line": 19,
                 "name": "Dreadnought combat weapon",
                 "type": "Melee",
@@ -668,13 +666,55 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002719",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Each of this model’s heavy plasma cannons can be replaced with one of the following:<ul><li>1 conversion beam cannon</li><li>1 kheres-pattern assault cannon</li><li>1 multi-melta</li><li>1 twin autocannon</li><li>1 twin heavy bolter</li><li>1 twin lascannon</li><li>1 twin volkite culverin</li><li>1 Dreadnought chainfist and 1 combi-bolter</li><li>1 Dreadnought combat weapon and 1 combi-bolter</li></ul>"
+                },
+                {
+                    "datasheetId": "000002719",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Each of this model’s combi-bolters can be replaced with one of the following:<ul><li>1 graviton blaster</li><li>1 heavy flamer</li><li>1 plasma blaster</li></ul>"
+                },
+                {
+                    "datasheetId": "000002719",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 cyclone missile launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002719:heavy-plasma-cannon",
+                        "000002719:armoured-feet"
+                    ],
+                    [
+                        "000002719:heavy-plasma-cannon",
+                        "000002719:armoured-feet",
+                        "000002719:cyclone-missile-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

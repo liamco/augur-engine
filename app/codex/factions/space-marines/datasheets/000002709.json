@@ -145,21 +145,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Moonfang.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Moonfang.",
+            "parsed": [
+                "000002709:bolt-pistol",
+                "000002709:moonfang"
+            ],
+            "byModelType": {
+                "Kor’sarro Khan – EPIC HERO": [
+                    "000002709:bolt-pistol",
+                    "000002709:moonfang"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002709:bolt-pistol",
+                "datasheetId": "000002709",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -191,6 +193,7 @@
             },
             {
                 "id": "000002709:moonfang",
+                "datasheetId": "000002709",
                 "line": 2,
                 "name": "Moonfang",
                 "type": "Melee",
@@ -222,7 +225,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002709:bolt-pistol",
+                        "000002709:moonfang"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

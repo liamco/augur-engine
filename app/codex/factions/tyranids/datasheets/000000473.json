@@ -45,21 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Lictor claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Lictor claws and talons.",
+            "parsed": [
+                "000000473:lictor-claws-and-talons"
+            ],
+            "byModelType": {
+                "Lictor": [
+                    "000000473:lictor-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000473:lictor-claws-and-talons",
+                "datasheetId": "000000473",
                 "line": 1,
                 "name": "Lictor claws and talons",
                 "type": "Melee",
@@ -90,7 +90,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000473:lictor-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

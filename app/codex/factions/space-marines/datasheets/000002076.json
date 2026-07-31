@@ -50,28 +50,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolter; twin boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002076",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their heavy bolter replaced with 1 multi-melta."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; heavy bolter; twin boltgun; close combat weapon.",
+            "parsed": [
+                "000002076:bolt-pistol",
+                "000002076:heavy-bolter",
+                "000002076:twin-boltgun",
+                "000002076:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002076:bolt-pistol",
+                    "000002076:heavy-bolter",
+                    "000002076:twin-boltgun",
+                    "000002076:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002076:bolt-pistol",
+                "datasheetId": "000002076",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -103,6 +102,7 @@
             },
             {
                 "id": "000002076:heavy-bolter",
+                "datasheetId": "000002076",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -134,6 +134,7 @@
             },
             {
                 "id": "000002076:multi-melta",
+                "datasheetId": "000002076",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -165,6 +166,7 @@
             },
             {
                 "id": "000002076:twin-boltgun",
+                "datasheetId": "000002076",
                 "line": 4,
                 "name": "Twin boltgun",
                 "type": "Ranged",
@@ -196,6 +198,7 @@
             },
             {
                 "id": "000002076:close-combat-weapon",
+                "datasheetId": "000002076",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -224,7 +227,37 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002076",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their heavy bolter replaced with 1 multi-melta."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002076:bolt-pistol",
+                        "000002076:heavy-bolter",
+                        "000002076:twin-boltgun",
+                        "000002076:close-combat-weapon"
+                    ],
+                    [
+                        "000002076:bolt-pistol",
+                        "000002076:twin-boltgun",
+                        "000002076:close-combat-weapon",
+                        "000002076:multi-melta"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

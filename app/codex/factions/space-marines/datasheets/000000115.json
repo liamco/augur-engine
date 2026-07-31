@@ -91,28 +91,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; crozius arcanum.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000115",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s storm bolter can be replaced with 1 relic shield."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; crozius arcanum.",
+            "parsed": [
+                "000000115:storm-bolter",
+                "000000115:crozius-arcanum"
+            ],
+            "byModelType": {
+                "Chaplain in Terminator Armour": [
+                    "000000115:storm-bolter",
+                    "000000115:crozius-arcanum"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000115:storm-bolter",
+                "datasheetId": "000000115",
                 "line": 1,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -144,6 +139,7 @@
             },
             {
                 "id": "000000115:crozius-arcanum",
+                "datasheetId": "000000115",
                 "line": 2,
                 "name": "Crozius arcanum",
                 "type": "Melee",
@@ -172,7 +168,41 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000115",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s storm bolter can be replaced with 1 relic shield."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000115:relic-shield",
+                "name": "Relic Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000115:storm-bolter",
+                        "000000115:crozius-arcanum"
+                    ],
+                    [
+                        "000000115:crozius-arcanum",
+                        "000000115:relic-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -256,31 +286,6 @@
             "name": "Recitation of Faith",
             "legend": "",
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against mortal wounds.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Recitation of Faith",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "isLeadingUnit",
-                            "operator": "equals",
-                            "value": true
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Relic Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

@@ -67,28 +67,15 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; crushing teeth and jaws; Wolf claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000288",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
-            }
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; crushing teeth and jaws; Wolf claws.",
+            "parsed": [],
+            "byModelType": {}
         },
         "weapons": [
             {
                 "id": "000000288:bolt-pistol",
+                "datasheetId": "000000288",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -120,6 +107,7 @@
             },
             {
                 "id": "000000288:crushing-teeth-and-claws",
+                "datasheetId": "000000288",
                 "line": 2,
                 "name": "Crushing teeth and claws",
                 "type": "Melee",
@@ -151,6 +139,7 @@
             },
             {
                 "id": "000000288:wolf-claws",
+                "datasheetId": "000000288",
                 "line": 3,
                 "name": "Wolf claws",
                 "type": "Melee",
@@ -181,7 +170,19 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000288",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",

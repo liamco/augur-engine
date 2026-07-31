@@ -61,21 +61,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> warscythe.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> warscythe.",
+            "parsed": [
+                "000000528:warscythe"
+            ],
+            "byModelType": {
+                "Vargard Obyron – EPIC HERO": [
+                    "000000528:warscythe"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000528:warscythe",
+                "datasheetId": "000000528",
                 "line": 1,
                 "name": "Warscythe",
                 "type": "Melee",
@@ -107,7 +107,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000528:warscythe"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

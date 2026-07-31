@@ -45,28 +45,33 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Techmarine Gunner is equipped with:</b> bolt pistol; flamer; plasma cutter; Gunner’s servo-arms; close combat weapon. <br><br><b>The Thunderfire Cannon is equipped with:</b> thunderfire cannon; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001164",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Techmarine Gunner is equipped with:</b> bolt pistol; flamer; plasma cutter; Gunner’s servo-arms; close combat weapon. <br><br><b>The Thunderfire Cannon is equipped with:</b> thunderfire cannon; close combat weapon.",
+            "parsed": [
+                "000001164:bolt-pistol",
+                "000001164:flamer",
+                "000001164:plasma-cutter",
+                "000001164:gunner-s-servo-arms",
+                "000001164:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Techmarine Gunner": [
+                    "000001164:bolt-pistol",
+                    "000001164:flamer",
+                    "000001164:plasma-cutter",
+                    "000001164:gunner-s-servo-arms",
+                    "000001164:close-combat-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Thunderfire Cannon": [
+                    "000001164:thunderfire-cannon",
+                    "000001164:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001164:bolt-pistol",
+                "datasheetId": "000001164",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -91,13 +96,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Techmarine Gunner"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001164:flamer",
+                "datasheetId": "000001164",
                 "line": 2,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -115,7 +124,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -123,13 +132,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Techmarine Gunner"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001164:thunderfire-cannon",
+                "datasheetId": "000001164",
                 "line": 3,
                 "name": "Thunderfire cannon",
                 "type": "Ranged",
@@ -155,13 +168,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Thunderfire Cannon"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001164:close-combat-weapon",
+                "datasheetId": "000001164",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -191,6 +208,7 @@
             },
             {
                 "id": "000001164:gunner-s-servo-arms",
+                "datasheetId": "000001164",
                 "line": 5,
                 "name": "Gunner’s servo-arms",
                 "type": "Melee",
@@ -215,13 +233,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Techmarine Gunner"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001164:plasma-cutter",
+                "datasheetId": "000001164",
                 "line": 6,
                 "name": "Plasma cutter",
                 "type": "Melee",
@@ -246,13 +268,50 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Techmarine Gunner"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001164",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Techmarine Gunner",
+                "items": [
+                    [
+                        "000001164:bolt-pistol",
+                        "000001164:flamer",
+                        "000001164:plasma-cutter",
+                        "000001164:gunner-s-servo-arms",
+                        "000001164:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Thunderfire Cannon",
+                "items": [
+                    [
+                        "000001164:thunderfire-cannon",
+                        "000001164:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

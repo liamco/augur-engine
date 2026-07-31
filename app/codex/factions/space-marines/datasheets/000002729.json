@@ -68,28 +68,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 twin lascannons; Xiphon missile battery; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002729",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 twin lascannons; Xiphon missile battery; armoured hull.",
+            "parsed": [
+                "000002729:twin-lascannon",
+                "000002729:xiphon-missile-battery",
+                "000002729:armoured-hull"
+            ],
+            "byModelType": {
+                "Xiphon Interceptor": [
+                    "000002729:twin-lascannon",
+                    "000002729:xiphon-missile-battery",
+                    "000002729:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002729:twin-lascannon",
+                "datasheetId": "000002729",
                 "line": 1,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -121,6 +118,7 @@
             },
             {
                 "id": "000002729:xiphon-missile-battery",
+                "datasheetId": "000002729",
                 "line": 2,
                 "name": "Xiphon missile battery",
                 "type": "Ranged",
@@ -152,6 +150,7 @@
             },
             {
                 "id": "000002729:armoured-hull",
+                "datasheetId": "000002729",
                 "line": 3,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -180,7 +179,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002729",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002729:twin-lascannon",
+                        "000002729:xiphon-missile-battery",
+                        "000002729:armoured-hull"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

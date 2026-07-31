@@ -60,52 +60,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000310",
-                        "line": 1,
-                        "button": "•",
-                        "description": "1 Wolf Scout’s boltgun and bolt pistol can be  replaced with one of the following:<ul><li>1 bolt pistol and 1 power weapon</li><li>1 plasma pistol and 1 boltgun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000310",
-                        "line": 2,
-                        "button": "•",
-                        "description": "1 Wolf Scout’s boltgun can be replaced with one of the following:<ul><li>1 flamer</li><li>1 grav-gun</li><li>1 heavy bolter</li><li>1 meltagun</li><li>1 missile launcher</li><li>1 plasma gun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000310",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each have their boltgun replaced with one of the following:<ul><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000310",
-                        "line": 4,
-                        "button": "•",
-                        "description": "The Wolf Scout Pack Leader’s bolt pistol and boltgun can be replaced with with 1 twin lightning claws, or two different weapons from the following list:*<ul><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer.</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000310",
-                        "line": 5,
-                        "button": "*",
-                        "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+            "parsed": [
+                "000000310:bolt-pistol",
+                "000000310:boltgun",
+                "000000310:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000310:bolt-pistol",
+                    "000000310:boltgun",
+                    "000000310:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000310:astartes-shotgun",
+                "datasheetId": "000000310",
                 "line": 1,
                 "name": "Astartes shotgun",
                 "type": "Ranged",
@@ -137,6 +110,7 @@
             },
             {
                 "id": "000000310:bolt-pistol",
+                "datasheetId": "000000310",
                 "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -168,6 +142,7 @@
             },
             {
                 "id": "000000310:boltgun",
+                "datasheetId": "000000310",
                 "line": 3,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -197,6 +172,7 @@
             },
             {
                 "id": "000000310:combi-weapon",
+                "datasheetId": "000000310",
                 "line": 4,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -223,13 +199,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:heavy-bolter",
+                "datasheetId": "000000310",
                 "line": 5,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -255,13 +235,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:flamer",
+                "datasheetId": "000000310",
                 "line": 6,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -279,7 +264,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -287,13 +272,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:grav-gun",
+                "datasheetId": "000000310",
                 "line": 7,
                 "name": "Grav-gun",
                 "type": "Ranged",
@@ -318,13 +308,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:grav-pistol",
+                "datasheetId": "000000310",
                 "line": 8,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -350,13 +345,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:hand-flamer",
+                "datasheetId": "000000310",
                 "line": 9,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -375,7 +374,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -383,13 +382,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:inferno-pistol",
+                "datasheetId": "000000310",
                 "line": 10,
                 "name": "Inferno pistol",
                 "type": "Ranged",
@@ -415,13 +418,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:meltagun",
+                "datasheetId": "000000310",
                 "line": 11,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -446,15 +453,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000310:missile-launcher-frag",
+                "id": "000000310:missile-launcher",
+                "datasheetId": "000000310",
                 "line": 12,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -462,7 +474,8 @@
                         "line": 12,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -474,27 +487,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000310:missile-launcher-krak",
-                "line": 13,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000310",
                         "line": 13,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -509,15 +509,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000310:plasma-pistol-standard",
+                "id": "000000310:plasma-pistol",
+                "datasheetId": "000000310",
                 "line": 14,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -525,7 +530,8 @@
                         "line": 14,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -536,27 +542,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000310:plasma-pistol-supercharge",
-                "line": 15,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000310",
                         "line": 15,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -572,15 +565,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000310:plasma-gun-standard",
+                "id": "000000310:plasma-gun",
+                "datasheetId": "000000310",
                 "line": 16,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -588,7 +585,8 @@
                         "line": 16,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -599,27 +597,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000310:plasma-gun-supercharge",
-                "line": 16,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000310",
                         "line": 16,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -635,13 +620,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:storm-bolter",
+                "datasheetId": "000000310",
                 "line": 17,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -666,13 +656,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:astartes-chainsword",
+                "datasheetId": "000000310",
                 "line": 18,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -695,13 +689,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:close-combat-weapon",
+                "datasheetId": "000000310",
                 "line": 19,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -731,6 +729,7 @@
             },
             {
                 "id": "000000310:combat-knife",
+                "datasheetId": "000000310",
                 "line": 20,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -760,6 +759,7 @@
             },
             {
                 "id": "000000310:power-fist",
+                "datasheetId": "000000310",
                 "line": 21,
                 "name": "Power fist",
                 "type": "Melee",
@@ -782,13 +782,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:power-weapon",
+                "datasheetId": "000000310",
                 "line": 22,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -811,13 +815,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:thunder-hammer",
+                "datasheetId": "000000310",
                 "line": 23,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -842,13 +850,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000310:twin-lightning-claws",
+                "datasheetId": "000000310",
                 "line": 24,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -879,7 +891,162 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000310",
+                    "line": 1,
+                    "button": "•",
+                    "description": "1 Wolf Scout’s boltgun and bolt pistol can be  replaced with one of the following:<ul><li>1 bolt pistol and 1 power weapon</li><li>1 plasma pistol and 1 boltgun</li></ul>"
+                },
+                {
+                    "datasheetId": "000000310",
+                    "line": 2,
+                    "button": "•",
+                    "description": "1 Wolf Scout’s boltgun can be replaced with one of the following:<ul><li>1 flamer</li><li>1 grav-gun</li><li>1 heavy bolter</li><li>1 meltagun</li><li>1 missile launcher</li><li>1 plasma gun</li></ul>"
+                },
+                {
+                    "datasheetId": "000000310",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each have their boltgun replaced with one of the following:<ul><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>"
+                },
+                {
+                    "datasheetId": "000000310",
+                    "line": 4,
+                    "button": "•",
+                    "description": "The Wolf Scout Pack Leader’s bolt pistol and boltgun can be replaced with with 1 twin lightning claws, or two different weapons from the following list:*<ul><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer.</li></ul>"
+                },
+                {
+                    "datasheetId": "000000310",
+                    "line": 5,
+                    "button": "*",
+                    "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Wolf Scout Pack Leader",
+                "items": [
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:boltgun",
+                        "000000310:close-combat-weapon"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:bolt-pistol"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:boltgun"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:combi-weapon"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:grav-pistol"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:hand-flamer"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:inferno-pistol"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:plasma-pistol"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:storm-bolter"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:astartes-chainsword"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:power-fist"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:power-weapon"
+                    ],
+                    [
+                        "000000310:close-combat-weapon",
+                        "000000310:thunder-hammer"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:astartes-shotgun"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:combat-knife"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Wolf Scout",
+                "items": [
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:boltgun",
+                        "000000310:close-combat-weapon"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:astartes-shotgun"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:combat-knife"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:flamer"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:grav-gun"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:heavy-bolter"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:meltagun"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:missile-launcher"
+                    ],
+                    [
+                        "000000310:bolt-pistol",
+                        "000000310:close-combat-weapon",
+                        "000000310:plasma-gun"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",

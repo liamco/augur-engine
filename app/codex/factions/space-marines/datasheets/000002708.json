@@ -103,21 +103,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Blackout; the Raven’s Talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Blackout; the Raven’s Talons.",
+            "parsed": [
+                "000002708:blackout",
+                "000002708:the-raven-s-talons"
+            ],
+            "byModelType": {
+                "Kayvaan Shrike – EPIC HERO": [
+                    "000002708:blackout",
+                    "000002708:the-raven-s-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002708:blackout",
+                "datasheetId": "000002708",
                 "line": 1,
                 "name": "Blackout",
                 "type": "Ranged",
@@ -150,6 +152,7 @@
             },
             {
                 "id": "000002708:the-raven-s-talons",
+                "datasheetId": "000002708",
                 "line": 2,
                 "name": "The Raven’s Talons",
                 "type": "Melee",
@@ -181,7 +184,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002708:blackout",
+                        "000002708:the-raven-s-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

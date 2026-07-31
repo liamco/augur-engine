@@ -40,28 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Tarantula air defence missiles; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000099",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Tarantula air defence missiles; armoured hull.",
+            "parsed": [
+                "000000099:tarantula-air-defence-missiles",
+                "000000099:armoured-hull"
+            ],
+            "byModelType": {
+                "Tarantula Air Defence Battery": [
+                    "000000099:tarantula-air-defence-missiles",
+                    "000000099:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000099:tarantula-air-defence-missiles",
+                "datasheetId": "000000099",
                 "line": 1,
                 "name": "Tarantula air defence missiles",
                 "type": "Ranged",
@@ -94,6 +89,7 @@
             },
             {
                 "id": "000000099:armoured-hull",
+                "datasheetId": "000000099",
                 "line": 2,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -122,7 +118,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000099",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000099:tarantula-air-defence-missiles",
+                        "000000099:armoured-hull"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

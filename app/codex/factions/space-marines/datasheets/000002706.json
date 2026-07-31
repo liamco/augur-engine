@@ -60,58 +60,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> meltagun; storm bolter; Dreadnought combat weapon; seismic hammer.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002706",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s seismic hammer can be replaced with 1 Dreadnought chainfist."
-                    },
-                    {
-                        "datasheetId": "000002706",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s Dreadnought combat weapon and storm bolter can be replaced with 1 hurricane bolter."
-                    },
-                    {
-                        "datasheetId": "000002706",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model’s storm bolter can be replaced with 1 heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000002706",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model’s meltagun can be replaced with 1 heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000002706",
-                        "line": 5,
-                        "button": "•",
-                        "description": "This model can be equipped with up to 2 hunter-killer missiles."
-                    },
-                    {
-                        "datasheetId": "000002706",
-                        "line": 6,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 Ironclad assault launchers."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> meltagun; storm bolter; Dreadnought combat weapon; seismic hammer.",
+            "parsed": [
+                "000002706:meltagun",
+                "000002706:storm-bolter",
+                "000002706:dreadnought-combat-weapon",
+                "000002706:seismic-hammer"
+            ],
+            "byModelType": {
+                "Ironclad Dreadnought": [
+                    "000002706:meltagun",
+                    "000002706:storm-bolter",
+                    "000002706:dreadnought-combat-weapon",
+                    "000002706:seismic-hammer"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002706:heavy-flamer",
+                "datasheetId": "000002706",
                 "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -129,7 +98,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -144,6 +113,7 @@
             },
             {
                 "id": "000002706:hunter-killer-missile",
+                "datasheetId": "000002706",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -175,6 +145,7 @@
             },
             {
                 "id": "000002706:hurricane-bolter",
+                "datasheetId": "000002706",
                 "line": 3,
                 "name": "Hurricane bolter",
                 "type": "Ranged",
@@ -207,6 +178,7 @@
             },
             {
                 "id": "000002706:meltagun",
+                "datasheetId": "000002706",
                 "line": 4,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -238,6 +210,7 @@
             },
             {
                 "id": "000002706:storm-bolter",
+                "datasheetId": "000002706",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -269,6 +242,7 @@
             },
             {
                 "id": "000002706:dreadnought-chainfist",
+                "datasheetId": "000002706",
                 "line": 6,
                 "name": "Dreadnought chainfist",
                 "type": "Melee",
@@ -300,6 +274,7 @@
             },
             {
                 "id": "000002706:dreadnought-combat-weapon",
+                "datasheetId": "000002706",
                 "line": 7,
                 "name": "Dreadnought combat weapon",
                 "type": "Melee",
@@ -329,6 +304,7 @@
             },
             {
                 "id": "000002706:seismic-hammer",
+                "datasheetId": "000002706",
                 "line": 8,
                 "name": "Seismic hammer",
                 "type": "Melee",
@@ -357,7 +333,225 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002706",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s seismic hammer can be replaced with 1 Dreadnought chainfist."
+                },
+                {
+                    "datasheetId": "000002706",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s Dreadnought combat weapon and storm bolter can be replaced with 1 hurricane bolter."
+                },
+                {
+                    "datasheetId": "000002706",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model’s storm bolter can be replaced with 1 heavy flamer."
+                },
+                {
+                    "datasheetId": "000002706",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model’s meltagun can be replaced with 1 heavy flamer."
+                },
+                {
+                    "datasheetId": "000002706",
+                    "line": 5,
+                    "button": "•",
+                    "description": "This model can be equipped with up to 2 hunter-killer missiles."
+                },
+                {
+                    "datasheetId": "000002706",
+                    "line": 6,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 Ironclad assault launchers."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002706:ironclad-assault-launchers",
+                "name": "Ironclad Assault Launchers",
+                "description": "The bearer has the GRENADES keyword.",
+                "mechanics": [
+                    {
+                        "name": "Ironclad Assault Launchers",
+                        "entity": "thisUnit",
+                        "effect": "addsKeyword",
+                        "keywords": [
+                            "GRENADES"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002706:meltagun",
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:seismic-hammer",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:seismic-hammer",
+                        "000002706:hurricane-bolter"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:seismic-hammer",
+                        "000002706:hurricane-bolter",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:seismic-hammer",
+                        "000002706:hurricane-bolter",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:seismic-hammer",
+                        "000002706:hurricane-bolter",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:storm-bolter",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:dreadnought-combat-weapon",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:hurricane-bolter"
+                    ],
+                    [
+                        "000002706:meltagun",
+                        "000002706:dreadnought-chainfist",
+                        "000002706:hurricane-bolter",
+                        "000002706:ironclad-assault-launchers"
+                    ],
+                    [
+                        "000002706:dreadnought-chainfist",
+                        "000002706:hurricane-bolter",
+                        "000002706:heavy-flamer"
+                    ],
+                    [
+                        "000002706:dreadnought-chainfist",
+                        "000002706:hurricane-bolter",
+                        "000002706:heavy-flamer",
+                        "000002706:ironclad-assault-launchers"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -411,25 +605,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Ironclad Assault Launchers",
-            "legend": "",
-            "description": "The bearer has the <span class=\"kwb\">GRENADES</span> keyword.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Ironclad Assault Launchers",
-                    "entity": "thisUnit",
-                    "effect": "addsKeyword",
-                    "keywords": [
-                        "GRENADES"
-                    ],
-                    "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Siege-breaker Protocols",

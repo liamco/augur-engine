@@ -432,8 +432,24 @@
             "cost": 0,
             "legend": "Bestowed as a mark of honour, this venerated relic lends an extra layer of armour protection that proves especially useful amidst vicious void war.",
             "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Adamantine Mantle",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

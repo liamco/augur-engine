@@ -129,34 +129,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> combi-weapon; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002793",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s combi-weapon can be replaced with 1 heavy bolt pistol."
-                    },
-                    {
-                        "datasheetId": "000002793",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s master-crafted power weapon can be replaced with 1 Astartes chainsword."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> combi-weapon; master-crafted power weapon.",
+            "parsed": [
+                "000002793:combi-weapon",
+                "000002793:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Castellan": [
+                    "000002793:combi-weapon",
+                    "000002793:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002793:combi-weapon",
+                "datasheetId": "000002793",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -190,6 +179,7 @@
             },
             {
                 "id": "000002793:heavy-bolt-pistol",
+                "datasheetId": "000002793",
                 "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -221,6 +211,7 @@
             },
             {
                 "id": "000002793:astartes-chainsword",
+                "datasheetId": "000002793",
                 "line": 3,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -252,6 +243,7 @@
             },
             {
                 "id": "000002793:master-crafted-power-weapon",
+                "datasheetId": "000002793",
                 "line": 4,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -282,7 +274,47 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002793",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s combi-weapon can be replaced with 1 heavy bolt pistol."
+                },
+                {
+                    "datasheetId": "000002793",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s master-crafted power weapon can be replaced with 1 Astartes chainsword."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002793:combi-weapon",
+                        "000002793:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000002793:combi-weapon",
+                        "000002793:astartes-chainsword"
+                    ],
+                    [
+                        "000002793:master-crafted-power-weapon",
+                        "000002793:heavy-bolt-pistol"
+                    ],
+                    [
+                        "000002793:heavy-bolt-pistol",
+                        "000002793:astartes-chainsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

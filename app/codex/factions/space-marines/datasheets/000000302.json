@@ -70,28 +70,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> assault cannon; heavy flamer; Trueclaw.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000302",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>Helfrost cannon</li><li>Multi-melta</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> assault cannon; heavy flamer; Trueclaw.",
+            "parsed": [
+                "000000302:assault-cannon",
+                "000000302:heavy-flamer",
+                "000000302:trueclaw"
+            ],
+            "byModelType": {
+                "Bjorn the Fell-Handed– EPIC HERO": [
+                    "000000302:assault-cannon",
+                    "000000302:heavy-flamer",
+                    "000000302:trueclaw"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000302:assault-cannon",
+                "datasheetId": "000000302",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -123,6 +120,7 @@
             },
             {
                 "id": "000000302:heavy-flamer",
+                "datasheetId": "000000302",
                 "line": 2,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -140,7 +138,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -154,9 +152,10 @@
                 "count": 1
             },
             {
-                "id": "000000302:helfrost-cannon-dispersed",
+                "id": "000000302:helfrost-cannon",
+                "datasheetId": "000000302",
                 "line": 3,
-                "name": "Helfrost cannon – dispersed",
+                "name": "Helfrost cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -164,38 +163,26 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Helfrost cannon – dispersed",
+                        "name": "Helfrost cannon - dispersed",
+                        "profileName": "dispersed",
                         "attributes": [
                             "TORRENT"
                         ],
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000302:helfrost-cannon-focused",
-                "line": 4,
-                "name": "Helfrost cannon – focused",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000302",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Helfrost cannon – focused",
+                        "name": "Helfrost cannon - focused",
+                        "profileName": "focused",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -215,6 +202,7 @@
             },
             {
                 "id": "000000302:multi-melta",
+                "datasheetId": "000000302",
                 "line": 5,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -246,6 +234,7 @@
             },
             {
                 "id": "000000302:trueclaw",
+                "datasheetId": "000000302",
                 "line": 6,
                 "name": "Trueclaw",
                 "type": "Melee",
@@ -276,7 +265,40 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000302",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>Helfrost cannon</li><li>Multi-melta</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000302:assault-cannon",
+                        "000000302:heavy-flamer",
+                        "000000302:trueclaw"
+                    ],
+                    [
+                        "000000302:heavy-flamer",
+                        "000000302:trueclaw",
+                        "000000302:helfrost-cannon"
+                    ],
+                    [
+                        "000000302:heavy-flamer",
+                        "000000302:trueclaw",
+                        "000000302:multi-melta"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

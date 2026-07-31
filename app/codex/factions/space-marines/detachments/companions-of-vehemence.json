@@ -764,8 +764,19 @@
             "cost": 25,
             "legend": "Through roared words or ruthless deeds, may the blasphemous be denounced and the worthy driven into a furious rage of sanctified slaughter.",
             "description": "Chaplain or Judiciar model only. Each time a model in the bearer’s unit makes a melee attack, you can re-roll the Hit roll.",
-            "mechanics": [],
-            "mechanicsSource": "unparsed",
+            "mechanics": [
+                {
+                    "name": "Merciless Denunciation",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000094",

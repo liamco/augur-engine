@@ -73,40 +73,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> anvilus autocannon battery; twin heavy bolter; armoured feet.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002269",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s anvilus autocannon battery can be replaced with one of the following<ul><li>1 arachnus heavy lascannon battery</li><li>1 hellfire plasma carronade</li><li>1 volkite falconet battery</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002269",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000002269",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 aiolos missile launcher</li><li>1 boreas air defence missiles</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> anvilus autocannon battery; twin heavy bolter; armoured feet.",
+            "parsed": [
+                "000002269:anvilus-autocannon-battery",
+                "000002269:twin-heavy-bolter",
+                "000002269:armoured-feet"
+            ],
+            "byModelType": {
+                "Deredeo Dreadnought": [
+                    "000002269:anvilus-autocannon-battery",
+                    "000002269:twin-heavy-bolter",
+                    "000002269:armoured-feet"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002269:aiolos-missile-launcher",
+                "datasheetId": "000002269",
                 "line": 1,
                 "name": "Aiolos missile launcher",
                 "type": "Ranged",
@@ -138,6 +123,7 @@
             },
             {
                 "id": "000002269:anvilus-autocannon-battery",
+                "datasheetId": "000002269",
                 "line": 2,
                 "name": "Anvilus autocannon battery",
                 "type": "Ranged",
@@ -169,6 +155,7 @@
             },
             {
                 "id": "000002269:arachnus-heavy-lascannon-battery",
+                "datasheetId": "000002269",
                 "line": 3,
                 "name": "Arachnus heavy lascannon battery",
                 "type": "Ranged",
@@ -198,6 +185,7 @@
             },
             {
                 "id": "000002269:boreas-air-defence-missiles",
+                "datasheetId": "000002269",
                 "line": 4,
                 "name": "Boreas air defence missiles",
                 "type": "Ranged",
@@ -228,9 +216,10 @@
                 "count": 1
             },
             {
-                "id": "000002269:hellfire-plasma-cannonade-standard",
+                "id": "000002269:hellfire-plasma-cannonade",
+                "datasheetId": "000002269",
                 "line": 5,
-                "name": "Hellfire plasma cannonade – standard",
+                "name": "Hellfire plasma cannonade",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -238,7 +227,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Hellfire plasma cannonade – standard",
+                        "name": "Hellfire plasma cannonade - standard",
+                        "profileName": "standard",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -247,27 +237,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002269:hellfire-plasma-cannonade-supercharge",
-                "line": 6,
-                "name": "Hellfire plasma cannonade – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002269",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Hellfire plasma cannonade – supercharge",
+                        "name": "Hellfire plasma cannonade - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS"
                         ],
@@ -289,6 +266,7 @@
             },
             {
                 "id": "000002269:twin-heavy-bolter",
+                "datasheetId": "000002269",
                 "line": 7,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -321,6 +299,7 @@
             },
             {
                 "id": "000002269:twin-heavy-flamer",
+                "datasheetId": "000002269",
                 "line": 8,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
@@ -339,7 +318,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -354,6 +333,7 @@
             },
             {
                 "id": "000002269:volkite-falconet-battery",
+                "datasheetId": "000002269",
                 "line": 9,
                 "name": "Volkite falconet battery",
                 "type": "Ranged",
@@ -385,6 +365,7 @@
             },
             {
                 "id": "000002269:armoured-feet",
+                "datasheetId": "000002269",
                 "line": 10,
                 "name": "Armoured feet",
                 "type": "Melee",
@@ -413,7 +394,139 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002269",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s anvilus autocannon battery can be replaced with one of the following<ul><li>1 arachnus heavy lascannon battery</li><li>1 hellfire plasma carronade</li><li>1 volkite falconet battery</li></ul>"
+                },
+                {
+                    "datasheetId": "000002269",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer."
+                },
+                {
+                    "datasheetId": "000002269",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 aiolos missile launcher</li><li>1 boreas air defence missiles</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002269:anvilus-autocannon-battery",
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet"
+                    ],
+                    [
+                        "000002269:anvilus-autocannon-battery",
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:aiolos-missile-launcher"
+                    ],
+                    [
+                        "000002269:anvilus-autocannon-battery",
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:boreas-air-defence-missiles"
+                    ],
+                    [
+                        "000002269:anvilus-autocannon-battery",
+                        "000002269:armoured-feet",
+                        "000002269:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002269:anvilus-autocannon-battery",
+                        "000002269:armoured-feet",
+                        "000002269:twin-heavy-flamer",
+                        "000002269:aiolos-missile-launcher"
+                    ],
+                    [
+                        "000002269:anvilus-autocannon-battery",
+                        "000002269:armoured-feet",
+                        "000002269:twin-heavy-flamer",
+                        "000002269:boreas-air-defence-missiles"
+                    ],
+                    [
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:arachnus-heavy-lascannon-battery"
+                    ],
+                    [
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:arachnus-heavy-lascannon-battery",
+                        "000002269:aiolos-missile-launcher"
+                    ],
+                    [
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:arachnus-heavy-lascannon-battery",
+                        "000002269:boreas-air-defence-missiles"
+                    ],
+                    [
+                        "000002269:armoured-feet",
+                        "000002269:arachnus-heavy-lascannon-battery",
+                        "000002269:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002269:armoured-feet",
+                        "000002269:arachnus-heavy-lascannon-battery",
+                        "000002269:twin-heavy-flamer",
+                        "000002269:aiolos-missile-launcher"
+                    ],
+                    [
+                        "000002269:armoured-feet",
+                        "000002269:arachnus-heavy-lascannon-battery",
+                        "000002269:twin-heavy-flamer",
+                        "000002269:boreas-air-defence-missiles"
+                    ],
+                    [
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:volkite-falconet-battery"
+                    ],
+                    [
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:volkite-falconet-battery",
+                        "000002269:aiolos-missile-launcher"
+                    ],
+                    [
+                        "000002269:twin-heavy-bolter",
+                        "000002269:armoured-feet",
+                        "000002269:volkite-falconet-battery",
+                        "000002269:boreas-air-defence-missiles"
+                    ],
+                    [
+                        "000002269:armoured-feet",
+                        "000002269:volkite-falconet-battery",
+                        "000002269:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002269:armoured-feet",
+                        "000002269:volkite-falconet-battery",
+                        "000002269:twin-heavy-flamer",
+                        "000002269:aiolos-missile-launcher"
+                    ],
+                    [
+                        "000002269:armoured-feet",
+                        "000002269:volkite-falconet-battery",
+                        "000002269:twin-heavy-flamer",
+                        "000002269:boreas-air-defence-missiles"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -474,8 +587,19 @@
             "description": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Deredeo Strike",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

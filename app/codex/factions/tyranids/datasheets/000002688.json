@@ -76,28 +76,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Psychic Scream; Neurotyrant claws and lashes.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002688",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Psychic Scream; Neurotyrant claws and lashes.",
+            "parsed": [
+                "000002688:psychic-scream",
+                "000002688:neurotyrant-claws-and-lashes"
+            ],
+            "byModelType": {
+                "Neurotyrant": [
+                    "000002688:psychic-scream",
+                    "000002688:neurotyrant-claws-and-lashes"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002688:psychic-scream",
+                "datasheetId": "000002688",
                 "line": 1,
                 "name": "Psychic scream",
                 "type": "Ranged",
@@ -116,7 +111,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 2
@@ -131,6 +126,7 @@
             },
             {
                 "id": "000002688:neurotyrant-claws-and-lashes",
+                "datasheetId": "000002688",
                 "line": 2,
                 "name": "Neurotyrant claws and lashes",
                 "type": "Melee",
@@ -159,7 +155,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002688",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002688:psychic-scream",
+                        "000002688:neurotyrant-claws-and-lashes"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

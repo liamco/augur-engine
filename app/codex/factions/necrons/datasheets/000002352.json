@@ -66,21 +66,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> staff of light.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> staff of light.",
+            "parsed": [
+                "000002352:staff-of-light"
+            ],
+            "byModelType": {
+                "Technomancer": [
+                    "000002352:staff-of-light"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002352:staff-of-light",
+                "datasheetId": "000002352",
                 "line": 1,
                 "name": "Staff of light",
                 "type": "Ranged",
@@ -110,6 +110,7 @@
             },
             {
                 "id": "000002352:staff-of-light-2",
+                "datasheetId": "000002352",
                 "line": 2,
                 "name": "Staff of light",
                 "type": "Melee",
@@ -138,7 +139,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002352:staff-of-light"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

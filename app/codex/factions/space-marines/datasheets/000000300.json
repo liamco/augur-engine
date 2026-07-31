@@ -95,40 +95,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000300",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s power weapon can be replaced with one of the following:<ul><li>1 chainfist</li><li>1 power fist</li><li>1 relic shield and 1 close combat weapon</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000300",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s storm bolter and power weapon can be replaced with 1 twin lightning claws."
-                    },
-                    {
-                        "datasheetId": "000000300",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model’s storm bolter can be replaced with one of the following:<ul><li>1 chainfist</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 combi-weapon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; power weapon.",
+            "parsed": [
+                "000000300:storm-bolter",
+                "000000300:power-weapon"
+            ],
+            "byModelType": {
+                "Wolf Guard Battle Leader in Terminator Armour": [
+                    "000000300:storm-bolter",
+                    "000000300:power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000300:combi-weapon",
+                "datasheetId": "000000300",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -162,6 +145,7 @@
             },
             {
                 "id": "000000300:storm-bolter",
+                "datasheetId": "000000300",
                 "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -193,6 +177,7 @@
             },
             {
                 "id": "000000300:chainfist",
+                "datasheetId": "000000300",
                 "line": 3,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -224,6 +209,7 @@
             },
             {
                 "id": "000000300:close-combat-weapon",
+                "datasheetId": "000000300",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -253,6 +239,7 @@
             },
             {
                 "id": "000000300:power-weapon",
+                "datasheetId": "000000300",
                 "line": 5,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -282,6 +269,7 @@
             },
             {
                 "id": "000000300:power-fist",
+                "datasheetId": "000000300",
                 "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
@@ -311,6 +299,7 @@
             },
             {
                 "id": "000000300:thunder-hammer",
+                "datasheetId": "000000300",
                 "line": 7,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -342,6 +331,7 @@
             },
             {
                 "id": "000000300:twin-lightning-claws",
+                "datasheetId": "000000300",
                 "line": 8,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -372,7 +362,146 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000300",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s power weapon can be replaced with one of the following:<ul><li>1 chainfist</li><li>1 power fist</li><li>1 relic shield and 1 close combat weapon</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000000300",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s storm bolter and power weapon can be replaced with 1 twin lightning claws."
+                },
+                {
+                    "datasheetId": "000000300",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model’s storm bolter can be replaced with one of the following:<ul><li>1 chainfist</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 combi-weapon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000300:relic-shield",
+                "name": "Relic Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000300:storm-bolter",
+                        "000000300:power-weapon"
+                    ],
+                    [
+                        "000000300:power-weapon",
+                        "000000300:chainfist"
+                    ],
+                    [
+                        "000000300:power-weapon",
+                        "000000300:power-fist"
+                    ],
+                    [
+                        "000000300:power-weapon"
+                    ],
+                    [
+                        "000000300:power-weapon",
+                        "000000300:thunder-hammer"
+                    ],
+                    [
+                        "000000300:power-weapon",
+                        "000000300:combi-weapon"
+                    ],
+                    [
+                        "000000300:twin-lightning-claws"
+                    ],
+                    [
+                        "000000300:storm-bolter",
+                        "000000300:chainfist"
+                    ],
+                    [
+                        "000000300:chainfist"
+                    ],
+                    [
+                        "000000300:chainfist",
+                        "000000300:power-fist"
+                    ],
+                    [
+                        "000000300:chainfist",
+                        "000000300:thunder-hammer"
+                    ],
+                    [
+                        "000000300:chainfist",
+                        "000000300:combi-weapon"
+                    ],
+                    [
+                        "000000300:storm-bolter",
+                        "000000300:power-fist"
+                    ],
+                    [
+                        "000000300:power-fist"
+                    ],
+                    [
+                        "000000300:power-fist",
+                        "000000300:thunder-hammer"
+                    ],
+                    [
+                        "000000300:power-fist",
+                        "000000300:combi-weapon"
+                    ],
+                    [
+                        "000000300:storm-bolter",
+                        "000000300:relic-shield",
+                        "000000300:close-combat-weapon"
+                    ],
+                    [
+                        "000000300:relic-shield",
+                        "000000300:close-combat-weapon",
+                        "000000300:chainfist"
+                    ],
+                    [
+                        "000000300:relic-shield",
+                        "000000300:close-combat-weapon",
+                        "000000300:power-fist"
+                    ],
+                    [
+                        "000000300:relic-shield",
+                        "000000300:close-combat-weapon",
+                        "000000300:power-weapon"
+                    ],
+                    [
+                        "000000300:relic-shield",
+                        "000000300:close-combat-weapon",
+                        "000000300:thunder-hammer"
+                    ],
+                    [
+                        "000000300:relic-shield",
+                        "000000300:close-combat-weapon",
+                        "000000300:combi-weapon"
+                    ],
+                    [
+                        "000000300:storm-bolter",
+                        "000000300:thunder-hammer"
+                    ],
+                    [
+                        "000000300:thunder-hammer"
+                    ],
+                    [
+                        "000000300:thunder-hammer",
+                        "000000300:combi-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -475,15 +604,6 @@
                 }
             ],
             "mechanicsSource": "regex"
-        },
-        {
-            "name": "Relic Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         }
     ]
 }

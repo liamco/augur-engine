@@ -80,21 +80,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Gorgon’s Wrath; Harrowhand; Medusan manipuli.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Gorgon’s Wrath; Harrowhand; Medusan manipuli.",
+            "parsed": [
+                "000000127:bolt-pistol",
+                "000000127:gorgon-s-wrath",
+                "000000127:harrowhand",
+                "000000127:medusan-manipuli"
+            ],
+            "byModelType": {
+                "Iron Father Feirros – EPIC HERO": [
+                    "000000127:bolt-pistol",
+                    "000000127:gorgon-s-wrath",
+                    "000000127:harrowhand",
+                    "000000127:medusan-manipuli"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000127:bolt-pistol",
+                "datasheetId": "000000127",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -126,6 +132,7 @@
             },
             {
                 "id": "000000127:gorgon-s-wrath",
+                "datasheetId": "000000127",
                 "line": 2,
                 "name": "Gorgon’s Wrath",
                 "type": "Ranged",
@@ -157,6 +164,7 @@
             },
             {
                 "id": "000000127:harrowhand",
+                "datasheetId": "000000127",
                 "line": 3,
                 "name": "Harrowhand",
                 "type": "Melee",
@@ -186,6 +194,7 @@
             },
             {
                 "id": "000000127:medusan-manipuli",
+                "datasheetId": "000000127",
                 "line": 4,
                 "name": "Medusan Manipuli",
                 "type": "Melee",
@@ -216,7 +225,24 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000127:bolt-pistol",
+                        "000000127:gorgon-s-wrath",
+                        "000000127:harrowhand",
+                        "000000127:medusan-manipuli"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -45,28 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> rod of covenant.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000539",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their rod of covenant replaced with 1 particle caster and 1 voidblade."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> rod of covenant.",
+            "parsed": [
+                "000000539:rod-of-covenant"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000539:rod-of-covenant"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000539:particle-caster",
+                "datasheetId": "000000539",
                 "line": 1,
                 "name": "Particle caster",
                 "type": "Ranged",
@@ -99,6 +92,7 @@
             },
             {
                 "id": "000000539:rod-of-covenant",
+                "datasheetId": "000000539",
                 "line": 2,
                 "name": "Rod of covenant",
                 "type": "Ranged",
@@ -128,6 +122,7 @@
             },
             {
                 "id": "000000539:rod-of-covenant-2",
+                "datasheetId": "000000539",
                 "line": 3,
                 "name": "Rod of covenant",
                 "type": "Melee",
@@ -157,6 +152,7 @@
             },
             {
                 "id": "000000539:voidblade",
+                "datasheetId": "000000539",
                 "line": 4,
                 "name": "Voidblade",
                 "type": "Melee",
@@ -185,7 +181,32 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000539",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their rod of covenant replaced with 1 particle caster and 1 voidblade."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000539:rod-of-covenant"
+                    ],
+                    [
+                        "000000539:particle-caster",
+                        "000000539:voidblade"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

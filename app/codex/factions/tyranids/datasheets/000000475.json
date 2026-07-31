@@ -55,23 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Warp Blast; chitinous claws and teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Warp Blast; chitinous claws and teeth.",
+            "parsed": [
+                "000000475:warp-blast",
+                "000000475:chitinous-claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000475:warp-blast",
+                    "000000475:chitinous-claws-and-teeth"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000475:warp-blast-witchfire",
+                "id": "000000475:warp-blast",
+                "datasheetId": "000000475",
                 "line": 1,
-                "name": "Warp Blast – witchfire",
+                "name": "Warp Blast",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -79,7 +81,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Warp Blast – witchfire",
+                        "name": "Warp Blast - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "BLAST",
                             "PSYCHIC"
@@ -91,27 +94,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": "D3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000475:warp-blast-focused-witchfire",
-                "line": 2,
-                "name": "Warp Blast – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000475",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Warp Blast – focused witchfire",
+                        "name": "Warp Blast - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "LETHAL HITS",
                             "PSYCHIC"
@@ -134,6 +124,7 @@
             },
             {
                 "id": "000000475:chitinous-claws-and-teeth",
+                "datasheetId": "000000475",
                 "line": 3,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
@@ -162,7 +153,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000475:warp-blast",
+                        "000000475:chitinous-claws-and-teeth"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -91,21 +91,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; instigator bolt carbine; combat knife.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; instigator bolt carbine; combat knife.",
+            "parsed": [
+                "000002701:bolt-pistol",
+                "000002701:instigator-bolt-carbine",
+                "000002701:combat-knife"
+            ],
+            "byModelType": {
+                "Captain in Phobos Armour": [
+                    "000002701:bolt-pistol",
+                    "000002701:instigator-bolt-carbine",
+                    "000002701:combat-knife"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002701:bolt-pistol",
+                "datasheetId": "000002701",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -137,6 +141,7 @@
             },
             {
                 "id": "000002701:instigator-bolt-carbine",
+                "datasheetId": "000002701",
                 "line": 2,
                 "name": "Instigator bolt carbine",
                 "type": "Ranged",
@@ -168,6 +173,7 @@
             },
             {
                 "id": "000002701:combat-knife",
+                "datasheetId": "000002701",
                 "line": 3,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -196,7 +202,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002701:bolt-pistol",
+                        "000002701:instigator-bolt-carbine",
+                        "000002701:combat-knife"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

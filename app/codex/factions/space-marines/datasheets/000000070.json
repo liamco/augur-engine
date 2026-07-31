@@ -50,46 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000070",
-                        "line": 1,
-                        "button": "•",
-                        "description": "1 Tactical Marine’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 heavy bolter</li><li>1 grav-cannon</li><li>1 grav-gun</li><li>1 lascannon</li><li>1 meltagun</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li><li>1 plasma gun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000070",
-                        "line": 2,
-                        "button": "•",
-                        "description": "1 Tactical Marine’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 grav-gun</li><li>1 meltagun</li><li>1 plasma gun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000070",
-                        "line": 3,
-                        "button": "•",
-                        "description": "The Tactical Sergeant’s bolt pistol and boltgun can be replaced with 1 twin lightning claws, or two different weapons from the following list:* <br><ul><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000070",
-                        "line": 4,
-                        "button": "*",
-                        "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; close combat weapon.",
+            "parsed": [
+                "000000070:bolt-pistol",
+                "000000070:boltgun",
+                "000000070:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000070:bolt-pistol",
+                    "000000070:boltgun",
+                    "000000070:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000070:bolt-pistol",
+                "datasheetId": "000000070",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -121,6 +100,7 @@
             },
             {
                 "id": "000000070:boltgun",
+                "datasheetId": "000000070",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -150,6 +130,7 @@
             },
             {
                 "id": "000000070:combi-weapon",
+                "datasheetId": "000000070",
                 "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -176,13 +157,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:flamer",
+                "datasheetId": "000000070",
                 "line": 4,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -200,7 +185,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -208,13 +193,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:grav-cannon",
+                "datasheetId": "000000070",
                 "line": 5,
                 "name": "Grav-cannon",
                 "type": "Ranged",
@@ -240,13 +230,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:grav-gun",
+                "datasheetId": "000000070",
                 "line": 6,
                 "name": "Grav-gun",
                 "type": "Ranged",
@@ -271,13 +266,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:grav-pistol",
+                "datasheetId": "000000070",
                 "line": 7,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -303,13 +303,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:heavy-bolter",
+                "datasheetId": "000000070",
                 "line": 8,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -335,13 +339,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:lascannon",
+                "datasheetId": "000000070",
                 "line": 9,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -366,13 +375,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:meltagun",
+                "datasheetId": "000000070",
                 "line": 10,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -397,15 +411,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000070:missile-launcher-frag",
+                "id": "000000070:missile-launcher",
+                "datasheetId": "000000070",
                 "line": 11,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -413,7 +432,8 @@
                         "line": 11,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -425,27 +445,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000070:missile-launcher-krak",
-                "line": 12,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000070",
                         "line": 12,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -460,13 +467,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:multi-melta",
+                "datasheetId": "000000070",
                 "line": 13,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -492,15 +504,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000070:plasma-cannon-standard",
+                "id": "000000070:plasma-cannon",
+                "datasheetId": "000000070",
                 "line": 14,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -508,7 +525,8 @@
                         "line": 14,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -520,27 +538,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000070:plasma-cannon-supercharge",
-                "line": 15,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000070",
                         "line": 15,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HEAVY",
@@ -557,15 +562,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000070:plasma-gun-standard",
+                "id": "000000070:plasma-gun",
+                "datasheetId": "000000070",
                 "line": 16,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -573,7 +583,8 @@
                         "line": 16,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -584,27 +595,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000070:plasma-gun-supercharge",
-                "line": 17,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000070",
                         "line": 17,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -620,15 +618,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 2,
+                        "modelType": [
+                            "Tactical Marine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000070:plasma-pistol-standard",
+                "id": "000000070:plasma-pistol",
+                "datasheetId": "000000070",
                 "line": 18,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -636,7 +639,8 @@
                         "line": 18,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -647,27 +651,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000070:plasma-pistol-supercharge",
-                "line": 19,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000070",
                         "line": 19,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -683,13 +674,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:storm-bolter",
+                "datasheetId": "000000070",
                 "line": 20,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -714,13 +709,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:astartes-chainsword",
+                "datasheetId": "000000070",
                 "line": 21,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -743,13 +742,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:close-combat-weapon",
+                "datasheetId": "000000070",
                 "line": 22,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -779,6 +782,7 @@
             },
             {
                 "id": "000000070:power-fist",
+                "datasheetId": "000000070",
                 "line": 23,
                 "name": "Power fist",
                 "type": "Melee",
@@ -801,13 +805,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:power-weapon",
+                "datasheetId": "000000070",
                 "line": 24,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -830,13 +838,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:thunder-hammer",
+                "datasheetId": "000000070",
                 "line": 25,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -861,13 +873,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Tactical Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000070:twin-lightning-claws",
+                "datasheetId": "000000070",
                 "line": 26,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -898,7 +914,148 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000070",
+                    "line": 1,
+                    "button": "•",
+                    "description": "1 Tactical Marine’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 heavy bolter</li><li>1 grav-cannon</li><li>1 grav-gun</li><li>1 lascannon</li><li>1 meltagun</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li><li>1 plasma gun</li></ul>"
+                },
+                {
+                    "datasheetId": "000000070",
+                    "line": 2,
+                    "button": "•",
+                    "description": "1 Tactical Marine’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 grav-gun</li><li>1 meltagun</li><li>1 plasma gun</li></ul>"
+                },
+                {
+                    "datasheetId": "000000070",
+                    "line": 3,
+                    "button": "•",
+                    "description": "The Tactical Sergeant’s bolt pistol and boltgun can be replaced with 1 twin lightning claws, or two different weapons from the following list:* <br><ul><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000000070",
+                    "line": 4,
+                    "button": "*",
+                    "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Tactical Sergeant",
+                "items": [
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:boltgun",
+                        "000000070:close-combat-weapon"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:astartes-chainsword"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:bolt-pistol"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:boltgun"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:combi-weapon"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:grav-pistol"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:plasma-pistol"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:storm-bolter"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:power-fist"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:power-weapon"
+                    ],
+                    [
+                        "000000070:close-combat-weapon",
+                        "000000070:thunder-hammer"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Tactical Marine",
+                "items": [
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:boltgun",
+                        "000000070:close-combat-weapon"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:flamer"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:grav-gun"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:meltagun"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:plasma-gun"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:heavy-bolter"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:grav-cannon"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:lascannon"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:missile-launcher"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:multi-melta"
+                    ],
+                    [
+                        "000000070:bolt-pistol",
+                        "000000070:close-combat-weapon",
+                        "000000070:plasma-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

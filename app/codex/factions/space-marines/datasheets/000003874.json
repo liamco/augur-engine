@@ -65,46 +65,31 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Kill Team Sergeant with Jump Pack is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Intercessor with Jump Pack is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Heavy Intercessor with Jump Pack is equipped with:</b> assault bolters; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003874",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Kill Team Sergeant with Jump Pack can replace its heavy bolt pistol with one of the following:<br><ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000003874",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Kill Team Sergeant with Jump Pack can replace its Astartes chainsword with one of the following:<br><ul><li>1 power fist</li><li>1 power weapon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000003874",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model can replace its heavy bolt pistol with 1 plasma pistol."
-                    },
-                    {
-                        "datasheetId": "000003874",
-                        "line": 4,
-                        "button": "•",
-                        "description": "Any number of models can each have their assault bolters replaced with 1 plasma exterminators."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Kill Team Sergeant with Jump Pack is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Intercessor with Jump Pack is equipped with:</b> heavy bolt pistol; Astartes chainsword.<br><br><b>Every Kill Team Heavy Intercessor with Jump Pack is equipped with:</b> assault bolters; close combat weapon.",
+            "parsed": [
+                "000003874:heavy-bolt-pistol",
+                "000003874:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Kill Team Sergeant with Jump Pack": [
+                    "000003874:heavy-bolt-pistol",
+                    "000003874:astartes-chainsword"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Kill Team Intercessor with Jump Pack": [
+                    "000003874:heavy-bolt-pistol",
+                    "000003874:astartes-chainsword"
+                ],
+                "Kill Team Heavy Intercessor with Jump Pack": [
+                    "000003874:assault-bolters",
+                    "000003874:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003874:assault-bolters",
+                "datasheetId": "000003874",
                 "line": 1,
                 "name": "Assault bolters",
                 "type": "Ranged",
@@ -132,13 +117,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003874:hand-flamer",
+                "datasheetId": "000003874",
                 "line": 2,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -157,7 +146,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -165,13 +154,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003874:heavy-bolt-pistol",
+                "datasheetId": "000003874",
                 "line": 3,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -196,15 +189,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant with Jump Pack",
+                            "Kill Team Intercessor with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000003874:plasma-exterminators-standard",
+                "id": "000003874:plasma-exterminators",
+                "datasheetId": "000003874",
                 "line": 4,
-                "name": "Plasma exterminators – standard",
+                "name": "Plasma exterminators",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -212,7 +210,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma exterminators – standard",
+                        "name": "Plasma exterminators - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "ASSAULT",
                             "PISTOL",
@@ -225,27 +224,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000003874:plasma-exterminators-supercharge",
-                "line": 5,
-                "name": "Plasma exterminators – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000003874",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma exterminators – supercharge",
+                        "name": "Plasma exterminators - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "ASSAULT",
                             "HAZARDOUS",
@@ -270,6 +256,7 @@
             },
             {
                 "id": "000003874:plasma-pistol",
+                "datasheetId": "000003874",
                 "line": 6,
                 "name": "Plasma pistol",
                 "type": "Ranged",
@@ -314,13 +301,22 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003874:astartes-chainsword",
+                "datasheetId": "000003874",
                 "line": 7,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -343,13 +339,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant with Jump Pack",
+                            "Kill Team Intercessor with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003874:close-combat-weapon",
+                "datasheetId": "000003874",
                 "line": 8,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -372,13 +373,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003874:power-fist",
+                "datasheetId": "000003874",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -401,13 +406,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000003874:power-weapon",
+                "datasheetId": "000003874",
                 "line": 10,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -430,13 +439,88 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Sergeant with Jump Pack"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003874",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Kill Team Sergeant with Jump Pack can replace its heavy bolt pistol with one of the following:<br><ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
+                },
+                {
+                    "datasheetId": "000003874",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Kill Team Sergeant with Jump Pack can replace its Astartes chainsword with one of the following:<br><ul><li>1 power fist</li><li>1 power weapon</li></ul>"
+                },
+                {
+                    "datasheetId": "000003874",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model can replace its heavy bolt pistol with 1 plasma pistol."
+                },
+                {
+                    "datasheetId": "000003874",
+                    "line": 4,
+                    "button": "•",
+                    "description": "Any number of models can each have their assault bolters replaced with 1 plasma exterminators."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003874:heavy-bolt-pistol",
+                        "000003874:astartes-chainsword"
+                    ],
+                    [
+                        "000003874:astartes-chainsword",
+                        "000003874:plasma-pistol"
+                    ],
+                    [
+                        "000003874:heavy-bolt-pistol",
+                        "000003874:power-fist"
+                    ],
+                    [
+                        "000003874:power-fist",
+                        "000003874:plasma-pistol"
+                    ],
+                    [
+                        "000003874:heavy-bolt-pistol",
+                        "000003874:power-weapon"
+                    ],
+                    [
+                        "000003874:power-weapon",
+                        "000003874:plasma-pistol"
+                    ],
+                    [
+                        "000003874:astartes-chainsword",
+                        "000003874:hand-flamer"
+                    ],
+                    [
+                        "000003874:hand-flamer",
+                        "000003874:power-fist"
+                    ],
+                    [
+                        "000003874:hand-flamer",
+                        "000003874:power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "deathwatch",

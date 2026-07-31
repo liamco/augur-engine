@@ -63,21 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 4 tesla spheres; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 4 tesla spheres; armoured bulk.",
+            "parsed": [
+                "000000556:tesla-spheres",
+                "000000556:armoured-bulk"
+            ],
+            "byModelType": {
+                "Tesseract Vault": [
+                    "000000556:tesla-spheres",
+                    "000000556:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000556:tesla-spheres",
+                "datasheetId": "000000556",
                 "line": 1,
                 "name": "Tesla spheres",
                 "type": "Ranged",
@@ -109,6 +111,7 @@
             },
             {
                 "id": "000000556:antimatter-meteor",
+                "datasheetId": "000000556",
                 "line": 2,
                 "name": "Antimatter Meteor",
                 "type": "Ranged",
@@ -143,6 +146,7 @@
             },
             {
                 "id": "000000556:cosmic-fire",
+                "datasheetId": "000000556",
                 "line": 3,
                 "name": "Cosmic Fire",
                 "type": "Ranged",
@@ -162,7 +166,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "3D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -2,
                         "d": 1
@@ -177,6 +181,7 @@
             },
             {
                 "id": "000000556:time-s-arrow",
+                "datasheetId": "000000556",
                 "line": 4,
                 "name": "Time’s Arrow",
                 "type": "Ranged",
@@ -211,6 +216,7 @@
             },
             {
                 "id": "000000556:armoured-bulk",
+                "datasheetId": "000000556",
                 "line": 5,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -239,7 +245,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000556:tesla-spheres",
+                        "000000556:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

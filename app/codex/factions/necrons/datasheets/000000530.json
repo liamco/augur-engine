@@ -67,21 +67,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Staff of Tomorrow.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Staff of Tomorrow.",
+            "parsed": [
+                "000000530:staff-of-tomorrow"
+            ],
+            "byModelType": {
+                "Orikan the Diviner – EPIC HERO": [
+                    "000000530:staff-of-tomorrow"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000530:staff-of-tomorrow",
+                "datasheetId": "000000530",
                 "line": 1,
                 "name": "Staff of Tomorrow",
                 "type": "Melee",
@@ -112,7 +112,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000530:staff-of-tomorrow"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

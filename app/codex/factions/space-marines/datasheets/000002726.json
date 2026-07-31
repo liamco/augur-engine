@@ -110,21 +110,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 bolt pistol; 1 Gauntlet of the Forge; 1 Spear of Vulkan.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 bolt pistol; 1 Gauntlet of the Forge; 1 Spear of Vulkan.",
+            "parsed": [
+                "000002726:bolt-pistol",
+                "000002726:gauntlet-of-the-forge",
+                "000002726:spear-of-vulkan"
+            ],
+            "byModelType": {
+                "Vulkan He’stan – EPIC HERO": [
+                    "000002726:bolt-pistol",
+                    "000002726:gauntlet-of-the-forge",
+                    "000002726:spear-of-vulkan"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002726:bolt-pistol",
+                "datasheetId": "000002726",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -156,6 +160,7 @@
             },
             {
                 "id": "000002726:gauntlet-of-the-forge",
+                "datasheetId": "000002726",
                 "line": 2,
                 "name": "Gauntlet of the Forge",
                 "type": "Ranged",
@@ -174,7 +179,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -189,6 +194,7 @@
             },
             {
                 "id": "000002726:spear-of-vulkan",
+                "datasheetId": "000002726",
                 "line": 3,
                 "name": "Spear of Vulkan",
                 "type": "Melee",
@@ -219,7 +225,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002726:bolt-pistol",
+                        "000002726:gauntlet-of-the-forge",
+                        "000002726:spear-of-vulkan"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -285,8 +307,19 @@
             "description": "In your Shooting phase, select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model makes a ranged attack with a Torrent or Melta weapon that targets that enemy unit, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Forgefather",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Seeker of the Unfound",
@@ -294,16 +327,8 @@
             "description": "The first time this model is set up on the battlefield, select one objective marker on the battlefield. While this model is within range of that objective marker, this model has an Objective Control characteristic of 10, a Leadership characteristic of 5+ and the Feel No Pain 4+ ability.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Seeker of the Unfound",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "INSPIRING COMMANDER",

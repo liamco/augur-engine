@@ -40,28 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> twin gauss reaper; claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004177",
-                        "line": 1,
-                        "button": "•",
-                        "description": "1 model’s twin gauss reaper can be replaced with 1 transdimensional isolator."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> twin gauss reaper; claws.",
+            "parsed": [
+                "000004177:twin-gauss-reaper",
+                "000004177:claws"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000004177:twin-gauss-reaper",
+                    "000004177:claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004177:transdimensional-isolator",
+                "datasheetId": "000004177",
                 "line": 1,
                 "name": "Transdimensional isolator",
                 "type": "Ranged",
@@ -84,13 +79,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004177:twin-gauss-reaper",
+                "datasheetId": "000004177",
                 "line": 2,
                 "name": "Twin gauss reaper",
                 "type": "Ranged",
@@ -123,6 +123,7 @@
             },
             {
                 "id": "000004177:claws",
+                "datasheetId": "000004177",
                 "line": 3,
                 "name": "Claws",
                 "type": "Melee",
@@ -151,7 +152,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004177",
+                    "line": 1,
+                    "button": "•",
+                    "description": "1 model’s twin gauss reaper can be replaced with 1 transdimensional isolator."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004177:twin-gauss-reaper",
+                        "000004177:claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

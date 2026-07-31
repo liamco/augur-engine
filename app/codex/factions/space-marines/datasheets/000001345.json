@@ -77,21 +77,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> master-crafted special issue bolt pistol; combat knife.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> master-crafted special issue bolt pistol; combat knife.",
+            "parsed": [
+                "000001345:master-crafted-special-issue-bolt-pistol",
+                "000001345:combat-knife"
+            ],
+            "byModelType": {
+                "Lieutenant in Reiver Armour": [
+                    "000001345:master-crafted-special-issue-bolt-pistol",
+                    "000001345:combat-knife"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001345:master-crafted-special-issue-bolt-pistol",
+                "datasheetId": "000001345",
                 "line": 1,
                 "name": "Master-crafted special issue bolt pistol",
                 "type": "Ranged",
@@ -124,6 +126,7 @@
             },
             {
                 "id": "000001345:combat-knife",
+                "datasheetId": "000001345",
                 "line": 2,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -154,7 +157,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001345:master-crafted-special-issue-bolt-pistol",
+                        "000001345:combat-knife"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

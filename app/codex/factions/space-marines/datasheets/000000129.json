@@ -55,40 +55,23 @@
     "transport": "This model has a transport capacity of 6 ADEPTUS ASTARTES INFANTRY models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTicus models (excluding TACTICUS CHARACTER models that began the battle attached to a non-<span class=\"kwb\">TACTICUS</span> unit).",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin heavy bolter; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000129",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin lascannon."
-                    },
-                    {
-                        "datasheetId": "000000129",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000000129",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin heavy bolter; armoured tracks.",
+            "parsed": [
+                "000000129:twin-heavy-bolter",
+                "000000129:armoured-tracks"
+            ],
+            "byModelType": {
+                "Razorback": [
+                    "000000129:twin-heavy-bolter",
+                    "000000129:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000129:hunter-killer-missile",
+                "datasheetId": "000000129",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -120,6 +103,7 @@
             },
             {
                 "id": "000000129:storm-bolter",
+                "datasheetId": "000000129",
                 "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -151,6 +135,7 @@
             },
             {
                 "id": "000000129:twin-heavy-bolter",
+                "datasheetId": "000000129",
                 "line": 3,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -183,6 +168,7 @@
             },
             {
                 "id": "000000129:twin-lascannon",
+                "datasheetId": "000000129",
                 "line": 4,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -214,6 +200,7 @@
             },
             {
                 "id": "000000129:armoured-tracks",
+                "datasheetId": "000000129",
                 "line": 5,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -242,7 +229,77 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000129",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin lascannon."
+                },
+                {
+                    "datasheetId": "000000129",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000000129",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000129:twin-heavy-bolter",
+                        "000000129:armoured-tracks"
+                    ],
+                    [
+                        "000000129:twin-heavy-bolter",
+                        "000000129:armoured-tracks",
+                        "000000129:storm-bolter"
+                    ],
+                    [
+                        "000000129:twin-heavy-bolter",
+                        "000000129:armoured-tracks",
+                        "000000129:hunter-killer-missile"
+                    ],
+                    [
+                        "000000129:twin-heavy-bolter",
+                        "000000129:armoured-tracks",
+                        "000000129:hunter-killer-missile",
+                        "000000129:storm-bolter"
+                    ],
+                    [
+                        "000000129:armoured-tracks",
+                        "000000129:twin-lascannon"
+                    ],
+                    [
+                        "000000129:armoured-tracks",
+                        "000000129:twin-lascannon",
+                        "000000129:storm-bolter"
+                    ],
+                    [
+                        "000000129:armoured-tracks",
+                        "000000129:twin-lascannon",
+                        "000000129:hunter-killer-missile"
+                    ],
+                    [
+                        "000000129:armoured-tracks",
+                        "000000129:twin-lascannon",
+                        "000000129:hunter-killer-missile",
+                        "000000129:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -303,8 +360,19 @@
             "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks, Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Fire Support",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "One Shot",

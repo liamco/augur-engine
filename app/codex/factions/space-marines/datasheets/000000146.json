@@ -58,34 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> skyspear missile launcher; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000146",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000000146",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> skyspear missile launcher; armoured tracks.",
+            "parsed": [
+                "000000146:skyspear-missile-launcher",
+                "000000146:armoured-tracks"
+            ],
+            "byModelType": {
+                "Hunter": [
+                    "000000146:skyspear-missile-launcher",
+                    "000000146:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000146:hunter-killer-missile",
+                "datasheetId": "000000146",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -117,6 +106,7 @@
             },
             {
                 "id": "000000146:skyspear-missile-launcher",
+                "datasheetId": "000000146",
                 "line": 2,
                 "name": "Skyspear missile launcher",
                 "type": "Ranged",
@@ -150,6 +140,7 @@
             },
             {
                 "id": "000000146:storm-bolter",
+                "datasheetId": "000000146",
                 "line": 3,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -181,6 +172,7 @@
             },
             {
                 "id": "000000146:armoured-tracks",
+                "datasheetId": "000000146",
                 "line": 4,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -209,7 +201,51 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000146",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000000146",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000146:skyspear-missile-launcher",
+                        "000000146:armoured-tracks"
+                    ],
+                    [
+                        "000000146:skyspear-missile-launcher",
+                        "000000146:armoured-tracks",
+                        "000000146:storm-bolter"
+                    ],
+                    [
+                        "000000146:skyspear-missile-launcher",
+                        "000000146:armoured-tracks",
+                        "000000146:hunter-killer-missile"
+                    ],
+                    [
+                        "000000146:skyspear-missile-launcher",
+                        "000000146:armoured-tracks",
+                        "000000146:hunter-killer-missile",
+                        "000000146:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

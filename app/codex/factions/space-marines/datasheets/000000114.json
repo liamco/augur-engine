@@ -50,21 +50,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Hammerstrike missile launcher; 2 krakstorm grenade launchers; melta destroyer; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Hammerstrike missile launcher; 2 krakstorm grenade launchers; melta destroyer; close combat weapon.",
+            "parsed": [
+                "000000114:hammerstrike-missile-launcher",
+                "000000114:krakstorm-grenade-launcher",
+                "000000114:melta-destroyer",
+                "000000114:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Storm Speeder Hammerstrike": [
+                    "000000114:hammerstrike-missile-launcher",
+                    "000000114:krakstorm-grenade-launcher",
+                    "000000114:melta-destroyer",
+                    "000000114:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000114:hammerstrike-missile-launcher",
+                "datasheetId": "000000114",
                 "line": 1,
                 "name": "Hammerstrike missile launcher",
                 "type": "Ranged",
@@ -94,6 +100,7 @@
             },
             {
                 "id": "000000114:krakstorm-grenade-launcher",
+                "datasheetId": "000000114",
                 "line": 2,
                 "name": "Krakstorm grenade launcher",
                 "type": "Ranged",
@@ -123,6 +130,7 @@
             },
             {
                 "id": "000000114:melta-destroyer",
+                "datasheetId": "000000114",
                 "line": 3,
                 "name": "Melta destroyer",
                 "type": "Ranged",
@@ -154,6 +162,7 @@
             },
             {
                 "id": "000000114:close-combat-weapon",
+                "datasheetId": "000000114",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -182,7 +191,24 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000114:hammerstrike-missile-launcher",
+                        "000000114:krakstorm-grenade-launcher",
+                        "000000114:melta-destroyer",
+                        "000000114:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

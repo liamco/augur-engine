@@ -63,40 +63,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> quad launcher; 2 twin volkite culverins; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001607",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 twin volkite culverins can be replaced with 2 twin multi-melta"
-                    },
-                    {
-                        "datasheetId": "000001607",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000001607",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> quad launcher; 2 twin volkite culverins; armoured tracks.",
+            "parsed": [
+                "000001607:quad-launcher",
+                "000001607:twin-volkite-culverin",
+                "000001607:armoured-tracks"
+            ],
+            "byModelType": {
+                "Land Raider Achille": [
+                    "000001607:quad-launcher",
+                    "000001607:twin-volkite-culverin",
+                    "000001607:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001607:hunter-killer-missile",
+                "datasheetId": "000001607",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -127,9 +112,10 @@
                 "count": 1
             },
             {
-                "id": "000001607:quad-launcher-shatter-shells",
+                "id": "000001607:quad-launcher",
+                "datasheetId": "000001607",
                 "line": 2,
-                "name": "Quad launcher – shatter shells",
+                "name": "Quad launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -137,7 +123,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Quad launcher – shatter shells",
+                        "name": "Quad launcher - shatter shells",
+                        "profileName": "shatter shells",
                         "attributes": [],
                         "range": 24,
                         "type": "Ranged",
@@ -146,27 +133,14 @@
                         "s": 9,
                         "ap": -2,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001607:quad-launcher-thunderfire-shells",
-                "line": 3,
-                "name": "Quad launcher – thunderfire shells",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001607",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Quad launcher – thunderfire shells",
+                        "name": "Quad launcher - thunderfire shells",
+                        "profileName": "thunderfire shells",
                         "attributes": [
                             "BLAST",
                             "INDIRECT FIRE"
@@ -189,6 +163,7 @@
             },
             {
                 "id": "000001607:storm-bolter",
+                "datasheetId": "000001607",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -220,6 +195,7 @@
             },
             {
                 "id": "000001607:twin-multi-melta",
+                "datasheetId": "000001607",
                 "line": 5,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
@@ -252,6 +228,7 @@
             },
             {
                 "id": "000001607:twin-volkite-culverin",
+                "datasheetId": "000001607",
                 "line": 6,
                 "name": "Twin volkite culverin",
                 "type": "Ranged",
@@ -284,6 +261,7 @@
             },
             {
                 "id": "000001607:armoured-tracks",
+                "datasheetId": "000001607",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -312,7 +290,85 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001607",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 twin volkite culverins can be replaced with 2 twin multi-melta"
+                },
+                {
+                    "datasheetId": "000001607",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000001607",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:twin-volkite-culverin",
+                        "000001607:armoured-tracks"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:twin-volkite-culverin",
+                        "000001607:armoured-tracks",
+                        "000001607:storm-bolter"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:twin-volkite-culverin",
+                        "000001607:armoured-tracks",
+                        "000001607:hunter-killer-missile"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:twin-volkite-culverin",
+                        "000001607:armoured-tracks",
+                        "000001607:hunter-killer-missile",
+                        "000001607:storm-bolter"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:armoured-tracks",
+                        "000001607:twin-multi-melta"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:armoured-tracks",
+                        "000001607:twin-multi-melta",
+                        "000001607:storm-bolter"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:armoured-tracks",
+                        "000001607:twin-multi-melta",
+                        "000001607:hunter-killer-missile"
+                    ],
+                    [
+                        "000001607:quad-launcher",
+                        "000001607:armoured-tracks",
+                        "000001607:twin-multi-melta",
+                        "000001607:hunter-killer-missile",
+                        "000001607:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -45,40 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> gauss scalpel; claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004176",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their gauss scalpel replaced with 1 tesla caster."
-                    },
-                    {
-                        "datasheetId": "000004176",
-                        "line": 2,
-                        "button": "•",
-                        "description": "1 model’s gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector."
-                    },
-                    {
-                        "datasheetId": "000004176",
-                        "line": 3,
-                        "button": "•",
-                        "description": "1 model’s gauss scalpel or tesla caster can be replaced with 1 accelerator mandible."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> gauss scalpel; claws.",
+            "parsed": [
+                "000004176:gauss-scalpel",
+                "000004176:claws"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000004176:gauss-scalpel",
+                    "000004176:claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004176:atomiser-beam",
+                "datasheetId": "000004176",
                 "line": 1,
                 "name": "Atomiser beam",
                 "type": "Ranged",
@@ -101,13 +84,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004176:gauss-scalpel",
+                "datasheetId": "000004176",
                 "line": 2,
                 "name": "Gauss scalpel",
                 "type": "Ranged",
@@ -139,6 +127,7 @@
             },
             {
                 "id": "000004176:tesla-caster",
+                "datasheetId": "000004176",
                 "line": 3,
                 "name": "Tesla caster",
                 "type": "Ranged",
@@ -171,6 +160,7 @@
             },
             {
                 "id": "000004176:claws",
+                "datasheetId": "000004176",
                 "line": 4,
                 "name": "Claws",
                 "type": "Melee",
@@ -199,7 +189,60 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004176",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their gauss scalpel replaced with 1 tesla caster."
+                },
+                {
+                    "datasheetId": "000004176",
+                    "line": 2,
+                    "button": "•",
+                    "description": "1 model’s gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector."
+                },
+                {
+                    "datasheetId": "000004176",
+                    "line": 3,
+                    "button": "•",
+                    "description": "1 model’s gauss scalpel or tesla caster can be replaced with 1 accelerator mandible."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000004176:accelerator-mandible",
+                "name": "Accelerator Mandible",
+                "description": "At the start of the Fight phase, select one friendly Canoptek unit within 3\" of the bearer's unit. Until the end of the phase, improve the Weapon Skill characteristic of weapons equipped by models in that unit by 1.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            },
+            {
+                "id": "000004176:nanoscarab-projector",
+                "name": "Nanoscarab Projector",
+                "description": "Once per battle round, when a friendly NECRONS unit within 3\" of the bearer activates its Reanimation Protocols, the bearer can use this ability. If it does, that unit reanimates 1 additional wound.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004176:gauss-scalpel",
+                        "000004176:claws"
+                    ],
+                    [
+                        "000004176:claws",
+                        "000004176:tesla-caster"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -270,24 +313,6 @@
                 }
             ],
             "mechanicsSource": "regex"
-        },
-        {
-            "name": "Accelerator Mandible",
-            "legend": "",
-            "description": "At the start of the Fight phase, select one friendly Canoptek unit within 3\" of the bearer’s unit. Until the end of the phase, improve the Weapon Skill characteristic of weapons equipped by models in that unit by 1.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Nanoscarab Projector",
-            "legend": "",
-            "description": "Once per battle round, when a friendly <span class=\"kwb\">NECRONS</span> unit within 3\" of the bearer activates its Reanimation Protocols, the bearer can use this ability. If it does, that unit reanimates 1 additional wound.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         }
     ]
 }

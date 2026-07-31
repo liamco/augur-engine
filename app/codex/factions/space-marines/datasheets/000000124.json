@@ -50,21 +50,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 fragstorm grenade launchers; onslaught gatling cannon; twin ironhail heavy stubber; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 fragstorm grenade launchers; onslaught gatling cannon; twin ironhail heavy stubber; close combat weapon.",
+            "parsed": [
+                "000000124:fragstorm-grenade-launcher",
+                "000000124:onslaught-gatling-cannon",
+                "000000124:twin-ironhail-heavy-stubber",
+                "000000124:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Storm Speeder Hailstrike": [
+                    "000000124:fragstorm-grenade-launcher",
+                    "000000124:onslaught-gatling-cannon",
+                    "000000124:twin-ironhail-heavy-stubber",
+                    "000000124:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000124:fragstorm-grenade-launcher",
+                "datasheetId": "000000124",
                 "line": 1,
                 "name": "Fragstorm grenade launcher",
                 "type": "Ranged",
@@ -96,6 +102,7 @@
             },
             {
                 "id": "000000124:onslaught-gatling-cannon",
+                "datasheetId": "000000124",
                 "line": 2,
                 "name": "Onslaught gatling cannon",
                 "type": "Ranged",
@@ -127,6 +134,7 @@
             },
             {
                 "id": "000000124:twin-ironhail-heavy-stubber",
+                "datasheetId": "000000124",
                 "line": 3,
                 "name": "Twin ironhail heavy stubber",
                 "type": "Ranged",
@@ -159,6 +167,7 @@
             },
             {
                 "id": "000000124:close-combat-weapon",
+                "datasheetId": "000000124",
                 "line": 4,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -187,7 +196,24 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000124:fragstorm-grenade-launcher",
+                        "000000124:onslaught-gatling-cannon",
+                        "000000124:twin-ironhail-heavy-stubber",
+                        "000000124:close-combat-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

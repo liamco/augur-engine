@@ -50,28 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000095",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; boltgun; power weapon.",
+            "parsed": [
+                "000000095:bolt-pistol",
+                "000000095:boltgun",
+                "000000095:power-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000095:bolt-pistol",
+                    "000000095:boltgun",
+                    "000000095:power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000095:bolt-pistol",
+                "datasheetId": "000000095",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -103,6 +100,7 @@
             },
             {
                 "id": "000000095:boltgun",
+                "datasheetId": "000000095",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -132,6 +130,7 @@
             },
             {
                 "id": "000000095:power-weapon",
+                "datasheetId": "000000095",
                 "line": 3,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -160,7 +159,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000095",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000095:bolt-pistol",
+                        "000000095:boltgun",
+                        "000000095:power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "ultramarines-legends",

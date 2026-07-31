@@ -63,40 +63,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 3 Terminus lascannons; 2 lascannons; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001184",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000001184",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 multi-melta."
-                    },
-                    {
-                        "datasheetId": "000001184",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 3 Terminus lascannons; 2 lascannons; armoured tracks.",
+            "parsed": [
+                "000001184:terminus-lascannon",
+                "000001184:lascannon",
+                "000001184:armoured-tracks"
+            ],
+            "byModelType": {
+                "Terminus Ultra": [
+                    "000001184:terminus-lascannon",
+                    "000001184:lascannon",
+                    "000001184:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001184:hunter-killer-missile",
+                "datasheetId": "000001184",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -128,6 +113,7 @@
             },
             {
                 "id": "000001184:lascannon",
+                "datasheetId": "000001184",
                 "line": 2,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -157,6 +143,7 @@
             },
             {
                 "id": "000001184:multi-melta",
+                "datasheetId": "000001184",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -188,6 +175,7 @@
             },
             {
                 "id": "000001184:storm-bolter",
+                "datasheetId": "000001184",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -218,9 +206,10 @@
                 "count": 1
             },
             {
-                "id": "000001184:terminus-lascannon-standard",
+                "id": "000001184:terminus-lascannon",
+                "datasheetId": "000001184",
                 "line": 5,
-                "name": "Terminus lascannon – standard",
+                "name": "Terminus lascannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -228,7 +217,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Terminus lascannon – standard",
+                        "name": "Terminus lascannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "TWIN-LINKED"
                         ],
@@ -239,27 +229,14 @@
                         "s": 12,
                         "ap": -3,
                         "d": "D6+1"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001184:terminus-lascannon-overload",
-                "line": 6,
-                "name": "Terminus lascannon – overload",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001184",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Terminus lascannon – overload",
+                        "name": "Terminus lascannon - overload",
+                        "profileName": "overload",
                         "attributes": [
                             "HAZARDOUS",
                             "TWIN-LINKED"
@@ -282,6 +259,7 @@
             },
             {
                 "id": "000001184:armoured-tracks",
+                "datasheetId": "000001184",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -310,7 +288,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001184",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000001184",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 multi-melta."
+                },
+                {
+                    "datasheetId": "000001184",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:storm-bolter"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:multi-melta"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:multi-melta",
+                        "000001184:storm-bolter"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:hunter-killer-missile"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:hunter-killer-missile",
+                        "000001184:storm-bolter"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:hunter-killer-missile",
+                        "000001184:multi-melta"
+                    ],
+                    [
+                        "000001184:terminus-lascannon",
+                        "000001184:lascannon",
+                        "000001184:armoured-tracks",
+                        "000001184:hunter-killer-missile",
+                        "000001184:multi-melta",
+                        "000001184:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

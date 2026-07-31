@@ -66,21 +66,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Overlord’s blade; resurrection orb.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Overlord’s blade; resurrection orb.",
+            "parsed": [
+                "000003693:overlord-s-blade",
+                "000003693:resurrection-orb"
+            ],
+            "byModelType": {
+                "Overlord with Translocation Shroud": [
+                    "000003693:overlord-s-blade",
+                    "000003693:resurrection-orb"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003693:overlord-s-blade",
+                "datasheetId": "000003693",
                 "line": 1,
                 "name": "Overlord's blade",
                 "type": "Melee",
@@ -111,7 +113,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [
+            {
+                "id": "000003693:resurrection-orb",
+                "name": "Resurrection Orb",
+                "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003693:overlord-s-blade",
+                        "000003693:resurrection-orb"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -165,15 +190,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Resurrection Orb",
-            "legend": "",
-            "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "My Will Be Done",

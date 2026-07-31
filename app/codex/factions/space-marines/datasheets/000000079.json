@@ -96,28 +96,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Smite; force weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000079",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 storm bolter</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Smite; force weapon.",
+            "parsed": [
+                "000000079:smite",
+                "000000079:force-weapon"
+            ],
+            "byModelType": {
+                "Librarian in Terminator Armour": [
+                    "000000079:smite",
+                    "000000079:force-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000079:combi-weapon",
+                "datasheetId": "000000079",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -150,9 +145,10 @@
                 "count": 1
             },
             {
-                "id": "000000079:smite-witchfire",
+                "id": "000000079:smite",
+                "datasheetId": "000000079",
                 "line": 2,
-                "name": "Smite – witchfire",
+                "name": "Smite",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -160,7 +156,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Smite – witchfire",
+                        "name": "Smite - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "PSYCHIC"
                         ],
@@ -171,27 +168,14 @@
                         "s": 5,
                         "ap": -1,
                         "d": "D3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000079:smite-focused-witchfire",
-                "line": 3,
-                "name": "Smite – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000079",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Smite – focused witchfire",
+                        "name": "Smite - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "DEVASTATING WOUNDS",
                             "HAZARDOUS",
@@ -215,6 +199,7 @@
             },
             {
                 "id": "000000079:storm-bolter",
+                "datasheetId": "000000079",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -246,6 +231,7 @@
             },
             {
                 "id": "000000079:force-weapon",
+                "datasheetId": "000000079",
                 "line": 5,
                 "name": "Force weapon",
                 "type": "Melee",
@@ -276,7 +262,39 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000079",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000079:smite",
+                        "000000079:force-weapon"
+                    ],
+                    [
+                        "000000079:smite",
+                        "000000079:force-weapon",
+                        "000000079:combi-weapon"
+                    ],
+                    [
+                        "000000079:smite",
+                        "000000079:force-weapon",
+                        "000000079:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -342,24 +360,8 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Psychic Hood",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "isLeadingUnit",
-                            "operator": "equals",
-                            "value": true
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Veil of Time (Psychic)",

@@ -77,34 +77,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolt pistol; master-crafted chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003832",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy bolt pistol can be replaced with 1 inferno pistol."
-                    },
-                    {
-                        "datasheetId": "000003832",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s master-crafted chainsword can be replaced with one of the following: <br><ul><li>1 relic weapon</li><li>1 power fist</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolt pistol; master-crafted chainsword.",
+            "parsed": [
+                "000003832:heavy-bolt-pistol",
+                "000003832:master-crafted-chainsword"
+            ],
+            "byModelType": {
+                "Death Company Captain": [
+                    "000003832:heavy-bolt-pistol",
+                    "000003832:master-crafted-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003832:heavy-bolt-pistol",
+                "datasheetId": "000003832",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -136,6 +125,7 @@
             },
             {
                 "id": "000003832:inferno-pistol",
+                "datasheetId": "000003832",
                 "line": 2,
                 "name": "Inferno pistol",
                 "type": "Ranged",
@@ -168,6 +158,7 @@
             },
             {
                 "id": "000003832:master-crafted-chainsword",
+                "datasheetId": "000003832",
                 "line": 3,
                 "name": "Master-crafted chainsword",
                 "type": "Melee",
@@ -197,6 +188,7 @@
             },
             {
                 "id": "000003832:power-fist",
+                "datasheetId": "000003832",
                 "line": 4,
                 "name": "Power fist",
                 "type": "Melee",
@@ -226,6 +218,7 @@
             },
             {
                 "id": "000003832:relic-weapon",
+                "datasheetId": "000003832",
                 "line": 5,
                 "name": "Relic weapon",
                 "type": "Melee",
@@ -254,7 +247,55 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003832",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy bolt pistol can be replaced with 1 inferno pistol."
+                },
+                {
+                    "datasheetId": "000003832",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s master-crafted chainsword can be replaced with one of the following: <br><ul><li>1 relic weapon</li><li>1 power fist</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003832:heavy-bolt-pistol",
+                        "000003832:master-crafted-chainsword"
+                    ],
+                    [
+                        "000003832:heavy-bolt-pistol",
+                        "000003832:relic-weapon"
+                    ],
+                    [
+                        "000003832:heavy-bolt-pistol",
+                        "000003832:power-fist"
+                    ],
+                    [
+                        "000003832:master-crafted-chainsword",
+                        "000003832:inferno-pistol"
+                    ],
+                    [
+                        "000003832:inferno-pistol",
+                        "000003832:relic-weapon"
+                    ],
+                    [
+                        "000003832:inferno-pistol",
+                        "000003832:power-fist"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -347,8 +388,19 @@
             "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Black Rage",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Death Vision of Sanguinius",

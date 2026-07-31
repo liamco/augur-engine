@@ -55,28 +55,23 @@
     "transport": "This model has a transport capacity of 12 ADEPTUS ASTARTES INFANTRY models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-<span class=\"kwb\">TACTICUS</span> unit).",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002723",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; armoured tracks.",
+            "parsed": [
+                "000002723:storm-bolter",
+                "000002723:armoured-tracks"
+            ],
+            "byModelType": {
+                "Rhino": [
+                    "000002723:storm-bolter",
+                    "000002723:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002723:hunter-killer-missile",
+                "datasheetId": "000002723",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -108,6 +103,7 @@
             },
             {
                 "id": "000002723:storm-bolter",
+                "datasheetId": "000002723",
                 "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -139,6 +135,7 @@
             },
             {
                 "id": "000002723:armoured-tracks",
+                "datasheetId": "000002723",
                 "line": 3,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -167,7 +164,34 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002723",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002723:storm-bolter",
+                        "000002723:armoured-tracks"
+                    ],
+                    [
+                        "000002723:storm-bolter",
+                        "000002723:armoured-tracks",
+                        "000002723:hunter-killer-missile"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

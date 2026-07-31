@@ -111,21 +111,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> forge bolter; grav-pistol; Omnissian power axe; servo-arm.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> forge bolter; grav-pistol; Omnissian power axe; servo-arm.",
+            "parsed": [
+                "000000140:forge-bolter",
+                "000000140:grav-pistol",
+                "000000140:omnissian-power-axe",
+                "000000140:servo-arm"
+            ],
+            "byModelType": {
+                "Techmarine": [
+                    "000000140:forge-bolter",
+                    "000000140:grav-pistol",
+                    "000000140:omnissian-power-axe",
+                    "000000140:servo-arm"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000140:forge-bolter",
+                "datasheetId": "000000140",
                 "line": 1,
                 "name": "Forge bolter",
                 "type": "Ranged",
@@ -155,6 +161,7 @@
             },
             {
                 "id": "000000140:grav-pistol",
+                "datasheetId": "000000140",
                 "line": 2,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -187,6 +194,7 @@
             },
             {
                 "id": "000000140:omnissian-power-axe",
+                "datasheetId": "000000140",
                 "line": 3,
                 "name": "Omnissian power axe",
                 "type": "Melee",
@@ -216,6 +224,7 @@
             },
             {
                 "id": "000000140:servo-arm",
+                "datasheetId": "000000140",
                 "line": 4,
                 "name": "Servo-arm",
                 "type": "Melee",
@@ -246,7 +255,24 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000140:forge-bolter",
+                        "000000140:grav-pistol",
+                        "000000140:omnissian-power-axe",
+                        "000000140:servo-arm"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

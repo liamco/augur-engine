@@ -13,7 +13,8 @@
     "fetch": "tsx data/fetch/index.ts",
     "fetch:refresh": "tsx data/fetch/index.ts --force-download",
     "validate-mechanics": "tsx data/pipeline/validation/validateAbilityMechanics.ts",
-    "reindex-detachments": "tsx data/pipeline/reindexDetachments.ts"
+    "reindex-detachments": "tsx data/pipeline/reindexDetachments.ts",
+    "coverage-report": "tsx data/pipeline/reports/coverageReport.ts"
   },
   "keywords": [],
   "author": "",

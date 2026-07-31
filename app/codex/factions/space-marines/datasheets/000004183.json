@@ -197,21 +197,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 1 Gauntlets of Ultramar.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 1 Gauntlets of Ultramar.",
+            "parsed": [
+                "000004183:gauntlets-of-ultramar"
+            ],
+            "byModelType": {
+                "Marneus Calgar in Armour of Antilochus – EPIC HERO": [
+                    "000004183:gauntlets-of-ultramar"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004183:gauntlets-of-ultramar",
+                "datasheetId": "000004183",
                 "line": 1,
                 "name": "Gauntlets of Ultramar",
                 "type": "Ranged",
@@ -244,6 +244,7 @@
             },
             {
                 "id": "000004183:gauntlets-of-ultramar-2",
+                "datasheetId": "000004183",
                 "line": 2,
                 "name": "Gauntlets of Ultramar",
                 "type": "Melee",
@@ -274,7 +275,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004183:gauntlets-of-ultramar"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

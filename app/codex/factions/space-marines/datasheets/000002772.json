@@ -55,21 +55,29 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Ancient is equipped with:</b> bolt pistol; bolt rifle; close combat weapon. <br><br><b>The Company Champion is equipped with:</b> bolt pistol; master-crafted power weapon. <br><br><b>One Company Veteran is equipped with:</b> bolt pistol; master-crafted heavy bolter; close combat weapon. <br><br><b>One Company Veteran is equipped with:</b> bolt pistol; master-crafted bolt rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>The Ancient is equipped with:</b> bolt pistol; bolt rifle; close combat weapon. <br><br><b>The Company Champion is equipped with:</b> bolt pistol; master-crafted power weapon. <br><br><b>One Company Veteran is equipped with:</b> bolt pistol; master-crafted heavy bolter; close combat weapon. <br><br><b>One Company Veteran is equipped with:</b> bolt pistol; master-crafted bolt rifle; close combat weapon.",
+            "parsed": [
+                "000002772:bolt-pistol",
+                "000002772:bolt-rifle",
+                "000002772:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Ancient": [
+                    "000002772:bolt-pistol",
+                    "000002772:bolt-rifle",
+                    "000002772:close-combat-weapon"
+                ],
+                "Company Champion": [
+                    "000002772:bolt-pistol",
+                    "000002772:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002772:bolt-pistol",
+                "datasheetId": "000002772",
                 "line": 1,
                 "name": "Bolt Pistol",
                 "type": "Ranged",
@@ -101,6 +109,7 @@
             },
             {
                 "id": "000002772:bolt-rifle",
+                "datasheetId": "000002772",
                 "line": 2,
                 "name": "Bolt rifle",
                 "type": "Ranged",
@@ -123,13 +132,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Ancient"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002772:master-crafted-bolt-rifle",
+                "datasheetId": "000002772",
                 "line": 3,
                 "name": "Master-crafted bolt rifle",
                 "type": "Ranged",
@@ -162,6 +175,7 @@
             },
             {
                 "id": "000002772:master-crafted-heavy-bolter",
+                "datasheetId": "000002772",
                 "line": 4,
                 "name": "Master-crafted heavy bolter",
                 "type": "Ranged",
@@ -194,6 +208,7 @@
             },
             {
                 "id": "000002772:close-combat-weapon",
+                "datasheetId": "000002772",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -216,13 +231,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Ancient"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002772:master-crafted-power-weapon",
+                "datasheetId": "000002772",
                 "line": 6,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -247,13 +266,41 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Company Champion"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Ancient",
+                "items": [
+                    [
+                        "000002772:bolt-pistol",
+                        "000002772:bolt-rifle",
+                        "000002772:close-combat-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Company Champion",
+                "items": [
+                    [
+                        "000002772:bolt-pistol",
+                        "000002772:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

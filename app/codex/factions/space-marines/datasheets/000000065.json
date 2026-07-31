@@ -68,40 +68,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin heavy bolter; 2 godhammer lascannons; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000065",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000000065",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 multi-melta."
-                    },
-                    {
-                        "datasheetId": "000000065",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin heavy bolter; 2 godhammer lascannons; armoured tracks.",
+            "parsed": [
+                "000000065:twin-heavy-bolter",
+                "000000065:godhammer-lascannon",
+                "000000065:armoured-tracks"
+            ],
+            "byModelType": {
+                "Land Raider": [
+                    "000000065:twin-heavy-bolter",
+                    "000000065:godhammer-lascannon",
+                    "000000065:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000065:godhammer-lascannon",
+                "datasheetId": "000000065",
                 "line": 1,
                 "name": "Godhammer lascannon",
                 "type": "Ranged",
@@ -131,6 +116,7 @@
             },
             {
                 "id": "000000065:hunter-killer-missile",
+                "datasheetId": "000000065",
                 "line": 2,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -162,6 +148,7 @@
             },
             {
                 "id": "000000065:multi-melta",
+                "datasheetId": "000000065",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -193,6 +180,7 @@
             },
             {
                 "id": "000000065:storm-bolter",
+                "datasheetId": "000000065",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -224,6 +212,7 @@
             },
             {
                 "id": "000000065:twin-heavy-bolter",
+                "datasheetId": "000000065",
                 "line": 5,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -256,6 +245,7 @@
             },
             {
                 "id": "000000065:armoured-tracks",
+                "datasheetId": "000000065",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -284,7 +274,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000065",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000000065",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 multi-melta."
+                },
+                {
+                    "datasheetId": "000000065",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:storm-bolter"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:multi-melta"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:multi-melta",
+                        "000000065:storm-bolter"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:hunter-killer-missile"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:hunter-killer-missile",
+                        "000000065:storm-bolter"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:hunter-killer-missile",
+                        "000000065:multi-melta"
+                    ],
+                    [
+                        "000000065:twin-heavy-bolter",
+                        "000000065:godhammer-lascannon",
+                        "000000065:armoured-tracks",
+                        "000000065:hunter-killer-missile",
+                        "000000065:multi-melta",
+                        "000000065:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

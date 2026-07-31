@@ -110,28 +110,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Ferocity; Sword of the High Marshals.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002794",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Ferocity; Sword of the High Marshals.",
+            "parsed": [
+                "000002794:ferocity",
+                "000002794:sword-of-the-high-marshals"
+            ],
+            "byModelType": {
+                "High Marshal Helbrecht – EPIC HERO": [
+                    "000002794:ferocity",
+                    "000002794:sword-of-the-high-marshals"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002794:ferocity",
+                "datasheetId": "000002794",
                 "line": 1,
                 "name": "Ferocity",
                 "type": "Ranged",
@@ -163,9 +158,10 @@
                 "count": 1
             },
             {
-                "id": "000002794:sword-of-the-high-marshals-strike",
+                "id": "000002794:sword-of-the-high-marshals",
+                "datasheetId": "000002794",
                 "line": 2,
-                "name": "Sword of the High Marshals – strike",
+                "name": "Sword of the High Marshals",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -173,7 +169,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Sword of the High Marshals – strike",
+                        "name": "Sword of the High Marshals - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -182,27 +179,14 @@
                         "s": 8,
                         "ap": -3,
                         "d": 3
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002794:sword-of-the-high-marshals-sweep",
-                "line": 3,
-                "name": "Sword of the High Marshals – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002794",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Sword of the High Marshals – sweep",
+                        "name": "Sword of the High Marshals - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -221,7 +205,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002794",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002794:ferocity",
+                        "000002794:sword-of-the-high-marshals"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

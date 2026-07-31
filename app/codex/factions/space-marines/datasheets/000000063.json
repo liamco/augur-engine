@@ -75,28 +75,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000063",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
+            "parsed": [
+                "000000063:bolt-pistol",
+                "000000063:twin-boltgun",
+                "000000063:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Apothecary on Bike": [
+                    "000000063:bolt-pistol",
+                    "000000063:twin-boltgun",
+                    "000000063:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000063:bolt-pistol",
+                "datasheetId": "000000063",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -128,6 +125,7 @@
             },
             {
                 "id": "000000063:twin-boltgun",
+                "datasheetId": "000000063",
                 "line": 2,
                 "name": "Twin boltgun",
                 "type": "Ranged",
@@ -159,6 +157,7 @@
             },
             {
                 "id": "000000063:astartes-chainsword",
+                "datasheetId": "000000063",
                 "line": 3,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -187,7 +186,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000063",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000063:bolt-pistol",
+                        "000000063:twin-boltgun",
+                        "000000063:astartes-chainsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

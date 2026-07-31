@@ -58,21 +58,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy death ray; twin tesla destructor; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy death ray; twin tesla destructor; armoured bulk.",
+            "parsed": [
+                "000000545:heavy-death-ray",
+                "000000545:twin-tesla-destructor",
+                "000000545:armoured-bulk"
+            ],
+            "byModelType": {
+                "Doom Scythe": [
+                    "000000545:heavy-death-ray",
+                    "000000545:twin-tesla-destructor",
+                    "000000545:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000545:heavy-death-ray",
+                "datasheetId": "000000545",
                 "line": 1,
                 "name": "Heavy death ray",
                 "type": "Ranged",
@@ -104,6 +108,7 @@
             },
             {
                 "id": "000000545:twin-tesla-destructor",
+                "datasheetId": "000000545",
                 "line": 2,
                 "name": "Twin tesla destructor",
                 "type": "Ranged",
@@ -136,6 +141,7 @@
             },
             {
                 "id": "000000545:armoured-bulk",
+                "datasheetId": "000000545",
                 "line": 3,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -164,7 +170,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000545:heavy-death-ray",
+                        "000000545:twin-tesla-destructor",
+                        "000000545:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -55,34 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> storm bolter; Fenrisian greataxe; great wolf claw.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004133",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s Fenrisian greataxe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000004133",
-                        "line": 2,
-                        "button": "•",
-                        "description": "If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> storm bolter; Fenrisian greataxe; great wolf claw.",
+            "parsed": [
+                "000004133:storm-bolter",
+                "000004133:fenrisian-greataxe",
+                "000004133:great-wolf-claw"
+            ],
+            "byModelType": {
+                "Wulfen Dreadnought": [
+                    "000004133:storm-bolter",
+                    "000004133:fenrisian-greataxe",
+                    "000004133:great-wolf-claw"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004133:heavy-flamer",
+                "datasheetId": "000004133",
                 "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -100,7 +91,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -115,6 +106,7 @@
             },
             {
                 "id": "000004133:storm-bolter",
+                "datasheetId": "000004133",
                 "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -145,9 +137,10 @@
                 "count": 1
             },
             {
-                "id": "000004133:fenrisian-greataxe-strike",
+                "id": "000004133:fenrisian-greataxe",
+                "datasheetId": "000004133",
                 "line": 3,
-                "name": "Fenrisian greataxe – strike",
+                "name": "Fenrisian greataxe",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -155,7 +148,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Fenrisian greataxe – strike",
+                        "name": "Fenrisian greataxe - strike",
+                        "profileName": "strike",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -164,27 +158,14 @@
                         "s": 10,
                         "ap": -2,
                         "d": "D6+1"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004133:fenrisian-greataxe-sweep",
-                "line": 4,
-                "name": "Fenrisian greataxe – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004133",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Fenrisian greataxe – sweep",
+                        "name": "Fenrisian greataxe - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -204,6 +185,7 @@
             },
             {
                 "id": "000004133:great-wolf-claw",
+                "datasheetId": "000004133",
                 "line": 5,
                 "name": "Great wolf claw",
                 "type": "Melee",
@@ -232,7 +214,60 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004133",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s Fenrisian greataxe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 heavy flamer."
+                },
+                {
+                    "datasheetId": "000004133",
+                    "line": 2,
+                    "button": "•",
+                    "description": "If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000004133:blizzard-shield",
+                "name": "Blizzard Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Blizzard Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004133:storm-bolter",
+                        "000004133:fenrisian-greataxe",
+                        "000004133:great-wolf-claw"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",
@@ -321,23 +356,6 @@
                         "TWIN-LINKED"
                     ],
                     "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Blizzard Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Blizzard Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
                 }
             ],
             "mechanicsSource": "regex"

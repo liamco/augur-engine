@@ -88,21 +88,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Smite; force weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Smite; force weapon.",
+            "parsed": [
+                "000000119:bolt-pistol",
+                "000000119:smite",
+                "000000119:force-weapon"
+            ],
+            "byModelType": {
+                "Librarian in Phobos Armour": [
+                    "000000119:bolt-pistol",
+                    "000000119:smite",
+                    "000000119:force-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000119:bolt-pistol",
+                "datasheetId": "000000119",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -133,9 +137,10 @@
                 "count": 1
             },
             {
-                "id": "000000119:smite-witchfire",
+                "id": "000000119:smite",
+                "datasheetId": "000000119",
                 "line": 2,
-                "name": "Smite – witchfire",
+                "name": "Smite",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -143,7 +148,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Smite – witchfire",
+                        "name": "Smite - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "PSYCHIC"
                         ],
@@ -154,27 +160,14 @@
                         "s": 5,
                         "ap": -1,
                         "d": "D3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000119:smite-focused-witchfire",
-                "line": 3,
-                "name": "Smite – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000119",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Smite – focused witchfire",
+                        "name": "Smite - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "DEVASTATING WOUNDS",
                             "HAZARDOUS",
@@ -198,6 +191,7 @@
             },
             {
                 "id": "000000119:force-weapon",
+                "datasheetId": "000000119",
                 "line": 4,
                 "name": "Force weapon",
                 "type": "Melee",
@@ -228,7 +222,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000119:bolt-pistol",
+                        "000000119:smite",
+                        "000000119:force-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -294,24 +304,8 @@
             "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Psychic Hood",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "isLeadingUnit",
-                            "operator": "equals",
-                            "value": true
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Shrouding (Psychic)",

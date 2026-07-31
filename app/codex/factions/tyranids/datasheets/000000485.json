@@ -68,28 +68,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> stinger salvoes; twin stranglethorn cannon; scything wings.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000485",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin stranglethorn cannon can be replaced with 1 twin heavy venom cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> stinger salvoes; twin stranglethorn cannon; scything wings.",
+            "parsed": [
+                "000000485:stinger-salvoes",
+                "000000485:twin-stranglethorn-cannon",
+                "000000485:scything-wings"
+            ],
+            "byModelType": {
+                "Harpy": [
+                    "000000485:stinger-salvoes",
+                    "000000485:twin-stranglethorn-cannon",
+                    "000000485:scything-wings"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000485:stinger-salvoes",
+                "datasheetId": "000000485",
                 "line": 1,
                 "name": "Stinger salvoes",
                 "type": "Ranged",
@@ -119,6 +116,7 @@
             },
             {
                 "id": "000000485:twin-heavy-venom-cannon",
+                "datasheetId": "000000485",
                 "line": 2,
                 "name": "Twin heavy venom cannon",
                 "type": "Ranged",
@@ -151,6 +149,7 @@
             },
             {
                 "id": "000000485:twin-stranglethorn-cannon",
+                "datasheetId": "000000485",
                 "line": 3,
                 "name": "Twin stranglethorn cannon",
                 "type": "Ranged",
@@ -183,6 +182,7 @@
             },
             {
                 "id": "000000485:scything-wings",
+                "datasheetId": "000000485",
                 "line": 4,
                 "name": "Scything wings",
                 "type": "Melee",
@@ -211,7 +211,35 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000485",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin stranglethorn cannon can be replaced with 1 twin heavy venom cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000485:stinger-salvoes",
+                        "000000485:twin-stranglethorn-cannon",
+                        "000000485:scything-wings"
+                    ],
+                    [
+                        "000000485:stinger-salvoes",
+                        "000000485:scything-wings",
+                        "000000485:twin-heavy-venom-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

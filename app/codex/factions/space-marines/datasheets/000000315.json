@@ -50,28 +50,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; heirloom weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000315",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can have their bolt pistol replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 storm shield</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; heirloom weapon.",
+            "parsed": [
+                "000000315:bolt-pistol",
+                "000000315:heirloom-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000315:bolt-pistol",
+                    "000000315:heirloom-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000315:bolt-pistol",
+                "datasheetId": "000000315",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -103,6 +98,7 @@
             },
             {
                 "id": "000000315:boltgun",
+                "datasheetId": "000000315",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -132,6 +128,7 @@
             },
             {
                 "id": "000000315:combi-weapon",
+                "datasheetId": "000000315",
                 "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -164,9 +161,10 @@
                 "count": 1
             },
             {
-                "id": "000000315:plasma-pistol-standard",
+                "id": "000000315:plasma-pistol",
+                "datasheetId": "000000315",
                 "line": 4,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -174,7 +172,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -185,27 +184,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000315:plasma-pistol-supercharge",
-                "line": 5,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000315",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -228,6 +214,7 @@
             },
             {
                 "id": "000000315:storm-bolter",
+                "datasheetId": "000000315",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -259,6 +246,7 @@
             },
             {
                 "id": "000000315:heirloom-weapon",
+                "datasheetId": "000000315",
                 "line": 7,
                 "name": "Heirloom weapon",
                 "type": "Melee",
@@ -287,7 +275,73 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000315",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can have their bolt pistol replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 storm shield</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000315:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000315:bolt-pistol",
+                        "000000315:heirloom-weapon"
+                    ],
+                    [
+                        "000000315:heirloom-weapon",
+                        "000000315:boltgun"
+                    ],
+                    [
+                        "000000315:heirloom-weapon",
+                        "000000315:combi-weapon"
+                    ],
+                    [
+                        "000000315:heirloom-weapon",
+                        "000000315:plasma-pistol"
+                    ],
+                    [
+                        "000000315:heirloom-weapon",
+                        "000000315:storm-bolter"
+                    ],
+                    [
+                        "000000315:heirloom-weapon",
+                        "000000315:storm-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -360,23 +414,6 @@
                     "effect": "rollBonus",
                     "attribute": "hit",
                     "value": 1
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
                 }
             ],
             "mechanicsSource": "regex"

@@ -63,28 +63,29 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> fragstorm grenade launcher; heavy bolter; incendium cannon; twin ironhail heavy stubber; Invictor fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001156",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s incendium cannon can be replaced with 1 twin ironhail autocannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> fragstorm grenade launcher; heavy bolter; incendium cannon; twin ironhail heavy stubber; Invictor fist.",
+            "parsed": [
+                "000001156:fragstorm-grenade-launcher",
+                "000001156:heavy-bolter",
+                "000001156:incendium-cannon",
+                "000001156:twin-ironhail-heavy-stubber",
+                "000001156:invictor-fist"
+            ],
+            "byModelType": {
+                "Invictor Tactical Warsuit": [
+                    "000001156:fragstorm-grenade-launcher",
+                    "000001156:heavy-bolter",
+                    "000001156:incendium-cannon",
+                    "000001156:twin-ironhail-heavy-stubber",
+                    "000001156:invictor-fist"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001156:fragstorm-grenade-launcher",
+                "datasheetId": "000001156",
                 "line": 1,
                 "name": "Fragstorm grenade launcher",
                 "type": "Ranged",
@@ -116,6 +117,7 @@
             },
             {
                 "id": "000001156:heavy-bolter",
+                "datasheetId": "000001156",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -147,6 +149,7 @@
             },
             {
                 "id": "000001156:incendium-cannon",
+                "datasheetId": "000001156",
                 "line": 3,
                 "name": "Incendium cannon",
                 "type": "Ranged",
@@ -164,7 +167,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -179,6 +182,7 @@
             },
             {
                 "id": "000001156:twin-ironhail-autocannon",
+                "datasheetId": "000001156",
                 "line": 4,
                 "name": "Twin ironhail autocannon",
                 "type": "Ranged",
@@ -210,6 +214,7 @@
             },
             {
                 "id": "000001156:twin-ironhail-heavy-stubber",
+                "datasheetId": "000001156",
                 "line": 5,
                 "name": "Twin ironhail heavy stubber",
                 "type": "Ranged",
@@ -242,6 +247,7 @@
             },
             {
                 "id": "000001156:invictor-fist",
+                "datasheetId": "000001156",
                 "line": 6,
                 "name": "Invictor fist",
                 "type": "Melee",
@@ -270,7 +276,39 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001156",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s incendium cannon can be replaced with 1 twin ironhail autocannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001156:fragstorm-grenade-launcher",
+                        "000001156:heavy-bolter",
+                        "000001156:incendium-cannon",
+                        "000001156:twin-ironhail-heavy-stubber",
+                        "000001156:invictor-fist"
+                    ],
+                    [
+                        "000001156:fragstorm-grenade-launcher",
+                        "000001156:heavy-bolter",
+                        "000001156:twin-ironhail-heavy-stubber",
+                        "000001156:invictor-fist",
+                        "000001156:twin-ironhail-autocannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

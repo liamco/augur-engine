@@ -73,28 +73,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 skyhammer missile launchers; twin helfrost cannon; twin lascannon; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000321",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 skyhammer missile launchers can replaced with one of the following:<ul><li>2 twin heavy bolters</li><li>2 twin multi-meltas</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 skyhammer missile launchers; twin helfrost cannon; twin lascannon; armoured hull.",
+            "parsed": [
+                "000000321:skyhammer-missile-launcher",
+                "000000321:twin-helfrost-cannon",
+                "000000321:twin-lascannon",
+                "000000321:armoured-hull"
+            ],
+            "byModelType": {
+                "Stormwolf": [
+                    "000000321:skyhammer-missile-launcher",
+                    "000000321:twin-helfrost-cannon",
+                    "000000321:twin-lascannon",
+                    "000000321:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000321:skyhammer-missile-launcher",
+                "datasheetId": "000000321",
                 "line": 1,
                 "name": "Skyhammer missile launcher",
                 "type": "Ranged",
@@ -126,6 +125,7 @@
             },
             {
                 "id": "000000321:twin-heavy-bolter",
+                "datasheetId": "000000321",
                 "line": 2,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -157,9 +157,10 @@
                 "count": 1
             },
             {
-                "id": "000000321:twin-helfrost-cannon-dispersed",
+                "id": "000000321:twin-helfrost-cannon",
+                "datasheetId": "000000321",
                 "line": 3,
-                "name": "Twin helfrost cannon – dispersed",
+                "name": "Twin helfrost cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -167,7 +168,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Twin helfrost cannon – dispersed",
+                        "name": "Twin helfrost cannon - dispersed",
+                        "profileName": "dispersed",
                         "attributes": [
                             "TORRENT",
                             "TWIN-LINKED"
@@ -175,31 +177,18 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000321:twin-helfrost-cannon-focused",
-                "line": 4,
-                "name": "Twin helfrost cannon – focused",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000321",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Twin helfrost cannon – focused",
+                        "name": "Twin helfrost cannon - focused",
+                        "profileName": "focused",
                         "attributes": [
                             "TWIN-LINKED"
                         ],
@@ -221,6 +210,7 @@
             },
             {
                 "id": "000000321:twin-lascannon",
+                "datasheetId": "000000321",
                 "line": 5,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -252,6 +242,7 @@
             },
             {
                 "id": "000000321:twin-multi-melta",
+                "datasheetId": "000000321",
                 "line": 6,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
@@ -284,6 +275,7 @@
             },
             {
                 "id": "000000321:armoured-hull",
+                "datasheetId": "000000321",
                 "line": 7,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -312,7 +304,31 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000321",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 skyhammer missile launchers can replaced with one of the following:<ul><li>2 twin heavy bolters</li><li>2 twin multi-meltas</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000321:skyhammer-missile-launcher",
+                        "000000321:twin-helfrost-cannon",
+                        "000000321:twin-lascannon",
+                        "000000321:armoured-hull"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",

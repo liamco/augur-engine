@@ -45,21 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> feeder mandibles.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> feeder mandibles.",
+            "parsed": [
+                "000002114:feeder-mandibles"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002114:feeder-mandibles"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002114:feeder-mandibles",
+                "datasheetId": "000002114",
                 "line": 1,
                 "name": "Feeder mandibles",
                 "type": "Melee",
@@ -90,7 +90,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002114:feeder-mandibles"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

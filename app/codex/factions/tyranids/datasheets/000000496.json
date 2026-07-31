@@ -53,28 +53,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> fleshborer hive; stinger salvoes; powerful limbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000496",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s fleshborer hive can be replaced with one of the following:<ul><li>1 acid spray</li><li>1 rupture cannon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> fleshborer hive; stinger salvoes; powerful limbs.",
+            "parsed": [
+                "000000496:fleshborer-hive",
+                "000000496:stinger-salvoes",
+                "000000496:powerful-limbs"
+            ],
+            "byModelType": {
+                "Tyrannofex": [
+                    "000000496:fleshborer-hive",
+                    "000000496:stinger-salvoes",
+                    "000000496:powerful-limbs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000496:acid-spray",
+                "datasheetId": "000000496",
                 "line": 1,
                 "name": "Acid spray",
                 "type": "Ranged",
@@ -91,7 +88,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6+6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -2,
                         "d": 2
@@ -106,6 +103,7 @@
             },
             {
                 "id": "000000496:fleshborer-hive",
+                "datasheetId": "000000496",
                 "line": 2,
                 "name": "Fleshborer hive",
                 "type": "Ranged",
@@ -139,6 +137,7 @@
             },
             {
                 "id": "000000496:rupture-cannon",
+                "datasheetId": "000000496",
                 "line": 3,
                 "name": "Rupture cannon",
                 "type": "Ranged",
@@ -170,6 +169,7 @@
             },
             {
                 "id": "000000496:stinger-salvoes",
+                "datasheetId": "000000496",
                 "line": 4,
                 "name": "Stinger salvoes",
                 "type": "Ranged",
@@ -199,6 +199,7 @@
             },
             {
                 "id": "000000496:powerful-limbs",
+                "datasheetId": "000000496",
                 "line": 5,
                 "name": "Powerful limbs",
                 "type": "Melee",
@@ -227,7 +228,40 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000496",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s fleshborer hive can be replaced with one of the following:<ul><li>1 acid spray</li><li>1 rupture cannon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000496:fleshborer-hive",
+                        "000000496:stinger-salvoes",
+                        "000000496:powerful-limbs"
+                    ],
+                    [
+                        "000000496:stinger-salvoes",
+                        "000000496:powerful-limbs",
+                        "000000496:acid-spray"
+                    ],
+                    [
+                        "000000496:stinger-salvoes",
+                        "000000496:powerful-limbs",
+                        "000000496:rupture-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -65,46 +65,39 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every Kill Team Infiltrator is equipped with:</b> bolt pistol; Deathwatch marksman bolt carbine; close combat weapon.<br><br><b>Every Kill Team Infiltrator with bolt sniper rifle is equipped with:</b> bolt pistol; bolt sniper rifle; close combat weapon.<br><br><b>Every Kill Team Infiltrator with Deathwatch occulus bolt carbine is equipped with:</b> bolt pistol; Deathwatch occulus bolt carbine; paired combat blades.<br><br><b>Every Kill Team Infiltrator with combat knife is equipped with:</b> special-issue bolt pistol; combat knife.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002779",
-                        "line": 1,
-                        "button": "•",
-                        "description": "One model equipped with a Deathwatch marksman bolt carbine can be equipped with one of<br>the following:<ul><li>1 helix gauntlet</li><li>1 Infiltrator comms array</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002779",
-                        "line": 2,
-                        "button": "•",
-                        "description": "One model can replace its bolt sniper rifle with 1 instigator bolt carbine."
-                    },
-                    {
-                        "datasheetId": "000002779",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each replace their bolt sniper rifle with 1 las fusil."
-                    },
-                    {
-                        "datasheetId": "000002779",
-                        "line": 4,
-                        "button": "•",
-                        "description": "Any number of models can each replace their combat knife with 1 Deathwatch bolt carbine and 1 close combat weapon."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>Every Kill Team Infiltrator is equipped with:</b> bolt pistol; Deathwatch marksman bolt carbine; close combat weapon.<br><br><b>Every Kill Team Infiltrator with bolt sniper rifle is equipped with:</b> bolt pistol; bolt sniper rifle; close combat weapon.<br><br><b>Every Kill Team Infiltrator with Deathwatch occulus bolt carbine is equipped with:</b> bolt pistol; Deathwatch occulus bolt carbine; paired combat blades.<br><br><b>Every Kill Team Infiltrator with combat knife is equipped with:</b> special-issue bolt pistol; combat knife.",
+            "parsed": [
+                "000002779:bolt-pistol",
+                "000002779:deathwatch-marksman-bolt-carbine",
+                "000002779:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Kill Team Infiltrator": [
+                    "000002779:bolt-pistol",
+                    "000002779:deathwatch-marksman-bolt-carbine",
+                    "000002779:close-combat-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Kill Team Infiltrator with bolt sniper rifle": [
+                    "000002779:bolt-pistol",
+                    "000002779:bolt-sniper-rifle",
+                    "000002779:close-combat-weapon"
+                ],
+                "Kill Team Infiltrator with Deathwatch occulus bolt carbine": [
+                    "000002779:bolt-pistol",
+                    "000002779:deathwatch-occulus-bolt-carbine",
+                    "000002779:paired-combat-blades"
+                ],
+                "Kill Team Infiltrator with combat knife": [
+                    "000002779:special-issue-bolt-pistol",
+                    "000002779:combat-knife"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002779:bolt-pistol",
+                "datasheetId": "000002779",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -129,13 +122,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator",
+                            "Kill Team Infiltrator with bolt sniper rifle",
+                            "Kill Team Infiltrator with Deathwatch occulus bolt carbine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:bolt-sniper-rifle",
+                "datasheetId": "000002779",
                 "line": 2,
                 "name": "Bolt sniper rifle",
                 "type": "Ranged",
@@ -161,13 +160,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator with bolt sniper rifle"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:deathwatch-bolt-carbine",
+                "datasheetId": "000002779",
                 "line": 3,
                 "name": "Deathwatch bolt carbine",
                 "type": "Ranged",
@@ -200,6 +203,7 @@
             },
             {
                 "id": "000002779:deathwatch-marksman-bolt-carbine",
+                "datasheetId": "000002779",
                 "line": 4,
                 "name": "Deathwatch marksman bolt carbine",
                 "type": "Ranged",
@@ -225,13 +229,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:deathwatch-occulus-bolt-carbine",
+                "datasheetId": "000002779",
                 "line": 5,
                 "name": "Deathwatch occulus bolt carbine",
                 "type": "Ranged",
@@ -258,13 +266,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator with Deathwatch occulus bolt carbine"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:instigator-bolt-carbine",
+                "datasheetId": "000002779",
                 "line": 6,
                 "name": "Instigator bolt carbine",
                 "type": "Ranged",
@@ -289,13 +301,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:las-fusil",
+                "datasheetId": "000002779",
                 "line": 7,
                 "name": "Las fusil",
                 "type": "Ranged",
@@ -327,6 +344,7 @@
             },
             {
                 "id": "000002779:special-issue-bolt-pistol",
+                "datasheetId": "000002779",
                 "line": 8,
                 "name": "Special-issue bolt pistol",
                 "type": "Ranged",
@@ -352,13 +370,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator with combat knife"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:close-combat-weapon",
+                "datasheetId": "000002779",
                 "line": 9,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -381,13 +403,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator",
+                            "Kill Team Infiltrator with bolt sniper rifle"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:combat-knife",
+                "datasheetId": "000002779",
                 "line": 10,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -412,13 +439,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator with combat knife"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002779:paired-combat-blades",
+                "datasheetId": "000002779",
                 "line": 11,
                 "name": "Paired combat blades",
                 "type": "Melee",
@@ -443,13 +474,76 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Infiltrator with Deathwatch occulus bolt carbine"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002779",
+                    "line": 1,
+                    "button": "•",
+                    "description": "One model equipped with a Deathwatch marksman bolt carbine can be equipped with one of<br>the following:<ul><li>1 helix gauntlet</li><li>1 Infiltrator comms array</li></ul>"
+                },
+                {
+                    "datasheetId": "000002779",
+                    "line": 2,
+                    "button": "•",
+                    "description": "One model can replace its bolt sniper rifle with 1 instigator bolt carbine."
+                },
+                {
+                    "datasheetId": "000002779",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each replace their bolt sniper rifle with 1 las fusil."
+                },
+                {
+                    "datasheetId": "000002779",
+                    "line": 4,
+                    "button": "•",
+                    "description": "Any number of models can each replace their combat knife with 1 Deathwatch bolt carbine and 1 close combat weapon."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002779:helix-gauntlet",
+                "name": "Helix Gauntlet",
+                "description": "Models in the bearer's unit have the Feel No Pain 6+ ability.",
+                "mechanics": [
+                    {
+                        "name": "Helix Gauntlet",
+                        "entity": "thisUnit",
+                        "effect": "setsFnp",
+                        "attribute": "feelNoPain",
+                        "value": 6
+                    }
+                ],
+                "mechanicsSource": "regex"
+            },
+            {
+                "id": "000002779:infiltrator-comms-array",
+                "name": "Infiltrator Comms Array",
+                "description": "Each time you target the bearer's unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            },
+            {
+                "id": "000002779:instigator-bolt-carbine",
+                "name": "Instigator Bolt Carbine",
+                "description": "In your Shooting phase, after the bearer's unit has shot, the bearer's unit can make a Normal move. If it does, until the end of the turn, the bearer's unit is not eligible to declare a charge.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "deathwatch",
@@ -542,41 +636,6 @@
             "name": "Spectrus Doctrines",
             "legend": "",
             "description": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Helix Gauntlet",
-            "legend": "",
-            "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Helix Gauntlet",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 6
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Infiltrator Comms Array",
-            "legend": "",
-            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Instigator Bolt Carbine",
-            "legend": "",
-            "description": "In your Shooting phase, after the bearer’s unit has shot, the bearer’s unit can make a Normal move. If it does, until the end of the turn, the bearer’s unit is not eligible to declare a charge.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

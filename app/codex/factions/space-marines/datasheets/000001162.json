@@ -71,28 +71,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Quietus; combat knife.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001162",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Quietus; combat knife.",
+            "parsed": [
+                "000001162:bolt-pistol",
+                "000001162:quietus",
+                "000001162:combat-knife"
+            ],
+            "byModelType": {
+                "Sergeant Telion – EPIC HERO": [
+                    "000001162:bolt-pistol",
+                    "000001162:quietus",
+                    "000001162:combat-knife"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001162:bolt-pistol",
+                "datasheetId": "000001162",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -124,6 +121,7 @@
             },
             {
                 "id": "000001162:quietus",
+                "datasheetId": "000001162",
                 "line": 2,
                 "name": "Quietus",
                 "type": "Ranged",
@@ -155,6 +153,7 @@
             },
             {
                 "id": "000001162:combat-knife",
+                "datasheetId": "000001162",
                 "line": 3,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -183,7 +182,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001162",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001162:bolt-pistol",
+                        "000001162:quietus",
+                        "000001162:combat-knife"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

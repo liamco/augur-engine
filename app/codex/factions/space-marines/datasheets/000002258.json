@@ -58,34 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 Icarus stormcannons; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002258",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000002258",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 Icarus stormcannons; armoured tracks.",
+            "parsed": [
+                "000002258:icarus-stormcannon",
+                "000002258:armoured-tracks"
+            ],
+            "byModelType": {
+                "Stalker": [
+                    "000002258:icarus-stormcannon",
+                    "000002258:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002258:hunter-killer-missile",
+                "datasheetId": "000002258",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -117,6 +106,7 @@
             },
             {
                 "id": "000002258:icarus-stormcannon",
+                "datasheetId": "000002258",
                 "line": 2,
                 "name": "Icarus stormcannon",
                 "type": "Ranged",
@@ -148,6 +138,7 @@
             },
             {
                 "id": "000002258:storm-bolter",
+                "datasheetId": "000002258",
                 "line": 3,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -179,6 +170,7 @@
             },
             {
                 "id": "000002258:armoured-tracks",
+                "datasheetId": "000002258",
                 "line": 4,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -207,7 +199,51 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002258",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000002258",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002258:icarus-stormcannon",
+                        "000002258:armoured-tracks"
+                    ],
+                    [
+                        "000002258:icarus-stormcannon",
+                        "000002258:armoured-tracks",
+                        "000002258:storm-bolter"
+                    ],
+                    [
+                        "000002258:icarus-stormcannon",
+                        "000002258:armoured-tracks",
+                        "000002258:hunter-killer-missile"
+                    ],
+                    [
+                        "000002258:icarus-stormcannon",
+                        "000002258:armoured-tracks",
+                        "000002258:hunter-killer-missile",
+                        "000002258:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

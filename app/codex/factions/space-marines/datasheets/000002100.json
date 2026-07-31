@@ -149,21 +149,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Drakkis; Malleus Noctum.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Drakkis; Malleus Noctum.",
+            "parsed": [
+                "000002100:drakkis",
+                "000002100:malleus-noctum"
+            ],
+            "byModelType": {
+                "Adrax Agatone – EPIC HERO": [
+                    "000002100:drakkis",
+                    "000002100:malleus-noctum"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002100:drakkis",
+                "datasheetId": "000002100",
                 "line": 1,
                 "name": "Drakkis",
                 "type": "Ranged",
@@ -182,7 +184,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": -1,
                         "d": 1
@@ -197,6 +199,7 @@
             },
             {
                 "id": "000002100:malleus-noctum",
+                "datasheetId": "000002100",
                 "line": 2,
                 "name": "Malleus Noctum",
                 "type": "Melee",
@@ -225,7 +228,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002100:drakkis",
+                        "000002100:malleus-noctum"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -286,8 +304,19 @@
             "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Unto the Anvil",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Lord of the Pyroclasts",

@@ -58,28 +58,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> tachyon arrow; warscythe.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000531",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> tachyon arrow; warscythe.",
+            "parsed": [
+                "000000531:tachyon-arrow",
+                "000000531:warscythe"
+            ],
+            "byModelType": {
+                "Anrakyr the Traveller – EPIC HERO": [
+                    "000000531:tachyon-arrow",
+                    "000000531:warscythe"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000531:tachyon-arrow",
+                "datasheetId": "000000531",
                 "line": 1,
                 "name": "Tachyon arrow",
                 "type": "Ranged",
@@ -111,6 +106,7 @@
             },
             {
                 "id": "000000531:warscythe",
+                "datasheetId": "000000531",
                 "line": 2,
                 "name": "Warscythe",
                 "type": "Melee",
@@ -141,7 +137,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000531",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000531:tachyon-arrow",
+                        "000000531:warscythe"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

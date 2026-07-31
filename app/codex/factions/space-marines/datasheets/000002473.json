@@ -85,21 +85,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> artificer grav-gun; Hand of Defiance.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> artificer grav-gun; Hand of Defiance.",
+            "parsed": [
+                "000002473:artificer-grav-gun",
+                "000002473:hand-of-defiance"
+            ],
+            "byModelType": {
+                "Tor Garadon – EPIC HERO": [
+                    "000002473:artificer-grav-gun",
+                    "000002473:hand-of-defiance"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002473:artificer-grav-gun",
+                "datasheetId": "000002473",
                 "line": 1,
                 "name": "Artificer grav-gun",
                 "type": "Ranged",
@@ -131,6 +133,7 @@
             },
             {
                 "id": "000002473:hand-of-defiance",
+                "datasheetId": "000002473",
                 "line": 2,
                 "name": "Hand of Defiance",
                 "type": "Melee",
@@ -159,7 +162,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002473:artificer-grav-gun",
+                        "000002473:hand-of-defiance"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

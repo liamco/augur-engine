@@ -53,21 +53,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> doomsday cannon; 2 gauss flayer arrays; armoured bulk.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> doomsday cannon; 2 gauss flayer arrays; armoured bulk.",
+            "parsed": [
+                "000000554:doomsday-cannon",
+                "000000554:gauss-flayer-array",
+                "000000554:armoured-bulk"
+            ],
+            "byModelType": {
+                "Doomsday Ark": [
+                    "000000554:doomsday-cannon",
+                    "000000554:gauss-flayer-array",
+                    "000000554:armoured-bulk"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000554:doomsday-cannon",
+                "datasheetId": "000000554",
                 "line": 1,
                 "name": "Doomsday cannon",
                 "type": "Ranged",
@@ -100,6 +104,7 @@
             },
             {
                 "id": "000000554:gauss-flayer-array",
+                "datasheetId": "000000554",
                 "line": 2,
                 "name": "Gauss flayer array",
                 "type": "Ranged",
@@ -132,6 +137,7 @@
             },
             {
                 "id": "000000554:armoured-bulk",
+                "datasheetId": "000000554",
                 "line": 3,
                 "name": "Armoured bulk",
                 "type": "Melee",
@@ -160,7 +166,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000554:doomsday-cannon",
+                        "000000554:gauss-flayer-array",
+                        "000000554:armoured-bulk"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

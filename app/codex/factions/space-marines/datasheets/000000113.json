@@ -73,34 +73,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> twin heavy bolter; 2 twin hellstrike launchers; vengeance launcher; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000113",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with one of the following:<ul><li>1 twin multi-melta</li><li>1 typhoon missile launcher</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000113",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s 2 twin hellstrike missile launchers can be replaced with 2 twin lascannons"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> twin heavy bolter; 2 twin hellstrike launchers; vengeance launcher; armoured hull.",
+            "parsed": [
+                "000000113:twin-heavy-bolter",
+                "000000113:twin-hellstrike-launcher",
+                "000000113:vengeance-launcher",
+                "000000113:armoured-hull"
+            ],
+            "byModelType": {
+                "Storm Eagle Gunship": [
+                    "000000113:twin-heavy-bolter",
+                    "000000113:twin-hellstrike-launcher",
+                    "000000113:vengeance-launcher",
+                    "000000113:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000113:twin-heavy-bolter",
+                "datasheetId": "000000113",
                 "line": 1,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -133,6 +126,7 @@
             },
             {
                 "id": "000000113:twin-hellstrike-launcher",
+                "datasheetId": "000000113",
                 "line": 2,
                 "name": "Twin hellstrike launcher",
                 "type": "Ranged",
@@ -165,6 +159,7 @@
             },
             {
                 "id": "000000113:twin-lascannon",
+                "datasheetId": "000000113",
                 "line": 3,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -196,6 +191,7 @@
             },
             {
                 "id": "000000113:twin-multi-melta",
+                "datasheetId": "000000113",
                 "line": 4,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
@@ -227,9 +223,10 @@
                 "count": 1
             },
             {
-                "id": "000000113:typhoon-missile-launcher-frag",
+                "id": "000000113:typhoon-missile-launcher",
+                "datasheetId": "000000113",
                 "line": 5,
-                "name": "Typhoon missile launcher – frag",
+                "name": "Typhoon missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -237,7 +234,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Typhoon missile launcher – frag",
+                        "name": "Typhoon missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -248,27 +246,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000113:typhoon-missile-launcher-krak",
-                "line": 6,
-                "name": "Typhoon missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000113",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Typhoon missile launcher – krak",
+                        "name": "Typhoon missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 48,
                         "type": "Ranged",
@@ -288,6 +273,7 @@
             },
             {
                 "id": "000000113:vengeance-launcher",
+                "datasheetId": "000000113",
                 "line": 7,
                 "name": "Vengeance launcher",
                 "type": "Ranged",
@@ -319,6 +305,7 @@
             },
             {
                 "id": "000000113:armoured-hull",
+                "datasheetId": "000000113",
                 "line": 8,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -347,7 +334,49 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000113",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with one of the following:<ul><li>1 twin multi-melta</li><li>1 typhoon missile launcher</li></ul>"
+                },
+                {
+                    "datasheetId": "000000113",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s 2 twin hellstrike missile launchers can be replaced with 2 twin lascannons"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000113:twin-heavy-bolter",
+                        "000000113:twin-hellstrike-launcher",
+                        "000000113:vengeance-launcher",
+                        "000000113:armoured-hull"
+                    ],
+                    [
+                        "000000113:twin-hellstrike-launcher",
+                        "000000113:vengeance-launcher",
+                        "000000113:armoured-hull",
+                        "000000113:twin-multi-melta"
+                    ],
+                    [
+                        "000000113:twin-hellstrike-launcher",
+                        "000000113:vengeance-launcher",
+                        "000000113:armoured-hull",
+                        "000000113:typhoon-missile-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -413,8 +442,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Armoured Resilience",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -50,21 +50,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> enmitic disintegrators; Unmaker Gauntlet; blade tail and whip coils; nullstone field generator.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> enmitic disintegrators; Unmaker Gauntlet; blade tail and whip coils; nullstone field generator.",
+            "parsed": [
+                "000004186:enmitic-disintegrators",
+                "000004186:unmaker-gauntlet",
+                "000004186:blade-tail-and-whip-coils",
+                "000004186:nullstone-field-generator-aura"
+            ],
+            "byModelType": {
+                "Nekrosor Ammentar – EPIC HERO": [
+                    "000004186:enmitic-disintegrators",
+                    "000004186:unmaker-gauntlet",
+                    "000004186:blade-tail-and-whip-coils",
+                    "000004186:nullstone-field-generator-aura"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004186:enmitic-disintegrators",
+                "datasheetId": "000004186",
                 "line": 1,
                 "name": "Enmitic disintegrators",
                 "type": "Ranged",
@@ -98,6 +104,7 @@
             },
             {
                 "id": "000004186:blade-tail-and-whip-coils",
+                "datasheetId": "000004186",
                 "line": 2,
                 "name": "Blade tail and whip coils",
                 "type": "Melee",
@@ -129,6 +136,7 @@
             },
             {
                 "id": "000004186:unmaker-gauntlet",
+                "datasheetId": "000004186",
                 "line": 3,
                 "name": "Unmaker Gauntlet",
                 "type": "Melee",
@@ -157,7 +165,32 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [
+            {
+                "id": "000004186:nullstone-field-generator-aura",
+                "name": "Nullstone Field Generator (Aura)",
+                "description": "While a friendly NECRONS unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004186:enmitic-disintegrators",
+                        "000004186:unmaker-gauntlet",
+                        "000004186:blade-tail-and-whip-coils",
+                        "000004186:nullstone-field-generator-aura"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -268,23 +301,6 @@
                     "effect": "reroll",
                     "attribute": "wound",
                     "value": 1
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Nullstone Field Generator (Aura)",
-            "legend": "",
-            "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Nullstone Field Generator (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5
                 }
             ],
             "mechanicsSource": "regex"

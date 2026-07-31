@@ -55,40 +55,27 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Wolf Guard Terminator Pack Leader is equipped with:</b> storm bolter; master-crafted power weapon.<br><br><b>Every Wolf Guard Terminator is equipped with:</b> storm bolter; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000318",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their storm bolter replaced with 1 storm shield."
-                    },
-                    {
-                        "datasheetId": "000000318",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Wolf Guard Terminator can replace its storm bolter and master-crafted power weapon with 1 assault cannon and 1 powerfist."
-                    },
-                    {
-                        "datasheetId": "000000318",
-                        "line": 3,
-                        "button": "•",
-                        "description": "The Wolf Guard Terminator Pack Leader’s storm bolter and master-crafted power weapon can be replaced with 1 of the following:<ul><li>1 relic greataxe</li><li>1 twin lightning claws</li></ul>"
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Wolf Guard Terminator Pack Leader is equipped with:</b> storm bolter; master-crafted power weapon.<br><br><b>Every Wolf Guard Terminator is equipped with:</b> storm bolter; master-crafted power weapon.",
+            "parsed": [
+                "000000318:storm-bolter",
+                "000000318:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Wolf Guard Terminator Pack Leader": [
+                    "000000318:storm-bolter",
+                    "000000318:master-crafted-power-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Wolf Guard Terminator": [
+                    "000000318:storm-bolter",
+                    "000000318:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000318:assault-cannon",
+                "datasheetId": "000000318",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -120,6 +107,7 @@
             },
             {
                 "id": "000000318:storm-bolter",
+                "datasheetId": "000000318",
                 "line": 2,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -151,6 +139,7 @@
             },
             {
                 "id": "000000318:master-crafted-power-weapon",
+                "datasheetId": "000000318",
                 "line": 3,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -180,6 +169,7 @@
             },
             {
                 "id": "000000318:power-fist",
+                "datasheetId": "000000318",
                 "line": 4,
                 "name": "Power fist",
                 "type": "Melee",
@@ -209,6 +199,7 @@
             },
             {
                 "id": "000000318:relic-greataxe",
+                "datasheetId": "000000318",
                 "line": 5,
                 "name": "Relic greataxe",
                 "type": "Melee",
@@ -233,13 +224,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Guard Terminator Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000318:twin-lightning-claws",
+                "datasheetId": "000000318",
                 "line": 6,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -264,13 +259,81 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Guard Terminator Pack Leader"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000318",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their storm bolter replaced with 1 storm shield."
+                },
+                {
+                    "datasheetId": "000000318",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Wolf Guard Terminator can replace its storm bolter and master-crafted power weapon with 1 assault cannon and 1 powerfist."
+                },
+                {
+                    "datasheetId": "000000318",
+                    "line": 3,
+                    "button": "•",
+                    "description": "The Wolf Guard Terminator Pack Leader’s storm bolter and master-crafted power weapon can be replaced with 1 of the following:<ul><li>1 relic greataxe</li><li>1 twin lightning claws</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000318:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 4.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Wolf Guard Terminator Pack Leader",
+                "items": [
+                    [
+                        "000000318:storm-bolter",
+                        "000000318:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000000318:relic-greataxe"
+                    ],
+                    [
+                        "000000318:twin-lightning-claws"
+                    ],
+                    [
+                        "000000318:master-crafted-power-weapon",
+                        "000000318:storm-shield"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Wolf Guard Terminator",
+                "items": [
+                    [
+                        "000000318:storm-bolter",
+                        "000000318:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000000318:master-crafted-power-weapon",
+                        "000000318:storm-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",
@@ -351,15 +414,6 @@
                 }
             ],
             "mechanicsSource": "regex"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 4.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         }
     ]
 }

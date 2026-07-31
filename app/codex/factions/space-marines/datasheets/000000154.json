@@ -65,30 +65,29 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Blood Lance; storm bolter; Furioso fist, Furioso force halberd.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000154",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s storm bolter can be replaced with one of the following:<ul><li>1 heavy flamer</li><li>1 meltagun</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Blood Lance; storm bolter; Furioso fist, Furioso force halberd.",
+            "parsed": [
+                "000000154:blood-lance",
+                "000000154:storm-bolter",
+                "000000154:furioso-fist",
+                "000000154:furioso-force-halberd"
+            ],
+            "byModelType": {
+                "Librarian Dreadnought": [
+                    "000000154:blood-lance",
+                    "000000154:storm-bolter",
+                    "000000154:furioso-fist",
+                    "000000154:furioso-force-halberd"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000154:blood-lance-witchfire",
+                "id": "000000154:blood-lance",
+                "datasheetId": "000000154",
                 "line": 1,
-                "name": "Blood Lance – witchfire",
+                "name": "Blood Lance",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -96,7 +95,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Blood Lance – witchfire",
+                        "name": "Blood Lance - witchfire",
+                        "profileName": "witchfire",
                         "attributes": [
                             "PSYCHIC",
                             "SUSTAINED HITS D3"
@@ -108,27 +108,14 @@
                         "s": 10,
                         "ap": -3,
                         "d": "D6"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000154:blood-lance-focused-witchfire",
-                "line": 2,
-                "name": "Blood Lance – focused witchfire",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000154",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Blood Lance – focused witchfire",
+                        "name": "Blood Lance - focused witchfire",
+                        "profileName": "focused witchfire",
                         "attributes": [
                             "HAZARDOUS",
                             "PSYCHIC",
@@ -152,6 +139,7 @@
             },
             {
                 "id": "000000154:heavy-flamer",
+                "datasheetId": "000000154",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -169,7 +157,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -184,6 +172,7 @@
             },
             {
                 "id": "000000154:meltagun",
+                "datasheetId": "000000154",
                 "line": 4,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -215,6 +204,7 @@
             },
             {
                 "id": "000000154:storm-bolter",
+                "datasheetId": "000000154",
                 "line": 5,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -246,6 +236,7 @@
             },
             {
                 "id": "000000154:furioso-fist",
+                "datasheetId": "000000154",
                 "line": 6,
                 "name": "Furioso fist",
                 "type": "Melee",
@@ -275,6 +266,7 @@
             },
             {
                 "id": "000000154:furioso-force-halberd",
+                "datasheetId": "000000154",
                 "line": 7,
                 "name": "Furioso force halberd",
                 "type": "Melee",
@@ -306,7 +298,43 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000154",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s storm bolter can be replaced with one of the following:<ul><li>1 heavy flamer</li><li>1 meltagun</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000154:blood-lance",
+                        "000000154:storm-bolter",
+                        "000000154:furioso-fist",
+                        "000000154:furioso-force-halberd"
+                    ],
+                    [
+                        "000000154:blood-lance",
+                        "000000154:furioso-fist",
+                        "000000154:furioso-force-halberd",
+                        "000000154:heavy-flamer"
+                    ],
+                    [
+                        "000000154:blood-lance",
+                        "000000154:furioso-fist",
+                        "000000154:furioso-force-halberd",
+                        "000000154:meltagun"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -367,16 +395,8 @@
             "description": "While a friendly <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit is within 6\" of this model, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Shield of Sanguinius (Aura, Psychic)",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Wings of Sanguinius (Psychic)",

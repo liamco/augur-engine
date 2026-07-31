@@ -63,23 +63,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Psychic Tendril; monstrous scything talons; monstrous rending claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Psychic Tendril; monstrous scything talons; monstrous rending claws.",
+            "parsed": [
+                "000002751:psychic-tendril",
+                "000002751:monstrous-scything-talons",
+                "000002751:monstrous-rending-claws"
+            ],
+            "byModelType": {
+                "Norn Emissary": [
+                    "000002751:psychic-tendril",
+                    "000002751:monstrous-scything-talons",
+                    "000002751:monstrous-rending-claws"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000002751:psychic-tendril-neuroparasite",
+                "id": "000002751:psychic-tendril",
+                "datasheetId": "000002751",
                 "line": 1,
-                "name": "Psychic Tendril – neuroparasite",
+                "name": "Psychic Tendril",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -87,7 +91,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Psychic Tendril – neuroparasite",
+                        "name": "Psychic Tendril - neuroparasite",
+                        "profileName": "neuroparasite",
                         "attributes": [
                             "PRECISION",
                             "PSYCHIC"
@@ -99,27 +104,14 @@
                         "s": 8,
                         "ap": -2,
                         "d": "D3"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002751:psychic-tendril-neuroblast",
-                "line": 2,
-                "name": "Psychic Tendril – neuroblast",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002751",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Psychic Tendril – neuroblast",
+                        "name": "Psychic Tendril - neuroblast",
+                        "profileName": "neuroblast",
                         "attributes": [
                             "BLAST",
                             "PSYCHIC"
@@ -131,27 +123,14 @@
                         "s": 6,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002751:psychic-tendril-neurolance",
-                "line": 3,
-                "name": "Psychic Tendril – neurolance",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002751",
                         "line": 3,
                         "lineInWargear": 3,
                         "dice": "",
-                        "name": "Psychic Tendril – neurolance",
+                        "name": "Psychic Tendril - neurolance",
+                        "profileName": "neurolance",
                         "attributes": [
                             "MELTA 2",
                             "PSYCHIC"
@@ -174,6 +153,7 @@
             },
             {
                 "id": "000002751:monstrous-scything-talons",
+                "datasheetId": "000002751",
                 "line": 4,
                 "name": "Monstrous scything talons",
                 "type": "Melee",
@@ -203,6 +183,7 @@
             },
             {
                 "id": "000002751:monstrous-rending-claws",
+                "datasheetId": "000002751",
                 "line": 5,
                 "name": "Monstrous rending claws",
                 "type": "Melee",
@@ -233,7 +214,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002751:psychic-tendril",
+                        "000002751:monstrous-scything-talons",
+                        "000002751:monstrous-rending-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -303,9 +300,16 @@
                 {
                     "name": "Singular Purpose",
                     "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true
+                },
+                {
+                    "name": "Singular Purpose",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
                 }
             ],
             "mechanicsSource": "regex"
@@ -316,16 +320,8 @@
             "description": "This model has the Feel No Pain 4+ ability against mortal wounds.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Unnatural Resilience",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

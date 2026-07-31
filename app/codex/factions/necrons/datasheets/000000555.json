@@ -45,21 +45,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> seismic assault; crackling tendrils.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> seismic assault; crackling tendrils.",
+            "parsed": [
+                "000000555:seismic-assault",
+                "000000555:crackling-tendrils"
+            ],
+            "byModelType": {
+                "Transcendent C’tan": [
+                    "000000555:seismic-assault",
+                    "000000555:crackling-tendrils"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000555:seismic-assault",
+                "datasheetId": "000000555",
                 "line": 1,
                 "name": "Seismic assault",
                 "type": "Ranged",
@@ -92,6 +94,7 @@
             },
             {
                 "id": "000000555:crackling-tendrils",
+                "datasheetId": "000000555",
                 "line": 2,
                 "name": "Crackling tendrils",
                 "type": "Melee",
@@ -122,7 +125,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000555:seismic-assault",
+                        "000000555:crackling-tendrils"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -202,8 +220,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Necrodermis",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ENSLAVED STAR GOD",

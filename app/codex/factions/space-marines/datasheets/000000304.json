@@ -68,30 +68,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> plasma pistol; Claw of the Jackalwolf.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000304",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> plasma pistol; Claw of the Jackalwolf.",
+            "parsed": [
+                "000000304:plasma-pistol",
+                "000000304:claw-of-the-jackalwolf"
+            ],
+            "byModelType": {
+                "Lukas the Trickster – EPIC HERO": [
+                    "000000304:plasma-pistol",
+                    "000000304:claw-of-the-jackalwolf"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000304:plasma-pistol-standard",
+                "id": "000000304:plasma-pistol",
+                "datasheetId": "000000304",
                 "line": 1,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -99,7 +94,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -110,27 +106,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000304:plasma-pistol-supercharge",
-                "line": 2,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000304",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -153,6 +136,7 @@
             },
             {
                 "id": "000000304:claw-of-the-jackalwolf",
+                "datasheetId": "000000304",
                 "line": 3,
                 "name": "Claw of the Jackalwolf",
                 "type": "Melee",
@@ -181,7 +165,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000304",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000304:plasma-pistol",
+                        "000000304:claw-of-the-jackalwolf"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

@@ -63,21 +63,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bio-electric pulse; Trygon scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bio-electric pulse; Trygon scything talons.",
+            "parsed": [
+                "000000493:bio-electric-pulse",
+                "000000493:trygon-scything-talons"
+            ],
+            "byModelType": {
+                "Trygon": [
+                    "000000493:bio-electric-pulse",
+                    "000000493:trygon-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000493:bio-electric-pulse",
+                "datasheetId": "000000493",
                 "line": 1,
                 "name": "Bio-electric pulse",
                 "type": "Ranged",
@@ -109,6 +111,7 @@
             },
             {
                 "id": "000000493:trygon-scything-talons",
+                "datasheetId": "000000493",
                 "line": 2,
                 "name": "Trygon scything talons",
                 "type": "Melee",
@@ -137,7 +140,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000493:bio-electric-pulse",
+                        "000000493:trygon-scything-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

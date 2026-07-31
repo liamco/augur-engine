@@ -70,46 +70,29 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> demolisher cannon; Fellblade accelerator cannon; 2 quad lascannons; twin heavy bolter; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002704",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 quad lascannons can be replaced with one of the following:<ul><li> 2 laser destroyers</li><li>2 quad heavy bolters</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002704",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000002704",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 havoc launcher."
-                    },
-                    {
-                        "datasheetId": "000002704",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> demolisher cannon; Fellblade accelerator cannon; 2 quad lascannons; twin heavy bolter; armoured tracks.",
+            "parsed": [
+                "000002704:demolisher-cannon",
+                "000002704:fellblade-accelerator-cannon",
+                "000002704:quad-lascannon",
+                "000002704:twin-heavy-bolter",
+                "000002704:armoured-tracks"
+            ],
+            "byModelType": {
+                "Fellblade": [
+                    "000002704:demolisher-cannon",
+                    "000002704:fellblade-accelerator-cannon",
+                    "000002704:quad-lascannon",
+                    "000002704:twin-heavy-bolter",
+                    "000002704:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002704:combi-weapon",
+                "datasheetId": "000002704",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -143,6 +126,7 @@
             },
             {
                 "id": "000002704:demolisher-cannon",
+                "datasheetId": "000002704",
                 "line": 2,
                 "name": "Demolisher cannon",
                 "type": "Ranged",
@@ -173,9 +157,10 @@
                 "count": 1
             },
             {
-                "id": "000002704:fellblade-accelerator-cannon-ap-shells",
+                "id": "000002704:fellblade-accelerator-cannon",
+                "datasheetId": "000002704",
                 "line": 3,
-                "name": "Fellblade accelerator cannon – AP shells",
+                "name": "Fellblade accelerator cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -183,7 +168,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Fellblade accelerator cannon – AP shells",
+                        "name": "Fellblade accelerator cannon - AP shells",
+                        "profileName": "AP shells",
                         "attributes": [],
                         "range": 72,
                         "type": "Ranged",
@@ -192,27 +178,14 @@
                         "s": 14,
                         "ap": -3,
                         "d": 6
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002704:fellblade-accelerator-cannon-he-shells",
-                "line": 4,
-                "name": "Fellblade accelerator cannon – HE shells",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002704",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Fellblade accelerator cannon – HE shells",
+                        "name": "Fellblade accelerator cannon - HE shells",
+                        "profileName": "HE shells",
                         "attributes": [
                             "BLAST"
                         ],
@@ -234,6 +207,7 @@
             },
             {
                 "id": "000002704:havoc-launcher",
+                "datasheetId": "000002704",
                 "line": 5,
                 "name": "Havoc launcher",
                 "type": "Ranged",
@@ -265,6 +239,7 @@
             },
             {
                 "id": "000002704:heavy-bolter",
+                "datasheetId": "000002704",
                 "line": 6,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -296,6 +271,7 @@
             },
             {
                 "id": "000002704:heavy-flamer",
+                "datasheetId": "000002704",
                 "line": 7,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -313,7 +289,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -328,6 +304,7 @@
             },
             {
                 "id": "000002704:laser-destroyer",
+                "datasheetId": "000002704",
                 "line": 8,
                 "name": "Laser destroyer",
                 "type": "Ranged",
@@ -359,6 +336,7 @@
             },
             {
                 "id": "000002704:multi-melta",
+                "datasheetId": "000002704",
                 "line": 9,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -390,6 +368,7 @@
             },
             {
                 "id": "000002704:quad-heavy-bolter",
+                "datasheetId": "000002704",
                 "line": 10,
                 "name": "Quad heavy bolter",
                 "type": "Ranged",
@@ -422,6 +401,7 @@
             },
             {
                 "id": "000002704:quad-lascannon",
+                "datasheetId": "000002704",
                 "line": 11,
                 "name": "Quad lascannon",
                 "type": "Ranged",
@@ -451,6 +431,7 @@
             },
             {
                 "id": "000002704:storm-bolter",
+                "datasheetId": "000002704",
                 "line": 12,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -482,6 +463,7 @@
             },
             {
                 "id": "000002704:twin-heavy-bolter",
+                "datasheetId": "000002704",
                 "line": 13,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -514,6 +496,7 @@
             },
             {
                 "id": "000002704:twin-heavy-flamer",
+                "datasheetId": "000002704",
                 "line": 14,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
@@ -532,7 +515,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -547,6 +530,7 @@
             },
             {
                 "id": "000002704:armoured-tracks",
+                "datasheetId": "000002704",
                 "line": 15,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -575,7 +559,643 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002704",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 quad lascannons can be replaced with one of the following:<ul><li> 2 laser destroyers</li><li>2 quad heavy bolters</li></ul>"
+                },
+                {
+                    "datasheetId": "000002704",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer."
+                },
+                {
+                    "datasheetId": "000002704",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 havoc launcher."
+                },
+                {
+                    "datasheetId": "000002704",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 combi-weapon</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:havoc-launcher"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:havoc-launcher",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:havoc-launcher",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:havoc-launcher",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:quad-lascannon",
+                        "000002704:armoured-tracks",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:havoc-launcher"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:havoc-launcher",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:havoc-launcher",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:havoc-launcher",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:laser-destroyer",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:havoc-launcher"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:havoc-launcher",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:havoc-launcher",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:twin-heavy-bolter",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:havoc-launcher",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:storm-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:combi-weapon"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-bolter"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:heavy-flamer"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:multi-melta"
+                    ],
+                    [
+                        "000002704:demolisher-cannon",
+                        "000002704:fellblade-accelerator-cannon",
+                        "000002704:armoured-tracks",
+                        "000002704:quad-heavy-bolter",
+                        "000002704:twin-heavy-flamer",
+                        "000002704:havoc-launcher",
+                        "000002704:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

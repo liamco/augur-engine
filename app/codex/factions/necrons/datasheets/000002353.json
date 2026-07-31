@@ -57,21 +57,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> abyssal lance.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> abyssal lance.",
+            "parsed": [
+                "000002353:abyssal-lance"
+            ],
+            "byModelType": {
+                "Psychomancer": [
+                    "000002353:abyssal-lance"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002353:abyssal-lance",
+                "datasheetId": "000002353",
                 "line": 1,
                 "name": "Abyssal lance",
                 "type": "Ranged",
@@ -101,6 +101,7 @@
             },
             {
                 "id": "000002353:abyssal-lance-2",
+                "datasheetId": "000002353",
                 "line": 2,
                 "name": "Abyssal lance",
                 "type": "Melee",
@@ -129,7 +130,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002353:abyssal-lance"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

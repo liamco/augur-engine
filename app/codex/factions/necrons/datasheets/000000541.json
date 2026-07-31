@@ -50,21 +50,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> gaze of death; scythe of the Nightbringer.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> gaze of death; scythe of the Nightbringer.",
+            "parsed": [
+                "000000541:gaze-of-death",
+                "000000541:scythe-of-the-nightbringer"
+            ],
+            "byModelType": {
+                "C’tan Shard of the Nightbringer – EPIC HERO": [
+                    "000000541:gaze-of-death",
+                    "000000541:scythe-of-the-nightbringer"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000541:gaze-of-death",
+                "datasheetId": "000000541",
                 "line": 1,
                 "name": "Gaze of death",
                 "type": "Ranged",
@@ -93,9 +95,10 @@
                 "count": 1
             },
             {
-                "id": "000000541:scythe-of-the-nightbringer-strike",
+                "id": "000000541:scythe-of-the-nightbringer",
+                "datasheetId": "000000541",
                 "line": 2,
-                "name": "Scythe of the Nightbringer – strike",
+                "name": "Scythe of the Nightbringer",
                 "type": "Melee",
                 "profiles": [
                     {
@@ -103,7 +106,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Scythe of the Nightbringer – strike",
+                        "name": "Scythe of the Nightbringer - strike",
+                        "profileName": "strike",
                         "attributes": [
                             "DEVASTATING WOUNDS"
                         ],
@@ -114,27 +118,14 @@
                         "s": 14,
                         "ap": -4,
                         "d": "D6+2"
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000541:scythe-of-the-nightbringer-sweep",
-                "line": 3,
-                "name": "Scythe of the Nightbringer – sweep",
-                "type": "Melee",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000541",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Scythe of the Nightbringer – sweep",
+                        "name": "Scythe of the Nightbringer - sweep",
+                        "profileName": "sweep",
                         "attributes": [],
                         "range": "Melee",
                         "type": "Melee",
@@ -153,7 +144,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000541:gaze-of-death",
+                        "000000541:scythe-of-the-nightbringer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -233,8 +239,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Necrodermis",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ENSLAVED STAR GOD",

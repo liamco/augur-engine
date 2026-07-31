@@ -55,28 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000071",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Bladeguard Veteran Sergeant’s heavy bolt pistol can be replaced with one of the following:<ul><li>1 neo-volkite pistol</li><li>1 plasma pistol</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; master-crafted power weapon.",
+            "parsed": [
+                "000000071:heavy-bolt-pistol",
+                "000000071:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000071:heavy-bolt-pistol",
+                    "000000071:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000071:heavy-bolt-pistol",
+                "datasheetId": "000000071",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -108,6 +103,7 @@
             },
             {
                 "id": "000000071:neo-volkite-pistol",
+                "datasheetId": "000000071",
                 "line": 2,
                 "name": "Neo-volkite pistol",
                 "type": "Ranged",
@@ -133,15 +129,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Bladeguard Veteran Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000071:plasma-pistol-standard",
+                "id": "000000071:plasma-pistol",
+                "datasheetId": "000000071",
                 "line": 3,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -149,7 +149,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -160,27 +161,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000071:plasma-pistol-supercharge",
-                "line": 4,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000071",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -196,13 +184,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Bladeguard Veteran Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000071:master-crafted-power-weapon",
+                "datasheetId": "000000071",
                 "line": 5,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -231,7 +223,46 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000071",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Bladeguard Veteran Sergeant’s heavy bolt pistol can be replaced with one of the following:<ul><li>1 neo-volkite pistol</li><li>1 plasma pistol</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Bladeguard Veteran Sergeant",
+                "items": [
+                    [
+                        "000000071:heavy-bolt-pistol",
+                        "000000071:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000000071:master-crafted-power-weapon",
+                        "000000071:neo-volkite-pistol"
+                    ],
+                    [
+                        "000000071:master-crafted-power-weapon",
+                        "000000071:plasma-pistol"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Bladeguard Veteran",
+                "items": [
+                    [
+                        "000000071:heavy-bolt-pistol",
+                        "000000071:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

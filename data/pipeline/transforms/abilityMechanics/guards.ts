@@ -58,6 +58,13 @@ export function hasUnexpressedScope(text: string): boolean {
         /\bunmodified (?:hit|wound|save)? ?rolls? of\b/i,
         // Auras and any other proximity gate
         /within \d+"/i,
+        // Effects limited to one *source* of damage. Nothing in the engine knows
+        // whether an attack is psychic or a mortal wound, so "Feel No Pain 4+
+        // against Psychic Attacks" extracted flat becomes blanket Feel No Pain.
+        // Deliberately narrow: "against that unit" or "against an enemy unit"
+        // restricts who is attacked, which phase and conditions already express.
+        /against\s+(?:mortal wounds|psychic attacks)/i,
+        /against\s+(?:ranged|melee)\s+attacks\b/i,
         // A target-selection or timing step before the effect applies
         /select one (?:enemy|friendly|of the following)/i,
         /after (?:this|that) (?:model|unit) has shot/i,

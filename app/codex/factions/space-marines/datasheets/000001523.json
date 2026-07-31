@@ -50,28 +50,15 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; sniper rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001523",
-                        "line": 1,
-                        "button": "•",
-                        "description": "1 Scout Sniper’s scout sniper rifle can be replaced with 1 missile launcher."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
-            }
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; sniper rifle; close combat weapon.",
+            "parsed": [],
+            "byModelType": {}
         },
         "weapons": [
             {
                 "id": "000001523:bolt-pistol",
+                "datasheetId": "000001523",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -102,9 +89,10 @@
                 "count": 1
             },
             {
-                "id": "000001523:missile-launcher-frag",
+                "id": "000001523:missile-launcher",
+                "datasheetId": "000001523",
                 "line": 2,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -112,7 +100,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -124,27 +113,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001523:missile-launcher-krak",
-                "line": 3,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001523",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -159,13 +135,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Scout Sniper"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001523:scout-sniper-rifle",
+                "datasheetId": "000001523",
                 "line": 4,
                 "name": "Scout sniper rifle",
                 "type": "Ranged",
@@ -198,6 +179,7 @@
             },
             {
                 "id": "000001523:close-combat-weapon",
+                "datasheetId": "000001523",
                 "line": 5,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -226,7 +208,19 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001523",
+                    "line": 1,
+                    "button": "•",
+                    "description": "1 Scout Sniper’s scout sniper rifle can be replaced with 1 missile launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",

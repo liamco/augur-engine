@@ -63,40 +63,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; crushing teeth and claws; relic weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000301",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s bolt pistol and relic weapon can be replaced with 1 twin lightning claws."
-                    },
-                    {
-                        "datasheetId": "000000301",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 combi-weapon</li><li>1 master-crafted boltgun</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 relic weapon</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000301",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model’s relic weapon can be replaced with one of the following:<ul><li>1 plasma pistol</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 storm shield and 1 close combat weapon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; crushing teeth and claws; relic weapon.",
+            "parsed": [
+                "000000301:bolt-pistol",
+                "000000301:crushing-teeth-and-claws",
+                "000000301:relic-weapon"
+            ],
+            "byModelType": {
+                "Wolf Guard Battle Leader on Thunderworlf": [
+                    "000000301:bolt-pistol",
+                    "000000301:crushing-teeth-and-claws",
+                    "000000301:relic-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000301:bolt-pistol",
+                "datasheetId": "000000301",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -128,6 +113,7 @@
             },
             {
                 "id": "000000301:combi-weapon",
+                "datasheetId": "000000301",
                 "line": 2,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -161,6 +147,7 @@
             },
             {
                 "id": "000000301:master-crafted-boltgun",
+                "datasheetId": "000000301",
                 "line": 3,
                 "name": "Master-crafted boltgun",
                 "type": "Ranged",
@@ -189,9 +176,10 @@
                 "count": 1
             },
             {
-                "id": "000000301:plasma-pistol-standard",
+                "id": "000000301:plasma-pistol",
+                "datasheetId": "000000301",
                 "line": 4,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -199,7 +187,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -210,27 +199,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000301:plasma-pistol-supercharge",
-                "line": 5,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000301",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -253,6 +229,7 @@
             },
             {
                 "id": "000000301:storm-bolter",
+                "datasheetId": "000000301",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -284,6 +261,7 @@
             },
             {
                 "id": "000000301:close-combat-weapon",
+                "datasheetId": "000000301",
                 "line": 7,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -313,6 +291,7 @@
             },
             {
                 "id": "000000301:crushing-teeth-and-claws",
+                "datasheetId": "000000301",
                 "line": 8,
                 "name": "Crushing teeth and claws",
                 "type": "Melee",
@@ -344,6 +323,7 @@
             },
             {
                 "id": "000000301:power-fist",
+                "datasheetId": "000000301",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -373,6 +353,7 @@
             },
             {
                 "id": "000000301:relic-weapon",
+                "datasheetId": "000000301",
                 "line": 10,
                 "name": "Relic weapon",
                 "type": "Melee",
@@ -402,6 +383,7 @@
             },
             {
                 "id": "000000301:thunder-hammer",
+                "datasheetId": "000000301",
                 "line": 11,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -433,6 +415,7 @@
             },
             {
                 "id": "000000301:twin-lightning-claws",
+                "datasheetId": "000000301",
                 "line": 12,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -463,7 +446,238 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000301",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s bolt pistol and relic weapon can be replaced with 1 twin lightning claws."
+                },
+                {
+                    "datasheetId": "000000301",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 combi-weapon</li><li>1 master-crafted boltgun</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 relic weapon</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000000301",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model’s relic weapon can be replaced with one of the following:<ul><li>1 plasma pistol</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 storm shield and 1 close combat weapon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000301:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000301:bolt-pistol",
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon"
+                    ],
+                    [
+                        "000000301:bolt-pistol",
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:plasma-pistol"
+                    ],
+                    [
+                        "000000301:bolt-pistol",
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:bolt-pistol",
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:bolt-pistol",
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon",
+                        "000000301:combi-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:combi-weapon",
+                        "000000301:plasma-pistol"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:combi-weapon",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:combi-weapon",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:combi-weapon",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon",
+                        "000000301:master-crafted-boltgun"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:master-crafted-boltgun",
+                        "000000301:plasma-pistol"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:master-crafted-boltgun",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:master-crafted-boltgun",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:master-crafted-boltgun",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon",
+                        "000000301:plasma-pistol"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:plasma-pistol"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:plasma-pistol",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:plasma-pistol",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:plasma-pistol",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon",
+                        "000000301:storm-bolter"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:storm-bolter",
+                        "000000301:plasma-pistol"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:storm-bolter",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:storm-bolter",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:storm-bolter",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:power-fist"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:power-fist",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:power-fist",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:relic-weapon",
+                        "000000301:thunder-hammer"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:thunder-hammer",
+                        "000000301:storm-shield",
+                        "000000301:close-combat-weapon"
+                    ],
+                    [
+                        "000000301:crushing-teeth-and-claws",
+                        "000000301:twin-lightning-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -553,23 +767,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

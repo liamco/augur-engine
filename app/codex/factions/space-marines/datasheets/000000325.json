@@ -73,36 +73,29 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> helfrost destructor; 2 skyhammer missile launchers; twin stormstrike missile launcher; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000325",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 skyhammer missile launchers can be replaced with one of the following:<ul><li>2 twin multi-meltas</li><li>2 twin heavy bolters</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000325",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s twin stormstrike missile launcher can be replaced with 1 twin lascannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> helfrost destructor; 2 skyhammer missile launchers; twin stormstrike missile launcher; armoured hull.",
+            "parsed": [
+                "000000325:helfrost-destructor",
+                "000000325:skyhammer-missile-launcher",
+                "000000325:twin-stormstrike-missile-launcher",
+                "000000325:armoured-hull"
+            ],
+            "byModelType": {
+                "Stormfang Gunship": [
+                    "000000325:helfrost-destructor",
+                    "000000325:skyhammer-missile-launcher",
+                    "000000325:twin-stormstrike-missile-launcher",
+                    "000000325:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000325:helfrost-destructor-dispersed",
+                "id": "000000325:helfrost-destructor",
+                "datasheetId": "000000325",
                 "line": 1,
-                "name": "Helfrost destructor – dispersed",
+                "name": "Helfrost destructor",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -110,7 +103,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Helfrost destructor – dispersed",
+                        "name": "Helfrost destructor - dispersed",
+                        "profileName": "dispersed",
                         "attributes": [
                             "SUSTAINED HITS D3"
                         ],
@@ -121,34 +115,21 @@
                         "s": 11,
                         "ap": -3,
                         "d": 7
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000325:helfrost-destructor-focused",
-                "line": 2,
-                "name": "Helfrost destructor – focused",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000325",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Helfrost destructor – focused",
+                        "name": "Helfrost destructor - focused",
+                        "profileName": "focused",
                         "attributes": [
                             "TORRENT"
                         ],
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 8,
                         "ap": -1,
                         "d": 2
@@ -163,6 +144,7 @@
             },
             {
                 "id": "000000325:skyhammer-missile-launcher",
+                "datasheetId": "000000325",
                 "line": 3,
                 "name": "Skyhammer missile launcher",
                 "type": "Ranged",
@@ -194,6 +176,7 @@
             },
             {
                 "id": "000000325:twin-heavy-bolter",
+                "datasheetId": "000000325",
                 "line": 4,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -226,6 +209,7 @@
             },
             {
                 "id": "000000325:twin-lascannon",
+                "datasheetId": "000000325",
                 "line": 5,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -257,6 +241,7 @@
             },
             {
                 "id": "000000325:twin-multi-melta",
+                "datasheetId": "000000325",
                 "line": 6,
                 "name": "Twin multi-melta",
                 "type": "Ranged",
@@ -289,6 +274,7 @@
             },
             {
                 "id": "000000325:twin-stormstrike-missile-launcher",
+                "datasheetId": "000000325",
                 "line": 7,
                 "name": "Twin stormstrike missile launcher",
                 "type": "Ranged",
@@ -320,6 +306,7 @@
             },
             {
                 "id": "000000325:armoured-hull",
+                "datasheetId": "000000325",
                 "line": 8,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -348,7 +335,67 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000325",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 skyhammer missile launchers can be replaced with one of the following:<ul><li>2 twin multi-meltas</li><li>2 twin heavy bolters</li></ul>"
+                },
+                {
+                    "datasheetId": "000000325",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s twin stormstrike missile launcher can be replaced with 1 twin lascannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000325:helfrost-destructor",
+                        "000000325:skyhammer-missile-launcher",
+                        "000000325:twin-stormstrike-missile-launcher",
+                        "000000325:armoured-hull"
+                    ],
+                    [
+                        "000000325:helfrost-destructor",
+                        "000000325:skyhammer-missile-launcher",
+                        "000000325:armoured-hull",
+                        "000000325:twin-lascannon"
+                    ],
+                    [
+                        "000000325:helfrost-destructor",
+                        "000000325:twin-stormstrike-missile-launcher",
+                        "000000325:armoured-hull",
+                        "000000325:twin-multi-melta"
+                    ],
+                    [
+                        "000000325:helfrost-destructor",
+                        "000000325:armoured-hull",
+                        "000000325:twin-multi-melta",
+                        "000000325:twin-lascannon"
+                    ],
+                    [
+                        "000000325:helfrost-destructor",
+                        "000000325:twin-stormstrike-missile-launcher",
+                        "000000325:armoured-hull",
+                        "000000325:twin-heavy-bolter"
+                    ],
+                    [
+                        "000000325:helfrost-destructor",
+                        "000000325:armoured-hull",
+                        "000000325:twin-heavy-bolter",
+                        "000000325:twin-lascannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

@@ -78,40 +78,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 hurricane bolters; twin assault cannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004139",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000004139",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 multi-melta."
-                    },
-                    {
-                        "datasheetId": "000004139",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 hurricane bolters; twin assault cannon; armoured tracks.",
+            "parsed": [
+                "000004139:hurricane-bolter",
+                "000004139:twin-assault-cannon",
+                "000004139:armoured-tracks"
+            ],
+            "byModelType": {
+                "Land Raider Crusader": [
+                    "000004139:hurricane-bolter",
+                    "000004139:twin-assault-cannon",
+                    "000004139:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004139:hunter-killer-missile",
+                "datasheetId": "000004139",
                 "line": 1,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -143,6 +128,7 @@
             },
             {
                 "id": "000004139:hurricane-bolter",
+                "datasheetId": "000004139",
                 "line": 2,
                 "name": "Hurricane bolter",
                 "type": "Ranged",
@@ -175,6 +161,7 @@
             },
             {
                 "id": "000004139:multi-melta",
+                "datasheetId": "000004139",
                 "line": 3,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -206,6 +193,7 @@
             },
             {
                 "id": "000004139:storm-bolter",
+                "datasheetId": "000004139",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -237,6 +225,7 @@
             },
             {
                 "id": "000004139:twin-assault-cannon",
+                "datasheetId": "000004139",
                 "line": 5,
                 "name": "Twin assault cannon",
                 "type": "Ranged",
@@ -269,6 +258,7 @@
             },
             {
                 "id": "000004139:armoured-tracks",
+                "datasheetId": "000004139",
                 "line": 6,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -297,7 +287,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004139",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000004139",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 multi-melta."
+                },
+                {
+                    "datasheetId": "000004139",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:storm-bolter"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:multi-melta"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:multi-melta",
+                        "000004139:storm-bolter"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:hunter-killer-missile"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:hunter-killer-missile",
+                        "000004139:storm-bolter"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:hunter-killer-missile",
+                        "000004139:multi-melta"
+                    ],
+                    [
+                        "000004139:hurricane-bolter",
+                        "000004139:twin-assault-cannon",
+                        "000004139:armoured-tracks",
+                        "000004139:hunter-killer-missile",
+                        "000004139:multi-melta",
+                        "000004139:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

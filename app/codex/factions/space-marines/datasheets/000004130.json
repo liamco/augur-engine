@@ -76,34 +76,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> master-crafted power weapon; storm shield.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004130",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model's master-crafted power weapon can be replaced with 1 thunder hammer."
-                    },
-                    {
-                        "datasheetId": "000004130",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s storm shield can be replaced with one of the following:<ul><li>1 master-crafted bolt carbine</li><li>1 master-crafted heavy bolt pistol</li><li>1 plasma pistol</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> master-crafted power weapon; storm shield.",
+            "parsed": [
+                "000004130:master-crafted-power-weapon",
+                "000004130:storm-shield"
+            ],
+            "byModelType": {
+                "Wolf Guard Battle Leader": [
+                    "000004130:master-crafted-power-weapon",
+                    "000004130:storm-shield"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004130:master-crafted-bolt-carbine",
+                "datasheetId": "000004130",
                 "line": 1,
                 "name": "Master-crafted bolt carbine",
                 "type": "Ranged",
@@ -133,6 +122,7 @@
             },
             {
                 "id": "000004130:master-crafted-heavy-bolt-pistol",
+                "datasheetId": "000004130",
                 "line": 2,
                 "name": "Master-crafted heavy bolt pistol",
                 "type": "Ranged",
@@ -163,9 +153,10 @@
                 "count": 1
             },
             {
-                "id": "000004130:plasma-pistol-standard",
+                "id": "000004130:plasma-pistol",
+                "datasheetId": "000004130",
                 "line": 3,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -173,7 +164,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -184,27 +176,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004130:plasma-pistol-supercharge",
-                "line": 4,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004130",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -227,6 +206,7 @@
             },
             {
                 "id": "000004130:master-crafted-power-weapon",
+                "datasheetId": "000004130",
                 "line": 5,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -256,6 +236,7 @@
             },
             {
                 "id": "000004130:thunder-hammer",
+                "datasheetId": "000004130",
                 "line": 6,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -286,7 +267,71 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004130",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model's master-crafted power weapon can be replaced with 1 thunder hammer."
+                },
+                {
+                    "datasheetId": "000004130",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s storm shield can be replaced with one of the following:<ul><li>1 master-crafted bolt carbine</li><li>1 master-crafted heavy bolt pistol</li><li>1 plasma pistol</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000004130:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 6.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004130:master-crafted-power-weapon",
+                        "000004130:storm-shield"
+                    ],
+                    [
+                        "000004130:master-crafted-power-weapon",
+                        "000004130:master-crafted-bolt-carbine"
+                    ],
+                    [
+                        "000004130:master-crafted-power-weapon",
+                        "000004130:master-crafted-heavy-bolt-pistol"
+                    ],
+                    [
+                        "000004130:master-crafted-power-weapon",
+                        "000004130:plasma-pistol"
+                    ],
+                    [
+                        "000004130:storm-shield",
+                        "000004130:thunder-hammer"
+                    ],
+                    [
+                        "000004130:thunder-hammer",
+                        "000004130:master-crafted-bolt-carbine"
+                    ],
+                    [
+                        "000004130:thunder-hammer",
+                        "000004130:master-crafted-heavy-bolt-pistol"
+                    ],
+                    [
+                        "000004130:thunder-hammer",
+                        "000004130:plasma-pistol"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -379,15 +424,6 @@
             "name": "Heroic Last Stand",
             "legend": "",
             "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a Wounds characteristic of 6.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

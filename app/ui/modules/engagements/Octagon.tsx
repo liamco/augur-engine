@@ -864,9 +864,12 @@ function PhaseRow({
     extraTags?: string[];
     keywords?: string[];
 }) {
-    const isAutoSuccess = attributes.some(
-        (attr) => phase.modifiers.get(attr)?.autoSuccess,
-    );
+    // Either an ability granted automatic success, or the roll is never made at
+    // all — a target of 0 is the engine's auto-hit signal, used by Torrent
+    // weapons, which have no Ballistic Skill to roll against.
+    const isAutoSuccess =
+        attributes.some((attr) => phase.modifiers.get(attr)?.autoSuccess) ||
+        (showTarget && phase.modifiedValue === 0);
     const critThreshold = attributes.reduce((threshold, attr) => {
         const crit = phase.modifiers.get(attr)?.criticalWound;
         return crit !== undefined ? Math.min(threshold, crit) : threshold;

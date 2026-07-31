@@ -35,28 +35,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> warscythe.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000536",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their warscythe replaced with 1 hyperphase sword and 1 dispersion shield."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> warscythe.",
+            "parsed": [
+                "000000536:warscythe"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000536:warscythe"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000536:hyperphase-sword",
+                "datasheetId": "000000536",
                 "line": 1,
                 "name": "Hyperphase sword",
                 "type": "Melee",
@@ -86,6 +79,7 @@
             },
             {
                 "id": "000000536:warscythe",
+                "datasheetId": "000000536",
                 "line": 2,
                 "name": "Warscythe",
                 "type": "Melee",
@@ -116,7 +110,56 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000536",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their warscythe replaced with 1 hyperphase sword and 1 dispersion shield."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000536:dispersion-shield",
+                "name": "Dispersion Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Dispersion Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000536:warscythe"
+                    ],
+                    [
+                        "000000536:hyperphase-sword",
+                        "000000536:dispersion-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -169,23 +212,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Dispersion Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Dispersion Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Guardian Protocols",

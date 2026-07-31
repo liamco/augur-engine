@@ -63,28 +63,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> grasping tail.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000499",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> grasping tail.",
+            "parsed": [
+                "000000499:grasping-tail"
+            ],
+            "byModelType": {
+                "Malanthrope": [
+                    "000000499:grasping-tail"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000499:grasping-tail",
+                "datasheetId": "000000499",
                 "line": 1,
                 "name": "Grasping tail",
                 "type": "Melee",
@@ -113,7 +106,28 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000499",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000499:grasping-tail"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

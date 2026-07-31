@@ -265,8 +265,16 @@
                 "name": "Retribution Protocols",
                 "description": "Each time an enemy unit destroys a CRYPTEK model from your army, until the end of the battle, each time a <span class=\"kwb\">NECRONS</span> model from your army makes an attack that targets that enemy unit, you can re-roll the Hit roll.",
                 "legend": "Those Canoptek constructs and Necron Warriors that serve the Crypteks are inloaded with instructions to defend their master. Should a Crypteks physical form be destroyed, a vengeful wrath will awaken within their followers.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Retribution Protocols",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "hit",
+                        "value": true
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "enhancements": [
@@ -717,8 +725,16 @@
                 "cost": 25,
                 "legend": "This insatiable subjugator sees all before them as theirs for the taking by ancient right of conquest. They wield their legion like an iron gauntlet, using it to seize the battlefield in a demonstration of their power and strength, daring others to try taking it from them.",
                 "description": "OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Eternal Conqueror",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "hit",
+                        "value": true
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "supplement": "codex",
@@ -956,8 +972,16 @@
                 "name": "Extremis-level Threat",
                 "description": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
                 "legend": "The 1st Company’s veterans have fought at the forefront of their Chapter’s wars for many mortal lifespans. Experience has taught them to identify the foe’s lethal threats and to lead their battle-brothers to purge them from existence.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Extremis-level Threat",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "wound",
+                        "value": true
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "enhancements": [
@@ -1427,8 +1451,24 @@
                 "cost": 30,
                 "legend": "This grimoire, bound in the skin of the alien, holds the most powerful truths the Deathwatch have uncovered about their foes, whether xenos or those who harbour them. On occasion, such knowledge has been known to save not only the book’s custodian, but entire worlds.",
                 "description": "Watch Master or Captain model only. Once per battle, after you have selected your Oath of Moment target, the bearer can use this Enhancement. If it does, select a second enemy unit to be an Oath of Moment target.<br><br><b>Designer’s Note:</b> This means that each time a model with the Oath of Moment ability makes an attack that targets either of your Oath of Moment targets, you can re-roll the Hit roll.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "The Tome of Ectoclades",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "hit",
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "supplement": "deathwatch",
@@ -1563,8 +1603,24 @@
                 "cost": 0,
                 "legend": "Bestowed as a mark of honour, this venerated relic lends an extra layer of armour protection that proves especially useful amidst vicious void war.",
                 "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Adamantine Mantle",
+                        "entity": "thisUnit",
+                        "effect": "rollPenalty",
+                        "attribute": "damage",
+                        "value": 1,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             },
             {
                 "id": "000009240003",
@@ -1788,8 +1844,19 @@
                 "cost": 25,
                 "legend": "Through roared words or ruthless deeds, may the blasphemous be denounced and the worthy driven into a furious rage of sanctified slaughter.",
                 "description": "Chaplain or Judiciar model only. Each time a model in the bearer’s unit makes a melee attack, you can re-roll the Hit roll.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Merciless Denunciation",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "hit",
+                        "value": true,
+                        "phase": [
+                            "fight"
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             },
             {
                 "id": "000010392005",
@@ -2052,8 +2119,24 @@
                 "cost": 20,
                 "legend": "This flowing cloak or finely wrought tabard is laced through with threads of braided adamantine. When combined with armour and energy fields, it has been shown time and again that these symbols of office are proof against even the very strongest attacks.",
                 "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Adamantine Mantle",
+                        "entity": "thisUnit",
+                        "effect": "rollPenalty",
+                        "attribute": "damage",
+                        "value": 1,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "supplement": "codex",
@@ -2139,8 +2222,24 @@
                 "cost": 20,
                 "legend": "This flowing cloak or finely wrought tabard is laced through with threads of braided adamantine. When combined with armour and energy fields, it has been shown time and again that these symbols of office are proof against even the very strongest attacks.",
                 "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Adamantine Mantle",
+                        "entity": "thisUnit",
+                        "effect": "rollPenalty",
+                        "attribute": "damage",
+                        "value": 1,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "supplement": "codex",
@@ -3258,8 +3357,39 @@
                 "cost": 25,
                 "legend": "Forged on Macragge by the finest artisans, this weapon’s machine spirit is said to burn with a desire to see the Five Hundred Worlds ripped from the grasp of heretics and despots.",
                 "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Liberatum",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "hit",
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Liberatum",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "wound",
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "supplement": "codex",
@@ -3881,8 +4011,16 @@
                 "name": "Sacred Oath",
                 "description": "Once per battle, at the start of your Command phase, when you select a target for Oath of Moment, you can use this Detachment rule. If you do, until the start of your next Command phase, each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll.",
                 "legend": "Space Marine Chapters do not lightly commit their precious suits of Terminator armour to battle, nor the storied veterans who wear them. When they go to war, they always do so with a vital duty and a crucial target.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Sacred Oath",
+                        "entity": "thisUnit",
+                        "effect": "reroll",
+                        "attribute": "wound",
+                        "value": true
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "enhancements": [
@@ -4668,24 +4806,8 @@
                 "cost": 10,
                 "legend": "A contraganglion knot in this creature’s cranium channels and amplifies the smothering power of the Shadow in the Warp to nullify its prey’s psychic abilities.",
                 "description": "Tyranids Monster model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.",
-                "mechanics": [
-                    {
-                        "name": "Null Nodules",
-                        "entity": "thisUnit",
-                        "effect": "setsFnp",
-                        "attribute": "feelNoPain",
-                        "value": 5,
-                        "conditions": [
-                            {
-                                "entity": "thisUnit",
-                                "state": "startingModelCount",
-                                "operator": "equals",
-                                "value": 1
-                            }
-                        ]
-                    }
-                ],
-                "mechanicsSource": "regex"
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
             },
             {
                 "id": "000008404005",
@@ -4816,24 +4938,8 @@
                 "cost": 25,
                 "legend": "The same weapon rarely works against this leader-beast twice, as its alien physiology adapts at an astonishing rate to counter the attacks of the foe.",
                 "description": "<span class=\"kwb\">TYRANIDS</span> model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead.",
-                "mechanics": [
-                    {
-                        "name": "Adaptive Biology",
-                        "entity": "thisUnit",
-                        "effect": "setsFnp",
-                        "attribute": "feelNoPain",
-                        "value": 5,
-                        "conditions": [
-                            {
-                                "entity": "thisUnit",
-                                "state": "startingModelCount",
-                                "operator": "equals",
-                                "value": 1
-                            }
-                        ]
-                    }
-                ],
-                "mechanicsSource": "regex"
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
             }
         ],
         "supplement": "codex",
@@ -4964,8 +5070,24 @@
                 "cost": 20,
                 "legend": "The Hive Mind’s synaptic network is so strong that even the mangled remains of mortally wounded beasts can be compelled to fight on.",
                 "description": "Tyranids Synapse model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Synaptic Control",
+                        "entity": "thisUnit",
+                        "effect": "rollPenalty",
+                        "attribute": "damage",
+                        "value": 1,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             },
             {
                 "id": "000008421005",
@@ -5016,8 +5138,24 @@
                 "cost": 0,
                 "legend": "Threaded with molecular veins of absorbed alloys and minerals, this bioforms chitinous carapace has a dull glint that hints at its formidable resilience.",
                 "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack (note that if given to a <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">PRIME</span> model, this only affects that model and not other models in its unit).",
-                "mechanics": [],
-                "mechanicsSource": "unparsed"
+                "mechanics": [
+                    {
+                        "name": "Reinforced Carapace",
+                        "entity": "thisUnit",
+                        "effect": "rollPenalty",
+                        "attribute": "damage",
+                        "value": 1,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
             }
         ],
         "supplement": "codex",

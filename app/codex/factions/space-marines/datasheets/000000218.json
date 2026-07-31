@@ -151,21 +151,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Lion’s Wrath; the Sword of Secrets; the Lion Helm.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Lion’s Wrath; the Sword of Secrets; the Lion Helm.",
+            "parsed": [
+                "000000218:lion-s-wrath",
+                "000000218:the-sword-of-secrets",
+                "000000218:the-lion-helm"
+            ],
+            "byModelType": {
+                "Azrael – EPIC HERO": [
+                    "000000218:lion-s-wrath",
+                    "000000218:the-sword-of-secrets",
+                    "000000218:the-lion-helm"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000218:lion-s-wrath",
+                "datasheetId": "000000218",
                 "line": 1,
                 "name": "Lion’s Wrath",
                 "type": "Ranged",
@@ -199,6 +203,7 @@
             },
             {
                 "id": "000000218:the-sword-of-secrets",
+                "datasheetId": "000000218",
                 "line": 2,
                 "name": "The Sword of Secrets",
                 "type": "Melee",
@@ -229,7 +234,31 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [
+            {
+                "id": "000000218:the-lion-helm",
+                "name": "The Lion Helm",
+                "description": "Models in the bearer's unit have a 4+ invulnerable save. In addition, once per battle, in any phase, the bearer can summon a Watcher in the Dark. When it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000218:lion-s-wrath",
+                        "000000218:the-sword-of-secrets",
+                        "000000218:the-lion-helm"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",
@@ -283,23 +312,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "The Lion Helm",
-            "legend": "",
-            "description": "Models in the bearer’s unit have a 4+ invulnerable save. In addition, once per battle, in any phase, the bearer can summon a Watcher in the Dark. When it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 4+ ability against mortal wounds.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "The Lion Helm",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Supreme Grand Master",

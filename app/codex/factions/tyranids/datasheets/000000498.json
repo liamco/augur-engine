@@ -40,21 +40,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Sporocyst bio-weapons; flensing whips.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Sporocyst bio-weapons; flensing whips.",
+            "parsed": [
+                "000000498:sporocyst-bio-weapons",
+                "000000498:flensing-whips"
+            ],
+            "byModelType": {
+                "Sporocyst": [
+                    "000000498:sporocyst-bio-weapons",
+                    "000000498:flensing-whips"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000498:sporocyst-bio-weapons",
+                "datasheetId": "000000498",
                 "line": 1,
                 "name": "Sporocyst bio-weapons",
                 "type": "Ranged",
@@ -84,6 +86,7 @@
             },
             {
                 "id": "000000498:flensing-whips",
+                "datasheetId": "000000498",
                 "line": 2,
                 "name": "Flensing whips",
                 "type": "Melee",
@@ -112,7 +115,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000498:sporocyst-bio-weapons",
+                        "000000498:flensing-whips"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

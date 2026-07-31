@@ -73,21 +73,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Synaptic pulse; bone sabres.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Synaptic pulse; bone sabres.",
+            "parsed": [
+                "000000461:synaptic-pulse",
+                "000000461:bone-sabres"
+            ],
+            "byModelType": {
+                "Swarmlord – EPIC HERO": [
+                    "000000461:synaptic-pulse",
+                    "000000461:bone-sabres"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000461:synaptic-pulse",
+                "datasheetId": "000000461",
                 "line": 1,
                 "name": "Synaptic pulse",
                 "type": "Ranged",
@@ -105,7 +107,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 2
@@ -120,6 +122,7 @@
             },
             {
                 "id": "000000461:bone-sabres",
+                "datasheetId": "000000461",
                 "line": 2,
                 "name": "Bone sabres",
                 "type": "Melee",
@@ -150,7 +153,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000461:synaptic-pulse",
+                        "000000461:bone-sabres"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

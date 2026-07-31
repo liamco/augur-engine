@@ -60,21 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> barbed ovipositor; clawed limbs.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> barbed ovipositor; clawed limbs.",
+            "parsed": [
+                "000002529:barbed-ovipositor",
+                "000002529:clawed-limbs"
+            ],
+            "byModelType": {
+                "Parasite of Mortrex": [
+                    "000002529:barbed-ovipositor",
+                    "000002529:clawed-limbs"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002529:barbed-ovipositor",
+                "datasheetId": "000002529",
                 "line": 1,
                 "name": "Barbed ovipositor",
                 "type": "Melee",
@@ -107,6 +109,7 @@
             },
             {
                 "id": "000002529:clawed-limbs",
+                "datasheetId": "000002529",
                 "line": 2,
                 "name": "Clawed limbs",
                 "type": "Melee",
@@ -135,7 +138,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002529:barbed-ovipositor",
+                        "000002529:clawed-limbs"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

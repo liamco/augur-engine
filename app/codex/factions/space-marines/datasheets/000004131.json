@@ -70,28 +70,28 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every Wolf Guard Headtaker is equipped with:</b> heavy bolt pistol; master-crafted power weapon; storm shield.<br><br><b>Every Hunting Wolf is equipped with:</b> teeth and claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004131",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All of the models in this unit can each have their master-crafted power weapon and storm shield replaced with 1 paired master-crafted power weapons."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>Every Wolf Guard Headtaker is equipped with:</b> heavy bolt pistol; master-crafted power weapon; storm shield.<br><br><b>Every Hunting Wolf is equipped with:</b> teeth and claws.",
+            "parsed": [
+                "000004131:heavy-bolt-pistol",
+                "000004131:master-crafted-power-weapon",
+                "000004131:storm-shield"
+            ],
+            "byModelType": {
+                "Wolf Guard Headtaker": [
+                    "000004131:heavy-bolt-pistol",
+                    "000004131:master-crafted-power-weapon",
+                    "000004131:storm-shield"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Hunting Wolf": [
+                    "000004131:teeth-and-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004131:heavy-bolt-pistol",
+                "datasheetId": "000004131",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -116,13 +116,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Guard Headtaker"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004131:master-crafted-power-weapon",
+                "datasheetId": "000004131",
                 "line": 2,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -145,13 +149,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Guard Headtaker"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004131:paired-master-crafted-power-weapons",
+                "datasheetId": "000004131",
                 "line": 3,
                 "name": "Paired master-crafted power weapons",
                 "type": "Melee",
@@ -181,6 +189,7 @@
             },
             {
                 "id": "000004131:teeth-and-claws",
+                "datasheetId": "000004131",
                 "line": 4,
                 "name": "Teeth and claws",
                 "type": "Melee",
@@ -203,13 +212,67 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Hunting Wolf"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004131",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All of the models in this unit can each have their master-crafted power weapon and storm shield replaced with 1 paired master-crafted power weapons."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000004131:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004131:heavy-bolt-pistol",
+                        "000004131:master-crafted-power-weapon",
+                        "000004131:storm-shield"
+                    ],
+                    [
+                        "000004131:heavy-bolt-pistol",
+                        "000004131:paired-master-crafted-power-weapons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -322,23 +385,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

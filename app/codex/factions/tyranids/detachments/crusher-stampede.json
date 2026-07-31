@@ -363,24 +363,8 @@
             "cost": 10,
             "legend": "A contraganglion knot in this creature’s cranium channels and amplifies the smothering power of the Shadow in the Warp to nullify its prey’s psychic abilities.",
             "description": "Tyranids Monster model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.",
-            "mechanics": [
-                {
-                    "name": "Null Nodules",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 5,
-                    "conditions": [
-                        {
-                            "entity": "thisUnit",
-                            "state": "startingModelCount",
-                            "operator": "equals",
-                            "value": 1
-                        }
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",

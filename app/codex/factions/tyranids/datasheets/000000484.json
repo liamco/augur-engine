@@ -60,21 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> fleshborer; blinding venom.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> fleshborer; blinding venom.",
+            "parsed": [
+                "000000484:fleshborer",
+                "000000484:blinding-venom"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000484:fleshborer",
+                    "000000484:blinding-venom"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000484:fleshborer",
+                "datasheetId": "000000484",
                 "line": 1,
                 "name": "Fleshborer",
                 "type": "Ranged",
@@ -106,6 +108,7 @@
             },
             {
                 "id": "000000484:blinding-venom",
+                "datasheetId": "000000484",
                 "line": 2,
                 "name": "Blinding venom",
                 "type": "Melee",
@@ -134,7 +137,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000484:fleshborer",
+                        "000000484:blinding-venom"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

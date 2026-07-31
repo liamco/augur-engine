@@ -50,21 +50,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> cosmic insanity; golden fists.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> cosmic insanity; golden fists.",
+            "parsed": [
+                "000000542:cosmic-insanity",
+                "000000542:golden-fists"
+            ],
+            "byModelType": {
+                "C’tan Shard of the Deceiver – EPIC HERO": [
+                    "000000542:cosmic-insanity",
+                    "000000542:golden-fists"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000542:cosmic-insanity",
+                "datasheetId": "000000542",
                 "line": 1,
                 "name": "Cosmic insanity",
                 "type": "Ranged",
@@ -98,6 +100,7 @@
             },
             {
                 "id": "000000542:golden-fists",
+                "datasheetId": "000000542",
                 "line": 2,
                 "name": "Golden fists",
                 "type": "Melee",
@@ -126,7 +129,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000542:cosmic-insanity",
+                        "000000542:golden-fists"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -211,8 +229,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Necrodermis",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "ENSLAVED STAR GOD",

@@ -50,46 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001166",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Veteran Biker Sergeant’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun </li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001166",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Veteran Biker Sergeant’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001166",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of Veteran Bikers’ bolt pistols can each be replaced with one of the following:<ul><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 thunder hammer</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm shield</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001166",
-                        "line": 4,
-                        "button": "•",
-                        "description": "Any number of Veteran Bikers’ Astartes chainswords can each be replaced with one of the following:<ul><li>1 flamer </li><li>1 grav-gun</li><li>1 grav-pistol</li><li>1 meltagun</li><li>1 plasma gun</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
+            "parsed": [
+                "000001166:bolt-pistol",
+                "000001166:twin-boltgun",
+                "000001166:astartes-chainsword"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001166:bolt-pistol",
+                    "000001166:twin-boltgun",
+                    "000001166:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001166:bolt-pistol",
+                "datasheetId": "000001166",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -121,6 +100,7 @@
             },
             {
                 "id": "000001166:boltgun",
+                "datasheetId": "000001166",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -143,13 +123,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:combi-weapon",
+                "datasheetId": "000001166",
                 "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -176,13 +160,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:flamer",
+                "datasheetId": "000001166",
                 "line": 4,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -200,7 +188,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -215,6 +203,7 @@
             },
             {
                 "id": "000001166:grav-gun",
+                "datasheetId": "000001166",
                 "line": 5,
                 "name": "Grav-gun",
                 "type": "Ranged",
@@ -246,6 +235,7 @@
             },
             {
                 "id": "000001166:grav-pistol",
+                "datasheetId": "000001166",
                 "line": 6,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -271,13 +261,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:meltagun",
+                "datasheetId": "000001166",
                 "line": 7,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -308,9 +302,10 @@
                 "count": 1
             },
             {
-                "id": "000001166:plasma-gun-standard",
+                "id": "000001166:plasma-gun",
+                "datasheetId": "000001166",
                 "line": 8,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -318,7 +313,8 @@
                         "line": 8,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -329,27 +325,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001166:plasma-gun-supercharge",
-                "line": 9,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001166",
                         "line": 9,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -371,9 +354,10 @@
                 "count": 1
             },
             {
-                "id": "000001166:plasma-pistol-standard",
+                "id": "000001166:plasma-pistol",
+                "datasheetId": "000001166",
                 "line": 10,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -381,7 +365,8 @@
                         "line": 10,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -392,27 +377,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001166:plasma-pistol-supercharge",
-                "line": 11,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001166",
                         "line": 11,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -428,13 +400,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:storm-bolter",
+                "datasheetId": "000001166",
                 "line": 12,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -459,13 +435,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:twin-boltgun",
+                "datasheetId": "000001166",
                 "line": 13,
                 "name": "Twin boltgun",
                 "type": "Ranged",
@@ -497,6 +477,7 @@
             },
             {
                 "id": "000001166:astartes-chainsword",
+                "datasheetId": "000001166",
                 "line": 14,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -526,6 +507,7 @@
             },
             {
                 "id": "000001166:power-fist",
+                "datasheetId": "000001166",
                 "line": 15,
                 "name": "Power fist",
                 "type": "Melee",
@@ -548,13 +530,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:power-weapon",
+                "datasheetId": "000001166",
                 "line": 16,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -577,13 +563,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001166:thunder-hammer",
+                "datasheetId": "000001166",
                 "line": 17,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -608,13 +598,206 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Veteran Biker Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001166",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Veteran Biker Sergeant’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun </li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li></ul>"
+                },
+                {
+                    "datasheetId": "000001166",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Veteran Biker Sergeant’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000001166",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of Veteran Bikers’ bolt pistols can each be replaced with one of the following:<ul><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 thunder hammer</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm shield</li></ul>"
+                },
+                {
+                    "datasheetId": "000001166",
+                    "line": 4,
+                    "button": "•",
+                    "description": "Any number of Veteran Bikers’ Astartes chainswords can each be replaced with one of the following:<ul><li>1 flamer </li><li>1 grav-gun</li><li>1 grav-pistol</li><li>1 meltagun</li><li>1 plasma gun</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>"
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000001166:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Veteran Biker Sergeant",
+                "items": [
+                    [
+                        "000001166:bolt-pistol",
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword"
+                    ],
+                    [
+                        "000001166:bolt-pistol",
+                        "000001166:twin-boltgun",
+                        "000001166:power-fist"
+                    ],
+                    [
+                        "000001166:bolt-pistol",
+                        "000001166:twin-boltgun",
+                        "000001166:power-weapon"
+                    ],
+                    [
+                        "000001166:bolt-pistol",
+                        "000001166:twin-boltgun",
+                        "000001166:thunder-hammer"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword",
+                        "000001166:boltgun"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:boltgun",
+                        "000001166:power-fist"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:boltgun",
+                        "000001166:power-weapon"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:boltgun",
+                        "000001166:thunder-hammer"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword",
+                        "000001166:combi-weapon"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:combi-weapon",
+                        "000001166:power-fist"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:combi-weapon",
+                        "000001166:power-weapon"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:combi-weapon",
+                        "000001166:thunder-hammer"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword",
+                        "000001166:grav-pistol"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:grav-pistol",
+                        "000001166:power-fist"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:grav-pistol",
+                        "000001166:power-weapon"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:grav-pistol",
+                        "000001166:thunder-hammer"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword",
+                        "000001166:plasma-pistol"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:plasma-pistol",
+                        "000001166:power-fist"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:plasma-pistol",
+                        "000001166:power-weapon"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:plasma-pistol",
+                        "000001166:thunder-hammer"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword",
+                        "000001166:storm-bolter"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:storm-bolter",
+                        "000001166:power-fist"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:storm-bolter",
+                        "000001166:power-weapon"
+                    ],
+                    [
+                        "000001166:twin-boltgun",
+                        "000001166:storm-bolter",
+                        "000001166:thunder-hammer"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Veteran Biker",
+                "items": [
+                    [
+                        "000001166:bolt-pistol",
+                        "000001166:twin-boltgun",
+                        "000001166:astartes-chainsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -673,23 +856,6 @@
             "id": "000008350",
             "name": "Oath of Moment",
             "type": "Faction"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Vanguard Assault",

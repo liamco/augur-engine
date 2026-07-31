@@ -55,46 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Sternguard bolt pistol; Sternguard bolt rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002255",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Sternguard Veteran Sergeant’s Sternguard bolt rifle can be replaced with one of the following: <br><ul><li>1 Astartes chainsword </li><li>1 combi-weapon </li><li>1 power weapon </li><li>1 power fist </li><li>1 Astartes chainsword and 1 Sternguard bolt rifle* </li><li>1 power weapon and 1 Sternguard bolt rifle* </li><li>1 power fist and 1 Sternguard bolt rifle*</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002255",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of Sternguard Veterans can each have their Sternguard bolt rifle replaced with 1 combi-weapon."
-                    },
-                    {
-                        "datasheetId": "000002255",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Sternguard Veteran’s Sternguard bolt rifle can be replaced with one of the following: <br><ul><li>1 pyrecannon </li><li>1 Sternguard heavy bolter</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000002255",
-                        "line": 4,
-                        "button": "*",
-                        "description": "* This model's Sternguard bolt rifle cannot be replaced."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Sternguard bolt pistol; Sternguard bolt rifle; close combat weapon.",
+            "parsed": [
+                "000002255:sternguard-bolt-pistol",
+                "000002255:sternguard-bolt-rifle",
+                "000002255:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002255:sternguard-bolt-pistol",
+                    "000002255:sternguard-bolt-rifle",
+                    "000002255:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002255:combi-weapon",
+                "datasheetId": "000002255",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -128,6 +107,7 @@
             },
             {
                 "id": "000002255:pyrecannon",
+                "datasheetId": "000002255",
                 "line": 2,
                 "name": "Pyrecannon",
                 "type": "Ranged",
@@ -145,7 +125,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+1",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -153,13 +133,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Sternguard Veteran"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002255:sternguard-bolt-pistol",
+                "datasheetId": "000002255",
                 "line": 3,
                 "name": "Sternguard bolt pistol",
                 "type": "Ranged",
@@ -192,6 +178,7 @@
             },
             {
                 "id": "000002255:sternguard-bolt-rifle",
+                "datasheetId": "000002255",
                 "line": 4,
                 "name": "Sternguard bolt rifle",
                 "type": "Ranged",
@@ -226,6 +213,7 @@
             },
             {
                 "id": "000002255:sternguard-heavy-bolter",
+                "datasheetId": "000002255",
                 "line": 5,
                 "name": "Sternguard heavy bolter",
                 "type": "Ranged",
@@ -252,13 +240,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Sternguard Veteran"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002255:astartes-chainsword",
+                "datasheetId": "000002255",
                 "line": 6,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -281,13 +275,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sternguard Veteran Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002255:close-combat-weapon",
+                "datasheetId": "000002255",
                 "line": 7,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -317,6 +315,7 @@
             },
             {
                 "id": "000002255:power-weapon",
+                "datasheetId": "000002255",
                 "line": 8,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -339,13 +338,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sternguard Veteran Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002255:power-fist",
+                "datasheetId": "000002255",
                 "line": 9,
                 "name": "Power fist",
                 "type": "Melee",
@@ -368,13 +371,138 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sternguard Veteran Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002255",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Sternguard Veteran Sergeant’s Sternguard bolt rifle can be replaced with one of the following: <br><ul><li>1 Astartes chainsword </li><li>1 combi-weapon </li><li>1 power weapon </li><li>1 power fist </li><li>1 Astartes chainsword and 1 Sternguard bolt rifle* </li><li>1 power weapon and 1 Sternguard bolt rifle* </li><li>1 power fist and 1 Sternguard bolt rifle*</li></ul>"
+                },
+                {
+                    "datasheetId": "000002255",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of Sternguard Veterans can each have their Sternguard bolt rifle replaced with 1 combi-weapon."
+                },
+                {
+                    "datasheetId": "000002255",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Sternguard Veteran’s Sternguard bolt rifle can be replaced with one of the following: <br><ul><li>1 pyrecannon </li><li>1 Sternguard heavy bolter</li></ul>"
+                },
+                {
+                    "datasheetId": "000002255",
+                    "line": 4,
+                    "button": "*",
+                    "description": "* This model's Sternguard bolt rifle cannot be replaced."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Sternguard Veteran Sergeant",
+                "items": [
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:sternguard-bolt-rifle",
+                        "000002255:close-combat-weapon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:combi-weapon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:astartes-chainsword"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:power-weapon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:power-fist"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:astartes-chainsword",
+                        "000002255:sternguard-bolt-rifle"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:astartes-chainsword",
+                        "000002255:combi-weapon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:power-weapon",
+                        "000002255:sternguard-bolt-rifle"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:power-weapon",
+                        "000002255:combi-weapon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:power-fist",
+                        "000002255:sternguard-bolt-rifle"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:power-fist",
+                        "000002255:combi-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Sternguard Veteran",
+                "items": [
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:sternguard-bolt-rifle",
+                        "000002255:close-combat-weapon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:pyrecannon"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:sternguard-heavy-bolter"
+                    ],
+                    [
+                        "000002255:sternguard-bolt-pistol",
+                        "000002255:close-combat-weapon",
+                        "000002255:combi-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -440,8 +568,16 @@
             "description": "Each time a model in this unit makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Sternguard Focus",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

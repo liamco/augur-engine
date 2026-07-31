@@ -9,7 +9,20 @@ export interface RawAbility {
     legend: string;
     factionId: string;
     description: string;
-    type: "Core" | "Faction" | "Datasheet";
+    /**
+     * The source uses more types than the three that matter to us: "Wargear"
+     * (storm shields and the like, which move to wargear.abilities),
+     * "Wargear profile" ("One Shot"), "Primarch", and a few untranslated
+     * Wahapedia column labels. Typed as a widened union rather than the three,
+     * so filtering on the others is not a type error.
+     */
+    type:
+        | "Core"
+        | "Faction"
+        | "Datasheet"
+        | "Wargear"
+        | "Wargear profile"
+        | (string & {});
     parameter?: string;
 }
 

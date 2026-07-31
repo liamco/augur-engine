@@ -45,34 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> vicious claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000546",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with one of the following:<ul><li>1 particle caster</li><li>1 transdimensional beamer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000546",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their vicious claws replaced with whip coils."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> vicious claws.",
+            "parsed": [
+                "000000546:vicious-claws"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000546:vicious-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000546:particle-caster",
+                "datasheetId": "000000546",
                 "line": 1,
                 "name": "Particle caster",
                 "type": "Ranged",
@@ -105,6 +92,7 @@
             },
             {
                 "id": "000000546:transdimensional-beamer",
+                "datasheetId": "000000546",
                 "line": 2,
                 "name": "Transdimensional beamer",
                 "type": "Ranged",
@@ -134,6 +122,7 @@
             },
             {
                 "id": "000000546:vicious-claws",
+                "datasheetId": "000000546",
                 "line": 3,
                 "name": "Vicious claws",
                 "type": "Melee",
@@ -163,6 +152,7 @@
             },
             {
                 "id": "000000546:whip-coils",
+                "datasheetId": "000000546",
                 "line": 4,
                 "name": "Whip coils",
                 "type": "Melee",
@@ -191,7 +181,37 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000546",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with one of the following:<ul><li>1 particle caster</li><li>1 transdimensional beamer</li></ul>"
+                },
+                {
+                    "datasheetId": "000000546",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their vicious claws replaced with whip coils."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000546:vicious-claws"
+                    ],
+                    [
+                        "000000546:whip-coils"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",

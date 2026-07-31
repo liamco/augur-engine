@@ -50,34 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; teeth and claws; Wolf Guard weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000322",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their bolt pistol replaced with one of the following:<ul><li>1 boltgun</li><li>1 storm shield</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000322",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, one model’s bolt pistol can be replaced with 1 plasma pistol."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; teeth and claws; Wolf Guard weapon.",
+            "parsed": [
+                "000000322:bolt-pistol",
+                "000000322:teeth-and-claws",
+                "000000322:wolf-guard-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000322:bolt-pistol",
+                    "000000322:teeth-and-claws",
+                    "000000322:wolf-guard-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000322:bolt-pistol",
+                "datasheetId": "000000322",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -109,6 +100,7 @@
             },
             {
                 "id": "000000322:boltgun",
+                "datasheetId": "000000322",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -137,9 +129,10 @@
                 "count": 1
             },
             {
-                "id": "000000322:plasma-pistol-standard",
+                "id": "000000322:plasma-pistol",
+                "datasheetId": "000000322",
                 "line": 3,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -147,7 +140,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -158,27 +152,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000322:plasma-pistol-supercharge",
-                "line": 4,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000322",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -194,13 +175,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000322:teeth-and-claws",
+                "datasheetId": "000000322",
                 "line": 5,
                 "name": "Teeth and claws",
                 "type": "Melee",
@@ -232,6 +216,7 @@
             },
             {
                 "id": "000000322:wolf-guard-weapon",
+                "datasheetId": "000000322",
                 "line": 6,
                 "name": "Wolf Guard weapon",
                 "type": "Melee",
@@ -260,7 +245,70 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000322",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their bolt pistol replaced with one of the following:<ul><li>1 boltgun</li><li>1 storm shield</li></ul>"
+                },
+                {
+                    "datasheetId": "000000322",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, one model’s bolt pistol can be replaced with 1 plasma pistol."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000322:storm-shield",
+                "name": "Storm Shield",
+                "description": "The bearer has a 4+ invulnerable save.",
+                "mechanics": [
+                    {
+                        "name": "Storm Shield",
+                        "entity": "thisUnit",
+                        "effect": "setsCharacteristic",
+                        "attribute": "invulnSave",
+                        "value": 4,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000322:bolt-pistol",
+                        "000000322:teeth-and-claws",
+                        "000000322:wolf-guard-weapon"
+                    ],
+                    [
+                        "000000322:teeth-and-claws",
+                        "000000322:wolf-guard-weapon",
+                        "000000322:boltgun"
+                    ],
+                    [
+                        "000000322:teeth-and-claws",
+                        "000000322:wolf-guard-weapon",
+                        "000000322:storm-shield"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -328,23 +376,6 @@
             "parameter": null,
             "mechanics": [],
             "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Storm Shield",
-            "legend": "",
-            "description": "The bearer has a 4+ invulnerable save.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Storm Shield",
-                    "entity": "thisUnit",
-                    "effect": "setsCharacteristic",
-                    "attribute": "invulnSave",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
         }
     ]
 }

@@ -68,21 +68,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Broodlord claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Broodlord claws and talons.",
+            "parsed": [
+                "000000463:broodlord-claws-and-talons"
+            ],
+            "byModelType": {
+                "Broodlord": [
+                    "000000463:broodlord-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000463:broodlord-claws-and-talons",
+                "datasheetId": "000000463",
                 "line": 1,
                 "name": "Broodlord claws and talons",
                 "type": "Melee",
@@ -114,7 +114,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000463:broodlord-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

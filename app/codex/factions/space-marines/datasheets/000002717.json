@@ -68,46 +68,27 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Twin fragstorm grenade launcher; heavy flamer; heavy onslaught gatling cannon; Redemptor fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002717",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 Icarus rocket pod."
-                    },
-                    {
-                        "datasheetId": "000002717",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s heavy flamer can be replaced with 1 onslaught gatling cannon."
-                    },
-                    {
-                        "datasheetId": "000002717",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model’s heavy onslaught gatling cannon can be replaced with 1 macro plasma incinerator."
-                    },
-                    {
-                        "datasheetId": "000002717",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model’s twin fragstorm grenade launcher can be replaced with 1 twin storm bolter."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Twin fragstorm grenade launcher; heavy flamer; heavy onslaught gatling cannon; Redemptor fist.",
+            "parsed": [
+                "000002717:twin-fragstorm-grenade-launcher",
+                "000002717:heavy-flamer",
+                "000002717:heavy-onslaught-gatling-cannon",
+                "000002717:redemptor-fist"
+            ],
+            "byModelType": {
+                "Redemptor Dreadnought": [
+                    "000002717:twin-fragstorm-grenade-launcher",
+                    "000002717:heavy-flamer",
+                    "000002717:heavy-onslaught-gatling-cannon",
+                    "000002717:redemptor-fist"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002717:heavy-flamer",
+                "datasheetId": "000002717",
                 "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -125,7 +106,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -140,6 +121,7 @@
             },
             {
                 "id": "000002717:heavy-onslaught-gatling-cannon",
+                "datasheetId": "000002717",
                 "line": 2,
                 "name": "Heavy onslaught gatling cannon",
                 "type": "Ranged",
@@ -171,6 +153,7 @@
             },
             {
                 "id": "000002717:icarus-rocket-pod",
+                "datasheetId": "000002717",
                 "line": 3,
                 "name": "Icarus rocket pod",
                 "type": "Ranged",
@@ -201,9 +184,10 @@
                 "count": 1
             },
             {
-                "id": "000002717:macro-plasma-incinerator-standard",
+                "id": "000002717:macro-plasma-incinerator",
+                "datasheetId": "000002717",
                 "line": 4,
-                "name": "Macro plasma incinerator – standard",
+                "name": "Macro plasma incinerator",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -211,7 +195,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Macro plasma incinerator – standard",
+                        "name": "Macro plasma incinerator - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -222,27 +207,14 @@
                         "s": 8,
                         "ap": -3,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002717:macro-plasma-incinerator-supercharge",
-                "line": 5,
-                "name": "Macro plasma incinerator – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002717",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Macro plasma incinerator – supercharge",
+                        "name": "Macro plasma incinerator - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -265,6 +237,7 @@
             },
             {
                 "id": "000002717:onslaught-gatling-cannon",
+                "datasheetId": "000002717",
                 "line": 6,
                 "name": "Onslaught gatling cannon",
                 "type": "Ranged",
@@ -296,6 +269,7 @@
             },
             {
                 "id": "000002717:twin-fragstorm-grenade-launcher",
+                "datasheetId": "000002717",
                 "line": 7,
                 "name": "Twin fragstorm grenade launcher",
                 "type": "Ranged",
@@ -328,6 +302,7 @@
             },
             {
                 "id": "000002717:twin-storm-bolter",
+                "datasheetId": "000002717",
                 "line": 8,
                 "name": "Twin storm bolter",
                 "type": "Ranged",
@@ -360,6 +335,7 @@
             },
             {
                 "id": "000002717:redemptor-fist",
+                "datasheetId": "000002717",
                 "line": 9,
                 "name": "Redemptor fist",
                 "type": "Melee",
@@ -388,7 +364,147 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002717",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 Icarus rocket pod."
+                },
+                {
+                    "datasheetId": "000002717",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s heavy flamer can be replaced with 1 onslaught gatling cannon."
+                },
+                {
+                    "datasheetId": "000002717",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model’s heavy onslaught gatling cannon can be replaced with 1 macro plasma incinerator."
+                },
+                {
+                    "datasheetId": "000002717",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model’s twin fragstorm grenade launcher can be replaced with 1 twin storm bolter."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:heavy-flamer",
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist"
+                    ],
+                    [
+                        "000002717:heavy-flamer",
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:heavy-flamer",
+                        "000002717:redemptor-fist",
+                        "000002717:macro-plasma-incinerator"
+                    ],
+                    [
+                        "000002717:heavy-flamer",
+                        "000002717:redemptor-fist",
+                        "000002717:macro-plasma-incinerator",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:onslaught-gatling-cannon"
+                    ],
+                    [
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:onslaught-gatling-cannon",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:redemptor-fist",
+                        "000002717:onslaught-gatling-cannon",
+                        "000002717:macro-plasma-incinerator"
+                    ],
+                    [
+                        "000002717:redemptor-fist",
+                        "000002717:onslaught-gatling-cannon",
+                        "000002717:macro-plasma-incinerator",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:heavy-flamer",
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod"
+                    ],
+                    [
+                        "000002717:heavy-flamer",
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:heavy-flamer",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:macro-plasma-incinerator"
+                    ],
+                    [
+                        "000002717:heavy-flamer",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:macro-plasma-incinerator",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:onslaught-gatling-cannon"
+                    ],
+                    [
+                        "000002717:heavy-onslaught-gatling-cannon",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:onslaught-gatling-cannon",
+                        "000002717:twin-storm-bolter"
+                    ],
+                    [
+                        "000002717:twin-fragstorm-grenade-launcher",
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:onslaught-gatling-cannon",
+                        "000002717:macro-plasma-incinerator"
+                    ],
+                    [
+                        "000002717:redemptor-fist",
+                        "000002717:icarus-rocket-pod",
+                        "000002717:onslaught-gatling-cannon",
+                        "000002717:macro-plasma-incinerator",
+                        "000002717:twin-storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -449,8 +565,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Duty Eternal",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

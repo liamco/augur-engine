@@ -55,46 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy frag cannon; Furioso fist; storm bolter.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000167",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy frag cannon and Furioso fist can be replaced with one of the following:<ul><li>1 Blood Talons and 1 meltagun</li><li>1 twin Furioso fist and 1 meltagun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000167",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s storm bolter can be replaced with 1 heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000000167",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model’s meltagun can be replaced with 1 heavy flamer."
-                    },
-                    {
-                        "datasheetId": "000000167",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 magna-grapple."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy frag cannon; Furioso fist; storm bolter.",
+            "parsed": [
+                "000000167:heavy-frag-cannon",
+                "000000167:furioso-fist",
+                "000000167:storm-bolter"
+            ],
+            "byModelType": {
+                "Furioso Dreadnought": [
+                    "000000167:heavy-frag-cannon",
+                    "000000167:furioso-fist",
+                    "000000167:storm-bolter"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000167:heavy-flamer",
+                "datasheetId": "000000167",
                 "line": 1,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -112,7 +91,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -127,6 +106,7 @@
             },
             {
                 "id": "000000167:heavy-frag-cannon",
+                "datasheetId": "000000167",
                 "line": 2,
                 "name": "Heavy frag cannon",
                 "type": "Ranged",
@@ -159,6 +139,7 @@
             },
             {
                 "id": "000000167:meltagun",
+                "datasheetId": "000000167",
                 "line": 3,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -190,6 +171,7 @@
             },
             {
                 "id": "000000167:storm-bolter",
+                "datasheetId": "000000167",
                 "line": 4,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -221,6 +203,7 @@
             },
             {
                 "id": "000000167:blood-talons",
+                "datasheetId": "000000167",
                 "line": 5,
                 "name": "Blood talons",
                 "type": "Melee",
@@ -252,6 +235,7 @@
             },
             {
                 "id": "000000167:furioso-fist",
+                "datasheetId": "000000167",
                 "line": 6,
                 "name": "Furioso fist",
                 "type": "Melee",
@@ -281,6 +265,7 @@
             },
             {
                 "id": "000000167:twin-furioso-fists",
+                "datasheetId": "000000167",
                 "line": 7,
                 "name": "Twin Furioso fists",
                 "type": "Melee",
@@ -311,7 +296,157 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000167",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy frag cannon and Furioso fist can be replaced with one of the following:<ul><li>1 Blood Talons and 1 meltagun</li><li>1 twin Furioso fist and 1 meltagun</li></ul>"
+                },
+                {
+                    "datasheetId": "000000167",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s storm bolter can be replaced with 1 heavy flamer."
+                },
+                {
+                    "datasheetId": "000000167",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model’s meltagun can be replaced with 1 heavy flamer."
+                },
+                {
+                    "datasheetId": "000000167",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 magna-grapple."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000167:magna-grapple",
+                "name": "Magna-grapple",
+                "description": "The bearer loses the SMOKE keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a MONSTER or VEHICLE unit.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000167:heavy-frag-cannon",
+                        "000000167:furioso-fist",
+                        "000000167:storm-bolter"
+                    ],
+                    [
+                        "000000167:heavy-frag-cannon",
+                        "000000167:furioso-fist",
+                        "000000167:storm-bolter",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:heavy-frag-cannon",
+                        "000000167:furioso-fist",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:heavy-frag-cannon",
+                        "000000167:furioso-fist",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:blood-talons",
+                        "000000167:meltagun"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:blood-talons",
+                        "000000167:meltagun",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:blood-talons",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:blood-talons",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:blood-talons",
+                        "000000167:meltagun",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:blood-talons",
+                        "000000167:meltagun",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:blood-talons",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:blood-talons",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:twin-furioso-fists",
+                        "000000167:meltagun"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:twin-furioso-fists",
+                        "000000167:meltagun",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:twin-furioso-fists",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:storm-bolter",
+                        "000000167:twin-furioso-fists",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:twin-furioso-fists",
+                        "000000167:meltagun",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:twin-furioso-fists",
+                        "000000167:meltagun",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ],
+                    [
+                        "000000167:twin-furioso-fists",
+                        "000000167:heavy-flamer"
+                    ],
+                    [
+                        "000000167:twin-furioso-fists",
+                        "000000167:heavy-flamer",
+                        "000000167:magna-grapple"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -370,15 +505,6 @@
             "name": "Wrathful Rampage",
             "legend": "",
             "description": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Magna-grapple",
-            "legend": "",
-            "description": "The bearer loses the <span class=\"kwb\">SMOKE</span> keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

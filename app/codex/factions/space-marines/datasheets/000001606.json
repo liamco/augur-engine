@@ -55,34 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001606",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Assault Intercessor Sergeant’s heavy bolt pistol can be replaced with one of the following:<ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001606",
-                        "line": 2,
-                        "button": "•",
-                        "description": "The Assault Intercessor Sergeant’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000001606:heavy-bolt-pistol",
+                "000001606:astartes-chainsword"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001606:heavy-bolt-pistol",
+                    "000001606:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001606:hand-flamer",
+                "datasheetId": "000001606",
                 "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -101,7 +90,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -109,13 +98,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001606:heavy-bolt-pistol",
+                "datasheetId": "000001606",
                 "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -146,9 +139,10 @@
                 "count": 1
             },
             {
-                "id": "000001606:plasma-pistol-standard",
+                "id": "000001606:plasma-pistol",
+                "datasheetId": "000001606",
                 "line": 3,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -156,7 +150,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -167,27 +162,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001606:plasma-pistol-supercharge",
-                "line": 4,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001606",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -203,13 +185,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001606:astartes-chainsword",
+                "datasheetId": "000001606",
                 "line": 5,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -239,6 +225,7 @@
             },
             {
                 "id": "000001606:power-fist",
+                "datasheetId": "000001606",
                 "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
@@ -261,13 +248,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001606:power-weapon",
+                "datasheetId": "000001606",
                 "line": 7,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -290,13 +281,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000001606:thunder-hammer",
+                "datasheetId": "000001606",
                 "line": 8,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -321,13 +316,97 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Assault Intercessor Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001606",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Assault Intercessor Sergeant’s heavy bolt pistol can be replaced with one of the following:<ul><li>1 hand flamer</li><li>1 plasma pistol</li></ul>"
+                },
+                {
+                    "datasheetId": "000001606",
+                    "line": 2,
+                    "button": "•",
+                    "description": "The Assault Intercessor Sergeant’s Astartes chainsword can be replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Assault Intercessor Sergeant",
+                "items": [
+                    [
+                        "000001606:heavy-bolt-pistol",
+                        "000001606:astartes-chainsword"
+                    ],
+                    [
+                        "000001606:heavy-bolt-pistol",
+                        "000001606:power-fist"
+                    ],
+                    [
+                        "000001606:heavy-bolt-pistol",
+                        "000001606:power-weapon"
+                    ],
+                    [
+                        "000001606:heavy-bolt-pistol",
+                        "000001606:thunder-hammer"
+                    ],
+                    [
+                        "000001606:astartes-chainsword",
+                        "000001606:hand-flamer"
+                    ],
+                    [
+                        "000001606:hand-flamer",
+                        "000001606:power-fist"
+                    ],
+                    [
+                        "000001606:hand-flamer",
+                        "000001606:power-weapon"
+                    ],
+                    [
+                        "000001606:hand-flamer",
+                        "000001606:thunder-hammer"
+                    ],
+                    [
+                        "000001606:astartes-chainsword",
+                        "000001606:plasma-pistol"
+                    ],
+                    [
+                        "000001606:plasma-pistol",
+                        "000001606:power-fist"
+                    ],
+                    [
+                        "000001606:plasma-pistol",
+                        "000001606:power-weapon"
+                    ],
+                    [
+                        "000001606:plasma-pistol",
+                        "000001606:thunder-hammer"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Assault Intercessor",
+                "items": [
+                    [
+                        "000001606:heavy-bolt-pistol",
+                        "000001606:astartes-chainsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

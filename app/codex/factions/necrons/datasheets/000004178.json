@@ -61,23 +61,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> tremorglaive.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> tremorglaive.",
+            "parsed": [
+                "000004178:tremorglaive"
+            ],
+            "byModelType": {
+                "Geomancer": [
+                    "000004178:tremorglaive"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000004178:tremorglaive-reverberating-beam",
+                "id": "000004178:tremorglaive",
+                "datasheetId": "000004178",
                 "line": 1,
-                "name": "Tremorglaive – reverberating beam",
+                "name": "Tremorglaive",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -85,7 +85,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Tremorglaive – reverberating beam",
+                        "name": "Tremorglaive - reverberating beam",
+                        "profileName": "reverberating beam",
                         "attributes": [
                             "MELTA 2"
                         ],
@@ -96,27 +97,14 @@
                         "s": 8,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004178:tremorglaive-shock-wave-pulse",
-                "line": 2,
-                "name": "Tremorglaive – shock wave pulse",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004178",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Tremorglaive – shock wave pulse",
+                        "name": "Tremorglaive - shock wave pulse",
+                        "profileName": "shock wave pulse",
                         "attributes": [
                             "IGNORES COVER",
                             "TORRENT"
@@ -124,7 +112,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6+2",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -138,7 +126,8 @@
                 "count": 1
             },
             {
-                "id": "000004178:tremorglaive",
+                "id": "000004178:tremorglaive-2",
+                "datasheetId": "000004178",
                 "line": 3,
                 "name": "Tremorglaive",
                 "type": "Melee",
@@ -167,7 +156,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004178:tremorglaive"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

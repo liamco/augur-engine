@@ -73,28 +73,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; crushing teeth and claws; Glacius.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000287",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; crushing teeth and claws; Glacius.",
+            "parsed": [
+                "000000287:bolt-pistol",
+                "000000287:crushing-teeth-and-claws",
+                "000000287:glacius"
+            ],
+            "byModelType": {
+                "Harald Deathwolf – EPIC HERO": [
+                    "000000287:bolt-pistol",
+                    "000000287:crushing-teeth-and-claws",
+                    "000000287:glacius"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000287:bolt-pistol",
+                "datasheetId": "000000287",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -126,6 +123,7 @@
             },
             {
                 "id": "000000287:crushing-teeth-and-claws",
+                "datasheetId": "000000287",
                 "line": 2,
                 "name": "Crushing teeth and claws",
                 "type": "Melee",
@@ -157,6 +155,7 @@
             },
             {
                 "id": "000000287:glacius",
+                "datasheetId": "000000287",
                 "line": 3,
                 "name": "Glacius",
                 "type": "Melee",
@@ -185,7 +184,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000287",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000287:bolt-pistol",
+                        "000000287:crushing-teeth-and-claws",
+                        "000000287:glacius"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

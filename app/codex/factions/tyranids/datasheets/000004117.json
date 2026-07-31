@@ -68,21 +68,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Ravener Prime is equipped with:</b> Prime claws and talons.<br><br><b>3 Raveners are equipped with:</b> Ravener heavy claws and talons.<br><br><b>1 Ravener is equipped with:</b> venom bolt; Ravener heavy claws and talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>The Ravener Prime is equipped with:</b> Prime claws and talons.<br><br><b>3 Raveners are equipped with:</b> Ravener heavy claws and talons.<br><br><b>1 Ravener is equipped with:</b> venom bolt; Ravener heavy claws and talons.",
+            "parsed": [
+                "000004117:prime-claws-and-talons"
+            ],
+            "byModelType": {
+                "Ravener Prime": [
+                    "000004117:prime-claws-and-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004117:venom-bolt",
+                "datasheetId": "000004117",
                 "line": 1,
                 "name": "Venom bolt",
                 "type": "Ranged",
@@ -101,7 +101,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -116,6 +116,7 @@
             },
             {
                 "id": "000004117:prime-claws-and-talons",
+                "datasheetId": "000004117",
                 "line": 2,
                 "name": "Prime claws and talons",
                 "type": "Melee",
@@ -149,6 +150,7 @@
             },
             {
                 "id": "000004117:ravener-heavy-claws-and-talons",
+                "datasheetId": "000004117",
                 "line": 3,
                 "name": "Ravener heavy claws and talons",
                 "type": "Melee",
@@ -181,7 +183,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004117:prime-claws-and-talons"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -45,28 +45,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> claws and teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000483",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each be equipped with 1 spinemaws."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> claws and teeth.",
+            "parsed": [
+                "000000483:claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000483:claws-and-teeth"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000483:spinemaws",
+                "datasheetId": "000000483",
                 "line": 1,
                 "name": "Spinemaws",
                 "type": "Ranged",
@@ -98,6 +91,7 @@
             },
             {
                 "id": "000000483:claws-and-teeth",
+                "datasheetId": "000000483",
                 "line": 2,
                 "name": "Claws and teeth",
                 "type": "Melee",
@@ -128,7 +122,32 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000483",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each be equipped with 1 spinemaws."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000483:claws-and-teeth"
+                    ],
+                    [
+                        "000000483:claws-and-teeth",
+                        "000000483:spinemaws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

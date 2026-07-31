@@ -60,28 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> scything talons, gaping maw.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004225",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> scything talons, gaping maw.",
+            "parsed": [
+                "000004225:scything-talons",
+                "000004225:gaping-maw"
+            ],
+            "byModelType": {
+                "The Red Terror – EPIC HERO": [
+                    "000004225:scything-talons",
+                    "000004225:gaping-maw"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004225:gaping-maw",
+                "datasheetId": "000004225",
                 "line": 1,
                 "name": "Gaping maw",
                 "type": "Melee",
@@ -115,6 +110,7 @@
             },
             {
                 "id": "000004225:scything-talons",
+                "datasheetId": "000004225",
                 "line": 2,
                 "name": "Scything talons",
                 "type": "Melee",
@@ -143,7 +139,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004225",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000004225:scything-talons",
+                        "000004225:gaping-maw"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

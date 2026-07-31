@@ -65,40 +65,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Angelus boltgun; encarmine blade.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000165",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their encarmine blade replaced with 1 encarmine spear."
-                    },
-                    {
-                        "datasheetId": "000000165",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, 1 model’s Angelus boltgun can be replaced with 1 inferno pistol."
-                    },
-                    {
-                        "datasheetId": "000000165",
-                        "line": 3,
-                        "button": "•",
-                        "description": "One model can be equipped with 1 Sanguinary banner."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Angelus boltgun; encarmine blade.",
+            "parsed": [
+                "000000165:angelus-boltgun",
+                "000000165:encarmine-blade"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000165:angelus-boltgun",
+                    "000000165:encarmine-blade"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000165:angelus-boltgun",
+                "datasheetId": "000000165",
                 "line": 1,
                 "name": "Angelus boltgun",
                 "type": "Ranged",
@@ -130,6 +113,7 @@
             },
             {
                 "id": "000000165:inferno-pistol",
+                "datasheetId": "000000165",
                 "line": 2,
                 "name": "Inferno pistol",
                 "type": "Ranged",
@@ -155,13 +139,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000165:encarmine-blade",
+                "datasheetId": "000000165",
                 "line": 3,
                 "name": "Encarmine blade",
                 "type": "Melee",
@@ -191,6 +178,7 @@
             },
             {
                 "id": "000000165:encarmine-spear",
+                "datasheetId": "000000165",
                 "line": 4,
                 "name": "Encarmine spear",
                 "type": "Melee",
@@ -221,7 +209,89 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000165",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their encarmine blade replaced with 1 encarmine spear."
+                },
+                {
+                    "datasheetId": "000000165",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, 1 model’s Angelus boltgun can be replaced with 1 inferno pistol."
+                },
+                {
+                    "datasheetId": "000000165",
+                    "line": 3,
+                    "button": "•",
+                    "description": "One model can be equipped with 1 Sanguinary banner."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000165:sanguinary-banner",
+                "name": "Sanguinary Banner",
+                "description": "Add 1 to the Objective Control characteristic of models in the bearer's unit.",
+                "mechanics": [
+                    {
+                        "name": "Sanguinary Banner",
+                        "entity": "thisUnit",
+                        "effect": "staticNumber",
+                        "attribute": "objectiveControl",
+                        "value": 1
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000165:angelus-boltgun",
+                        "000000165:encarmine-blade"
+                    ],
+                    [
+                        "000000165:angelus-boltgun",
+                        "000000165:encarmine-blade",
+                        "000000165:sanguinary-banner"
+                    ],
+                    [
+                        "000000165:encarmine-blade",
+                        "000000165:inferno-pistol"
+                    ],
+                    [
+                        "000000165:encarmine-blade",
+                        "000000165:inferno-pistol",
+                        "000000165:sanguinary-banner"
+                    ],
+                    [
+                        "000000165:angelus-boltgun",
+                        "000000165:encarmine-spear"
+                    ],
+                    [
+                        "000000165:angelus-boltgun",
+                        "000000165:encarmine-spear",
+                        "000000165:sanguinary-banner"
+                    ],
+                    [
+                        "000000165:encarmine-spear",
+                        "000000165:inferno-pistol"
+                    ],
+                    [
+                        "000000165:encarmine-spear",
+                        "000000165:inferno-pistol",
+                        "000000165:sanguinary-banner"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -316,23 +386,6 @@
                     "phase": [
                         "fight"
                     ]
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Sanguinary Banner",
-            "legend": "",
-            "description": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Sanguinary Banner",
-                    "entity": "thisUnit",
-                    "effect": "staticNumber",
-                    "attribute": "objectiveControl",
-                    "value": 1
                 }
             ],
             "mechanicsSource": "regex"

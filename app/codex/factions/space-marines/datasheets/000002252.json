@@ -63,40 +63,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 quad lascannons; twin heavy bolter; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002252",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 quad lascannons can be replaced with 2 laser destroyers."
-                    },
-                    {
-                        "datasheetId": "000002252",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer"
-                    },
-                    {
-                        "datasheetId": "000002252",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 quad lascannons; twin heavy bolter; armoured tracks.",
+            "parsed": [
+                "000002252:quad-lascannon",
+                "000002252:twin-heavy-bolter",
+                "000002252:armoured-tracks"
+            ],
+            "byModelType": {
+                "Spartan": [
+                    "000002252:quad-lascannon",
+                    "000002252:twin-heavy-bolter",
+                    "000002252:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002252:heavy-bolter",
+                "datasheetId": "000002252",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -128,6 +113,7 @@
             },
             {
                 "id": "000002252:heavy-flamer",
+                "datasheetId": "000002252",
                 "line": 2,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -145,7 +131,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -160,6 +146,7 @@
             },
             {
                 "id": "000002252:laser-destroyer",
+                "datasheetId": "000002252",
                 "line": 3,
                 "name": "Laser destroyer",
                 "type": "Ranged",
@@ -191,6 +178,7 @@
             },
             {
                 "id": "000002252:multi-melta",
+                "datasheetId": "000002252",
                 "line": 4,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -222,6 +210,7 @@
             },
             {
                 "id": "000002252:quad-lascannon",
+                "datasheetId": "000002252",
                 "line": 5,
                 "name": "Quad lascannon",
                 "type": "Ranged",
@@ -251,6 +240,7 @@
             },
             {
                 "id": "000002252:storm-bolter",
+                "datasheetId": "000002252",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -282,6 +272,7 @@
             },
             {
                 "id": "000002252:twin-heavy-bolter",
+                "datasheetId": "000002252",
                 "line": 7,
                 "name": "Twin heavy bolter",
                 "type": "Ranged",
@@ -314,6 +305,7 @@
             },
             {
                 "id": "000002252:twin-heavy-flamer",
+                "datasheetId": "000002252",
                 "line": 8,
                 "name": "Twin heavy flamer",
                 "type": "Ranged",
@@ -332,7 +324,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -347,6 +339,7 @@
             },
             {
                 "id": "000002252:armoured-tracks",
+                "datasheetId": "000002252",
                 "line": 9,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -375,7 +368,153 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002252",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 quad lascannons can be replaced with 2 laser destroyers."
+                },
+                {
+                    "datasheetId": "000002252",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer"
+                },
+                {
+                    "datasheetId": "000002252",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:heavy-bolter"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:heavy-flamer"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:multi-melta"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:storm-bolter"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:armoured-tracks",
+                        "000002252:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:armoured-tracks",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:heavy-bolter"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:armoured-tracks",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:heavy-flamer"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:armoured-tracks",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:multi-melta"
+                    ],
+                    [
+                        "000002252:quad-lascannon",
+                        "000002252:armoured-tracks",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:storm-bolter"
+                    ],
+                    [
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer"
+                    ],
+                    [
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:heavy-bolter"
+                    ],
+                    [
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:heavy-flamer"
+                    ],
+                    [
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:multi-melta"
+                    ],
+                    [
+                        "000002252:twin-heavy-bolter",
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:storm-bolter"
+                    ],
+                    [
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:twin-heavy-flamer"
+                    ],
+                    [
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:heavy-bolter"
+                    ],
+                    [
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:heavy-flamer"
+                    ],
+                    [
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:multi-melta"
+                    ],
+                    [
+                        "000002252:armoured-tracks",
+                        "000002252:laser-destroyer",
+                        "000002252:twin-heavy-flamer",
+                        "000002252:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

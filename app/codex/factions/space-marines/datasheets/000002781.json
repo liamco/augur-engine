@@ -60,40 +60,34 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every Kill Team Heavy Intercessor is equipped with:</b> bolt pistol; Deathwatch heavy bolt rifle; close combat weapon.<br><br><b>Every Kill Team Heavy Intercessor with power fists is equipped with:</b> flamestorm gauntlets; twin power fists.<br><br><b>Every Kill Team Heavy Intercessor with melta rifle is equipped with:</b> bolt pistol; melta rifle; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002781",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model can replace its Deathwatch heavy bolt rifle with 1 Deathwatch heavy bolter."
-                    },
-                    {
-                        "datasheetId": "000002781",
-                        "line": 2,
-                        "button": "•",
-                        "description": "1 model can replace its melta rifle with 1 multi-melta."
-                    },
-                    {
-                        "datasheetId": "000002781",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>Every Kill Team Heavy Intercessor is equipped with:</b> bolt pistol; Deathwatch heavy bolt rifle; close combat weapon.<br><br><b>Every Kill Team Heavy Intercessor with power fists is equipped with:</b> flamestorm gauntlets; twin power fists.<br><br><b>Every Kill Team Heavy Intercessor with melta rifle is equipped with:</b> bolt pistol; melta rifle; close combat weapon.",
+            "parsed": [
+                "000002781:bolt-pistol",
+                "000002781:deathwatch-heavy-bolt-rifle",
+                "000002781:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Kill Team Heavy Intercessor": [
+                    "000002781:bolt-pistol",
+                    "000002781:deathwatch-heavy-bolt-rifle",
+                    "000002781:close-combat-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Kill Team Heavy Intercessor with power fists": [
+                    "000002781:flamestorm-gauntlets",
+                    "000002781:twin-power-fists"
+                ],
+                "Kill Team Heavy Intercessor with melta rifle": [
+                    "000002781:bolt-pistol",
+                    "000002781:melta-rifle",
+                    "000002781:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002781:auto-boltstorm-gauntlets",
+                "datasheetId": "000002781",
                 "line": 1,
                 "name": "Auto boltstorm gauntlets",
                 "type": "Ranged",
@@ -125,6 +119,7 @@
             },
             {
                 "id": "000002781:bolt-pistol",
+                "datasheetId": "000002781",
                 "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -149,13 +144,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor",
+                            "Kill Team Heavy Intercessor with melta rifle"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:deathwatch-heavy-bolt-rifle",
+                "datasheetId": "000002781",
                 "line": 3,
                 "name": "Deathwatch heavy bolt rifle",
                 "type": "Ranged",
@@ -182,13 +182,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:deathwatch-heavy-bolter",
+                "datasheetId": "000002781",
                 "line": 4,
                 "name": "Deathwatch heavy bolter",
                 "type": "Ranged",
@@ -216,13 +220,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:fragstorm-grenade-launcher",
+                "datasheetId": "000002781",
                 "line": 5,
                 "name": "Fragstorm grenade launcher",
                 "type": "Ranged",
@@ -254,6 +261,7 @@
             },
             {
                 "id": "000002781:flamestorm-gauntlets",
+                "datasheetId": "000002781",
                 "line": 6,
                 "name": "Flamestorm gauntlets",
                 "type": "Ranged",
@@ -272,7 +280,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6+1",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -280,13 +288,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor with power fists"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:melta-rifle",
+                "datasheetId": "000002781",
                 "line": 7,
                 "name": "Melta rifle",
                 "type": "Ranged",
@@ -312,13 +324,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor with melta rifle"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:multi-melta",
+                "datasheetId": "000002781",
                 "line": 8,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -344,13 +360,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:close-combat-weapon",
+                "datasheetId": "000002781",
                 "line": 9,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -373,13 +394,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor",
+                            "Kill Team Heavy Intercessor with melta rifle"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002781:twin-power-fists",
+                "datasheetId": "000002781",
                 "line": 10,
                 "name": "Twin power fists",
                 "type": "Melee",
@@ -404,13 +430,40 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Kill Team Heavy Intercessor with power fists"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002781",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model can replace its Deathwatch heavy bolt rifle with 1 Deathwatch heavy bolter."
+                },
+                {
+                    "datasheetId": "000002781",
+                    "line": 2,
+                    "button": "•",
+                    "description": "1 model can replace its melta rifle with 1 multi-melta."
+                },
+                {
+                    "datasheetId": "000002781",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "deathwatch",

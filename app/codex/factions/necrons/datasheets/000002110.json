@@ -40,28 +40,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Skorpekh hyperphase weapons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002110",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, this unit can have 1 Plasmacyte."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Skorpekh hyperphase weapons.",
+            "parsed": [
+                "000002110:skorpekh-hyperphase-weapons"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002110:skorpekh-hyperphase-weapons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002110:skorpekh-hyperphase-weapons",
+                "datasheetId": "000002110",
                 "line": 1,
                 "name": "Skorpekh hyperphase weapons",
                 "type": "Melee",
@@ -90,7 +83,50 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002110",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, this unit can have 1 Plasmacyte."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000002110:plasmacyte",
+                "name": "Plasmacyte",
+                "description": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability. Designer's Note: Place the relevant number of Plasmacyte tokens next to the unit, removing one each time this unit uses this ability.",
+                "mechanics": [
+                    {
+                        "name": "Plasmacyte",
+                        "entity": "thisUnit",
+                        "effect": "addsWeaponAttribute",
+                        "weaponAttributes": [
+                            "DEVASTATING WOUNDS"
+                        ],
+                        "value": true
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002110:skorpekh-hyperphase-weapons"
+                    ],
+                    [
+                        "000002110:skorpekh-hyperphase-weapons",
+                        "000002110:plasmacyte"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -143,25 +179,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Plasmacyte",
-            "legend": "",
-            "description": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.  <br><br><b>Designer’s Note:</b> Place the relevant number of Plasmacyte tokens next to the unit, removing one each time this unit uses this ability.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Plasmacyte",
-                    "entity": "thisUnit",
-                    "effect": "addsWeaponAttribute",
-                    "weaponAttributes": [
-                        "DEVASTATING WOUNDS"
-                    ],
-                    "value": true
-                }
-            ],
-            "mechanicsSource": "regex"
         },
         {
             "name": "Whirling Onslaught",

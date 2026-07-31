@@ -75,34 +75,29 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001189",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s 2 heavy flamers can be replaced with one of the following<ul><li>2 heavy bolters</li><li>2 lascannons</li><li>2 volkite culverins</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001189",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s 2 lascannons can be replaced with on of the following:<ul><li>2 heavy bolters</li><li>2 heavy flamers</li><li>2 volkite culverins</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; armoured tracks.",
+            "parsed": [
+                "000001189:heavy-flamer",
+                "000001189:lascannon",
+                "000001189:siege-melta-array",
+                "000001189:skyreaper-battery",
+                "000001189:armoured-tracks"
+            ],
+            "byModelType": {
+                "Mastodon": [
+                    "000001189:heavy-flamer",
+                    "000001189:lascannon",
+                    "000001189:siege-melta-array",
+                    "000001189:skyreaper-battery",
+                    "000001189:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001189:heavy-bolter",
+                "datasheetId": "000001189",
                 "line": 1,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -134,6 +129,7 @@
             },
             {
                 "id": "000001189:heavy-flamer",
+                "datasheetId": "000001189",
                 "line": 2,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -151,7 +147,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -166,6 +162,7 @@
             },
             {
                 "id": "000001189:lascannon",
+                "datasheetId": "000001189",
                 "line": 3,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -195,6 +192,7 @@
             },
             {
                 "id": "000001189:siege-melta-array",
+                "datasheetId": "000001189",
                 "line": 4,
                 "name": "Siege melta array",
                 "type": "Ranged",
@@ -226,6 +224,7 @@
             },
             {
                 "id": "000001189:skyreaper-battery",
+                "datasheetId": "000001189",
                 "line": 5,
                 "name": "Skyreaper battery",
                 "type": "Ranged",
@@ -257,6 +256,7 @@
             },
             {
                 "id": "000001189:volkite-culverin",
+                "datasheetId": "000001189",
                 "line": 6,
                 "name": "Volkite culverin",
                 "type": "Ranged",
@@ -288,6 +288,7 @@
             },
             {
                 "id": "000001189:armoured-tracks",
+                "datasheetId": "000001189",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -316,7 +317,58 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001189",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s 2 heavy flamers can be replaced with one of the following<ul><li>2 heavy bolters</li><li>2 lascannons</li><li>2 volkite culverins</li></ul>"
+                },
+                {
+                    "datasheetId": "000001189",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s 2 lascannons can be replaced with on of the following:<ul><li>2 heavy bolters</li><li>2 heavy flamers</li><li>2 volkite culverins</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001189:heavy-flamer",
+                        "000001189:lascannon",
+                        "000001189:siege-melta-array",
+                        "000001189:skyreaper-battery",
+                        "000001189:armoured-tracks"
+                    ],
+                    [
+                        "000001189:lascannon",
+                        "000001189:siege-melta-array",
+                        "000001189:skyreaper-battery",
+                        "000001189:armoured-tracks",
+                        "000001189:heavy-bolter"
+                    ],
+                    [
+                        "000001189:lascannon",
+                        "000001189:siege-melta-array",
+                        "000001189:skyreaper-battery",
+                        "000001189:armoured-tracks"
+                    ],
+                    [
+                        "000001189:lascannon",
+                        "000001189:siege-melta-array",
+                        "000001189:skyreaper-battery",
+                        "000001189:armoured-tracks",
+                        "000001189:volkite-culverin"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",

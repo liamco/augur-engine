@@ -63,46 +63,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> grav-cannon; 2 Godhammer lascannon; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000067",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 hunter-killer missile."
-                    },
-                    {
-                        "datasheetId": "000000067",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 storm bolter."
-                    },
-                    {
-                        "datasheetId": "000000067",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 multi-melta."
-                    },
-                    {
-                        "datasheetId": "000000067",
-                        "line": 4,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 combi-weapon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> grav-cannon; 2 Godhammer lascannon; armoured tracks.",
+            "parsed": [
+                "000000067:grav-cannon",
+                "000000067:godhammer-lascannons",
+                "000000067:armoured-tracks"
+            ],
+            "byModelType": {
+                "Land Raider Excelsior": [
+                    "000000067:grav-cannon",
+                    "000000067:godhammer-lascannons",
+                    "000000067:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000067:combi-weapon",
+                "datasheetId": "000000067",
                 "line": 1,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -136,6 +115,7 @@
             },
             {
                 "id": "000000067:godhammer-lascannons",
+                "datasheetId": "000000067",
                 "line": 2,
                 "name": "Godhammer lascannons",
                 "type": "Ranged",
@@ -165,6 +145,7 @@
             },
             {
                 "id": "000000067:grav-cannon",
+                "datasheetId": "000000067",
                 "line": 3,
                 "name": "Grav-cannon",
                 "type": "Ranged",
@@ -196,6 +177,7 @@
             },
             {
                 "id": "000000067:hunter-killer-missile",
+                "datasheetId": "000000067",
                 "line": 4,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -227,6 +209,7 @@
             },
             {
                 "id": "000000067:multi-melta",
+                "datasheetId": "000000067",
                 "line": 5,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -258,6 +241,7 @@
             },
             {
                 "id": "000000067:storm-bolter",
+                "datasheetId": "000000067",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -289,6 +273,7 @@
             },
             {
                 "id": "000000067:armoured-tracks",
+                "datasheetId": "000000067",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -317,7 +302,155 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000067",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 hunter-killer missile."
+                },
+                {
+                    "datasheetId": "000000067",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 storm bolter."
+                },
+                {
+                    "datasheetId": "000000067",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 multi-melta."
+                },
+                {
+                    "datasheetId": "000000067",
+                    "line": 4,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 combi-weapon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:multi-melta"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:multi-melta",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:storm-bolter"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:storm-bolter",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:storm-bolter",
+                        "000000067:multi-melta"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:storm-bolter",
+                        "000000067:multi-melta",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:multi-melta"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:multi-melta",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:storm-bolter"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:storm-bolter",
+                        "000000067:combi-weapon"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:storm-bolter",
+                        "000000067:multi-melta"
+                    ],
+                    [
+                        "000000067:grav-cannon",
+                        "000000067:godhammer-lascannons",
+                        "000000067:armoured-tracks",
+                        "000000067:hunter-killer-missile",
+                        "000000067:storm-bolter",
+                        "000000067:multi-melta",
+                        "000000067:combi-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

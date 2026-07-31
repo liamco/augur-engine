@@ -55,28 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> bolt pistol; occulus bolt carbine; paired combat blades.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001159",
-                        "line": 1,
-                        "button": "•",
-                        "description": "One Incursor can be equipped with 1 haywire mine."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> bolt pistol; occulus bolt carbine; paired combat blades.",
+            "parsed": [
+                "000001159:bolt-pistol",
+                "000001159:occulus-bolt-carbine",
+                "000001159:paired-combat-blades"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000001159:bolt-pistol",
+                    "000001159:occulus-bolt-carbine",
+                    "000001159:paired-combat-blades"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001159:bolt-pistol",
+                "datasheetId": "000001159",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -108,6 +105,7 @@
             },
             {
                 "id": "000001159:occulus-bolt-carbine",
+                "datasheetId": "000001159",
                 "line": 2,
                 "name": "Occulus bolt carbine",
                 "type": "Ranged",
@@ -140,6 +138,7 @@
             },
             {
                 "id": "000001159:paired-combat-blades",
+                "datasheetId": "000001159",
                 "line": 3,
                 "name": "Paired combat blades",
                 "type": "Melee",
@@ -170,7 +169,54 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001159",
+                    "line": 1,
+                    "button": "•",
+                    "description": "One Incursor can be equipped with 1 haywire mine."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000001159:haywire-mine",
+                "name": "Haywire Mine",
+                "description": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a Vehicle unit.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Incursor Sergeant",
+                "items": [
+                    [
+                        "000001159:bolt-pistol",
+                        "000001159:occulus-bolt-carbine",
+                        "000001159:paired-combat-blades"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Incursor",
+                "items": [
+                    [
+                        "000001159:bolt-pistol",
+                        "000001159:occulus-bolt-carbine",
+                        "000001159:paired-combat-blades"
+                    ],
+                    [
+                        "000001159:bolt-pistol",
+                        "000001159:occulus-bolt-carbine",
+                        "000001159:paired-combat-blades",
+                        "000001159:haywire-mine"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -254,15 +300,6 @@
                 }
             ],
             "mechanicsSource": "regex"
-        },
-        {
-            "name": "Haywire Mine",
-            "legend": "",
-            "description": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a Vehicle unit.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         }
     ]
 }

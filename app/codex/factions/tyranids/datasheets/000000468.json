@@ -50,52 +50,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> fleshborer; chitinous claws and teeth.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000468",
-                        "line": 1,
-                        "button": "•",
-                        "description": "All models in this unit can each have their fleshborer replaced with 1 Termagant devourer."
-                    },
-                    {
-                        "datasheetId": "000000468",
-                        "line": 2,
-                        "button": "•",
-                        "description": "All models in this unit can each have their fleshborer replaced with 1 Termagant spinefists."
-                    },
-                    {
-                        "datasheetId": "000000468",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 shardlauncher"
-                    },
-                    {
-                        "datasheetId": "000000468",
-                        "line": 4,
-                        "button": "•",
-                        "description": "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 spike rifle."
-                    },
-                    {
-                        "datasheetId": "000000468",
-                        "line": 5,
-                        "button": "•",
-                        "description": "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 strangleweb"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> fleshborer; chitinous claws and teeth.",
+            "parsed": [
+                "000000468:fleshborer",
+                "000000468:chitinous-claws-and-teeth"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000468:fleshborer",
+                    "000000468:chitinous-claws-and-teeth"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000468:fleshborer",
+                "datasheetId": "000000468",
                 "line": 1,
                 "name": "Fleshborer",
                 "type": "Ranged",
@@ -127,6 +98,7 @@
             },
             {
                 "id": "000000468:shardlauncher",
+                "datasheetId": "000000468",
                 "line": 2,
                 "name": "Shardlauncher",
                 "type": "Ranged",
@@ -152,13 +124,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000468:spike-rifle",
+                "datasheetId": "000000468",
                 "line": 3,
                 "name": "Spike rifle",
                 "type": "Ranged",
@@ -183,13 +158,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000468:strangleweb",
+                "datasheetId": "000000468",
                 "line": 4,
                 "name": "Strangleweb",
                 "type": "Ranged",
@@ -208,7 +186,7 @@
                         "range": 18,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 2,
                         "ap": 0,
                         "d": 1
@@ -216,13 +194,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 10,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000468:termagant-devourer",
+                "datasheetId": "000000468",
                 "line": 5,
                 "name": "Termagant devourer",
                 "type": "Ranged",
@@ -252,6 +233,7 @@
             },
             {
                 "id": "000000468:termagant-spinefists",
+                "datasheetId": "000000468",
                 "line": 6,
                 "name": "Termagant spinefists",
                 "type": "Ranged",
@@ -285,6 +267,7 @@
             },
             {
                 "id": "000000468:chitinous-claws-and-teeth",
+                "datasheetId": "000000468",
                 "line": 7,
                 "name": "Chitinous claws and teeth",
                 "type": "Melee",
@@ -313,7 +296,61 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000468",
+                    "line": 1,
+                    "button": "•",
+                    "description": "All models in this unit can each have their fleshborer replaced with 1 Termagant devourer."
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 2,
+                    "button": "•",
+                    "description": "All models in this unit can each have their fleshborer replaced with 1 Termagant spinefists."
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 shardlauncher"
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 4,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 spike rifle."
+                },
+                {
+                    "datasheetId": "000000468",
+                    "line": 5,
+                    "button": "•",
+                    "description": "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 strangleweb"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000468:fleshborer",
+                        "000000468:chitinous-claws-and-teeth"
+                    ],
+                    [
+                        "000000468:chitinous-claws-and-teeth",
+                        "000000468:termagant-spinefists"
+                    ],
+                    [
+                        "000000468:chitinous-claws-and-teeth",
+                        "000000468:termagant-devourer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

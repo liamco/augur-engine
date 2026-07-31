@@ -83,34 +83,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003833",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy bolt pistol can be replaced with one of the following: <br><ul><li>1 plasma pistol</li><li>1 hand flamer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000003833",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s Astartes chainsword can be replaced with one of the following: <br><ul><li>1 relic weapon</li><li>1 power fist</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000003833:heavy-bolt-pistol",
+                "000003833:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Death Company Captain with Jump Pack": [
+                    "000003833:heavy-bolt-pistol",
+                    "000003833:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003833:hand-flamer",
+                "datasheetId": "000003833",
                 "line": 1,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -129,7 +118,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -144,6 +133,7 @@
             },
             {
                 "id": "000003833:heavy-bolt-pistol",
+                "datasheetId": "000003833",
                 "line": 2,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -175,6 +165,7 @@
             },
             {
                 "id": "000003833:plasma-pistol",
+                "datasheetId": "000003833",
                 "line": 3,
                 "name": "Plasma pistol",
                 "type": "Ranged",
@@ -226,6 +217,7 @@
             },
             {
                 "id": "000003833:astartes-chainsword",
+                "datasheetId": "000003833",
                 "line": 5,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -255,6 +247,7 @@
             },
             {
                 "id": "000003833:power-fist",
+                "datasheetId": "000003833",
                 "line": 6,
                 "name": "Power fist",
                 "type": "Melee",
@@ -284,6 +277,7 @@
             },
             {
                 "id": "000003833:relic-weapon",
+                "datasheetId": "000003833",
                 "line": 7,
                 "name": "Relic weapon",
                 "type": "Melee",
@@ -312,7 +306,67 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003833",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy bolt pistol can be replaced with one of the following: <br><ul><li>1 plasma pistol</li><li>1 hand flamer</li></ul>"
+                },
+                {
+                    "datasheetId": "000003833",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s Astartes chainsword can be replaced with one of the following: <br><ul><li>1 relic weapon</li><li>1 power fist</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003833:heavy-bolt-pistol",
+                        "000003833:astartes-chainsword"
+                    ],
+                    [
+                        "000003833:heavy-bolt-pistol",
+                        "000003833:relic-weapon"
+                    ],
+                    [
+                        "000003833:heavy-bolt-pistol",
+                        "000003833:power-fist"
+                    ],
+                    [
+                        "000003833:astartes-chainsword",
+                        "000003833:plasma-pistol"
+                    ],
+                    [
+                        "000003833:plasma-pistol",
+                        "000003833:relic-weapon"
+                    ],
+                    [
+                        "000003833:plasma-pistol",
+                        "000003833:power-fist"
+                    ],
+                    [
+                        "000003833:astartes-chainsword",
+                        "000003833:hand-flamer"
+                    ],
+                    [
+                        "000003833:hand-flamer",
+                        "000003833:relic-weapon"
+                    ],
+                    [
+                        "000003833:hand-flamer",
+                        "000003833:power-fist"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -410,8 +464,19 @@
             "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Black Rage",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Death Vision of Sanguinius",

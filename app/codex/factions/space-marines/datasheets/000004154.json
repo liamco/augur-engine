@@ -55,58 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> boltgun; bolt pistol; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004154",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Sword Brother’s bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list*:<br><ul><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm bolter</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000004154",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of Neophytes can each have their boltgun replaced with one of the following: <br><ul><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000004154",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword."
-                    },
-                    {
-                        "datasheetId": "000004154",
-                        "line": 4,
-                        "button": "•",
-                        "description": "1 Initiate’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 plasma gun</li><li>1 meltagun</li><li>1 grav-gun</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000004154",
-                        "line": 5,
-                        "button": "•",
-                        "description": "1 Initiate’s boltgun can be replaced with one of the following:<br><ul><li>1 power weapon</li><li>1 power fist</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 grav-cannon</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000004154",
-                        "line": 6,
-                        "button": "*",
-                        "description": "*This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> boltgun; bolt pistol; close combat weapon.",
+            "parsed": [
+                "000004154:boltgun",
+                "000004154:bolt-pistol",
+                "000004154:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000004154:boltgun",
+                    "000004154:bolt-pistol",
+                    "000004154:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004154:astartes-shotgun",
+                "datasheetId": "000004154",
                 "line": 1,
                 "name": "Astartes shotgun",
                 "type": "Ranged",
@@ -138,6 +105,7 @@
             },
             {
                 "id": "000004154:bolt-pistol",
+                "datasheetId": "000004154",
                 "line": 2,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -167,6 +135,7 @@
             },
             {
                 "id": "000004154:boltgun",
+                "datasheetId": "000004154",
                 "line": 3,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -196,6 +165,7 @@
             },
             {
                 "id": "000004154:combi-weapon",
+                "datasheetId": "000004154",
                 "line": 4,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -222,13 +192,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:flamer",
+                "datasheetId": "000004154",
                 "line": 5,
                 "name": "Flamer",
                 "type": "Ranged",
@@ -246,7 +220,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 4,
                         "ap": 0,
                         "d": 1
@@ -254,13 +228,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:grav-cannon",
+                "datasheetId": "000004154",
                 "line": 6,
                 "name": "Grav-cannon",
                 "type": "Ranged",
@@ -286,13 +265,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:grav-gun",
+                "datasheetId": "000004154",
                 "line": 7,
                 "name": "Grav-gun",
                 "type": "Ranged",
@@ -317,13 +301,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:grav-pistol",
+                "datasheetId": "000004154",
                 "line": 8,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -349,13 +338,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:hand-flamer",
+                "datasheetId": "000004154",
                 "line": 9,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -374,7 +367,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -382,13 +375,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:heavy-bolter",
+                "datasheetId": "000004154",
                 "line": 10,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -414,13 +411,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:heavy-flamer",
+                "datasheetId": "000004154",
                 "line": 11,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -438,7 +440,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -446,13 +448,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:inferno-pistol",
+                "datasheetId": "000004154",
                 "line": 12,
                 "name": "Inferno pistol",
                 "type": "Ranged",
@@ -478,13 +485,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:lascannon",
+                "datasheetId": "000004154",
                 "line": 13,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -509,13 +520,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:meltagun",
+                "datasheetId": "000004154",
                 "line": 14,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -540,15 +556,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004154:missile-launcher-frag",
+                "id": "000004154:missile-launcher",
+                "datasheetId": "000004154",
                 "line": 15,
-                "name": "Missile launcher – frag",
+                "name": "Missile launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -556,7 +577,8 @@
                         "line": 15,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Missile launcher – frag",
+                        "name": "Missile launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -568,27 +590,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004154:missile-launcher-krak",
-                "line": 15,
-                "name": "Missile launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004154",
                         "line": 15,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Missile launcher – krak",
+                        "name": "Missile launcher - krak",
+                        "profileName": "krak",
                         "attributes": [
                             "HEAVY"
                         ],
@@ -603,13 +612,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:multi-melta",
+                "datasheetId": "000004154",
                 "line": 16,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -635,15 +649,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004154:plasma-cannon-standard",
+                "id": "000004154:plasma-cannon",
+                "datasheetId": "000004154",
                 "line": 17,
-                "name": "Plasma cannon – standard",
+                "name": "Plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -651,7 +670,8 @@
                         "line": 17,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma cannon – standard",
+                        "name": "Plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST",
                             "HEAVY"
@@ -663,27 +683,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004154:plasma-cannon-supercharge",
-                "line": 17,
-                "name": "Plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004154",
                         "line": 17,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma cannon – supercharge",
+                        "name": "Plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS",
@@ -700,15 +707,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004154:plasma-gun-standard",
+                "id": "000004154:plasma-gun",
+                "datasheetId": "000004154",
                 "line": 18,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -716,7 +728,8 @@
                         "line": 18,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -727,27 +740,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004154:plasma-gun-supercharge",
-                "line": 19,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004154",
                         "line": 19,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -763,15 +763,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004154:plasma-pistol-standard",
+                "id": "000004154:plasma-pistol",
+                "datasheetId": "000004154",
                 "line": 20,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -779,7 +784,8 @@
                         "line": 20,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -790,27 +796,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004154:plasma-pistol-supercharge",
-                "line": 20,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004154",
                         "line": 20,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -826,13 +819,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:storm-bolter",
+                "datasheetId": "000004154",
                 "line": 21,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -857,13 +854,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:astartes-chainsword",
+                "datasheetId": "000004154",
                 "line": 22,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -893,6 +894,7 @@
             },
             {
                 "id": "000004154:combat-knife",
+                "datasheetId": "000004154",
                 "line": 23,
                 "name": "Combat knife",
                 "type": "Melee",
@@ -922,6 +924,7 @@
             },
             {
                 "id": "000004154:close-combat-weapon",
+                "datasheetId": "000004154",
                 "line": 24,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -951,6 +954,7 @@
             },
             {
                 "id": "000004154:power-fist",
+                "datasheetId": "000004154",
                 "line": 25,
                 "name": "Power fist",
                 "type": "Melee",
@@ -973,13 +977,24 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:power-weapon",
+                "datasheetId": "000004154",
                 "line": 26,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -1002,13 +1017,24 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Initiate"
+                        ]
+                    },
+                    {
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:thunder-hammer",
+                "datasheetId": "000004154",
                 "line": 27,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -1033,13 +1059,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Sword Brother"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004154:twin-lightning-claws",
+                "datasheetId": "000004154",
                 "line": 28,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -1070,7 +1100,246 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004154",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Sword Brother’s bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list*:<br><ul><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm bolter</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000004154",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of Neophytes can each have their boltgun replaced with one of the following: <br><ul><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>"
+                },
+                {
+                    "datasheetId": "000004154",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword."
+                },
+                {
+                    "datasheetId": "000004154",
+                    "line": 4,
+                    "button": "•",
+                    "description": "1 Initiate’s boltgun can be replaced with one of the following:<br><ul><li>1 flamer</li><li>1 plasma gun</li><li>1 meltagun</li><li>1 grav-gun</li></ul>"
+                },
+                {
+                    "datasheetId": "000004154",
+                    "line": 5,
+                    "button": "•",
+                    "description": "1 Initiate’s boltgun can be replaced with one of the following:<br><ul><li>1 power weapon</li><li>1 power fist</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 grav-cannon</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000004154",
+                    "line": 6,
+                    "button": "*",
+                    "description": "*This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "Sword Brother",
+                "items": [
+                    [
+                        "000004154:boltgun",
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-chainsword"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-shotgun"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:combat-knife"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-chainsword"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:bolt-pistol"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:boltgun"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-shotgun"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:combat-knife"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:combi-weapon"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:grav-pistol"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:hand-flamer"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:inferno-pistol"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:plasma-pistol"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:power-fist"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:power-weapon"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:storm-bolter"
+                    ],
+                    [
+                        "000004154:close-combat-weapon",
+                        "000004154:thunder-hammer"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Initiate",
+                "items": [
+                    [
+                        "000004154:boltgun",
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:power-weapon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:power-fist"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:heavy-bolter"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:heavy-flamer"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:grav-cannon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:lascannon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:missile-launcher"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:multi-melta"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:plasma-cannon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:flamer"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:plasma-gun"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:meltagun"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:grav-gun"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-chainsword"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-shotgun"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:combat-knife"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Neophyte",
+                "items": [
+                    [
+                        "000004154:boltgun",
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-chainsword"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:astartes-shotgun"
+                    ],
+                    [
+                        "000004154:bolt-pistol",
+                        "000004154:close-combat-weapon",
+                        "000004154:combat-knife"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "black-templars",

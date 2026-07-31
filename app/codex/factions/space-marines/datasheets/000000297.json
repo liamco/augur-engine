@@ -81,23 +81,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> plasma pistol; artificer crozius arcanum.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> plasma pistol; artificer crozius arcanum.",
+            "parsed": [
+                "000000297:plasma-pistol",
+                "000000297:artificer-crozius-arcanum"
+            ],
+            "byModelType": {
+                "Ulrik the Slayer – EPIC HERO": [
+                    "000000297:plasma-pistol",
+                    "000000297:artificer-crozius-arcanum"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000000297:plasma-pistol-standard",
+                "id": "000000297:plasma-pistol",
+                "datasheetId": "000000297",
                 "line": 1,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -105,7 +107,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -116,27 +119,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000297:plasma-pistol-supercharge",
-                "line": 2,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000297",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -159,6 +149,7 @@
             },
             {
                 "id": "000000297:artificer-crozius-arcanum",
+                "datasheetId": "000000297",
                 "line": 3,
                 "name": "Artificer crozius arcanum",
                 "type": "Melee",
@@ -190,7 +181,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000297:plasma-pistol",
+                        "000000297:artificer-crozius-arcanum"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

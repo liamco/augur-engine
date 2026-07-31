@@ -63,28 +63,15 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> boltgun; crushing teeth and claws; Iron Priest hammer; servo-arm.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000308",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s boltgun can be replaced with one of the following:<ul><li>1 bolt pistol</li><li>1 helfrost pistol</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
-            }
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> boltgun; crushing teeth and claws; Iron Priest hammer; servo-arm.",
+            "parsed": [],
+            "byModelType": {}
         },
         "weapons": [
             {
                 "id": "000000308:bolt-pistol",
+                "datasheetId": "000000308",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -116,6 +103,7 @@
             },
             {
                 "id": "000000308:boltgun",
+                "datasheetId": "000000308",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -144,9 +132,10 @@
                 "count": 1
             },
             {
-                "id": "000000308:helfrost-pistol-dispersed",
+                "id": "000000308:helfrost-pistol",
+                "datasheetId": "000000308",
                 "line": 3,
-                "name": "Helfrost pistol – dispersed",
+                "name": "Helfrost pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -154,7 +143,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Helfrost pistol – dispersed",
+                        "name": "Helfrost pistol - dispersed",
+                        "profileName": "dispersed",
                         "attributes": [
                             "PISTOL",
                             "TORRENT"
@@ -162,31 +152,18 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D3",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": -1,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000308:helfrost-pistol-focused",
-                "line": 4,
-                "name": "Helfrost pistol – focused",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000308",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Helfrost pistol – focused",
+                        "name": "Helfrost pistol - focused",
+                        "profileName": "focused",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -208,6 +185,7 @@
             },
             {
                 "id": "000000308:crushing-teeth-and-claws",
+                "datasheetId": "000000308",
                 "line": 5,
                 "name": "Crushing teeth and claws",
                 "type": "Melee",
@@ -239,6 +217,7 @@
             },
             {
                 "id": "000000308:iron-priest-hammer",
+                "datasheetId": "000000308",
                 "line": 6,
                 "name": "Iron Priest hammer",
                 "type": "Melee",
@@ -268,6 +247,7 @@
             },
             {
                 "id": "000000308:servo-arm",
+                "datasheetId": "000000308",
                 "line": 7,
                 "name": "Servo arm",
                 "type": "Melee",
@@ -298,7 +278,19 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000308",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s boltgun can be replaced with one of the following:<ul><li>1 bolt pistol</li><li>1 helfrost pistol</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",

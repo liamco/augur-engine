@@ -50,58 +50,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> combi-bolter; power fist.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000104",
-                        "line": 1,
-                        "button": "•",
-                        "description": "The Relic Terminator Sergeant’s combi-bolter can be replaced with one of the following:<ul><li>1 plasma blaster</li><li>1 volkite charger</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000104",
-                        "line": 2,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 Relic Terminator’s combi-bolter can be replaced with one of the following:<ul><li>1 heavy flamer</li><li>1 reaper autocannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000104",
-                        "line": 3,
-                        "button": "•",
-                        "description": "For every 5 models in this unit, 1 model can be equipped with 1 grenade harness."
-                    },
-                    {
-                        "datasheetId": "000000104",
-                        "line": 4,
-                        "button": "•",
-                        "description": "Any number of models can each have their power fist replaced with 1 power weapon."
-                    },
-                    {
-                        "datasheetId": "000000104",
-                        "line": 5,
-                        "button": "•",
-                        "description": "Any number of models can each have their power fist replaced with one 1 chainfist."
-                    },
-                    {
-                        "datasheetId": "000000104",
-                        "line": 6,
-                        "button": "•",
-                        "description": "Any number of models can each have their combi-bolter and power fist replaced with 1 twin lightning claws."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> combi-bolter; power fist.",
+            "parsed": [
+                "000000104:combi-bolter",
+                "000000104:power-fist"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000000104:combi-bolter",
+                    "000000104:power-fist"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000104:combi-bolter",
+                "datasheetId": "000000104",
                 "line": 1,
                 "name": "Combi-bolter",
                 "type": "Ranged",
@@ -133,6 +98,7 @@
             },
             {
                 "id": "000000104:heavy-flamer",
+                "datasheetId": "000000104",
                 "line": 2,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -150,7 +116,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -158,15 +124,21 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Relic Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000000104:plasma-blaster-standard",
+                "id": "000000104:plasma-blaster",
+                "datasheetId": "000000104",
                 "line": 3,
-                "name": "Plasma blaster – standard",
+                "name": "Plasma blaster",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -174,7 +146,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma blaster – standard",
+                        "name": "Plasma blaster - standard",
+                        "profileName": "standard",
                         "attributes": [],
                         "range": 18,
                         "type": "Ranged",
@@ -183,27 +156,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000000104:plasma-blaster-supercharge",
-                "line": 4,
-                "name": "Plasma blaster – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000000104",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma blaster – supercharge",
+                        "name": "Plasma blaster - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS"
                         ],
@@ -218,13 +178,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Relic Terminator Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000104:reaper-autocannon",
+                "datasheetId": "000000104",
                 "line": 5,
                 "name": "Reaper autocannon",
                 "type": "Ranged",
@@ -250,13 +214,19 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 5,
+                        "count": 1,
+                        "modelType": [
+                            "Relic Terminator"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000104:volkite-charger",
+                "datasheetId": "000000104",
                 "line": 6,
                 "name": "Volkite charger",
                 "type": "Ranged",
@@ -281,13 +251,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Relic Terminator Sergeant"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000104:chainfist",
+                "datasheetId": "000000104",
                 "line": 7,
                 "name": "Chainfist",
                 "type": "Melee",
@@ -319,6 +293,7 @@
             },
             {
                 "id": "000000104:power-fist",
+                "datasheetId": "000000104",
                 "line": 8,
                 "name": "Power fist",
                 "type": "Melee",
@@ -348,6 +323,7 @@
             },
             {
                 "id": "000000104:power-weapon",
+                "datasheetId": "000000104",
                 "line": 9,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -377,6 +353,7 @@
             },
             {
                 "id": "000000104:twin-lightning-claws",
+                "datasheetId": "000000104",
                 "line": 10,
                 "name": "Twin lightning claws",
                 "type": "Melee",
@@ -407,7 +384,208 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000104",
+                    "line": 1,
+                    "button": "•",
+                    "description": "The Relic Terminator Sergeant’s combi-bolter can be replaced with one of the following:<ul><li>1 plasma blaster</li><li>1 volkite charger</li></ul>"
+                },
+                {
+                    "datasheetId": "000000104",
+                    "line": 2,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 Relic Terminator’s combi-bolter can be replaced with one of the following:<ul><li>1 heavy flamer</li><li>1 reaper autocannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000000104",
+                    "line": 3,
+                    "button": "•",
+                    "description": "For every 5 models in this unit, 1 model can be equipped with 1 grenade harness."
+                },
+                {
+                    "datasheetId": "000000104",
+                    "line": 4,
+                    "button": "•",
+                    "description": "Any number of models can each have their power fist replaced with 1 power weapon."
+                },
+                {
+                    "datasheetId": "000000104",
+                    "line": 5,
+                    "button": "•",
+                    "description": "Any number of models can each have their power fist replaced with one 1 chainfist."
+                },
+                {
+                    "datasheetId": "000000104",
+                    "line": 6,
+                    "button": "•",
+                    "description": "Any number of models can each have their combi-bolter and power fist replaced with 1 twin lightning claws."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000104:grenade-harness",
+                "name": "Grenade Harness",
+                "description": "The bearer has the GRENADES keyword.",
+                "mechanics": [
+                    {
+                        "name": "Grenade Harness",
+                        "entity": "thisUnit",
+                        "effect": "addsKeyword",
+                        "keywords": [
+                            "GRENADES"
+                        ],
+                        "value": true,
+                        "conditions": [
+                            {
+                                "entity": "thisUnit",
+                                "state": "startingModelCount",
+                                "operator": "equals",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ],
+                "mechanicsSource": "regex"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Relic Terminator Sergeant",
+                "items": [
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:power-fist"
+                    ],
+                    [
+                        "000000104:twin-lightning-claws"
+                    ],
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:power-fist",
+                        "000000104:grenade-harness"
+                    ],
+                    [
+                        "000000104:grenade-harness",
+                        "000000104:twin-lightning-claws"
+                    ],
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:grenade-harness",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:plasma-blaster"
+                    ],
+                    [
+                        "000000104:plasma-blaster",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:plasma-blaster",
+                        "000000104:grenade-harness"
+                    ],
+                    [
+                        "000000104:plasma-blaster",
+                        "000000104:grenade-harness",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:volkite-charger"
+                    ],
+                    [
+                        "000000104:volkite-charger",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:volkite-charger",
+                        "000000104:grenade-harness"
+                    ],
+                    [
+                        "000000104:volkite-charger",
+                        "000000104:grenade-harness",
+                        "000000104:power-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Relic Terminator",
+                "items": [
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:power-fist"
+                    ],
+                    [
+                        "000000104:twin-lightning-claws"
+                    ],
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:power-fist",
+                        "000000104:grenade-harness"
+                    ],
+                    [
+                        "000000104:grenade-harness",
+                        "000000104:twin-lightning-claws"
+                    ],
+                    [
+                        "000000104:combi-bolter",
+                        "000000104:grenade-harness",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:heavy-flamer"
+                    ],
+                    [
+                        "000000104:heavy-flamer",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:heavy-flamer",
+                        "000000104:grenade-harness"
+                    ],
+                    [
+                        "000000104:heavy-flamer",
+                        "000000104:grenade-harness",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:reaper-autocannon"
+                    ],
+                    [
+                        "000000104:reaper-autocannon",
+                        "000000104:power-weapon"
+                    ],
+                    [
+                        "000000104:power-fist",
+                        "000000104:reaper-autocannon",
+                        "000000104:grenade-harness"
+                    ],
+                    [
+                        "000000104:reaper-autocannon",
+                        "000000104:grenade-harness",
+                        "000000104:power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -485,25 +663,6 @@
                     "effect": "rollBonus",
                     "attribute": "hit",
                     "value": 1
-                }
-            ],
-            "mechanicsSource": "regex"
-        },
-        {
-            "name": "Grenade Harness",
-            "legend": "",
-            "description": "The bearer has the <span class=\"kwb\">GRENADES</span> keyword.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Grenade Harness",
-                    "entity": "thisUnit",
-                    "effect": "addsKeyword",
-                    "keywords": [
-                        "GRENADES"
-                    ],
-                    "value": true
                 }
             ],
             "mechanicsSource": "regex"

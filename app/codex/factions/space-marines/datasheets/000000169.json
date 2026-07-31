@@ -153,28 +153,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Blood Reaver.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000169",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Blood Reaver.",
+            "parsed": [
+                "000000169:bolt-pistol",
+                "000000169:blood-reaver"
+            ],
+            "byModelType": {
+                "Gabriel Seth – EPIC HERO": [
+                    "000000169:bolt-pistol",
+                    "000000169:blood-reaver"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000169:bolt-pistol",
+                "datasheetId": "000000169",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -206,6 +201,7 @@
             },
             {
                 "id": "000000169:blood-reaver",
+                "datasheetId": "000000169",
                 "line": 2,
                 "name": "Blood Reaver",
                 "type": "Melee",
@@ -236,7 +232,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000169",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000169:bolt-pistol",
+                        "000000169:blood-reaver"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

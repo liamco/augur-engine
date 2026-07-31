@@ -68,21 +68,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Foehammer.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Foehammer.",
+            "parsed": [
+                "000000317:foehammer"
+            ],
+            "byModelType": {
+                "Arjac Rockfist – EPIC HERO": [
+                    "000000317:foehammer"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000317:foehammer",
+                "datasheetId": "000000317",
                 "line": 1,
                 "name": "Foehammer",
                 "type": "Ranged",
@@ -116,6 +116,7 @@
             },
             {
                 "id": "000000317:foehammer-2",
+                "datasheetId": "000000317",
                 "line": 2,
                 "name": "Foehammer",
                 "type": "Melee",
@@ -148,7 +149,21 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000317:foehammer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",
@@ -223,8 +238,29 @@
             "description": "Each time this model makes a melee attack that targets a <span class=\"kwb\">CHARACTER</span> unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Champion of the Kingsguard",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                },
+                {
+                    "name": "Champion of the Kingsguard",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

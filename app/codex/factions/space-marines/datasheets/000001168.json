@@ -50,28 +50,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> assault cannon; Tempest salvo launcher; armoured hull.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001168",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> assault cannon; Tempest salvo launcher; armoured hull.",
+            "parsed": [
+                "000001168:assault-cannon",
+                "000001168:tempest-salvo-launcher",
+                "000001168:armoured-hull"
+            ],
+            "byModelType": {
+                "Land Speeder Tempest": [
+                    "000001168:assault-cannon",
+                    "000001168:tempest-salvo-launcher",
+                    "000001168:armoured-hull"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001168:assault-cannon",
+                "datasheetId": "000001168",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -102,9 +99,10 @@
                 "count": 1
             },
             {
-                "id": "000001168:tempest-salvo-launcher-frag",
+                "id": "000001168:tempest-salvo-launcher",
+                "datasheetId": "000001168",
                 "line": 2,
-                "name": "Tempest salvo launcher – frag",
+                "name": "Tempest salvo launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -112,7 +110,8 @@
                         "line": 2,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Tempest salvo launcher – frag",
+                        "name": "Tempest salvo launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -123,27 +122,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001168:tempest-salvo-launcher-krak",
-                "line": 3,
-                "name": "Tempest salvo launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001168",
                         "line": 3,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Tempest salvo launcher – krak",
+                        "name": "Tempest salvo launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 36,
                         "type": "Ranged",
@@ -163,6 +149,7 @@
             },
             {
                 "id": "000001168:armoured-hull",
+                "datasheetId": "000001168",
                 "line": 4,
                 "name": "Armoured hull",
                 "type": "Melee",
@@ -191,7 +178,30 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001168",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001168:assault-cannon",
+                        "000001168:tempest-salvo-launcher",
+                        "000001168:armoured-hull"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

@@ -148,21 +148,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> absolvor bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000000158:absolvor-bolt-pistol",
+                "000000158:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Sanguinary Priest": [
+                    "000000158:absolvor-bolt-pistol",
+                    "000000158:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000158:absolvor-bolt-pistol",
+                "datasheetId": "000000158",
                 "line": 1,
                 "name": "Absolvor bolt pistol",
                 "type": "Ranged",
@@ -194,6 +196,7 @@
             },
             {
                 "id": "000000158:astartes-chainsword",
+                "datasheetId": "000000158",
                 "line": 2,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -222,7 +225,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000158:absolvor-bolt-pistol",
+                        "000000158:astartes-chainsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

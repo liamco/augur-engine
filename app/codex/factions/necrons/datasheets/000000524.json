@@ -61,34 +61,21 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> staff of light.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000524",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s staff of light can be replaced with 1 Lord’s blade."
-                    },
-                    {
-                        "datasheetId": "000000524",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with 1 resurrection orb."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> staff of light.",
+            "parsed": [
+                "000000524:staff-of-light"
+            ],
+            "byModelType": {
+                "Lord": [
+                    "000000524:staff-of-light"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000524:staff-of-light",
+                "datasheetId": "000000524",
                 "line": 1,
                 "name": "Staff of light",
                 "type": "Ranged",
@@ -118,6 +105,7 @@
             },
             {
                 "id": "000000524:staff-of-light-2",
+                "datasheetId": "000000524",
                 "line": 2,
                 "name": "Staff of light",
                 "type": "Melee",
@@ -147,6 +135,7 @@
             },
             {
                 "id": "000000524:lord-s-blade",
+                "datasheetId": "000000524",
                 "line": 3,
                 "name": "Lord’s blade",
                 "type": "Melee",
@@ -177,7 +166,53 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000524",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s staff of light can be replaced with 1 Lord’s blade."
+                },
+                {
+                    "datasheetId": "000000524",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with 1 resurrection orb."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000524:resurrection-orb",
+                "name": "Resurrection Orb",
+                "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000524:staff-of-light"
+                    ],
+                    [
+                        "000000524:staff-of-light",
+                        "000000524:resurrection-orb"
+                    ],
+                    [
+                        "000000524:lord-s-blade"
+                    ],
+                    [
+                        "000000524:lord-s-blade",
+                        "000000524:resurrection-orb"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -231,15 +266,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Resurrection Orb",
-            "legend": "",
-            "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "Relentless March",

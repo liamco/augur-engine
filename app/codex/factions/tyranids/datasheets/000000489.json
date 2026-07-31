@@ -60,21 +60,23 @@
     "transport": "This model has a transport capacity of 20 Tyranids Infantry models, or 1 Tyranids Monster model with a Wounds characteristic of 12 or less. Each <span class=\"kwb\">INFANTRY</span> model with a Wounds characteristic of more than 1 takes up the space of 3 models.",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Tyrannocyte bio-weapons; flensing whips.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Tyrannocyte bio-weapons; flensing whips.",
+            "parsed": [
+                "000000489:tyrannocyte-bio-weapons",
+                "000000489:flensing-whips"
+            ],
+            "byModelType": {
+                "Tyrannocyte": [
+                    "000000489:tyrannocyte-bio-weapons",
+                    "000000489:flensing-whips"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000489:tyrannocyte-bio-weapons",
+                "datasheetId": "000000489",
                 "line": 1,
                 "name": "Tyrannocyte bio-weapons",
                 "type": "Ranged",
@@ -104,6 +106,7 @@
             },
             {
                 "id": "000000489:flensing-whips",
+                "datasheetId": "000000489",
                 "line": 2,
                 "name": "Flensing whips",
                 "type": "Melee",
@@ -132,7 +135,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000489:tyrannocyte-bio-weapons",
+                        "000000489:flensing-whips"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

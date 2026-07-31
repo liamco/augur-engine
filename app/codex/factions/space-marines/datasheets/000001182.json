@@ -75,28 +75,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001182",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; twin boltgun; Astartes chainsword.",
+            "parsed": [
+                "000001182:bolt-pistol",
+                "000001182:twin-boltgun",
+                "000001182:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Ancient on Bike": [
+                    "000001182:bolt-pistol",
+                    "000001182:twin-boltgun",
+                    "000001182:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001182:bolt-pistol",
+                "datasheetId": "000001182",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -128,6 +125,7 @@
             },
             {
                 "id": "000001182:boltgun",
+                "datasheetId": "000001182",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -157,6 +155,7 @@
             },
             {
                 "id": "000001182:combi-weapon",
+                "datasheetId": "000001182",
                 "line": 3,
                 "name": "Combi-weapon",
                 "type": "Ranged",
@@ -190,6 +189,7 @@
             },
             {
                 "id": "000001182:grav-pistol",
+                "datasheetId": "000001182",
                 "line": 4,
                 "name": "Grav-pistol",
                 "type": "Ranged",
@@ -221,9 +221,10 @@
                 "count": 1
             },
             {
-                "id": "000001182:plasma-pistol-standard",
+                "id": "000001182:plasma-pistol",
+                "datasheetId": "000001182",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -231,7 +232,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -242,27 +244,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001182:plasma-pistol-supercharge",
-                "line": 6,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001182",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -285,6 +274,7 @@
             },
             {
                 "id": "000001182:storm-bolter",
+                "datasheetId": "000001182",
                 "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -316,6 +306,7 @@
             },
             {
                 "id": "000001182:twin-boltgun",
+                "datasheetId": "000001182",
                 "line": 8,
                 "name": "Twin boltgun",
                 "type": "Ranged",
@@ -347,6 +338,7 @@
             },
             {
                 "id": "000001182:astartes-chainsword",
+                "datasheetId": "000001182",
                 "line": 9,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -376,6 +368,7 @@
             },
             {
                 "id": "000001182:power-fist",
+                "datasheetId": "000001182",
                 "line": 10,
                 "name": "Power fist",
                 "type": "Melee",
@@ -405,6 +398,7 @@
             },
             {
                 "id": "000001182:power-weapon",
+                "datasheetId": "000001182",
                 "line": 11,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -434,6 +428,7 @@
             },
             {
                 "id": "000001182:thunder-hammer",
+                "datasheetId": "000001182",
                 "line": 12,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -464,7 +459,70 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001182",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s bolt pistol can be replaced with one of the following:<ul><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001182:bolt-pistol",
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:boltgun"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:combi-weapon"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:grav-pistol"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:plasma-pistol"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:storm-bolter"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:power-fist"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:power-weapon"
+                    ],
+                    [
+                        "000001182:twin-boltgun",
+                        "000001182:astartes-chainsword",
+                        "000001182:thunder-hammer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -542,16 +600,8 @@
             "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Unbreakable Duty",
-                    "entity": "thisUnit",
-                    "effect": "setsFnp",
-                    "attribute": "feelNoPain",
-                    "value": 4
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

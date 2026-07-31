@@ -145,21 +145,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Invictus; Sword of Idaeus.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Invictus; Sword of Idaeus.",
+            "parsed": [
+                "000000121:bolt-pistol",
+                "000000121:invictus",
+                "000000121:sword-of-idaeus"
+            ],
+            "byModelType": {
+                "Uriel Ventris – EPIC HERO": [
+                    "000000121:bolt-pistol",
+                    "000000121:invictus",
+                    "000000121:sword-of-idaeus"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000121:bolt-pistol",
+                "datasheetId": "000000121",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -191,6 +195,7 @@
             },
             {
                 "id": "000000121:invictus",
+                "datasheetId": "000000121",
                 "line": 2,
                 "name": "Invictus",
                 "type": "Ranged",
@@ -220,6 +225,7 @@
             },
             {
                 "id": "000000121:sword-of-idaeus",
+                "datasheetId": "000000121",
                 "line": 3,
                 "name": "Sword of Idaeus",
                 "type": "Melee",
@@ -250,7 +256,23 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000121:bolt-pistol",
+                        "000000121:invictus",
+                        "000000121:sword-of-idaeus"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

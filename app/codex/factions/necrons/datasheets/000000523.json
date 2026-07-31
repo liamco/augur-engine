@@ -61,34 +61,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> tachyon arrow; Overlord’s blade.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000523",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s tachyon arrow and Overlord’s blade can be replaced with one of the following:<ul><li>1 staff of light</li><li>1 voidscythe</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000523",
-                        "line": 2,
-                        "button": "•",
-                        "description": "If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> tachyon arrow; Overlord’s blade.",
+            "parsed": [
+                "000000523:tachyon-arrow",
+                "000000523:overlord-s-blade"
+            ],
+            "byModelType": {
+                "Overlord": [
+                    "000000523:tachyon-arrow",
+                    "000000523:overlord-s-blade"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000523:staff-of-light",
+                "datasheetId": "000000523",
                 "line": 1,
                 "name": "Staff of light",
                 "type": "Ranged",
@@ -118,6 +107,7 @@
             },
             {
                 "id": "000000523:tachyon-arrow",
+                "datasheetId": "000000523",
                 "line": 2,
                 "name": "Tachyon arrow",
                 "type": "Ranged",
@@ -149,6 +139,7 @@
             },
             {
                 "id": "000000523:overlord-s-blade",
+                "datasheetId": "000000523",
                 "line": 3,
                 "name": "Overlord’s blade",
                 "type": "Melee",
@@ -180,6 +171,7 @@
             },
             {
                 "id": "000000523:staff-of-light-2",
+                "datasheetId": "000000523",
                 "line": 4,
                 "name": "Staff of light",
                 "type": "Melee",
@@ -209,6 +201,7 @@
             },
             {
                 "id": "000000523:voidscythe",
+                "datasheetId": "000000523",
                 "line": 5,
                 "name": "Voidscythe",
                 "type": "Melee",
@@ -239,7 +232,49 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000523",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s tachyon arrow and Overlord’s blade can be replaced with one of the following:<ul><li>1 staff of light</li><li>1 voidscythe</li></ul>"
+                },
+                {
+                    "datasheetId": "000000523",
+                    "line": 2,
+                    "button": "•",
+                    "description": "If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000000523:resurrection-orb",
+                "name": "Resurrection Orb",
+                "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000523:tachyon-arrow",
+                        "000000523:overlord-s-blade"
+                    ],
+                    [
+                        "000000523:staff-of-light"
+                    ],
+                    [
+                        "000000523:voidscythe"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",
@@ -293,15 +328,6 @@
             "id": "000008369",
             "name": "Reanimation Protocols",
             "type": "Faction"
-        },
-        {
-            "name": "Resurrection Orb",
-            "legend": "",
-            "description": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
         },
         {
             "name": "My Will Be Done",

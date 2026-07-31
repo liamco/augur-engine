@@ -50,21 +50,15 @@
     "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Centurion, Gravis, Jump Pack, Wulfen or Terminator models.",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
-            }
+        "defaultLoadout": {
+            "raw": "",
+            "parsed": [],
+            "byModelType": {}
         },
         "weapons": [
             {
                 "id": "000000087:wargear-1",
+                "datasheetId": "000000087",
                 "line": 1,
                 "name": "Wargear 1",
                 "type": "",
@@ -93,7 +87,12 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",

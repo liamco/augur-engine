@@ -60,46 +60,30 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Wolf Scout Pack Leader model is equipped with:</b> plasma pistol; power weapon.<br><br><b>Every Wolf Scout model is equipped with:</b> plasma pistol; combat blade.<br><br><b>Every Hunting Wolf model is equipped with:</b> teeth and claws.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000004182",
-                        "line": 1,
-                        "button": "•",
-                        "description": "1 Wolf Scout’s plasma pistol can be replaced with 1 plasma gun."
-                    },
-                    {
-                        "datasheetId": "000004182",
-                        "line": 2,
-                        "button": "•",
-                        "description": "1 Wolf Scout equipped with a plasma pistol can be equipped with 1 haywire mine (That model’s plasma pistol cannot be replaced)."
-                    },
-                    {
-                        "datasheetId": "000004182",
-                        "line": 3,
-                        "button": "•",
-                        "description": "1 Wolf Scout’s plasma pistol and combat blade can be replaced with 1 bolt pistol, 1 Thunderclap and 1 runic stave."
-                    },
-                    {
-                        "datasheetId": "000004182",
-                        "line": 4,
-                        "button": "•",
-                        "description": "If this unit contains 12 models, 1 Wolf Scout’s plasma pistol can be replaced with 1 instigator bolt carbine."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Wolf Scout Pack Leader model is equipped with:</b> plasma pistol; power weapon.<br><br><b>Every Wolf Scout model is equipped with:</b> plasma pistol; combat blade.<br><br><b>Every Hunting Wolf model is equipped with:</b> teeth and claws.",
+            "parsed": [
+                "000004182:plasma-pistol",
+                "000004182:power-weapon"
+            ],
+            "byModelType": {
+                "Wolf Scout Pack Leader model": [
+                    "000004182:plasma-pistol",
+                    "000004182:power-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "Wolf Scout": [
+                    "000004182:plasma-pistol",
+                    "000004182:combat-blade"
+                ],
+                "Hunting Wolf": [
+                    "000004182:teeth-and-claws"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004182:bolt-pistol",
+                "datasheetId": "000004182",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -131,6 +115,7 @@
             },
             {
                 "id": "000004182:instigator-bolt-carbine",
+                "datasheetId": "000004182",
                 "line": 2,
                 "name": "Instigator bolt carbine",
                 "type": "Ranged",
@@ -161,9 +146,10 @@
                 "count": 1
             },
             {
-                "id": "000004182:plasma-gun-standard",
+                "id": "000004182:plasma-gun",
+                "datasheetId": "000004182",
                 "line": 3,
-                "name": "Plasma gun – standard",
+                "name": "Plasma gun",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -171,7 +157,8 @@
                         "line": 3,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma gun – standard",
+                        "name": "Plasma gun - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -182,27 +169,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004182:plasma-gun-supercharge",
-                "line": 4,
-                "name": "Plasma gun – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004182",
                         "line": 4,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma gun – supercharge",
+                        "name": "Plasma gun - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -218,15 +192,20 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
-                "id": "000004182:plasma-pistol-standard",
+                "id": "000004182:plasma-pistol",
+                "datasheetId": "000004182",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -234,7 +213,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -245,27 +225,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000004182:plasma-pistol-supercharge",
-                "line": 6,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000004182",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -281,13 +248,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader model",
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004182:thunderclap",
+                "datasheetId": "000004182",
                 "line": 7,
                 "name": "Thunderclap",
                 "type": "Ranged",
@@ -320,6 +292,7 @@
             },
             {
                 "id": "000004182:combat-blade",
+                "datasheetId": "000004182",
                 "line": 8,
                 "name": "Combat blade",
                 "type": "Melee",
@@ -342,13 +315,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004182:power-weapon",
+                "datasheetId": "000004182",
                 "line": 9,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -371,13 +348,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Wolf Scout Pack Leader model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004182:runic-stave",
+                "datasheetId": "000004182",
                 "line": 10,
                 "name": "Runic stave",
                 "type": "Melee",
@@ -402,13 +383,18 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "count",
+                        "count": 1,
+                        "modelType": [
+                            "Wolf Scout"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004182:teeth-and-claws",
+                "datasheetId": "000004182",
                 "line": 11,
                 "name": "Teeth and claws",
                 "type": "Melee",
@@ -431,13 +417,95 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Hunting Wolf"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000004182",
+                    "line": 1,
+                    "button": "•",
+                    "description": "1 Wolf Scout’s plasma pistol can be replaced with 1 plasma gun."
+                },
+                {
+                    "datasheetId": "000004182",
+                    "line": 2,
+                    "button": "•",
+                    "description": "1 Wolf Scout equipped with a plasma pistol can be equipped with 1 haywire mine (That model’s plasma pistol cannot be replaced)."
+                },
+                {
+                    "datasheetId": "000004182",
+                    "line": 3,
+                    "button": "•",
+                    "description": "1 Wolf Scout’s plasma pistol and combat blade can be replaced with 1 bolt pistol, 1 Thunderclap and 1 runic stave."
+                },
+                {
+                    "datasheetId": "000004182",
+                    "line": 4,
+                    "button": "•",
+                    "description": "If this unit contains 12 models, 1 Wolf Scout’s plasma pistol can be replaced with 1 instigator bolt carbine."
+                }
+            ]
+        },
+        "abilities": [
+            {
+                "id": "000004182:haywire-mine",
+                "name": "Haywire Mine",
+                "description": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a VEHICLE unit.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Wolf Scout Pack Leader",
+                "items": [
+                    [
+                        "000004182:plasma-pistol",
+                        "000004182:power-weapon"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Wolf Scout",
+                "items": [
+                    [
+                        "000004182:plasma-pistol",
+                        "000004182:combat-blade"
+                    ],
+                    [
+                        "000004182:plasma-pistol",
+                        "000004182:combat-blade",
+                        "000004182:haywire-mine"
+                    ],
+                    [
+                        "000004182:combat-blade",
+                        "000004182:plasma-gun"
+                    ],
+                    [
+                        "000004182:combat-blade",
+                        "000004182:plasma-gun",
+                        "000004182:haywire-mine"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Hunting Wolf",
+                "items": [
+                    [
+                        "000004182:teeth-and-claws"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "space-wolves",
@@ -577,15 +645,6 @@
             "name": "Hunting Hounds",
             "legend": "",
             "description": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models), if this unit is not Battle-shocked, Hunting Wolves models in this unit have an Objective Control characteristic of 1.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Haywire Mine",
-            "legend": "",
-            "description": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a <span class=\"kwb\">VEHICLE</span> unit.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

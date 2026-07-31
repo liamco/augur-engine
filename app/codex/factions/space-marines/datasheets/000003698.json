@@ -55,21 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every Inner Circle Companion is equipped with:</b> heavy bolt pistol; Calibanite greatsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every Inner Circle Companion is equipped with:</b> heavy bolt pistol; Calibanite greatsword.",
+            "parsed": [
+                "000003698:heavy-bolt-pistol",
+                "000003698:calibanite-greatsword"
+            ],
+            "byModelType": {
+                "Inner Circle Companion": [
+                    "000003698:heavy-bolt-pistol",
+                    "000003698:calibanite-greatsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003698:heavy-bolt-pistol",
+                "datasheetId": "000003698",
                 "line": 1,
                 "name": "Heavy bolt pistol",
                 "type": "Ranged",
@@ -101,6 +103,7 @@
             },
             {
                 "id": "000003698:calibanite-greatsword",
+                "datasheetId": "000003698",
                 "line": 2,
                 "name": "Calibanite greatsword",
                 "type": "Melee",
@@ -150,7 +153,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003698:heavy-bolt-pistol",
+                        "000003698:calibanite-greatsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

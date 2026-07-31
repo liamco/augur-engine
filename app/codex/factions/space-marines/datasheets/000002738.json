@@ -93,28 +93,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> bolt pistol; Astartes chainsword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002738",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> bolt pistol; Astartes chainsword.",
+            "parsed": [
+                "000002738:bolt-pistol",
+                "000002738:astartes-chainsword"
+            ],
+            "byModelType": {
+                "Sanguinary Priest": [
+                    "000002738:bolt-pistol",
+                    "000002738:astartes-chainsword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002738:bolt-pistol",
+                "datasheetId": "000002738",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -146,6 +141,7 @@
             },
             {
                 "id": "000002738:astartes-chainsword",
+                "datasheetId": "000002738",
                 "line": 2,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -174,7 +170,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002738",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002738:bolt-pistol",
+                        "000002738:astartes-chainsword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",

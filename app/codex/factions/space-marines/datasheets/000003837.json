@@ -65,40 +65,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> boltgun; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000003837",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Any number of models can each have their boltgun and close combat weapon replaced with one of the following:<ul><li>1  Astartes chainsword and 1 bolt pistol</li><li>1 thunder hammer</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000003837",
-                        "line": 2,
-                        "button": "•",
-                        "description": "Any number of models can each have their bolt pistol replaced with one of the following:<ul><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000003837",
-                        "line": 3,
-                        "button": "•",
-                        "description": "Any number of models can each have their Astartes chainsword replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> boltgun; close combat weapon.",
+            "parsed": [
+                "000003837:boltgun",
+                "000003837:close-combat-weapon"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000003837:boltgun",
+                    "000003837:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000003837:bolt-pistol",
+                "datasheetId": "000003837",
                 "line": 1,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -130,6 +113,7 @@
             },
             {
                 "id": "000003837:boltgun",
+                "datasheetId": "000003837",
                 "line": 2,
                 "name": "Boltgun",
                 "type": "Ranged",
@@ -159,6 +143,7 @@
             },
             {
                 "id": "000003837:hand-flamer",
+                "datasheetId": "000003837",
                 "line": 3,
                 "name": "Hand flamer",
                 "type": "Ranged",
@@ -177,7 +162,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 3,
                         "ap": 0,
                         "d": 1
@@ -192,6 +177,7 @@
             },
             {
                 "id": "000003837:inferno-pistol",
+                "datasheetId": "000003837",
                 "line": 4,
                 "name": "Inferno pistol",
                 "type": "Ranged",
@@ -223,9 +209,10 @@
                 "count": 1
             },
             {
-                "id": "000003837:plasma-pistol-standard",
+                "id": "000003837:plasma-pistol",
+                "datasheetId": "000003837",
                 "line": 5,
-                "name": "Plasma pistol – standard",
+                "name": "Plasma pistol",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -233,7 +220,8 @@
                         "line": 5,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma pistol – standard",
+                        "name": "Plasma pistol - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "PISTOL"
                         ],
@@ -244,27 +232,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000003837:plasma-pistol-supercharge",
-                "line": 6,
-                "name": "Plasma pistol – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000003837",
                         "line": 6,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma pistol – supercharge",
+                        "name": "Plasma pistol - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "PISTOL"
@@ -287,6 +262,7 @@
             },
             {
                 "id": "000003837:astartes-chainsword",
+                "datasheetId": "000003837",
                 "line": 7,
                 "name": "Astartes chainsword",
                 "type": "Melee",
@@ -316,6 +292,7 @@
             },
             {
                 "id": "000003837:power-fist",
+                "datasheetId": "000003837",
                 "line": 8,
                 "name": "Power fist",
                 "type": "Melee",
@@ -345,6 +322,7 @@
             },
             {
                 "id": "000003837:power-weapon",
+                "datasheetId": "000003837",
                 "line": 9,
                 "name": "Power weapon",
                 "type": "Melee",
@@ -374,6 +352,7 @@
             },
             {
                 "id": "000003837:thunder-hammer",
+                "datasheetId": "000003837",
                 "line": 10,
                 "name": "Thunder hammer",
                 "type": "Melee",
@@ -405,6 +384,7 @@
             },
             {
                 "id": "000003837:close-combat-weapon",
+                "datasheetId": "000003837",
                 "line": 11,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -433,7 +413,92 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000003837",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Any number of models can each have their boltgun and close combat weapon replaced with one of the following:<ul><li>1  Astartes chainsword and 1 bolt pistol</li><li>1 thunder hammer</li></ul>"
+                },
+                {
+                    "datasheetId": "000003837",
+                    "line": 2,
+                    "button": "•",
+                    "description": "Any number of models can each have their bolt pistol replaced with one of the following:<ul><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li></ul>"
+                },
+                {
+                    "datasheetId": "000003837",
+                    "line": 3,
+                    "button": "•",
+                    "description": "Any number of models can each have their Astartes chainsword replaced with one of the following:<ul><li>1 power fist</li><li>1 power weapon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000003837:boltgun",
+                        "000003837:close-combat-weapon"
+                    ],
+                    [
+                        "000003837:astartes-chainsword",
+                        "000003837:bolt-pistol"
+                    ],
+                    [
+                        "000003837:bolt-pistol",
+                        "000003837:power-fist"
+                    ],
+                    [
+                        "000003837:bolt-pistol",
+                        "000003837:power-weapon"
+                    ],
+                    [
+                        "000003837:astartes-chainsword",
+                        "000003837:hand-flamer"
+                    ],
+                    [
+                        "000003837:hand-flamer",
+                        "000003837:power-fist"
+                    ],
+                    [
+                        "000003837:hand-flamer",
+                        "000003837:power-weapon"
+                    ],
+                    [
+                        "000003837:astartes-chainsword",
+                        "000003837:inferno-pistol"
+                    ],
+                    [
+                        "000003837:inferno-pistol",
+                        "000003837:power-fist"
+                    ],
+                    [
+                        "000003837:inferno-pistol",
+                        "000003837:power-weapon"
+                    ],
+                    [
+                        "000003837:astartes-chainsword",
+                        "000003837:plasma-pistol"
+                    ],
+                    [
+                        "000003837:plasma-pistol",
+                        "000003837:power-fist"
+                    ],
+                    [
+                        "000003837:plasma-pistol",
+                        "000003837:power-weapon"
+                    ],
+                    [
+                        "000003837:thunder-hammer"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "blood-angels",
@@ -503,8 +568,19 @@
             "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model’s unit is not within 6\" of one or more friendly Blood Angels Character models, or 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Black Rage",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": true,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Berserk Fury",

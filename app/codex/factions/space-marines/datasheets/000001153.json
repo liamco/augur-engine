@@ -58,34 +58,23 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Cerberus neutron pulse array; armoured tracks.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001153",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001153",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Cerberus neutron pulse array; armoured tracks.",
+            "parsed": [
+                "000001153:cerberus-neutron-pulse-array",
+                "000001153:armoured-tracks"
+            ],
+            "byModelType": {
+                "Cerberu": [
+                    "000001153:cerberus-neutron-pulse-array",
+                    "000001153:armoured-tracks"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001153:cerberus-neutron-pulse-array",
+                "datasheetId": "000001153",
                 "line": 1,
                 "name": "Cerberus neutron pulse array",
                 "type": "Ranged",
@@ -117,6 +106,7 @@
             },
             {
                 "id": "000001153:heavy-bolter",
+                "datasheetId": "000001153",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -148,6 +138,7 @@
             },
             {
                 "id": "000001153:heavy-flamer",
+                "datasheetId": "000001153",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -165,7 +156,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -180,6 +171,7 @@
             },
             {
                 "id": "000001153:lascannon",
+                "datasheetId": "000001153",
                 "line": 4,
                 "name": "Lascannon",
                 "type": "Ranged",
@@ -209,6 +201,7 @@
             },
             {
                 "id": "000001153:multi-melta",
+                "datasheetId": "000001153",
                 "line": 5,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -240,6 +233,7 @@
             },
             {
                 "id": "000001153:storm-bolter",
+                "datasheetId": "000001153",
                 "line": 6,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -271,6 +265,7 @@
             },
             {
                 "id": "000001153:armoured-tracks",
+                "datasheetId": "000001153",
                 "line": 7,
                 "name": "Armoured tracks",
                 "type": "Melee",
@@ -299,7 +294,102 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001153",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>2 heavy bolters</li><li>2 lascannons</li></ul>"
+                },
+                {
+                    "datasheetId": "000001153",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model can be equipped with one of the following:<ul><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:heavy-bolter"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:heavy-flamer"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:multi-melta"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:storm-bolter"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:heavy-bolter",
+                        "000001153:heavy-flamer"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:heavy-bolter",
+                        "000001153:multi-melta"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:heavy-bolter",
+                        "000001153:storm-bolter"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:lascannon"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:lascannon",
+                        "000001153:heavy-bolter"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:lascannon",
+                        "000001153:heavy-flamer"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:lascannon",
+                        "000001153:multi-melta"
+                    ],
+                    [
+                        "000001153:cerberus-neutron-pulse-array",
+                        "000001153:armoured-tracks",
+                        "000001153:lascannon",
+                        "000001153:storm-bolter"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

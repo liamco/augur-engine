@@ -63,40 +63,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> monstrous bonesword and lash whip; monstrous scything talons.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000460",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s monstrous bonesword and lash whip can be replaced with one of the following:<ul><li>1 heavy venom cannon</li><li>1 stranglethorn cannon</li><li>1 monstrous scything talons</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000460",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s monstrous scything talons can be replaced with one of the following:<ul><li>1 heavy venom cannon*</li><li>1 stranglethorn cannon*</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000460",
-                        "line": 3,
-                        "button": "*",
-                        "description": "*This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon. This model cannot be equipped with more than 1 heavy venom cannon, and it cannot be equipped with more than 1 stranglethorn cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> monstrous bonesword and lash whip; monstrous scything talons.",
+            "parsed": [
+                "000000460:monstrous-bonesword-and-lash-whip",
+                "000000460:monstrous-scything-talons"
+            ],
+            "byModelType": {
+                "Hive Tyrant": [
+                    "000000460:monstrous-bonesword-and-lash-whip",
+                    "000000460:monstrous-scything-talons"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000460:heavy-venom-cannon",
+                "datasheetId": "000000460",
                 "line": 1,
                 "name": "Heavy venom cannon",
                 "type": "Ranged",
@@ -128,6 +111,7 @@
             },
             {
                 "id": "000000460:stranglethorn-cannon",
+                "datasheetId": "000000460",
                 "line": 2,
                 "name": "Stranglethorn cannon",
                 "type": "Ranged",
@@ -159,6 +143,7 @@
             },
             {
                 "id": "000000460:monstrous-bonesword-and-lash-whip",
+                "datasheetId": "000000460",
                 "line": 3,
                 "name": "Monstrous bonesword and lash whip",
                 "type": "Melee",
@@ -190,6 +175,7 @@
             },
             {
                 "id": "000000460:monstrous-scything-talons",
+                "datasheetId": "000000460",
                 "line": 4,
                 "name": "Monstrous scything talons",
                 "type": "Melee",
@@ -220,7 +206,49 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000460",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s monstrous bonesword and lash whip can be replaced with one of the following:<ul><li>1 heavy venom cannon</li><li>1 stranglethorn cannon</li><li>1 monstrous scything talons</li></ul>"
+                },
+                {
+                    "datasheetId": "000000460",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s monstrous scything talons can be replaced with one of the following:<ul><li>1 heavy venom cannon*</li><li>1 stranglethorn cannon*</li></ul>"
+                },
+                {
+                    "datasheetId": "000000460",
+                    "line": 3,
+                    "button": "*",
+                    "description": "*This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon. This model cannot be equipped with more than 1 heavy venom cannon, and it cannot be equipped with more than 1 stranglethorn cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000460:monstrous-bonesword-and-lash-whip",
+                        "000000460:monstrous-scything-talons"
+                    ],
+                    [
+                        "000000460:monstrous-bonesword-and-lash-whip",
+                        "000000460:heavy-venom-cannon"
+                    ],
+                    [
+                        "000000460:monstrous-bonesword-and-lash-whip",
+                        "000000460:stranglethorn-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": false
     },
     "supplement": {
         "key": "codex",

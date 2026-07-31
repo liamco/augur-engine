@@ -73,40 +73,25 @@
         ]
     },
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> 2 heavy flamers; 2 grav-flux bombards; armoured feet.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000131",
-                        "line": 1,
-                        "button": "•",
-                        "description": "Each of this model’s grav-flux bombards can be replaced with one of the following<ul><li>1 cyclonic melta lance</li><li>1 storm cannon</li><li>1 meltagun and 1 Leviathan siege claw</li><li>1 meltagun and 1 Leviathan siege drill</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000000131",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s 2 heavy flamers can be replaced with 2 twin volkite calivers."
-                    },
-                    {
-                        "datasheetId": "000000131",
-                        "line": 3,
-                        "button": "•",
-                        "description": "This model can be equipped with 3 hunter-killer missiles."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> 2 heavy flamers; 2 grav-flux bombards; armoured feet.",
+            "parsed": [
+                "000000131:heavy-flamer",
+                "000000131:grav-flux-bombard",
+                "000000131:armoured-feet"
+            ],
+            "byModelType": {
+                "Leviathan Dreadnought": [
+                    "000000131:heavy-flamer",
+                    "000000131:grav-flux-bombard",
+                    "000000131:armoured-feet"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000131:cyclonic-melta-lance",
+                "datasheetId": "000000131",
                 "line": 1,
                 "name": "Cyclonic melta lance",
                 "type": "Ranged",
@@ -131,13 +116,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000131:grav-flux-bombard",
+                "datasheetId": "000000131",
                 "line": 2,
                 "name": "Grav-flux bombard",
                 "type": "Ranged",
@@ -170,6 +159,7 @@
             },
             {
                 "id": "000000131:heavy-flamer",
+                "datasheetId": "000000131",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -187,7 +177,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -202,6 +192,7 @@
             },
             {
                 "id": "000000131:hunter-killer-missile",
+                "datasheetId": "000000131",
                 "line": 4,
                 "name": "Hunter-killer missile",
                 "type": "Ranged",
@@ -233,6 +224,7 @@
             },
             {
                 "id": "000000131:meltagun",
+                "datasheetId": "000000131",
                 "line": 5,
                 "name": "Meltagun",
                 "type": "Ranged",
@@ -257,13 +249,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000131:storm-cannon",
+                "datasheetId": "000000131",
                 "line": 6,
                 "name": "Storm cannon",
                 "type": "Ranged",
@@ -288,13 +284,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000131:twin-volkite-caliver",
+                "datasheetId": "000000131",
                 "line": 7,
                 "name": "Twin volkite caliver",
                 "type": "Ranged",
@@ -327,6 +327,7 @@
             },
             {
                 "id": "000000131:armoured-feet",
+                "datasheetId": "000000131",
                 "line": 8,
                 "name": "Armoured feet",
                 "type": "Melee",
@@ -356,6 +357,7 @@
             },
             {
                 "id": "000000131:leviathan-siege-claw",
+                "datasheetId": "000000131",
                 "line": 9,
                 "name": "Leviathan siege claw",
                 "type": "Melee",
@@ -378,13 +380,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000000131:leviathan-siege-drill",
+                "datasheetId": "000000131",
                 "line": 10,
                 "name": "Leviathan siege drill",
                 "type": "Melee",
@@ -409,13 +415,68 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "of this model"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000131",
+                    "line": 1,
+                    "button": "•",
+                    "description": "Each of this model’s grav-flux bombards can be replaced with one of the following<ul><li>1 cyclonic melta lance</li><li>1 storm cannon</li><li>1 meltagun and 1 Leviathan siege claw</li><li>1 meltagun and 1 Leviathan siege drill</li></ul>"
+                },
+                {
+                    "datasheetId": "000000131",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s 2 heavy flamers can be replaced with 2 twin volkite calivers."
+                },
+                {
+                    "datasheetId": "000000131",
+                    "line": 3,
+                    "button": "•",
+                    "description": "This model can be equipped with 3 hunter-killer missiles."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000131:heavy-flamer",
+                        "000000131:grav-flux-bombard",
+                        "000000131:armoured-feet"
+                    ],
+                    [
+                        "000000131:heavy-flamer",
+                        "000000131:grav-flux-bombard",
+                        "000000131:armoured-feet",
+                        "000000131:hunter-killer-missile"
+                    ],
+                    [
+                        "000000131:grav-flux-bombard",
+                        "000000131:armoured-feet",
+                        "000000131:twin-volkite-caliver"
+                    ],
+                    [
+                        "000000131:grav-flux-bombard",
+                        "000000131:armoured-feet",
+                        "000000131:twin-volkite-caliver",
+                        "000000131:hunter-killer-missile"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -476,8 +537,16 @@
             "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Duty Eternal",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "damage",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "One Shot",

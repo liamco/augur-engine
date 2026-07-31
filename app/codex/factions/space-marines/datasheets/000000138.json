@@ -60,21 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> Hand of Dominion; Emperor’s Sword.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> Hand of Dominion; Emperor’s Sword.",
+            "parsed": [
+                "000000138:hand-of-dominion",
+                "000000138:emperor-s-sword"
+            ],
+            "byModelType": {
+                "Roboute Guilliman – EPIC HERO": [
+                    "000000138:hand-of-dominion",
+                    "000000138:emperor-s-sword"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000138:hand-of-dominion",
+                "datasheetId": "000000138",
                 "line": 1,
                 "name": "Hand of Dominion",
                 "type": "Ranged",
@@ -106,6 +108,7 @@
             },
             {
                 "id": "000000138:emperor-s-sword",
+                "datasheetId": "000000138",
                 "line": 2,
                 "name": "Emperor’s Sword",
                 "type": "Melee",
@@ -137,6 +140,7 @@
             },
             {
                 "id": "000000138:hand-of-dominion-2",
+                "datasheetId": "000000138",
                 "line": 3,
                 "name": "Hand of Dominion",
                 "type": "Melee",
@@ -167,7 +171,22 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000138:hand-of-dominion",
+                        "000000138:emperor-s-sword"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

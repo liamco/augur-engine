@@ -55,34 +55,25 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> assault cannon; storm bolter; Dreadnought combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000001192",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 assault cannon</li><li>1 Dreadnought inferno cannon</li><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin lascannon</li></ul>"
-                    },
-                    {
-                        "datasheetId": "000001192",
-                        "line": 2,
-                        "button": "•",
-                        "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>1 Dreadnought inferno cannon</li><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 storm bolter and 1 Dreadnought combat weapon</li><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 twin lascannon</li></ul>"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> assault cannon; storm bolter; Dreadnought combat weapon.",
+            "parsed": [
+                "000001192:assault-cannon",
+                "000001192:storm-bolter",
+                "000001192:dreadnought-combat-weapon"
+            ],
+            "byModelType": {
+                "Chaplain Venerable Dreadnought": [
+                    "000001192:assault-cannon",
+                    "000001192:storm-bolter",
+                    "000001192:dreadnought-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000001192:assault-cannon",
+                "datasheetId": "000001192",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -114,6 +105,7 @@
             },
             {
                 "id": "000001192:dreadnought-inferno-cannon",
+                "datasheetId": "000001192",
                 "line": 2,
                 "name": "Dreadnought inferno cannon",
                 "type": "Ranged",
@@ -131,7 +123,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "2D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 6,
                         "ap": -1,
                         "d": 1
@@ -146,6 +138,7 @@
             },
             {
                 "id": "000001192:heavy-flamer",
+                "datasheetId": "000001192",
                 "line": 3,
                 "name": "Heavy flamer",
                 "type": "Ranged",
@@ -163,7 +156,7 @@
                         "range": 12,
                         "type": "Ranged",
                         "a": "D6",
-                        "bsWs": null,
+                        "bsWs": "N/A",
                         "s": 5,
                         "ap": -1,
                         "d": 1
@@ -177,9 +170,10 @@
                 "count": 1
             },
             {
-                "id": "000001192:heavy-plasma-cannon-standard",
+                "id": "000001192:heavy-plasma-cannon",
+                "datasheetId": "000001192",
                 "line": 4,
-                "name": "Heavy plasma cannon – standard",
+                "name": "Heavy plasma cannon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -187,7 +181,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Heavy plasma cannon – standard",
+                        "name": "Heavy plasma cannon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "BLAST"
                         ],
@@ -198,27 +193,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 2
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000001192:heavy-plasma-cannon-supercharge",
-                "line": 5,
-                "name": "Heavy plasma cannon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000001192",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Heavy plasma cannon – supercharge",
+                        "name": "Heavy plasma cannon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "BLAST",
                             "HAZARDOUS"
@@ -241,6 +223,7 @@
             },
             {
                 "id": "000001192:multi-melta",
+                "datasheetId": "000001192",
                 "line": 6,
                 "name": "Multi-melta",
                 "type": "Ranged",
@@ -272,6 +255,7 @@
             },
             {
                 "id": "000001192:storm-bolter",
+                "datasheetId": "000001192",
                 "line": 7,
                 "name": "Storm bolter",
                 "type": "Ranged",
@@ -303,6 +287,7 @@
             },
             {
                 "id": "000001192:twin-lascannon",
+                "datasheetId": "000001192",
                 "line": 8,
                 "name": "Twin lascannon",
                 "type": "Ranged",
@@ -334,6 +319,7 @@
             },
             {
                 "id": "000001192:armoured-feet",
+                "datasheetId": "000001192",
                 "line": 9,
                 "name": "Armoured feet",
                 "type": "Melee",
@@ -363,6 +349,7 @@
             },
             {
                 "id": "000001192:dreadnought-combat-weapon",
+                "datasheetId": "000001192",
                 "line": 10,
                 "name": "Dreadnought combat weapon",
                 "type": "Melee",
@@ -391,7 +378,149 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000001192",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 assault cannon</li><li>1 Dreadnought inferno cannon</li><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin lascannon</li></ul>"
+                },
+                {
+                    "datasheetId": "000001192",
+                    "line": 2,
+                    "button": "•",
+                    "description": "This model’s assault cannon can be replaced with one of the following:<ul><li>1 Dreadnought inferno cannon</li><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 storm bolter and 1 Dreadnought combat weapon</li><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 twin lascannon</li></ul>"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000001192:assault-cannon",
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:dreadnought-inferno-cannon"
+                    ],
+                    [
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:multi-melta"
+                    ],
+                    [
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:heavy-flamer"
+                    ],
+                    [
+                        "000001192:storm-bolter",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:twin-lascannon"
+                    ],
+                    [
+                        "000001192:assault-cannon",
+                        "000001192:heavy-flamer",
+                        "000001192:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000001192:heavy-flamer",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:dreadnought-inferno-cannon"
+                    ],
+                    [
+                        "000001192:heavy-flamer",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000001192:heavy-flamer",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:multi-melta"
+                    ],
+                    [
+                        "000001192:heavy-flamer",
+                        "000001192:dreadnought-combat-weapon"
+                    ],
+                    [
+                        "000001192:heavy-flamer",
+                        "000001192:dreadnought-combat-weapon",
+                        "000001192:twin-lascannon"
+                    ],
+                    [
+                        "000001192:assault-cannon"
+                    ],
+                    [
+                        "000001192:dreadnought-inferno-cannon"
+                    ],
+                    [
+                        "000001192:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000001192:multi-melta"
+                    ],
+                    [
+                        "000001192:twin-lascannon"
+                    ],
+                    [
+                        "000001192:assault-cannon",
+                        "000001192:dreadnought-inferno-cannon"
+                    ],
+                    [
+                        "000001192:dreadnought-inferno-cannon",
+                        "000001192:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000001192:dreadnought-inferno-cannon",
+                        "000001192:multi-melta"
+                    ],
+                    [
+                        "000001192:dreadnought-inferno-cannon",
+                        "000001192:twin-lascannon"
+                    ],
+                    [
+                        "000001192:assault-cannon",
+                        "000001192:heavy-plasma-cannon"
+                    ],
+                    [
+                        "000001192:heavy-plasma-cannon",
+                        "000001192:multi-melta"
+                    ],
+                    [
+                        "000001192:heavy-plasma-cannon",
+                        "000001192:twin-lascannon"
+                    ],
+                    [
+                        "000001192:assault-cannon",
+                        "000001192:multi-melta"
+                    ],
+                    [
+                        "000001192:multi-melta",
+                        "000001192:twin-lascannon"
+                    ],
+                    [
+                        "000001192:assault-cannon",
+                        "000001192:twin-lascannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",

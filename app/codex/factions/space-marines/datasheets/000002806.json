@@ -60,28 +60,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>Every model is equipped with:</b> Morkai bolt pistol; Morkai combat knife.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002806",
-                        "line": 1,
-                        "button": "•",
-                        "description": "None"
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>Every model is equipped with:</b> Morkai bolt pistol; Morkai combat knife.",
+            "parsed": [
+                "000002806:morkai-bolt-pistol",
+                "000002806:morkai-combat-knife"
+            ],
+            "byModelType": {
+                "*all*": [
+                    "000002806:morkai-bolt-pistol",
+                    "000002806:morkai-combat-knife"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000002806:morkai-bolt-pistol",
+                "datasheetId": "000002806",
                 "line": 1,
                 "name": "Morkai bolt pistol",
                 "type": "Ranged",
@@ -116,6 +111,7 @@
             },
             {
                 "id": "000002806:morkai-combat-knife",
+                "datasheetId": "000002806",
                 "line": 2,
                 "name": "Morkai combat knife",
                 "type": "Melee",
@@ -148,7 +144,29 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002806",
+                    "line": 1,
+                    "button": "•",
+                    "description": "None"
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002806:morkai-bolt-pistol",
+                        "000002806:morkai-combat-knife"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "space-wolves",

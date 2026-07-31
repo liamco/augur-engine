@@ -70,21 +70,30 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Chapter Ancient is equipped with:</b> 1 master-crafted power weapon; banner of Macragge.<br><br><b>The Chapter Champion is equipped with:</b> 1 blades of honour.<br><br><b>Each Victrix Honour Guard model is equipped with:</b> 1 master-crafted bolt carbine; 1 master-crafted power weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>The Chapter Ancient is equipped with:</b> 1 master-crafted power weapon; banner of Macragge.<br><br><b>The Chapter Champion is equipped with:</b> 1 blades of honour.<br><br><b>Each Victrix Honour Guard model is equipped with:</b> 1 master-crafted bolt carbine; 1 master-crafted power weapon.",
+            "parsed": [
+                "000004185:master-crafted-power-weapon",
+                "000004185:banner-of-macragge"
+            ],
+            "byModelType": {
+                "Chapter Ancient": [
+                    "000004185:master-crafted-power-weapon",
+                    "000004185:banner-of-macragge"
+                ],
+                "Chapter Champion": [
+                    "000004185:blades-of-honour"
+                ],
+                "Victrix Honour Guard model": [
+                    "000004185:master-crafted-bolt-carbine",
+                    "000004185:master-crafted-power-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000004185:master-crafted-bolt-carbine",
+                "datasheetId": "000004185",
                 "line": 1,
                 "name": "Master-crafted bolt carbine",
                 "type": "Ranged",
@@ -107,13 +116,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Victrix Honour Guard model"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004185:blades-of-honour",
+                "datasheetId": "000004185",
                 "line": 2,
                 "name": "Blades of honour",
                 "type": "Melee",
@@ -139,13 +152,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Chapter Champion"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000004185:master-crafted-power-weapon",
+                "datasheetId": "000004185",
                 "line": 3,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -168,13 +185,57 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Chapter Ancient",
+                            "Victrix Honour Guard model"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": []
+        },
+        "abilities": [
+            {
+                "id": "000004185:banner-of-macragge",
+                "name": "Banner of Macragge",
+                "description": "Once per battle, at the start of the Fight phase, the bearer can use this ability. If it does, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in the bearer's unit.",
+                "mechanics": [],
+                "mechanicsSource": "unparsed"
+            }
+        ],
+        "validLoadouts": [
+            {
+                "modelType": "Chapter Ancient – EPIC HERO",
+                "items": [
+                    [
+                        "000004185:master-crafted-power-weapon",
+                        "000004185:banner-of-macragge"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Chapter Champion – EPIC HERO",
+                "items": [
+                    [
+                        "000004185:blades-of-honour"
+                    ]
+                ]
+            },
+            {
+                "modelType": "Victrix Honour Guard",
+                "items": [
+                    [
+                        "000004185:master-crafted-bolt-carbine",
+                        "000004185:master-crafted-power-weapon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "codex",
@@ -261,15 +322,6 @@
             "name": "Glory of Ultramar",
             "legend": "",
             "description": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding <span class=\"kwb\">AIRCRAFT</span>). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase.",
-            "type": "Datasheet",
-            "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
-        },
-        {
-            "name": "Banner of Macragge",
-            "legend": "",
-            "description": "Once per battle, at the start of the Fight phase, the bearer can use this ability. If it does, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in the bearer’s unit.",
             "type": "Datasheet",
             "parameter": null,
             "mechanics": [],

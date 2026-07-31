@@ -55,28 +55,23 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>This model is equipped with:</b> heavy bolter; close combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000000238",
-                        "line": 1,
-                        "button": "•",
-                        "description": "This model’s heavy bolter can be replaced with 1 assault cannon."
-                    }
-                ],
-                "parsed": [],
-                "byModelType": {}
+        "defaultLoadout": {
+            "raw": "<b>This model is equipped with:</b> heavy bolter; close combat weapon.",
+            "parsed": [
+                "000000238:heavy-bolter",
+                "000000238:close-combat-weapon"
+            ],
+            "byModelType": {
+                "Ravenwing Darkshroud": [
+                    "000000238:heavy-bolter",
+                    "000000238:close-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
                 "id": "000000238:assault-cannon",
+                "datasheetId": "000000238",
                 "line": 1,
                 "name": "Assault cannon",
                 "type": "Ranged",
@@ -108,6 +103,7 @@
             },
             {
                 "id": "000000238:heavy-bolter",
+                "datasheetId": "000000238",
                 "line": 2,
                 "name": "Heavy bolter",
                 "type": "Ranged",
@@ -139,6 +135,7 @@
             },
             {
                 "id": "000000238:close-combat-weapon",
+                "datasheetId": "000000238",
                 "line": 3,
                 "name": "Close combat weapon",
                 "type": "Melee",
@@ -167,7 +164,33 @@
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000000238",
+                    "line": 1,
+                    "button": "•",
+                    "description": "This model’s heavy bolter can be replaced with 1 assault cannon."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000000238:heavy-bolter",
+                        "000000238:close-combat-weapon"
+                    ],
+                    [
+                        "000000238:close-combat-weapon",
+                        "000000238:assault-cannon"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",

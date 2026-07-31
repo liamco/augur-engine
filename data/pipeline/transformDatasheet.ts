@@ -4,10 +4,14 @@ import { transformKeywords } from "./transforms/transformKeywords";
 import { transformModels } from "./transforms/transformModels";
 import { transformUnitComposition } from "./transforms/transformUnitComposition";
 import { transformCosts } from "./transforms/transformCosts";
-import { transformWargear } from "./transforms/transformWargear";
+import {
+    transformWargear,
+    type ParsedWargearData,
+} from "./transforms/transformWargear";
 import {
     transformAbilities,
     extractFactionAbilities,
+    extractWargearAbilities,
     summariseAbilityMechanics,
     type ParsedFactionAbility,
 } from "./transforms/transformAbilities";
@@ -22,7 +26,12 @@ export interface AbilityMechanicsStats {
 }
 
 export interface TransformDatasheetResult {
-    datasheet: Record<string, unknown>;
+    /**
+     * Loosely typed because the datasheet is assembled from many transforms and
+     * written straight to JSON. `wargear` is called out because the coverage
+     * report reads it back.
+     */
+    datasheet: Record<string, unknown> & { wargear: ParsedWargearData };
     coreStratagems: ParsedStratagem[];
     factionAbilities: ParsedFactionAbility[];
     mechanicsStats: AbilityMechanicsStats;
@@ -48,7 +57,17 @@ export function transformDatasheet(raw: RawDatasheet): TransformDatasheetResult 
     const pointsCosts = transformCosts(raw.modelCosts);
 
     // 5. Transform wargear
-    const wargear = transformWargear(raw.wargear, raw.loadout, raw.options);
+    // Wargear-conferred abilities move off the abilities list and onto the
+    // wargear, where the loadout parser can resolve references to them.
+    const wargearAbilities = extractWargearAbilities(raw.abilities, raw.id);
+
+    const wargear = transformWargear(
+        raw.wargear,
+        raw.loadout,
+        raw.options,
+        unitComposition,
+        wargearAbilities,
+    );
 
     // 6. Transform abilities. Core/Faction abilities reduce to shells here;
     // Faction rules text is emitted separately onto the faction file, and Core

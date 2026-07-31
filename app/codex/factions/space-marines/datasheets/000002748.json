@@ -80,30 +80,32 @@
     "transport": "",
     "damaged": null,
     "wargear": {
-        "loadouts": {
-            "default": {
-                "raw": "<b>The Ravenwing Champion is equipped with:</b> bolt pistol; plasma talon; master-crafted power weapon.<br><br><b>Every other model is equipped with:</b> bolt pistol; plasma talon; Black Knight combat weapon.",
-                "parsed": [],
-                "byModelType": {}
-            },
-            "options": {
-                "raw": [
-                    {
-                        "datasheetId": "000002748",
-                        "line": 1,
-                        "button": "•",
-                        "description": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade launcher."
-                    }
+        "defaultLoadout": {
+            "raw": "<b>The Ravenwing Champion is equipped with:</b> bolt pistol; plasma talon; master-crafted power weapon.<br><br><b>Every other model is equipped with:</b> bolt pistol; plasma talon; Black Knight combat weapon.",
+            "parsed": [
+                "000002748:bolt-pistol",
+                "000002748:plasma-talon",
+                "000002748:master-crafted-power-weapon"
+            ],
+            "byModelType": {
+                "Ravenwing Champion": [
+                    "000002748:bolt-pistol",
+                    "000002748:plasma-talon",
+                    "000002748:master-crafted-power-weapon"
                 ],
-                "parsed": [],
-                "byModelType": {}
+                "other": [
+                    "000002748:bolt-pistol",
+                    "000002748:plasma-talon",
+                    "000002748:black-knight-combat-weapon"
+                ]
             }
         },
         "weapons": [
             {
-                "id": "000002748:astartes-grenade-launcher-frag",
+                "id": "000002748:astartes-grenade-launcher",
+                "datasheetId": "000002748",
                 "line": 1,
-                "name": "Astartes grenade launcher – frag",
+                "name": "Astartes grenade launcher",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -111,7 +113,8 @@
                         "line": 1,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Astartes grenade launcher – frag",
+                        "name": "Astartes grenade launcher - frag",
+                        "profileName": "frag",
                         "attributes": [
                             "BLAST"
                         ],
@@ -122,27 +125,14 @@
                         "s": 4,
                         "ap": 0,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002748:astartes-grenade-launcher-krak",
-                "line": 2,
-                "name": "Astartes grenade launcher – krak",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002748",
                         "line": 2,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Astartes grenade launcher – krak",
+                        "name": "Astartes grenade launcher - krak",
+                        "profileName": "krak",
                         "attributes": [],
                         "range": 24,
                         "type": "Ranged",
@@ -155,13 +145,16 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "ratio",
+                        "ratio": 3,
+                        "count": 1
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002748:bolt-pistol",
+                "datasheetId": "000002748",
                 "line": 3,
                 "name": "Bolt pistol",
                 "type": "Ranged",
@@ -192,9 +185,10 @@
                 "count": 1
             },
             {
-                "id": "000002748:plasma-talon-standard",
+                "id": "000002748:plasma-talon",
+                "datasheetId": "000002748",
                 "line": 4,
-                "name": "Plasma talon – standard",
+                "name": "Plasma talon",
                 "type": "Ranged",
                 "profiles": [
                     {
@@ -202,7 +196,8 @@
                         "line": 4,
                         "lineInWargear": 1,
                         "dice": "",
-                        "name": "Plasma talon – standard",
+                        "name": "Plasma talon - standard",
+                        "profileName": "standard",
                         "attributes": [
                             "RAPID FIRE 1"
                         ],
@@ -213,27 +208,14 @@
                         "s": 7,
                         "ap": -2,
                         "d": 1
-                    }
-                ],
-                "eligibility": [
-                    {
-                        "type": "any"
-                    }
-                ],
-                "count": 1
-            },
-            {
-                "id": "000002748:plasma-talon-supercharge",
-                "line": 5,
-                "name": "Plasma talon – supercharge",
-                "type": "Ranged",
-                "profiles": [
+                    },
                     {
                         "datasheetId": "000002748",
                         "line": 5,
                         "lineInWargear": 2,
                         "dice": "",
-                        "name": "Plasma talon – supercharge",
+                        "name": "Plasma talon - supercharge",
+                        "profileName": "supercharge",
                         "attributes": [
                             "HAZARDOUS",
                             "RAPID FIRE 1"
@@ -256,6 +238,7 @@
             },
             {
                 "id": "000002748:black-knight-combat-weapon",
+                "datasheetId": "000002748",
                 "line": 6,
                 "name": "Black Knight combat weapon",
                 "type": "Melee",
@@ -280,13 +263,17 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "other"
+                        ]
                     }
                 ],
                 "count": 1
             },
             {
                 "id": "000002748:master-crafted-power-weapon",
+                "datasheetId": "000002748",
                 "line": 7,
                 "name": "Master-crafted power weapon",
                 "type": "Melee",
@@ -309,13 +296,44 @@
                 ],
                 "eligibility": [
                     {
-                        "type": "any"
+                        "type": "modelType",
+                        "modelType": [
+                            "Ravenwing Champion"
+                        ]
                     }
                 ],
                 "count": 1
             }
         ],
-        "abilities": []
+        "options": {
+            "raw": [
+                {
+                    "datasheetId": "000002748",
+                    "line": 1,
+                    "button": "•",
+                    "description": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade launcher."
+                }
+            ]
+        },
+        "abilities": [],
+        "validLoadouts": [
+            {
+                "modelType": "any",
+                "items": [
+                    [
+                        "000002748:bolt-pistol",
+                        "000002748:plasma-talon",
+                        "000002748:master-crafted-power-weapon"
+                    ],
+                    [
+                        "000002748:bolt-pistol",
+                        "000002748:master-crafted-power-weapon",
+                        "000002748:astartes-grenade-launcher"
+                    ]
+                ]
+            }
+        ],
+        "loadoutsParsed": true
     },
     "supplement": {
         "key": "dark-angels",
