@@ -8,6 +8,8 @@
             "name": "Zealous Litanies",
             "description": "At the start of the battle round, you can select one of the Litanies listed below. If you do, until the end of the battle round, that Litany is active and its effects apply to all Adeptus Astartes Infantry and Adeptus Astartes Mounted units from your army.<br><br><span class=\"hi_custom\">Chorus of Relentless Hate</span><br>Add 2\" to the Move characteristic of models in this unit and add 1 to Advance rolls made for it.<br><br><span class=\"hi_custom\">Rite of Perfervid Wrath</span><br>Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.<br><br><span class=\"kwb\">CHANT</span> <span class=\"kwb2\">OF</span> <span class=\"kwb\">DEATHLESS</span> <span class=\"kwb\">DEVOTION</span><br>Models in this unit have a 5+ invulnerable save against ranged attacks.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Black Templars units, but it cannot include <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "Employing prayer as other warriors might use combat stimms, the Black Templars roar ritualised words of devotion that whip their ferocity and battle frenzy to near preternatural heights.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -225,6 +227,18 @@
             "cost": 25,
             "legend": "Within this relic burns a seemingly eternal flame, believed to have first been lit by Sigismund himself. Its light burns the sight from the foes’ eyes just as its tongues of flame have ignited countless pyres.",
             "description": "Black Templars model only. Models in the bearer’s unit have the Stealth ability.",
+            "mechanics": [
+                {
+                    "name": "Pyrebrand",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "STEALTH"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000002793",
@@ -241,6 +255,8 @@
             "cost": 30,
             "legend": "So all-consuming is this warrior’s hatred of the foe, so infectious his rage at their continued existence, that it grips those who fight alongside him and goads them to smite their enemies all the more swiftly.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -310,6 +326,8 @@
             "cost": 15,
             "legend": "Though the Black Templars are acclimatised to the acrid chemical incense burned within this iron thurible, their foes are not. Its fumes trigger nightmare visions and crippling terror amongst their ranks.",
             "description": "Black Templars model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle-shock test. When doing so, subtract 1 from the result.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000002793",
@@ -326,6 +344,26 @@
             "cost": 10,
             "legend": "Borne through a dozen bloody and hard-fought crusades, this crozius arcanum’s unique empathokinetic circuitry has absorbed the bellicosity and righteous wrath of every Chaplain who has ever wielded it. As a result, it now strikes with the force of a thunderbolt.",
             "description": "Chaplain model only. The bearer’s melee weapons have the [DEVASTATING WOUNDS] ability.",
+            "mechanics": [
+                {
+                    "name": "Benediction of Fury",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "DEVASTATING WOUNDS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000094",

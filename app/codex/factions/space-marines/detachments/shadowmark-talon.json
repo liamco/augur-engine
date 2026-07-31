@@ -8,6 +8,8 @@
             "name": "Masters of Shadow",
             "description": "Each time a ranged attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
             "legend": "The Raven Guard are renowned for their uncanny ability to move unseen, cloaking themselves in darkness as they close in upon their prey.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -19,6 +21,8 @@
             "name": "Unparalleled Tactician",
             "description": "Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP.",
             "legend": "A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle-brothers to pull the enemy out of formation.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000004148"
@@ -30,6 +34,8 @@
             "name": "Restrictions",
             "description": "Your army can include Raven Guard units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle-brothers to pull the enemy out of formation.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": []
             }
@@ -652,6 +658,18 @@
             "cost": 25,
             "legend": "This mechanical device contains miniaturised refraction fields and electromagnetic interference projectors that distort sensory apparatus, enabling the bearer and their unit to evade detection and infiltrate key positions.",
             "description": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
+            "mechanics": [
+                {
+                    "name": "Blackwing Shroud",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "INFILTRATORS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -707,6 +725,8 @@
             "cost": 30,
             "legend": "This wreath of circuitry from the Dark Age of Technology forces a whispering white noise into enemy minds and broadcasts.",
             "description": "Phobos model only. The bearer has the following ability:<br><br><b>Lord of Deceit (Aura):</b> Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000076",
@@ -723,6 +743,8 @@
             "cost": 15,
             "legend": "This warrior is a solitary predator whose footsteps are all but silent and whose form is one with the shadows.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has the Stealth and Lone Operative abilities.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -792,6 +814,8 @@
             "cost": 25,
             "legend": "Those who master the Path of Ambush guide their forces to launch surprise assaults on the enemy with the precise timing of true hunters.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

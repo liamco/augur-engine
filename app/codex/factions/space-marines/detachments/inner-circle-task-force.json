@@ -8,6 +8,16 @@
             "name": "Vowed Target",
             "description": "At the start of your Movement phase, select one of the following:<br><ul><li><b>Defensive Footing:</b> Select one objective marker you control. Until the start of your next Movement phase, that objective marker is your Vowed objective marker.</li><li><b>Aggressive Push:</b> Select one or more objective markers you do not control. Until the start of your next Movement phase, each of those objective markers is one of your Vowed objective markers. If a rule refers to a unit or model being within range of your Vowed objective marker, that rule takes effect if that unit or model is within range of one or more of your Vowed objective markers.</li></ul>Each time a Deathwing Infantry unit from your army makes an attack that targets a unit within range of one or more of your Vowed objective markers, add 1 to the Wound roll.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">DARK</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "Whether its true significance is kept a secret or not, there is a singular prize here that the Inner Circle have come to either secure or destroy. They will pursue this strategic objective with cold ferocity.",
+            "mechanics": [
+                {
+                    "name": "Vowed Target",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000071",
@@ -268,6 +278,8 @@
             "cost": 15,
             "legend": "Even amongst the elite of the Unforgiven, this warrior is a paragon of duty and martial might.",
             "description": "Deathwing model only. Melee weapons equipped by the bearer have the [lethal hits] ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",
@@ -285,6 +297,8 @@
             "cost": 10,
             "legend": "It is said that no secret can escape the gaze of this ocular augmetic, which belonged first to the feared Interrogator-Chaplain Enoch.",
             "description": "Deathwing model only. Each time you target the bearer’s unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+, you gain 1CP",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",
@@ -302,6 +316,8 @@
             "cost": 20,
             "legend": "This warrior lets nothing stand in their way or slow their advance, closing swiftly and relentlessly with their quarry",
             "description": "Deathwing model only. Each time the bearer’s unit Piles In or Consolidates, models in that unit can move an additional 3\".",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",
@@ -319,6 +335,8 @@
             "cost": 30,
             "legend": "Employing shock assault doctrines requiring ancient technology and immense tactical skill, the Deathwing are masters of catching their foes wholly unawares.",
             "description": "Deathwing model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",

@@ -8,6 +8,16 @@
             "name": "Calculated Annihilation",
             "description": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll a Wound roll of 1.",
             "legend": "Heavily enhanced with augmetics and the weight of many years of combat experience to aid them, the veteran warriors of Clan Company Avernii ruthlessly select and destroy their targets.",
+            "mechanics": [
+                {
+                    "name": "Calculated Annihilation",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -19,6 +29,8 @@
             "name": "Recalculating",
             "description": "Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.",
             "legend": "Caanok Var ensures every bolt shell is directed where it serves the greatest purpose.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -30,6 +42,8 @@
             "name": "Restrictions",
             "description": "Your army can include Iron Hands units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "Caanok Var ensures every bolt shell is directed where it serves the greatest purpose.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": []
             }
@@ -319,6 +333,8 @@
             "cost": 25,
             "legend": "This ancient augmetic empowers its bearer – and in extremis even their comrades – with the fury of the motive force.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -388,6 +404,8 @@
             "cost": 30,
             "legend": "Mounted in the warrior’s gorget, this device amplifies their battle cries into terrifying sonic shock waves.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -457,6 +475,8 @@
             "cost": 10,
             "legend": "A subcutaneous cranial honour relic, this device contains a strategic orbital upload relay.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -526,6 +546,8 @@
             "cost": 15,
             "legend": "An advanced auto-chirurgeon claimed by legend to be  the product of Ferrus Manus’ own labours, this device rapidly reknits sundered flesh and armour alike.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> <span class=\"kwb\">TERMINATOR</span> model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",

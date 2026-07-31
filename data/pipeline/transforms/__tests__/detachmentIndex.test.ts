@@ -14,6 +14,8 @@ const detachment = (over: Partial<ParsedDetachment> = {}): ParsedDetachment => (
             name: "Combat Doctrines",
             description: "At the start of your Command phase…",
             legend: "",
+            mechanics: [],
+            mechanicsSource: "unparsed",
         },
     ],
     stratagems: [
@@ -35,6 +37,8 @@ const detachment = (over: Partial<ParsedDetachment> = {}): ParsedDetachment => (
             cost: 10,
             legend: "Crafted by the Chapter's finest artificers.",
             description: "The bearer has a Save characteristic of 2+.",
+            mechanics: [],
+            mechanicsSource: "unparsed",
         },
     ],
     ...over,
@@ -83,8 +87,43 @@ describe("buildDetachmentIndex", () => {
                 cost: 10,
                 legend: "Crafted by the Chapter's finest artificers.",
                 description: "The bearer has a Save characteristic of 2+.",
+                mechanics: [],
+                mechanicsSource: "unparsed",
             },
         ]);
+    });
+
+    it("carries mechanics through, since the lab reads the engine layer via the index", () => {
+        const saveSet = {
+            name: "Artificer Armour",
+            entity: "thisUnit" as const,
+            effect: "setsCharacteristic" as const,
+            attribute: "save" as const,
+            value: 2,
+        };
+        const [entry] = buildDetachmentIndex([
+            {
+                faction: faction("space-marines", "Space Marines"),
+                detachments: [
+                    detachment({
+                        enhancements: [
+                            {
+                                id: "e1",
+                                name: "Artificer Armour",
+                                cost: 10,
+                                legend: "",
+                                description: "…",
+                                mechanics: [saveSet],
+                                mechanicsSource: "regex",
+                            },
+                        ],
+                    }),
+                ],
+            },
+        ]);
+
+        expect(entry.enhancements[0].mechanics).toEqual([saveSet]);
+        expect(entry.enhancements[0].mechanicsSource).toBe("regex");
     });
 
     it("omits stratagems, which stay in the per-detachment files", () => {
@@ -112,6 +151,8 @@ describe("buildDetachmentIndex", () => {
                                 description: "…",
                                 legend: "",
                                 eligibleDatasheets: "all",
+                                mechanics: [],
+                                mechanicsSource: "unparsed",
                             },
                         ],
                         enhancements: [
@@ -122,6 +163,8 @@ describe("buildDetachmentIndex", () => {
                                 legend: "",
                                 description: "…",
                                 eligibleDatasheets: { include: ["000000060"] },
+                                mechanics: [],
+                                mechanicsSource: "unparsed",
                             },
                         ],
                     }),

@@ -8,6 +8,8 @@
             "name": "Armoured Wrath",
             "description": "Once per phase for each <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
             "legend": "An Ironstorm Spearhead’s commanders guide their assault with pre-cogitated fire solutions, cycling data-gheist inloads and whispered binharic auguries. These ensure their warriors, and the belligerent machine spirits inhabiting their war engines, deliver their fire with inescapable accuracy.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -342,6 +344,26 @@
             "cost": 30,
             "legend": "This spearhead commander uses advanced augmetics to distribute targeting data. With these, they direct the fire of their war engine crews and rouse their machine spirits to operative superiority.",
             "description": "Techmarine model only. In your Command phase, select one Adeptus Astartes Vehicle model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that <span class=\"kwb\">VEHICLE</span> model have the [LETHAL HITS] ability.",
+            "mechanics": [
+                {
+                    "name": "Target Augury Web",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000140",
@@ -356,6 +378,24 @@
             "cost": 10,
             "legend": "The injuries of past battles have seen this warrior heavily rebuilt with ultra-durable cybernetic limbs and organs that render them extremely difficult to kill.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has the Feel No Pain 4+ ability.",
+            "mechanics": [
+                {
+                    "name": "The Flesh is Weak",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -425,6 +465,8 @@
             "cost": 35,
             "legend": "This battle-brother is steeped in hidden technological rites. Should their armoured charges be threatened, a burst of arcane binharic screed can rouse their machine spirits to vigilance.",
             "description": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000140",
@@ -439,6 +481,8 @@
             "cost": 20,
             "legend": "This commander is supremely gifted in the strategies of armoured warfare, understanding the capabilities of every war engine in the Chapters arsenal. Delivering precision orders, they ensure the vehicles under their command inflict the most punishing damage to the enemy even amidst complex manoeuvres.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In your Command phase, select one Adeptus Astartes Vehicle model within 6\" of the bearer. Until the start of your next Command phase, that <span class=\"kwb\">VEHICLE</span> is eligible to shoot even if it Fell Back or Advanced this turn.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

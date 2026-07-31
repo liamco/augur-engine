@@ -8,6 +8,19 @@
             "name": "Maddened Ferocity",
             "description": "Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes a melee attack, re-roll a Wound roll of 1.<br><br>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle-shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead.<br><br><span class=\"hi_custom\">Restrictions</span><br>Your army can include Blood Angels units, but it cannot include <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near-animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene-son of Sanguinius.",
+            "mechanics": [
+                {
+                    "name": "Maddened Ferocity",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -153,6 +166,18 @@
             "cost": 30,
             "legend": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression.",
             "description": "Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle-shock test for an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit within 6\" of the bearer, you can re-roll the result.",
+            "mechanics": [
+                {
+                    "name": "Carmine Reliquary",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000094",
@@ -169,6 +194,8 @@
             "cost": 25,
             "legend": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -238,6 +265,8 @@
             "cost": 35,
             "legend": "Legend has it that the blood-red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -307,6 +336,26 @@
             "cost": 25,
             "legend": "This artificer-crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine-spirit’s desire to drink the blood of the mightiest foes.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer makes a melee attack that targets a <span class=\"kwb\">CHARACTER</span>, <span class=\"kwb\">MONSTER</span> or <span class=\"kwb\">VEHICLE</span> unit, that attack has the [SUSTAINED HITS 2] ability.",
+            "mechanics": [
+                {
+                    "name": "Angel’s Fang",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 2,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

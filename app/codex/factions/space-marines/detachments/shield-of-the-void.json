@@ -8,6 +8,16 @@
             "name": "Focused Response",
             "description": "<ul><li>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack while firing Overwatch, an unmodified Hit roll of 5+ is required to score a hit, instead of an unmodified 6.</li><li>Each time an enemy unit makes an attack that targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army that is Set To Defend, subtract 1 from the Hit roll.</li></ul>",
             "legend": "The battle-brothers of the Shield Chapters commit their boarding strikes with a measured and meticulous application of force. They storm one section after the next while maintaining heightened awareness of lurking threats, and readying themselves to launch devastating counterattacks.",
+            "mechanics": [
+                {
+                    "name": "Focused Response",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -344,6 +354,8 @@
             "cost": 0,
             "legend": "A veteran of countless boarding strikes, this warrior leads their battle-brothers in a vanguard breach that drives into the foe's heart.",
             "description": "At the start of the first battle round, the bearer’s unit and up to one other friendly unit within the same Entry Zone can each make a Normal move of up to 6\".",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -380,6 +392,8 @@
             "cost": 0,
             "legend": "Gifted by the Tech-Priests of Tolorek for the cleansing of Ultramar, this powerful cyberspirit uses brute force technoscreed when entreated to overwhelm the systems of enemy ships, conquering them and yoking their protocols to the bearer's will.",
             "description": "In your Command phase, select one objective marker that you control and is within range of the bearer. Roll one D6: on a 2+, that objective marker is Secured by your army.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

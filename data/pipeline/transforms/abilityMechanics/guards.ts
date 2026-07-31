@@ -32,6 +32,42 @@ export function hasMultipleConditionalModifiers(text: string): boolean {
 }
 
 /**
+ * True when a description restricts its effect in a way the `Mechanic` type has
+ * no field for, so extracting it would produce a rule that fires far too often.
+ *
+ * This matters most for characteristic modifiers. "On a Critical Wound, improve
+ * the Armour Penetration characteristic of that attack by 1" yields a clean
+ * `staticNumber`/`armourPenetration` mechanic — which, with the trigger dropped,
+ * improves AP on *every* attack. The same goes for "until the end of the phase",
+ * "once per battle" and aura ranges: nothing in the engine tracks any of them.
+ *
+ * Deliberately not applied to hit/wound roll modifiers, which have their own
+ * narrower guard (`hasMultipleConditionalModifiers`) and a much longer history of
+ * being consumed — widening the net there would drop existing coverage that this
+ * change has no reason to touch.
+ */
+export function hasUnexpressedScope(text: string): boolean {
+    const markers = [
+        // Durations
+        /until the (?:end|start) of (?:the|your|its|that)\b/i,
+        // Usage limits
+        /once per (?:turn|phase|battle|round|game)/i,
+        /the first time\b/i,
+        // Triggers on a specific roll result
+        /on a critical (?:hit|wound)/i,
+        /\bunmodified (?:hit|wound|save)? ?rolls? of\b/i,
+        // Auras and any other proximity gate
+        /within \d+"/i,
+        // A target-selection or timing step before the effect applies
+        /select one (?:enemy|friendly|of the following)/i,
+        /after (?:this|that) (?:model|unit) has shot/i,
+        /each time (?:this|that) (?:model|unit) is set up/i,
+        /in your command phase/i,
+    ];
+    return markers.some((pattern) => pattern.test(text));
+}
+
+/**
  * Modifier direction.
  *
  * augur models these differently and the distinction is not cosmetic:

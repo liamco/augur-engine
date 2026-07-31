@@ -8,6 +8,16 @@
             "name": "Leader-beasts",
             "description": "Tyranid Warriors (see below), Tyranid Prime with Lash Whip and Winged Tyranid Prime units from your army have a 5+ invulnerable save.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>Tyranid Warriors with Ranged Bio-weapons and Tyranid Warriors with Melee Bio-weapons units from your army gain the <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> and <span class=\"kwb\">BATTLELINE</span> keywords, and while such a unit is not Battle-shocked, <span class=\"kwb\">TYRANID</span> <span class=\"kwb\">WARRIORS</span> models in that unit have an Objective Control characteristic of 3.",
             "legend": "Tyranid Warriors are adapted to shepherd the hive fleet’s teeming swarms to war. Benefiting from heightened senses, hardened forms and great strength, they serve as ferocious beacons for and enforcers of the Hive Mind’s indomitable will.",
+            "mechanics": [
+                {
+                    "name": "Leader-beasts",
+                    "entity": "thisUnit",
+                    "effect": "setsCharacteristic",
+                    "attribute": "invulnSave",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000002691",
@@ -112,6 +122,8 @@
             "cost": 10,
             "legend": "This Neurotyrant has been integrated into the synaptic web, maximising its control over the lesser bioforms and providing an additional layer of protection.",
             "description": "Neurotyrant model only. During the Declare Battle Formations step, the bearer can be attached to a Tyranid Warriors unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000002688"
@@ -124,6 +136,16 @@
             "cost": 20,
             "legend": "This node-beast’s bio-adaptations allow it to perceive the minutest electrical impulse or heat signature. Few prey organisms escape its clutches.",
             "description": "Winged Tyranid Prime or Tyranid Prime with Lash Whip model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll.",
+            "mechanics": [
+                {
+                    "name": "Ocular Adaptation",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000002694",
@@ -137,6 +159,8 @@
             "cost": 20,
             "legend": "The Hive Mind feeds accumulated sensory data to this leader‑beast, providing it with forewarning of incoming attacks long before the foe can land a blow.",
             "description": "Winged Tyranid Prime or Tyranid Prime with Lash Whip model only. Each time an attack targets the bearer’s unit, subtract 1 from the Hit roll.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000002694",
@@ -150,6 +174,8 @@
             "cost": 30,
             "legend": "This bioform and its accompanying organisms possess muscular adaptations that give them incredible speed and endurance.",
             "description": "<span class=\"kwb\">TYRANIDS</span> model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",

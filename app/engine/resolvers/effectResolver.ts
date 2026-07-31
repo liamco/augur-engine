@@ -15,7 +15,7 @@ export const resolveEffects = (
     const byAttribute = groupByAttribute(mechanics);
 
     for (const [attribute, attributeMechanics] of byAttribute.entries()) {
-        const effectSet = resolveEffectSet(attributeMechanics);
+        const effectSet = resolveEffectSet(attributeMechanics, attribute);
         modifiers.set(attribute, effectSet);
     }
 
@@ -31,7 +31,27 @@ export const resolveEffects = (
     return modifiers;
 };
 
-const resolveEffectSet = (mechanics: TaggedMechanic[]): ResolvedEffectSet => {
+/**
+ * Which way is "better" when two mechanics both *set* the same characteristic.
+ *
+ * `resolveEffectSet` is otherwise attribute-agnostic, so this is the one place
+ * that needs to know a 2+ save beats a 4+ while Toughness 8 beats Toughness 5.
+ * An attribute absent here defaults to higher-is-better.
+ */
+const BETTER_WHEN: Partial<Record<Attribute, "lower" | "higher">> = {
+    save: "lower",
+    invulnSave: "lower",
+    feelNoPain: "lower",
+    hit: "lower",
+    wound: "lower",
+    ballisticSkill: "lower",
+    weaponSkill: "lower",
+};
+
+const resolveEffectSet = (
+    mechanics: TaggedMechanic[],
+    attribute: Attribute,
+): ResolvedEffectSet => {
     const sources: MechanicSource[] = [];
     const effectSet: ResolvedEffectSet = { sources };
     const byEffect = groupByEffect(mechanics);
@@ -126,6 +146,15 @@ const resolveEffectSet = (mechanics: TaggedMechanic[]): ResolvedEffectSet => {
             0,
         );
         addSources(sources, mins);
+    }
+
+    if (byEffect.has("setsCharacteristic")) {
+        const sets = byEffect.get("setsCharacteristic")!;
+        const better = BETTER_WHEN[attribute] === "lower" ? Math.min : Math.max;
+        effectSet.setsCharacteristic = sets
+            .map((m) => Number(m.mechanic.value))
+            .reduce((best, value) => better(best, value));
+        addSources(sources, sets);
     }
 
     if (byEffect.has("setsFnp")) {

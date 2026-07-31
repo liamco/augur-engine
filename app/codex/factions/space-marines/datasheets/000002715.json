@@ -334,8 +334,16 @@
             "description": "Each time this model makes a ranged attack that targets an <span class=\"kwb\">INFANTRY</span> unit, improve the Armour Penetration characteristic of that attack by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Destructor",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "armourPenetration",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "One Shot",

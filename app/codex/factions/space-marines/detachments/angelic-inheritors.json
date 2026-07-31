@@ -8,6 +8,29 @@
             "name": "Legacy of the Angel",
             "description": "At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army.<br><br><b>Sanguinary Grace:</b> This unit is eligible to shoot and declare a charge in a turn in which it Fell Back.<br><br><b>Carmine Wrath:</b> Each time a model in this unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.<br><br><b>Their Appointed Hour:</b> You can re-roll Advance and Charge rolls made for this unit.<br><br><span class=\"hi_custom\">Restrictions</span><br>Your army can include Blood Angels units, but it cannot include <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene-sire’s boon and his curse.",
+            "mechanics": [
+                {
+                    "name": "Legacy of the Angel",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                },
+                {
+                    "name": "Legacy of the Angel",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -383,6 +406,18 @@
             "cost": 20,
             "legend": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+            "mechanics": [
+                {
+                    "name": "Prescient Flash",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -452,6 +487,8 @@
             "cost": 15,
             "legend": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene-sire.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities are active for the bearer’s unit, instead of only two of them.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -521,6 +558,8 @@
             "cost": 20,
             "legend": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence.",
             "description": "Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -576,6 +615,8 @@
             "cost": 25,
             "legend": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The first time the bearer is destroyed, roll one D6 at the end of the phase: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

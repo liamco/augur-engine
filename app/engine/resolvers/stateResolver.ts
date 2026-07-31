@@ -19,6 +19,15 @@ export const resolveState = (
         chargeBehaviour: combatState.chargeBehaviour,
         isDestroyed: combatState.isDestroyed,
         modelCount: combatState.modelCount,
+        /**
+         * Models the unit began with. Distinct from modelCount because it is how
+         * bearer-scoped rules are gated: an Enhancement buffs a single model, and
+         * the engine has no model scoping, so extraction emits
+         * `startingModelCount === 1` to mean "bearer and unit are the same
+         * model". Reading the live count instead would hand the buff to a squad
+         * whittled down to one survivor.
+         */
+        startingModelCount: combatState.startingModelCount,
         currentWounds: combatState.currentWounds,
     };
 

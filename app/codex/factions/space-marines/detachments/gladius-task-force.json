@@ -8,6 +8,8 @@
             "name": "Combat Doctrines",
             "description": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Combat Doctrine once per battle.<div></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Devastator Doctrine</p><p class=\"ShowFluff legend2\">The Codex Astartes details the strategic value of overwhelming firepower applied to key targets while advancing into position to eliminate threats.</p><p>This unit is eligible to shoot in a turn in which it <span class=\"tooltip00047\" data-tooltip-content=\"#tooltip_content00047\"><span class=\"tt kwbu\">Advanced</span></span>.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Tactical Doctrine</p><p class=\"ShowFluff legend2\">As the warring armies close upon one another and vicious fire-fights erupt, the Codex lays out strategies for swiftly seizing the initiative and combining versatility with firepower.</p><p>This unit is eligible to shoot and declare a charge in a turn in which it <span class=\"tooltip00051\" data-tooltip-content=\"#tooltip_content00051\"><span class=\"tt kwbu\">Fell</span> <span class=\"tt kwbu\">Back</span></span>.</p></td></tr></tbody></tbody></table></div><div class=\"BreakInsideAvoid\"><table max-width=\"480px\"><tbody><tbody><tr><td class=\"td_w\"><p class=\"impact18\">Assault Doctrine</p><p class=\"ShowFluff legend2\">The Codex Astartes leaves no doubt that the killing blow in most engagements must be delivered with a decisive close-quarters strike. It presents plentiful tactical means to achieve this end.</p><p>This unit is eligible to declare a charge in a turn in which it <span class=\"tooltip00047\" data-tooltip-content=\"#tooltip_content00047\"><span class=\"tt kwbu\">Advanced</span></span>.</p></td></tr></tbody></tbody></table></div>",
             "legend": "The Codex Astartes has proven its worth as a superb treatise on warfare over countless battlefields, and has remained so even after ten thousand years. Many Space Marines hold its wisdom in awe, and exemplify its teachings, employing a flexible set of combat doctrines to eliminate their enemy. Few opponents can withstand the fury of such an onslaught.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -225,6 +227,39 @@
             "cost": 10,
             "legend": "Crafted by the Chapter’s finest artificers, this suit of armour provides superior protection.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+            "mechanics": [
+                {
+                    "name": "Artificer Armour",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 5,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Artificer Armour",
+                    "entity": "thisUnit",
+                    "effect": "setsCharacteristic",
+                    "attribute": "save",
+                    "value": 2,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -294,6 +329,8 @@
             "cost": 15,
             "legend": "This stanza is inscribed on thrice-blessed parchment and affixed to its bearers’ wargear with a purity seal, there to inspire them to heroic acts of martial prowess.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -363,6 +400,8 @@
             "cost": 20,
             "legend": "An ardent student of the Codex Astartes, this commander epitomises its tactical genius, and the wisdom gleaned from its teachings guides their measured strategic responses amidst the fiercest battle.",
             "description": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000073",
@@ -386,6 +425,18 @@
             "cost": 25,
             "legend": "This commander drills his warriors relentlessly; combined with the Adeptus Astartes’ incredible reflexes, they produce a devastating rate of fire.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
+            "mechanics": [
+                {
+                    "name": "Fire Discipline",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

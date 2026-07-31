@@ -8,6 +8,8 @@
             "name": "Masters Of Manoeuvre",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army are eligible to shoot in a turn in which they Advanced or Fell Back.<br><br>Adeptus Astartes Mounted units from your army are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">DARK</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>Outrider Squad units from your army gain the Battleline keyword.",
             "legend": "The Ravenwing are fearsome and daring hunters, relentless in pursuit and furious on the assault When they lead the Dark Angels to war they inspire their battle-brothers with their strategic and tactical mastery of high-speed warfare, knightly bike-mounted venators leading every charge and rapidly outmanoeuvring the foe.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -261,6 +263,26 @@
             "cost": 10,
             "legend": "Those who command the Ravenwing on their hunts are often honoured with a masterwork blade, mace or other deadly close-quarters weapon. Such implements are fashioned by the Chapters artificers and weighted perfectly to be wielded from the saddle of a speeding armoured steed.",
             "description": "Ravenwing model only. Melee weapons equipped by the bearer have the [PRECISION] ability.",
+            "mechanics": [
+                {
+                    "name": "Master-crafted Weapon",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "PRECISION"
+                    ],
+                    "value": true,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000063",
@@ -281,6 +303,8 @@
             "cost": 30,
             "legend": "This warrior has mastered the art of such advanced ploys as feigning flight only to turn swiftly upon overextended foes and launch a devastating counter-offensive to shatter their lines.",
             "description": "Ravenwing model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000063",
@@ -301,6 +325,8 @@
             "cost": 15,
             "legend": "Daring and audacious, this commander favours breakneck outflanking manoeuvres that allow them to plunge into the enemy's midst from unexpected quarters.",
             "description": "Ravenwing model only. If the bearer’s unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000063",
@@ -321,6 +347,18 @@
             "cost": 20,
             "legend": "This commander is an expert scout as well as hunter, and takes advantage of these skills to seize the most advantageous position before battle begins.",
             "description": "Ravenwing model only. Models in the bearer’s unit have the Scouts 9\" ability.",
+            "mechanics": [
+                {
+                    "name": "Recon Hunter",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 9
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000063",

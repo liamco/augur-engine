@@ -1104,7 +1104,7 @@
                 {
                     "name": "Astartes Shield",
                     "entity": "thisUnit",
-                    "effect": "staticNumber",
+                    "effect": "setsCharacteristic",
                     "attribute": "invulnSave",
                     "value": 4
                 }
@@ -1130,7 +1130,7 @@
                 {
                     "name": "Astartes Banner",
                     "entity": "thisUnit",
-                    "effect": "rollBonus",
+                    "effect": "staticNumber",
                     "attribute": "objectiveControl",
                     "value": 1
                 }

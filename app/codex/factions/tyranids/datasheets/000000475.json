@@ -242,16 +242,8 @@
             "description": "While a friendly Tyranids unit is within 6\" of this unit, models in that unit have a 6+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Warp Field (Aura, Psychic)",
-                    "entity": "thisUnit",
-                    "effect": "staticNumber",
-                    "attribute": "invulnSave",
-                    "value": 6
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

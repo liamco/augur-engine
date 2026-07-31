@@ -1,13 +1,15 @@
 /**
- * Validate every ability mechanic in the codex.
+ * Validate every mechanic in the codex — datasheet abilities, detachment
+ * abilities and Enhancements.
  *
  * Run: npm run validate-mechanics
  *
  * The codex is the pipeline's single artefact: `npm run parse` writes
  * regex-derived mechanics, then the parse-ability-mechanics skill edits the same
  * files to fill the remainder. Nothing downstream validates — the engine reads
- * `ability.mechanics` straight into combat resolution — so this is the last
- * chance to catch an invalid mechanic before it silently corrupts damage maths.
+ * `ability.mechanics` and `enhancement.mechanics` straight into combat
+ * resolution — so this is the last chance to catch an invalid mechanic before it
+ * silently corrupts damage maths.
  *
  * Exits non-zero on any invalid mechanic.
  */
@@ -15,7 +17,10 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { Mechanic } from "@/app/types/Mechanic";
-import { findMechanicProblems } from "../transforms/abilityMechanics/validate";
+import {
+    findInertAttributes,
+    findMechanicProblems,
+} from "../transforms/abilityMechanics/validate";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 const FACTIONS = join(ROOT, "app/codex/factions");
@@ -24,7 +29,7 @@ const FACTIONS = join(ROOT, "app/codex/factions");
 const SKILL_SOURCES = new Set(["skill", "outOfScope", "needsSchema"]);
 const ALL_SOURCES = new Set(["regex", "unparsed", ...SKILL_SOURCES]);
 
-interface Ability {
+interface Rule {
     name: string;
     type?: string;
     description?: string;
@@ -32,83 +37,159 @@ interface Ability {
     mechanicsSource?: string;
 }
 
-function main() {
-    console.log("Validating ability mechanics in app/codex\n");
+interface Tally {
+    rules: number;
+    withMechanics: number;
+    bySource: Record<string, number>;
+    mechanics: Mechanic[];
+    problems: string[];
+}
 
-    const problems: string[] = [];
-    const bySource: Record<string, number> = {};
-    let abilities = 0;
-    let withMechanics = 0;
+const emptyTally = (): Tally => ({
+    rules: 0,
+    withMechanics: 0,
+    bySource: {},
+    mechanics: [],
+    problems: [],
+});
 
-    for (const faction of readdirSync(FACTIONS, { withFileTypes: true })) {
-        if (!faction.isDirectory()) continue;
+/** Check one rule — an ability or an enhancement — and fold it into the tally. */
+function checkRule(rule: Rule, where: string, tally: Tally): void {
+    tally.rules++;
+
+    const source = rule.mechanicsSource ?? "(missing)";
+    tally.bySource[source] = (tally.bySource[source] ?? 0) + 1;
+
+    if (!ALL_SOURCES.has(source)) {
+        tally.problems.push(
+            `${where}: mechanicsSource "${source}" is not one of ${[...ALL_SOURCES].join(", ")}`,
+        );
+    }
+
+    const mechanics = rule.mechanics ?? [];
+    if (mechanics.length > 0) {
+        tally.withMechanics++;
+        tally.mechanics.push(...mechanics);
+        for (const mechanic of mechanics) {
+            tally.problems.push(...findMechanicProblems(mechanic, where));
+        }
+    }
+
+    // A verdict that means "looked at, deliberately empty" must not also carry
+    // mechanics, and "skill" must actually carry some — otherwise the source
+    // label misrepresents the data.
+    if (source === "skill" && mechanics.length === 0) {
+        tally.problems.push(`${where}: source "skill" but no mechanics`);
+    }
+    if (
+        (source === "outOfScope" || source === "needsSchema") &&
+        mechanics.length > 0
+    ) {
+        tally.problems.push(`${where}: source "${source}" must not carry mechanics`);
+    }
+}
+
+const readJson = (path: string) => JSON.parse(readFileSync(path, "utf-8"));
+
+const factionDirs = () =>
+    readdirSync(FACTIONS, { withFileTypes: true }).filter((f) => f.isDirectory());
+
+function checkDatasheets(): Tally {
+    const tally = emptyTally();
+
+    for (const faction of factionDirs()) {
         const dir = join(FACTIONS, faction.name, "datasheets");
         if (!existsSync(dir)) continue;
 
         for (const file of readdirSync(dir)) {
             if (!file.endsWith(".json")) continue;
-            const path = join(dir, file);
-            const sheet = JSON.parse(readFileSync(path, "utf-8"));
+            const sheet = readJson(join(dir, file));
 
-            for (const ability of (sheet.abilities ?? []) as Ability[]) {
+            for (const ability of (sheet.abilities ?? []) as Rule[]) {
                 if (ability.type !== "Datasheet") continue;
-                abilities++;
-
-                const source = ability.mechanicsSource ?? "(missing)";
-                bySource[source] = (bySource[source] ?? 0) + 1;
-                const where = `${faction.name}/${file} ${ability.name}`;
-
-                if (!ALL_SOURCES.has(source)) {
-                    problems.push(
-                        `${where}: mechanicsSource "${source}" is not one of ${[...ALL_SOURCES].join(", ")}`,
-                    );
-                }
-
-                const mechanics = ability.mechanics ?? [];
-                if (mechanics.length > 0) {
-                    withMechanics++;
-                    for (const mechanic of mechanics) {
-                        problems.push(...findMechanicProblems(mechanic, where));
-                    }
-                }
-
-                // A verdict that means "looked at, deliberately empty" must not
-                // also carry mechanics, and "skill" must actually carry some —
-                // otherwise the source label misrepresents the data.
-                if (source === "skill" && mechanics.length === 0) {
-                    problems.push(`${where}: source "skill" but no mechanics`);
-                }
-                if (
-                    (source === "outOfScope" || source === "needsSchema") &&
-                    mechanics.length > 0
-                ) {
-                    problems.push(
-                        `${where}: source "${source}" must not carry mechanics`,
-                    );
-                }
+                checkRule(ability, `${faction.name}/${file} ${ability.name}`, tally);
             }
         }
     }
 
-    console.log(`  ${abilities} datasheet abilities, ${withMechanics} with mechanics`);
-    for (const [source, count] of Object.entries(bySource).sort((a, b) => b[1] - a[1])) {
-        console.log(`     ${source}: ${count}`);
+    return tally;
+}
+
+function checkDetachments(): { abilities: Tally; enhancements: Tally } {
+    const abilities = emptyTally();
+    const enhancements = emptyTally();
+
+    for (const faction of factionDirs()) {
+        const dir = join(FACTIONS, faction.name, "detachments");
+        if (!existsSync(dir)) continue;
+
+        for (const file of readdirSync(dir)) {
+            if (!file.endsWith(".json")) continue;
+            const detachment = readJson(join(dir, file));
+            const at = `${faction.name}/detachments/${file}`;
+
+            for (const ability of (detachment.abilities ?? []) as Rule[]) {
+                checkRule(ability, `${at} ability "${ability.name}"`, abilities);
+            }
+            for (const enhancement of (detachment.enhancements ?? []) as Rule[]) {
+                checkRule(
+                    enhancement,
+                    `${at} enhancement "${enhancement.name}"`,
+                    enhancements,
+                );
+            }
+        }
     }
 
-    const pending = bySource.unparsed ?? 0;
-    if (pending > 0) {
+    return { abilities, enhancements };
+}
+
+function report(label: string, tally: Tally): void {
+    if (tally.rules === 0) return;
+    console.log(`  ${label}: ${tally.rules}, ${tally.withMechanics} with mechanics`);
+    for (const [source, count] of Object.entries(tally.bySource).sort(
+        (a, b) => b[1] - a[1],
+    )) {
+        console.log(`     ${source}: ${count}`);
+    }
+}
+
+function main() {
+    console.log("Validating mechanics in app/codex\n");
+
+    const datasheets = checkDatasheets();
+    const { abilities, enhancements } = checkDetachments();
+    const all = [datasheets, abilities, enhancements];
+
+    report("datasheet abilities", datasheets);
+    report("detachment abilities", abilities);
+    report("enhancements", enhancements);
+
+    // Not an error: some inert emissions are correct data waiting on the engine
+    // (the damaged-profile Objective Control penalty). Surfaced so the gap
+    // between "has mechanics" and "does something" stays visible.
+    const inert = findInertAttributes(all.flatMap((t) => t.mechanics));
+    if (inert.length > 0) {
         console.log(
-            `\n  Step 4 pending: ${pending} abilities still unparsed. Run the parse-ability-mechanics skill.`,
+            `\n  Note: attribute(s) no combat resolver reads: ${inert.join(", ")}`,
         );
     }
 
+    const pending = all.reduce((n, t) => n + (t.bySource.unparsed ?? 0), 0);
+    if (pending > 0) {
+        console.log(
+            `\n  Step 4 pending: ${pending} rule(s) still unparsed. Run the parse-ability-mechanics skill.`,
+        );
+    }
+
+    const problems = all.flatMap((t) => t.problems);
     if (problems.length > 0) {
         console.error(`\n${problems.length} problem(s):`);
         problems.forEach((p) => console.error(`  - ${p}`));
         process.exitCode = 1;
         return;
     }
-    console.log("\nAll ability mechanics in the codex are valid.");
+    console.log("\nAll mechanics in the codex are valid.");
 }
 
 main();

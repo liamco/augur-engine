@@ -8,6 +8,19 @@
             "name": "Synaptic Imperatives",
             "description": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a <span class=\"kwb\">TYRANIDS</span> unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.<br><ul><li><b>Synaptic Augmentation:</b> While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.</li><li><b>Surging Vitality:</b> While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.</li><li><b>Goaded to Slaughter:</b> While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.</li></ul>",
             "legend": "The leader-beasts of these swarms act as conduits to the will of the Hive Mind. Irresistible imperatives lash out from them like whips that drive lesser bioforms to hurl themselves at the prey, to fight on through fatal wounds or to attack with redoubled savagery.",
+            "mechanics": [
+                {
+                    "name": "Synaptic Imperatives",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": "all"
         }
     ],
@@ -170,6 +183,8 @@
             "cost": 10,
             "legend": "The Hive Mind channels lethal energy through its synaptic bioforms.",
             "description": "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",
@@ -186,6 +201,8 @@
             "cost": 30,
             "legend": "A maelstrom of psychostatic disruption boils about this bioform. It degrades artificial and biological cognition alike, causing teleport signals to fluctuate, geopositioning cogitators to spew contradictory data, and onrushing enemy warriors to reel in confusion.",
             "description": "Tyranids Synapse model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this Enhancement. If it does, roll one D6: on a 4+, that enemy unit cannot arrive on the battlefield this turn.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",
@@ -207,6 +224,8 @@
             "cost": 20,
             "legend": "The Hive Mind’s synaptic network is so strong that even the mangled remains of mortally wounded beasts can be compelled to fight on.",
             "description": "Tyranids Synapse model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",
@@ -228,6 +247,8 @@
             "cost": 15,
             "legend": "This grotesque biomorphic symbiote buries itself in its hosts thorax and emits a droning psychic note. The longer prey are exposed to the sound, the worse their atavistic terror response becomes...",
             "description": "Tyranids Synapse model only. While an enemy unit is within 9\" of the bearer, worsen that units Leadership characteristic by 1.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",

@@ -30,6 +30,7 @@ const EFFECTS = new Set([
     "rollPenalty",
     "reroll",
     "rollBlock",
+    "setsCharacteristic",
     "setsFnp",
     "staticNumber",
 ]);
@@ -90,6 +91,56 @@ const OPERATORS = new Set([
 ]);
 
 const PHASES = new Set(["command", "movement", "shooting", "charge", "fight"]);
+
+/**
+ * Attributes a combat-phase resolver actually reads out of `resolved`.
+ *
+ * Being in `ATTRIBUTES` only means a mechanic is *well-formed*. Being in here
+ * means it will *do something*. The rest (`wounds`, `movement`, `leadership`,
+ * `objectiveControl`, `range`, `distanceToTarget`) are valid to write but no
+ * resolver consults them, so a mechanic targeting one is inert — it looks like
+ * coverage and changes nothing.
+ *
+ * Kept in step with the resolvers by hand; the accompanying test pins the list
+ * so a resolver gaining or losing a lookup is a visible change.
+ */
+export const ENGINE_CONSUMED_ATTRIBUTES: ReadonlySet<string> = new Set([
+    // resolveHitRoll
+    "hit",
+    "ballisticSkill",
+    "weaponSkill",
+    // resolveWoundRoll
+    "wound",
+    "strength",
+    "toughness",
+    // resolveSaveRoll
+    "save",
+    "armourPenetration",
+    "invulnSave",
+    // resolveAttackCount / resolveDamage / resolveFeelNoPain
+    "attacks",
+    "damage",
+    "feelNoPain",
+    // resolveTargetEligibility
+    "detectionRange",
+]);
+
+/**
+ * The distinct attributes in `mechanics` that no resolver reads, sorted.
+ *
+ * Reported rather than thrown: some inert emissions are correct data waiting on
+ * the engine (the damaged-profile Objective Control penalty, for instance), so
+ * failing the parse would mean deleting right answers. Surfacing the count keeps
+ * the gap visible instead.
+ */
+export function findInertAttributes(mechanics: Mechanic[]): string[] {
+    const inert = new Set<string>();
+    for (const mechanic of mechanics) {
+        const attr = mechanic.attribute;
+        if (attr && !ENGINE_CONSUMED_ATTRIBUTES.has(attr)) inert.add(attr);
+    }
+    return [...inert].sort();
+}
 
 export const MECHANIC_VOCABULARY = {
     effects: EFFECTS,

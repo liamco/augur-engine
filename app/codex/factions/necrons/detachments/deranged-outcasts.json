@@ -8,6 +8,16 @@
             "name": "Terrifying Charge",
             "description": "Each time a <span class=\"kwb\">NECRONS</span> unit from your army declares a charge, each enemy unit that is a target of that charge must take a Leadership test: if failed, until the end of the turn, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.",
             "legend": "The murderous onslaughts of the Destroyer Cults and the hideous skin-wearing Flayed Ones are utterly terrifying to their living victims. To witness their bloody advance is an experience that can break the will of even the most hardened veteran.",
+            "mechanics": [
+                {
+                    "name": "Terrifying Charge",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000538",
@@ -98,6 +108,24 @@
             "cost": 0,
             "legend": "Those who lead the Destroyer Cults will brook no impediment to slaughter. Thus, many of their number bid the Crypteks remove all protective systems, allowing the Destroyer to fight until the very moment their broken form is phased back to their stasis-tomb.",
             "description": "The bearer has the Feel No Pain 6+ ability. Once the bearer has destroyed one or more enemy units, it has the Feel No Pain 5+ ability instead.",
+            "mechanics": [
+                {
+                    "name": "Inured to Damage",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000002109",
@@ -111,6 +139,8 @@
             "cost": 0,
             "legend": "This monstrous Lord has long transcended their limiting Necron form and been wrought anew as a monstrously intimidating killing machine.",
             "description": "In your opponent’s Command phase, at the start of the Battle-shock step, select one enemy unit within 3\" of the bearer; that enemy unit must take a Battle-shock test. When doing so, if that enemy unit is Below Half-strength, subtract 1 from that test. This Enhancement cannot cause a unit to take two Battle-shock tests in the same phase.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000002109",

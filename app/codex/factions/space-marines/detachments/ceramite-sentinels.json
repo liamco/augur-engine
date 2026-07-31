@@ -8,6 +8,23 @@
             "name": "Adaptive Defence",
             "description": "Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes an attack, if that model’s unit is within a terrain feature, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.<br><br><span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army gain the <span class=\"kwb\">ENTRENCHED</span> keyword while all of the following are true:<br><ul><li>That unit is within a terrain feature.</li><li>That unit was not set up on the battlefield this turn.</li><li>No model in that unit has moved more than 3\" this turn.</li></ul>",
             "legend": "These Space Marines are experts in fighting from rapidly prepared defensive positions. They are able to maximise the potential of almost any terrain to serve as an ad-hoc strongpoint, rapidly assessing optimal firing lines and punishing the foe’s every attempt to advance and dislodge them.",
+            "mechanics": [
+                {
+                    "name": "Adaptive Defence",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1
+                },
+                {
+                    "name": "Adaptive Defence",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -336,6 +353,8 @@
             "cost": 25,
             "legend": "This rare honour badge celebrates a warrior who refuses to give up, even in the face of apparently certain death.",
             "description": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -349,6 +368,8 @@
             "cost": 20,
             "legend": "This unique vox-and-augur augmetic provides the bearer with unparalleled tactical data vital to coordinating an aggressive defence in battle.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn:<br><ul><li>That unit is eligible to perform an Action in a turn in which it Fell Back.</li><li>That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.</li></ul>",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -418,6 +439,27 @@
             "cost": 15,
             "legend": "Several artificer-crafted and heavily shrouded servo-skulls are tethered to this device, their linked visual feeds making the bearer nigh impossible to evade.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+            "mechanics": [
+                {
+                    "name": "Spy-skull Data Link",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Spy-skull Data Link",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -487,6 +529,8 @@
             "cost": 25,
             "legend": "Few officers of the Chapter can match this commander’s talent for cunning defensive troop dispositions.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. After both players have deployed their armies, select up to three <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

@@ -8,6 +8,16 @@
             "name": "Command Protocols",
             "description": "While a Necrons Character model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll.",
             "legend": "The Necron nobility and their high-ranking courtiers make war in a codified and relentless fashion. Their command protocols crackle out across multi-dimensional spectra from carrier-wave projectors, compelling their semi-sentient soldiery into battle one overriding directive at a time",
+            "mechanics": [
+                {
+                    "name": "Command Protocols",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000522",
@@ -187,6 +197,8 @@
             "cost": 20,
             "legend": "With this device the bearer can twist space and time about them, enfolding them in a swirling darkness. When it fades, they have vanished, rematerialising elsewhere through a miracle of arcane science.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of any enemy units, the bearer can use this Enhancement. If it does, remove that unit from the battlefield. Then, in the Reinforcements step of your next Movement phase, set up that unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -211,6 +223,18 @@
             "cost": 20,
             "legend": "Clouds of hyper-dense particles billow from this small artefact, to obscure and shield the bearer from the foe.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. While the bearer is leading a unit, models in that unit have the Stealth ability.",
+            "mechanics": [
+                {
+                    "name": "Nether-realm Casket",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "STEALTH"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -235,6 +259,16 @@
             "cost": 35,
             "legend": "This engraved sigil-circuitry transforms the fierce will of the bearer into a surging lash across every phasal state.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the Hit roll.",
+            "mechanics": [
+                {
+                    "name": "Phasal Subjugator (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -259,6 +293,24 @@
             "cost": 30,
             "legend": "The bearers living metal mantle is bonded to mirror versions of itself across many dimensional thresholds.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. The bearer has the Feel No Pain 4+ ability.",
+            "mechanics": [
+                {
+                    "name": "Enaegic Dermal Bond",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",

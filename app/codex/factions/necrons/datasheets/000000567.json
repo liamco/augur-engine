@@ -201,16 +201,8 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 3\" of this Fortification, models in that unit have a 5+ invulnerable save against ranged attacks.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Phase Shift Generator (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "staticNumber",
-                    "attribute": "invulnSave",
-                    "value": 5
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Phase-shifted Cover",

@@ -18,6 +18,7 @@ import {
     buildDetachmentIndex,
     type DetachmentIndexInput,
 } from "./transforms/detachmentIndex";
+import { findInertAttributes } from "./transforms/abilityMechanics";
 import type { RawDatasheet, RawFaction, ParsedStratagem } from "./types";
 import type { ParsedFactionAbility } from "./transforms/transformAbilities";
 
@@ -241,6 +242,61 @@ function reportMechanicsCoverage() {
 }
 
 /**
+ * Report coverage for the detachments' own rules — their abilities and their
+ * Enhancements. Read straight off the parsed detachments rather than a separate
+ * accumulator, since each one already carries its mechanics.
+ */
+function reportDetachmentMechanicsCoverage() {
+    const rules = detachmentIndexInputs.flatMap(({ detachments }) =>
+        detachments.flatMap((det) => [
+            ...det.abilities.map((a) => ({ kind: "ability" as const, rule: a })),
+            ...det.enhancements.map((e) => ({
+                kind: "enhancement" as const,
+                rule: e,
+            })),
+        ]),
+    );
+    if (rules.length === 0) return;
+
+    const tally = (kind: "ability" | "enhancement") => {
+        const of = rules.filter((r) => r.kind === kind);
+        const parsed = of.filter((r) => r.rule.mechanics.length > 0).length;
+        return { parsed, total: of.length };
+    };
+
+    const abilities = tally("ability");
+    const enhancements = tally("enhancement");
+    const pct = ({ parsed, total }: { parsed: number; total: number }) =>
+        total === 0 ? 0 : Math.round((100 * parsed) / total);
+
+    console.log(
+        `\nDetachment mechanics:\n` +
+            `  abilities:    ${abilities.parsed}/${abilities.total} parsed (${pct(abilities)}%)\n` +
+            `  enhancements: ${enhancements.parsed}/${enhancements.total} parsed (${pct(enhancements)}%)`,
+    );
+
+    // Attributes no combat resolver reads. Emitting one is not an error — the
+    // damaged-profile Objective Control penalty is correct data waiting on the
+    // engine — but silent inert output is how coverage comes to mean nothing.
+    const inert = findInertAttributes(rules.flatMap((r) => r.rule.mechanics));
+    if (inert.length > 0) {
+        console.log(
+            `  NOTE: ${inert.length} attribute(s) emitted that no resolver reads: ${inert.join(", ")}`,
+        );
+    }
+
+    const unparsed =
+        abilities.total - abilities.parsed + enhancements.total - enhancements.parsed;
+    if (unparsed > 0) {
+        console.log(
+            `\n  STEP 4 PENDING — ${unparsed} detachment rule(s) have no mechanics.\n` +
+                `  This parse reset any previously skill-authored mechanics in the detachment files.\n` +
+                `  Run the parse-ability-mechanics skill, then npm run reindex-detachments.`,
+        );
+    }
+}
+
+/**
  * Write the accumulated core stratagems. Skipped on a filtered run, where only a
  * subset of datasheets was read and writing would truncate the file.
  */
@@ -314,6 +370,7 @@ function main() {
     }
 
     reportMechanicsCoverage();
+    reportDetachmentMechanicsCoverage();
 
     if (!validateOnly) {
         writeCoreStratagems();

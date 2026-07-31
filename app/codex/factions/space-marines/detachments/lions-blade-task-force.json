@@ -8,6 +8,8 @@
             "name": "In The Lion’s Claws",
             "description": "<ul><li>Each time an enemy unit (excluding <span class=\"kwb\">MONSTERS</span> and <span class=\"kwb\">VEHICLES</span>) within Engagement Range of one or more Ravenwing units from your army Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.</li><li>Each time a Deathwing unit from your army declares a charge, if one or more targets of that charge are within Engagement Range of one or more <span class=\"kwb\">RAVENWING</span> units from your army, add 2 to the Charge roll.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">DARK</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "Those unfortunate enough to be caught between the devastating speed of the Ravenwing and the adamantine might of the Deathwing are pinned in place and torn to shreds by their combined fury.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -224,6 +226,8 @@
             "cost": 15,
             "legend": "The eldest relic weapons of the Dark Angels trace their lineage to ancient Caliban and are wielded only by the greatest champions of the Unforgiven.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000000096",
@@ -293,6 +297,8 @@
             "cost": 15,
             "legend": "This veteran of the Ravenwing has spent mortal lifetimes in the saddle, leading mechanised cavalry to battle on countless worlds.",
             "description": "Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re-roll Desperate Escape tests taken for models in the bearer’s unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000063",
@@ -343,6 +349,16 @@
             "cost": 25,
             "legend": "Possessed of obdurate will, this warrior champion instils an indomitable resolve and absolute refusal to cede ground within his brothers.",
             "description": "Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle-shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+            "mechanics": [
+                {
+                    "name": "Stalwart Champion",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "objectiveControl",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000073",
@@ -377,6 +393,8 @@
             "cost": 20,
             "legend": "This ancient teleport homer projects a powerful narrow‑band signal, enabling the teleportarium chambers of orbiting vessels to lock on to the bearer even amid severe atmospheric or empyric disturbances.",
             "description": "Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000065",

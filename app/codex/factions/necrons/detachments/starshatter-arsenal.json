@@ -8,6 +8,25 @@
             "name": "Relentless Onslaught",
             "description": "Each time a <span class=\"kwb\">NECRONS</span> model (excluding Monster models) from your army makes an attack that targets a unit within range of one or more objective markers, add 1 to the Hit roll. In addition, ranged weapons equipped by Necrons Vehicle and Necrons Mounted models (excluding Titanic models) from your army have the [ASSAULT] ability.",
             "legend": "The Necrons possess countless terrifying engines of war. When mustered in great number, these instruments of annihilation sweep across the battlefield, seeking to reclaim lost realms and obliterate any foolish enough to trespass upon the territories of their ancient dynasty.",
+            "mechanics": [
+                {
+                    "name": "Relentless Onslaught",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "ASSAULT"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Relentless Onslaught",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000000541",
@@ -206,6 +225,23 @@
             "cost": 30,
             "legend": "When this noble unleashes the might of their cosmic armoury, their followers are left in no doubt as to the importance of the battle at hand. If they do not strive to live up to the lethal effectiveness of the dynasty’s war engines, their Overlord’s wrath will be terrible.",
             "description": "Overlord or Catacomb Command Barge model only. While a friendly <span class=\"kwb\">NECRONS</span> unit (excluding Monster and Titanic units) is within 6\" of the bearer, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+            "mechanics": [
+                {
+                    "name": "Dread Majesty (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1
+                },
+                {
+                    "name": "Dread Majesty (Aura)",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -220,6 +256,27 @@
             "cost": 15,
             "legend": "Feeding vampirically on datastreams from the dynasty’s war engines, this device enables its owner to track enemies through multiple dimensions, leaving them no hiding place.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+            "mechanics": [
+                {
+                    "name": "Miniaturised Nebuloscope",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Miniaturised Nebuloscope",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -244,6 +301,8 @@
             "cost": 10,
             "legend": "This Necron noble is a master of rapid warfare, commanding armoured columns with great precision.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. In your Command phase, select one friendly Necrons Vehicle or Necrons Mounted unit (excluding Titanic units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -268,6 +327,8 @@
             "cost": 25,
             "legend": "When activated, this device wreathes dynastic craft in a time-dilation field that reduces the force of incoming blows and shots.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. In your Command phase, select one friendly Necrons Vehicle or Necrons Mounted unit (excluding Titanic units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",

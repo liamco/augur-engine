@@ -39,6 +39,11 @@ export interface ResolvedEffectSet {
     halveDamage?: boolean;
     minDamage?: number;
     setsFnp?: number;
+    /**
+     * A characteristic replaced outright. The consuming resolver applies it in
+     * place of the datasheet value, before any staticNumber/roll modifiers.
+     */
+    setsCharacteristic?: number;
     staticNumber?: number;
     rollBlock?: boolean;
     sources: MechanicSource[];

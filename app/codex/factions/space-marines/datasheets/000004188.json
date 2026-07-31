@@ -432,7 +432,7 @@
                 {
                     "name": "Second Company Banner",
                     "entity": "thisUnit",
-                    "effect": "rollBonus",
+                    "effect": "staticNumber",
                     "attribute": "objectiveControl",
                     "value": 1
                 },
@@ -465,7 +465,7 @@
                 {
                     "name": "Refractor Field",
                     "entity": "thisUnit",
-                    "effect": "staticNumber",
+                    "effect": "setsCharacteristic",
                     "attribute": "invulnSave",
                     "value": 5
                 }
@@ -482,7 +482,7 @@
                 {
                     "name": "Storm Shield",
                     "entity": "thisUnit",
-                    "effect": "staticNumber",
+                    "effect": "setsCharacteristic",
                     "attribute": "invulnSave",
                     "value": 4
                 }

@@ -265,8 +265,16 @@
             "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Blood Chalice",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "armourPenetration",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

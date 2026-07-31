@@ -8,6 +8,8 @@
             "name": "Arcanoscientific Expertise",
             "description": "In your Command phase, for each Cryptek unit in your army, select one of the following abilities. Until the start of your next Command phase, your unit has that ability.<br><ul><li><b>Hyperlocation Stutter (Aura):</b> While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this model, add 2 to Advance rolls made for that unit.</li><li><b>Transharmonic Disruption (Aura):</b> While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this model, add 1 to the Strength characteristic of weapons equipped by models in that unit.</li><li><b>Quantum Interface (Aura):</b> While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this model, models in that unit have a 5+ invulnerable save.</li></ul>",
             "legend": "Dispatched to acquire eldritch artefacts in the deadliest of confines, Crypteks augment their immortal retinues with their arcane technical knowledge and devices, ensuring they are sufficient to dominate the vessels and complexes they invade.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000530",
@@ -114,6 +116,24 @@
             "cost": 0,
             "legend": "This Cryptek's living metal body has long been the foundation for their most ingenious alterations.",
             "description": "Add 1 to the Toughness and Wounds characteristics of the bearer. The bearer has a 4+ invulnerable save.",
+            "mechanics": [
+                {
+                    "name": "Cryptometric Experimentation",
+                    "entity": "thisUnit",
+                    "effect": "setsCharacteristic",
+                    "attribute": "invulnSave",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000002108",
@@ -130,6 +150,8 @@
             "cost": 0,
             "legend": "With a gesture, the bearer of this device can cosmically link one doorway to somewhere else entirely.",
             "description": "Once per turn, when the bearer ends a Normal, Advance or Fall Back move within 3\" of an open Hatchway or when the bearer opens a Hatchway, it can, before any units decide if they wish to fire Overwatch, use this ability. If it does, remove the bearer from the battlefield and set it back up on the battlefield wholly within 3\" of another open Hatchway and not within Engagement Range of one or more enemy units. When doing so, if the bearer cannot be set back up on the battlefield, it is destroyed.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000002108",

@@ -8,6 +8,8 @@
             "name": "Hyperphasing",
             "description": "At the end of your opponent’s turn, you can select a number of <span class=\"kwb\">NECRONS</span> units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:<br><br><div class=\"BreakInsideAvoid\"><table bordercolor=\"#888\"><tbody><tr><td><table class=\" customTable tablefont\" bordercolor=\"#888\"><tbody><tr><td><b>BATTLE SIZE</b></td><td><b>NUMBER OF UNITS</b></td></tr><tr><td>Incursion</td><td><b>Up to 1 units </b></td></tr><tr><td>Strike Force</td><td><b>Up to 2 units </b></td></tr><tr><td>Onslaught</td><td><b>Up to 3 units </b></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table></td></tr></tbody></table></div><br>Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
             "legend": "Employing fractal corridors, dolmen gates and ancient translocation science, the Necrons are able to phase in and out of existence. Nowhere is safe for the terrified foe as mechanoid hunters appear from unfolding planar lattices to slaughter or escape retribution into gulfs of darkness, only to materialise elsewhere to kill anew.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": "all"
         }
     ],
@@ -216,6 +218,8 @@
             "cost": 25,
             "legend": "With a mind as labyrinthine as the multi-dimensional tomb itself, this commander directs their servants in complex forays through the tomb’s hyperspatial architecture, catching the witless enemy off guard.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. While the bearer is on the battlefield or in Strategic Reserves, add one to the number of units from your army that you can select for the Hyperphasing rule.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -240,6 +244,16 @@
             "cost": 25,
             "legend": "This ancient being will suffer no threats to their rule, stepping imperiously from twisting nightmare dimensions to annihilate any who dare to oppose them.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. Each time a model in the bearer’s unit makes an attack, re-roll a Hit roll of 1. If the bearer’s unit was set up on the battlefield this turn, you can re-roll the Hit roll instead.",
+            "mechanics": [
+                {
+                    "name": "Arisen Tyrant",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -264,6 +278,8 @@
             "cost": 15,
             "legend": "Wound with filaments of temporal circuitry, this amulet enables the bearer to accelerate themselves and their closest guardians in stuttering bursts of compressed time.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. Each time the bearer’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer’s unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",
@@ -288,6 +304,18 @@
             "cost": 20,
             "legend": "This hypermaterial key unlocks portals between transpatial dimensions embedded into a tomb’s architecture. Through such limitless doorways, the Necrons can pursue their quarry wherever they hide.",
             "description": "<span class=\"kwb\">NECRONS</span> model only. Models in the bearer’s unit have the Deep Strike ability.",
+            "mechanics": [
+                {
+                    "name": "Osteoclave Fulcrum",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "DEEP STRIKE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000523",

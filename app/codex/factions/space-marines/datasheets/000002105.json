@@ -229,16 +229,8 @@
             "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Rampart",
-                    "entity": "thisUnit",
-                    "effect": "staticNumber",
-                    "attribute": "invulnSave",
-                    "value": 2
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "INSPIRING COMMANDER",

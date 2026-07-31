@@ -8,6 +8,19 @@
             "name": "A Noble Death in Combat",
             "description": "Each time a Death Company model from your army makes a melee attack, re-roll a Wound roll of 1 if that model’s unit is below its Starting Strength; if that model’s unit is Below Half-strength, you can re-roll the Wound roll instead.<br><br><span class=\"hi_custom\">KEYWORDS</span><br>If you select this Detachment, Death Company Marines and Death Company Marines with Bolt Rifles units from your army have the <span class=\"kwb\">BATTLELINE</span> keyword.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">BLOOD</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "For the lost brothers of the Death Company one final battle remains. The sacrifice of each fallen warrior inspires his surviving brothers to ever greater acts of savage violence.",
+            "mechanics": [
+                {
+                    "name": "A Noble Death in Combat",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000166",
@@ -156,6 +169,8 @@
             "cost": 20,
             "legend": "As maddening hallucinatory memories of long-forgotten battles flash across this warriors mind, he is granted a sliver of the Primarchs combat prowess.",
             "description": "Death Company model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000003832",
@@ -169,6 +184,8 @@
             "cost": 25,
             "legend": "Spiritual energy flows from this crimson gem, filling its bearer with a ferocious desire to tear their foes limb from limb. Those infused with its energies may fight on despite suffering seemingly mortal wounds.",
             "description": "Death Company model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000003832",
@@ -182,6 +199,8 @@
             "cost": 15,
             "legend": "Overcome by maddening hallucinations, this warrior sees in all enemy champions glimmers of Horus' dark majesty and thus strives to destroy them.",
             "description": "Death Company model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of one or more enemy <span class=\"kwb\">CHARACTER</span> units, you can select one of those <span class=\"kwb\">CHARACTER</span> units and roll six D6: for each 4+, one <span class=\"kwb\">CHARACTER</span> model in that unit suffers 1 mortal wound.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000003832",
@@ -195,6 +214,8 @@
             "cost": 10,
             "legend": "This Son of Sanguinius appears to the brothers of the Death Company as a paragon of their Primarchs martial prowess. Should he fall in battle, the vengeful fury of the Lost will be inflamed.",
             "description": "Death Company model only. It the bearer is destroyed, until the end of your next turn, each time a friendly <span class=\"kwb\">DEATH</span> <span class=\"kwb\">COMPANY</span> model makes an attack, add 1 to the 1 Hit roll.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000003832",

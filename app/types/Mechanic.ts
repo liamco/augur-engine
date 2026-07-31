@@ -77,6 +77,12 @@ export type Effect =
     | "rollPenalty"
     | "reroll"
     | "rollBlock"
+    /**
+     * Replace a characteristic outright ("the bearer has a Save characteristic
+     * of 2+", "has a 4+ invulnerable save") rather than adjust it. Distinct from
+     * `staticNumber`, which sums — a set has to win over the datasheet value.
+     */
+    | "setsCharacteristic"
     | "setsFnp"
     | "staticNumber";
 

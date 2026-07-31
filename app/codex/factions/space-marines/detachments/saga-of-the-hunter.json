@@ -8,6 +8,8 @@
             "name": "Pack’s Quarry",
             "description": "Each time a model in a Space Wolves unit from your army makes a melee attack that targets an enemy unit, if that enemy unit is within Engagement Range of one or more other Adeptus Astartes units from your army, or if the attacking unit contains more models than that enemy unit:<br><ul><li>Add 1 to the Hit roll.</li><li>If your Saga is completed (see below), add 1 to the Wound roll as well.</li></ul><br><span class=\"hi_custom\">Saga of the Hunter</span><br>At the start of the first battle round, your Quarry tally is 0. Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army fights, after all of those attacks have been resolved, add 1 to your Quarry tally for each enemy unit destroyed by those attacks.<br><br>Once your Quarry tally is equal to or greater than the number shown in the table below (depending on the battle size), your Saga is completed.<br><br><div class=\"BreakInsideAvoid\"><table bordercolor=\"#888\"><tbody><tr><td><table class=\" customTable tablefont\" bordercolor=\"#888\"><tbody><tr><td><b>BATTLE SIZE</b></td><td><b>QUARRY TALLY</b></td></tr><tr><td>Incursion</td><td><b>2</b></td></tr><tr><td>Strike Force</td><td><b>3</b></td></tr><tr><td>Onslaught</td><td><b>4</b></td></tr></tbody></table></td></tr></tbody></table></div>",
             "legend": "At their Wolf Lord’s command, the Space Wolves advance upon their prey with lupine hunger, singling out the weak and overwhelming the strong with concentrated force and furious aggression.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000282",
@@ -258,6 +260,18 @@
             "cost": 20,
             "legend": "A seasoned hunter, this warrior knows well that speed and decisiveness can turn the tide of any battle.",
             "description": "Space Wolves model only. Models in the bearer’s unit have the Scouts 7\" ability.",
+            "mechanics": [
+                {
+                    "name": "Swift Hunter",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "SCOUTS"
+                    ],
+                    "value": 7
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000284",
@@ -280,6 +294,24 @@
             "cost": 15,
             "legend": "All Fenrisians possess a formidable constitution, yet this warrior demonstrates legendary resolve, shrugging off wounds that would fell lesser men.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The bearer has the Feel No Pain 4+ ability.",
+            "mechanics": [
+                {
+                    "name": "Fenrisian Grit",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -349,6 +381,18 @@
             "cost": 5,
             "legend": "This warrior possesses an affinity with Fenrisian beasts and can inspire a frothing rage in their lupine companions with but a single barked command.",
             "description": "Space Wolves model only. In your Command phase, select one friendly <span class=\"kwb\">SPACE</span> <span class=\"kwb\">WOLVES</span> unit within 9\" of the bearer. Until the start of your next Command phase, teeth and claws and Tyrnak and Fenrir weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "mechanics": [
+                {
+                    "name": "Wolf Master",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LETHAL HITS"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000284",
@@ -371,6 +415,8 @@
             "cost": 10,
             "legend": "There is no substitute for raw aggression. This warrior fights with the berserk rage of a thunderwolf, tearing apart their foes with violent fury.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks characteristic of melee weapons equipped by the bearer. Each time the bearer ends a Charge move, until the end of the turn, add an additional 1 to the Attacks characteristic of those weapons.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

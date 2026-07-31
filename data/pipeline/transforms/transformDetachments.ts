@@ -6,7 +6,11 @@ import type {
     ParsedEnhancement,
     ParsedDetachmentAbility,
 } from "../types";
+import type { Mechanic } from "@/app/types/Mechanic";
 import { slugify } from "../utils/slugify";
+import { extractDetachmentRuleMechanics } from "./abilityMechanics";
+import type { Scope } from "./abilityMechanics/bearerScope";
+import type { MechanicsSource } from "./transformAbilities";
 
 /**
  * Strip detachment prefix from stratagem type.
@@ -33,6 +37,29 @@ function transformStratagem(raw: RawStratagem): ParsedStratagem {
     };
 }
 
+/**
+ * Extract a detachment rule's mechanics and label where they came from.
+ *
+ * `scopeFallback` distinguishes the two callers: an Enhancement's implicit
+ * subject is the single model bearing it, a detachment ability's is a unit from
+ * your army.
+ */
+function extractRule(
+    name: string,
+    description: string,
+    scopeFallback: Scope,
+): { mechanics: Mechanic[]; mechanicsSource: MechanicsSource } {
+    const { mechanics } = extractDetachmentRuleMechanics(
+        name,
+        description,
+        scopeFallback,
+    );
+    return {
+        mechanics,
+        mechanicsSource: mechanics.length > 0 ? "regex" : "unparsed",
+    };
+}
+
 function transformEnhancement(raw: {
     id: string;
     name: string;
@@ -46,6 +73,7 @@ function transformEnhancement(raw: {
         cost: parseInt(raw.cost, 10),
         legend: raw.legend,
         description: raw.description,
+        ...extractRule(raw.name, raw.description, "bearer"),
     };
 }
 
@@ -60,6 +88,7 @@ function transformDetachmentAbility(raw: {
         name: raw.name,
         description: raw.description,
         legend: raw.legend,
+        ...extractRule(raw.name, raw.description, "unit"),
     };
 }
 

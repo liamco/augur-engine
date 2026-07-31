@@ -8,6 +8,18 @@
             "name": "Shield of the Imperium",
             "description": "Ranged weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
             "legend": "Across blood-drenched battlefields, within towering citadels and isolated orbital stations, the Angels of Death throw back tides of traitors, mutants, xenos and heretics, and purge enemy holdings of foes thanks to their disciplined strategies and fighting skills. All who oppose them are met with volleys of deadly accurate firepower long before they reach the battle-brothers’ razor-sharp blades.",
+            "mechanics": [
+                {
+                    "name": "Shield of the Imperium",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "HEAVY"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -250,6 +262,8 @@
             "cost": 20,
             "legend": "This hero refuses to yield whilst foes remain, fighting back from the brink of death like a vengeful demigod.",
             "description": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -263,6 +277,8 @@
             "cost": 15,
             "legend": "The Chapter’s orbiting warships stand ready to unleash devastation at this leader’s command.",
             "description": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000073",
@@ -286,6 +302,16 @@
             "cost": 15,
             "legend": "This commander and their warriors hold their ground tenaciously against even overwhelming numbers.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+            "mechanics": [
+                {
+                    "name": "Stoic Defender",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -355,6 +381,27 @@
             "cost": 25,
             "legend": "There are few who have a deeper understanding of the tenets of siege warfare than this warrior.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+            "mechanics": [
+                {
+                    "name": "Architect of War",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                },
+                {
+                    "name": "Architect of War",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "IGNORES COVER"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

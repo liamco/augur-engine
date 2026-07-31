@@ -8,6 +8,8 @@
             "name": "Questing Tendrils",
             "description": "<span class=\"kwb\">TYRANIDS</span> units with this ability are eligible to charge in a turn in which they Fell Back. Vanguard Invader units with this ability are eligible to charge in a turn in which they Advanced.",
             "legend": "In the early stages of an invasion, the Hive Mind harries and unbalances its foes with lightning-fast flanking attacks, before encircling them for the final, bloody slaughter.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": "all"
         }
     ],
@@ -198,6 +200,8 @@
             "cost": 20,
             "legend": "This warrior organism has identified installations and routes of communication and supply vital to the prey. As the Tyranid invasion commences so the beast orchestrates ambushes and terror raids against these priority targets, ensuring that those enemy reinforcements who do reach the battlefield do so in bloodied disarray.",
             "description": "<span class=\"kwb\">TYRANIDS</span> model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",
@@ -219,6 +223,8 @@
             "cost": 15,
             "legend": "Subdermal crystals in this organisms carapace capture and redirect light, helping to conceal it.",
             "description": "Vanguard Invader model only. The bearer has the Stealth ability and each time a ranged attack targets the bearer’s unit, models in that unit have the Benefit of Cover against that attack.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000463",
@@ -235,6 +241,39 @@
             "cost": 10,
             "legend": "This hunter seeks vital priority prey that has been pheromonally marked for swift slaughter.",
             "description": "Vanguard Invader model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "mechanics": [
+                {
+                    "name": "Stalker",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Stalker",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "wound",
+                    "value": 1,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000463",
@@ -251,6 +290,8 @@
             "cost": 20,
             "legend": "While no true synapse beast, this bioform has been grafted with a limited synaptic symbiote, the influence of which increases its host’s ability to formulate and enforce large-scale predatory strategies.",
             "description": "<span class=\"kwb\">TYRANIDS</span> model only. After both players have deployed their armies, you can select up to three Vanguard Invader units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000460",

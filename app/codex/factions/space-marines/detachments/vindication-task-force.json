@@ -8,6 +8,8 @@
             "name": "Purge and Sanctify",
             "description": "<ul><li>Each time an attack targets an Ancient unit from your army, if that unit is within range of one or more objective markers and the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.</li><li>Each time a Crusader Squad unit from your army makes a Righteous Zeal move, that unit can end that move as close as possible to the closest objective marker instead of as close as possible to the closest enemy unit.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Black Templars units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "As the battle-brothers of a Vindication Task Force purge the Emperor’s domain in fire and blood, they see their holy quest as recovering Humanity’s rightful dominion. They scour the stain of the unclean, topple false idols, breach strongholds of unholy faith and plant the crusade’s standards in their place, branding such sites with the sacred icons of their brotherhood.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000001165",
@@ -134,6 +136,8 @@
             "cost": 15,
             "legend": "This gleaming finial is said to have once topped Terra’s holiest spire and been gifted by the third Ecclesiarch to the High Marshal. It radiates an imperious superiority, buffeting impure minds with bellicose neural suppression until those who mean the bearer ill are left staggering.",
             "description": "Ancient model only. Each time an enemy unit selects the bearer’s unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any olher negative modifiers to that Charge roll).",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000001165",
@@ -150,6 +154,16 @@
             "cost": 25,
             "legend": "The piety and honour of this warrior can be felt wherever he fights. His presence rouses the ardent souls of the Black Templars, warding Sigismund’s heirs from the blasphemy of the unbeliever.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have a 5+ invulnerable save.",
+            "mechanics": [
+                {
+                    "name": "Consecrating Aura",
+                    "entity": "thisUnit",
+                    "effect": "setsCharacteristic",
+                    "attribute": "invulnSave",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -219,6 +233,18 @@
             "cost": 10,
             "legend": "What Dark Age technology may lie inside this icon-wreathed sphere pales compared to its true power: that of the Emperor’s blessing. When activated, the orb briefly emits a glowing nimbus of protective energy so powerful that it can hold back the corruptive fury of the naked Warp. Thus shielded, Black Templars may use their fleet’s teleportarium shrines even without the awesome protection of Terminator armour.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have the Deep Strike ability.",
+            "mechanics": [
+                {
+                    "name": "Orb of the Emperor’s Aegis",
+                    "entity": "thisUnit",
+                    "effect": "addsAbility",
+                    "abilities": [
+                        "DEEP STRIKE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -288,6 +314,8 @@
             "cost": 20,
             "legend": "This lauded guardian is trusted with the stewardship of the crusade’s most precious standards. His unyielding presence and preservation of his charge amidst fire and heresy inspire his brothers to acts of extreme heroism.",
             "description": "Crusade Ancient model only. While the bearer is leading a unit, each time you roll one D6 for the bearer’s Vengeful Exhortation ability, add 1 to the result.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000004136"

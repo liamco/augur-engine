@@ -8,6 +8,29 @@
             "name": "Psychic Disciplines",
             "description": "At the start of the battle round, select one of the following Psychic Disciplines. Until the end of the battle round, that Psychic Discipline is active and its effects apply to all Adeptus Astartes Psyker units from your army.<br><br><span class=\"h_custom\">Biomancy Discipline</span><br>Add 2\" to the Move characteristic of models in this unit.<br><br><span class=\"h_custom\">Divination Discipline</span><br>Each time a model in this unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.<br><br><span class=\"h_custom\">Pyromancy Discipline</span><br>Each time a ranged attack made by a model in this unit targets an enemy unit within 12\", improve the Armour Penetration characteristic of that attack by 1.<br><br><span class=\"h_custom\">Telekinesis Discipline</span><br>Each time a ranged attack targets this unit, subtract 1 from the Strength characteristic of that attack.<br><br><span class=\"h_custom\">Telepathy Discipline</span><br>Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Weapon Skill or Ballistic Skill characteristics and/or any or all modifiers to the Hit roll.",
             "legend": "Librarians spend their lives mastering psychic disciplines, learning how to manipulate the energies of the Immaterium to confound their foes and embolden their battle-brothers.",
+            "mechanics": [
+                {
+                    "name": "Psychic Disciplines",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "hit",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                },
+                {
+                    "name": "Psychic Disciplines",
+                    "entity": "thisUnit",
+                    "effect": "reroll",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "shooting"
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",
@@ -398,6 +421,8 @@
             "cost": 25,
             "legend": "Those who specialise in prognostication may foresee the flow of battle and position their allies accordingly.",
             "description": "Adeptus Astartes Psyker model only (excluding Terminator models). Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer’s unit, the bearer’s unit can make a Normal move of up to D6\", or up to 6\" instead if the Divination Discipline is active for your army.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000119",
@@ -413,6 +438,8 @@
             "cost": 30,
             "legend": "The powers of the Immaterium flow through the psyker, heightening his speed and that of his battle-brothers.",
             "description": "Adeptus Astartes Psyker model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced, and if the Biomancy Discipline is active for your army, it is eligible to declare a charge in a turn in which it Fell Back.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",
@@ -429,6 +456,8 @@
             "cost": 20,
             "legend": "By manipulating the minds of the foe, practitioners of telepathy may obfuscate their presence.",
             "description": "Adeptus Astartes Psyker model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit, and if the Telepathy Discipline is active for your army, the bearer’s unit cannot be targeted by ranged attacks unless the attacking model is within 18\".",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",
@@ -445,6 +474,18 @@
             "cost": 35,
             "legend": "The Librarian wreathes the ammunition of his allies in armour-eroding halos of azure fire.",
             "description": "Adeptus Astartes Psyker model only. Ranged weapons equipped by models in the bearer’s unit have the [ANTI-MONSTER 5+] and [ANTI-VEHICLE 5+] abilities, and:<br><ul><li>The [SUSTAINED HITS 1] ability if the Pyromancy Discipline is active for your army.</li><li>Add 6\" to the Range characteristic of those weapons if the Telekinesis Discipline is active for your army.</li></ul>",
+            "mechanics": [
+                {
+                    "name": "Fusillade",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "SUSTAINED HITS"
+                    ],
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000079",

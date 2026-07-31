@@ -362,8 +362,16 @@
             "description": "Add 1 to the Toughness characteristic of models in this unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Column from the Major Altar",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "toughness",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         },
         {
             "name": "Water from the Stoup of Elucidation",
@@ -371,8 +379,16 @@
             "description": "Improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Water from the Stoup of Elucidation",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "armourPenetration",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

@@ -212,7 +212,7 @@
                 {
                     "name": "Astartes Banner",
                     "entity": "thisUnit",
-                    "effect": "rollBonus",
+                    "effect": "staticNumber",
                     "attribute": "objectiveControl",
                     "value": 1
                 }
@@ -225,19 +225,8 @@
             "description": "Once per battle, when this model is selected to fight, it can use this ability. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in this model’s unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Deeds of Heroism",
-                    "entity": "thisUnit",
-                    "effect": "rollBonus",
-                    "attribute": "attacks",
-                    "value": 1,
-                    "phase": [
-                        "fight"
-                    ]
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         }
     ]
 }

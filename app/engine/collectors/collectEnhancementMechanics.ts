@@ -1,21 +1,28 @@
 import { CombatContext } from "@/app/types/CombatContext";
+import { TestUnit } from "@/app/types/Test";
 import { TaggedMechanic } from "./collectAllMechanics";
 
+/**
+ * Mechanics from the Enhancement carried by each unit's CHARACTER model.
+ *
+ * Both sides are collected. Enhancements skew defensive — a set Save
+ * characteristic, an invulnerable save, Feel No Pain — so collecting only the
+ * attacker would leave the whole layer unable to fire in the case where it
+ * matters most.
+ */
 export const collectEnhancementMechanics = (
     context: CombatContext,
-): TaggedMechanic[] => {
-    const results: TaggedMechanic[] = [];
-    const attacker = context.attacker as { enhancement?: { mechanics?: any[] } };
+): TaggedMechanic[] => [
+    ...forSide(context.attacker, "attacker"),
+    ...forSide(context.defender, "defender"),
+];
 
-    if (attacker.enhancement?.mechanics) {
-        for (const mechanic of attacker.enhancement.mechanics) {
-            results.push({
-                mechanic,
-                layer: "enhancement",
-                perspective: "attacker",
-            });
-        }
-    }
-
-    return results;
-};
+const forSide = (
+    unit: TestUnit | undefined,
+    perspective: "attacker" | "defender",
+): TaggedMechanic[] =>
+    (unit?.enhancement?.mechanics ?? []).map((mechanic) => ({
+        mechanic,
+        layer: "enhancement" as const,
+        perspective,
+    }));

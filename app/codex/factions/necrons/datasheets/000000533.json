@@ -299,16 +299,8 @@
             "description": "While a friendly <span class=\"kwb\">NECRONS</span> unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [
-                {
-                    "name": "Carrier Wave (Aura)",
-                    "entity": "thisUnit",
-                    "effect": "rollBonus",
-                    "attribute": "objectiveControl",
-                    "value": 1
-                }
-            ],
-            "mechanicsSource": "regex"
+            "mechanics": [],
+            "mechanicsSource": "unparsed"
         },
         {
             "name": "Advanced Quantum Shielding",

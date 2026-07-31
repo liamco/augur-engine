@@ -8,6 +8,8 @@
             "name": "Grim Resolve",
             "description": "While an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1, instead of 0. In your Command phase, select one <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army; until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.<br><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include <span class=\"kwb\">DARK</span> <span class=\"kwb\">ANGELS</span> units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "The Dark Angels are renowned for their unshakeable resolve, enduring tenacity and strict discipline in battle. They are tactically astute, able to prosecute their wars on any front. On the offence, they strike with all the martial pride of the Lion, while in defence they are stalwart, determined to accomplish their mission no matter the cost.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -114,6 +116,8 @@
             "cost": 25,
             "legend": "Formed from the death shrouds of some of the Chapters greatest warriors, this robe inspires its wearer with the might and selflessness of those who came before.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining (if the bearer was Battle-shocked when it was destroyed, it is instead returned with its full wounds remaining).",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -183,6 +187,8 @@
             "cost": 15,
             "legend": "Even for a Chapter as famously stubborn as the Dark Angels, this warrior is known for their intractable nature.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -252,6 +258,8 @@
             "cost": 15,
             "legend": "Beneath the surface of the Rock lie vaults within which weapons of antiquity and terrible power are stored.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer s melee weapons instead.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -321,6 +329,16 @@
             "cost": 10,
             "legend": "This hallowed banner records the names and deeds of legendary members of the Deathwing, stoking still firmer resolve in those who fight beneath it.",
             "description": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+            "mechanics": [
+                {
+                    "name": "Pennant of Remembrance",
+                    "entity": "thisUnit",
+                    "effect": "setsFnp",
+                    "attribute": "feelNoPain",
+                    "value": 6
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000001165",

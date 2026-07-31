@@ -1,3 +1,6 @@
+import type { Mechanic } from "@/app/types/Mechanic";
+import type { MechanicsSource } from "./transforms/transformAbilities";
+
 // Raw input types matching the Wahapedia JSON structure
 
 export interface RawAbility {
@@ -217,6 +220,9 @@ export interface ParsedDetachmentAbility {
     description: string;
     legend: string;
     eligibleDatasheets?: DatasheetEligibility;
+    /** Engine-ready rules, from regex extraction or the follow-up skill. */
+    mechanics: Mechanic[];
+    mechanicsSource: MechanicsSource;
 }
 
 export interface ParsedStratagem {
@@ -239,6 +245,13 @@ export interface ParsedEnhancement {
     legend: string;
     description: string;
     eligibleDatasheets?: DatasheetEligibility;
+    /**
+     * Engine-ready rules, from regex extraction or the follow-up skill. A
+     * bearer-scoped mechanic carries a single-model condition — see
+     * data/pipeline/transforms/abilityMechanics/bearerScope.ts.
+     */
+    mechanics: Mechanic[];
+    mechanicsSource: MechanicsSource;
 }
 
 export interface ParsedDetachment {

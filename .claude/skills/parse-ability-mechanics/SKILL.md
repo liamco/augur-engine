@@ -1,6 +1,6 @@
 ---
 name: parse-ability-mechanics
-description: Use when converting 40k datasheet ability rules text into engine mechanics, when abilities show "mechanicsSource": "unparsed" in the codex, or when a parse reports STEP 4 PENDING
+description: Use when converting 40k datasheet abilities, detachment abilities or Enhancements from rules text into engine mechanics, when rules show "mechanicsSource": "unparsed" in the codex, or when a parse reports STEP 4 PENDING
 ---
 
 # Parse Ability Mechanics
@@ -11,20 +11,30 @@ Final step of a single pipeline that takes source data through to engine-ready o
 
 1. `npm run fetch` — Wahapedia CSVs into `data/src`
 2. `npm run parse` — structure, trim redundant fields, strip HTML, write `app/codex`
-3. regex extraction — runs *inside* parse, covers ~32% of datasheet abilities
-4. **this skill** — the abilities regex declined
+3. regex extraction — runs *inside* parse, covers ~34% of datasheet abilities, 48% of detachment abilities, 28% of Enhancements
+4. **this skill** — everything the regex declined
 
-You edit `app/codex/**/datasheets/*.json` **in place**, so that when you finish the codex is 100% engine-ready with no side files and no second source of truth.
+You edit the codex **in place**, so that when you finish it is 100% engine-ready with no side files and no second source of truth.
 
-**Re-running `npm run parse` destroys your work.** It rewrites all 420 datasheet files and resets every ability to `regex`/`unparsed`. That is a deliberate trade: one artefact, nothing hand-authored to drift out of sync. Consequence — run this skill *after* a parse, and expect to re-run it after any fetch or parse.
+## Three kinds of rule, three places to edit
+
+| rule | file | engine reads it via |
+|---|---|---|
+| datasheet ability | `app/codex/factions/*/datasheets/*.json` → `abilities[]` | `collectUnitMechanics` |
+| detachment ability | `app/codex/factions/*/detachments/*.json` → `abilities[]` | `collectDetachmentMechanics` |
+| Enhancement | `app/codex/factions/*/detachments/*.json` → `enhancements[]` | `collectEnhancementMechanics` |
+
+**After editing any detachment file, run `npm run reindex-detachments`.** The app reads detachments through the generated `app/codex/detachment-index.json`, so an edit that skips the reindex never reaches the engine. It re-derives the index from the codex, so it is safe to run any time — on an unmodified codex it is a no-op.
+
+**Re-running `npm run parse` destroys your work.** It rewrites every datasheet and detachment file and resets every rule to `regex`/`unparsed`. That is a deliberate trade: one artefact, nothing hand-authored to drift out of sync. Consequence — run this skill *after* a parse, and expect to re-run it after any fetch or parse.
 
 **Core principle: triage before extraction.** Most of what's left is not a combat mechanic at all. Deciding *whether* an ability belongs in the `Mechanic` format is the larger part of the job; forcing an army-construction rule or a multi-step dice procedure into it produces data that looks populated and does nothing — or silently changes damage maths.
 
-The engine reads `ability.mechanics` straight into combat resolution with **no validation of its own** (`app/engine/collectors/collectUnitMechanics.ts`). Wrong is worse than absent.
+The engine reads `mechanics` straight into combat resolution with **no validation of its own** (`app/engine/collectors/collectUnitMechanics.ts`). Wrong is worse than absent.
 
 ## Three verdicts
 
-Set `mechanicsSource` on every ability you touch:
+Set `mechanicsSource` on every rule you touch:
 
 | `mechanicsSource` | when | `mechanics` |
 |---|---|---|
@@ -71,11 +81,12 @@ Find abilities with `"mechanicsSource": "unparsed"` and replace both fields in p
 
 ## Required steps
 
-1. **Get the queue.** Abilities with `"mechanicsSource": "unparsed"`.
-2. **Read the vocabulary.** `app/types/Mechanic.ts` is the only authority for `effect`, `entity`, `attribute` and `operator`. Do not invent members.
-3. **Check the library first.** If the ability grants an existing rule, emit `addsAbility` / `addsWeaponAttribute` naming it — the rule's own mechanics live in `app/library/`. Don't restate its effects.
-4. **Edit every occurrence** of that description across the faction's datasheets.
-5. **Validate.** `npm run validate-mechanics` — checks every mechanic against the type, and that each `mechanicsSource` agrees with whether mechanics are present. Exits non-zero on any problem.
+1. **Get the queue.** Rules with `"mechanicsSource": "unparsed"`, in datasheets and detachments alike.
+2. **Read the vocabulary.** `app/types/Mechanic.ts` is the only authority for `effect`, `entity`, `attribute` and `operator`. Do not invent members. Then check the attribute is one the engine consumes (below).
+3. **Check the library first.** If the rule grants an existing one, emit `addsAbility` / `addsWeaponAttribute` naming it — the rule's own mechanics live in `app/library/`. Don't restate its effects.
+4. **Edit every occurrence** of that description. Datasheet abilities repeat across datasheets; Enhancements repeat across detachments.
+5. **Reindex, if you touched a detachment file.** `npm run reindex-detachments`.
+6. **Validate.** `npm run validate-mechanics` — checks every mechanic in datasheets, detachment abilities and Enhancements against the type, and that each `mechanicsSource` agrees with whether mechanics are present. Exits non-zero on any problem.
 
 Never report work complete without a clean validate.
 
@@ -90,14 +101,60 @@ The most common way to produce a mechanic that silently does nothing.
 
 Use `thisUnit` for the second and `filterByTarget` drops it — the rule does nothing, with no error.
 
+## Only these attributes do anything
+
+An attribute being in `app/types/Mechanic.ts` means a mechanic is *well-formed*. It does not mean a resolver reads it. These are the ones combat actually consumes (`ENGINE_CONSUMED_ATTRIBUTES` in `data/pipeline/transforms/abilityMechanics/validate.ts`):
+
+```
+hit  wound  save  ballisticSkill  weaponSkill  strength  toughness
+armourPenetration  invulnSave  attacks  damage  feelNoPain  detectionRange
+```
+
+`wounds`, `movement`, `leadership`, `objectiveControl`, `range` and `distanceToTarget` are valid to write but **no resolver reads them** — a mechanic targeting one is inert. If a rule's whole effect is one of those, it is `needsSchema`, not `skill`.
+
+## Setting a characteristic vs adding to it
+
+| rules text | effect |
+|---|---|
+| "has a Save characteristic of 2+", "has a 4+ invulnerable save" | `setsCharacteristic` — replaces the datasheet value |
+| "add 1 to the Toughness characteristic", "add 3 to the Strength characteristic" | `staticNumber` — sums, uncapped |
+| "add 1 to the Hit roll" | `rollBonus` — **clamped to 1** by `effectResolver` |
+
+Using `staticNumber` where the text says *has* turns a 4++ invulnerable save into one 4 worse. Using `rollBonus` for a characteristic silently truncates "add 3" to "add 1".
+
+## Enhancements: the bearer is one model
+
+An Enhancement is worn by a single CHARACTER model — the **bearer** — but the engine has no model-level scoping: `entityResolver` resolves `thisModel` and `thisUnit` through the same branch, so a mechanic for the bearer reaches every model in its unit.
+
+Read which the rules text means, and gate accordingly:
+
+| text | emit |
+|---|---|
+| "models in the bearer's unit…", "While the bearer is leading a unit, models in that unit…" | `thisUnit`, no extra condition |
+| "The bearer has…", "…characteristics of the bearer", "the bearer's melee weapons" | `thisUnit` **plus** the single-model condition below |
+| both in one description | `needsSchema` — split scope cannot be expressed |
+
+```json
+{ "entity": "thisUnit", "state": "startingModelCount", "operator": "equals", "value": 1 }
+```
+
+That makes a bearer-only buff correct for a single-model character and correctly inactive when the character leads a bodyguard unit — it under-applies rather than buffing four models that never had the Enhancement. `startingModelCount`, not `modelCount`: a squad reduced to one survivor must not acquire it.
+
+Note the regex layer already does this (`data/pipeline/transforms/abilityMechanics/bearerScope.ts`); follow the same convention so the two agree.
+
 ## Common mistakes
 
 | Mistake | Consequence |
 |---|---|
 | Running `npm run parse` after this skill | All your work is erased |
-| Editing one file when the description appears on several | The ability works on some units and not others |
+| Editing a detachment file without `npm run reindex-detachments` | The app reads the stale index; your edit never reaches the engine |
+| Editing one file when the description appears on several | The rule works on some units and not others |
 | Matching abilities by `name` | 47 name collisions; applies one unit's rule to another's |
 | Inventing an `effect` or `attribute` | Validator rejects it; if it slipped through, the mechanic is inert |
+| Using an attribute no resolver reads (`wounds`, `movement`, `leadership`) | Well-formed, validates, does nothing |
+| `staticNumber` where the text says "has a 4+ invulnerable save" | Adds 4 to the save instead of setting it |
+| `rollBonus` for "add 3 to the Strength characteristic" | Clamped to +1 |
+| Emitting a bearer-only effect without the single-model condition | Buffs every model in the unit, not just the one wearing it |
 | Naming a library ability that doesn't exist | `expandAbilityMechanics` finds no template, mechanic does nothing |
 | Dropping a condition ("while leading", "within 6\"") | Bonus applies permanently and unconditionally |
 | Leaving `mechanicsSource` as `unparsed` after adding mechanics | Validator rejects the mismatch |

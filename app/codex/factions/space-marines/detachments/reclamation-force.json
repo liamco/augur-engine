@@ -8,6 +8,26 @@
             "name": "Oath of Reclamation",
             "description": "<ul><li>Each time an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.</li><li>Each time an attack targets an <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.</li></ul><br><span class=\"hi_custom\">RESTRICTIONS</span><br>Your army can include Ultramarines units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "The driving principle behind all that these battle-brothers do is the honouring of their oaths to drive back the darkness and reconquer the Five Hundred Worlds, one battlefield at a time.",
+            "mechanics": [
+                {
+                    "name": "Oath of Reclamation",
+                    "entity": "thisUnit",
+                    "effect": "rollPenalty",
+                    "attribute": "wound",
+                    "value": 1,
+                    "phase": [
+                        "fight"
+                    ]
+                },
+                {
+                    "name": "Oath of Reclamation",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "armourPenetration",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -114,6 +134,16 @@
             "cost": 20,
             "legend": "These precious seals are manufactured on Konor, and contain micro shield generators that – while swift to exhaust their charge – help to safeguard battle-brothers while they fulfil their oaths of duty.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Models in the bearer’s unit have a 5+ invulnerable save.",
+            "mechanics": [
+                {
+                    "name": "Seals of Reconquest",
+                    "entity": "thisUnit",
+                    "effect": "setsCharacteristic",
+                    "attribute": "invulnSave",
+                    "value": 5
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -183,6 +213,8 @@
             "cost": 10,
             "legend": "Eyes alight with determination and vengeful fury, this champion of the Chapter seems almost to cast the dread shadow of the Primarch himself across his quailing foes.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle-shock test.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -252,6 +284,8 @@
             "cost": 15,
             "legend": "Finely scribed on vellum and tightly bound in an armoured scroll case, the words of Roboute Guilliman’s Consilias Imperitus Ultimar prove a constant source of inspiration that drive this warrior ever onward.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer’s unit declares a charge, if one or more targets of that charge are within range of an objective marker, you can re-roll the Charge roll.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -321,6 +355,8 @@
             "cost": 25,
             "legend": "Forged on Macragge by the finest artisans, this weapon’s machine spirit is said to burn with a desire to see the Five Hundred Worlds ripped from the grasp of heretics and despots.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

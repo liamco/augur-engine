@@ -199,8 +199,16 @@
             "description": "Each time an attack targets this model, if this model is within range of an objective marker, worsen the Armour Penetration characteristic of that attack by 1. In addition, each time this model makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
             "type": "Datasheet",
             "parameter": null,
-            "mechanics": [],
-            "mechanicsSource": "unparsed"
+            "mechanics": [
+                {
+                    "name": "Aggressor Guardian",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "armourPenetration",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex"
         }
     ]
 }

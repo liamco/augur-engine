@@ -8,6 +8,18 @@
             "name": "Close-range Eradication",
             "description": "Ranged weapons equipped by <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
             "legend": "The Space Marines are the Emperor’s finest shock troops, striking at the foe before they can react. In their rapid, mechanised assaults, Space Marines smash aside the enemy, destroying them at close quarters without mercy.",
+            "mechanics": [
+                {
+                    "name": "Close-range Eradication",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "ASSAULT"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -385,6 +397,8 @@
             "cost": 10,
             "legend": "This commander and their warriors have vowed to secure victory and defend the Imperium from the horrors of the galaxy.",
             "description": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000073",
@@ -418,6 +432,24 @@
             "cost": 25,
             "legend": "Having laboured long in the Chapter’s forges, this warrior-smith has crafted his personal armaments. Each weapon is a masterwork tool of death-dealing, wrought with care and strength, and embellished with the icons of their maker’s brotherhood.",
             "description": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
+            "mechanics": [
+                {
+                    "name": "War-tempered Artifice",
+                    "entity": "thisUnit",
+                    "effect": "staticNumber",
+                    "attribute": "strength",
+                    "value": 3,
+                    "conditions": [
+                        {
+                            "entity": "thisUnit",
+                            "state": "startingModelCount",
+                            "operator": "equals",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -473,6 +505,8 @@
             "cost": 15,
             "legend": "To this Angel of Death, war is the anvil upon which their strength is wrought. Every battle is seen as a test in which they and their battle-brothers can prove themselves, and the superior craftsmanship of their weapons and armour.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -542,6 +576,8 @@
             "cost": 20,
             "legend": "This flowing cloak or finely wrought tabard is laced through with threads of braided adamantine. When combined with armour and energy fields, it has been shown time and again that these symbols of office are proof against even the very strongest attacks.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",

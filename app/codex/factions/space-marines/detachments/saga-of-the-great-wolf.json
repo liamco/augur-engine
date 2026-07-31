@@ -8,6 +8,16 @@
             "name": "Master of Wolves",
             "description": "At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army. You can only select each Hunting Pack once per battle.<br><ul><li><b>Encircling Jaws:</b> This unit can re-roll Advance rolls and Charge rolls.</li><li><b>Hunter’s Eye:</b> Each time a model in this unit makes a ranged attack, add 1 to the Hit roll.</li><li><b>Ferocious Strike:</b> Each time this unit is selected to fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.</li></ul>",
             "legend": "With Logan Grimnar commanding them, the hunting packs of the Space Wolves fight at peak efficiency.",
+            "mechanics": [
+                {
+                    "name": "Master of Wolves",
+                    "entity": "thisUnit",
+                    "effect": "rollBonus",
+                    "attribute": "hit",
+                    "value": 1
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -19,6 +29,8 @@
             "name": "Howling Onslaught",
             "description": "Once per battle, when selecting a Hunting Pack for the Master of Wolves Detachment rule, if a Logan Grimnar model from your army is on the battlefield, you can select a Hunting Pack you have already selected this battle.",
             "legend": "When the Great Wolf gives the command, his packs descend upon the foe in a coordinated and utterly devastating strike.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "exclude": [
                     "000003875"
@@ -30,6 +42,8 @@
             "name": "Restrictions",
             "description": "Your army can include Space Wolves units, but it cannot include any <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units drawn from any other Chapter.",
             "legend": "",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": []
             }
@@ -219,6 +233,8 @@
             "cost": 20,
             "legend": "This moonsilver wolf-talisman is bestowed by the Great Wolf himself before battle, a mark of favour that fills the bearer with an eagerness to slay the foe.",
             "description": "Adeptus Astartes Terminator Captain model only. Once per battle round, from the second battle round onwards, you can target the bearer’s unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.<br><br>In the Declare Battle Formations step, the bearer can be attached to a Wolf Guard Terminators unit.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000135"
@@ -231,6 +247,8 @@
             "cost": 15,
             "legend": "An ancient hunting horn with a built-in vox amplification unit, this relic’s stirring howl can be heard even through the wild clangour of battle.",
             "description": "Wolf priest model only. At the start of the Fight phase, you can select one enemy unit within 6\" of the bearer. That unit must take a Battle-shock, subtracting 1 from the result.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000004129"
@@ -243,6 +261,8 @@
             "cost": 25,
             "legend": "This dedicated flight of gunships attends the Great Wolf and his packs, and can be called in to rapidly reposition his forces in the moments before battle is joined.",
             "description": "<span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> model only. After both players have deployed their armies, select up to three <span class=\"kwb\">ADEPTUS</span> <span class=\"kwb\">ASTARTES</span> units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "mechanics": [],
+            "mechanicsSource": "unparsed",
             "eligibleDatasheets": {
                 "include": [
                     "000000060",
@@ -312,6 +332,18 @@
             "cost": 25,
             "legend": "Great deeds have been prophesied for this champion, such that those who fight alongside him do so all the harder as they play out the self-fulfilling prophecy.",
             "description": "Wolf Guard Battle Leader model only. While the bearer is leading a unit, weapons equipped by models in that unit have the [LANCE] ability.",
+            "mechanics": [
+                {
+                    "name": "Skjald’s Foretelling",
+                    "entity": "thisUnit",
+                    "effect": "addsWeaponAttribute",
+                    "weaponAttributes": [
+                        "LANCE"
+                    ],
+                    "value": true
+                }
+            ],
+            "mechanicsSource": "regex",
             "eligibleDatasheets": {
                 "include": [
                     "000004130"
